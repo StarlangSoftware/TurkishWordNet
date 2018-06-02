@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="MorphologicalAnalysis">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/src/libs/MorphologicalAnalysis.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
