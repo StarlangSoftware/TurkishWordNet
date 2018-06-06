@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="jar" name="WordNet:jar">
-    <output-path>$PROJECT_DIR$/out/artifacts/WordNet_jar</output-path>
-    <root id="archive" name="WordNet.jar">
-      <element id="module-output" name="WordNet" />
-    </root>
-  </artifact>
-</component>

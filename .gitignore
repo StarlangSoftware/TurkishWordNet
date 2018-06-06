@@ -53,3 +53,5 @@ nb-configuration.xml
 release.properties
 pom.xml.releaseBackup
 pom.xml.tag
+out/artifacts/WordNet_jar/WordNet.jar
+out/production/WordNet/libs/MorphologicalAnalysis.jar
