@@ -90,7 +90,6 @@ public class TestWordNet {
     }
 
     public static void test(){
-        //addSynSets();
     }
 
     public static void derivationRelated(){
