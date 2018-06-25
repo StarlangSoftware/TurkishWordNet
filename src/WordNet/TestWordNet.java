@@ -90,6 +90,7 @@ public class TestWordNet {
     }
 
     public static void test(){
+        WordNet turkish = new WordNet();
     }
 
     public static void derivationRelated(){
