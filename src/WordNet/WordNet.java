@@ -1087,7 +1087,15 @@ public class WordNet {
                                 outfile.write("\t\t<Lemma writtenForm=\"" + literal + "\" partOfSpeech=\"r\"/>\n");
                                 break;
                             default:
-                                outfile.write("\t\t<Lemma writtenForm=\"" + literal + "\" partOfSpeech=\"u\"/>\n");
+                                if (literal.equals("\"")){
+                                    outfile.write("\t\t<Lemma writtenForm=\"&quot;\" partOfSpeech=\"x\"/>\n");
+                                } else {
+                                    if (literal.equals("&")){
+                                        outfile.write("\t\t<Lemma writtenForm=\"&amp;\" partOfSpeech=\"x\"/>\n");
+                                    } else {
+                                        outfile.write("\t\t<Lemma writtenForm=\"" + literal + "\" partOfSpeech=\"x\"/>\n");
+                                    }
+                                }
                                 break;
                         }
                     }

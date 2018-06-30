@@ -91,6 +91,7 @@ public class TestWordNet {
 
     public static void test(){
         WordNet turkish = new WordNet();
+        turkish.saveAsLmf("turkish.txt");
     }
 
     public static void derivationRelated(){

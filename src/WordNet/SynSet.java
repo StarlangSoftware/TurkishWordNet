@@ -348,7 +348,15 @@ public class SynSet {
     public void saveAsLmf(BufferedWriter outfile){
         try {
             outfile.write("\t<Synset id=\"" + id + "\">\n");
-            outfile.write("\t\t<Definition gloss=\"" + getLongDefinition() + "\">\n");
+            if (getLongDefinition() != null){
+                String longDefinition = getLongDefinition();
+                if (longDefinition.contains("\"")){
+                    longDefinition = longDefinition.replaceAll("\"", "&quot;");
+                }
+                outfile.write("\t\t<Definition gloss=\"" + longDefinition + "\">\n");
+            } else {
+                outfile.write("\t\t<Definition gloss=\"\">\n");
+            }
             if (example != null){
                 outfile.write("\t\t\t<Statement example=\"" + getExample() + "\"/>\n");
             }
@@ -363,7 +371,7 @@ public class SynSet {
                 outfile.write("\t\t<SynsetRelations>\n");
                 for (Relation r:relations){
                     if (r instanceof SemanticRelation){
-                        outfile.write("\t\t\t<SynsetRelation targets=\"" + r.getName() + "\" relType=\"" + ((SemanticRelation) r).getTypeAsString().toLowerCase() + "\"/>\n");
+                        outfile.write("\t\t\t<SynsetRelation target=\"" + r.getName() + "\" relType=\"" + ((SemanticRelation) r).getTypeAsString().toLowerCase() + "\"/>\n");
                     }
                 }
                 outfile.write("\t\t</SynsetRelations>\n");
