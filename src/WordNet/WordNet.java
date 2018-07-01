@@ -1063,6 +1063,9 @@ public class WordNet {
                     }
                     synSets.add(getSynSetWithId(literals.get(i).synSetId));
                 }
+                if (synSets.size() == 0){
+                    continue;
+                }
                 Collections.sort(synSets, (o1, o2) -> o1.getPos().toString().compareTo(o2.getPos().toString()));
                 SynSet previous = null;
                 for (SynSet current : synSets){
