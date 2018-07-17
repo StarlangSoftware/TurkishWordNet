@@ -1,6 +1,8 @@
 package WordNet;
 
-import Dictionary.Pos;
+import Dictionary.*;
+import MorphologicalAnalysis.FsmMorphologicalAnalyzer;
+
 import java.io.*;
 import java.util.*;
 
@@ -89,9 +91,25 @@ public class TestWordNet {
         turkish.saveAsXml("deneme.xml");
     }
 
-    public static void test(){
+    public static void wordNotExists(){
         WordNet turkish = new WordNet();
-        turkish.saveAsLmf("turkish.txt");
+        FsmMorphologicalAnalyzer fsm = new FsmMorphologicalAnalyzer("turkish_finite_state_machine.xml", new TxtDictionary("Data/Dictionary/turkish_dictionary.txt", new TurkishWordComparator()));
+        for (String literal : turkish.literalList()){
+            if (literal.length() < 3 || literal.contains(".")){
+                continue;
+            }
+            if (literal.contains(" ")){
+                continue;
+            }
+            if (fsm.morphologicalAnalysis(literal).size() == 0){
+                for (SynSet synSet : turkish.getSynSetsWithLiteral(literal)){
+                    System.out.println(literal.toLowerCase(new Locale("tr")) + "\t" + synSet.getPos() + "\t" + synSet.getDefinition());
+                }
+            }
+        }
+    }
+
+    public static void test(){
     }
 
     public static void derivationRelated(){
