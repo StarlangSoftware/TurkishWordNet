@@ -109,6 +109,35 @@ public class TestWordNet {
         }
     }
 
+    public static void splitCandidates(){
+        SynSet candidate;
+        WordNet turkish = new WordNet();
+        WordNet turkish00 = new WordNet("Data/Wordnet/turkish_wordnet_version_00.xml", new Locale("tr"));
+        WordNet turkish01 = new WordNet("Data/Wordnet/turkish_wordnet_version_01.xml", new Locale("tr"));
+        try {
+            Scanner s = new Scanner(new File("split.txt"));
+            while (s.hasNext()){
+                String id = s.nextLine();
+                SynSet synSet = turkish.getSynSetWithId(id);
+                for (int i = 0; i < synSet.getSynonym().literalSize(); i++){
+                    Literal literal = synSet.getSynonym().getLiteral(i);
+                    candidate = turkish00.getSynSetWithLiteral(literal.getName(), literal.getSense());
+                    if (candidate == null){
+                        candidate = turkish01.getSynSetWithLiteral(literal.getName(), literal.getSense());
+                    }
+                    if (candidate == null){
+                        System.out.println(id + "\t" + literal.getName() + "\t" + literal.getSense() + "\t" + "TUR10-0000000" + "\t" + synSet.getLongDefinition());
+                    } else {
+                        System.out.println(id + "\t" + literal.getName() + "\t" + literal.getSense() + "\t" + candidate.getId() + "\t" + candidate.getDefinition());
+                    }
+                }
+            }
+            s.close();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+    }
+
     public static void test(){
     }
 
