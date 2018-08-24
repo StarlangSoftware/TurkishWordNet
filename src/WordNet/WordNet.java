@@ -721,9 +721,6 @@ public class WordNet {
             if (parse.isEmail()){
                 result.add(getSynSetWithLiteral("(eposta)", 1));
             }
-            if (parse.isCardinal()){
-                result.add(getSynSetWithLiteral("(tam sayı)", 1));
-            }
             if (parse.isOrdinal()){
                 result.add(getSynSetWithLiteral("(sayı sıra sıfatı)", 1));
             }
@@ -791,6 +788,9 @@ public class WordNet {
                 }
             } else {
                 result.addAll(getSynSetsWithLiteral(word));
+            }
+            if (parse.isCardinal() && result.size() == 0){
+                result.add(getSynSetWithLiteral("(tam sayı)", 1));
             }
         } else {
             result.addAll(getSynSetsWithLiteral(word));
