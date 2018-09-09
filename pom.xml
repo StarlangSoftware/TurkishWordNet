@@ -26,13 +26,20 @@
         <dependency>
             <groupId>NlpToolkit</groupId>
             <artifactId>Dictionary</artifactId>
-            <version>1.0.0</version>
+            <version>1.0.1</version>
         </dependency>
         <dependency>
             <groupId>NlpToolkit</groupId>
             <artifactId>MorphologicalAnalysis</artifactId>
-            <version>1.0.0</version>
+            <version>1.0.1</version>
         </dependency>
     </dependencies>
+
+    <distributionManagement>
+        <repository>
+            <id>NlpToolkit</id>
+            <url>http://haydut.isikun.edu.tr:8081/artifactory/NlpToolkit</url>
+        </repository>
+    </distributionManagement>
 
 </project>
