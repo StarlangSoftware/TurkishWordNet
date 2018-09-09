@@ -411,9 +411,11 @@ açıkgözlülük IS_SD CL_ISIM
 açıkgün IS_OA
 açıkkalpli CL_ISIM
 açıkla F_GUD CL_FIIL F4PW-NO-REF
+açıklama CL_ISIM
 açıklanan CL_ISIM
 açıklat CL_FIIL
 açıklayan CL_ISIM
+açıklayıcı IS_ADJ
 acıklı IS_ADJ
 açıklık CL_ISIM IS_SD
 açıklıkölçer CL_ISIM
@@ -3211,6 +3213,7 @@ arasta CL_ISIM
 araştır F_DIR CL_FIIL F4PR
 araştırı CL_ISIM
 araştırıcı IS_ADJ
+araştırma CL_ISIM
 araştırmacı CL_ISIM
 araştırman CL_ISIM
 arat IS_OA
@@ -3574,6 +3577,7 @@ artım CL_ISIM
 artın CL_ISIM
 artırım CL_ISIM
 artırımcı CL_ISIM
+artış CL_ISIM
 artışsal CL_ISIM
 artniyet CL_ISIM
 artoda CL_ISIM
@@ -5536,6 +5540,7 @@ basari IS_ADJ
 başarı CL_ISIM
 basarık IS_SD CL_ISIM
 başarım CL_ISIM
+başarısız IS_ADJ
 başarman IS_OA
 basarna CL_ISIM
 başasistan CL_ISIM
@@ -7303,6 +7308,7 @@ birke IS_OA
 birkök IS_OA
 birle CL_FIIL F4PW-NO-REF
 birleş CL_FIIL F5PR-NO-REF
+birleştir CL_FIIL F5PR-NO-REF
 birleşen IS_ADJ
 birleşi CL_ISIM
 birleşik IS_SD CL_ISIM
@@ -8608,6 +8614,7 @@ büyület CL_FIIL
 büyüleyim CL_ISIM
 büyült CL_FIIL F5PR
 büyülteç CL_ISIM
+büyüme CL_ISIM
 büyümse CL_FIIL F_GUD
 buyur F_DIR CL_FIIL F_UD F4PR
 büyürek IS_ADJ
@@ -8897,6 +8904,7 @@ calip IS_ADJ
 çalışkan IS_ADJ IS_OA
 çalışkanlık CL_ISIM IS_SD
 çalışlar IS_OA
+çalışma CL_ISIM
 çalıştay CL_ISIM
 çalıştıran CL_ISIM
 çalıştırım CL_ISIM
@@ -10626,7 +10634,7 @@ cık IS_INTERJ
 çıkınla F_GUD CL_FIIL F4PW
 çıkınlat CL_FIIL
 çıkıntı CL_ISIM
-çıkış CL_FIIL F5PR
+çıkış CL_FIIL F5PR CL_ISIM
 çıkıt CL_ISIM
 çıkkın IS_ADJ
 çıkkınlaş CL_FIIL
@@ -11745,6 +11753,7 @@ davison IS_OA
 davlumbaz CL_ISIM
 davos IS_OA
 davran CL_FIIL F5PR IS_OA
+davranış CL_ISIM
 davranım CL_ISIM
 davranışçılık CL_ISIM IS_SD
 davranışsal CL_ISIM
@@ -11913,7 +11922,7 @@ değirmentaşı IS_BILEŞ CL_ISIM
 değirmi CL_ISIM
 değirmile F_GUD CL_FIIL F4PW
 değirmilet CL_FIIL
-değiş CL_FIIL F5PR
+değiş CL_FIIL F5PR IS_DUP
 değişici IS_ADJ
 değişik IS_SD IS_ADJ
 değişiklik CL_ISIM IS_SD
@@ -12350,6 +12359,7 @@ derebeylik IS_SD CL_ISIM
 derebucak IS_OA
 derece CL_ISIM
 derecele CL_FIIL F_GUD F4PW
+derecelendir CL_FIIL F5PR-NO-REF
 derecik CL_ISIM IS_SD
 derek IS_OA
 dereke CL_ISIM
@@ -13471,6 +13481,7 @@ dolaykutupsal CL_ISIM
 dolaylama CL_ISIM
 dolaz CL_ISIM
 dolby CL_ISIM
+doldur CL_FIIL F5PR-NO-REF
 doldurboşalt CL_ISIM
 dolduruş CL_ISIM
 dölek IS_OA IS_SD CL_ISIM
@@ -13607,7 +13618,6 @@ dönüşsüz CL_ISIM
 dönüştür CL_FIIL F4PR
 dönüştürgeç IS_SD CL_ISIM
 dönüştürücü CL_ISIM
-dönüştürül CL_FIIL
 dönüştürüm CL_ISIM
 dönüşüm CL_ISIM
 dönüşümcü CL_ISIM
@@ -14165,6 +14175,7 @@ düzelti CL_ISIM
 düzelticilik CL_ISIM IS_SD
 düzeltil CL_FIIL
 düzeltim CL_ISIM
+düzeltme CL_ISIM
 düzeltmecilik CL_ISIM IS_SD
 düzeltmen CL_ISIM
 düzeltmenlik CL_ISIM IS_SD
@@ -14176,6 +14187,7 @@ düzenci CL_ISIM
 düzenek IS_SD CL_ISIM
 düzengeç IS_SD CL_ISIM
 düzenle F_GUD CL_FIIL F4PW-NO-REF
+düzenleme CL_ISIM
 düzenleş CL_FIIL F5PR
 düzenleşik IS_SD CL_ISIM
 düzenleşim CL_ISIM
@@ -16192,6 +16204,7 @@ etkile F_GUD CL_FIIL F4PW
 etkileş CL_FIIL
 etkileşim CL_ISIM
 etkilet CL_FIIL
+etkileyici IS_ADJ
 etkin IS_ADJ
 etkincilik CL_ISIM IS_SD
 etkinleş CL_FIIL
@@ -16630,6 +16643,7 @@ farı CL_FIIL F4PW
 fark CL_ISIM
 farket CL_FIIL F5PR F_SD
 farkındalık CL_ISIM IS_SD
+farklı IS_ADJ
 farklıca IS_ADJ
 farklılaş CL_FIIL
 farklılaştır CL_FIIL F4PR
@@ -18327,6 +18341,7 @@ gelişmişlik IS_SD CL_ISIM
 geliştirici CL_ISIM 
 geliştiricilik CL_ISIM IS_SD
 geliştirim CL_ISIM
+geliştirme CL_ISIM
 gellért IS_OA
 gelmiç IS_SD CL_ISIM
 gelsenkirchen IS_OA
@@ -18490,6 +18505,7 @@ gericilik CL_ISIM IS_SD
 gerile F_GUD CL_FIIL F4PW
 gerilek IS_SD CL_ISIM
 gerilet CL_FIIL
+gerileme CL_ISIM
 gerili IS_ADJ
 gerilik CL_ISIM IS_SD
 gerilim CL_ISIM
@@ -19079,6 +19095,7 @@ görenekçilik CL_ISIM IS_SD
 göreneksel CL_ISIM
 göresi CL_FIIL F4PW
 görev CL_ISIM
+görevli CL_ISIM
 görevcilik CL_ISIM IS_SD
 görevdaş IS_ADJ
 görevdaşlık CL_ISIM IS_SD
@@ -21492,6 +21509,7 @@ heybe CL_ISIM
 heybet CL_ISIM IS_OA
 heybetli IS_OA
 heyecan CL_ISIM IS_OA
+heyecanlan CL_FIIL
 heyelan CL_ISIM
 heyet CL_ISIM
 heyetiyle IS_ADVERB
@@ -23423,6 +23441,7 @@ inikat IS_SD CL_ISIM
 inilde F_GUD CL_FIIL F4PW
 inilti CL_ISIM
 inisiyatif CL_ISIM
+iniş CL_ISIM
 inişli IS_ADJ
 inisyal CL_ISIM
 inkar CL_ISIM
@@ -23861,6 +23880,7 @@ işlerlik IS_SD CL_ISIM
 islet CL_FIIL
 işlet CL_FIIL
 işletim CL_ISIM
+işletme CL_ISIM
 işletmeci CL_ISIM
 işletmecilik CL_ISIM IS_SD
 işletmen CL_ISIM 
@@ -26383,6 +26403,7 @@ karşıgelim CL_ISIM
 karşıla F_GUD CL_FIIL F4PW
 karşılaş CL_FIIL
 karşılaşma CL_ISIM
+karşılaştırma CL_ISIM
 karşılaştırmacı CL_ISIM
 karşılaştırmalı IS_ADJ
 karşılat CL_FIIL
@@ -27852,6 +27873,7 @@ kıç CL_ISIM
 kıçtankara CL_ISIM
 kıçüstü IS_ADVERB
 kıdem CL_ISIM
+kıdemli IS_ADJ
 kığ CL_ISIM
 kığı CL_ISIM IS_OA
 kığıla CL_FIIL F4PW
@@ -37218,7 +37240,7 @@ onel IS_OA
 önel IS_OA CL_ISIM
 önem CL_ISIM
 önemek IS_SD CL_ISIM
-önemli IS_OA
+önemli IS_OA IS_ADJ
 önemlice IS_ADJ
 önemse F_GUD CL_FIIL F4PW
 önemsen CL_FIIL F5PR
@@ -38134,6 +38156,7 @@ ozansü IS_OA
 özelge CL_ISIM
 özelik CL_ISIM IS_SD
 özelleş CL_FIIL
+özelleştirme CL_ISIM
 özellik CL_ISIM IS_SD
 özellikle IS_ADVERB
 özen CL_FIIL CL_ISIM F5PR IS_OA
@@ -42762,6 +42785,7 @@ satımcı CL_ISIM
 satımlık CL_ISIM IS_SD
 satın CL_ISIM
 satınalma CL_ISIM
+satış CL_ISIM
 satır CL_ISIM
 şatır IS_ADJ IS_OA
 satırbaşı IS_BILEŞ CL_ISIM
@@ -42835,6 +42859,7 @@ savtur IS_OA
 savul F_DIR CL_FIIL F4PL
 şavulla CL_FIIL F4PW
 savun CL_FIIL F5PR IS_OA
+savunma CL_ISIM
 savunmalık IS_SD CL_ISIM
 savunmasızlık CL_ISIM IS_SD
 savunu CL_ISIM
@@ -45494,6 +45519,7 @@ sorumsuzca IS_ADVERB
 sorun CL_ISIM
 sorunsal IS_ADJ
 soruştur CL_FIIL F4PR-NO-REF
+soruşturma CL_ISIM
 soruşturmacılık CL_ISIM IS_SD
 soruşturucu IS_ADJ
 sorut CL_FIIL F4PW
@@ -46282,6 +46308,7 @@ süpürgeotu IS_BILEŞ CL_ISIM
 süpürüş CL_ISIM
 supya CL_ISIM
 sür CL_FIIL F5PR
+sürdür CL_FIIL F5PR-NO-REF
 sur IS_OA CL_ISIM
 sura CL_ISIM
 şûra CL_ISIM
@@ -51146,7 +51173,6 @@ uygu IS_OA
 uygula F_GUD CL_FIIL F4PW-NO-REF
 uygulama CL_ISIM
 uygulamacı CL_ISIM
-uygulan CL_FIIL F5PR
 uygulanabilirlik CL_ISIM IS_SD
 uygulayım CL_ISIM
 uygulayımbilim CL_ISIM
@@ -51229,6 +51255,7 @@ uzat CL_FIIL F5PR
 uzatıl CL_FIIL
 uzatım CL_ISIM
 uzatış CL_ISIM
+uzatma CL_ISIM
 uzatmalı CL_ISIM
 uzay CL_ISIM IS_OA
 uzaycılık CL_ISIM IS_SD
@@ -52568,6 +52595,7 @@ yansıca CL_ISIM
 yansıla F_GUD CL_FIIL F4PW
 yansılanım CL_ISIM
 yansılat CL_FIIL
+yansıt CL_FIIL
 yansıtaç IS_SD CL_ISIM
 yansıtıcı CL_ISIM 
 yansıtıcılık CL_ISIM IS_SD
@@ -52797,6 +52825,7 @@ yaşıt CL_ISIM
 yaşıyan IS_OA
 yasla CL_FIIL F4PW
 yaşlak IS_OA
+yaşlan CL_FIIL
 yaslı CL_ISIM
 yaşlıca IS_ADJ
 yaşmak IS_SD CL_ISIM
