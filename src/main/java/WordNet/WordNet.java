@@ -6,6 +6,7 @@ import com.sun.org.apache.xerces.internal.parsers.DOMParser;
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
+import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
 
 import javax.swing.*;
@@ -24,10 +25,14 @@ public class WordNet {
     private HashMap<String, ArrayList<SynSet>> interlingualList;
 
     private class ReadWordNetTask extends SwingWorker {
-        private String fileName;
+        private InputSource inputSource;
 
         public ReadWordNetTask(String fileName){
-            this.fileName = fileName;
+            inputSource = new InputSource(fileName);
+        }
+
+        public ReadWordNetTask(InputSource inputSource){
+            this.inputSource = inputSource;
         }
 
         protected Object doInBackground() throws Exception {
@@ -38,7 +43,7 @@ public class WordNet {
             Literal currentLiteral;
             int parsedCount, totalCount;
             try {
-                parser.parse(fileName);
+                parser.parse(inputSource);
             } catch (SAXException | IOException e) {
                 e.printStackTrace();
             }
@@ -246,7 +251,32 @@ public class WordNet {
     }
 
     public WordNet(){
-        this("Data/Wordnet/turkish_wordnet.xml", new Locale("tr"));
+        synSetList = new TreeMap<>();
+        literalList = new TreeMap<>(String.CASE_INSENSITIVE_ORDER);
+        this.locale = new Locale("tr");
+        ClassLoader classLoader = getClass().getClassLoader();
+        ReadWordNetTask task = new ReadWordNetTask(new InputSource(classLoader.getResourceAsStream("turkish_wordnet.xml")));
+        task.execute();
+        try {
+            task.get();
+        } catch (InterruptedException | ExecutionException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public WordNet(String fileName){
+        synSetList = new TreeMap<>();
+        literalList = new TreeMap<>(String.CASE_INSENSITIVE_ORDER);
+        this.locale = new Locale("en");
+        readExceptionFile("english_exception.xml");
+        ClassLoader classLoader = getClass().getClassLoader();
+        ReadWordNetTask task = new ReadWordNetTask(new InputSource(classLoader.getResourceAsStream(fileName)));
+        task.execute();
+        try {
+            task.get();
+        } catch (InterruptedException | ExecutionException e) {
+            e.printStackTrace();
+        }
     }
 
     public WordNet(final String fileName, String exceptionFileName, Locale locale, final JProgressBar progressBar){

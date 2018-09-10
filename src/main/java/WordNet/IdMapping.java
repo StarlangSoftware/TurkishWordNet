@@ -11,6 +11,21 @@ import java.util.Set;
 public class IdMapping {
     private HashMap<String, String> map;
 
+    public IdMapping(){
+        map = new HashMap<>();
+        try {
+            ClassLoader classLoader = getClass().getClassLoader();
+            Scanner scanner = new Scanner(new File(classLoader.getResource("mapping.txt").getFile()));
+            while (scanner.hasNext()){
+                String s = scanner.next();
+                String[] mapInfo = s.split("->");
+                map.put(mapInfo[0], mapInfo[1]);
+            }
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+    }
+
     public IdMapping(String fileName){
         map = new HashMap<>();
         try {

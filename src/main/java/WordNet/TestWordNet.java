@@ -93,7 +93,7 @@ public class TestWordNet {
 
     public static void wordNotExists(){
         WordNet turkish = new WordNet();
-        FsmMorphologicalAnalyzer fsm = new FsmMorphologicalAnalyzer("turkish_finite_state_machine.xml", new TxtDictionary("Data/Dictionary/turkish_dictionary.txt", new TurkishWordComparator()));
+        FsmMorphologicalAnalyzer fsm = new FsmMorphologicalAnalyzer();
         for (String literal : turkish.literalList()){
             if (literal.length() < 3 || literal.contains(".")){
                 continue;
@@ -168,7 +168,7 @@ public class TestWordNet {
 
     public static void candidateRelation(SemanticRelationType semanticRelationType) throws FileNotFoundException {
         WordNet turkish = new WordNet();
-        WordNet english = new WordNet("Data/Wordnet/english_wordnet_version_31.xml", new Locale("en"));
+        WordNet english = new WordNet("Data/Wordnet/english_wordnet_version_31.xml");
         PrintWriter printWriter = new PrintWriter(new File(semanticRelationType + ".txt"));
         for (SynSet synSet : english.synSetList()){
             ArrayList<SynSet> list1 = turkish.getInterlingual(synSet.getId());
@@ -220,7 +220,7 @@ public class TestWordNet {
     }
 
     public static void englishInstanceHypernyms(){
-        WordNet english = new WordNet("Data/Wordnet/english_wordnet_version_31.xml", new Locale("en"));
+        WordNet english = new WordNet("Data/Wordnet/english_wordnet_version_31.xml");
         for (SynSet synSet : english.synSetList()){
             for (int i = 0; i < synSet.relationSize(); i++){
                 Relation relation = synSet.getRelation(i);
@@ -236,6 +236,6 @@ public class TestWordNet {
     }
 
     public static void main(String[] args){
-        test();
+        wordNotExists();
     }
 }
