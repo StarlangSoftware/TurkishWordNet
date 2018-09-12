@@ -95,15 +95,47 @@ public class TestWordNet {
         WordNet turkish = new WordNet();
         FsmMorphologicalAnalyzer fsm = new FsmMorphologicalAnalyzer();
         for (String literal : turkish.literalList()){
-            if (literal.length() < 3 || literal.contains(".")){
-                continue;
-            }
-            if (literal.contains(" ")){
-                continue;
-            }
-            if (fsm.morphologicalAnalysis(literal).size() == 0){
-                for (SynSet synSet : turkish.getSynSetsWithLiteral(literal)){
-                    System.out.println(literal.toLowerCase(new Locale("tr")) + "\t" + synSet.getPos() + "\t" + synSet.getDefinition());
+            if (literal.endsWith("mek") || literal.endsWith("mak")){
+                if (!literal.contains(" ") && turkish.getSynSetsWithLiteral(literal).size() > 1 && fsm.getDictionary().getWord(literal.substring(0, literal.length() - 3)) == null){
+                    System.out.println(literal.substring(0, literal.length() - 3).toLowerCase(new Locale("tr")) + " CL_FIIL");
+                }
+            } else {
+                if (!literal.contains(" ") && turkish.getSynSetsWithLiteral(literal).size() > 1 && fsm.getDictionary().getWord(literal) == null){
+                    boolean isAdjective = false, isNoun = false, isAdverb = false;
+                    for (SynSet synSet : turkish.getSynSetsWithLiteral(literal)){
+                        if (synSet.getPos().equals(Pos.NOUN)){
+                            isNoun = true;
+                        }
+                        if (synSet.getPos().equals(Pos.ADJECTIVE)){
+                            isAdjective = true;
+                        }
+                        if (synSet.getPos().equals(Pos.ADVERB)){
+                            isAdverb = true;
+                        }
+                    }
+                    if (isAdjective){
+                        if (isNoun){
+                            System.out.println(literal.toLowerCase(new Locale("tr")) + " IS_ADJ CL_ISIM");
+                        } else {
+                            if (isAdverb){
+                                System.out.println(literal.toLowerCase(new Locale("tr")) + " IS_ADJ IS_ADVERB");
+                            } else {
+                                System.out.println(literal.toLowerCase(new Locale("tr")) + " IS_ADJ");
+                            }
+                        }
+                    } else {
+                        if (isNoun){
+                            if (literal.endsWith("lık") || (literal.endsWith("lik"))){
+                                System.out.println(literal.toLowerCase(new Locale("tr")) + " CL_ISIM IS_SD");
+                            } else {
+                                System.out.println(literal.toLowerCase(new Locale("tr")) + " CL_ISIM");
+                            }
+                        } else {
+                            if (isAdverb){
+                                System.out.println(literal.toLowerCase(new Locale("tr")) + " IS_ADVERB");
+                            }
+                        }
+                    }
                 }
             }
         }
