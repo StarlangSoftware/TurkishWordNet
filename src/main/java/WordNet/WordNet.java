@@ -214,7 +214,8 @@ public class WordNet {
         DOMParser parser = new DOMParser();
         Document doc;
         try {
-            parser.parse(exceptionFileName);
+            ClassLoader classLoader = getClass().getClassLoader();
+            parser.parse(new InputSource(classLoader.getResourceAsStream(exceptionFileName)));
             exceptionList = new HashMap<>();
         } catch (SAXException | IOException e) {
             e.printStackTrace();
