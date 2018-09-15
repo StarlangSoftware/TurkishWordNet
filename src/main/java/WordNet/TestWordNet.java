@@ -91,52 +91,11 @@ public class TestWordNet {
         turkish.saveAsXml("deneme.xml");
     }
 
-    public static void wordNotExists(){
+    public static void definitionNotEnough(){
         WordNet turkish = new WordNet();
-        FsmMorphologicalAnalyzer fsm = new FsmMorphologicalAnalyzer();
-        for (String literal : turkish.literalList()){
-            if (literal.endsWith("mek") || literal.endsWith("mak")){
-                if (!literal.contains(" ") && turkish.getSynSetsWithLiteral(literal).size() > 1 && fsm.getDictionary().getWord(literal.substring(0, literal.length() - 3)) == null){
-                    System.out.println(literal.substring(0, literal.length() - 3).toLowerCase(new Locale("tr")) + " CL_FIIL");
-                }
-            } else {
-                if (!literal.contains(" ") && turkish.getSynSetsWithLiteral(literal).size() > 1 && fsm.getDictionary().getWord(literal) == null){
-                    boolean isAdjective = false, isNoun = false, isAdverb = false;
-                    for (SynSet synSet : turkish.getSynSetsWithLiteral(literal)){
-                        if (synSet.getPos().equals(Pos.NOUN)){
-                            isNoun = true;
-                        }
-                        if (synSet.getPos().equals(Pos.ADJECTIVE)){
-                            isAdjective = true;
-                        }
-                        if (synSet.getPos().equals(Pos.ADVERB)){
-                            isAdverb = true;
-                        }
-                    }
-                    if (isAdjective){
-                        if (isNoun){
-                            System.out.println(literal.toLowerCase(new Locale("tr")) + " IS_ADJ CL_ISIM");
-                        } else {
-                            if (isAdverb){
-                                System.out.println(literal.toLowerCase(new Locale("tr")) + " IS_ADJ IS_ADVERB");
-                            } else {
-                                System.out.println(literal.toLowerCase(new Locale("tr")) + " IS_ADJ");
-                            }
-                        }
-                    } else {
-                        if (isNoun){
-                            if (literal.endsWith("lık") || (literal.endsWith("lik"))){
-                                System.out.println(literal.toLowerCase(new Locale("tr")) + " CL_ISIM IS_SD");
-                            } else {
-                                System.out.println(literal.toLowerCase(new Locale("tr")) + " CL_ISIM");
-                            }
-                        } else {
-                            if (isAdverb){
-                                System.out.println(literal.toLowerCase(new Locale("tr")) + " IS_ADVERB");
-                            }
-                        }
-                    }
-                }
+        for (SynSet synSet : turkish.synSetList()){
+            if (synSet.getDefinition() != null && synSet.getPos() != null){
+                System.out.println(synSet.getId() + "\t" + synSet.getPos() + "\t" + synSet.getSynonym() + "\t" + synSet.getLongDefinition() + "\t" + synSet.getDefinition().split(" ").length + "\t" + synSet.getExample());
             }
         }
     }
@@ -168,9 +127,6 @@ public class TestWordNet {
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
-    }
-
-    public static void test(){
     }
 
     public static void derivationRelated(){
@@ -268,6 +224,6 @@ public class TestWordNet {
     }
 
     public static void main(String[] args){
-        wordNotExists();
+        definitionNotEnough();
     }
 }
