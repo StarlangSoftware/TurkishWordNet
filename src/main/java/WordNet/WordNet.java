@@ -983,7 +983,7 @@ public class WordNet {
     }
 
     private void semanticRelationNoIDCheck(){
-        IdMapping mapping = new IdMapping("Data/Wordnet/mapping.txt");
+        IdMapping mapping = new IdMapping();
         for (SynSet synSet : synSetList()){
             for (int i = 0; i < synSet.getSynonym().literalSize(); i++){
                 Literal literal = synSet.getSynonym().getLiteral(i);
