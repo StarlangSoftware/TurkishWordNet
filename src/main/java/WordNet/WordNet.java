@@ -383,21 +383,22 @@ public class WordNet {
     public void mergeSynSets(String synSetFile){
         try {
             BufferedReader infile = new BufferedReader(new FileReader(synSetFile));
-            BufferedWriter outfile = new BufferedWriter(new OutputStreamWriter(new FileOutputStream("Data/Wordnet/mapping.txt"), "UTF-8"));
             String line = infile.readLine();
             while (line != null){
                 String[] synSetIds = line.split(" ");
                 SynSet mergedOne = getSynSetWithId(synSetIds[0]);
-                for (int i = 1; i < synSetIds.length; i++){
-                    SynSet toBeMerged = getSynSetWithId(synSetIds[i]);
-                    mergedOne.mergeSynSet(toBeMerged);
-                    outfile.write(synSetIds[i] + "->" + synSetIds[0] + "\n");
-                    removeSynSet(toBeMerged);
+                if (mergedOne != null){
+                    for (int i = 1; i < synSetIds.length; i++){
+                        SynSet toBeMerged = getSynSetWithId(synSetIds[i]);
+                        if (toBeMerged != null && mergedOne.getPos().equals(toBeMerged.getPos())){
+                            mergedOne.mergeSynSet(toBeMerged);
+                            removeSynSet(toBeMerged);
+                        }
+                    }
                 }
                 line = infile.readLine();
             }
             infile.close();
-            outfile.close();
         } catch (IOException e) {
             e.printStackTrace();
         }
