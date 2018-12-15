@@ -984,35 +984,24 @@ public class WordNet {
     }
 
     private void semanticRelationNoIDCheck(){
-        IdMapping mapping = new IdMapping();
         for (SynSet synSet : synSetList()){
             for (int i = 0; i < synSet.getSynonym().literalSize(); i++){
                 Literal literal = synSet.getSynonym().getLiteral(i);
                 for (int j = 0; j < literal.relationSize(); j++){
                     Relation relation = literal.getRelation(j);
                     if (getSynSetWithId(relation.getName()) == null){
-                        if (mapping.map(relation.getName()) != null){
-                            relation.setName(mapping.map(relation.getName()));
-                            System.out.println("Modified---->Relation " + relation.getName() + " of Synset " + synSet.getId() + " does not exists");
-                        } else {
-                            literal.removeRelation(relation);
-                            j--;
-                            System.out.println("Relation " + relation.getName() + " of Synset " + synSet.getId() + " does not exists " + synSet.getSynonym());
-                        }
+                        literal.removeRelation(relation);
+                        j--;
+                        System.out.println("Relation " + relation.getName() + " of Synset " + synSet.getId() + " does not exists " + synSet.getSynonym());
                     }
                 }
             }
             for (int j = 0; j < synSet.relationSize(); j++){
                 Relation relation = synSet.getRelation(j);
                 if (relation instanceof SemanticRelation && getSynSetWithId(relation.getName()) == null){
-                    if (mapping.map(relation.getName()) != null){
-                        relation.setName(mapping.map(relation.getName()));
-                        System.out.println("Modified---->Relation " + relation.getName() + " of Synset " + synSet.getId() + " does not exists");
-                    } else {
-                        synSet.removeRelation(relation);
-                        j--;
-                        System.out.println("Relation " + relation.getName() + " of Synset " + synSet.getId() + " does not exists " + synSet.getSynonym());
-                    }
+                    synSet.removeRelation(relation);
+                    j--;
+                    System.out.println("Relation " + relation.getName() + " of Synset " + synSet.getId() + " does not exists " + synSet.getSynonym());
                 }
             }
         }

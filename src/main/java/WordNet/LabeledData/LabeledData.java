@@ -140,7 +140,7 @@ public class LabeledData {
 
     public void addPath(String path, Locale leftLocale, Locale rightLocale, WordNet rightWordNet){
         File[] listOfFiles = new File(path).listFiles();
-        IdMapping idMapping = new IdMapping("Data/Wordnet/mapping.txt");
+        IdMapping idMapping = new IdMapping();
         for (File file : listOfFiles){
             addFile(file.getAbsolutePath(), leftLocale, rightLocale, rightWordNet, idMapping);
         }

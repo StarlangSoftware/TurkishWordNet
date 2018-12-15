@@ -20,7 +20,7 @@ public class InterlinguaLabeledData extends LabeledData{
     public HashMap<SynSet, ArrayList<SynSet>> extractSynSetMap() {
         HashMap<SynSet, ArrayList<SynSet>> synSetMap = new HashMap<>();
         ArrayList<SynSet> mappedSynSets;
-        IdMapping idMapping = new IdMapping("Data/Wordnet/mapping.txt");
+        IdMapping idMapping = new IdMapping();
         for (Map.Entry<WordPair, CounterHashMap<WordPair>> entry : data.entrySet()) {
             CounterHashMap<WordPair> labeledRow = entry.getValue();
             for (WordPair label : labeledRow.keySet()) {
