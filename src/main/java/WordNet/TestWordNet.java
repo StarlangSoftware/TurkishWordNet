@@ -46,7 +46,7 @@ public class TestWordNet {
 
     public static void balkanetVsWordnet(){
         WordNet turkish = new WordNet();
-        WordNet balkanet = new WordNet("Data/Wordnet/balkanet.xml", new Locale("tr"));
+        WordNet balkanet = new WordNet("balkanet.xml", new Locale("tr"));
         for (SynSet synSet : balkanet.synSetList()){
             for (int i = 0; i < synSet.getSynonym().literalSize(); i++){
                 if (turkish.getSynSetsWithLiteral(synSet.getSynonym().getLiteral(i).getName()).size() == 0){
@@ -127,7 +127,7 @@ public class TestWordNet {
 
     public static void candidateRelation(SemanticRelationType semanticRelationType) throws FileNotFoundException {
         WordNet turkish = new WordNet();
-        WordNet english = new WordNet("Data/Wordnet/english_wordnet_version_31.xml");
+        WordNet english = new WordNet("english_wordnet_version_31.xml");
         PrintWriter printWriter = new PrintWriter(new File(semanticRelationType + ".txt"));
         for (SynSet synSet : english.synSetList()){
             ArrayList<SynSet> list1 = turkish.getInterlingual(synSet.getId());
@@ -143,7 +143,11 @@ public class TestWordNet {
                                 if (list2.size() > 0){
                                     for (SynSet synSet1 : list1){
                                         for (SynSet synSet2 : list2){
-                                            printWriter.println(synSet1.getId() + "\t" + synSet1.getSynonym() + "\t" + synSet1.getDefinition() + "\t" + synSet2.getId() + "\t" + synSet2.getSynonym() + "\t" + synSet2.getDefinition() + "\t" + synSet.getId() + "\t" + synSet.getSynonym() + "\t" + relatedSynSet.getId() + "\t" + relatedSynSet.getSynonym());
+                                            if (synSet1.containsRelation(new SemanticRelation(synSet2.getId(), semanticRelationType))){
+                                                printWriter.println("VAR\t" + synSet1.getId() + "\t" + synSet1.getSynonym() + "\t" + synSet1.getDefinition() + "\t" + synSet2.getId() + "\t" + synSet2.getSynonym() + "\t" + synSet2.getDefinition() + "\t" + synSet.getId() + "\t" + synSet.getSynonym() + "\t" + synSet.getDefinition() + "\t" + relatedSynSet.getId() + "\t" + relatedSynSet.getSynonym() + "\t" + relatedSynSet.getDefinition());
+                                            } else {
+                                                printWriter.println("YOK\t" + synSet1.getId() + "\t" + synSet1.getSynonym() + "\t" + synSet1.getDefinition() + "\t" + synSet2.getId() + "\t" + synSet2.getSynonym() + "\t" + synSet2.getDefinition() + "\t" + synSet.getId() + "\t" + synSet.getSynonym() + "\t" + synSet.getDefinition() + "\t" + relatedSynSet.getId() + "\t" + relatedSynSet.getSynonym() + "\t" + relatedSynSet.getDefinition());
+                                            }
                                         }
                                     }
                                 }
@@ -164,7 +168,11 @@ public class TestWordNet {
                                     if (list2.size() > 0){
                                         for (SynSet synSet1 : list1){
                                             for (SynSet synSet2 : list2){
-                                                printWriter.println(synSet1.getId() + "\t" + synSet1.getSynonym() + "\t" + synSet1.getDefinition() + "\t" + synSet2.getId() + "\t" + synSet2.getSynonym() + "\t" + synSet2.getDefinition() + "\t" + synSet.getId() + "\t" + synSet.getSynonym() + "\t" + relatedSynSet.getId() + "\t" + relatedSynSet.getSynonym());
+                                                if (synSet1.containsRelation(new SemanticRelation(synSet2.getId(), semanticRelationType))){
+                                                    printWriter.println("VAR\t" + synSet1.getId() + "\t" + synSet1.getSynonym() + "\t" + synSet1.getDefinition() + "\t" + synSet2.getId() + "\t" + synSet2.getSynonym() + "\t" + synSet2.getDefinition() + "\t" + synSet.getId() + "\t" + synSet.getSynonym() + "\t" + synSet.getDefinition() + "\t" + relatedSynSet.getId() + "\t" + relatedSynSet.getSynonym() + "\t" + relatedSynSet.getDefinition());
+                                                } else {
+                                                    printWriter.println("YOK\t" + synSet1.getId() + "\t" + synSet1.getSynonym() + "\t" + synSet1.getDefinition() + "\t" + synSet2.getId() + "\t" + synSet2.getSynonym() + "\t" + synSet2.getDefinition() + "\t" + synSet.getId() + "\t" + synSet.getSynonym() + "\t" + synSet.getDefinition() + "\t" + relatedSynSet.getId() + "\t" + relatedSynSet.getSynonym() + "\t" + relatedSynSet.getDefinition());
+                                                }
                                             }
                                         }
                                     }
@@ -179,7 +187,7 @@ public class TestWordNet {
     }
 
     public static void englishInstanceHypernyms(){
-        WordNet english = new WordNet("Data/Wordnet/english_wordnet_version_31.xml");
+        WordNet english = new WordNet("english_wordnet_version_31.xml");
         for (SynSet synSet : english.synSetList()){
             for (int i = 0; i < synSet.relationSize(); i++){
                 Relation relation = synSet.getRelation(i);
