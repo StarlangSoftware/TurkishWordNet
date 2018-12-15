@@ -995,6 +995,8 @@ public class WordNet {
                             relation.setName(mapping.map(relation.getName()));
                             System.out.println("Modified---->Relation " + relation.getName() + " of Synset " + synSet.getId() + " does not exists");
                         } else {
+                            literal.removeRelation(relation);
+                            j--;
                             System.out.println("Relation " + relation.getName() + " of Synset " + synSet.getId() + " does not exists " + synSet.getSynonym());
                         }
                     }
@@ -1007,6 +1009,8 @@ public class WordNet {
                         relation.setName(mapping.map(relation.getName()));
                         System.out.println("Modified---->Relation " + relation.getName() + " of Synset " + synSet.getId() + " does not exists");
                     } else {
+                        synSet.removeRelation(relation);
+                        j--;
                         System.out.println("Relation " + relation.getName() + " of Synset " + synSet.getId() + " does not exists " + synSet.getSynonym());
                     }
                 }
