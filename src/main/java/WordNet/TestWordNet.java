@@ -204,5 +204,6 @@ public class TestWordNet {
 
     public static void main(String[] args){
         WordNet turkish = new WordNet();
+        turkish.saveAsLmf("turkish.lmf");
     }
 }

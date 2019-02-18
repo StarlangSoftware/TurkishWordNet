@@ -347,34 +347,41 @@ public class SynSet {
 
     public void saveAsLmf(BufferedWriter outfile){
         try {
-            outfile.write("\t<Synset id=\"" + id + "\">\n");
+            if (pos != null){
+                switch (pos){
+                    case NOUN:
+                        outfile.write("\t<Synset id=\"" + id + "\" partOfSpeech=\"n\"/>\n");
+                        break;
+                    case ADJECTIVE:
+                        outfile.write("\t<Synset id=\"" + id + "\" partOfSpeech=\"a\"/>\n");
+                        break;
+                    case ADVERB:
+                        outfile.write("\t<Synset id=\"" + id + "\" partOfSpeech=\"r\"/>\n");
+                        break;
+                    case VERB:
+                        outfile.write("\t<Synset id=\"" + id + "\" partOfSpeech=\"v\"/>\n");
+                        break;
+                    default:
+                        outfile.write("\t<Synset id=\"" + id + "\" partOfSpeech=\"x\"/>\n");
+                        break;
+                }
+            } else {
+                outfile.write("\t<Synset id=\"" + id + "\" partOfSpeech=\"x\"/>\n");
+            }
             if (getLongDefinition() != null){
                 String longDefinition = getLongDefinition();
                 if (longDefinition.contains("\"")){
                     longDefinition = longDefinition.replaceAll("\"", "&quot;");
                 }
-                outfile.write("\t\t<Definition gloss=\"" + longDefinition + "\">\n");
-            } else {
-                outfile.write("\t\t<Definition gloss=\"\">\n");
+                outfile.write("\t\t<Definition>" + longDefinition + "</Definition>\n");
             }
             if (example != null){
-                outfile.write("\t\t\t<Statement example=\"" + getExample() + "\"/>\n");
+                outfile.write("\t\t<Example>" + getExample() + "</Example>\n");
             }
-            outfile.write("\t\t</Definition>\n");
-            int semanticRelationCount = 0;
             for (Relation r:relations){
                 if (r instanceof SemanticRelation){
-                    semanticRelationCount++;
+                    outfile.write("\t\t<SynsetRelation target=\"" + r.getName() + "\" relType=\"" + ((SemanticRelation) r).getTypeAsString().toLowerCase() + "\"/>\n");
                 }
-            }
-            if (semanticRelationCount > 0){
-                outfile.write("\t\t<SynsetRelations>\n");
-                for (Relation r:relations){
-                    if (r instanceof SemanticRelation){
-                        outfile.write("\t\t\t<SynsetRelation target=\"" + r.getName() + "\" relType=\"" + ((SemanticRelation) r).getTypeAsString().toLowerCase() + "\"/>\n");
-                    }
-                }
-                outfile.write("\t\t</SynsetRelations>\n");
             }
             outfile.write("\t</Synset>\n");
         } catch (IOException e) {

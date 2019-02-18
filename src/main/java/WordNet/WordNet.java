@@ -1076,8 +1076,10 @@ public class WordNet {
         try{
             OutputStreamWriter writer = new OutputStreamWriter(new FileOutputStream(fileName), "UTF-8");
             outfile = new BufferedWriter(writer);
-            outfile.write("<LexicalResource>\n");
-            outfile.write("<Lexicon languageCoding=\"UTF-8\" label=\"Kenet\" language=\"tr\" version=\"10\">\n");
+            outfile.write("<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n" +
+                    "<!DOCTYPE LexicalResource SYSTEM \"http://globalwordnet.github.io/schemas/WN-LMF-1.0.dtd\">\n" +
+                    "<LexicalResource xmlns:dc=\"http://purl.org/dc/elements/1.1/\">");
+            outfile.write("<Lexicon id=\"tr\" label=\"Kenet\" language=\"tr\" email=\"olcaytaner@isikun.edu.tr\" license=\"https://creativecommons.org/publicdomain/zero/1.0/\" version=\"1.0\" citation=\"R. Ehsani, E. Solak, O. T. Yildiz , Constructing a WordNet for Turkish Using Manual and Automatic Annotation, ACM Transactions on Asian and Low-Resource Language Information Processing, Vol. 17, No. 3, Article 24, 2018.\" url=\"https://github.com/olcaytaner/WordNet/\">\n");
             int wordId = 0;
             for (String literal : literalList.keySet()){
                 ArrayList<Literal> literals = literalList.get(literal);
@@ -1137,19 +1139,6 @@ public class WordNet {
                 synSet.saveAsLmf(outfile);
             }
             outfile.write("</Lexicon>\n");
-            outfile.write("<SenseAxes>\n");
-            int senseAxisId = 0;
-            for (String englishId : interlingualList.keySet()){
-                ArrayList<SynSet> synSets = interlingualList.get(englishId);
-                for (SynSet turkishSynSet : synSets){
-                    outfile.write("\t<SenseAxis id=\"sa_TUR10-" + senseAxisId + "\" relType=\"eq_synonym\">\n");
-                    outfile.write("\t\t<Target ID=\"" + turkishSynSet.getId() + "\"/>\n");
-                    outfile.write("\t\t<Target ID=\"" + englishId + "\"/>\n");
-                    outfile.write("\t</SenseAxis>\n");
-                    senseAxisId++;
-                }
-            }
-            outfile.write("</SenseAxes>\n");
             outfile.write("</LexicalResource>\n");
             outfile.close();
         }
