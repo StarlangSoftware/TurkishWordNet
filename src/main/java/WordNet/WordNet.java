@@ -1143,7 +1143,7 @@ public class WordNet {
                 if (interlinguals.size() > 0 && iliMapping.map(interlinguals.get(0)) != null){
                     synSet.saveAsLmf(outfile, iliMapping.map(interlinguals.get(0)));
                 } else {
-                    synSet.saveAsLmf(outfile, "in");
+                    synSet.saveAsLmf(outfile, "");
                 }
             }
             outfile.write("</Lexicon>\n");

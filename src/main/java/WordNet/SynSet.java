@@ -369,7 +369,7 @@ public class SynSet {
             } else {
                 posChar = "x";
             }
-            outfile.write("\t<Synset id=\"" + id + "\" ili=\"" + ili + "\" partOfSpeech=\"" + posChar + "\"/>\n");
+            outfile.write("\t<Synset id=\"" + id + "\" ili=\"" + ili + "\" partOfSpeech=\"" + posChar + "\">\n");
             if (getLongDefinition() != null){
                 String longDefinition = getLongDefinition();
                 if (longDefinition.contains("\"")){
@@ -377,13 +377,46 @@ public class SynSet {
                 }
                 outfile.write("\t\t<Definition>" + longDefinition + "</Definition>\n");
             }
-            if (example != null){
-                outfile.write("\t\t<Example>" + getExample() + "</Example>\n");
-            }
             for (Relation r:relations){
                 if (r instanceof SemanticRelation){
-                    outfile.write("\t\t<SynsetRelation target=\"" + r.getName() + "\" relType=\"" + ((SemanticRelation) r).getTypeAsString().toLowerCase() + "\"/>\n");
+                    switch (((SemanticRelation) r).getRelationType()){
+                        case MEMBER_TOPIC:
+                            outfile.write("\t\t<SynsetRelation target=\"" + r.getName() + "\" relType=\"has_domain_topic\"/>\n");
+                            break;
+                        case MEMBER_REGION:
+                            outfile.write("\t\t<SynsetRelation target=\"" + r.getName() + "\" relType=\"has_domain_region\"/>\n");
+                            break;
+                        case PART_HOLONYM:
+                            outfile.write("\t\t<SynsetRelation target=\"" + r.getName() + "\" relType=\"holo_part\"/>\n");
+                            break;
+                        case PART_MERONYM:
+                            outfile.write("\t\t<SynsetRelation target=\"" + r.getName() + "\" relType=\"mero_part\"/>\n");
+                            break;
+                        case MEMBER_HOLONYM:
+                            outfile.write("\t\t<SynsetRelation target=\"" + r.getName() + "\" relType=\"holo_member\"/>\n");
+                            break;
+                        case MEMBER_MERONYM:
+                            outfile.write("\t\t<SynsetRelation target=\"" + r.getName() + "\" relType=\"mero_member\"/>\n");
+                            break;
+                        case SUBSTANCE_HOLONYM:
+                            outfile.write("\t\t<SynsetRelation target=\"" + r.getName() + "\" relType=\"holo_substance\"/>\n");
+                            break;
+                        case SUBSTANCE_MERONYM:
+                            outfile.write("\t\t<SynsetRelation target=\"" + r.getName() + "\" relType=\"mero_substance\"/>\n");
+                            break;
+                        case ALSO_SEE:
+                            outfile.write("\t\t<SynsetRelation target=\"" + r.getName() + "\" relType=\"also\"/>\n");
+                            break;
+                        case DERIVATION_RELATED:
+                            break;
+                        default:
+                            outfile.write("\t\t<SynsetRelation target=\"" + r.getName() + "\" relType=\"" + ((SemanticRelation) r).getTypeAsString().toLowerCase() + "\"/>\n");
+                            break;
+                    }
                 }
+            }
+            if (example != null){
+                outfile.write("\t\t<Example>" + getExample() + "</Example>\n");
             }
             outfile.write("\t</Synset>\n");
         } catch (IOException e) {
