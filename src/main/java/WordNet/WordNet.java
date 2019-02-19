@@ -1073,6 +1073,7 @@ public class WordNet {
         BufferedWriter outfile;
         String wordIdString = null;
         String senseId;
+        IdMapping iliMapping = new IdMapping("ili-mapping.txt");
         try{
             OutputStreamWriter writer = new OutputStreamWriter(new FileOutputStream(fileName), "UTF-8");
             outfile = new BufferedWriter(writer);
@@ -1083,16 +1084,18 @@ public class WordNet {
             int wordId = 0;
             for (String literal : literalList.keySet()){
                 ArrayList<Literal> literals = literalList.get(literal);
-                ArrayList<SynSet> synSets = new ArrayList<>();
-                for (int i = 0; i < literals.size(); i++) {
-                    if (getSynSetWithId(literals.get(i).synSetId).getPos() == null) {
+                HashSet<SynSet> synSetSet = new HashSet<>();
+                for (Literal literal1 : literals) {
+                    if (getSynSetWithId(literal1.synSetId).getPos() == null) {
                         continue;
                     }
-                    synSets.add(getSynSetWithId(literals.get(i).synSetId));
+                    synSetSet.add(getSynSetWithId(literal1.synSetId));
                 }
-                if (synSets.size() == 0){
+                if (synSetSet.size() == 0){
                     continue;
                 }
+                ArrayList<SynSet> synSets = new ArrayList<>();
+                synSets.addAll(synSetSet);
                 Collections.sort(synSets, (o1, o2) -> o1.getPos().toString().compareTo(o2.getPos().toString()));
                 SynSet previous = null;
                 for (SynSet current : synSets){
@@ -1136,7 +1139,12 @@ public class WordNet {
                 outfile.write("\t</LexicalEntry>\n");
             }
             for (SynSet synSet : synSetList.values()){
-                synSet.saveAsLmf(outfile);
+                ArrayList<String> interlinguals = synSet.getInterlingual();
+                if (interlinguals.size() > 0 && iliMapping.map(interlinguals.get(0)) != null){
+                    synSet.saveAsLmf(outfile, iliMapping.map(interlinguals.get(0)));
+                } else {
+                    synSet.saveAsLmf(outfile, "in");
+                }
             }
             outfile.write("</Lexicon>\n");
             outfile.write("</LexicalResource>\n");

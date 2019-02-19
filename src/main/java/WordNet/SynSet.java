@@ -345,29 +345,31 @@ public class SynSet {
         }
     }
 
-    public void saveAsLmf(BufferedWriter outfile){
+    public void saveAsLmf(BufferedWriter outfile, String ili){
+        String posChar;
         try {
             if (pos != null){
                 switch (pos){
                     case NOUN:
-                        outfile.write("\t<Synset id=\"" + id + "\" partOfSpeech=\"n\"/>\n");
+                        posChar = "n";
                         break;
                     case ADJECTIVE:
-                        outfile.write("\t<Synset id=\"" + id + "\" partOfSpeech=\"a\"/>\n");
+                        posChar = "a";
                         break;
                     case ADVERB:
-                        outfile.write("\t<Synset id=\"" + id + "\" partOfSpeech=\"r\"/>\n");
+                        posChar = "r";
                         break;
                     case VERB:
-                        outfile.write("\t<Synset id=\"" + id + "\" partOfSpeech=\"v\"/>\n");
+                        posChar = "v";
                         break;
                     default:
-                        outfile.write("\t<Synset id=\"" + id + "\" partOfSpeech=\"x\"/>\n");
+                        posChar = "x";
                         break;
                 }
             } else {
-                outfile.write("\t<Synset id=\"" + id + "\" partOfSpeech=\"x\"/>\n");
+                posChar = "x";
             }
+            outfile.write("\t<Synset id=\"" + id + "\" ili=\"" + ili + "\" partOfSpeech=\"" + posChar + "\"/>\n");
             if (getLongDefinition() != null){
                 String longDefinition = getLongDefinition();
                 if (longDefinition.contains("\"")){

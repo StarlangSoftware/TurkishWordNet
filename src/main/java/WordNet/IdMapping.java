@@ -13,30 +13,23 @@ public class IdMapping {
 
     public IdMapping(){
         map = new HashMap<>();
-        try {
-            ClassLoader classLoader = getClass().getClassLoader();
-            Scanner scanner = new Scanner(new File(classLoader.getResource("mapping.txt").getFile()));
-            while (scanner.hasNext()){
-                String s = scanner.next();
-                String[] mapInfo = s.split("->");
-                map.put(mapInfo[0], mapInfo[1]);
-            }
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
+        ClassLoader classLoader = getClass().getClassLoader();
+        Scanner scanner = new Scanner(classLoader.getResourceAsStream("mapping.txt"));
+        while (scanner.hasNext()){
+            String s = scanner.next();
+            String[] mapInfo = s.split("->");
+            map.put(mapInfo[0], mapInfo[1]);
         }
     }
 
     public IdMapping(String fileName){
         map = new HashMap<>();
-        try {
-            Scanner scanner = new Scanner(new File(fileName));
-            while (scanner.hasNext()){
-                String s = scanner.next();
-                String[] mapInfo = s.split("->");
-                map.put(mapInfo[0], mapInfo[1]);
-            }
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
+        ClassLoader classLoader = getClass().getClassLoader();
+        Scanner scanner = new Scanner(classLoader.getResourceAsStream(fileName));
+        while (scanner.hasNext()){
+            String s = scanner.next();
+            String[] mapInfo = s.split("->");
+            map.put(mapInfo[0], mapInfo[1]);
         }
     }
 
