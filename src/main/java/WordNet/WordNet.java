@@ -1083,6 +1083,9 @@ public class WordNet {
             outfile.write("<Lexicon id=\"tr\" label=\"Kenet\" language=\"tr\" email=\"olcaytaner@isikun.edu.tr\" license=\"https://creativecommons.org/publicdomain/zero/1.0/\" version=\"1.0\" citation=\"R. Ehsani, E. Solak, O. T. Yildiz , Constructing a WordNet for Turkish Using Manual and Automatic Annotation, ACM Transactions on Asian and Low-Resource Language Information Processing, Vol. 17, No. 3, Article 24, 2018.\" url=\"https://github.com/olcaytaner/WordNet/\">\n");
             int wordId = 0;
             for (String literal : literalList.keySet()){
+                if (Word.isPunctuation(literal) || literal.startsWith("(")){
+                    continue;
+                }
                 ArrayList<Literal> literals = literalList.get(literal);
                 HashSet<SynSet> synSetSet = new HashSet<>();
                 for (Literal literal1 : literals) {
@@ -1139,6 +1142,9 @@ public class WordNet {
                 outfile.write("\t</LexicalEntry>\n");
             }
             for (SynSet synSet : synSetList.values()){
+                if (synSet.getSynonym().getLiteral(0).getName().startsWith("(")){
+                    continue;
+                }
                 ArrayList<String> interlinguals = synSet.getInterlingual();
                 if (interlinguals.size() > 0 && iliMapping.map(interlinguals.get(0)) != null){
                     synSet.saveAsLmf(outfile, iliMapping.map(interlinguals.get(0)));
