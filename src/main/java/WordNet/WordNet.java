@@ -15,6 +15,7 @@ import java.text.Collator;
 import java.util.*;
 import java.util.Collection;
 import java.util.concurrent.ExecutionException;
+import java.util.AbstractMap.SimpleEntry;
 
 public class WordNet {
 
@@ -964,82 +965,50 @@ public class WordNet {
      * Helper functions: These methods conduct common operations between similarity metrics.
      */
     public int findPathLength(ArrayList<String> pathToRootOfSynSet1, ArrayList<String> pathToRootOfSynSet2) {
-        // To find the path length, iterate over one path and check if the other path contains this node. Iterating over the longer path
-        // is computationally more efficient.
-        ArrayList<String> listToIterate;
-        ArrayList<String> listToSearch;
-        if (pathToRootOfSynSet1.size() > pathToRootOfSynSet2.size()) {
-            listToIterate = pathToRootOfSynSet1;
-            listToSearch = pathToRootOfSynSet2;
-        } else {
-            listToIterate = pathToRootOfSynSet2;
-            listToSearch = pathToRootOfSynSet1;
-        }
         // There might not be a path between nodes, due to missing nodes. Keep track of that as well. Break when the LCS if found.
-        int i = 0, foundIndex = 0;
-        boolean found = false;
-        for (; i < listToIterate.size() && !found; i++) {
-            foundIndex = listToSearch.indexOf(listToIterate.get(i));
+        for (int i = 0; i < pathToRootOfSynSet1.size(); i++) {
+            int foundIndex = pathToRootOfSynSet2.indexOf(pathToRootOfSynSet1.get(i));
             if (foundIndex != -1) {
-                found = true;
+                // Index of two lists - 1 is equal to path length. If there is not path, return -1
+                return i + foundIndex - 1;
             }
-        }
-        // Index of two lists - 1 is equal to path length. If there is not path, return -1
-        if (found) {
-            return i + foundIndex - 1;
         }
         return -1;
     }
 
     // Following two methods are wrapper of findLCS. They return the depth and ID of LCS separately
     public int findLCSdepth(ArrayList<String> pathToRootOfSynSet1, ArrayList<String> pathToRootOfSynSet2) {
-        Object[] temp = (findLCS(pathToRootOfSynSet1, pathToRootOfSynSet2));
+        SimpleEntry<String, Integer> temp = findLCS(pathToRootOfSynSet1, pathToRootOfSynSet2);
         if (temp != null) {
-            return (int) temp[1];
+            return temp.getValue();
         }
         return -1;
     }
 
     public String findLCSid(ArrayList<String> pathToRootOfSynSet1, ArrayList<String> pathToRootOfSynSet2) {
-        Object[] temp = (findLCS(pathToRootOfSynSet1, pathToRootOfSynSet2));
+        SimpleEntry<String, Integer> temp = findLCS(pathToRootOfSynSet1, pathToRootOfSynSet2);
         if (temp != null) {
-            return (String) temp[0];
+            return temp.getKey();
         }
         return null;
     }
 
-    // This method returns depth and ID of the LCS. Though it is very similar to findPathLength, it uses HashSet, since
-    // index is not necessary and search in the HashSet is cheaper.
-    private Object[] findLCS(ArrayList<String> pathToRootOfSynSet1, ArrayList<String> pathToRootOfSynSet2) {
-        ArrayList<String> listToIterate;
-        HashSet<String> listToSearch;
-        if (pathToRootOfSynSet1.size() > pathToRootOfSynSet2.size()) {
-            listToIterate = pathToRootOfSynSet1;
-            listToSearch = new HashSet<>(pathToRootOfSynSet2);
-        } else {
-            listToIterate = pathToRootOfSynSet2;
-            listToSearch = new HashSet<>(pathToRootOfSynSet1);
-        }
-        int i = 0;
-        boolean found = false;
-        String LCSid = "";
-        for (; i < listToIterate.size() && !found; i++) {
-            LCSid = listToIterate.get(i);
-            if (listToSearch.contains(LCSid)) {
-                found = true;
+    // This method returns depth and ID of the LCS.
+    private SimpleEntry<String, Integer> findLCS(ArrayList<String> pathToRootOfSynSet1, ArrayList<String> pathToRootOfSynSet2) {
+        for (int i = 0; i < pathToRootOfSynSet1.size(); i++) {
+            String LCSid = pathToRootOfSynSet1.get(i);
+            if (pathToRootOfSynSet2.contains(LCSid)) {
+                return new SimpleEntry<>(LCSid, pathToRootOfSynSet1.size() - i + 1);
             }
         }
-        if (found) {
-            return new Object[] { LCSid, listToIterate.size() - i + 1};
-        }
         return null;
     }
 
-    public ArrayList<String> findPathToRoot(SynSet synset) {
+    public ArrayList<String> findPathToRoot(SynSet synSet) {
         ArrayList<String> pathToRoot = new ArrayList<>();
-        while (synset != null) {
-            pathToRoot.add(synset.getId());
-            synset = percolateUp(synset);
+        while (synSet != null) {
+            pathToRoot.add(synSet.getId());
+            synSet = percolateUp(synSet);
         }
         return pathToRoot;
     }
