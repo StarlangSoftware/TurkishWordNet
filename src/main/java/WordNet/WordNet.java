@@ -113,7 +113,7 @@ public class WordNet {
                                                 typeNode = srNode.getNextSibling();
                                                 if (typeNode != null && typeNode.getNodeName().equals("TYPE")) {
                                                     toNode = typeNode.getNextSibling();
-                                                    if (toNode != null && typeNode.getNodeName().equals("TO")) {
+                                                    if (toNode != null && toNode.getNodeName().equals("TO")) {
                                                         currentSynSet.addRelation(new SemanticRelation(srNode.getNodeValue(), typeNode.getFirstChild().getNodeValue(), Integer.parseInt(toNode.getFirstChild().getNodeValue())));
                                                     } else {
                                                         currentSynSet.addRelation(new SemanticRelation(srNode.getNodeValue(), typeNode.getFirstChild().getNodeValue()));
@@ -164,7 +164,12 @@ public class WordNet {
                                                                             if (srNode.getNodeName().equals("SR")) {
                                                                                 typeNode = srNode.getFirstChild().getNextSibling();
                                                                                 if (typeNode != null && typeNode.getNodeName().equals("TYPE")) {
-                                                                                    currentLiteral.addRelation(new SemanticRelation(srNode.getFirstChild().getNodeValue(), typeNode.getFirstChild().getNodeValue()));
+                                                                                    toNode = typeNode.getNextSibling();
+                                                                                    if (toNode != null && toNode.getNodeName().equals("TO")) {
+                                                                                        currentLiteral.addRelation(new SemanticRelation(srNode.getFirstChild().getNodeValue(), typeNode.getFirstChild().getNodeValue(), Integer.parseInt(toNode.getFirstChild().getNodeValue())));
+                                                                                    } else {
+                                                                                        currentLiteral.addRelation(new SemanticRelation(srNode.getFirstChild().getNodeValue(), typeNode.getFirstChild().getNodeValue()));
+                                                                                    }
                                                                                 } else {
                                                                                     System.out.println("SR node " + srNode.getFirstChild().getNodeValue() + "of literal " + currentLiteral.getName() + " of synSet " + currentSynSet.getId() + " does not contain type value");
                                                                                 }
