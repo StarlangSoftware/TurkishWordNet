@@ -18,8 +18,6 @@ public class SimilarityPath extends Similarity{
         ArrayList<String> pathToRootOfSynSet2 = wordNet.findPathToRoot(synSet2);
         // Find path length
         int pathLength = wordNet.findPathLength(pathToRootOfSynSet1, pathToRootOfSynSet2);
-        // Find max depth. The length of path roots
-        System.out.println(pathLength);
         int maxDepth = Math.max(pathToRootOfSynSet1.size(), pathToRootOfSynSet2.size());
         return 2 * maxDepth - pathLength;
     }
