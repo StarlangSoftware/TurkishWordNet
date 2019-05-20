@@ -17,6 +17,7 @@ public class SynSet {
     private ArrayList<Relation> relations;
     private String note;
     private int bcs;
+    private PolarityType polarityType = PolarityType.NOT_AVAILABLE;
 
     public SynSet(String id){
         this.id = id;
@@ -187,6 +188,14 @@ public class SynSet {
         if (bcs >= 1 && bcs <= 3){
             this.bcs = bcs;
         }
+    }
+
+    public PolarityType getPolarityType(){
+        return polarityType;
+    }
+
+    public void setPolarityType(PolarityType polarityType){
+        this.polarityType = polarityType;
     }
 
     public int getBcs(){
@@ -425,6 +434,7 @@ public class SynSet {
     }
 
     public void saveAsXml(BufferedWriter outfile){
+        String polarity = "";
         try {
             outfile.write("<SYNSET>");
             outfile.write("<ID>" + id + "</ID>");
@@ -470,6 +480,20 @@ public class SynSet {
                         outfile.write("<SR>" + r.getName() + "<TYPE>" + ((SemanticRelation) r).getTypeAsString() + "</TYPE></SR>");
                     }
                 }
+            }
+            if (polarityType != PolarityType.NOT_AVAILABLE){
+                switch (polarityType){
+                    case POSITIVE:
+                        polarity = "positive";
+                        break;
+                    case NEGATIVE:
+                        polarity = "negative";
+                        break;
+                    case NEUTRAL:
+                        polarity = "neutral";
+                        break;
+                }
+                outfile.write("<POLARITY>" + polarity + "</POLARITY>");
             }
             if (definition != null){
                 outfile.write("<DEF>" + getLongDefinition() + "</DEF>");
