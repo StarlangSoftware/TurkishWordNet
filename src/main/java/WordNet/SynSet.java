@@ -31,6 +31,9 @@ public class SynSet {
 
     public void setId(String id){
         this.id = id;
+        for (int i = 0; i < synonym.literalSize(); i++){
+            synonym.getLiteral(i).setSynSetId(id);
+        }
     }
 
     public void setDefinition(String definition){

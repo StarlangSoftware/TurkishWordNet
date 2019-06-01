@@ -1,5 +1,6 @@
 package WordNet;
 
+import DataStructure.CounterHashMap;
 import Dictionary.*;
 import MorphologicalAnalysis.FsmMorphologicalAnalyzer;
 

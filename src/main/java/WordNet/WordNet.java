@@ -373,6 +373,12 @@ public class WordNet {
         synSetList.remove(s.getId());
     }
 
+    public void changeSynSetId(SynSet s, String newId){
+        synSetList.remove(s.getId());
+        s.setId(newId);
+        synSetList.put(newId, s);
+    }
+
     public SynSet getSynSetWithId(String synSetId){
         if (synSetList.containsKey(synSetId)){
             return synSetList.get(synSetId);
