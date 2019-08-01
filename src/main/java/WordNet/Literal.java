@@ -13,15 +13,28 @@ public class Literal {
     protected String origin = null;
     protected ArrayList<Relation> relations;
 
-    public Literal(String name, int sense, String synSetId){
+    /**
+     * A constructor that initializes name, sense, SynSet ID and the relations.
+     *
+     * @param name     name of a literal
+     * @param sense    index of sense
+     * @param synSetId ID of the SynSet
+     */
+    public Literal(String name, int sense, String synSetId) {
         this.name = name;
         this.sense = sense;
         this.synSetId = synSetId;
         relations = new ArrayList<Relation>();
     }
 
+    /**
+     * Overridden equals method returns true if the specified object literal equals to the current literal's name.
+     *
+     * @param literal Object literal to compare
+     * @return true if the specified object literal equals to the current literal's name
+     */
     @Override
-    public boolean equals(Object literal){
+    public boolean equals(Object literal) {
         if (literal == null)
             return false;
         if (literal == this)
@@ -29,90 +42,169 @@ public class Literal {
         if (!(literal instanceof Literal))
             return false;
         Literal secondLiteral = (Literal) literal;
-        if (name.equalsIgnoreCase(secondLiteral.getName()) && sense == secondLiteral.getSense()){
+        if (name.equalsIgnoreCase(secondLiteral.getName()) && sense == secondLiteral.getSense()) {
             return true;
         } else {
             return false;
         }
     }
 
-    public String getSynSetId(){
+    /**
+     * Accessor method to return SynSet ID.
+     *
+     * @return String of SynSet ID
+     */
+    public String getSynSetId() {
         return synSetId;
     }
 
-    public String getName(){
+    /**
+     * Accessor method to return name of the literal.
+     *
+     * @return name of the literal
+     */
+    public String getName() {
         return name;
     }
 
-    public int getSense(){
+    /**
+     * Accessor method to return the index of sense of the literal.
+     *
+     * @return index of sense of the literal
+     */
+    public int getSense() {
         return sense;
     }
 
-    public String getOrigin(){
+    /**
+     * Accessor method to return the origin of the literal.
+     *
+     * @return origin of the literal
+     */
+    public String getOrigin() {
         return origin;
     }
 
-    public void setOrigin(String origin){
+    /**
+     * Mutator method to set the origin with specified origin.
+     *
+     * @param origin origin of the literal to set
+     */
+    public void setOrigin(String origin) {
         this.origin = origin;
     }
 
-    public void setSense(int sense){
+    /**
+     * Mutator method to set the sense index of the literal.
+     *
+     * @param sense sense index of the literal to set
+     */
+    public void setSense(int sense) {
         this.sense = sense;
     }
 
-    public void addRelation(Relation relation){
+    /**
+     * Appends the specified Relation to the end of relations list.
+     *
+     * @param relation element to be appended to the list
+     */
+    public void addRelation(Relation relation) {
         relations.add(relation);
     }
 
-    public void removeRelation(Relation relation){
+    /**
+     * Removes the first occurrence of the specified element from relations list,
+     * if it is present. If the list does not contain the element, it stays unchanged.
+     *
+     * @param relation element to be removed from the list, if present
+     */
+    public void removeRelation(Relation relation) {
         relations.remove(relation);
     }
 
-    public boolean containsRelation(Relation relation){
+    /**
+     * Returns <tt>true</tt> if relations list contains the specified relation.
+     *
+     * @param relation element whose presence in the list is to be tested
+     * @return <tt>true</tt> if the list contains the specified element
+     */
+    public boolean containsRelation(Relation relation) {
         return relations.contains(relation);
     }
 
-    public boolean containsRelationType(SemanticRelationType semanticRelationType){
-        for (Relation relation : relations){
-            if (relation instanceof SemanticRelation && ((SemanticRelation) relation).getRelationType().equals(semanticRelationType)){
+    /**
+     * Returns <tt>true</tt> if specified semantic relation type presents in the relations list.
+     *
+     * @param semanticRelationType element whose presence in the list is to be tested
+     * @return <<tt>true</tt> if specified semantic relation type presents in the relations list
+     */
+    public boolean containsRelationType(SemanticRelationType semanticRelationType) {
+        for (Relation relation : relations) {
+            if (relation instanceof SemanticRelation && ((SemanticRelation) relation).getRelationType().equals(semanticRelationType)) {
                 return true;
             }
         }
         return false;
     }
 
-    public Relation getRelation(int index){
+    /**
+     * Returns the element at the specified position in relations list.
+     *
+     * @param index index of the element to return
+     * @return the element at the specified position in the list
+     */
+    public Relation getRelation(int index) {
         return relations.get(index);
     }
 
-    public int relationSize(){
+    /**
+     * Returns size of relations list.
+     *
+     * @return the size of the list
+     */
+    public int relationSize() {
         return relations.size();
     }
 
-    public void setName(String name){
+    /**
+     * Mutator method to set name of a literal.
+     *
+     * @param name name of the literal to set
+     */
+    public void setName(String name) {
         this.name = name;
     }
 
-    public void setSynSetId(String synSetId){
+    /**
+     * Mutator method to set SynSet ID of a literal.
+     *
+     * @param synSetId SynSet ID of the literal to set
+     */
+    public void setSynSetId(String synSetId) {
         this.synSetId = synSetId;
     }
 
-    public void saveAsXml(BufferedWriter outfile){
+    /**
+     * Method to write Literals to the specified file in the XML format.
+     *
+     * @param outfile BufferedWriter to write XML files
+     */
+    public void saveAsXml(BufferedWriter outfile) {
         try {
-            if (name.equals("&")){
+            if (name.equals("&")) {
                 outfile.write("<LITERAL>&amp;<SENSE>" + sense + "</SENSE>");
             } else {
                 outfile.write("<LITERAL>" + name + "<SENSE>" + sense + "</SENSE>");
             }
-            if (origin != null){
+            if (origin != null) {
                 outfile.write("<ORIGIN>" + origin + "</ORIGIN>");
             }
-            for (Relation r:relations){
-                if (r instanceof InterlingualRelation){
+            for (Relation r : relations) {
+                if (r instanceof InterlingualRelation) {
                     outfile.write("<ILR>" + r.getName() + "<TYPE>" + ((InterlingualRelation) r).getTypeAsString() + "</TYPE></ILR>");
                 } else {
-                    if (r instanceof SemanticRelation){
-                        if (((SemanticRelation) r).toIndex() == 0){
+                    if (r instanceof SemanticRelation) {
+                        if (((SemanticRelation) r).toIndex() == 0) {
                             outfile.write("<SR>" + r.getName() + "<TYPE>" + ((SemanticRelation) r).getTypeAsString() + "</TYPE></SR>");
                         } else {
                             outfile.write("<SR>" + r.getName() + "<TYPE>" + ((SemanticRelation) r).getTypeAsString() + "</TYPE>" + "<TO>" + ((SemanticRelation) r).toIndex() + "</TO>" + "</SR>");
@@ -125,7 +217,12 @@ public class Literal {
         }
     }
 
-    public String toString(){
+    /**
+     * Overridden toString method to print names and sense of literals.
+     *
+     * @return concatenated names and senses of literals
+     */
+    public String toString() {
         return name + " " + sense;
     }
 }
