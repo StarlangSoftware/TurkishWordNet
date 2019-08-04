@@ -1032,6 +1032,9 @@ public class WordNet {
     public ArrayList<String> findPathToRoot(SynSet synSet) {
         ArrayList<String> pathToRoot = new ArrayList<>();
         while (synSet != null) {
+            if (pathToRoot.contains(synSet.getId())){
+                break;
+            }
             pathToRoot.add(synSet.getId());
             synSet = percolateUp(synSet);
         }
