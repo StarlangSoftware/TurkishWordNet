@@ -25,14 +25,18 @@ public class WordNet {
     private HashMap<String, ExceptionalWord> exceptionList;
     private HashMap<String, ArrayList<SynSet>> interlingualList;
 
+    /**
+     * ReadWordNetTask class extends SwingWorker class which is an abstract class to perform lengthy
+     * GUI-interaction tasks in a background thread.
+     */
     private class ReadWordNetTask extends SwingWorker {
         private InputSource inputSource;
 
-        public ReadWordNetTask(String fileName){
+        public ReadWordNetTask(String fileName) {
             inputSource = new InputSource(fileName);
         }
 
-        public ReadWordNetTask(InputSource inputSource){
+        public ReadWordNetTask(InputSource inputSource) {
             this.inputSource = inputSource;
         }
 
@@ -60,17 +64,17 @@ public class WordNet {
             synSetNode = rootNode.getFirstChild();
             parsedCount = 0;
             totalCount = rootNode.getChildNodes().getLength();
-            while (synSetNode != null){
+            while (synSetNode != null) {
                 partNode = synSetNode.getFirstChild();
-                while (partNode != null){
-                    if (partNode.getNodeName().equals("ID")){
+                while (partNode != null) {
+                    if (partNode.getNodeName().equals("ID")) {
                         currentSynSet = new SynSet(partNode.getFirstChild().getNodeValue());
                         addSynSet(currentSynSet);
                     } else {
-                        if (partNode.getNodeName().equals("DEF") && currentSynSet != null){
+                        if (partNode.getNodeName().equals("DEF") && currentSynSet != null) {
                             currentSynSet.setDefinition(partNode.getFirstChild().getNodeValue());
                         } else {
-                            if (partNode.getNodeName().equals("EXAMPLE") && currentSynSet != null){
+                            if (partNode.getNodeName().equals("EXAMPLE") && currentSynSet != null) {
                                 currentSynSet.setExample(partNode.getFirstChild().getNodeValue());
                             } else {
                                 if (partNode.getNodeName().equals("BCS") && currentSynSet != null) {
@@ -132,7 +136,7 @@ public class WordNet {
                                                     if (typeNode != null && typeNode.getNodeName().equals("TYPE")) {
                                                         String interlingualId = ilrNode.getNodeValue();
                                                         ArrayList<SynSet> synSetList;
-                                                        if (interlingualList.containsKey(interlingualId)){
+                                                        if (interlingualList.containsKey(interlingualId)) {
                                                             synSetList = interlingualList.get(interlingualId);
                                                         } else {
                                                             synSetList = new ArrayList<>();
@@ -194,8 +198,8 @@ public class WordNet {
                                                     if (partNode.getNodeName().equals("SNOTE") && currentSynSet != null) {
                                                         currentSynSet.setNote(partNode.getFirstChild().getNodeValue());
                                                     } else {
-                                                        if (partNode.getNodeName().equals("POLARITY") && currentSynSet != null){
-                                                            switch (partNode.getFirstChild().getNodeValue()){
+                                                        if (partNode.getNodeName().equals("POLARITY") && currentSynSet != null) {
+                                                            switch (partNode.getFirstChild().getNodeValue()) {
                                                                 case "positive":
                                                                     currentSynSet.setPolarityType(PolarityType.POSITIVE);
                                                                     break;
@@ -226,7 +230,13 @@ public class WordNet {
         }
     }
 
-    public void readExceptionFile(String exceptionFileName){
+    /**
+     * Method constructs a DOM parser using the dtd/xml schema parser configuration and using this parser it
+     * reads exceptions from file and puts to exceptionList HashMap.
+     *
+     * @param exceptionFileName exception file to be read
+     */
+    public void readExceptionFile(String exceptionFileName) {
         NamedNodeMap attributes;
         String wordName, rootForm;
         Pos pos;
@@ -243,12 +253,12 @@ public class WordNet {
         doc = parser.getDocument();
         rootNode = doc.getFirstChild();
         wordNode = rootNode.getFirstChild();
-        while (wordNode != null){
-            if (wordNode.hasAttributes()){
+        while (wordNode != null) {
+            if (wordNode.hasAttributes()) {
                 attributes = wordNode.getAttributes();
                 wordName = attributes.getNamedItem("name").getNodeValue();
                 rootForm = attributes.getNamedItem("root").getNodeValue();
-                switch (attributes.getNamedItem("pos").getNodeValue()){
+                switch (attributes.getNamedItem("pos").getNodeValue()) {
                     case "Adj":
                         pos = Pos.ADJECTIVE;
                         break;
@@ -271,7 +281,11 @@ public class WordNet {
         }
     }
 
-    public WordNet(){
+    /**
+     * A constructor that initializes the SynSet list, literal list and schedules the {@code SwingWorker} for execution
+     * on a <i>worker</i> thread.
+     */
+    public WordNet() {
         synSetList = new TreeMap<>();
         literalList = new TreeMap<>(String.CASE_INSENSITIVE_ORDER);
         this.locale = new Locale("tr");
@@ -285,7 +299,13 @@ public class WordNet {
         }
     }
 
-    public WordNet(String fileName){
+    /**
+     * Another constructor that initializes the SynSet list, literal list, reads exception,
+     * and schedules the {@code SwingWorker} according to file with a specified name for execution on a <i>worker</i> thread.
+     *
+     * @param fileName resource to be read for the WordNet task
+     */
+    public WordNet(String fileName) {
         synSetList = new TreeMap<>();
         literalList = new TreeMap<>(String.CASE_INSENSITIVE_ORDER);
         this.locale = new Locale("en");
@@ -300,7 +320,15 @@ public class WordNet {
         }
     }
 
-    public WordNet(final String fileName, Locale locale){
+    /**
+     * Another constructor that initializes the SynSet list, literal list, reads exception,
+     * sets the Locale of the programme with the specified locale, and schedules the {@code SwingWorker} according
+     * to file with a specified name for execution on a <i>worker</i> thread.
+     *
+     * @param fileName resource to be read for the WordNet task
+     * @param locale   the locale to be used to set
+     */
+    public WordNet(final String fileName, Locale locale) {
         synSetList = new TreeMap<>();
         literalList = new TreeMap<>(String.CASE_INSENSITIVE_ORDER);
         this.locale = locale;
@@ -313,14 +341,28 @@ public class WordNet {
         }
     }
 
-    public WordNet(final String fileName, String exceptionFileName, Locale locale){
+    /**
+     * Another constructor that initializes the SynSet list, literal list, reads exception file with a specified name,
+     * sets the Locale of the programme with the specified locale, and schedules the {@code SwingWorker} according
+     * to file with a specified name for execution on a <i>worker</i> thread.
+     *
+     * @param fileName          resource to be read for the WordNet task
+     * @param exceptionFileName exception file to be read
+     * @param locale            the locale to be used to set
+     */
+    public WordNet(final String fileName, String exceptionFileName, Locale locale) {
         this(fileName, locale);
         readExceptionFile(exceptionFileName);
     }
 
-    public void addLiteralToLiteralList(Literal literal){
+    /**
+     * Adds a specified literal to the literal list.
+     *
+     * @param literal literal to be added
+     */
+    public void addLiteralToLiteralList(Literal literal) {
         ArrayList<Literal> literals;
-        if (literalList.containsKey(literal.getName())){
+        if (literalList.containsKey(literal.getName())) {
             literals = literalList.get(literal.getName());
         } else {
             literals = new ArrayList<>();
@@ -329,21 +371,31 @@ public class WordNet {
         literalList.put(literal.getName(), literals);
     }
 
-    public Locale getLocale(){
+    /**
+     * Return Locale of the programme.
+     *
+     * @return Locale of the programme
+     */
+    public Locale getLocale() {
         return locale;
     }
 
-    public void mergeSynSets(String synSetFile){
+    /**
+     * Method reads the specified SynSet file, gets the SynSets according to IDs in the file, and merges SynSets.
+     *
+     * @param synSetFile SynSet file to be read and merged
+     */
+    public void mergeSynSets(String synSetFile) {
         try {
             BufferedReader infile = new BufferedReader(new FileReader(synSetFile));
             String line = infile.readLine();
-            while (line != null){
+            while (line != null) {
                 String[] synSetIds = line.split(" ");
                 SynSet mergedOne = getSynSetWithId(synSetIds[0]);
-                if (mergedOne != null){
-                    for (int i = 1; i < synSetIds.length; i++){
+                if (mergedOne != null) {
+                    for (int i = 1; i < synSetIds.length; i++) {
                         SynSet toBeMerged = getSynSetWithId(synSetIds[i]);
-                        if (toBeMerged != null && mergedOne.getPos().equals(toBeMerged.getPos())){
+                        if (toBeMerged != null && mergedOne.getPos().equals(toBeMerged.getPos())) {
                             mergedOne.mergeSynSet(toBeMerged);
                             removeSynSet(toBeMerged);
                         }
@@ -357,41 +409,80 @@ public class WordNet {
         }
     }
 
-    public Collection<SynSet> synSetList(){
+    /**
+     * Returns the values of the SynSet list.
+     *
+     * @return values of the SynSet list
+     */
+    public Collection<SynSet> synSetList() {
         return synSetList.values();
     }
 
-    public Collection<String> literalList(){
+    /**
+     * Returns the keys of the literal list.
+     *
+     * @return keys of the literal list
+     */
+    public Collection<String> literalList() {
         return literalList.keySet();
     }
 
-    public void addSynSet(SynSet synSet){
+    /**
+     * Adds specified SynSet to the SynSet list.
+     *
+     * @param synSet SynSet to be added
+     */
+    public void addSynSet(SynSet synSet) {
         synSetList.put(synSet.getId(), synSet);
     }
 
-    public void removeSynSet(SynSet s){
-        synSetList.remove(s.getId());
+    /**
+     * Removes specified SynSet from the SynSet list.
+     *
+     * @param synSet SynSet to be added
+     */
+    public void removeSynSet(SynSet synSet) {
+        synSetList.remove(synSet.getId());
     }
 
-    public void changeSynSetId(SynSet s, String newId){
-        synSetList.remove(s.getId());
-        s.setId(newId);
-        synSetList.put(newId, s);
+    /**
+     * Changes ID of a specified SynSet with the specified new ID.
+     *
+     * @param synSet SynSet whose ID will be updated
+     * @param newId  new ID
+     */
+    public void changeSynSetId(SynSet synSet, String newId) {
+        synSetList.remove(synSet.getId());
+        synSet.setId(newId);
+        synSetList.put(newId, synSet);
     }
 
-    public SynSet getSynSetWithId(String synSetId){
-        if (synSetList.containsKey(synSetId)){
+    /**
+     * Returns SynSet with the specified SynSet ID.
+     *
+     * @param synSetId ID of the SynSet to be returned
+     * @return SynSet with the specified SynSet ID
+     */
+    public SynSet getSynSetWithId(String synSetId) {
+        if (synSetList.containsKey(synSetId)) {
             return synSetList.get(synSetId);
         }
         return null;
     }
 
-    public SynSet getSynSetWithLiteral(String literal, int sense){
+    /**
+     * Returns SynSet with the specified literal and sense index.
+     *
+     * @param literal SynSet literal
+     * @param sense   SynSet's corresponding sense index
+     * @return SynSet with the specified literal and sense index
+     */
+    public SynSet getSynSetWithLiteral(String literal, int sense) {
         ArrayList<Literal> literals;
         literals = literalList.get(literal);
-        if (literals != null){
-            for (Literal current : literals){
-                if (current.getSense() == sense){
+        if (literals != null) {
+            for (Literal current : literals) {
+                if (current.getSense() == sense) {
                     return getSynSetWithId(current.getSynSetId());
                 }
             }
@@ -399,49 +490,80 @@ public class WordNet {
         return null;
     }
 
-    public int numberOfSynSetsWithLiteral(String literal){
-        if (literalList.containsKey(literal)){
+    /**
+     * Returns the number of SynSets with a specified literal.
+     *
+     * @param literal literal to be searched in SynSets
+     * @return the number of SynSets with a specified literal
+     */
+    public int numberOfSynSetsWithLiteral(String literal) {
+        if (literalList.containsKey(literal)) {
             return literalList.get(literal).size();
         } else {
             return 0;
         }
     }
 
-    public ArrayList<SynSet> getSynSetsWithPartOfSpeech(Pos pos){
+    /**
+     * Returns a list of SynSets with a specified part of speech tag.
+     *
+     * @param pos part of speech tag to be searched in SynSets
+     * @return a list of SynSets with a specified part of speech tag
+     */
+    public ArrayList<SynSet> getSynSetsWithPartOfSpeech(Pos pos) {
         ArrayList<SynSet> result = new ArrayList<>();
-        for (SynSet synSet : synSetList.values()){
-            if (synSet.getPos() != null && synSet.getPos().equals(pos)){
+        for (SynSet synSet : synSetList.values()) {
+            if (synSet.getPos() != null && synSet.getPos().equals(pos)) {
                 result.add(synSet);
             }
         }
         return result;
     }
 
-    public ArrayList<Literal> getLiteralsWithName(String literal){
-        if (literalList.containsKey(literal)){
+    /**
+     * Returns a list of literals with a specified literal String.
+     *
+     * @param literal literal String to be searched in literal list
+     * @return a list of literals with a specified literal String
+     */
+    public ArrayList<Literal> getLiteralsWithName(String literal) {
+        if (literalList.containsKey(literal)) {
             return literalList.get(literal);
         } else {
             return new ArrayList<>();
         }
     }
 
-    private void addSynSetsWithLiteralToList(ArrayList<SynSet> result, String literal, Pos pos){
+    /**
+     * Finds the SynSet with specified literal String and part of speech tag and adds to the given SynSet list.
+     *
+     * @param result  SynSet list to add the specified SynSet
+     * @param literal literal String to be searched in literal list
+     * @param pos     part of speech tag to be searched in SynSets
+     */
+    private void addSynSetsWithLiteralToList(ArrayList<SynSet> result, String literal, Pos pos) {
         SynSet synSet;
-        for (Literal current : literalList.get(literal)){
+        for (Literal current : literalList.get(literal)) {
             synSet = getSynSetWithId(current.getSynSetId());
-            if (synSet != null && synSet.getPos().equals(pos)){
+            if (synSet != null && synSet.getPos().equals(pos)) {
                 result.add(synSet);
             }
         }
     }
 
-    public ArrayList<SynSet> getSynSetsWithLiteral(String literal){
+    /**
+     * Finds SynSets with specified literal String and adds to the newly created SynSet list.
+     *
+     * @param literal literal String to be searched in literal list
+     * @return returns a list of SynSets with specified literal String
+     */
+    public ArrayList<SynSet> getSynSetsWithLiteral(String literal) {
         SynSet synSet;
         ArrayList<SynSet> result = new ArrayList<>();
-        if (literalList.containsKey(literal)){
-            for (Literal current : literalList.get(literal)){
+        if (literalList.containsKey(literal)) {
+            for (Literal current : literalList.get(literal)) {
                 synSet = getSynSetWithId(current.getSynSetId());
-                if (synSet != null){
+                if (synSet != null) {
                     result.add(synSet);
                 }
             }
@@ -449,89 +571,117 @@ public class WordNet {
         return result;
     }
 
-    public ArrayList<String> getLiteralsWithPossibleModifiedLiteral(String literal){
+    /**
+     * Finds literals with specified literal String and adds to the newly created literal String list. Ex: cleanest - clean
+     *
+     * @param literal literal String to be searched in literal list
+     * @return returns a list of literals with specified literal String
+     */
+    public ArrayList<String> getLiteralsWithPossibleModifiedLiteral(String literal) {
         ArrayList<String> result = new ArrayList<>();
         result.add(literal);
-        if (exceptionList.containsKey(literal) && literalList.containsKey(exceptionList.get(literal).getRoot())){
+        if (exceptionList.containsKey(literal) && literalList.containsKey(exceptionList.get(literal).getRoot())) {
             result.add(exceptionList.get(literal).getRoot());
         }
-        if (literal.endsWith("s") && literalList.containsKey(literal.substring(0, literal.length() - 1))){
+        if (literal.endsWith("s") && literalList.containsKey(literal.substring(0, literal.length() - 1))) {
             result.add(literal.substring(0, literal.length() - 1));
         }
-        if (literal.endsWith("es") && literalList.containsKey(literal.substring(0, literal.length() - 2))){
+        if (literal.endsWith("es") && literalList.containsKey(literal.substring(0, literal.length() - 2))) {
             result.add(literal.substring(0, literal.length() - 2));
         }
-        if (literal.endsWith("ed") && literalList.containsKey(literal.substring(0, literal.length() - 2))){
+        if (literal.endsWith("ed") && literalList.containsKey(literal.substring(0, literal.length() - 2))) {
             result.add(literal.substring(0, literal.length() - 2));
         }
-        if (literal.endsWith("ed") && literalList.containsKey(literal.substring(0, literal.length() - 2) + literal.charAt(literal.length() - 3))){
+        if (literal.endsWith("ed") && literalList.containsKey(literal.substring(0, literal.length() - 2) + literal.charAt(literal.length() - 3))) {
             result.add(literal.substring(0, literal.length() - 2) + literal.charAt(literal.length() - 3));
         }
-        if (literal.endsWith("ed") && literalList.containsKey(literal.substring(0, literal.length() - 2) + "e")){
+        if (literal.endsWith("ed") && literalList.containsKey(literal.substring(0, literal.length() - 2) + "e")) {
             result.add(literal.substring(0, literal.length() - 2) + "e");
         }
-        if (literal.endsWith("er") && literalList.containsKey(literal.substring(0, literal.length() - 2))){
+        if (literal.endsWith("er") && literalList.containsKey(literal.substring(0, literal.length() - 2))) {
             result.add(literal.substring(0, literal.length() - 2));
         }
-        if (literal.endsWith("er") && literalList.containsKey(literal.substring(0, literal.length() - 2) + "e")){
+        if (literal.endsWith("er") && literalList.containsKey(literal.substring(0, literal.length() - 2) + "e")) {
             result.add(literal.substring(0, literal.length() - 2) + "e");
         }
-        if (literal.endsWith("ing") && literalList.containsKey(literal.substring(0, literal.length() - 3))){
+        if (literal.endsWith("ing") && literalList.containsKey(literal.substring(0, literal.length() - 3))) {
             result.add(literal.substring(0, literal.length() - 3));
         }
-        if (literal.endsWith("ing") && literalList.containsKey(literal.substring(0, literal.length() - 3) + literal.charAt(literal.length() - 4))){
+        if (literal.endsWith("ing") && literalList.containsKey(literal.substring(0, literal.length() - 3) + literal.charAt(literal.length() - 4))) {
             result.add(literal.substring(0, literal.length() - 3) + literal.charAt(literal.length() - 4));
         }
-        if (literal.endsWith("ing") && literalList.containsKey(literal.substring(0, literal.length() - 3) + "e")){
+        if (literal.endsWith("ing") && literalList.containsKey(literal.substring(0, literal.length() - 3) + "e")) {
             result.add(literal.substring(0, literal.length() - 3) + "e");
         }
-        if (literal.endsWith("ies") && literalList.containsKey(literal.substring(0, literal.length() - 3) + "y")){
+        if (literal.endsWith("ies") && literalList.containsKey(literal.substring(0, literal.length() - 3) + "y")) {
             result.add(literal.substring(0, literal.length() - 3) + "y");
         }
-        if (literal.endsWith("est") && literalList.containsKey(literal.substring(0, literal.length() - 3))){
+        if (literal.endsWith("est") && literalList.containsKey(literal.substring(0, literal.length() - 3))) {
             result.add(literal.substring(0, literal.length() - 3));
         }
-        if (literal.endsWith("est") && literalList.containsKey(literal.substring(0, literal.length() - 3) + "e")){
+        if (literal.endsWith("est") && literalList.containsKey(literal.substring(0, literal.length() - 3) + "e")) {
             result.add(literal.substring(0, literal.length() - 3) + "e");
         }
         return result;
     }
 
-    public ArrayList<SynSet> getSynSetsWithPossiblyModifiedLiteral(String literal, Pos pos){
+    /**
+     * Finds SynSets with specified literal String and part of speech tag, then adds to the newly created SynSet list. Ex: cleanest - clean
+     *
+     * @param literal literal String to be searched in literal list
+     * @param pos     part of speech tag to be searched in SynSets
+     * @return returns a list of SynSets with specified literal String and part of speech tag
+     */
+    public ArrayList<SynSet> getSynSetsWithPossiblyModifiedLiteral(String literal, Pos pos) {
         ArrayList<SynSet> result = new ArrayList<>();
         ArrayList<String> modifiedLiterals = getLiteralsWithPossibleModifiedLiteral(literal);
-        for (String modifiedLiteral : modifiedLiterals){
-            if (literalList.containsKey(modifiedLiteral)){
+        for (String modifiedLiteral : modifiedLiterals) {
+            if (literalList.containsKey(modifiedLiteral)) {
                 addSynSetsWithLiteralToList(result, modifiedLiteral, pos);
             }
         }
         return result;
     }
 
-    public void addReverseRelation(SynSet synSet, SemanticRelation semanticRelation){
+    /**
+     * Adds the reverse relations to the SynSet.
+     *
+     * @param synSet           SynSet to add the reverse relations
+     * @param semanticRelation relation whose reverse will be added
+     */
+    public void addReverseRelation(SynSet synSet, SemanticRelation semanticRelation) {
         SynSet otherSynSet = getSynSetWithId(semanticRelation.getName());
-        if (otherSynSet != null && SemanticRelation.reverse(semanticRelation.getRelationType()) != null){
+        if (otherSynSet != null && SemanticRelation.reverse(semanticRelation.getRelationType()) != null) {
             Relation otherRelation = new SemanticRelation(synSet.getId(), SemanticRelation.reverse(semanticRelation.getRelationType()));
-            if (!otherSynSet.containsRelation(otherRelation)){
+            if (!otherSynSet.containsRelation(otherRelation)) {
                 otherSynSet.addRelation(otherRelation);
             }
         }
     }
 
-    public void removeReverseRelation(SynSet synSet, SemanticRelation semanticRelation){
+    /**
+     * Removes the reverse relations from the SynSet.
+     *
+     * @param synSet           SynSet to remove the reverse relation
+     * @param semanticRelation relation whose reverse will be removed
+     */
+    public void removeReverseRelation(SynSet synSet, SemanticRelation semanticRelation) {
         SynSet otherSynSet = getSynSetWithId(semanticRelation.getName());
-        if (otherSynSet != null && SemanticRelation.reverse(semanticRelation.getRelationType()) != null){
+        if (otherSynSet != null && SemanticRelation.reverse(semanticRelation.getRelationType()) != null) {
             Relation otherRelation = new SemanticRelation(synSet.getId(), SemanticRelation.reverse(semanticRelation.getRelationType()));
-            if (otherSynSet.containsRelation(otherRelation)){
+            if (otherSynSet.containsRelation(otherRelation)) {
                 otherSynSet.removeRelation(otherRelation);
             }
         }
     }
 
-    public void equalizeSemanticRelations(){
-        for (SynSet synSet : synSetList.values()){
-            for (int i = 0; i < synSet.relationSize(); i++){
-                if (synSet.getRelation(i) instanceof SemanticRelation){
+    /**
+     * Loops through the SynSet list and adds the possible reverse relations.
+     */
+    public void equalizeSemanticRelations() {
+        for (SynSet synSet : synSetList.values()) {
+            for (int i = 0; i < synSet.relationSize(); i++) {
+                if (synSet.getRelation(i) instanceof SemanticRelation) {
                     SemanticRelation relation = (SemanticRelation) synSet.getRelation(i);
                     addReverseRelation(synSet, relation);
                 }
@@ -539,12 +689,21 @@ public class WordNet {
         }
     }
 
-    public ArrayList<Literal> constructLiterals(String word, MorphologicalParse parse, MetamorphicParse metaParse, FsmMorphologicalAnalyzer fsm){
+    /**
+     * Creates a list of literals with a specified word, or possible words corresponding to morphological parse.
+     *
+     * @param word      literal String
+     * @param parse     morphological parse to get possible words
+     * @param metaParse metamorphic parse to get possible words
+     * @param fsm       finite state machine morphological analyzer to be used at getting possible words
+     * @return a list of literal
+     */
+    public ArrayList<Literal> constructLiterals(String word, MorphologicalParse parse, MetamorphicParse metaParse, FsmMorphologicalAnalyzer fsm) {
         ArrayList<Literal> result = new ArrayList<>();
-        if (parse.size() > 0){
-            if (!parse.isPunctuation() && !parse.isCardinal() && !parse.isReal()){
+        if (parse.size() > 0) {
+            if (!parse.isPunctuation() && !parse.isCardinal() && !parse.isReal()) {
                 HashSet<String> possibleWords = fsm.getPossibleWords(parse, metaParse);
-                for (String possibleWord : possibleWords){
+                for (String possibleWord : possibleWords) {
                     result.addAll(getLiteralsWithName(possibleWord));
                 }
             } else {
@@ -556,68 +715,77 @@ public class WordNet {
         return result;
     }
 
-    public ArrayList<SynSet> constructSynSets(String word, MorphologicalParse parse, MetamorphicParse metaParse, FsmMorphologicalAnalyzer fsm){
+    /**
+     * Creates a list of SynSets with a specified word, or possible words corresponding to morphological parse.
+     *
+     * @param word      literal String  to get SynSets with
+     * @param parse     morphological parse to get SynSets with proper literals
+     * @param metaParse metamorphic parse to get possible words
+     * @param fsm       finite state machine morphological analyzer to be used at getting possible words
+     * @return a list of SynSets
+     */
+    public ArrayList<SynSet> constructSynSets(String word, MorphologicalParse parse, MetamorphicParse metaParse, FsmMorphologicalAnalyzer fsm) {
         ArrayList<SynSet> result = new ArrayList<>();
-        if (parse.size() > 0){
-            if (parse.isProperNoun()){
+        if (parse.size() > 0) {
+            if (parse.isProperNoun()) {
                 result.add(getSynSetWithLiteral("(özel isim)", 1));
             }
-            if (parse.isTime()){
+            if (parse.isTime()) {
                 result.add(getSynSetWithLiteral("(zaman)", 1));
             }
-            if (parse.isDate()){
+            if (parse.isDate()) {
                 result.add(getSynSetWithLiteral("(tarih)", 1));
             }
-            if (parse.isHashTag()){
+            if (parse.isHashTag()) {
                 result.add(getSynSetWithLiteral("(hashtag)", 1));
             }
-            if (parse.isEmail()){
+            if (parse.isEmail()) {
                 result.add(getSynSetWithLiteral("(eposta)", 1));
             }
-            if (parse.isOrdinal()){
+            if (parse.isOrdinal()) {
                 result.add(getSynSetWithLiteral("(sayı sıra sıfatı)", 1));
             }
-            if (parse.isPercent()){
+            if (parse.isPercent()) {
                 result.add(getSynSetWithLiteral("(yüzde)", 1));
             }
-            if (parse.isFraction()){
+            if (parse.isFraction()) {
                 result.add(getSynSetWithLiteral("(kesir sayı)", 1));
             }
-            if (parse.isRange()){
+            if (parse.isRange()) {
                 result.add(getSynSetWithLiteral("(sayı aralığı)", 1));
             }
-            if (parse.isReal()){
+            if (parse.isReal()) {
                 result.add(getSynSetWithLiteral("(reel sayı)", 1));
             }
-            if (!parse.isPunctuation() && !parse.isCardinal() && !parse.isReal()){
+            if (!parse.isPunctuation() && !parse.isCardinal() && !parse.isReal()) {
                 HashSet<String> possibleWords = fsm.getPossibleWords(parse, metaParse);
-                for (String possibleWord : possibleWords){
+                for (String possibleWord : possibleWords) {
                     ArrayList<SynSet> synSets = getSynSetsWithLiteral(possibleWord);
-                    if (synSets.size() > 0){
-                        for (SynSet synSet : synSets){
-                            if (synSet.getPos() != null && (parse.getPos().equals("NOUN") || parse.getPos().equals("ADVERB") || parse.getPos().equals("VERB") || parse.getPos().equals("ADJ") || parse.getPos().equals("CONJ"))){
-                                if (synSet.getPos().equals(Pos.NOUN)){
-                                    if (parse.getPos().equals("NOUN") || parse.getRootPos().equals("NOUN")){
+                    if (synSets.size() > 0) {
+                        for (SynSet synSet : synSets) {
+                            if (synSet.getPos() != null && (parse.getPos().equals("NOUN") || parse.getPos().equals("ADVERB") || parse.getPos().equals("VERB") || parse.getPos().equals("ADJ") || parse.getPos().equals("CONJ"))) {
+                                if (synSet.getPos().equals(Pos.NOUN)) {
+                                    if (parse.getPos().equals("NOUN") || parse.getRootPos().equals("NOUN")) {
                                         result.add(synSet);
                                     }
                                 } else {
-                                    if (synSet.getPos().equals(Pos.ADVERB)){
-                                        if (parse.getPos().equals("ADVERB") || parse.getRootPos().equals("ADVERB")){
+                                    if (synSet.getPos().equals(Pos.ADVERB)) {
+                                        if (parse.getPos().equals("ADVERB") || parse.getRootPos().equals("ADVERB")) {
                                             result.add(synSet);
                                         }
                                     } else {
-                                        if (synSet.getPos().equals(Pos.VERB)){
-                                            if (parse.getPos().equals("VERB") || parse.getRootPos().equals("VERB")){
+                                        if (synSet.getPos().equals(Pos.VERB)) {
+                                            if (parse.getPos().equals("VERB") || parse.getRootPos().equals("VERB")) {
                                                 result.add(synSet);
                                             }
                                         } else {
-                                            if (synSet.getPos().equals(Pos.ADJECTIVE)){
-                                                if (parse.getPos().equals("ADJ") || parse.getRootPos().equals("ADJ")){
+                                            if (synSet.getPos().equals(Pos.ADJECTIVE)) {
+                                                if (parse.getPos().equals("ADJ") || parse.getRootPos().equals("ADJ")) {
                                                     result.add(synSet);
                                                 }
                                             } else {
-                                                if (synSet.getPos().equals(Pos.CONJUNCTION)){
-                                                    if (parse.getPos().equals("CONJ") || parse.getRootPos().equals("CONJ")){
+                                                if (synSet.getPos().equals(Pos.CONJUNCTION)) {
+                                                    if (parse.getPos().equals("CONJ") || parse.getRootPos().equals("CONJ")) {
                                                         result.add(synSet);
                                                     }
                                                 } else {
@@ -633,8 +801,8 @@ public class WordNet {
                         }
                     }
                 }
-                if (result.size() == 0){
-                    for (String possibleWord : possibleWords){
+                if (result.size() == 0) {
+                    for (String possibleWord : possibleWords) {
                         ArrayList<SynSet> synSets = getSynSetsWithLiteral(possibleWord);
                         result.addAll(synSets);
                     }
@@ -642,7 +810,7 @@ public class WordNet {
             } else {
                 result.addAll(getSynSetsWithLiteral(word));
             }
-            if (parse.isCardinal() && result.size() == 0){
+            if (parse.isCardinal() && result.size() == 0) {
                 result.add(getSynSetWithLiteral("(tam sayı)", 1));
             }
         } else {
@@ -651,13 +819,25 @@ public class WordNet {
         return result;
     }
 
-    public ArrayList<Literal> constructIdiomLiterals(MorphologicalParse morphologicalParse1, MorphologicalParse morphologicalParse2, MorphologicalParse morphologicalParse3, MetamorphicParse metaParse1, MetamorphicParse metaParse2, MetamorphicParse metaParse3, FsmMorphologicalAnalyzer fsm){
+    /**
+     * Returns a list of literals using 3 possible words gathered with the specified morphological parses and metamorphic parses.
+     *
+     * @param morphologicalParse1 morphological parse to get possible words
+     * @param morphologicalParse2 morphological parse to get possible words
+     * @param morphologicalParse3 morphological parse to get possible words
+     * @param metaParse1          metamorphic parse to get possible words
+     * @param metaParse2          metamorphic parse to get possible words
+     * @param metaParse3          metamorphic parse to get possible words
+     * @param fsm                 finite state machine morphological analyzer to be used at getting possible words
+     * @return a list of literals
+     */
+    public ArrayList<Literal> constructIdiomLiterals(MorphologicalParse morphologicalParse1, MorphologicalParse morphologicalParse2, MorphologicalParse morphologicalParse3, MetamorphicParse metaParse1, MetamorphicParse metaParse2, MetamorphicParse metaParse3, FsmMorphologicalAnalyzer fsm) {
         ArrayList<Literal> result = new ArrayList<>();
         HashSet<String> possibleWords1 = fsm.getPossibleWords(morphologicalParse1, metaParse1);
         HashSet<String> possibleWords2 = fsm.getPossibleWords(morphologicalParse2, metaParse2);
         HashSet<String> possibleWords3 = fsm.getPossibleWords(morphologicalParse3, metaParse3);
-        for (String possibleWord1 : possibleWords1){
-            for (String possibleWord2 : possibleWords2){
+        for (String possibleWord1 : possibleWords1) {
+            for (String possibleWord2 : possibleWords2) {
                 for (String possibleWord3 : possibleWords3) {
                     result.addAll(getLiteralsWithName(possibleWord1 + " " + possibleWord2 + " " + possibleWord3));
                 }
@@ -666,13 +846,25 @@ public class WordNet {
         return result;
     }
 
-    public ArrayList<SynSet> constructIdiomSynSets(MorphologicalParse morphologicalParse1, MorphologicalParse morphologicalParse2, MorphologicalParse morphologicalParse3, MetamorphicParse metaParse1, MetamorphicParse metaParse2, MetamorphicParse metaParse3, FsmMorphologicalAnalyzer fsm){
+    /**
+     * Returns a list of SynSets using 3 possible words gathered with the specified morphological parses and metamorphic parses.
+     *
+     * @param morphologicalParse1 morphological parse to get possible words
+     * @param morphologicalParse2 morphological parse to get possible words
+     * @param morphologicalParse3 morphological parse to get possible words
+     * @param metaParse1          metamorphic parse to get possible words
+     * @param metaParse2          metamorphic parse to get possible words
+     * @param metaParse3          metamorphic parse to get possible words
+     * @param fsm                 finite state machine morphological analyzer to be used at getting possible words
+     * @return a list of SynSets
+     */
+    public ArrayList<SynSet> constructIdiomSynSets(MorphologicalParse morphologicalParse1, MorphologicalParse morphologicalParse2, MorphologicalParse morphologicalParse3, MetamorphicParse metaParse1, MetamorphicParse metaParse2, MetamorphicParse metaParse3, FsmMorphologicalAnalyzer fsm) {
         ArrayList<SynSet> result = new ArrayList<SynSet>();
         HashSet<String> possibleWords1 = fsm.getPossibleWords(morphologicalParse1, metaParse1);
         HashSet<String> possibleWords2 = fsm.getPossibleWords(morphologicalParse2, metaParse2);
         HashSet<String> possibleWords3 = fsm.getPossibleWords(morphologicalParse3, metaParse3);
-        for (String possibleWord1 : possibleWords1){
-            for (String possibleWord2 : possibleWords2){
+        for (String possibleWord1 : possibleWords1) {
+            for (String possibleWord2 : possibleWords2) {
                 for (String possibleWord3 : possibleWords3) {
                     if (numberOfSynSetsWithLiteral(possibleWord1 + " " + possibleWord2 + " " + possibleWord3) > 0) {
                         result.addAll(getSynSetsWithLiteral(possibleWord1 + " " + possibleWord2 + " " + possibleWord3));
@@ -683,25 +875,45 @@ public class WordNet {
         return result;
     }
 
-    public ArrayList<Literal> constructIdiomLiterals(MorphologicalParse morphologicalParse1, MorphologicalParse morphologicalParse2, MetamorphicParse metaParse1, MetamorphicParse metaParse2, FsmMorphologicalAnalyzer fsm){
+    /**
+     * Returns a list of literals using 2 possible words gathered with the specified morphological parses and metamorphic parses.
+     *
+     * @param morphologicalParse1 morphological parse to get possible words
+     * @param morphologicalParse2 morphological parse to get possible words
+     * @param metaParse1          metamorphic parse to get possible words
+     * @param metaParse2          metamorphic parse to get possible words
+     * @param fsm                 finite state machine morphological analyzer to be used at getting possible words
+     * @return a list of literals
+     */
+    public ArrayList<Literal> constructIdiomLiterals(MorphologicalParse morphologicalParse1, MorphologicalParse morphologicalParse2, MetamorphicParse metaParse1, MetamorphicParse metaParse2, FsmMorphologicalAnalyzer fsm) {
         ArrayList<Literal> result = new ArrayList<Literal>();
         HashSet<String> possibleWords1 = fsm.getPossibleWords(morphologicalParse1, metaParse1);
         HashSet<String> possibleWords2 = fsm.getPossibleWords(morphologicalParse2, metaParse2);
-        for (String possibleWord1 : possibleWords1){
-            for (String possibleWord2 : possibleWords2){
+        for (String possibleWord1 : possibleWords1) {
+            for (String possibleWord2 : possibleWords2) {
                 result.addAll(getLiteralsWithName(possibleWord1 + " " + possibleWord2));
             }
         }
         return result;
     }
 
-    public ArrayList<SynSet> constructIdiomSynSets(MorphologicalParse morphologicalParse1, MorphologicalParse morphologicalParse2, MetamorphicParse metaParse1, MetamorphicParse metaParse2, FsmMorphologicalAnalyzer fsm){
+    /**
+     * Returns a list of SynSets using 2 possible words gathered with the specified morphological parses and metamorphic parses.
+     *
+     * @param morphologicalParse1 morphological parse to get possible words
+     * @param morphologicalParse2 morphological parse to get possible words
+     * @param metaParse1          metamorphic parse to get possible words
+     * @param metaParse2          metamorphic parse to get possible words
+     * @param fsm                 finite state machine morphological analyzer to be used at getting possible words
+     * @return a list of SynSets
+     */
+    public ArrayList<SynSet> constructIdiomSynSets(MorphologicalParse morphologicalParse1, MorphologicalParse morphologicalParse2, MetamorphicParse metaParse1, MetamorphicParse metaParse2, FsmMorphologicalAnalyzer fsm) {
         ArrayList<SynSet> result = new ArrayList<>();
         HashSet<String> possibleWords1 = fsm.getPossibleWords(morphologicalParse1, metaParse1);
         HashSet<String> possibleWords2 = fsm.getPossibleWords(morphologicalParse2, metaParse2);
-        for (String possibleWord1 : possibleWords1){
-            for (String possibleWord2 : possibleWords2){
-                if (numberOfSynSetsWithLiteral(possibleWord1 + " " + possibleWord2) > 0){
+        for (String possibleWord1 : possibleWords1) {
+            for (String possibleWord2 : possibleWords2) {
+                if (numberOfSynSetsWithLiteral(possibleWord1 + " " + possibleWord2) > 0) {
                     result.addAll(getSynSetsWithLiteral(possibleWord1 + " " + possibleWord2));
                 }
             }
@@ -709,27 +921,41 @@ public class WordNet {
         return result;
     }
 
-    public void sortDefinitions(){
-        for (SynSet synSet: synSetList()){
+    /**
+     * Sorts definitions of SynSets in SynSet list according to their lengths.
+     */
+    public void sortDefinitions() {
+        for (SynSet synSet : synSetList()) {
             synSet.sortDefinitions();
         }
     }
 
-    public ArrayList<SynSet> getInterlingual(String synSetId){
-        if (interlingualList.containsKey(synSetId)){
+    /**
+     * Returns a list of SynSets with the interlingual relations of a specified SynSet ID.
+     *
+     * @param synSetId SynSet ID to be searched
+     * @return a list of SynSets with the interlingual relations of a specified SynSet ID
+     */
+    public ArrayList<SynSet> getInterlingual(String synSetId) {
+        if (interlingualList.containsKey(synSetId)) {
             return interlingualList.get(synSetId);
         } else {
             return new ArrayList<>();
         }
     }
 
-    private void multipleInterlingualRelationCheck1(WordNet secondWordNet){
-        for (SynSet synSet : synSetList()){
+    /**
+     * Finds the interlingual relations of each SynSet in the SynSet list with SynSets of a specified WordNet. Prints them on the screen.
+     *
+     * @param secondWordNet WordNet in other language to find relations
+     */
+    private void multipleInterlingualRelationCheck1(WordNet secondWordNet) {
+        for (SynSet synSet : synSetList()) {
             ArrayList<String> interlingual = synSet.getInterlingual();
-            if (interlingual.size() > 1){
-                for (String s : interlingual){
+            if (interlingual.size() > 1) {
+                for (String s : interlingual) {
                     SynSet second = secondWordNet.getSynSetWithId(s);
-                    if (second != null){
+                    if (second != null) {
                         System.out.println(synSet.getId() + "\t" + synSet.getSynonym() + "\t" + synSet.getDefinition() + "\t" + second.getId() + "\t" + second.getSynonym() + "\t" + second.getDefinition());
                     }
                 }
@@ -737,12 +963,17 @@ public class WordNet {
         }
     }
 
-    private void multipleInterlingualRelationCheck2(WordNet secondWordNet){
-        for (String s : interlingualList.keySet()){
-            if (interlingualList.get(s).size() > 1){
+    /**
+     * Loops through the interlingual list and retrieves the SynSets from that list, then prints them.
+     *
+     * @param secondWordNet WordNet in other language to find relations
+     */
+    private void multipleInterlingualRelationCheck2(WordNet secondWordNet) {
+        for (String s : interlingualList.keySet()) {
+            if (interlingualList.get(s).size() > 1) {
                 SynSet second = secondWordNet.getSynSetWithId(s);
-                if (second != null){
-                    for (SynSet synSet : interlingualList.get(s)){
+                if (second != null) {
+                    for (SynSet synSet : interlingualList.get(s)) {
                         System.out.println(synSet.getId() + "\t" + synSet.getSynonym() + "\t" + synSet.getDefinition() + "\t" + second.getId() + "\t" + second.getSynonym() + "\t" + second.getDefinition());
                     }
                 }
@@ -750,12 +981,15 @@ public class WordNet {
         }
     }
 
-    private void sameLiteralSameSenseCheck(){
-        for (String name : literalList.keySet()){
+    /**
+     * Print the literals with same senses.
+     */
+    private void sameLiteralSameSenseCheck() {
+        for (String name : literalList.keySet()) {
             ArrayList<Literal> literals = literalList.get(name);
-            for (int i = 0; i < literals.size(); i++){
-                for (int j = i + 1; j < literals.size(); j++){
-                    if (literals.get(i).getSense() == literals.get(j).getSense() && literals.get(i).getName().equals(literals.get(j).getName())){
+            for (int i = 0; i < literals.size(); i++) {
+                for (int j = i + 1; j < literals.size(); j++) {
+                    if (literals.get(i).getSense() == literals.get(j).getSense() && literals.get(i).getName().equals(literals.get(j).getName())) {
                         System.out.println("Literal " + name + " has same senses.");
                     }
                 }
@@ -763,63 +997,75 @@ public class WordNet {
         }
     }
 
-    private void sameLiteralSameSynSetCheck(){
+    /**
+     * Prints the literals with same SynSets.
+     */
+    private void sameLiteralSameSynSetCheck() {
         ArrayList<SynSet> synsets = new ArrayList<>();
-        for (SynSet synSet : synSetList()){
+        for (SynSet synSet : synSetList()) {
             boolean found = false;
-            for (int i = 0; i < synSet.getSynonym().literalSize(); i++){
+            for (int i = 0; i < synSet.getSynonym().literalSize(); i++) {
                 Literal literal1 = synSet.getSynonym().getLiteral(i);
-                for (int j = i + 1; j < synSet.getSynonym().literalSize(); j++){
+                for (int j = i + 1; j < synSet.getSynonym().literalSize(); j++) {
                     Literal literal2 = synSet.getSynonym().getLiteral(j);
-                    if (literal1.getName().equals(literal2.getName()) && synSet.getPos() != null){
+                    if (literal1.getName().equals(literal2.getName()) && synSet.getPos() != null) {
                         synsets.add(synSet);
                         found = true;
                         break;
                     }
                 }
-                if (found){
+                if (found) {
                     break;
                 }
             }
         }
         Collections.sort(synsets, new SynSetSizeComparator());
-        for (SynSet synSet : synsets){
+        for (SynSet synSet : synsets) {
             System.out.println(synSet.getPos() + "->" + synSet.getDefinition());
         }
     }
 
-    private void noPosCheck(){
-        for (SynSet synSet : synSetList()){
-            if (synSet.getPos() == null){
+    /**
+     * Prints the SynSets without part of speech tags.
+     */
+    private void noPosCheck() {
+        for (SynSet synSet : synSetList()) {
+            if (synSet.getPos() == null) {
                 System.out.println(synSet.getId() + "\t" + synSet.getSynonym().getLiteral(0).getName() + "\t" + synSet.getDefinition() + "\t" + "has no part of speech");
             }
         }
     }
 
-    private void noDefinitionCheck(){
-        for (SynSet synSet : synSetList()){
-            if (synSet.getDefinition() == null){
+    /**
+     * Prints the SynSets without definitions.
+     */
+    private void noDefinitionCheck() {
+        for (SynSet synSet : synSetList()) {
+            if (synSet.getDefinition() == null) {
                 System.out.println("SynSet " + synSet.getId() + " has no definition " + synSet.getSynonym());
             }
         }
     }
 
-    private void semanticRelationNoIDCheck(){
-        for (SynSet synSet : synSetList()){
-            for (int i = 0; i < synSet.getSynonym().literalSize(); i++){
+    /**
+     * Prints SynSets without relation IDs.
+     */
+    private void semanticRelationNoIDCheck() {
+        for (SynSet synSet : synSetList()) {
+            for (int i = 0; i < synSet.getSynonym().literalSize(); i++) {
                 Literal literal = synSet.getSynonym().getLiteral(i);
-                for (int j = 0; j < literal.relationSize(); j++){
+                for (int j = 0; j < literal.relationSize(); j++) {
                     Relation relation = literal.getRelation(j);
-                    if (getSynSetWithId(relation.getName()) == null){
+                    if (getSynSetWithId(relation.getName()) == null) {
                         literal.removeRelation(relation);
                         j--;
                         System.out.println("Relation " + relation.getName() + " of Synset " + synSet.getId() + " does not exists " + synSet.getSynonym());
                     }
                 }
             }
-            for (int j = 0; j < synSet.relationSize(); j++){
+            for (int j = 0; j < synSet.relationSize(); j++) {
                 Relation relation = synSet.getRelation(j);
-                if (relation instanceof SemanticRelation && getSynSetWithId(relation.getName()) == null){
+                if (relation instanceof SemanticRelation && getSynSetWithId(relation.getName()) == null) {
                     synSet.removeRelation(relation);
                     j--;
                     System.out.println("Relation " + relation.getName() + " of Synset " + synSet.getId() + " does not exists " + synSet.getSynonym());
@@ -828,41 +1074,49 @@ public class WordNet {
         }
     }
 
-    private void sameSemanticRelationCheck(){
-        for (SynSet synSet : synSetList()){
-            for (int i = 0; i < synSet.getSynonym().literalSize(); i++){
+    /**
+     * Prints SynSets with same relations.
+     */
+    private void sameSemanticRelationCheck() {
+        for (SynSet synSet : synSetList()) {
+            for (int i = 0; i < synSet.getSynonym().literalSize(); i++) {
                 Literal literal = synSet.getSynonym().getLiteral(i);
-                for (int j = 0; j < literal.relationSize(); j++){
+                for (int j = 0; j < literal.relationSize(); j++) {
                     Relation relation = literal.getRelation(j);
                     Relation same = null;
-                    for (int k = j + 1; k < literal.relationSize(); k++){
-                        if (relation.getName().equalsIgnoreCase(literal.getRelation(k).getName())){
+                    for (int k = j + 1; k < literal.relationSize(); k++) {
+                        if (relation.getName().equalsIgnoreCase(literal.getRelation(k).getName())) {
                             System.out.println(relation.getName() + "--" + literal.getRelation(k).getName() + " are same relation for synset " + synSet.getId());
                             same = literal.getRelation(k);
                         }
                     }
-                    if (same != null){
+                    if (same != null) {
                         literal.removeRelation(same);
                     }
                 }
             }
-            for (int j = 0; j < synSet.relationSize(); j++){
+            for (int j = 0; j < synSet.relationSize(); j++) {
                 Relation relation = synSet.getRelation(j);
                 Relation same = null;
-                for (int k = j + 1; k < synSet.relationSize(); k++){
-                    if (relation.getName().equalsIgnoreCase(synSet.getRelation(k).getName())){
+                for (int k = j + 1; k < synSet.relationSize(); k++) {
+                    if (relation.getName().equalsIgnoreCase(synSet.getRelation(k).getName())) {
                         System.out.println(relation.getName() + "--" + synSet.getRelation(k).getName() + " are same relation for synset " + synSet.getId());
                         same = synSet.getRelation(k);
                     }
                 }
-                if (same != null){
+                if (same != null) {
                     synSet.removeRelation(same);
                 }
             }
         }
     }
 
-    public void check(WordNet secondWordNet){
+    /**
+     * Performs check processes.
+     *
+     * @param secondWordNet WordNet to compare
+     */
+    public void check(WordNet secondWordNet) {
         //multipleInterlingualRelationCheck1(secondWordNet);
         sameLiteralSameSynSetCheck();
         sameLiteralSameSenseCheck();
@@ -873,29 +1127,38 @@ public class WordNet {
         //multipleInterlingualRelationCheck2(secondWordNet);
     }
 
-    public void saveAsXml(String fileName){
+    /**
+     * Method to write SynSets to the specified file in the XML format.
+     *
+     * @param fileName file name to write XML files
+     */
+    public void saveAsXml(String fileName) {
         BufferedWriter outfile;
-        try{
+        try {
             OutputStreamWriter writer = new OutputStreamWriter(new FileOutputStream(fileName), "UTF-8");
             outfile = new BufferedWriter(writer);
             outfile.write("<SYNSETS>\n");
-            for (SynSet synSet : synSetList.values()){
+            for (SynSet synSet : synSetList.values()) {
                 synSet.saveAsXml(outfile);
             }
             outfile.write("</SYNSETS>\n");
             outfile.close();
-        }
-        catch (IOException ioException){
+        } catch (IOException ioException) {
             System.out.println("Output file can not be opened");
         }
     }
 
-    public void saveAsLmf(String fileName){
+    /**
+     * Method to write SynSets to the specified file as LMF.
+     *
+     * @param fileName file name to write files
+     */
+    public void saveAsLmf(String fileName) {
         BufferedWriter outfile;
         String wordIdString = null;
         String senseId;
         IdMapping iliMapping = new IdMapping("ili-mapping.txt");
-        try{
+        try {
             OutputStreamWriter writer = new OutputStreamWriter(new FileOutputStream(fileName), "UTF-8");
             outfile = new BufferedWriter(writer);
             outfile.write("<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n" +
@@ -903,8 +1166,8 @@ public class WordNet {
                     "<LexicalResource xmlns:dc=\"http://purl.org/dc/elements/1.1/\">");
             outfile.write("<Lexicon id=\"tr\" label=\"Kenet\" language=\"tr\" email=\"olcaytaner@isikun.edu.tr\" license=\"https://creativecommons.org/publicdomain/zero/1.0/\" version=\"1.0\" citation=\"R. Ehsani, E. Solak, O. T. Yildiz , Constructing a WordNet for Turkish Using Manual and Automatic Annotation, ACM Transactions on Asian and Low-Resource Language Information Processing, Vol. 17, No. 3, Article 24, 2018.\" url=\"https://github.com/olcaytaner/WordNet/\">\n");
             int wordId = 0;
-            for (String literal : literalList.keySet()){
-                if (Word.isPunctuation(literal) || literal.startsWith("(")){
+            for (String literal : literalList.keySet()) {
+                if (Word.isPunctuation(literal) || literal.startsWith("(")) {
                     continue;
                 }
                 ArrayList<Literal> literals = literalList.get(literal);
@@ -915,22 +1178,22 @@ public class WordNet {
                     }
                     synSetSet.add(getSynSetWithId(literal1.synSetId));
                 }
-                if (synSetSet.size() == 0){
+                if (synSetSet.size() == 0) {
                     continue;
                 }
                 ArrayList<SynSet> synSets = new ArrayList<>();
                 synSets.addAll(synSetSet);
                 Collections.sort(synSets, (o1, o2) -> o1.getPos().toString().compareTo(o2.getPos().toString()));
                 SynSet previous = null;
-                for (SynSet current : synSets){
-                    if (previous == null || !current.getPos().equals(previous.getPos())){
+                for (SynSet current : synSets) {
+                    if (previous == null || !current.getPos().equals(previous.getPos())) {
                         wordIdString = "w" + wordId;
                         wordId++;
-                        if (previous != null){
+                        if (previous != null) {
                             outfile.write("\t</LexicalEntry>\n");
                         }
                         outfile.write("\t<LexicalEntry id=\"" + wordIdString + "\">\n");
-                        switch (current.getPos()){
+                        switch (current.getPos()) {
                             case NOUN:
                                 outfile.write("\t\t<Lemma writtenForm=\"" + literal + "\" partOfSpeech=\"n\"/>\n");
                                 break;
@@ -944,10 +1207,10 @@ public class WordNet {
                                 outfile.write("\t\t<Lemma writtenForm=\"" + literal + "\" partOfSpeech=\"r\"/>\n");
                                 break;
                             default:
-                                if (literal.equals("\"")){
+                                if (literal.equals("\"")) {
                                     outfile.write("\t\t<Lemma writtenForm=\"&quot;\" partOfSpeech=\"x\"/>\n");
                                 } else {
-                                    if (literal.equals("&")){
+                                    if (literal.equals("&")) {
                                         outfile.write("\t\t<Lemma writtenForm=\"&amp;\" partOfSpeech=\"x\"/>\n");
                                     } else {
                                         outfile.write("\t\t<Lemma writtenForm=\"" + literal + "\" partOfSpeech=\"x\"/>\n");
@@ -962,12 +1225,12 @@ public class WordNet {
                 }
                 outfile.write("\t</LexicalEntry>\n");
             }
-            for (SynSet synSet : synSetList.values()){
-                if (synSet.getSynonym().getLiteral(0).getName().startsWith("(")){
+            for (SynSet synSet : synSetList.values()) {
+                if (synSet.getSynonym().getLiteral(0).getName().startsWith("(")) {
                     continue;
                 }
                 ArrayList<String> interlinguals = synSet.getInterlingual();
-                if (interlinguals.size() > 0 && iliMapping.map(interlinguals.get(0)) != null){
+                if (interlinguals.size() > 0 && iliMapping.map(interlinguals.get(0)) != null) {
                     synSet.saveAsLmf(outfile, iliMapping.map(interlinguals.get(0)));
                 } else {
                     synSet.saveAsLmf(outfile, "");
@@ -976,18 +1239,30 @@ public class WordNet {
             outfile.write("</Lexicon>\n");
             outfile.write("</LexicalResource>\n");
             outfile.close();
-        }
-        catch (IOException ioException){
+        } catch (IOException ioException) {
             System.out.println("Output file can not be opened");
         }
     }
 
-    public int size(){
+    /**
+     * Returns the size of the SynSet list.
+     *
+     * @return the size of the SynSet list
+     */
+    public int size() {
         return synSetList.size();
     }
 
     /*
      * Helper functions: These methods conduct common operations between similarity metrics.
+     */
+
+    /**
+     * Conduct common operations between similarity metrics.
+     *
+     * @param pathToRootOfSynSet1 first list of Strings
+     * @param pathToRootOfSynSet2 second list of Strings
+     * @return path length
      */
     public int findPathLength(ArrayList<String> pathToRootOfSynSet1, ArrayList<String> pathToRootOfSynSet2) {
         // There might not be a path between nodes, due to missing nodes. Keep track of that as well. Break when the LCS if found.
@@ -1001,7 +1276,13 @@ public class WordNet {
         return -1;
     }
 
-    // Following two methods are wrapper of findLCS. They return the depth and ID of LCS separately
+    /**
+     * Returns the depth of path.
+     *
+     * @param pathToRootOfSynSet1 first list of Strings
+     * @param pathToRootOfSynSet2 second list of Strings
+     * @return LCS depth
+     */
     public int findLCSdepth(ArrayList<String> pathToRootOfSynSet1, ArrayList<String> pathToRootOfSynSet2) {
         SimpleEntry<String, Integer> temp = findLCS(pathToRootOfSynSet1, pathToRootOfSynSet2);
         if (temp != null) {
@@ -1010,6 +1291,13 @@ public class WordNet {
         return -1;
     }
 
+    /**
+     * Returns the ID of LCS of path.
+     *
+     * @param pathToRootOfSynSet1 first list of Strings
+     * @param pathToRootOfSynSet2 second list of Strings
+     * @return LCS ID
+     */
     public String findLCSid(ArrayList<String> pathToRootOfSynSet1, ArrayList<String> pathToRootOfSynSet2) {
         SimpleEntry<String, Integer> temp = findLCS(pathToRootOfSynSet1, pathToRootOfSynSet2);
         if (temp != null) {
@@ -1019,6 +1307,14 @@ public class WordNet {
     }
 
     // This method returns depth and ID of the LCS.
+
+    /**
+     * Returns depth and ID of the LCS.
+     *
+     * @param pathToRootOfSynSet1 first list of Strings
+     * @param pathToRootOfSynSet2 second list of Strings
+     * @return depth and ID of the LCS
+     */
     private SimpleEntry<String, Integer> findLCS(ArrayList<String> pathToRootOfSynSet1, ArrayList<String> pathToRootOfSynSet2) {
         for (int i = 0; i < pathToRootOfSynSet1.size(); i++) {
             String LCSid = pathToRootOfSynSet1.get(i);
@@ -1029,6 +1325,12 @@ public class WordNet {
         return null;
     }
 
+    /**
+     * Finds the path to the root node of a SynSets.
+     *
+     * @param synSet SynSet whose root path will be found
+     * @return list of String corresponding to nodes in the path
+     */
     public ArrayList<String> findPathToRoot(SynSet synSet) {
         ArrayList<String> pathToRoot = new ArrayList<>();
         while (synSet != null) {
@@ -1041,7 +1343,12 @@ public class WordNet {
         return pathToRoot;
     }
 
-    // This function finds the parent of a node. It does not move until the root, instead it goes one level up.
+    /**
+     * Finds the parent of a node. It does not move until the root, instead it goes one level up.
+     *
+     * @param root SynSet whose root will be find
+     * @return root SynSet
+     */
     public SynSet percolateUp(SynSet root) {
         for (int i = 0; i < root.relationSize(); i++) {
             Relation r = root.getRelation(i);
@@ -1055,5 +1362,4 @@ public class WordNet {
         }
         return null;
     }
-
 }

@@ -1,5 +1,8 @@
 package WordNet;
 
+/**
+ * Enumerator class for the semantic relation types.
+ */
 public enum SemanticRelationType {
     ANTONYM, HYPERNYM,
     INSTANCE_HYPERNYM, HYPONYM, INSTANCE_HYPONYM, MEMBER_HOLONYM, SUBSTANCE_HOLONYM,

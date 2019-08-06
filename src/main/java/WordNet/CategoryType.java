@@ -1,5 +1,8 @@
 package WordNet;
 
+/**
+ * Enumerator class for the pre-defined categories of words.
+ */
 public enum CategoryType {
     MATHEMATICS, SPORT, MUSIC, SLANG, BOTANIC,
     PLURAL, MARINE, HISTORY, THEOLOGY, ZOOLOGY,
