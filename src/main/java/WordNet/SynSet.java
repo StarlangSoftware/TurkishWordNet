@@ -288,7 +288,7 @@ public class SynSet {
     /**
      * Accessor for the bcs value
      *
-     * @return bcs valur
+     * @return bcs value
      */
     public int getBcs() {
         return bcs;

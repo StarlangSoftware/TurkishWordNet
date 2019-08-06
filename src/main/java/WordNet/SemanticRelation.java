@@ -153,7 +153,7 @@ public class SemanticRelation extends Relation {
     /**
      * Returns the index value.
      *
-     * @return index valur.
+     * @return index value.
      */
     public int toIndex() {
         return toIndex;
@@ -169,7 +169,7 @@ public class SemanticRelation extends Relation {
     }
 
     /**
-     * Mutotor for the semantic relation type.
+     * Mutator for the semantic relation type.
      *
      * @param relationType semantic relation type.
      */
