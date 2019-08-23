@@ -197,20 +197,6 @@ public class WordNet {
                                                 } else {
                                                     if (partNode.getNodeName().equals("SNOTE") && currentSynSet != null) {
                                                         currentSynSet.setNote(partNode.getFirstChild().getNodeValue());
-                                                    } else {
-                                                        if (partNode.getNodeName().equals("POLARITY") && currentSynSet != null) {
-                                                            switch (partNode.getFirstChild().getNodeValue()) {
-                                                                case "positive":
-                                                                    currentSynSet.setPolarityType(PolarityType.POSITIVE);
-                                                                    break;
-                                                                case "negative":
-                                                                    currentSynSet.setPolarityType(PolarityType.NEGATIVE);
-                                                                    break;
-                                                                case "neutral":
-                                                                    currentSynSet.setPolarityType(PolarityType.NEUTRAL);
-                                                                    break;
-                                                            }
-                                                        }
                                                     }
                                                 }
                                             }

@@ -205,7 +205,7 @@ public class TestWordNet {
 
     public static void main(String[] args){
         WordNet turkish = new WordNet();
-        //turkish.saveAsXml("deneme.xml");
+        turkish.saveAsXml("deneme.xml");
         //turkish.check(null);
         //turkish.saveAsLmf("turkish.lmf");
     }

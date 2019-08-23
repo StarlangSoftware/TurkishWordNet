@@ -136,7 +136,7 @@ public class Literal {
      * Returns <tt>true</tt> if specified semantic relation type presents in the relations list.
      *
      * @param semanticRelationType element whose presence in the list is to be tested
-     * @return <<tt>true</tt> if specified semantic relation type presents in the relations list
+     * @return <tt>true</tt> if specified semantic relation type presents in the relations list
      */
     public boolean containsRelationType(SemanticRelationType semanticRelationType) {
         for (Relation relation : relations) {

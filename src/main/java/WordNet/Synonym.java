@@ -9,7 +9,7 @@ public class Synonym {
     private ArrayList<Literal> literals;
 
     /**
-     * A constructor that creates a new {@class ArrayList} literals.
+     * A constructor that creates a new {@link ArrayList} literals.
      */
     public Synonym() {
         literals = new ArrayList<>();

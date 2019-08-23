@@ -17,7 +17,6 @@ public class SynSet {
     private ArrayList<Relation> relations;
     private String note;
     private int bcs;
-    private PolarityType polarityType = PolarityType.NOT_AVAILABLE;
 
     /**
      * Constructor initialize SynSet ID, synonym and relations list.
@@ -268,24 +267,6 @@ public class SynSet {
     }
 
     /**
-     * Accessor for the polarity types.
-     *
-     * @return POSITIVE, NEGATIVE, NEUTRAL, or NOT_AVAILABLE.
-     */
-    public PolarityType getPolarityType() {
-        return polarityType;
-    }
-
-    /**
-     * Mutator for the polarity type.
-     *
-     * @param polarityType POSITIVE, NEGATIVE, NEUTRAL, or NOT_AVAILABLE.
-     */
-    public void setPolarityType(PolarityType polarityType) {
-        this.polarityType = polarityType;
-    }
-
-    /**
      * Accessor for the bcs value
      *
      * @return bcs value
@@ -474,7 +455,7 @@ public class SynSet {
      * Returns <tt>true</tt> if specified semantic relation type presents in the relations list.
      *
      * @param semanticRelationType element whose presence in the list is to be tested
-     * @return <<tt>true</tt> if specified semantic relation type presents in the relations list
+     * @return <tt>true</tt> if specified semantic relation type presents in the relations list
      */
     public boolean containsRelationType(SemanticRelationType semanticRelationType) {
         for (Relation relation : relations) {
@@ -691,20 +672,6 @@ public class SynSet {
                         outfile.write("<SR>" + r.getName() + "<TYPE>" + ((SemanticRelation) r).getTypeAsString() + "</TYPE></SR>");
                     }
                 }
-            }
-            if (polarityType != PolarityType.NOT_AVAILABLE) {
-                switch (polarityType) {
-                    case POSITIVE:
-                        polarity = "positive";
-                        break;
-                    case NEGATIVE:
-                        polarity = "negative";
-                        break;
-                    case NEUTRAL:
-                        polarity = "neutral";
-                        break;
-                }
-                outfile.write("<POLARITY>" + polarity + "</POLARITY>");
             }
             if (definition != null) {
                 outfile.write("<DEF>" + getLongDefinition() + "</DEF>");
