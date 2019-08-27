@@ -25,6 +25,18 @@ public class Synonym {
     }
 
     /**
+     * Moves the specified literal to the first of literals list.
+     *
+     * @param literal element to be moved to the first element of the list
+     */
+    public void moveFirst(Literal literal){
+        if (contains(literal)){
+            literals.remove(literal);
+            literals.add(0, literal);
+        }
+    }
+
+    /**
      * Returns the element at the specified position in literals list.
      *
      * @param index index of the element to return
