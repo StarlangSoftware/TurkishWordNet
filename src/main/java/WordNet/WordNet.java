@@ -281,7 +281,7 @@ public class WordNet {
         try {
             task.get();
         } catch (InterruptedException | ExecutionException e) {
-            e.printStackTrace();
+            JOptionPane.showMessageDialog(null, "Turkish WordNet can not be read!", "Error", JOptionPane.ERROR_MESSAGE);
         }
     }
 
@@ -302,7 +302,7 @@ public class WordNet {
         try {
             task.get();
         } catch (InterruptedException | ExecutionException e) {
-            e.printStackTrace();
+            JOptionPane.showMessageDialog(null, fileName + " wordNet can not be read!", "Error", JOptionPane.ERROR_MESSAGE);
         }
     }
 
@@ -323,7 +323,7 @@ public class WordNet {
         try {
             task.get();
         } catch (InterruptedException | ExecutionException e) {
-            e.printStackTrace();
+            JOptionPane.showMessageDialog(null, fileName + " wordNet can not be read!", "Error", JOptionPane.ERROR_MESSAGE);
         }
     }
 
