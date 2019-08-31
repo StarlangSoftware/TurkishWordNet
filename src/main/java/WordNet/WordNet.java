@@ -1339,7 +1339,7 @@ public class WordNet {
         for (int i = 0; i < root.relationSize(); i++) {
             Relation r = root.getRelation(i);
             if (r instanceof SemanticRelation) {
-                if (((SemanticRelation) r).getRelationType().equals(SemanticRelationType.HYPERNYM)) {
+                if (((SemanticRelation) r).getRelationType().equals(SemanticRelationType.HYPERNYM) || ((SemanticRelation) r).getRelationType().equals(SemanticRelationType.INSTANCE_HYPERNYM)) {
                     root = getSynSetWithId(r.getName());
                     // return even if one hypernym is found.
                     return root;

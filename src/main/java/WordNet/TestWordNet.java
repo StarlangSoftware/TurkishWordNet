@@ -1,8 +1,6 @@
 package WordNet;
 
-import DataStructure.CounterHashMap;
 import Dictionary.*;
-import MorphologicalAnalysis.FsmMorphologicalAnalyzer;
 
 import java.io.*;
 import java.util.*;
@@ -42,6 +40,49 @@ public class TestWordNet {
             e.printStackTrace();
         }
         turkish.saveAsXml("deneme.xml");
+    }
+
+    public static void transferHierarchy(WordNet source, WordNet destination){
+        SynSet[] synSets = new SynSet[destination.size()];
+        synSets = destination.synSetList().toArray(synSets);
+        for (SynSet synSet1 : synSets){
+            SynSet synSet2 = source.getSynSetWithId(synSet1.getId());
+            if (synSet2 != null){
+                ArrayList<String> parentList1 = destination.findPathToRoot(synSet1);
+                ArrayList<String> parentList2 = source.findPathToRoot(synSet2);
+                if (parentList1.size() < parentList2.size() && parentList1.size() == 1 && parentList2.get(parentList2.size() - 1).equals("TUR10-0814560")){
+                    boolean isPrefix = true;
+                    for (int i = 0; i < parentList1.size(); i++){
+                        if (!parentList1.get(i).equals(parentList2.get(i))){
+                            isPrefix = false;
+                            break;
+                        }
+                    }
+                    if (isPrefix){
+                        SynSet childSynSet = destination.getSynSetWithId(parentList1.get(parentList1.size() - 1));
+                        for (int i = parentList1.size(); i < parentList2.size(); i++){
+                            SynSet synSet3 = source.getSynSetWithId(parentList2.get(i));
+                            SynSet parentSynSet = destination.getSynSetWithId(parentList2.get(i));
+                            if (parentSynSet == null){
+                                parentSynSet = new SynSet(synSet3.getId());
+                                parentSynSet.setPos(Pos.NOUN);
+                                if (synSet3.getLongDefinition() != null){
+                                    parentSynSet.setDefinition(synSet3.getLongDefinition());
+                                }
+                                parentSynSet.addLiteral(new Literal(synSet3.getSynonym().getLiteral(0).getName(), synSet3.getSynonym().getLiteral(0).getSense(), synSet3.getId()));
+                                destination.addSynSet(parentSynSet);
+                            }
+                            childSynSet.addRelation(new SemanticRelation(parentSynSet.getId(), SemanticRelationType.HYPERNYM));
+                            parentSynSet.addRelation(new SemanticRelation(childSynSet.getId(), SemanticRelationType.HYPONYM));
+                            System.out.println(childSynSet.getId() + " (" + childSynSet.getSynonym().getLiteral(0).getName() + ")->" + parentSynSet.getId() + " (" + parentSynSet.getSynonym().getLiteral(0).getName() + ")");
+                            childSynSet = parentSynSet;
+                        }
+                        System.out.println("---------------------------");
+                    }
+                }
+            }
+        }
+
     }
 
     public static void main(String[] args){
