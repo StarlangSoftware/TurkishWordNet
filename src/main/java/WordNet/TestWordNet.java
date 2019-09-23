@@ -91,9 +91,9 @@ public class TestWordNet {
 
     public static void main(String[] args){
         WordNet turkish = new WordNet();
-        WordNet domain = new WordNet("gittigidiyor_wordnet.xml", new Locale("tr"));
-        transferHierarchy(turkish, domain);
-        //turkish.saveAsXml("deneme.xml");
+        //WordNet domain = new WordNet("estate_wordnet.xml", new Locale("tr"));
+        //transferHierarchy(turkish, domain);
+        //domain.saveAsXml("deneme.xml");
         //turkish.check(null);
         //turkish.saveAsLmf("turkish.lmf");
     }
