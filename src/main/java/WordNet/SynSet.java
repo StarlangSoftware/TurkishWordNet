@@ -626,7 +626,6 @@ public class SynSet {
      * @param outfile BufferedWriter to write XML files
      */
     public void saveAsXml(BufferedWriter outfile) {
-        String polarity = "";
         try {
             outfile.write("<SYNSET>");
             outfile.write("<ID>" + id + "</ID>");

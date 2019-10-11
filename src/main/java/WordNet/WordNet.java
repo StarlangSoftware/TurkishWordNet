@@ -425,7 +425,7 @@ public class WordNet {
     /**
      * Removes specified SynSet from the SynSet list.
      *
-     * @param synSet SynSet to be added
+     * @param synSet SynSet to be removed
      */
     public void removeSynSet(SynSet synSet) {
         synSetList.remove(synSet.getId());
