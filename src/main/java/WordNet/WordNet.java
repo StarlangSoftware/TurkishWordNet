@@ -664,7 +664,7 @@ public class WordNet {
     /**
      * Loops through the SynSet list and adds the possible reverse relations.
      */
-    public void equalizeSemanticRelations() {
+    private void equalizeSemanticRelations() {
         for (SynSet synSet : synSetList.values()) {
             for (int i = 0; i < synSet.relationSize(); i++) {
                 if (synSet.getRelation(i) instanceof SemanticRelation) {
@@ -1078,6 +1078,7 @@ public class WordNet {
                     }
                     if (same != null) {
                         literal.removeRelation(same);
+                        j--;
                     }
                 }
             }
@@ -1092,6 +1093,7 @@ public class WordNet {
                 }
                 if (same != null) {
                     synSet.removeRelation(same);
+                    j--;
                 }
             }
         }
@@ -1099,18 +1101,11 @@ public class WordNet {
 
     /**
      * Performs check processes.
-     *
-     * @param secondWordNet WordNet to compare
      */
-    public void check(WordNet secondWordNet) {
-        //multipleInterlingualRelationCheck1(secondWordNet);
-        sameLiteralSameSynSetCheck();
-        sameLiteralSameSenseCheck();
-        noPosCheck();
+    public void check() {
         semanticRelationNoIDCheck();
+        equalizeSemanticRelations();
         sameSemanticRelationCheck();
-        noDefinitionCheck();
-        //multipleInterlingualRelationCheck2(secondWordNet);
     }
 
     /**
