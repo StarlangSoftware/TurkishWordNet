@@ -486,7 +486,7 @@ public class SynSet {
         }
         if (synSet.relationSize() != 0) {
             for (int i = 0; i < synSet.relationSize(); i++) {
-                if (!relations.contains(synSet.getRelation(i))) {
+                if (!containsRelation(synSet.getRelation(i)) && !synSet.getRelation(i).getName().equals(id)) {
                     addRelation(synSet.getRelation(i));
                 }
             }

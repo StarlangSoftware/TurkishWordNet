@@ -366,6 +366,23 @@ public class WordNet {
         return locale;
     }
 
+    private void updateAllRelationsAccordingToNewSynSet(SynSet oldSynSet, SynSet newSynSet){
+        for (SynSet synSet : synSetList()){
+            for (int i = 0; i < synSet.relationSize(); i++){
+                if (synSet.getRelation(i) instanceof SemanticRelation){
+                    if (synSet.getRelation(i).getName().equals(oldSynSet.getId())){
+                        if (synSet.getId().equals(newSynSet.getId()) || synSet.containsRelation(new SemanticRelation(newSynSet.getId(), ((SemanticRelation) synSet.getRelation(i)).getRelationType()))){
+                            synSet.removeRelation(synSet.getRelation(i));
+                            i--;
+                        } else {
+                            synSet.getRelation(i).setName(newSynSet.getId());
+                        }
+                    }
+                }
+            }
+        }
+    }
+
     /**
      * Method reads the specified SynSet file, gets the SynSets according to IDs in the file, and merges SynSets.
      *
@@ -382,10 +399,19 @@ public class WordNet {
                     for (int i = 1; i < synSetIds.length; i++) {
                         SynSet toBeMerged = getSynSetWithId(synSetIds[i]);
                         if (toBeMerged != null && mergedOne.getPos().equals(toBeMerged.getPos())) {
-                            mergedOne.mergeSynSet(toBeMerged);
-                            removeSynSet(toBeMerged);
+                            if (!containsSameLiteral(mergedOne, toBeMerged)){
+                                mergedOne.mergeSynSet(toBeMerged);
+                                removeSynSet(toBeMerged);
+                                updateAllRelationsAccordingToNewSynSet(toBeMerged, mergedOne);
+                            } else {
+                                System.out.println(line + " contains the same literals");
+                            }
+                        } else {
+                            System.out.println(line + " contains synsets with different pos");
                         }
                     }
+                } else {
+                    System.out.println(line + " contains " + synSetIds[0] + " which does not exist");
                 }
                 line = infile.readLine();
             }
@@ -983,31 +1009,32 @@ public class WordNet {
         }
     }
 
+    private boolean containsSameLiteral(SynSet synSet1, SynSet synSet2){
+        for (int i = 0; i < synSet1.getSynonym().literalSize(); i++) {
+            Literal literal1 = synSet1.getSynonym().getLiteral(i);
+            for (int j = i + 1; j < synSet2.getSynonym().literalSize(); j++) {
+                Literal literal2 = synSet2.getSynonym().getLiteral(j);
+                if (literal1.getName().equals(literal2.getName()) && synSet1.getPos() != null) {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+
     /**
      * Prints the literals with same SynSets.
      */
     private void sameLiteralSameSynSetCheck() {
         ArrayList<SynSet> synsets = new ArrayList<>();
         for (SynSet synSet : synSetList()) {
-            boolean found = false;
-            for (int i = 0; i < synSet.getSynonym().literalSize(); i++) {
-                Literal literal1 = synSet.getSynonym().getLiteral(i);
-                for (int j = i + 1; j < synSet.getSynonym().literalSize(); j++) {
-                    Literal literal2 = synSet.getSynonym().getLiteral(j);
-                    if (literal1.getName().equals(literal2.getName()) && synSet.getPos() != null) {
-                        synsets.add(synSet);
-                        found = true;
-                        break;
-                    }
-                }
-                if (found) {
-                    break;
-                }
+            if (containsSameLiteral(synSet, synSet)){
+                synsets.add(synSet);
             }
         }
         Collections.sort(synsets, new SynSetSizeComparator());
         for (SynSet synSet : synsets) {
-            System.out.println(synSet.getPos() + "->" + synSet.getDefinition());
+            System.out.println(synSet.getPos() + "->" + synSet.getSynonym() + "->" + synSet.getDefinition());
         }
     }
 
