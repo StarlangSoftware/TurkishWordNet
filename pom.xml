@@ -6,7 +6,7 @@
 
     <groupId>NlpToolkit</groupId>
     <artifactId>WordNet</artifactId>
-    <version>1.0.18</version>
+    <version>1.0.19</version>
     <properties>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
@@ -26,7 +26,7 @@
         <dependency>
             <groupId>NlpToolkit</groupId>
             <artifactId>Dictionary</artifactId>
-            <version>1.0.2</version>
+            <version>1.0.9</version>
         </dependency>
         <dependency>
             <groupId>NlpToolkit</groupId>
