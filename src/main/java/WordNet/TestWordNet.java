@@ -93,6 +93,7 @@ public class TestWordNet {
 
     public static void main(String[] args){
         WordNet turkish = new WordNet();
+        turkish.saveAsXml("deneme.xml");
         //transferHierarchy(turkish, domain);
         //domain.check();
         //domain.saveAsXml("deneme.xml");

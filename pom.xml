@@ -6,7 +6,7 @@
 
     <groupId>NlpToolkit</groupId>
     <artifactId>WordNet</artifactId>
-    <version>1.0.19</version>
+    <version>1.0.20</version>
     <properties>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
@@ -31,7 +31,7 @@
         <dependency>
             <groupId>NlpToolkit</groupId>
             <artifactId>MorphologicalAnalysis</artifactId>
-            <version>1.0.2</version>
+            <version>1.0.8</version>
         </dependency>
     </dependencies>
 
