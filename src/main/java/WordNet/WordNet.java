@@ -11,6 +11,7 @@ import org.xml.sax.SAXException;
 
 import javax.swing.*;
 import java.io.*;
+import java.nio.charset.StandardCharsets;
 import java.text.Collator;
 import java.util.*;
 import java.util.Collection;
@@ -40,7 +41,7 @@ public class WordNet {
             this.inputSource = inputSource;
         }
 
-        protected Object doInBackground() throws Exception {
+        protected Object doInBackground() {
             Node rootNode, synSetNode, partNode, ilrNode, srNode, typeNode, toNode, literalNode, textNode, senseNode;
             Document doc;
             DOMParser parser = new DOMParser();
@@ -592,47 +593,35 @@ public class WordNet {
     public ArrayList<String> getLiteralsWithPossibleModifiedLiteral(String literal) {
         ArrayList<String> result = new ArrayList<>();
         result.add(literal);
+        String wordWithoutLastOne = literal.substring(0, literal.length() - 1);
+        String wordWithoutLastTwo = literal.substring(0, literal.length() - 2);
+        String wordWithoutLastThree = literal.substring(0, literal.length() - 3);
         if (exceptionList.containsKey(literal) && literalList.containsKey(exceptionList.get(literal).getRoot())) {
             result.add(exceptionList.get(literal).getRoot());
         }
-        if (literal.endsWith("s") && literalList.containsKey(literal.substring(0, literal.length() - 1))) {
-            result.add(literal.substring(0, literal.length() - 1));
+        if (literal.endsWith("s") && literalList.containsKey(wordWithoutLastOne)) {
+            result.add(wordWithoutLastOne);
         }
-        if (literal.endsWith("es") && literalList.containsKey(literal.substring(0, literal.length() - 2))) {
-            result.add(literal.substring(0, literal.length() - 2));
+        if ((literal.endsWith("es") || literal.endsWith("ed") || literal.endsWith("er")) && literalList.containsKey(wordWithoutLastTwo)) {
+            result.add(wordWithoutLastTwo);
         }
-        if (literal.endsWith("ed") && literalList.containsKey(literal.substring(0, literal.length() - 2))) {
-            result.add(literal.substring(0, literal.length() - 2));
+        if (literal.endsWith("ed") && literalList.containsKey(wordWithoutLastTwo + literal.charAt(literal.length() - 3))) {
+            result.add(wordWithoutLastTwo + literal.charAt(literal.length() - 3));
         }
-        if (literal.endsWith("ed") && literalList.containsKey(literal.substring(0, literal.length() - 2) + literal.charAt(literal.length() - 3))) {
-            result.add(literal.substring(0, literal.length() - 2) + literal.charAt(literal.length() - 3));
+        if ((literal.endsWith("ed") || literal.endsWith("er")) && literalList.containsKey(wordWithoutLastTwo + "e")) {
+            result.add(wordWithoutLastTwo + "e");
         }
-        if (literal.endsWith("ed") && literalList.containsKey(literal.substring(0, literal.length() - 2) + "e")) {
-            result.add(literal.substring(0, literal.length() - 2) + "e");
+        if ((literal.endsWith("ing") || literal.endsWith("est")) && literalList.containsKey(wordWithoutLastThree)) {
+            result.add(wordWithoutLastThree);
         }
-        if (literal.endsWith("er") && literalList.containsKey(literal.substring(0, literal.length() - 2))) {
-            result.add(literal.substring(0, literal.length() - 2));
+        if (literal.endsWith("ing") && literalList.containsKey(wordWithoutLastThree + literal.charAt(literal.length() - 4))) {
+            result.add(wordWithoutLastThree + literal.charAt(literal.length() - 4));
         }
-        if (literal.endsWith("er") && literalList.containsKey(literal.substring(0, literal.length() - 2) + "e")) {
-            result.add(literal.substring(0, literal.length() - 2) + "e");
+        if ((literal.endsWith("ing") || literal.endsWith("est")) && literalList.containsKey(wordWithoutLastThree + "e")) {
+            result.add(wordWithoutLastThree + "e");
         }
-        if (literal.endsWith("ing") && literalList.containsKey(literal.substring(0, literal.length() - 3))) {
-            result.add(literal.substring(0, literal.length() - 3));
-        }
-        if (literal.endsWith("ing") && literalList.containsKey(literal.substring(0, literal.length() - 3) + literal.charAt(literal.length() - 4))) {
-            result.add(literal.substring(0, literal.length() - 3) + literal.charAt(literal.length() - 4));
-        }
-        if (literal.endsWith("ing") && literalList.containsKey(literal.substring(0, literal.length() - 3) + "e")) {
-            result.add(literal.substring(0, literal.length() - 3) + "e");
-        }
-        if (literal.endsWith("ies") && literalList.containsKey(literal.substring(0, literal.length() - 3) + "y")) {
-            result.add(literal.substring(0, literal.length() - 3) + "y");
-        }
-        if (literal.endsWith("est") && literalList.containsKey(literal.substring(0, literal.length() - 3))) {
-            result.add(literal.substring(0, literal.length() - 3));
-        }
-        if (literal.endsWith("est") && literalList.containsKey(literal.substring(0, literal.length() - 3) + "e")) {
-            result.add(literal.substring(0, literal.length() - 3) + "e");
+        if (literal.endsWith("ies") && literalList.containsKey(wordWithoutLastThree + "y")) {
+            result.add(wordWithoutLastThree + "y");
         }
         return result;
     }
@@ -1032,7 +1021,7 @@ public class WordNet {
                 synsets.add(synSet);
             }
         }
-        Collections.sort(synsets, new SynSetSizeComparator());
+        synsets.sort(new SynSetSizeComparator());
         for (SynSet synSet : synsets) {
             System.out.println(synSet.getPos() + "->" + synSet.getSynonym() + "->" + synSet.getDefinition());
         }
@@ -1167,7 +1156,7 @@ public class WordNet {
         String senseId;
         IdMapping iliMapping = new IdMapping("ili-mapping.txt");
         try {
-            OutputStreamWriter writer = new OutputStreamWriter(new FileOutputStream(fileName), "UTF-8");
+            OutputStreamWriter writer = new OutputStreamWriter(new FileOutputStream(fileName), StandardCharsets.UTF_8);
             outfile = new BufferedWriter(writer);
             outfile.write("<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n" +
                     "<!DOCTYPE LexicalResource SYSTEM \"http://globalwordnet.github.io/schemas/WN-LMF-1.0.dtd\">\n" +
@@ -1354,8 +1343,8 @@ public class WordNet {
     /**
      * Finds the parent of a node. It does not move until the root, instead it goes one level up.
      *
-     * @param root SynSet whose root will be find
-     * @return root SynSet
+     * @param root SynSet whose parent will be find
+     * @return parent SynSet
      */
     public SynSet percolateUp(SynSet root) {
         for (int i = 0; i < root.relationSize(); i++) {
