@@ -1015,15 +1015,10 @@ public class WordNet {
      * Prints the literals with same SynSets.
      */
     private void sameLiteralSameSynSetCheck() {
-        ArrayList<SynSet> synsets = new ArrayList<>();
         for (SynSet synSet : synSetList()) {
             if (containsSameLiteral(synSet, synSet)){
-                synsets.add(synSet);
+                System.out.println(synSet.getPos() + "->" + synSet.getSynonym() + "->" + synSet.getDefinition());
             }
-        }
-        synsets.sort(new SynSetSizeComparator());
-        for (SynSet synSet : synsets) {
-            System.out.println(synSet.getPos() + "->" + synSet.getSynonym() + "->" + synSet.getDefinition());
         }
     }
 
@@ -1054,17 +1049,6 @@ public class WordNet {
      */
     private void semanticRelationNoIDCheck() {
         for (SynSet synSet : synSetList()) {
-            for (int i = 0; i < synSet.getSynonym().literalSize(); i++) {
-                Literal literal = synSet.getSynonym().getLiteral(i);
-                for (int j = 0; j < literal.relationSize(); j++) {
-                    Relation relation = literal.getRelation(j);
-                    if (getSynSetWithId(relation.getName()) == null) {
-                        literal.removeRelation(relation);
-                        j--;
-                        System.out.println("Relation " + relation.getName() + " of Synset " + synSet.getId() + " does not exists " + synSet.getSynonym());
-                    }
-                }
-            }
             for (int j = 0; j < synSet.relationSize(); j++) {
                 Relation relation = synSet.getRelation(j);
                 if (relation instanceof SemanticRelation && getSynSetWithId(relation.getName()) == null) {
@@ -1081,23 +1065,6 @@ public class WordNet {
      */
     private void sameSemanticRelationCheck() {
         for (SynSet synSet : synSetList()) {
-            for (int i = 0; i < synSet.getSynonym().literalSize(); i++) {
-                Literal literal = synSet.getSynonym().getLiteral(i);
-                for (int j = 0; j < literal.relationSize(); j++) {
-                    Relation relation = literal.getRelation(j);
-                    Relation same = null;
-                    for (int k = j + 1; k < literal.relationSize(); k++) {
-                        if (relation.getName().equalsIgnoreCase(literal.getRelation(k).getName())) {
-                            System.out.println(relation.getName() + "--" + literal.getRelation(k).getName() + " are same relation for synset " + synSet.getId());
-                            same = literal.getRelation(k);
-                        }
-                    }
-                    if (same != null) {
-                        literal.removeRelation(same);
-                        j--;
-                    }
-                }
-            }
             for (int j = 0; j < synSet.relationSize(); j++) {
                 Relation relation = synSet.getRelation(j);
                 Relation same = null;
