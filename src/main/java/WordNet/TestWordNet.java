@@ -141,11 +141,11 @@ public class TestWordNet {
         testSimilarityAlgortihms();
         System.exit(-1);
 
-        //WordNet turkish = new WordNet();
-        WordNet domain = new WordNet("turkish_wordnet.xml", new Locale("tr"));
+        WordNet turkish = new WordNet();
+        turkish.saveAsXml("deneme.xml");
         //transferHierarchy(turkish, domain);
-        domain.check();
-        domain.saveAsXml("deneme.xml");
+        //domain.check();
+        //domain.saveAsXml("deneme.xml");
         //turkish.check(null);
         //turkish.saveAsLmf("turkish.lmf");
     }
