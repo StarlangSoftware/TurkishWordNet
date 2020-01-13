@@ -486,7 +486,7 @@ public class SynSet {
         }
         if (synSet.relationSize() != 0) {
             for (int i = 0; i < synSet.relationSize(); i++) {
-                if (!relations.contains(synSet.getRelation(i))) {
+                if (!containsRelation(synSet.getRelation(i)) && !synSet.getRelation(i).getName().equals(id)) {
                     addRelation(synSet.getRelation(i));
                 }
             }
@@ -494,8 +494,8 @@ public class SynSet {
         if (pos == null && synSet.getPos() != null) {
             setPos(synSet.getPos());
         }
-        if (example == null && synSet.example != null) {
-            example = synSet.example;
+        if (example == null && synSet.getExample() != null) {
+            example = synSet.getExample();
         }
     }
 
@@ -631,36 +631,31 @@ public class SynSet {
             outfile.write("<ID>" + id + "</ID>");
             synonym.saveAsXml(outfile);
             if (pos != null) {
-                if (pos.equals(Pos.NOUN)) {
-                    outfile.write("<POS>n</POS>");
-                } else {
-                    if (pos.equals(Pos.ADJECTIVE)) {
+                switch (pos){
+                    case NOUN:
+                        outfile.write("<POS>n</POS>");
+                        break;
+                    case ADJECTIVE:
                         outfile.write("<POS>a</POS>");
-                    } else {
-                        if (pos.equals(Pos.VERB)) {
-                            outfile.write("<POS>v</POS>");
-                        } else {
-                            if (pos.equals(Pos.ADVERB)) {
-                                outfile.write("<POS>b</POS>");
-                            } else {
-                                if (pos.equals(Pos.CONJUNCTION)) {
-                                    outfile.write("<POS>c</POS>");
-                                } else {
-                                    if (pos.equals(Pos.PRONOUN)) {
-                                        outfile.write("<POS>r</POS>");
-                                    } else {
-                                        if (pos.equals(Pos.INTERJECTION)) {
-                                            outfile.write("<POS>i</POS>");
-                                        } else {
-                                            if (pos.equals(Pos.PREPOSITION)) {
-                                                outfile.write("<POS>p</POS>");
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
+                        break;
+                    case VERB:
+                        outfile.write("<POS>v</POS>");
+                        break;
+                    case ADVERB:
+                        outfile.write("<POS>b</POS>");
+                        break;
+                    case CONJUNCTION:
+                        outfile.write("<POS>c</POS>");
+                        break;
+                    case PRONOUN:
+                        outfile.write("<POS>r</POS>");
+                        break;
+                    case INTERJECTION:
+                        outfile.write("<POS>i</POS>");
+                        break;
+                    case PREPOSITION:
+                        outfile.write("<POS>p</POS>");
+                        break;
                 }
             }
             for (Relation r : relations) {

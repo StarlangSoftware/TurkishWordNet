@@ -11,6 +11,7 @@ import org.xml.sax.SAXException;
 
 import javax.swing.*;
 import java.io.*;
+import java.nio.charset.StandardCharsets;
 import java.text.Collator;
 import java.util.*;
 import java.util.Collection;
@@ -40,7 +41,7 @@ public class WordNet {
             this.inputSource = inputSource;
         }
 
-        protected Object doInBackground() throws Exception {
+        protected Object doInBackground() {
             Node rootNode, synSetNode, partNode, ilrNode, srNode, typeNode, toNode, literalNode, textNode, senseNode;
             Document doc;
             DOMParser parser = new DOMParser();
@@ -366,6 +367,23 @@ public class WordNet {
         return locale;
     }
 
+    private void updateAllRelationsAccordingToNewSynSet(SynSet oldSynSet, SynSet newSynSet){
+        for (SynSet synSet : synSetList()){
+            for (int i = 0; i < synSet.relationSize(); i++){
+                if (synSet.getRelation(i) instanceof SemanticRelation){
+                    if (synSet.getRelation(i).getName().equals(oldSynSet.getId())){
+                        if (synSet.getId().equals(newSynSet.getId()) || synSet.containsRelation(new SemanticRelation(newSynSet.getId(), ((SemanticRelation) synSet.getRelation(i)).getRelationType()))){
+                            synSet.removeRelation(synSet.getRelation(i));
+                            i--;
+                        } else {
+                            synSet.getRelation(i).setName(newSynSet.getId());
+                        }
+                    }
+                }
+            }
+        }
+    }
+
     /**
      * Method reads the specified SynSet file, gets the SynSets according to IDs in the file, and merges SynSets.
      *
@@ -382,10 +400,19 @@ public class WordNet {
                     for (int i = 1; i < synSetIds.length; i++) {
                         SynSet toBeMerged = getSynSetWithId(synSetIds[i]);
                         if (toBeMerged != null && mergedOne.getPos().equals(toBeMerged.getPos())) {
-                            mergedOne.mergeSynSet(toBeMerged);
-                            removeSynSet(toBeMerged);
+                            if (!containsSameLiteral(mergedOne, toBeMerged)){
+                                mergedOne.mergeSynSet(toBeMerged);
+                                removeSynSet(toBeMerged);
+                                updateAllRelationsAccordingToNewSynSet(toBeMerged, mergedOne);
+                            } else {
+                                System.out.println(line + " contains the same literals");
+                            }
+                        } else {
+                            System.out.println(line + " contains synsets with different pos");
                         }
                     }
+                } else {
+                    System.out.println(line + " contains " + synSetIds[0] + " which does not exist");
                 }
                 line = infile.readLine();
             }
@@ -566,47 +593,35 @@ public class WordNet {
     public ArrayList<String> getLiteralsWithPossibleModifiedLiteral(String literal) {
         ArrayList<String> result = new ArrayList<>();
         result.add(literal);
+        String wordWithoutLastOne = literal.substring(0, literal.length() - 1);
+        String wordWithoutLastTwo = literal.substring(0, literal.length() - 2);
+        String wordWithoutLastThree = literal.substring(0, literal.length() - 3);
         if (exceptionList.containsKey(literal) && literalList.containsKey(exceptionList.get(literal).getRoot())) {
             result.add(exceptionList.get(literal).getRoot());
         }
-        if (literal.endsWith("s") && literalList.containsKey(literal.substring(0, literal.length() - 1))) {
-            result.add(literal.substring(0, literal.length() - 1));
+        if (literal.endsWith("s") && literalList.containsKey(wordWithoutLastOne)) {
+            result.add(wordWithoutLastOne);
         }
-        if (literal.endsWith("es") && literalList.containsKey(literal.substring(0, literal.length() - 2))) {
-            result.add(literal.substring(0, literal.length() - 2));
+        if ((literal.endsWith("es") || literal.endsWith("ed") || literal.endsWith("er")) && literalList.containsKey(wordWithoutLastTwo)) {
+            result.add(wordWithoutLastTwo);
         }
-        if (literal.endsWith("ed") && literalList.containsKey(literal.substring(0, literal.length() - 2))) {
-            result.add(literal.substring(0, literal.length() - 2));
+        if (literal.endsWith("ed") && literalList.containsKey(wordWithoutLastTwo + literal.charAt(literal.length() - 3))) {
+            result.add(wordWithoutLastTwo + literal.charAt(literal.length() - 3));
         }
-        if (literal.endsWith("ed") && literalList.containsKey(literal.substring(0, literal.length() - 2) + literal.charAt(literal.length() - 3))) {
-            result.add(literal.substring(0, literal.length() - 2) + literal.charAt(literal.length() - 3));
+        if ((literal.endsWith("ed") || literal.endsWith("er")) && literalList.containsKey(wordWithoutLastTwo + "e")) {
+            result.add(wordWithoutLastTwo + "e");
         }
-        if (literal.endsWith("ed") && literalList.containsKey(literal.substring(0, literal.length() - 2) + "e")) {
-            result.add(literal.substring(0, literal.length() - 2) + "e");
+        if ((literal.endsWith("ing") || literal.endsWith("est")) && literalList.containsKey(wordWithoutLastThree)) {
+            result.add(wordWithoutLastThree);
         }
-        if (literal.endsWith("er") && literalList.containsKey(literal.substring(0, literal.length() - 2))) {
-            result.add(literal.substring(0, literal.length() - 2));
+        if (literal.endsWith("ing") && literalList.containsKey(wordWithoutLastThree + literal.charAt(literal.length() - 4))) {
+            result.add(wordWithoutLastThree + literal.charAt(literal.length() - 4));
         }
-        if (literal.endsWith("er") && literalList.containsKey(literal.substring(0, literal.length() - 2) + "e")) {
-            result.add(literal.substring(0, literal.length() - 2) + "e");
+        if ((literal.endsWith("ing") || literal.endsWith("est")) && literalList.containsKey(wordWithoutLastThree + "e")) {
+            result.add(wordWithoutLastThree + "e");
         }
-        if (literal.endsWith("ing") && literalList.containsKey(literal.substring(0, literal.length() - 3))) {
-            result.add(literal.substring(0, literal.length() - 3));
-        }
-        if (literal.endsWith("ing") && literalList.containsKey(literal.substring(0, literal.length() - 3) + literal.charAt(literal.length() - 4))) {
-            result.add(literal.substring(0, literal.length() - 3) + literal.charAt(literal.length() - 4));
-        }
-        if (literal.endsWith("ing") && literalList.containsKey(literal.substring(0, literal.length() - 3) + "e")) {
-            result.add(literal.substring(0, literal.length() - 3) + "e");
-        }
-        if (literal.endsWith("ies") && literalList.containsKey(literal.substring(0, literal.length() - 3) + "y")) {
-            result.add(literal.substring(0, literal.length() - 3) + "y");
-        }
-        if (literal.endsWith("est") && literalList.containsKey(literal.substring(0, literal.length() - 3))) {
-            result.add(literal.substring(0, literal.length() - 3));
-        }
-        if (literal.endsWith("est") && literalList.containsKey(literal.substring(0, literal.length() - 3) + "e")) {
-            result.add(literal.substring(0, literal.length() - 3) + "e");
+        if (literal.endsWith("ies") && literalList.containsKey(wordWithoutLastThree + "y")) {
+            result.add(wordWithoutLastThree + "y");
         }
         return result;
     }
@@ -983,31 +998,27 @@ public class WordNet {
         }
     }
 
+    private boolean containsSameLiteral(SynSet synSet1, SynSet synSet2){
+        for (int i = 0; i < synSet1.getSynonym().literalSize(); i++) {
+            Literal literal1 = synSet1.getSynonym().getLiteral(i);
+            for (int j = i + 1; j < synSet2.getSynonym().literalSize(); j++) {
+                Literal literal2 = synSet2.getSynonym().getLiteral(j);
+                if (literal1.getName().equals(literal2.getName()) && synSet1.getPos() != null) {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+
     /**
      * Prints the literals with same SynSets.
      */
     private void sameLiteralSameSynSetCheck() {
-        ArrayList<SynSet> synsets = new ArrayList<>();
         for (SynSet synSet : synSetList()) {
-            boolean found = false;
-            for (int i = 0; i < synSet.getSynonym().literalSize(); i++) {
-                Literal literal1 = synSet.getSynonym().getLiteral(i);
-                for (int j = i + 1; j < synSet.getSynonym().literalSize(); j++) {
-                    Literal literal2 = synSet.getSynonym().getLiteral(j);
-                    if (literal1.getName().equals(literal2.getName()) && synSet.getPos() != null) {
-                        synsets.add(synSet);
-                        found = true;
-                        break;
-                    }
-                }
-                if (found) {
-                    break;
-                }
+            if (containsSameLiteral(synSet, synSet)){
+                System.out.println(synSet.getPos() + "->" + synSet.getSynonym() + "->" + synSet.getDefinition());
             }
-        }
-        Collections.sort(synsets, new SynSetSizeComparator());
-        for (SynSet synSet : synsets) {
-            System.out.println(synSet.getPos() + "->" + synSet.getDefinition());
         }
     }
 
@@ -1038,17 +1049,6 @@ public class WordNet {
      */
     private void semanticRelationNoIDCheck() {
         for (SynSet synSet : synSetList()) {
-            for (int i = 0; i < synSet.getSynonym().literalSize(); i++) {
-                Literal literal = synSet.getSynonym().getLiteral(i);
-                for (int j = 0; j < literal.relationSize(); j++) {
-                    Relation relation = literal.getRelation(j);
-                    if (getSynSetWithId(relation.getName()) == null) {
-                        literal.removeRelation(relation);
-                        j--;
-                        System.out.println("Relation " + relation.getName() + " of Synset " + synSet.getId() + " does not exists " + synSet.getSynonym());
-                    }
-                }
-            }
             for (int j = 0; j < synSet.relationSize(); j++) {
                 Relation relation = synSet.getRelation(j);
                 if (relation instanceof SemanticRelation && getSynSetWithId(relation.getName()) == null) {
@@ -1065,23 +1065,6 @@ public class WordNet {
      */
     private void sameSemanticRelationCheck() {
         for (SynSet synSet : synSetList()) {
-            for (int i = 0; i < synSet.getSynonym().literalSize(); i++) {
-                Literal literal = synSet.getSynonym().getLiteral(i);
-                for (int j = 0; j < literal.relationSize(); j++) {
-                    Relation relation = literal.getRelation(j);
-                    Relation same = null;
-                    for (int k = j + 1; k < literal.relationSize(); k++) {
-                        if (relation.getName().equalsIgnoreCase(literal.getRelation(k).getName())) {
-                            System.out.println(relation.getName() + "--" + literal.getRelation(k).getName() + " are same relation for synset " + synSet.getId());
-                            same = literal.getRelation(k);
-                        }
-                    }
-                    if (same != null) {
-                        literal.removeRelation(same);
-                        j--;
-                    }
-                }
-            }
             for (int j = 0; j < synSet.relationSize(); j++) {
                 Relation relation = synSet.getRelation(j);
                 Relation same = null;
@@ -1140,7 +1123,7 @@ public class WordNet {
         String senseId;
         IdMapping iliMapping = new IdMapping("ili-mapping.txt");
         try {
-            OutputStreamWriter writer = new OutputStreamWriter(new FileOutputStream(fileName), "UTF-8");
+            OutputStreamWriter writer = new OutputStreamWriter(new FileOutputStream(fileName), StandardCharsets.UTF_8);
             outfile = new BufferedWriter(writer);
             outfile.write("<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n" +
                     "<!DOCTYPE LexicalResource SYSTEM \"http://globalwordnet.github.io/schemas/WN-LMF-1.0.dtd\">\n" +
@@ -1327,8 +1310,8 @@ public class WordNet {
     /**
      * Finds the parent of a node. It does not move until the root, instead it goes one level up.
      *
-     * @param root SynSet whose root will be find
-     * @return root SynSet
+     * @param root SynSet whose parent will be find
+     * @return parent SynSet
      */
     public SynSet percolateUp(SynSet root) {
         for (int i = 0; i < root.relationSize(); i++) {

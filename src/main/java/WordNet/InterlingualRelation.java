@@ -8,7 +8,7 @@ public class InterlingualRelation extends Relation {
             "Usage_domain", "Category_domain", "Be_in_state", "Subevent", "Verb_group",
             "Similar_to", "Also_see", "Causes", "SYNONYM"};
 
-    public static final InterlingualDependencyType[] interlinguaDependencyTags = {InterlingualDependencyType.HYPERNYM,
+    public static final InterlingualDependencyType[] interlingualDependencyTags = {InterlingualDependencyType.HYPERNYM,
             InterlingualDependencyType.NEAR_ANTONYM, InterlingualDependencyType.HOLO_MEMBER, InterlingualDependencyType.HOLO_PART,
             InterlingualDependencyType.HOLO_PORTION, InterlingualDependencyType.USAGE_DOMAIN, InterlingualDependencyType.CATEGORY_DOMAIN,
             InterlingualDependencyType.BE_IN_STATE, InterlingualDependencyType.SUBEVENT, InterlingualDependencyType.VERB_GROUP,
@@ -22,10 +22,10 @@ public class InterlingualRelation extends Relation {
      * @param tag String to compare
      * @return interlingual dependency type according to specified tag
      */
-    public static InterlingualDependencyType getInterlinguaDependencyTag(String tag) {
+    public static InterlingualDependencyType getInterlingualDependencyTag(String tag) {
         for (int j = 0; j < ilrDependency.length; j++) {
             if (tag.equalsIgnoreCase(ilrDependency[j])) {
-                return interlinguaDependencyTags[j];
+                return interlingualDependencyTags[j];
             }
         }
         return null;
@@ -40,7 +40,7 @@ public class InterlingualRelation extends Relation {
      */
     public InterlingualRelation(String name, String dependencyType) {
         super(name);
-        this.dependencyType = getInterlinguaDependencyTag(dependencyType);
+        this.dependencyType = getInterlingualDependencyTag(dependencyType);
         if (this.dependencyType == null) {
             System.out.println("Interlingua dependency tag " + dependencyType + " does not exist\n");
         }
