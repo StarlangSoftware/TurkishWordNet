@@ -113,6 +113,7 @@ Detailed Description
 ============
 + [WordNet](#wordnet)
 + [SynSet](#synset)
++ [Synonym](#synonym)
 
 ## WordNet
 
