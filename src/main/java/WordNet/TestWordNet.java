@@ -5,7 +5,6 @@ import Dictionary.Pos;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
-import java.util.Locale;
 import java.util.Scanner;
 
 public class TestWordNet {
@@ -94,11 +93,11 @@ public class TestWordNet {
 
     public static void main(String[] args){
         WordNet turkish = new WordNet();
-        //turkish.saveAsXml("deneme.xml");
-        WordNet domain = new WordNet("sompo_wordnet.xml", new Locale(   "tr"));
-        transferHierarchy(turkish, domain);
+        turkish.saveAsXml("deneme.xml");
+        //WordNet domain = new WordNet("sompo_wordnet.xml", new Locale(   "tr"));
+        //transferHierarchy(turkish, domain);
         //domain.check();
-        domain.saveAsXml("deneme.xml");
+        //domain.saveAsXml("deneme.xml");
         //turkish.check(null);
         //turkish.saveAsLmf("turkish.lmf");
     }

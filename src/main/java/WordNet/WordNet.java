@@ -2,7 +2,6 @@ package WordNet;
 
 import Dictionary.*;
 import MorphologicalAnalysis.*;
-import com.sun.org.apache.xerces.internal.parsers.DOMParser;
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
@@ -10,6 +9,9 @@ import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
 
 import javax.swing.*;
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.ParserConfigurationException;
 import java.io.*;
 import java.nio.charset.StandardCharsets;
 import java.text.Collator;
@@ -43,17 +45,22 @@ public class WordNet {
 
         protected Object doInBackground() {
             Node rootNode, synSetNode, partNode, ilrNode, srNode, typeNode, toNode, literalNode, textNode, senseNode;
-            Document doc;
-            DOMParser parser = new DOMParser();
+            DocumentBuilder builder = null;
+            DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+            try {
+                builder = factory.newDocumentBuilder();
+            } catch (ParserConfigurationException e) {
+                e.printStackTrace();
+            }
+            Document doc = null;
             SynSet currentSynSet = null;
             Literal currentLiteral;
             int parsedCount, totalCount;
             try {
-                parser.parse(inputSource);
+                doc = builder.parse(inputSource);
             } catch (SAXException | IOException e) {
                 e.printStackTrace();
             }
-            doc = parser.getDocument();
             interlingualList = new HashMap<>();
             synSetList = new TreeMap<>();
             literalList = new TreeMap<>((Comparator) (o1, o2) -> {
@@ -228,16 +235,21 @@ public class WordNet {
         String wordName, rootForm;
         Pos pos;
         Node wordNode, rootNode;
-        DOMParser parser = new DOMParser();
-        Document doc;
+        DocumentBuilder builder = null;
+        DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+        try {
+            builder = factory.newDocumentBuilder();
+        } catch (ParserConfigurationException e) {
+            e.printStackTrace();
+        }
+        Document doc = null;
         try {
             ClassLoader classLoader = getClass().getClassLoader();
-            parser.parse(new InputSource(classLoader.getResourceAsStream(exceptionFileName)));
+            doc = builder.parse(new InputSource(classLoader.getResourceAsStream(exceptionFileName)));
             exceptionList = new HashMap<>();
         } catch (SAXException | IOException e) {
             e.printStackTrace();
         }
-        doc = parser.getDocument();
         rootNode = doc.getFirstChild();
         wordNode = rootNode.getFirstChild();
         while (wordNode != null) {
