@@ -1,7 +1,6 @@
 package WordNet;
 
 import java.io.BufferedWriter;
-import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 
@@ -123,20 +122,20 @@ public class Literal {
     }
 
     /**
-     * Returns <tt>true</tt> if relations list contains the specified relation.
+     * Returns true if relations list contains the specified relation.
      *
      * @param relation element whose presence in the list is to be tested
-     * @return <tt>true</tt> if the list contains the specified element
+     * @return true if the list contains the specified element
      */
     public boolean containsRelation(Relation relation) {
         return relations.contains(relation);
     }
 
     /**
-     * Returns <tt>true</tt> if specified semantic relation type presents in the relations list.
+     * Returns true if specified semantic relation type presents in the relations list.
      *
      * @param semanticRelationType element whose presence in the list is to be tested
-     * @return <tt>true</tt> if specified semantic relation type presents in the relations list
+     * @return true if specified semantic relation type presents in the relations list
      */
     public boolean containsRelationType(SemanticRelationType semanticRelationType) {
         for (Relation relation : relations) {

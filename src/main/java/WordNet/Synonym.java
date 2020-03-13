@@ -71,20 +71,20 @@ public class Synonym {
     }
 
     /**
-     * Returns <tt>true</tt> if literals list contains the specified literal.
+     * Returns true if literals list contains the specified literal.
      *
      * @param literal element whose presence in the list is to be tested
-     * @return <tt>true</tt> if the list contains the specified element
+     * @return true if the list contains the specified element
      */
     public boolean contains(Literal literal) {
         return literals.contains(literal);
     }
 
     /**
-     * Returns <tt>true</tt> if literals list contains the specified String literal.
+     * Returns true if literals list contains the specified String literal.
      *
      * @param literalName element whose presence in the list is to be tested
-     * @return<tt>true</tt> if the list contains the specified element
+     * @return true if the list contains the specified element
      */
     public boolean containsLiteral(String literalName) {
         for (Literal literal : literals) {
