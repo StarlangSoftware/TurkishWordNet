@@ -166,3 +166,39 @@ metodu ile bulunur. Örneğin, bir synonym içindeki tüm literaller
 		literal = synonym.getLiteral(i);
 		...
 	}
+
+## Cite
+If you use this resource on your research, please cite the following paper: 
+
+```
+@article{ehsani18,
+  title={Constructing a WordNet for {T}urkish Using Manual and Automatic Annotation},
+  author={R. Ehsani and E. Solak and O.T. Yildiz},
+  journal={ACM Transactions on Asian and Low-Resource Language Information Processing (TALLIP)},
+  volume={17},
+  number={3},
+  pages={24},
+  year={2018},
+  publisher={ACM}
+}
+
+@inproceedings{bakay19b,
+  title={Integrating {T}urkish {W}ord{N}et {K}e{N}et to {P}rinceton {W}ord{N}et: The Case of One-to-Many Correspondences},
+  author={Ozge Bakay and Ozlem Ergelen and Olcay Taner Yildiz},
+  booktitle={Innovations in Intelligent Systems and Applications},
+  year={2019}
+}
+
+@inproceedings{bakay19a,
+  title={Problems Caused by Semantic Drift in WordNet SynSet Construction},
+  author={Ozge Bakay and Ozlem Ergelen and Olcay Taner Yildiz},
+  booktitle={International Conference on Computer Science and Engineering},
+  year={2019}
+}
+
+@inproceedings{ozcelik19,
+  title={User Interface for {T}urkish Word Network {K}e{N}et},
+  author={Riza Ozcelik and Selen Parlar and Ozge Bakay and Ozlem Ergelen and Olcay Taner Yildiz},
+  booktitle={Signal Processing and Communication Applications Conference},
+  year={2019}
+}
