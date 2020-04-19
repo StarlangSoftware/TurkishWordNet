@@ -101,11 +101,11 @@ Use below line to generate jar file:
 
 ## Maven Usage
 
-	<dependency>
-  	<groupId>NlpToolkit</groupId>
-  	<artifactId>WordNet</artifactId>
-  	<version>1.0.25</version>
-	</dependency>
+        <dependency>
+            <groupId>io.github.starlangsoftware</groupId>
+            <artifactId>WordNet</artifactId>
+            <version>1.0.27</version>
+        </dependency>
 
 ------------------------------------------------
 
