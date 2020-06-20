@@ -1253,7 +1253,7 @@ public class WordNet {
     }
 
     /**
-     * Returns the depth of path.
+     * Returns the depth of the LCS (Lowest super ordinate(lso) == most specific common subsumer(lcs))
      *
      * @param pathToRootOfSynSet1 first list of Strings
      * @param pathToRootOfSynSet2 second list of Strings
@@ -1291,7 +1291,7 @@ public class WordNet {
      * @param pathToRootOfSynSet2 second list of Strings
      * @return depth and ID of the LCS
      */
-    private SimpleEntry<String, Integer> findLCS(ArrayList<String> pathToRootOfSynSet1, ArrayList<String> pathToRootOfSynSet2) {
+    public SimpleEntry<String, Integer> findLCS(ArrayList<String> pathToRootOfSynSet1, ArrayList<String> pathToRootOfSynSet2) {
         for (int i = 0; i < pathToRootOfSynSet1.size(); i++) {
             String LCSid = pathToRootOfSynSet1.get(i);
             if (pathToRootOfSynSet2.contains(LCSid)) {

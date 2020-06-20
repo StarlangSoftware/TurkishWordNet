@@ -1,10 +1,15 @@
 package WordNet;
 
 import Dictionary.Pos;
+import WordNet.Similarity.Similarity;
+import WordNet.Similarity.WuPalmer;
+import javafx.util.Pair;
 
+import java.io.Console;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
+import java.util.Locale;
 import java.util.Scanner;
 
 public class TestWordNet {
@@ -91,7 +96,51 @@ public class TestWordNet {
 
     }
 
+    public static void testSimilarityAlgortihms(){
+        //wordpairs
+        ArrayList<Pair<String,String>> wordpairs = new ArrayList<>();
+        wordpairs.add(new Pair<>("kedi","kedi"));
+        wordpairs.add(new Pair<>("varlık","varlık"));
+        wordpairs.add(new Pair<>("varlık","fiziksel varlık"));
+        wordpairs.add(new Pair<>("kedi","memeliler"));
+        wordpairs.add(new Pair<>("masa","varlık"));
+        wordpairs.add(new Pair<>("kedi","masa"));
+        wordpairs.add(new Pair<>("kalem","masa"));
+        wordpairs.add(new Pair<>("kedi","köpek"));
+        wordpairs.add(new Pair<>("kedi","hayvan"));
+
+        //wordpairs.add(new Pair<>("kedi","kedi"));
+        //wordpairs.add(new Pair<>("kedi","köpek"));
+        //wordpairs.add(new Pair<>("göz","göz"));
+//        wordpairs.add(new Pair<>("göz","gözlük"));
+//        wordpairs.add(new Pair<>("göz","gözleme"));
+//        wordpairs.add(new Pair<>("göz","gönül"));
+//        wordpairs.add(new Pair<>("kedi","uzay"));
+
+        //algorithms
+        WordNet wordnet = new WordNet();
+        ArrayList<Similarity> algortihms = new ArrayList<>();
+        algortihms.add(new WuPalmer(wordnet));
+
+        //results
+        for (Similarity algortihm : algortihms) {
+            System.out.println("------" + algortihm.toString() + "------");
+            for (Pair<String, String> wp : wordpairs) {
+                String w1 = wp.getKey();
+                String w2 = wp.getValue();
+                SynSet syn1 = wordnet.getSynSetWithLiteral (w1,1);
+                SynSet syn2 = wordnet.getSynSetWithLiteral (w2,1);
+                double simScore = algortihm.computeSimilarity(syn1,syn2);
+                System.out.println(w1 +  " - " + w2 + " (" + simScore + " )");
+            }
+            System.out.println("\n");
+        }
+    }
+
     public static void main(String[] args){
+        testSimilarityAlgortihms();
+        System.exit(-1);
+
         WordNet turkish = new WordNet();
         turkish.saveAsXml("deneme.xml");
         //WordNet domain = new WordNet("sompo_wordnet.xml", new Locale(   "tr"));
