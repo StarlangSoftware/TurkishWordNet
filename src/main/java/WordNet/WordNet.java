@@ -1079,16 +1079,60 @@ public class WordNet {
         for (SynSet synSet : synSetList()) {
             for (int j = 0; j < synSet.relationSize(); j++) {
                 Relation relation = synSet.getRelation(j);
-                Relation same = null;
-                for (int k = j + 1; k < synSet.relationSize(); k++) {
-                    if (relation.getName().equalsIgnoreCase(synSet.getRelation(k).getName())) {
-                        System.out.println(relation.getName() + "--" + synSet.getRelation(k).getName() + " are same relation for synset " + synSet.getId());
-                        same = synSet.getRelation(k);
+                if (relation instanceof SemanticRelation){
+                    Relation same = null;
+                    for (int k = j + 1; k < synSet.relationSize(); k++) {
+                        if (synSet.getRelation(k) instanceof SemanticRelation && relation.getName().equalsIgnoreCase(synSet.getRelation(k).getName()) && ((SemanticRelation) relation).getRelationType().equals(((SemanticRelation) synSet.getRelation(k)).getRelationType())) {
+                            System.out.println(relation.getName() + "->" + ((SemanticRelation) relation).getTypeAsString() + "==" + synSet.getRelation(k).getName() + "->" + ((SemanticRelation) synSet.getRelation(k)).getTypeAsString() + " are same relation for synset " + synSet.getId());
+                            same = synSet.getRelation(k);
+                        }
+                    }
+                    if (same != null) {
+                        synSet.removeRelation(same);
+                        j--;
                     }
                 }
-                if (same != null) {
-                    synSet.removeRelation(same);
+            }
+        }
+    }
+
+    /**
+     * Prints SynSets with same relations.
+     */
+    private void inbreeedingRelationCheck() {
+        for (SynSet synSet : synSetList()) {
+            for (int j = 0; j < synSet.relationSize(); j++) {
+                Relation relation = synSet.getRelation(j);
+                if (relation instanceof SemanticRelation && relation.getName().equals(synSet.getId())) {
+                    synSet.removeRelation(relation);
                     j--;
+                }
+            }
+        }
+    }
+
+    /**
+     * Checks if the reverse of the relations exist.
+     */
+    private void noReverseRelationCheck() {
+        for (SynSet synSet : synSetList()) {
+            for (int j = 0; j < synSet.relationSize(); j++) {
+                Relation relation = synSet.getRelation(j);
+                String id = relation.getName();
+                if (relation instanceof SemanticRelation){
+                    SemanticRelationType reverseType = SemanticRelation.reverse(((SemanticRelation) relation).getRelationType());
+                    if (reverseType != null){
+                        SynSet reverseSynSet = getSynSetWithId(id);
+                        if (reverseSynSet == null){
+                            System.out.println("Relation " + ((SemanticRelation) relation).getTypeAsString() + " of " + synSet.getId() + " does not exist");
+                            synSet.removeRelation(relation);
+                        } else {
+                            if (!reverseSynSet.containsRelation(new SemanticRelation(synSet.getId(), reverseType))){
+                                System.out.println("Reverse relation " + ((SemanticRelation) relation).getTypeAsString() + " of " + synSet.getId() + " does not exist");
+                                reverseSynSet.addRelation(new SemanticRelation(synSet.getId(), reverseType));
+                            }
+                        }
+                    }
                 }
             }
         }
@@ -1098,9 +1142,9 @@ public class WordNet {
      * Performs check processes.
      */
     public void check() {
-        semanticRelationNoIDCheck();
-        equalizeSemanticRelations();
+        inbreeedingRelationCheck();
         sameSemanticRelationCheck();
+        noReverseRelationCheck();
     }
 
     /**
