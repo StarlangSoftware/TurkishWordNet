@@ -25,8 +25,8 @@ public class WordNet {
     private TreeMap<String, SynSet> synSetList;
     private TreeMap<String, ArrayList<Literal>> literalList;
     private Locale locale;
-    private HashMap<String, ExceptionalWord> exceptionList;
-    private HashMap<String, ArrayList<SynSet>> interlingualList;
+    private HashMap<String, ArrayList<ExceptionalWord>> exceptionList;
+    public HashMap<String, ArrayList<SynSet>> interlingualList;
 
     /**
      * ReadWordNetTask class extends SwingWorker class which is an abstract class to perform lengthy
@@ -274,7 +274,14 @@ public class WordNet {
                         pos = Pos.NOUN;
                         break;
                 }
-                exceptionList.put(wordName, new ExceptionalWord(wordName, rootForm, pos));
+                ArrayList<ExceptionalWord> rootList;
+                if (exceptionList.containsKey(wordName)){
+                    rootList = exceptionList.get(wordName);
+                } else {
+                    rootList = new ArrayList<ExceptionalWord>();
+                }
+                rootList.add(new ExceptionalWord(wordName, rootForm, pos));
+                exceptionList.put(wordName, rootList);
             }
             wordNode = wordNode.getNextSibling();
         }
@@ -608,8 +615,10 @@ public class WordNet {
         String wordWithoutLastOne = literal.substring(0, literal.length() - 1);
         String wordWithoutLastTwo = literal.substring(0, literal.length() - 2);
         String wordWithoutLastThree = literal.substring(0, literal.length() - 3);
-        if (exceptionList.containsKey(literal) && literalList.containsKey(exceptionList.get(literal).getRoot())) {
-            result.add(exceptionList.get(literal).getRoot());
+        if (exceptionList.containsKey(literal)) {
+            for (ExceptionalWord exceptionalWord : exceptionList.get(literal)){
+                result.add(exceptionalWord.getRoot());
+            }
         }
         if (literal.endsWith("s") && literalList.containsKey(wordWithoutLastOne)) {
             result.add(wordWithoutLastOne);
@@ -958,58 +967,30 @@ public class WordNet {
     }
 
     /**
-     * Finds the interlingual relations of each SynSet in the SynSet list with SynSets of a specified WordNet. Prints them on the screen.
-     *
-     * @param secondWordNet WordNet in other language to find relations
+     * Returns the literals with same senses.
+     * @return A list of literals with same senses.
      */
-    private void multipleInterlingualRelationCheck1(WordNet secondWordNet) {
-        for (SynSet synSet : synSetList()) {
-            ArrayList<String> interlingual = synSet.getInterlingual();
-            if (interlingual.size() > 1) {
-                for (String s : interlingual) {
-                    SynSet second = secondWordNet.getSynSetWithId(s);
-                    if (second != null) {
-                        System.out.println(synSet.getId() + "\t" + synSet.getSynonym() + "\t" + synSet.getDefinition() + "\t" + second.getId() + "\t" + second.getSynonym() + "\t" + second.getDefinition());
-                    }
-                }
-            }
-        }
-    }
-
-    /**
-     * Loops through the interlingual list and retrieves the SynSets from that list, then prints them.
-     *
-     * @param secondWordNet WordNet in other language to find relations
-     */
-    private void multipleInterlingualRelationCheck2(WordNet secondWordNet) {
-        for (String s : interlingualList.keySet()) {
-            if (interlingualList.get(s).size() > 1) {
-                SynSet second = secondWordNet.getSynSetWithId(s);
-                if (second != null) {
-                    for (SynSet synSet : interlingualList.get(s)) {
-                        System.out.println(synSet.getId() + "\t" + synSet.getSynonym() + "\t" + synSet.getDefinition() + "\t" + second.getId() + "\t" + second.getSynonym() + "\t" + second.getDefinition());
-                    }
-                }
-            }
-        }
-    }
-
-    /**
-     * Print the literals with same senses.
-     */
-    private void sameLiteralSameSenseCheck() {
+    public ArrayList<Literal> sameLiteralSameSenseCheck() {
+        ArrayList<Literal> errorList = new ArrayList<>();
         for (String name : literalList.keySet()) {
             ArrayList<Literal> literals = literalList.get(name);
             for (int i = 0; i < literals.size(); i++) {
                 for (int j = i + 1; j < literals.size(); j++) {
                     if (literals.get(i).getSense() == literals.get(j).getSense() && literals.get(i).getName().equals(literals.get(j).getName())) {
-                        System.out.println("Literal " + name + " has same senses.");
+                        errorList.add(literals.get(i));
                     }
                 }
             }
         }
+        return errorList;
     }
 
+    /**
+     * Returns true if both synsets contains same literals, false otherwise.
+     * @param synSet1 First synset.
+     * @param synSet2 Second synset.
+     * @return True if both synsets contains same literals, false otherwise.
+     */
     private boolean containsSameLiteral(SynSet synSet1, SynSet synSet2){
         for (int i = 0; i < synSet1.getSynonym().literalSize(); i++) {
             Literal literal1 = synSet1.getSynonym().getLiteral(i);
@@ -1024,58 +1005,76 @@ public class WordNet {
     }
 
     /**
-     * Prints the literals with same SynSets.
+     * Returns the literals with same SynSets.
+     * @return A list of synsets with same literals.
      */
-    private void sameLiteralSameSynSetCheck() {
+    public ArrayList<SynSet> sameLiteralSameSynSetCheck() {
+        ArrayList<SynSet> errorList = new ArrayList<>();
         for (SynSet synSet : synSetList()) {
             if (containsSameLiteral(synSet, synSet)){
-                System.out.println(synSet.getPos() + "->" + synSet.getSynonym() + "->" + synSet.getDefinition());
+                errorList.add(synSet);
             }
         }
+        return errorList;
     }
 
     /**
-     * Prints the SynSets without part of speech tags.
+     * Returns the synSets without part of speech tags.
+     * @return A list of synsets without part of speech tags.
      */
-    private void noPosCheck() {
+    public ArrayList<SynSet> noPosCheck() {
+        ArrayList<SynSet> errorList = new ArrayList<>();
         for (SynSet synSet : synSetList()) {
             if (synSet.getPos() == null) {
-                System.out.println(synSet.getId() + "\t" + synSet.getSynonym().getLiteral(0).getName() + "\t" + synSet.getDefinition() + "\t" + "has no part of speech");
+                errorList.add(synSet);
             }
         }
+        return errorList;
     }
 
     /**
-     * Prints the SynSets without definitions.
+     * Returns the synSets without definitions.
+     * @return A list of synsets without definitions.
      */
-    private void noDefinitionCheck() {
+    public ArrayList<SynSet> noDefinitionCheck() {
+        ArrayList<SynSet> errorList = new ArrayList<>();
         for (SynSet synSet : synSetList()) {
             if (synSet.getDefinition() == null) {
-                System.out.println("SynSet " + synSet.getId() + " has no definition " + synSet.getSynonym());
+                errorList.add(synSet);
             }
         }
+        return errorList;
     }
 
     /**
-     * Prints SynSets without relation IDs.
+     * Returns literals related to unexisting synsets.
+     * @param modify If true, the relations will be deleted.
+     * @return A list of relations which are related to unexisting synsets.
      */
-    private void semanticRelationNoIDCheck() {
+    public ArrayList<Relation> semanticRelationRelatedToNonExistingSynSetCheck(boolean modify) {
+        ArrayList<Relation> errorList = new ArrayList<>();
         for (SynSet synSet : synSetList()) {
             for (int j = 0; j < synSet.relationSize(); j++) {
                 Relation relation = synSet.getRelation(j);
                 if (relation instanceof SemanticRelation && getSynSetWithId(relation.getName()) == null) {
-                    synSet.removeRelation(relation);
-                    j--;
-                    System.out.println("Relation " + relation.getName() + " of Synset " + synSet.getId() + " does not exists " + synSet.getSynonym());
+                    errorList.add(relation);
+                    if (modify){
+                        synSet.removeRelation(relation);
+                        j--;
+                    }
                 }
             }
         }
+        return errorList;
     }
 
     /**
-     * Prints SynSets with same relations.
+     * Returns SynSets with same relations.
+     * @param modify If true, the relations will be deleted.
+     * @return A list of synsets with same relations.
      */
-    private void sameSemanticRelationCheck() {
+    public ArrayList<SynSet> sameSemanticRelationCheck(boolean modify) {
+        ArrayList<SynSet> errorList = new ArrayList<>();
         for (SynSet synSet : synSetList()) {
             for (int j = 0; j < synSet.relationSize(); j++) {
                 Relation relation = synSet.getRelation(j);
@@ -1083,38 +1082,51 @@ public class WordNet {
                     Relation same = null;
                     for (int k = j + 1; k < synSet.relationSize(); k++) {
                         if (synSet.getRelation(k) instanceof SemanticRelation && relation.getName().equalsIgnoreCase(synSet.getRelation(k).getName()) && ((SemanticRelation) relation).getRelationType().equals(((SemanticRelation) synSet.getRelation(k)).getRelationType())) {
-                            System.out.println(relation.getName() + "->" + ((SemanticRelation) relation).getTypeAsString() + "==" + synSet.getRelation(k).getName() + "->" + ((SemanticRelation) synSet.getRelation(k)).getTypeAsString() + " are same relation for synset " + synSet.getId());
                             same = synSet.getRelation(k);
                         }
                     }
                     if (same != null) {
-                        synSet.removeRelation(same);
+                        errorList.add(synSet);
+                        if (modify){
+                            synSet.removeRelation(same);
+                            j--;
+                        }
+                    }
+                }
+            }
+        }
+        return errorList;
+    }
+
+    /**
+     * Returns SynSets related to itself.
+     * @param modify If true, the relations will be deleted.
+     * @return A list of synsets which are related to itself.
+     */
+    public ArrayList<SynSet> inbreeedingRelationCheck(boolean modify) {
+        ArrayList<SynSet> errorList = new ArrayList<>();
+        for (SynSet synSet : synSetList()) {
+            for (int j = 0; j < synSet.relationSize(); j++) {
+                Relation relation = synSet.getRelation(j);
+                if (relation instanceof SemanticRelation && relation.getName().equals(synSet.getId())) {
+                    errorList.add(synSet);
+                    if (modify){
+                        synSet.removeRelation(relation);
                         j--;
                     }
                 }
             }
         }
+        return errorList;
     }
 
     /**
-     * Prints SynSets with same relations.
+     * Returns synsets where the reverse of the relations does not exist.
+     * @param modify If true, the reverse relations will be added.
+     * @return A list of synsets where the reverse of the relations does not exist.
      */
-    private void inbreeedingRelationCheck() {
-        for (SynSet synSet : synSetList()) {
-            for (int j = 0; j < synSet.relationSize(); j++) {
-                Relation relation = synSet.getRelation(j);
-                if (relation instanceof SemanticRelation && relation.getName().equals(synSet.getId())) {
-                    synSet.removeRelation(relation);
-                    j--;
-                }
-            }
-        }
-    }
-
-    /**
-     * Checks if the reverse of the relations exist.
-     */
-    private void noReverseRelationCheck() {
+    public ArrayList<SynSet> noReverseRelationCheck(boolean modify) {
+        ArrayList<SynSet> errorList = new ArrayList<>();
         for (SynSet synSet : synSetList()) {
             for (int j = 0; j < synSet.relationSize(); j++) {
                 Relation relation = synSet.getRelation(j);
@@ -1124,27 +1136,23 @@ public class WordNet {
                     if (reverseType != null){
                         SynSet reverseSynSet = getSynSetWithId(id);
                         if (reverseSynSet == null){
-                            System.out.println("Relation " + ((SemanticRelation) relation).getTypeAsString() + " of " + synSet.getId() + " does not exist");
-                            synSet.removeRelation(relation);
+                            errorList.add(synSet);
+                            if (modify){
+                                synSet.removeRelation(relation);
+                            }
                         } else {
                             if (!reverseSynSet.containsRelation(new SemanticRelation(synSet.getId(), reverseType))){
-                                System.out.println("Reverse relation " + ((SemanticRelation) relation).getTypeAsString() + " of " + synSet.getId() + " does not exist");
-                                reverseSynSet.addRelation(new SemanticRelation(synSet.getId(), reverseType));
+                                errorList.add(synSet);
+                                if (modify){
+                                    reverseSynSet.addRelation(new SemanticRelation(synSet.getId(), reverseType));
+                                }
                             }
                         }
                     }
                 }
             }
         }
-    }
-
-    /**
-     * Performs check processes.
-     */
-    public void check() {
-        inbreeedingRelationCheck();
-        sameSemanticRelationCheck();
-        noReverseRelationCheck();
+        return errorList;
     }
 
     /**
