@@ -77,6 +77,8 @@ public class SemanticRelation extends Relation {
                 return SemanticRelationType.MEMBER_USAGE;
             case MEMBER_USAGE:
                 return SemanticRelationType.DOMAIN_USAGE;
+            case DERIVATION_RELATED:
+                return SemanticRelationType.DERIVATION_RELATED;
         }
         return null;
     }

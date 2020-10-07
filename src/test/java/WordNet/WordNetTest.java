@@ -199,13 +199,13 @@ public class WordNetTest {
         assertEquals(4, turkish.findPathToRoot(turkish.getSynSetWithId("TUR10-0012910")).size());
         assertEquals(5, turkish.findPathToRoot(turkish.getSynSetWithId("TUR10-0046370")).size());
         assertEquals(6, turkish.findPathToRoot(turkish.getSynSetWithId("TUR10-0186560")).size());
-        assertEquals(4, turkish.findPathToRoot(turkish.getSynSetWithId("TUR10-0172740")).size());
+        assertEquals(7, turkish.findPathToRoot(turkish.getSynSetWithId("TUR10-0172740")).size());
         assertEquals(8, turkish.findPathToRoot(turkish.getSynSetWithId("TUR10-0195110")).size());
         assertEquals(9, turkish.findPathToRoot(turkish.getSynSetWithId("TUR10-0285060")).size());
         assertEquals(10, turkish.findPathToRoot(turkish.getSynSetWithId("TUR10-0066050")).size());
         assertEquals(11, turkish.findPathToRoot(turkish.getSynSetWithId("TUR10-0226380")).size());
         assertEquals(12, turkish.findPathToRoot(turkish.getSynSetWithId("TUR10-0490230")).size());
-        assertEquals(10, turkish.findPathToRoot(turkish.getSynSetWithId("TUR10-1198750")).size());
+        assertEquals(13, turkish.findPathToRoot(turkish.getSynSetWithId("TUR10-1198750")).size());
         assertEquals(14, turkish.findPathToRoot(turkish.getSynSetWithId("TUR10-0412120")).size());
         assertEquals(15, turkish.findPathToRoot(turkish.getSynSetWithId("TUR10-1116690")).size());
         assertEquals(13, turkish.findPathToRoot(turkish.getSynSetWithId("TUR10-0621870")).size());
