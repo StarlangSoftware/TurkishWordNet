@@ -96,11 +96,11 @@ public class WordNetTest {
 
     @Test
     public void testGetSynSetsWithPartOfSpeech() {
-        assertEquals(43846, turkish.getSynSetsWithPartOfSpeech(Pos.NOUN).size());
-        assertEquals(17675, turkish.getSynSetsWithPartOfSpeech(Pos.VERB).size());
-        assertEquals(12358, turkish.getSynSetsWithPartOfSpeech(Pos.ADJECTIVE).size());
-        assertEquals(2523, turkish.getSynSetsWithPartOfSpeech(Pos.ADVERB).size());
-        assertEquals(339, turkish.getSynSetsWithPartOfSpeech(Pos.INTERJECTION).size());
+        assertEquals(44074, turkish.getSynSetsWithPartOfSpeech(Pos.NOUN).size());
+        assertEquals(17791, turkish.getSynSetsWithPartOfSpeech(Pos.VERB).size());
+        assertEquals(12416, turkish.getSynSetsWithPartOfSpeech(Pos.ADJECTIVE).size());
+        assertEquals(2550, turkish.getSynSetsWithPartOfSpeech(Pos.ADVERB).size());
+        assertEquals(342, turkish.getSynSetsWithPartOfSpeech(Pos.INTERJECTION).size());
         assertEquals(68, turkish.getSynSetsWithPartOfSpeech(Pos.PRONOUN).size());
         assertEquals(60, turkish.getSynSetsWithPartOfSpeech(Pos.CONJUNCTION).size());
         assertEquals(29, turkish.getSynSetsWithPartOfSpeech(Pos.PREPOSITION).size());
@@ -188,7 +188,7 @@ public class WordNetTest {
 
     @Test
     public void testSize() {
-        assertEquals(76898, turkish.size());
+        assertEquals(77330, turkish.size());
     }
 
     @Test
