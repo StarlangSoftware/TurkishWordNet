@@ -842,6 +842,148 @@ public class WordNet {
     }
 
     /**
+     * Returns a list of literals using 5 possible words gathered with the specified morphological parses and metamorphic parses.
+     *
+     * @param morphologicalParse1 morphological parse to get possible words
+     * @param morphologicalParse2 morphological parse to get possible words
+     * @param morphologicalParse3 morphological parse to get possible words
+     * @param morphologicalParse4 morphological parse to get possible words
+     * @param morphologicalParse5 morphological parse to get possible words
+     * @param metaParse1          metamorphic parse to get possible words
+     * @param metaParse2          metamorphic parse to get possible words
+     * @param metaParse3          metamorphic parse to get possible words
+     * @param metaParse4         metamorphic parse to get possible words
+     * @param metaParse5         metamorphic parse to get possible words
+     * @param fsm                 finite state machine morphological analyzer to be used at getting possible words
+     * @return a list of literals
+     */
+    public ArrayList<Literal> constructIdiomLiterals(MorphologicalParse morphologicalParse1, MorphologicalParse morphologicalParse2, MorphologicalParse morphologicalParse3, MorphologicalParse morphologicalParse4, MorphologicalParse morphologicalParse5, MetamorphicParse metaParse1, MetamorphicParse metaParse2, MetamorphicParse metaParse3, MetamorphicParse metaParse4, MetamorphicParse metaParse5, FsmMorphologicalAnalyzer fsm) {
+        ArrayList<Literal> result = new ArrayList<>();
+        HashSet<String> possibleWords1 = fsm.getPossibleWords(morphologicalParse1, metaParse1);
+        HashSet<String> possibleWords2 = fsm.getPossibleWords(morphologicalParse2, metaParse2);
+        HashSet<String> possibleWords3 = fsm.getPossibleWords(morphologicalParse3, metaParse3);
+        HashSet<String> possibleWords4 = fsm.getPossibleWords(morphologicalParse4, metaParse4);
+        HashSet<String> possibleWords5 = fsm.getPossibleWords(morphologicalParse5, metaParse5);
+        for (String possibleWord1 : possibleWords1) {
+            for (String possibleWord2 : possibleWords2) {
+                for (String possibleWord3 : possibleWords3) {
+                    for (String possibleWord4 : possibleWords4) {
+                        for (String possibleWord5 : possibleWords5) {
+                            result.addAll(getLiteralsWithName(possibleWord1 + " " + possibleWord2 + " " + possibleWord3 + " " + possibleWord4 + " " + possibleWord5));
+                        }
+                    }
+                }
+            }
+        }
+        return result;
+    }
+
+    /**
+     * Returns a list of SynSets using 4 possible words gathered with the specified morphological parses and metamorphic parses.
+     *
+     * @param morphologicalParse1 morphological parse to get possible words
+     * @param morphologicalParse2 morphological parse to get possible words
+     * @param morphologicalParse3 morphological parse to get possible words
+     * @param morphologicalParse4 morphological parse to get possible words
+     * @param morphologicalParse5 morphological parse to get possible words
+     * @param metaParse1          metamorphic parse to get possible words
+     * @param metaParse2          metamorphic parse to get possible words
+     * @param metaParse3          metamorphic parse to get possible words
+     * @param metaParse4          metamorphic parse to get possible words
+     * @param metaParse5          metamorphic parse to get possible words
+     * @param fsm                 finite state machine morphological analyzer to be used at getting possible words
+     * @return a list of SynSets
+     */
+    public ArrayList<SynSet> constructIdiomSynSets(MorphologicalParse morphologicalParse1, MorphologicalParse morphologicalParse2, MorphologicalParse morphologicalParse3, MorphologicalParse morphologicalParse4, MorphologicalParse morphologicalParse5, MetamorphicParse metaParse1, MetamorphicParse metaParse2, MetamorphicParse metaParse3, MetamorphicParse metaParse4, MetamorphicParse metaParse5, FsmMorphologicalAnalyzer fsm) {
+        ArrayList<SynSet> result = new ArrayList<SynSet>();
+        HashSet<String> possibleWords1 = fsm.getPossibleWords(morphologicalParse1, metaParse1);
+        HashSet<String> possibleWords2 = fsm.getPossibleWords(morphologicalParse2, metaParse2);
+        HashSet<String> possibleWords3 = fsm.getPossibleWords(morphologicalParse3, metaParse3);
+        HashSet<String> possibleWords4 = fsm.getPossibleWords(morphologicalParse4, metaParse4);
+        HashSet<String> possibleWords5 = fsm.getPossibleWords(morphologicalParse5, metaParse5);
+        for (String possibleWord1 : possibleWords1) {
+            for (String possibleWord2 : possibleWords2) {
+                for (String possibleWord3 : possibleWords3) {
+                    for (String possibleWord4 : possibleWords4) {
+                        for (String possibleWord5 : possibleWords5) {
+                            if (numberOfSynSetsWithLiteral(possibleWord1 + " " + possibleWord2 + " " + possibleWord3 + " " + possibleWord4 + " " + possibleWord5) > 0) {
+                                result.addAll(getSynSetsWithLiteral(possibleWord1 + " " + possibleWord2 + " " + possibleWord3 + " " + possibleWord4 + " " + possibleWord5));
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        return result;
+    }
+
+    /**
+     * Returns a list of literals using 4 possible words gathered with the specified morphological parses and metamorphic parses.
+     *
+     * @param morphologicalParse1 morphological parse to get possible words
+     * @param morphologicalParse2 morphological parse to get possible words
+     * @param morphologicalParse3 morphological parse to get possible words
+     * @param morphologicalParse4 morphological parse to get possible words
+     * @param metaParse1          metamorphic parse to get possible words
+     * @param metaParse2          metamorphic parse to get possible words
+     * @param metaParse3          metamorphic parse to get possible words
+     * @param metaParse4         metamorphic parse to get possible words
+     * @param fsm                 finite state machine morphological analyzer to be used at getting possible words
+     * @return a list of literals
+     */
+    public ArrayList<Literal> constructIdiomLiterals(MorphologicalParse morphologicalParse1, MorphologicalParse morphologicalParse2, MorphologicalParse morphologicalParse3, MorphologicalParse morphologicalParse4, MetamorphicParse metaParse1, MetamorphicParse metaParse2, MetamorphicParse metaParse3, MetamorphicParse metaParse4, FsmMorphologicalAnalyzer fsm) {
+        ArrayList<Literal> result = new ArrayList<>();
+        HashSet<String> possibleWords1 = fsm.getPossibleWords(morphologicalParse1, metaParse1);
+        HashSet<String> possibleWords2 = fsm.getPossibleWords(morphologicalParse2, metaParse2);
+        HashSet<String> possibleWords3 = fsm.getPossibleWords(morphologicalParse3, metaParse3);
+        HashSet<String> possibleWords4 = fsm.getPossibleWords(morphologicalParse4, metaParse4);
+        for (String possibleWord1 : possibleWords1) {
+            for (String possibleWord2 : possibleWords2) {
+                for (String possibleWord3 : possibleWords3) {
+                    for (String possibleWord4 : possibleWords4) {
+                        result.addAll(getLiteralsWithName(possibleWord1 + " " + possibleWord2 + " " + possibleWord3 + " " + possibleWord4));
+                    }
+                }
+            }
+        }
+        return result;
+    }
+
+    /**
+     * Returns a list of SynSets using 4 possible words gathered with the specified morphological parses and metamorphic parses.
+     *
+     * @param morphologicalParse1 morphological parse to get possible words
+     * @param morphologicalParse2 morphological parse to get possible words
+     * @param morphologicalParse3 morphological parse to get possible words
+     * @param morphologicalParse4 morphological parse to get possible words
+     * @param metaParse1          metamorphic parse to get possible words
+     * @param metaParse2          metamorphic parse to get possible words
+     * @param metaParse3          metamorphic parse to get possible words
+     * @param metaParse4          metamorphic parse to get possible words
+     * @param fsm                 finite state machine morphological analyzer to be used at getting possible words
+     * @return a list of SynSets
+     */
+    public ArrayList<SynSet> constructIdiomSynSets(MorphologicalParse morphologicalParse1, MorphologicalParse morphologicalParse2, MorphologicalParse morphologicalParse3, MorphologicalParse morphologicalParse4, MetamorphicParse metaParse1, MetamorphicParse metaParse2, MetamorphicParse metaParse3, MetamorphicParse metaParse4, FsmMorphologicalAnalyzer fsm) {
+        ArrayList<SynSet> result = new ArrayList<SynSet>();
+        HashSet<String> possibleWords1 = fsm.getPossibleWords(morphologicalParse1, metaParse1);
+        HashSet<String> possibleWords2 = fsm.getPossibleWords(morphologicalParse2, metaParse2);
+        HashSet<String> possibleWords3 = fsm.getPossibleWords(morphologicalParse3, metaParse3);
+        HashSet<String> possibleWords4 = fsm.getPossibleWords(morphologicalParse4, metaParse4);
+        for (String possibleWord1 : possibleWords1) {
+            for (String possibleWord2 : possibleWords2) {
+                for (String possibleWord3 : possibleWords3) {
+                    for (String possibleWord4 : possibleWords4) {
+                        if (numberOfSynSetsWithLiteral(possibleWord1 + " " + possibleWord2 + " " + possibleWord3 + " " + possibleWord4) > 0) {
+                            result.addAll(getSynSetsWithLiteral(possibleWord1 + " " + possibleWord2 + " " + possibleWord3 + " " + possibleWord4));
+                        }
+                    }
+                }
+            }
+        }
+        return result;
+    }
+
+    /**
      * Returns a list of literals using 3 possible words gathered with the specified morphological parses and metamorphic parses.
      *
      * @param morphologicalParse1 morphological parse to get possible words
