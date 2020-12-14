@@ -15,6 +15,14 @@ public class WordNetTest {
         turkish = new WordNet();
     }
 
+    public void testLiteralList1(){
+        for (String literal : turkish.literalList()){
+            for (SynSet synSet : turkish.getSynSetsWithLiteral(literal)){
+                System.out.println(literal + "\t" + synSet.getId() + "\t" + synSet.getPos() + "\t" + synSet.getSynonym() + "\t" + synSet.getLongDefinition());
+            }
+        }
+    }
+
     @Test
     public void testSynSetList() {
         int literalCount = 0;
