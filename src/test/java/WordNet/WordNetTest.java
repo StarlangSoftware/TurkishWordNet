@@ -23,6 +23,10 @@ public class WordNetTest {
         }
     }
 
+    public void testDictionary(){
+        turkish.generateDictionary("sozluk.tex");
+    }
+
     @Test
     public void testSynSetList() {
         int literalCount = 0;

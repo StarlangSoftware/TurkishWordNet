@@ -1,7 +1,11 @@
 package WordNet;
 
-import Dictionary.*;
-import MorphologicalAnalysis.*;
+import Dictionary.ExceptionalWord;
+import Dictionary.Pos;
+import Dictionary.Word;
+import MorphologicalAnalysis.FsmMorphologicalAnalyzer;
+import MorphologicalAnalysis.MetamorphicParse;
+import MorphologicalAnalysis.MorphologicalParse;
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
@@ -15,10 +19,9 @@ import javax.xml.parsers.ParserConfigurationException;
 import java.io.*;
 import java.nio.charset.StandardCharsets;
 import java.text.Collator;
-import java.util.*;
-import java.util.Collection;
-import java.util.concurrent.ExecutionException;
 import java.util.AbstractMap.SimpleEntry;
+import java.util.*;
+import java.util.concurrent.ExecutionException;
 
 public class WordNet {
 
@@ -1531,5 +1534,173 @@ public class WordNet {
             }
         }
         return null;
+    }
+
+    public String getPos(SynSet synSet){
+        switch (synSet.getPos()){
+            case NOUN:
+                return "i.";
+            case ADJECTIVE:
+                return "s.";
+            case VERB:
+                return "f.";
+            case ADVERB:
+                return "z.";
+            case INTERJECTION:
+                return "c.";
+            case PRONOUN:
+                return "zm.";
+            case CONJUNCTION:
+                return "b.";
+            default:
+                return "";
+        }
+    }
+
+    public boolean isLetter(String literal){
+        if ((literal.charAt(0) >= 'a' && literal.charAt(0) <= 'z') || (literal.charAt(0) >= 'A' && literal.charAt(0) <= 'Z')){
+            return true;
+        }
+        if (literal.charAt(0) == 'ç' || literal.charAt(0) == 'ö' || literal.charAt(0) == 'ğ' || literal.charAt(0) == 'ü' || literal.charAt(0) == 'ş' || literal.charAt(0) == 'ı' || literal.charAt(0) == 'â' || literal.charAt(0) == 'û' || literal.charAt(0) == 'î'){
+            return true;
+        }
+        return false;
+    }
+
+    public String latexTurkish(String text){
+        if (text.equals("$") || text.equals("&")){
+            return "";
+        }
+        return text.replaceAll("ğ", "\\\\u{g}").
+                replaceAll("ş", "\\\\c{s}").
+                replaceAll("ı", "{\\\\i}").
+                replaceAll("\\(\\^\\)", "\\\\^").
+                replaceAll("İ",  " \\\\.{I}").replaceAll("%", "yüzde");
+    }
+
+    public String preamble(String literal, SynSet synSet, ArrayList<SynSet> synSets){
+        if (synSets.size() > 1){
+            return synSet.getSynonym().getLiteral(literal).sense + ". ";
+        }
+        return "";
+    }
+
+    public boolean areEqual(char ch1, char ch2){
+        if (ch1 == 'a' && ch2 == 'â'){
+            return true;
+        }
+        if (ch2 == 'a' && ch1 == 'â'){
+            return true;
+        }
+        if (ch1 == 'u' && ch2 == 'û'){
+            return true;
+        }
+        if (ch2 == 'u' && ch1 == 'û'){
+            return true;
+        }
+        if (ch1 == 'ı' && ch2 == 'î'){
+            return true;
+        }
+        if (ch2 == 'ı' && ch1 == 'î'){
+            return true;
+        }
+        return (ch1 + "").toUpperCase(new Locale("tr")).equals((ch2 + "").toUpperCase(new Locale("tr")));
+    }
+
+    public String getDefinition(SynSet synSet, String literal){
+        String result;
+        if (!synSet.getDefinition().isEmpty()){
+            result = latexTurkish((synSet.getDefinition().charAt(0) + "").toUpperCase(new Locale("tr")) + synSet.getDefinition().substring(1));
+        } else {
+            result = "";
+        }
+        for (int i = 0; i < synSet.getSynonym().literalSize(); i++){
+            if (!synSet.getSynonym().getLiteral(i).getName().equals(literal)){
+                if (getSynSetsWithLiteral(synSet.getSynonym().getLiteral(i).getName()).size() > 1){
+                    result += "; " + latexTurkish(synSet.getSynonym().getLiteral(i).getName()) + "$^{" + synSet.getSynonym().getLiteral(i).sense + "}$";
+                } else {
+                    result += "; " + latexTurkish(synSet.getSynonym().getLiteral(i).getName());
+                }
+            }
+        }
+        return result;
+    }
+
+    public void generateDictionary(String fileName){
+        try {
+            PrintWriter output = new PrintWriter(fileName);
+            output.println("\\documentclass[10pt,a4paper,twoside]{article}\n" +
+                    "\n" +
+                    "\\usepackage[top=3.5cm,bottom=3.5cm,left=1.7cm,right=1.7cm,columnsep=30pt]{geometry}\n" +
+                    "\n" +
+                    "\\usepackage[utf8]{inputenc}\n" +
+                    "\\usepackage[T1]{fontenc}\n" +
+                    "\n" +
+                    "\\usepackage{palatino}\n" +
+                    "\n" +
+                    "\\usepackage{microtype}\n" +
+                    "\n" +
+                    "\\usepackage{multicol}\n" +
+                    "\n" +
+                    "\\usepackage[bf,sf,center]{titlesec}\n" +
+                    "\n" +
+                    "\\usepackage{fancyhdr}\n" +
+                    "\\fancyhead[L]{\\textsf{\\rightmark}}\n" +
+                    "\\fancyhead[R]{\\textsf{\\leftmark}}\n" +
+                    "\\renewcommand{\\headrulewidth}{1.4pt}\n" +
+                    "\\fancyfoot[C]{\\textbf{\\textsf{\\thepage}}}\n" +
+                    "\\renewcommand{\\footrulewidth}{1.4pt}\n" +
+                    "\\pagestyle{fancy}\n" +
+                    "\n" +
+                    "\\newcommand{\\entry}[3]{\\markboth{#1}{#1}\\textbf{#1}\\ {(#2)}\\ $\\bullet$\\ {#3}}\n" +
+                    "\n" +
+                    "\\begin{document}\n");
+            String prev = "0";
+            for (String literal : literalList()){
+                if (!isLetter(literal)){
+                    continue;
+                }
+                if (!areEqual(literal.charAt(0), prev.charAt(0))){
+                    if (!prev.equals("0")){
+                        output.println("\\end{multicols}\n");
+                    }
+                    output.println("\\section*{" + (literal.charAt(0) + "").toUpperCase(new Locale("tr")) + "}");
+                    output.println("\\begin{multicols}{2}");
+                    prev = literal;
+                }
+                ArrayList<SynSet> synSets = getSynSetsWithLiteral(literal);
+                output.print("\\entry{" + latexTurkish(literal) + "}{" + getPos(synSets.get(0)) + "}{");
+                for (int i = 0; i < synSets.size(); i++){
+                    for (int j = i + 1; j < synSets.size(); j++){
+                        if (synSets.get(i).getSynonym().getLiteral(literal).sense > synSets.get(j).getSynonym().getLiteral(literal).sense){
+                            Collections.swap(synSets, i, j);
+                        }
+                    }
+                }
+                for (int i = 0; i < synSets.size(); i++){
+                    SynSet synSet = synSets.get(i);
+                    if (i > 0 && !synSet.getPos().equals(synSets.get(i - 1).getPos())){
+                        if (synSet.getExample() == null){
+                            output.print(preamble(literal, synSet, synSets) + getPos(synSet) + " " + latexTurkish(getDefinition(synSet, literal)) + " ");
+                        } else {
+                            output.print(preamble(literal, synSet, synSets) + getPos(synSet) + " " + latexTurkish(getDefinition(synSet, literal) + " {\\em " + synSet.getExample() + "} "));
+                        }
+                    } else {
+                        if (synSet.getExample() == null){
+                            output.print(preamble(literal, synSet, synSets) + latexTurkish(getDefinition(synSet, literal) + " "));
+                        } else {
+                            output.print(preamble(literal, synSet, synSets) + latexTurkish(getDefinition(synSet, literal) + " {\\em " + synSet.getExample() + "} "));
+                        }
+                    }
+                }
+                output.println("}");
+                output.println();
+            }
+            output.println("\\end{multicols}\n");
+            output.println("\\end{document}");
+            output.close();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
     }
 }
