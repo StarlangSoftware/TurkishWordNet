@@ -82,3 +82,62 @@ Use below line to generate jar file:
             <version>1.0.27</version>
         </dependency>
 
+Detailed Description
+============
+
++ [WordNet](#wordnet)
++ [SynSet](#synset)
++ [Synonym](#synonym)
+
+## WordNet
+
+To load the WordNet KeNet,
+
+	WordNet a = new WordNet();
+
+To load a particular WordNet,
+
+	WordNet domain = new WordNet("domain_wordnet.xml", new Locale("tr"));
+
+To bring all the synsets,
+
+	Collection<SynSet> synSetList()
+
+To bring a particular synset,
+
+	SynSet getSynSetWithId(String synSetId)
+
+And, to bring all the meanings (Synsets) of a particular word, the following is used.
+
+	ArrayList<SynSet> getSynSetsWithLiteral(String literal)
+
+## SynSet
+
+Synonym is procured in order to find the synonymous literals of a synset.
+
+	Synonym getSynonym()
+	
+In order to obtain the Relations inside a synset as index based, the following method is used.
+
+	Relation getRelation(int index)
+
+For instance, all the relations in a synset,
+
+	for (int i = 0; i < synset.relationSize(); i++){
+		relation = synset.getRelation(i);
+		...
+	}
+
+## Synonym
+
+The literals inside the Synonym are found as index based with the following method.
+
+
+	Literal getLiteral(int index)
+
+For example, all the literals inside a synonym can be found with the following:
+
+	for (int i = 0; i < synonym.literalSize(); i++){
+		literal = synonym.getLiteral(i);
+		...
+	}
