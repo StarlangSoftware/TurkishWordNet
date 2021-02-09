@@ -193,3 +193,12 @@ For example, all the literals inside a synonym can be found with the following:
 		literal = synonym.getLiteral(i);
 		...
 	}
+
+# Cite
+
+	@inproceedings{bakay21,
+ 	title={{T}urkish {W}ord{N}et {K}e{N}et},
+ 	year={2021},
+ 	author={O. Bakay and O. Ergelen and E. Sarmis and S. Yildirim and A. Kocabalcioglu and B. N. Arican and M. Ozcelik and E. Saniyar and O. Kuyrukcu and B. 	Avar and O. T. Y{\i}ld{\i}z},
+ 	booktitle={Proceedings of GWC 2021}
+ 	}
