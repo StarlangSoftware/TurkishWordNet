@@ -4,6 +4,12 @@ import Dictionary.Pos;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.ArrayList;
+import java.util.Locale;
+import java.util.Scanner;
+
 import static org.junit.Assert.*;
 
 
@@ -15,16 +21,90 @@ public class WordNetTest {
         turkish = new WordNet();
     }
 
-    public void testLiteralList1(){
-        for (String literal : turkish.literalList()){
-            for (SynSet synSet : turkish.getSynSetsWithLiteral(literal)){
-                System.out.println(literal + "\t" + synSet.getId() + "\t" + synSet.getPos() + "\t" + synSet.getSynonym() + "\t" + synSet.getLongDefinition());
+    public void generateWordNet(){
+        WordNet wordNet = new WordNet("a.txt", new Locale("tr"));
+        try {
+            Scanner input = new Scanner(new File("1944.txt"));
+            while (input.hasNextLine()){
+                String line = input.nextLine();
+                String[] items = line.split("\\t");
+                if (items.length != 4){
+                    System.out.println(line + " -> Error in line ITEMS MISSING!!");
+                    continue;
+                }
+                String literal = items[0].trim();
+                ArrayList<Literal> literals = wordNet.getLiteralsWithName(literal);
+                int maxIndex = 0;
+                for (Literal literal2 : literals){
+                    if (literal2.getSense() > maxIndex){
+                        maxIndex = literal2.getSense();
+                    }
+                }
+                String id = items[1].trim();
+                String posText = items[2].trim();
+                Pos pos;
+                switch (posText){
+                    case "NOUN":
+                        pos = Pos.NOUN;
+                        break;
+                    case "ADJECTIVE":
+                        pos = Pos.ADJECTIVE;
+                        break;
+                    case "ADVERB":
+                        pos = Pos.ADVERB;
+                        break;
+                    case "VERB":
+                        pos = Pos.VERB;
+                        break;
+                    case "INTERJECTION":
+                        pos = Pos.INTERJECTION;
+                        break;
+                    case "PRONOUN":
+                        pos = Pos.PRONOUN;
+                        break;
+                    case "CONJUNCTION":
+                        pos = Pos.CONJUNCTION;
+                        break;
+                    case "PREPOSITION":
+                        pos = Pos.PREPOSITION;
+                        break;
+                    default:
+                        System.out.println(line + " -> Error in line POS WRONG!!");
+                        pos = Pos.NOUN;
+                        break;
+                }
+                String definition = items[3].trim();
+                if (wordNet.getSynSetWithId(id) == null){
+                    SynSet synSet = new SynSet(id);
+                    synSet.setDefinition(definition);
+                    Literal literal1 = new Literal(literal, maxIndex + 1, id);
+                    synSet.addLiteral(literal1);
+                    wordNet.addLiteralToLiteralList(literal1);
+                    synSet.setPos(pos);
+                    wordNet.addSynSet(synSet);
+                } else {
+                    SynSet synSet = wordNet.getSynSetWithId(id);
+                    if (!synSet.getPos().equals(pos)){
+                        System.out.println(line + " -> Error in line POS CONFLICT!! (Previous pos of: " + synSet.getSynonym().toString() + "=" + synSet.getPos() + ")");
+                    }
+                    Literal literal1 = new Literal(literal, maxIndex + 1, id);
+                    synSet.addLiteral(literal1);
+                    wordNet.addLiteralToLiteralList(literal1);
+                    if (!synSet.getLongDefinition().equals(definition)){
+                        System.out.println(line + " -> Error in line DEFINITION CONFLICT!! (Previous definition of: " + synSet.getSynonym().toString() + "=" + synSet.getDefinition() + ")");
+                    }
+                }
             }
+            input.close();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
         }
+        wordNet.saveAsXml("1944.xml");
     }
 
-    public void testDictionary(){
-        turkish.generateDictionary("sozluk.tex");
+    @Test
+    public void testSize() {
+        assertEquals(77330, turkish.size());
     }
 
     @Test
@@ -33,7 +113,7 @@ public class WordNetTest {
         for (SynSet synSet : turkish.synSetList()){
             literalCount += synSet.getSynonym().literalSize();
         }
-        assertEquals(109049, literalCount);
+        assertEquals(109050, literalCount);
     }
 
     @Test
@@ -108,9 +188,9 @@ public class WordNetTest {
 
     @Test
     public void testGetSynSetsWithPartOfSpeech() {
-        assertEquals(44074, turkish.getSynSetsWithPartOfSpeech(Pos.NOUN).size());
-        assertEquals(17791, turkish.getSynSetsWithPartOfSpeech(Pos.VERB).size());
-        assertEquals(12416, turkish.getSynSetsWithPartOfSpeech(Pos.ADJECTIVE).size());
+        assertEquals(44073, turkish.getSynSetsWithPartOfSpeech(Pos.NOUN).size());
+        assertEquals(17789, turkish.getSynSetsWithPartOfSpeech(Pos.VERB).size());
+        assertEquals(12419, turkish.getSynSetsWithPartOfSpeech(Pos.ADJECTIVE).size());
         assertEquals(2550, turkish.getSynSetsWithPartOfSpeech(Pos.ADVERB).size());
         assertEquals(342, turkish.getSynSetsWithPartOfSpeech(Pos.INTERJECTION).size());
         assertEquals(68, turkish.getSynSetsWithPartOfSpeech(Pos.PRONOUN).size());
@@ -196,11 +276,6 @@ public class WordNetTest {
     @Test
     public void testNoReverseRelationCheck() {
         assertEquals(0, turkish.noReverseRelationCheck(false).size());
-    }
-
-    @Test
-    public void testSize() {
-        assertEquals(77330, turkish.size());
     }
 
     @Test

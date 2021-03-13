@@ -1,5 +1,7 @@
 package WordNet;
 
+import Util.FileUtils;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
@@ -15,8 +17,7 @@ public class IdMapping {
      */
     public IdMapping() {
         map = new HashMap<>();
-        ClassLoader classLoader = getClass().getClassLoader();
-        Scanner scanner = new Scanner(classLoader.getResourceAsStream("mapping.txt"));
+        Scanner scanner = new Scanner(FileUtils.getInputStream("mapping.txt"));
         while (scanner.hasNext()) {
             String s = scanner.next();
             String[] mapInfo = s.split("->");
@@ -31,8 +32,7 @@ public class IdMapping {
      */
     public IdMapping(String fileName) {
         map = new HashMap<>();
-        ClassLoader classLoader = getClass().getClassLoader();
-        Scanner scanner = new Scanner(classLoader.getResourceAsStream(fileName));
+        Scanner scanner = new Scanner(FileUtils.getInputStream(fileName));
         while (scanner.hasNext()) {
             String s = scanner.next();
             String[] mapInfo = s.split("->");

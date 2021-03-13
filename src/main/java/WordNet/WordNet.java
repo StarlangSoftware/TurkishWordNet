@@ -6,6 +6,7 @@ import Dictionary.Word;
 import MorphologicalAnalysis.FsmMorphologicalAnalyzer;
 import MorphologicalAnalysis.MetamorphicParse;
 import MorphologicalAnalysis.MorphologicalParse;
+import Util.FileUtils;
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
@@ -39,7 +40,7 @@ public class WordNet {
         private InputSource inputSource;
 
         public ReadWordNetTask(String fileName) {
-            inputSource = new InputSource(fileName);
+            inputSource = new InputSource(FileUtils.getInputStream(fileName));
         }
 
         public ReadWordNetTask(InputSource inputSource) {
@@ -247,8 +248,7 @@ public class WordNet {
         }
         Document doc = null;
         try {
-            ClassLoader classLoader = getClass().getClassLoader();
-            doc = builder.parse(new InputSource(classLoader.getResourceAsStream(exceptionFileName)));
+            doc = builder.parse(new InputSource(FileUtils.getInputStream(exceptionFileName)));
             exceptionList = new HashMap<>();
         } catch (SAXException | IOException e) {
             e.printStackTrace();
@@ -298,8 +298,7 @@ public class WordNet {
         synSetList = new TreeMap<>();
         literalList = new TreeMap<>(String.CASE_INSENSITIVE_ORDER);
         this.locale = new Locale("tr");
-        ClassLoader classLoader = getClass().getClassLoader();
-        ReadWordNetTask task = new ReadWordNetTask(new InputSource(classLoader.getResourceAsStream("turkish_wordnet.xml")));
+        ReadWordNetTask task = new ReadWordNetTask(new InputSource(FileUtils.getInputStream("turkish_wordnet.xml")));
         task.execute();
         try {
             task.get();
@@ -319,8 +318,7 @@ public class WordNet {
         literalList = new TreeMap<>(String.CASE_INSENSITIVE_ORDER);
         this.locale = new Locale("en");
         readExceptionFile("english_exception.xml");
-        ClassLoader classLoader = getClass().getClassLoader();
-        ReadWordNetTask task = new ReadWordNetTask(new InputSource(classLoader.getResourceAsStream(fileName)));
+        ReadWordNetTask task = new ReadWordNetTask(new InputSource(FileUtils.getInputStream(fileName)));
         task.execute();
         try {
             task.get();

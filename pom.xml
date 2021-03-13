@@ -6,7 +6,7 @@
 
     <groupId>io.github.starlangsoftware</groupId>
     <artifactId>WordNet</artifactId>
-    <version>1.0.41</version>
+    <version>1.0.42</version>
     <packaging>jar</packaging>
 
     <name>NlpToolkit.WordNet</name>
@@ -50,17 +50,17 @@
         <dependency>
             <groupId>io.github.starlangsoftware</groupId>
             <artifactId>DataStructure</artifactId>
-            <version>1.0.3</version>
+            <version>1.0.4</version>
         </dependency>
         <dependency>
             <groupId>io.github.starlangsoftware</groupId>
             <artifactId>Dictionary</artifactId>
-            <version>1.0.16</version>
+            <version>1.0.20</version>
         </dependency>
         <dependency>
             <groupId>io.github.starlangsoftware</groupId>
             <artifactId>MorphologicalAnalysis</artifactId>
-            <version>1.0.21</version>
+            <version>1.0.33</version>
         </dependency>
         <dependency>
             <groupId>javax.xml.parsers</groupId>
