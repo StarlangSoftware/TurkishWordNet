@@ -21,10 +21,12 @@ public class WordNetTest {
         turkish = new WordNet();
     }
 
+    @Test
     public void generateWordNet(){
+        String year = "1955";
         WordNet wordNet = new WordNet("a.txt", new Locale("tr"));
         try {
-            Scanner input = new Scanner(new File("1944.txt"));
+            Scanner input = new Scanner(new File(year + ".txt"));
             while (input.hasNextLine()){
                 String line = input.nextLine();
                 String[] items = line.split("\\t");
@@ -99,7 +101,7 @@ public class WordNetTest {
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
-        wordNet.saveAsXml("1944.xml");
+        wordNet.saveAsXml(year + ".xml");
     }
 
     @Test
