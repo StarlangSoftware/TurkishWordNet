@@ -21,7 +21,6 @@ public class WordNetTest {
         turkish = new WordNet();
     }
 
-    @Test
     public void generateWordNet(){
         String year = "1955";
         WordNet wordNet = new WordNet("a.txt", new Locale("tr"));
@@ -191,8 +190,8 @@ public class WordNetTest {
     @Test
     public void testGetSynSetsWithPartOfSpeech() {
         assertEquals(44073, turkish.getSynSetsWithPartOfSpeech(Pos.NOUN).size());
-        assertEquals(17789, turkish.getSynSetsWithPartOfSpeech(Pos.VERB).size());
-        assertEquals(12419, turkish.getSynSetsWithPartOfSpeech(Pos.ADJECTIVE).size());
+        assertEquals(17788, turkish.getSynSetsWithPartOfSpeech(Pos.VERB).size());
+        assertEquals(12420, turkish.getSynSetsWithPartOfSpeech(Pos.ADJECTIVE).size());
         assertEquals(2550, turkish.getSynSetsWithPartOfSpeech(Pos.ADVERB).size());
         assertEquals(342, turkish.getSynSetsWithPartOfSpeech(Pos.INTERJECTION).size());
         assertEquals(68, turkish.getSynSetsWithPartOfSpeech(Pos.PRONOUN).size());
