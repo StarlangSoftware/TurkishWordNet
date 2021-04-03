@@ -14,7 +14,6 @@ public class WordNet1955Test extends PreviousWordNetTest{
     @Before
     public void setUp() {
         previuosWordNet = new WordNet("turkish1955_wordnet.xml", new Locale("tr"));
-        generateOfflineDictionary();
     }
 
     public void findMatchingSynSetsInPreviousWordNet1944(){
