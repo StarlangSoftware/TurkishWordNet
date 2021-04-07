@@ -880,7 +880,7 @@ public class WordNet {
     }
 
     /**
-     * Returns a list of SynSets using 4 possible words gathered with the specified morphological parses and metamorphic parses.
+     * Returns a list of SynSets using 5 possible words gathered with the specified morphological parses and metamorphic parses.
      *
      * @param morphologicalParse1 morphological parse to get possible words
      * @param morphologicalParse2 morphological parse to get possible words
