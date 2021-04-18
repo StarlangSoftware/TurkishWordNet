@@ -15,19 +15,6 @@ public class WordNet1944Test extends PreviousWordNetTest{
         previuosWordNet = new WordNet("turkish1944_wordnet.xml", new Locale("tr"));
     }
 
-    public void addExamplesFromPreviousWordNets(){
-        WordNet turkish = new WordNet();
-        for (SynSet synSet1 : previuosWordNet.synSetList()){
-            if (synSet1.getId().startsWith("TUR10-")){
-                SynSet synSet = turkish.getSynSetWithId(synSet1.getId());
-                if (synSet.getExample() != null){
-                    synSet1.setExample(synSet.getExample());
-                }
-            }
-        }
-        previuosWordNet.saveAsXml("deneme.xml");
-    }
-
     @Test
     public void testSize() {
         assertEquals(31958, previuosWordNet.size());

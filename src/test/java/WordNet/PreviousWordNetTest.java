@@ -1,10 +1,7 @@
 package WordNet;
 
-import java.io.File;
-import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Locale;
-import java.util.Scanner;
 
 public class PreviousWordNetTest {
 
@@ -74,24 +71,6 @@ public class PreviousWordNetTest {
 
     public void generateOfflineDictionary(){
         previuosWordNet.generateDictionary("sozluk.tex");
-    }
-
-    public void addExamples(){
-        try {
-            Scanner input = new Scanner(new File("cumleler.txt"));
-            while (input.hasNextLine()){
-                String line = input.nextLine();
-                String[] items = line.split("\\t");
-                SynSet synSet = previuosWordNet.getSynSetWithId(items[0]);
-                if (synSet != null){
-                    synSet.setExample(items[1]);
-                }
-            }
-            input.close();
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        }
-        previuosWordNet.saveAsXml("deneme.xml");
     }
 
 }

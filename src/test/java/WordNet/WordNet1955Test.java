@@ -32,36 +32,6 @@ public class WordNet1955Test extends PreviousWordNetTest{
         }
     }
 
-    public void addExamplesFromPreviousWordNets(){
-        WordNet turkish44 = new WordNet("turkish1944_wordnet.xml", new Locale("tr"));
-        for (SynSet synSet1 : previuosWordNet.synSetList()){
-            if (synSet1.getId().startsWith("TUR01-")){
-                SynSet synSet = turkish44.getSynSetWithId(synSet1.getId());
-                if (synSet != null){
-                    if (synSet.getExample() != null){
-                        synSet1.setExample(synSet.getExample());
-                    }
-                } else {
-                    System.out.println(synSet1.getId());
-                }
-            }
-        }
-        WordNet turkish = new WordNet();
-        for (SynSet synSet1 : previuosWordNet.synSetList()){
-            if (synSet1.getId().startsWith("TUR10-")){
-                SynSet synSet = turkish.getSynSetWithId(synSet1.getId());
-                if (synSet != null){
-                    if (synSet.getExample() != null){
-                        synSet1.setExample(synSet.getExample());
-                    }
-                } else {
-                    System.out.println(synSet1.getId());
-                }
-            }
-        }
-        previuosWordNet.saveAsXml("deneme.xml");
-    }
-
     public void generateNextData(){
         for (String literal : previuosWordNet.literalList()){
             ArrayList<SynSet> synSets = previuosWordNet.getSynSetsWithLiteral(literal);
