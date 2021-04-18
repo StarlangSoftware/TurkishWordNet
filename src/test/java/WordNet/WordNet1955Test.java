@@ -73,7 +73,7 @@ public class WordNet1955Test extends PreviousWordNetTest{
 
     @Test
     public void testSize() {
-        assertEquals(34659, previuosWordNet.size());
+        assertEquals(34666, previuosWordNet.size());
     }
 
     @Test
@@ -82,15 +82,15 @@ public class WordNet1955Test extends PreviousWordNetTest{
         for (SynSet synSet : previuosWordNet.synSetList()){
             literalCount += synSet.getSynonym().literalSize();
         }
-        assertEquals(44751, literalCount);
+        assertEquals(44759, literalCount);
     }
 
     @Test
     public void testGetSynSetsWithPartOfSpeech() {
-        assertEquals(18345, previuosWordNet.getSynSetsWithPartOfSpeech(Pos.NOUN).size());
-        assertEquals(8055, previuosWordNet.getSynSetsWithPartOfSpeech(Pos.VERB).size());
-        assertEquals(5818, previuosWordNet.getSynSetsWithPartOfSpeech(Pos.ADJECTIVE).size());
-        assertEquals(1189, previuosWordNet.getSynSetsWithPartOfSpeech(Pos.INTERJECTION).size());
+        assertEquals(18346, previuosWordNet.getSynSetsWithPartOfSpeech(Pos.NOUN).size());
+        assertEquals(8057, previuosWordNet.getSynSetsWithPartOfSpeech(Pos.VERB).size());
+        assertEquals(5821, previuosWordNet.getSynSetsWithPartOfSpeech(Pos.ADJECTIVE).size());
+        assertEquals(1190, previuosWordNet.getSynSetsWithPartOfSpeech(Pos.INTERJECTION).size());
         assertEquals(1077, previuosWordNet.getSynSetsWithPartOfSpeech(Pos.ADVERB).size());
         assertEquals(84, previuosWordNet.getSynSetsWithPartOfSpeech(Pos.CONJUNCTION).size());
         assertEquals(49, previuosWordNet.getSynSetsWithPartOfSpeech(Pos.PREPOSITION).size());
@@ -99,7 +99,7 @@ public class WordNet1955Test extends PreviousWordNetTest{
 
     @Test
     public void testLiteralList() {
-        assertEquals(34117, previuosWordNet.literalList().size());
+        assertEquals(34121, previuosWordNet.literalList().size());
     }
 
     @Test
