@@ -43,11 +43,14 @@ public class WordNet1944Test extends PreviousWordNetTest{
 
     @Test
     public void testLiteralList() {
-        assertEquals(31379, previuosWordNet.literalList().size());
+        assertEquals(31376, previuosWordNet.literalList().size());
     }
 
     @Test
     public void testSameLiteralSameSenseCheck() {
+        for (Literal literal : previuosWordNet.sameLiteralSameSenseCheck()){
+            System.out.println(literal.getName());
+        }
         assertEquals(0, previuosWordNet.sameLiteralSameSenseCheck().size());
     }
 
