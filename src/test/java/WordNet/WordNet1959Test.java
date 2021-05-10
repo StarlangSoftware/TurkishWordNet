@@ -19,9 +19,22 @@ public class WordNet1959Test extends PreviousWordNetTest{
     public void findMatchingSynSetsInPreviousWordNet1944(){
         WordNet turkish44 = new WordNet("turkish1944_wordnet.xml", new Locale("tr"));
         for (SynSet synSet1 : previuosWordNet.synSetList()){
-            if (synSet1.getId().startsWith("TUR02-")){
+            if (synSet1.getId().startsWith("TUR03-")){
                 for (SynSet synSet2: turkish44.synSetList()){
                     if (synSet2.getId().startsWith("TUR01-") && synSet1.getPos().equals(synSet2.getPos())){
+                        double matchRatio = numberOfMatches(synSet1.getLongDefinition(), synSet2.getLongDefinition());
+                        if (matchRatio >= 0.8){
+                            System.out.println(matchRatio + "\t" + synSet1.getId() + "\t" + synSet2.getId() + "\t" + synSet1.getSynonym().toString() + "\t" + synSet2.getSynonym().toString() + "\t" + synSet1.getLongDefinition() + "\t" + synSet2.getLongDefinition());
+                        }
+                    }
+                }
+            }
+        }
+        WordNet turkish55 = new WordNet("turkish1955_wordnet.xml", new Locale("tr"));
+        for (SynSet synSet1 : previuosWordNet.synSetList()){
+            if (synSet1.getId().startsWith("TUR03-")){
+                for (SynSet synSet2: turkish55.synSetList()){
+                    if (synSet2.getId().startsWith("TUR02-") && synSet1.getPos().equals(synSet2.getPos())){
                         double matchRatio = numberOfMatches(synSet1.getLongDefinition(), synSet2.getLongDefinition());
                         if (matchRatio >= 0.8){
                             System.out.println(matchRatio + "\t" + synSet1.getId() + "\t" + synSet2.getId() + "\t" + synSet1.getSynonym().toString() + "\t" + synSet2.getSynonym().toString() + "\t" + synSet1.getLongDefinition() + "\t" + synSet2.getLongDefinition());
@@ -43,7 +56,7 @@ public class WordNet1959Test extends PreviousWordNetTest{
 
     @Test
     public void testSize() {
-        assertEquals(36079, previuosWordNet.size());
+        assertEquals(36076, previuosWordNet.size());
     }
 
     @Test
@@ -57,9 +70,9 @@ public class WordNet1959Test extends PreviousWordNetTest{
 
     @Test
     public void testGetSynSetsWithPartOfSpeech() {
-        assertEquals(19179, previuosWordNet.getSynSetsWithPartOfSpeech(Pos.NOUN).size());
+        assertEquals(19178, previuosWordNet.getSynSetsWithPartOfSpeech(Pos.NOUN).size());
         assertEquals(8230, previuosWordNet.getSynSetsWithPartOfSpeech(Pos.VERB).size());
-        assertEquals(6073, previuosWordNet.getSynSetsWithPartOfSpeech(Pos.ADJECTIVE).size());
+        assertEquals(6071, previuosWordNet.getSynSetsWithPartOfSpeech(Pos.ADJECTIVE).size());
         assertEquals(1259, previuosWordNet.getSynSetsWithPartOfSpeech(Pos.INTERJECTION).size());
         assertEquals(1151, previuosWordNet.getSynSetsWithPartOfSpeech(Pos.ADVERB).size());
         assertEquals(72, previuosWordNet.getSynSetsWithPartOfSpeech(Pos.PREPOSITION).size());

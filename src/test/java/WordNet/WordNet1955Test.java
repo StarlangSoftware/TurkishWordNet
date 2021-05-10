@@ -16,22 +16,6 @@ public class WordNet1955Test extends PreviousWordNetTest{
         previuosWordNet = new WordNet("turkish1955_wordnet.xml", new Locale("tr"));
     }
 
-    public void findMatchingSynSetsInPreviousWordNet1944(){
-        WordNet turkish44 = new WordNet("turkish1944_wordnet.xml", new Locale("tr"));
-        for (SynSet synSet1 : previuosWordNet.synSetList()){
-            if (synSet1.getId().startsWith("TUR02-")){
-                for (SynSet synSet2: turkish44.synSetList()){
-                    if (synSet2.getId().startsWith("TUR01-") && synSet1.getPos().equals(synSet2.getPos())){
-                        double matchRatio = numberOfMatches(synSet1.getLongDefinition(), synSet2.getLongDefinition());
-                        if (matchRatio >= 0.8){
-                            System.out.println(matchRatio + "\t" + synSet1.getId() + "\t" + synSet2.getId() + "\t" + synSet1.getSynonym().toString() + "\t" + synSet2.getSynonym().toString() + "\t" + synSet1.getLongDefinition() + "\t" + synSet2.getLongDefinition());
-                        }
-                    }
-                }
-            }
-        }
-    }
-
     public void generateNextData(){
         for (String literal : previuosWordNet.literalList()){
             ArrayList<SynSet> synSets = previuosWordNet.getSynSetsWithLiteral(literal);
