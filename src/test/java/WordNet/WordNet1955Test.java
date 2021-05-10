@@ -4,7 +4,6 @@ import Dictionary.Pos;
 import org.junit.Before;
 import org.junit.Test;
 
-import java.util.ArrayList;
 import java.util.Locale;
 
 import static org.junit.Assert.assertEquals;
@@ -14,15 +13,6 @@ public class WordNet1955Test extends PreviousWordNetTest{
     @Before
     public void setUp() {
         previuosWordNet = new WordNet("turkish1955_wordnet.xml", new Locale("tr"));
-    }
-
-    public void generateNextData(){
-        for (String literal : previuosWordNet.literalList()){
-            ArrayList<SynSet> synSets = previuosWordNet.getSynSetsWithLiteral(literal);
-            for (SynSet synSet : synSets){
-                System.out.println(literal + "\t" + synSet.getId() + "\t" + synSet.getPos() + "\t" + synSet.getLongDefinition() + "\t" + synSet.getSynonym() + "\t" + synSet.getExample());
-            }
-        }
     }
 
     @Test
