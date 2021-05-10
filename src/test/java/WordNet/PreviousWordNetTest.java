@@ -64,22 +64,6 @@ public class PreviousWordNetTest {
         return count / (items1.length + items2.length);
     }
 
-    public void findMatchingSynSetsInPreviousWordNets(String prefix){
-        WordNet turkish = new WordNet();
-        for (SynSet synSet1 : previuosWordNet.synSetList()){
-            if (synSet1.getId().startsWith(prefix)){
-                for (SynSet synSet2: turkish.synSetList()){
-                    if (synSet1.getPos().equals(synSet2.getPos())){
-                        double matchRatio = numberOfMatches(synSet1.getLongDefinition(), synSet2.getLongDefinition());
-                        if (matchRatio >= 0.8){
-                            System.out.println(matchRatio + "\t" + synSet1.getId() + "\t" + synSet2.getId() + "\t" + synSet1.getSynonym().toString() + "\t" + synSet2.getSynonym().toString() + "\t" + synSet1.getLongDefinition() + "\t" + synSet2.getLongDefinition());
-                        }
-                    }
-                }
-            }
-        }
-    }
-
     public void findSameLiteralsInPreviousWordNets(String prefix){
         WordNet turkish = new WordNet();
         for (SynSet synSet1 : previuosWordNet.synSetList()){

@@ -16,7 +16,7 @@ public class WordNet1959Test extends PreviousWordNetTest{
         previuosWordNet = new WordNet("turkish1959_wordnet.xml", new Locale("tr"));
     }
 
-    public void findMatchingSynSetsInPreviousWordNet1944(){
+    public void findMatchingSynSetsInPreviousWordNets(){
         WordNet turkish44 = new WordNet("turkish1944_wordnet.xml", new Locale("tr"));
         for (SynSet synSet1 : previuosWordNet.synSetList()){
             if (synSet1.getId().startsWith("TUR03-")){
