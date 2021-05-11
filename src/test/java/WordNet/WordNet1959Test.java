@@ -43,6 +43,19 @@ public class WordNet1959Test extends PreviousWordNetTest{
                 }
             }
         }
+        WordNet turkish = new WordNet();
+        for (SynSet synSet1 : previuosWordNet.synSetList()){
+            if (synSet1.getId().startsWith("TUR03-")){
+                for (SynSet synSet2: turkish.synSetList()){
+                    if (synSet1.getPos().equals(synSet2.getPos())){
+                        double matchRatio = numberOfMatches(synSet1.getLongDefinition(), synSet2.getLongDefinition());
+                        if (matchRatio >= 0.8){
+                            System.out.println(matchRatio + "\t" + synSet1.getId() + "\t" + synSet2.getId() + "\t" + synSet1.getSynonym().toString() + "\t" + synSet2.getSynonym().toString() + "\t" + synSet1.getLongDefinition() + "\t" + synSet2.getLongDefinition());
+                        }
+                    }
+                }
+            }
+        }
     }
 
     public void generateNextData(){
@@ -56,7 +69,7 @@ public class WordNet1959Test extends PreviousWordNetTest{
 
     @Test
     public void testSize() {
-        assertEquals(36076, previuosWordNet.size());
+        assertEquals(36065, previuosWordNet.size());
     }
 
     @Test
@@ -65,16 +78,16 @@ public class WordNet1959Test extends PreviousWordNetTest{
         for (SynSet synSet : previuosWordNet.synSetList()){
             literalCount += synSet.getSynonym().literalSize();
         }
-        assertEquals(46610, literalCount);
+        assertEquals(46608, literalCount);
     }
 
     @Test
     public void testGetSynSetsWithPartOfSpeech() {
-        assertEquals(19178, previuosWordNet.getSynSetsWithPartOfSpeech(Pos.NOUN).size());
+        assertEquals(19168, previuosWordNet.getSynSetsWithPartOfSpeech(Pos.NOUN).size());
         assertEquals(8230, previuosWordNet.getSynSetsWithPartOfSpeech(Pos.VERB).size());
         assertEquals(6071, previuosWordNet.getSynSetsWithPartOfSpeech(Pos.ADJECTIVE).size());
         assertEquals(1259, previuosWordNet.getSynSetsWithPartOfSpeech(Pos.INTERJECTION).size());
-        assertEquals(1151, previuosWordNet.getSynSetsWithPartOfSpeech(Pos.ADVERB).size());
+        assertEquals(1150, previuosWordNet.getSynSetsWithPartOfSpeech(Pos.ADVERB).size());
         assertEquals(72, previuosWordNet.getSynSetsWithPartOfSpeech(Pos.PREPOSITION).size());
         assertEquals(70, previuosWordNet.getSynSetsWithPartOfSpeech(Pos.CONJUNCTION).size());
         assertEquals(45, previuosWordNet.getSynSetsWithPartOfSpeech(Pos.PRONOUN).size());
