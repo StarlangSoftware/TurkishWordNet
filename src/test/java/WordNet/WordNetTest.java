@@ -105,7 +105,7 @@ public class WordNetTest {
 
     @Test
     public void testSize() {
-        assertEquals(77321, turkish.size());
+        assertEquals(77317, turkish.size());
     }
 
     @Test
@@ -114,7 +114,7 @@ public class WordNetTest {
         for (SynSet synSet : turkish.synSetList()){
             literalCount += synSet.getSynonym().literalSize();
         }
-        assertEquals(109057, literalCount);
+        assertEquals(109055, literalCount);
     }
 
     @Test
@@ -189,10 +189,10 @@ public class WordNetTest {
 
     @Test
     public void testGetSynSetsWithPartOfSpeech() {
-        assertEquals(44073, turkish.getSynSetsWithPartOfSpeech(Pos.NOUN).size());
+        assertEquals(44072, turkish.getSynSetsWithPartOfSpeech(Pos.NOUN).size());
         assertEquals(17779, turkish.getSynSetsWithPartOfSpeech(Pos.VERB).size());
-        assertEquals(12420, turkish.getSynSetsWithPartOfSpeech(Pos.ADJECTIVE).size());
-        assertEquals(2550, turkish.getSynSetsWithPartOfSpeech(Pos.ADVERB).size());
+        assertEquals(12419, turkish.getSynSetsWithPartOfSpeech(Pos.ADJECTIVE).size());
+        assertEquals(2548, turkish.getSynSetsWithPartOfSpeech(Pos.ADVERB).size());
         assertEquals(342, turkish.getSynSetsWithPartOfSpeech(Pos.INTERJECTION).size());
         assertEquals(68, turkish.getSynSetsWithPartOfSpeech(Pos.PRONOUN).size());
         assertEquals(60, turkish.getSynSetsWithPartOfSpeech(Pos.CONJUNCTION).size());
