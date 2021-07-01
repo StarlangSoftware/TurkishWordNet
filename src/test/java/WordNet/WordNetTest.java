@@ -22,7 +22,7 @@ public class WordNetTest {
     }
 
     public void generateWordNet(){
-        String year = "1959";
+        String year = "1966";
         WordNet wordNet = new WordNet("a.txt", new Locale("tr"));
         try {
             Scanner input = new Scanner(new File(year + ".txt"));
