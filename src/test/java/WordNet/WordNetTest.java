@@ -114,9 +114,10 @@ public class WordNetTest {
         for (SynSet synSet : turkish.synSetList()){
             literalCount += synSet.getSynonym().literalSize();
         }
-        assertEquals(109055, literalCount);
+        assertEquals(109054, literalCount);
     }
 
+    @Test
     public void testLiteralSortedList() {
         assertTrue(turkish.literalCorrectOrderCheck());
     }
