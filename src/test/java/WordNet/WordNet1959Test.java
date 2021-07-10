@@ -7,6 +7,7 @@ import org.junit.Test;
 import java.util.Locale;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 public class WordNet1959Test extends PreviousWordNetTest{
 
@@ -17,7 +18,7 @@ public class WordNet1959Test extends PreviousWordNetTest{
 
     @Test
     public void testSize() {
-        assertEquals(36040, previuosWordNet.size());
+        assertEquals(36038, previuosWordNet.size());
     }
 
     @Test
@@ -26,13 +27,13 @@ public class WordNet1959Test extends PreviousWordNetTest{
         for (SynSet synSet : previuosWordNet.synSetList()){
             literalCount += synSet.getSynonym().literalSize();
         }
-        assertEquals(46615, literalCount);
+        assertEquals(46613, literalCount);
     }
 
     @Test
     public void testGetSynSetsWithPartOfSpeech() {
-        assertEquals(19152, previuosWordNet.getSynSetsWithPartOfSpeech(Pos.NOUN).size());
-        assertEquals(8222, previuosWordNet.getSynSetsWithPartOfSpeech(Pos.VERB).size());
+        assertEquals(19151, previuosWordNet.getSynSetsWithPartOfSpeech(Pos.NOUN).size());
+        assertEquals(8221, previuosWordNet.getSynSetsWithPartOfSpeech(Pos.VERB).size());
         assertEquals(6070, previuosWordNet.getSynSetsWithPartOfSpeech(Pos.ADJECTIVE).size());
         assertEquals(1260, previuosWordNet.getSynSetsWithPartOfSpeech(Pos.INTERJECTION).size());
         assertEquals(1149, previuosWordNet.getSynSetsWithPartOfSpeech(Pos.ADVERB).size());
@@ -42,8 +43,13 @@ public class WordNet1959Test extends PreviousWordNetTest{
     }
 
     @Test
+    public void testLiteralSortedList() {
+        assertTrue(previuosWordNet.literalCorrectOrderCheck());
+    }
+
+    @Test
     public void testLiteralList() {
-        assertEquals(35637, previuosWordNet.literalList().size());
+        assertEquals(35636, previuosWordNet.literalList().size());
     }
 
     @Test

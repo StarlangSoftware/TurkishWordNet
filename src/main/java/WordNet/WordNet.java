@@ -1110,6 +1110,30 @@ public class WordNet {
     }
 
     /**
+     * Checks if all senses of literals in the wordnet are in the correct order.
+     * @return True if correct, false otherwise.
+     */
+    public boolean literalCorrectOrderCheck(){
+        boolean isOk = true;
+        for (String literalName : literalList()){
+            ArrayList<Literal> literals = getLiteralsWithName(literalName);
+            for (int i = 1; i <= literals.size(); i++){
+                if (getSynSetWithLiteral(literalName, i) == null){
+                    System.out.println("Literal " + literalName + " with sense " + i + " is missing");
+                    isOk = false;
+                }
+            }
+            for (Literal literal : literals){
+                if (literal.getSense() > literals.size()){
+                    System.out.println("Literal " + literal.getName() + " with sense " + literal.getSense() + " is extra");
+                    isOk = false;
+                }
+            }
+        }
+        return isOk;
+    }
+
+    /**
      * Returns the literals with same senses.
      * @return A list of literals with same senses.
      */

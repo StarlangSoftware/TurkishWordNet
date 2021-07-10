@@ -7,6 +7,7 @@ import org.junit.Test;
 import java.util.Locale;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 public class WordNet1955Test extends PreviousWordNetTest{
 
@@ -39,6 +40,11 @@ public class WordNet1955Test extends PreviousWordNetTest{
         assertEquals(84, previuosWordNet.getSynSetsWithPartOfSpeech(Pos.CONJUNCTION).size());
         assertEquals(49, previuosWordNet.getSynSetsWithPartOfSpeech(Pos.PREPOSITION).size());
         assertEquals(42, previuosWordNet.getSynSetsWithPartOfSpeech(Pos.PRONOUN).size());
+    }
+
+    @Test
+    public void testLiteralSortedList() {
+        assertTrue(previuosWordNet.literalCorrectOrderCheck());
     }
 
     @Test

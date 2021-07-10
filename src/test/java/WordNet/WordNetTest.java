@@ -117,6 +117,10 @@ public class WordNetTest {
         assertEquals(109055, literalCount);
     }
 
+    public void testLiteralSortedList() {
+        assertTrue(turkish.literalCorrectOrderCheck());
+    }
+
     @Test
     public void testLiteralList() {
         assertEquals(80952, turkish.literalList().size());
