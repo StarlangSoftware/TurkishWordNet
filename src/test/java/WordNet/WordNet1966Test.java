@@ -99,6 +99,11 @@ public class WordNet1966Test extends PreviousWordNetTest{
     }
 
     @Test
+    public void generateDictionary() {
+        generateDictionary("1966");
+    }
+
+    @Test
     public void testSynSetList() {
         int literalCount = 0;
         for (SynSet synSet : previuosWordNet.synSetList()){

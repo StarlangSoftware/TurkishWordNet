@@ -22,6 +22,11 @@ public class WordNet1955Test extends PreviousWordNetTest{
     }
 
     @Test
+    public void generateDictionary() {
+        generateDictionary("1955");
+    }
+
+    @Test
     public void testSynSetList() {
         int literalCount = 0;
         for (SynSet synSet : previuosWordNet.synSetList()){
