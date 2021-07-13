@@ -3486,7 +3486,6 @@ cani CL_ISIM
 canip CL_ISIM
 cankurtaran CL_ISIM
 canlan CL_FIIL
-canlandır CL_FIIL
 canlı CL_ISIM IS_ADJ
 canlıcılık CL_ISIM
 canlılık CL_ISIM
@@ -5506,7 +5505,6 @@ dinç IS_ADJ
 dinçlik CL_ISIM
 dindar IS_ADJ
 dindaş CL_ISIM
-dindir CL_FIIL
 dinek CL_ISIM
 dinel CL_FIIL
 dineri CL_ISIM
@@ -11576,7 +11574,7 @@ kaparo CL_ISIM
 kaparoz CL_ISIM
 kaparozcu CL_ISIM
 kapat CL_FIIL
-kapatma CL_ISIM IS_ADJ
+kapatma IS_ADJ CL_ISIM
 kapçak CL_ISIM
 kapçık CL_ISIM
 kapı CL_ISIM
@@ -12053,7 +12051,6 @@ kavurmaç CL_ISIM
 kavuş CL_FIIL
 kavuşak CL_ISIM
 kavuşma CL_ISIM
-kavuştur CL_FIIL
 kavuşum CL_ISIM
 kavut CL_ISIM
 kavuz CL_ISIM
