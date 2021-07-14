@@ -1,6 +1,8 @@
 package WordNet;
 
 import Dictionary.Pos;
+import Dictionary.TurkishWordComparator;
+import Dictionary.TxtDictionary;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -15,6 +17,7 @@ public class WordNet1966Test extends PreviousWordNetTest{
     @Before
     public void setUp() {
         previuosWordNet = new WordNet("turkish1966_wordnet.xml", new Locale("tr"));
+        previousDictionary = new TxtDictionary("turkish1966_dictionary.txt", new TurkishWordComparator());
     }
 
     public void findMatchingSynSetsInPreviousWordNets(){

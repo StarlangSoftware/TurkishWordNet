@@ -2,6 +2,8 @@ package WordNet;
 
 import Dictionary.TurkishWordComparator;
 import Dictionary.TxtDictionary;
+import Dictionary.TxtWord;
+import MorphologicalAnalysis.FsmMorphologicalAnalyzer;
 
 import java.util.ArrayList;
 import java.util.Locale;
@@ -9,6 +11,7 @@ import java.util.Locale;
 public class PreviousWordNetTest {
 
     WordNet previuosWordNet;
+    TxtDictionary previousDictionary;
 
     protected double numberOfMatches(String definition1, String definition2){
         String[] items1, items2;
@@ -27,9 +30,37 @@ public class PreviousWordNetTest {
     }
 
     public void generateDictionary(String year){
+        TxtDictionary turkish = new TxtDictionary();
         TxtDictionary dictionary = new TxtDictionary(new TurkishWordComparator());
         for (String literal : previuosWordNet.literalList()){
             if (!literal.contains(" ")){
+                TxtWord txtWord = (TxtWord) turkish.getWord(literal);
+                if (txtWord != null){
+                    if (txtWord.containsFlag("IS_SD")){
+                        dictionary.addWithFlag(literal, "IS_SD");
+                    }
+                    if (txtWord.containsFlag("IS_KG")){
+                        dictionary.addWithFlag(literal, "IS_KG");
+                    }
+                    if (txtWord.containsFlag("IS_UD")){
+                        dictionary.addWithFlag(literal, "IS_UD");
+                    }
+                    if (txtWord.containsFlag("IS_UU")){
+                        dictionary.addWithFlag(literal, "IS_UU");
+                    }
+                    if (txtWord.containsFlag("IS_SU")){
+                        dictionary.addWithFlag(literal, "IS_SU");
+                    }
+                    if (txtWord.containsFlag("F_SD")){
+                        dictionary.addWithFlag(literal, "F_SD");
+                    }
+                    if (txtWord.containsFlag("F_GUD")){
+                        dictionary.addWithFlag(literal, "F_GUD");
+                    }
+                    if (txtWord.containsFlag("F_GUDO")){
+                        dictionary.addWithFlag(literal, "F_GUDO");
+                    }
+                }
                 ArrayList<SynSet> synSets = previuosWordNet.getSynSetsWithLiteral(literal);
                 for (SynSet synSet : synSets){
                     switch (synSet.getPos()){
@@ -54,11 +85,30 @@ public class PreviousWordNetTest {
                         case INTERJECTION:
                             dictionary.addWithFlag(literal, "IS_INTERJ");
                             break;
+                        case PREPOSITION:
+                            dictionary.addWithFlag(literal, "IS_POSTP");
+                            break;
                     }
                 }
             }
         }
         dictionary.saveAsTxt("turkish" + year + "_dictionary.txt");
+    }
+
+    public void testDefinition() {
+        FsmMorphologicalAnalyzer analyzer = new FsmMorphologicalAnalyzer(previousDictionary);
+        for (SynSet synSet : previuosWordNet.synSetList()){
+            if (!synSet.getLongDefinition().contains("DEFINITION")){
+                String definition = synSet.getLongDefinition();
+                String[] words = definition.split(" ");
+                for (String  word : words){
+                    String newWord = word.replaceAll("`", "").replaceAll("!", "").replaceAll("\\?", "").replaceAll(",", "").replaceAll("'", "").replaceAll("\\(", "").replaceAll("\\)", "").replaceAll("\"", "").replaceAll("\\.", "").replaceAll(";", "");
+                    if (!word.startsWith("-") && newWord.length() > 0 && analyzer.morphologicalAnalysis(newWord).size() == 0){
+                        System.out.println(newWord + "\t" + synSet.getId() + "\t" + synSet.getSynonym().toString() + "\t" + definition);
+                    }
+                }
+            }
+        }
     }
 
     public void generateOfflineDictionary(){
