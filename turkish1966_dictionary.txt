@@ -17989,7 +17989,7 @@ payla CL_FIIL
 paylaş CL_FIIL
 paylaştır CL_FIIL
 paylat CL_FIIL
-paytak CL_ISIM IS_ADJ
+paytak IS_ADJ CL_ISIM
 payton CL_ISIM
 pazar CL_ISIM
 pazarbaşı CL_ISIM

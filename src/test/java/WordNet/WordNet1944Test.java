@@ -16,14 +16,6 @@ public class WordNet1944Test extends PreviousWordNetTest{
         previuosWordNet = new WordNet("turkish1944_wordnet.xml", new Locale("tr"));
     }
 
-    public void test1() {
-        for (SynSet synSet : previuosWordNet.synSetList()){
-            if (synSet.numberOfDefinitions() > 1){
-                System.out.println(synSet.getId() + "\t" + synSet.getSynonym().toString() + "\t" + synSet.getLongDefinition());
-            }
-        }
-    }
-
     @Test
     public void testSize() {
         assertEquals(31913, previuosWordNet.size());
