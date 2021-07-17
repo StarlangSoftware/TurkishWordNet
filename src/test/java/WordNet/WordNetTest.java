@@ -197,9 +197,9 @@ public class WordNetTest {
         assertEquals(44056, turkish.getSynSetsWithPartOfSpeech(Pos.NOUN).size());
         assertEquals(17778, turkish.getSynSetsWithPartOfSpeech(Pos.VERB).size());
         assertEquals(12410, turkish.getSynSetsWithPartOfSpeech(Pos.ADJECTIVE).size());
-        assertEquals(2549, turkish.getSynSetsWithPartOfSpeech(Pos.ADVERB).size());
+        assertEquals(2548, turkish.getSynSetsWithPartOfSpeech(Pos.ADVERB).size());
         assertEquals(341, turkish.getSynSetsWithPartOfSpeech(Pos.INTERJECTION).size());
-        assertEquals(68, turkish.getSynSetsWithPartOfSpeech(Pos.PRONOUN).size());
+        assertEquals(69, turkish.getSynSetsWithPartOfSpeech(Pos.PRONOUN).size());
         assertEquals(60, turkish.getSynSetsWithPartOfSpeech(Pos.CONJUNCTION).size());
         assertEquals(29, turkish.getSynSetsWithPartOfSpeech(Pos.PREPOSITION).size());
     }

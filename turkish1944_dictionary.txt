@@ -18071,7 +18071,7 @@ samsun CL_ISIM
 samur CL_ISIM IS_ADJ
 samyeli CL_ISIM
 san CL_ISIM CL_FIIL
-sana CL_ISIM IS_ADVERB
+sana CL_ISIM IS_ZM
 sanaka CL_ISIM
 sanal IS_ADJ
 sanat CL_ISIM

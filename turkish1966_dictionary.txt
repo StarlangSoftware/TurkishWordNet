@@ -19211,7 +19211,7 @@ samsuncu CL_ISIM
 samur CL_ISIM IS_ADJ
 samyeli CL_ISIM
 san CL_ISIM CL_FIIL
-sana IS_ADVERB
+sana IS_ZM
 sanaka CL_ISIM
 sanal IS_ADJ
 sanat CL_ISIM
