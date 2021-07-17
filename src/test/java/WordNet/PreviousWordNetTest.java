@@ -3,7 +3,6 @@ package WordNet;
 import Dictionary.TurkishWordComparator;
 import Dictionary.TxtDictionary;
 import Dictionary.TxtWord;
-import MorphologicalAnalysis.FsmMorphologicalAnalyzer;
 
 import java.util.ArrayList;
 import java.util.Locale;
@@ -93,22 +92,6 @@ public class PreviousWordNetTest {
             }
         }
         dictionary.saveAsTxt("turkish" + year + "_dictionary.txt");
-    }
-
-    public void testDefinition() {
-        FsmMorphologicalAnalyzer analyzer = new FsmMorphologicalAnalyzer(previousDictionary);
-        for (SynSet synSet : previuosWordNet.synSetList()){
-            if (!synSet.getLongDefinition().contains("DEFINITION")){
-                String definition = synSet.getLongDefinition();
-                String[] words = definition.split(" ");
-                for (String  word : words){
-                    String newWord = word.replaceAll("`", "").replaceAll("!", "").replaceAll("\\?", "").replaceAll(",", "").replaceAll("'", "").replaceAll("\\(", "").replaceAll("\\)", "").replaceAll("\"", "").replaceAll("\\.", "").replaceAll(";", "");
-                    if (!word.startsWith("-") && newWord.length() > 0 && analyzer.morphologicalAnalysis(newWord).size() == 0){
-                        System.out.println(newWord + "\t" + synSet.getId() + "\t" + synSet.getSynonym().toString() + "\t" + definition);
-                    }
-                }
-            }
-        }
     }
 
     public void generateOfflineDictionary(){

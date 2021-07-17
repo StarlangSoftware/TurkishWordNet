@@ -20,6 +20,19 @@ public class WordNet1944Test extends PreviousWordNetTest{
     }
 
     @Test
+    public void testExistenceOfKeNetSynSets(){
+        WordNet turkish = new WordNet();
+        boolean found = true;
+        for (SynSet synSet : previuosWordNet.synSetList()){
+            if (synSet.getId().startsWith("TUR10") && turkish.getSynSetWithId(synSet.getId()) == null){
+                System.out.println("SynSet with id " + synSet.getId() + " does not exist");
+                found = false;
+            }
+        }
+        assertTrue(found);
+    }
+
+    @Test
     public void testSize() {
         assertEquals(31911, previuosWordNet.size());
     }
