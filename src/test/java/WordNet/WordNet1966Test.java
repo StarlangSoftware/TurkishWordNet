@@ -125,7 +125,7 @@ public class WordNet1966Test extends PreviousWordNetTest{
         for (SynSet synSet : previuosWordNet.synSetList()){
             literalCount += synSet.getSynonym().literalSize();
         }
-        assertEquals(47112, literalCount);
+        assertEquals(47113, literalCount);
     }
 
     @Test

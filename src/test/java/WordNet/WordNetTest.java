@@ -124,7 +124,7 @@ public class WordNetTest {
 
     @Test
     public void testLiteralList() {
-        assertEquals(80952, turkish.literalList().size());
+        assertEquals(80951, turkish.literalList().size());
     }
 
     @Test
