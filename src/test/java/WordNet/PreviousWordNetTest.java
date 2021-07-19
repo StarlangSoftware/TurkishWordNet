@@ -3,6 +3,7 @@ package WordNet;
 import Dictionary.TurkishWordComparator;
 import Dictionary.TxtDictionary;
 import Dictionary.TxtWord;
+import MorphologicalAnalysis.FsmMorphologicalAnalyzer;
 
 import java.util.ArrayList;
 import java.util.Locale;
@@ -26,6 +27,26 @@ public class PreviousWordNetTest {
             }
         }
         return count / (items1.length + items2.length);
+    }
+
+    public void testDefinition() {
+        FsmMorphologicalAnalyzer analyzer = new FsmMorphologicalAnalyzer(previousDictionary);
+        for (SynSet synSet : previuosWordNet.synSetList()){
+            if (!synSet.getLongDefinition().contains("DEFINITION")){
+                String definition = synSet.getLongDefinition();
+                String[] words = definition.split(" ");
+                String notAnalyzed = "";
+                for (String  word : words){
+                    String newWord = word.replaceAll("`", "").replaceAll("!", "").replaceAll("\\?", "").replaceAll(",", "").replaceAll("'", "").replaceAll("\\(", "").replaceAll("\\)", "").replaceAll("\"", "").replaceAll("\\.", "").replaceAll(";", "");
+                    if (!word.startsWith("-") && newWord.length() > 0 && analyzer.morphologicalAnalysis(newWord).size() == 0){
+                        notAnalyzed += newWord + " ";
+                    }
+                }
+                if (notAnalyzed.length() > 0){
+                    System.out.println(synSet.getId() + "\t" + synSet.getSynonym().toString() + "\t" + synSet.getLongDefinition() + "\t" + notAnalyzed);
+                }
+            }
+        }
     }
 
     public void generateDictionary(String year){
