@@ -89,7 +89,7 @@ public class WordNet1966Test extends PreviousWordNetTest{
         for (String literal : turkish.literalList()){
             ArrayList<SynSet> synSets = turkish.getSynSetsWithLiteral(literal);
             for (SynSet synSet : synSets){
-                if (previuosWordNet.getSynSetWithId(synSet.getId()) == null){
+                if (previuosWordNet.getSynSetsWithLiteral(literal).size() == 0 || previuosWordNet.getSynSetWithId(synSet.getId()) == null){
                     System.out.println(literal + "\t" + synSet.getId() + "\t" + synSet.getPos() + "\t" + synSet.getLongDefinition() + "\t" + synSet.getSynonym() + "\t" + synSet.getExample());
                 }
             }
