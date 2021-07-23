@@ -50,57 +50,55 @@ public class PreviousWordNetTest {
     }
 
     public void generateDictionary(String year){
+        String[] flags = {"IS_SD", "IS_KG", "IS_UD", "IS_UU", "IS_UUU",
+                "IS_SU", "IS_ST", "F_SD", "F_GUD", "F_GUDO",
+                "F1P1", "F2P1", "F2PL", "F2P1-NO-REF", "F3P1-NO-REF",
+                "F4P1-NO-REF", "F4PR-NO-REF", "F4PL-NO-REF", "F4PW-NO-REF", "F5PL-NO-REF",
+                "F5PR-NO-REF", "F5PW-NO-REF", "F2P1", "F3P1", "F4P1",
+                "F4PR", "F4PL", "F4PW", "F5P1", "F5PL",
+                "F5PR", "F5PW", "F6P1"};
         TxtDictionary turkish = new TxtDictionary();
         TxtDictionary dictionary = new TxtDictionary(new TurkishWordComparator());
         for (String literal : previuosWordNet.literalList()){
             if (!literal.contains(" ")){
                 TxtWord txtWord = (TxtWord) turkish.getWord(literal);
                 if (txtWord != null){
-                    if (txtWord.containsFlag("IS_SD")){
-                        dictionary.addWithFlag(literal, "IS_SD");
+                    for (String flag: flags){
+                        if (txtWord.containsFlag(flag)){
+                            dictionary.addWithFlag(literal, flag);
+                        }
                     }
-                    if (txtWord.containsFlag("IS_KG")){
-                        dictionary.addWithFlag(literal, "IS_KG");
-                    }
-                    if (txtWord.containsFlag("IS_UD")){
-                        dictionary.addWithFlag(literal, "IS_UD");
-                    }
-                    if (txtWord.containsFlag("IS_UU")){
-                        dictionary.addWithFlag(literal, "IS_UU");
-                    }
-                    if (txtWord.containsFlag("IS_SU")){
-                        dictionary.addWithFlag(literal, "IS_SU");
-                    }
-                    if (txtWord.containsFlag("F_SD")){
-                        dictionary.addWithFlag(literal, "F_SD");
-                    }
-                    if (txtWord.containsFlag("F_GUD")){
-                        dictionary.addWithFlag(literal, "F_GUD");
-                    }
-                    if (txtWord.containsFlag("F_GUDO")){
-                        dictionary.addWithFlag(literal, "F_GUDO");
+                }
+                if (literal.endsWith("mek") || literal.endsWith("mak")){
+                    txtWord = (TxtWord) turkish.getWord(literal.substring(0, literal.length() - 3));
+                    if (txtWord != null){
+                        for (String flag: flags){
+                            if (txtWord.containsFlag(flag)){
+                                dictionary.addWithFlag(literal.substring(0, literal.length() - 3), flag);
+                            }
+                        }
                     }
                 }
                 ArrayList<SynSet> synSets = previuosWordNet.getSynSetsWithLiteral(literal);
                 for (SynSet synSet : synSets){
                     switch (synSet.getPos()){
                         case NOUN:
-                            dictionary.addWithFlag(literal, "CL_ISIM");
+                            dictionary.addNoun(literal);
                             break;
                         case VERB:
-                            dictionary.addWithFlag(literal.substring(0, literal.length() - 3), "CL_FIIL");
+                            dictionary.addVerb(literal.substring(0, literal.length() - 3));
                             break;
                         case ADJECTIVE:
-                            dictionary.addWithFlag(literal, "IS_ADJ");
+                            dictionary.addAdjective(literal);
                             break;
                         case ADVERB:
-                            dictionary.addWithFlag(literal, "IS_ADVERB");
+                            dictionary.addAdverb(literal);
+                            break;
+                        case PRONOUN:
+                            dictionary.addPronoun(literal);
                             break;
                         case CONJUNCTION:
                             dictionary.addWithFlag(literal, "IS_CONJ");
-                            break;
-                        case PRONOUN:
-                            dictionary.addWithFlag(literal, "IS_ZM");
                             break;
                         case INTERJECTION:
                             dictionary.addWithFlag(literal, "IS_INTERJ");
