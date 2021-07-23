@@ -203,6 +203,7 @@ affedersiniz IS_INTERJ
 affet CL_FIIL
 affettuoso IS_ADVERB
 afgan CL_ISIM
+afganistan CL_ISIM
 afganlı CL_ISIM
 afi CL_ISIM
 afif IS_ADJ
@@ -213,6 +214,7 @@ afiyetle IS_ADVERB
 afoni CL_ISIM
 aforoz CL_ISIM
 afortiori IS_ADVERB
+afrika CL_ISIM
 afsun CL_ISIM
 afsuncu CL_ISIM
 afsunlan CL_FIIL
@@ -431,6 +433,7 @@ akdarı CL_ISIM
 akdem IS_ADJ
 akdemce IS_ADVERB
 akdemir CL_ISIM
+akdeniz CL_ISIM
 akdet CL_FIIL
 akdiken CL_ISIM
 akı IS_ADJ CL_ISIM
@@ -737,6 +740,7 @@ almaç IS_SD CL_ISIM
 alman CL_ISIM
 almanak IS_SD CL_ISIM
 almanca CL_ISIM
+almanya CL_ISIM
 almaş CL_ISIM
 almaşık IS_ADJ
 alnaç IS_SD CL_ISIM
@@ -823,6 +827,7 @@ ameliyat CL_ISIM
 ameliye CL_ISIM
 amenna IS_INTERJ
 amer CL_ISIM
+amerika CL_ISIM
 amerikalı CL_ISIM
 amerikan CL_ISIM
 amerikyum CL_ISIM
@@ -867,6 +872,7 @@ ana CL_ISIM IS_ADJ
 anacıl IS_ADJ
 anaç IS_SD IS_ADJ
 anaçla CL_FIIL
+anadolu CL_ISIM
 anaerki CL_ISIM
 anaerkil IS_ADJ
 anafor CL_ISIM
@@ -1087,6 +1093,7 @@ arabalık CL_ISIM
 araban CL_ISIM
 arabesk CL_ISIM
 arabi CL_ISIM
+arabistan CL_ISIM
 arabiyat CL_ISIM
 arabozanlık IS_SD CL_ISIM
 arabulucu CL_ISIM
@@ -1385,6 +1392,7 @@ astronomik IS_SD IS_ADJ
 astronot CL_ISIM
 astropikal IS_ADJ
 asude IS_ADJ
+asya CL_ISIM
 asyaî IS_ADJ
 asyön CL_ISIM
 aş CL_ISIM CL_FIIL
@@ -1574,6 +1582,7 @@ avlu CL_ISIM
 avniye CL_ISIM
 avrat IS_SD CL_ISIM
 avret CL_ISIM
+avrupa CL_ISIM
 avrupai IS_ADJ
 avrupalı IS_ADJ CL_ISIM
 avrupalılaş CL_FIIL
@@ -1589,6 +1598,7 @@ avuntu CL_ISIM
 avurt IS_SD CL_ISIM
 avurtla CL_FIIL
 avurtlu IS_ADJ
+avusturya CL_ISIM
 avusturyalı CL_ISIM
 avut CL_FIIL
 ay IS_INTERJ CL_ISIM CL_FIIL
@@ -2895,6 +2905,7 @@ birinci IS_ADJ CL_ISIM
 birincil IS_ADJ
 birincilik IS_SD CL_ISIM
 birisi IS_ZM
+birkaç IS_ADJ
 birle IS_CONJ CL_FIIL
 birlen CL_FIIL
 birleş CL_FIIL
@@ -3674,6 +3685,7 @@ cezalan CL_FIIL
 cezalandır CL_FIIL
 cezalı IS_ADJ
 cezasız IS_ADJ
+cezayir CL_ISIM
 cezbe CL_ISIM
 cezbelen CL_FIIL
 cezbet CL_FIIL
@@ -4520,6 +4532,7 @@ cüzütam CL_ISIM
 çimento CL_ISIM
 çimlen CL_FIIL
 çimren CL_FIIL
+çin CL_ISIM
 çinakop CL_ISIM
 çince CL_ISIM
 çingene IS_ADJ CL_ISIM
@@ -7614,6 +7627,7 @@ fötr CL_ISIM
 frak CL_ISIM
 francala CL_ISIM
 frank IS_SD IS_KG CL_ISIM
+fransa CL_ISIM
 fransalı IS_ADJ
 fransız CL_ISIM
 fransızca CL_ISIM
@@ -9508,6 +9522,7 @@ himmet CL_ISIM
 hin CL_ISIM
 hindi CL_ISIM
 hindiba CL_ISIM
+hindistan CL_ISIM
 hindu CL_ISIM
 hinterlant CL_ISIM
 hintli CL_ISIM
@@ -10603,6 +10618,7 @@ iradedışı IS_ADJ
 iradeli IS_ADJ
 iradesiz IS_ADJ
 iradi IS_ADJ
+iran CL_ISIM
 iranlı CL_ISIM
 irap CL_ISIM
 irat IS_SD CL_ISIM
@@ -10875,6 +10891,7 @@ istralya CL_ISIM
 istratigrafi CL_ISIM
 istriknin CL_ISIM
 istrongilos CL_ISIM
+isveç CL_ISIM
 isveçli CL_ISIM
 isviçreli CL_ISIM
 isyan CL_ISIM
@@ -11076,6 +11093,7 @@ jandarma CL_ISIM
 jant CL_ISIM
 japon CL_ISIM
 japonca CL_ISIM
+japonya CL_ISIM
 jardiniyer CL_ISIM
 jarse CL_ISIM IS_ADJ
 jartiyer CL_ISIM

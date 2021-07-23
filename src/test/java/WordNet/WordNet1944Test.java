@@ -34,7 +34,7 @@ public class WordNet1944Test extends PreviousWordNetTest{
 
     @Test
     public void testSize() {
-        assertEquals(31910, previuosWordNet.size());
+        assertEquals(31929, previuosWordNet.size());
     }
 
     @Test
@@ -48,12 +48,12 @@ public class WordNet1944Test extends PreviousWordNetTest{
         for (SynSet synSet : previuosWordNet.synSetList()){
             literalCount += synSet.getSynonym().literalSize();
         }
-        assertEquals(41848, literalCount);
+        assertEquals(41867, literalCount);
     }
 
     @Test
     public void testGetSynSetsWithPartOfSpeech() {
-        assertEquals(17117, previuosWordNet.getSynSetsWithPartOfSpeech(Pos.NOUN).size());
+        assertEquals(17136, previuosWordNet.getSynSetsWithPartOfSpeech(Pos.NOUN).size());
         assertEquals(7393, previuosWordNet.getSynSetsWithPartOfSpeech(Pos.VERB).size());
         assertEquals(5739, previuosWordNet.getSynSetsWithPartOfSpeech(Pos.ADJECTIVE).size());
         assertEquals(981, previuosWordNet.getSynSetsWithPartOfSpeech(Pos.ADVERB).size());
@@ -70,7 +70,7 @@ public class WordNet1944Test extends PreviousWordNetTest{
 
     @Test
     public void testLiteralList() {
-        assertEquals(31374, previuosWordNet.literalList().size());
+        assertEquals(31392, previuosWordNet.literalList().size());
     }
 
     @Test
