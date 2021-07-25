@@ -49,6 +49,43 @@ public class PreviousWordNetTest {
         }
     }
 
+    public void compareSynSets(){
+        WordNet turkish44 = new WordNet("turkish1944_wordnet.xml", new Locale("tr"));
+        WordNet turkish55 = new WordNet("turkish1955_wordnet.xml", new Locale("tr"));
+        WordNet turkish59 = new WordNet("turkish1959_wordnet.xml", new Locale("tr"));
+        WordNet turkish66 = new WordNet("turkish1966_wordnet.xml", new Locale("tr"));
+        for (SynSet synSet44 : turkish44.synSetList()){
+            SynSet synSet55 = turkish55.getSynSetWithId(synSet44.getId());
+            if (synSet55 != null && !synSet44.getSynonym().toString().equals(synSet55.getSynonym().toString())){
+                System.out.println(synSet44.getId() + "\t" + synSet44.getLongDefinition() + "\t44\t55\t" + synSet44.getSynonym().toString() + "\t" + synSet55.getSynonym().toString());
+            }
+            SynSet synSet59 = turkish59.getSynSetWithId(synSet44.getId());
+            if (synSet59 != null && !synSet44.getSynonym().toString().equals(synSet59.getSynonym().toString())){
+                System.out.println(synSet44.getId() + "\t" + synSet44.getLongDefinition() + "\t44\t59\t" + synSet44.getSynonym().toString() + "\t" + synSet59.getSynonym().toString());
+            }
+            SynSet synSet66 = turkish66.getSynSetWithId(synSet44.getId());
+            if (synSet66 != null && !synSet44.getSynonym().toString().equals(synSet66.getSynonym().toString())){
+                System.out.println(synSet44.getId() + "\t" + synSet44.getLongDefinition() + "\t44\t66\t" + synSet44.getSynonym().toString() + "\t" + synSet66.getSynonym().toString());
+            }
+        }
+        for (SynSet synSet55 : turkish55.synSetList()){
+            SynSet synSet59 = turkish59.getSynSetWithId(synSet55.getId());
+            if (synSet59 != null && !synSet55.getSynonym().toString().equals(synSet59.getSynonym().toString())){
+                System.out.println(synSet55.getId() + "\t" + synSet55.getLongDefinition() + "\t55\t59\t" + synSet55.getSynonym().toString() + "\t" + synSet59.getSynonym().toString());
+            }
+            SynSet synSet66 = turkish66.getSynSetWithId(synSet55.getId());
+            if (synSet66 != null && !synSet55.getSynonym().toString().equals(synSet66.getSynonym().toString())){
+                System.out.println(synSet55.getId() + "\t" + synSet55.getLongDefinition() + "\t55\t66\t" + synSet55.getSynonym().toString() + "\t" + synSet66.getSynonym().toString());
+            }
+        }
+        for (SynSet synSet59 : turkish59.synSetList()){
+            SynSet synSet66 = turkish66.getSynSetWithId(synSet59.getId());
+            if (synSet66 != null && !synSet59.getSynonym().toString().equals(synSet66.getSynonym().toString())){
+                System.out.println(synSet59.getId() + "\t" + synSet59.getLongDefinition() + "\t59\t66\t" + synSet59.getSynonym().toString() + "\t" + synSet66.getSynonym().toString());
+            }
+        }
+    }
+
     public void generateDictionary(String year){
         String[] flags = {"IS_SD", "IS_KG", "IS_UD", "IS_UU", "IS_UUU",
                 "IS_SU", "IS_ST", "F_SD", "F_GUD", "F_GUDO",
