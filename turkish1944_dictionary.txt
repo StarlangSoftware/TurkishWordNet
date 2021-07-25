@@ -16667,6 +16667,7 @@ paçavra CL_ISIM
 paçoz CL_ISIM
 paçuz CL_ISIM
 padavra CL_ISIM
+padişah CL_ISIM
 pafta CL_ISIM
 pagoda CL_ISIM
 paha CL_ISIM
@@ -21788,6 +21789,7 @@ tüfekçi CL_ISIM
 tüh IS_INTERJ
 tüken F5PR CL_FIIL
 tükenmez CL_ISIM
+tüket F5PR CL_FIIL
 tüketim CL_ISIM
 tükrük IS_SD CL_ISIM
 tükür F4PR CL_FIIL

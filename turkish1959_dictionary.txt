@@ -14800,7 +14800,7 @@ mehtap IS_SD CL_ISIM
 mehter CL_ISIM
 mehterhane CL_ISIM
 mekân CL_ISIM
-mekanik IS_SD CL_ISIM
+mekanik IS_SD CL_ISIM IS_ADJ
 mekanikçilik IS_SD CL_ISIM
 mekanizm CL_ISIM
 mekanizma CL_ISIM
@@ -22052,7 +22052,7 @@ telkari IS_ADJ
 telkih CL_ISIM
 telkin CL_ISIM
 tellak IS_SD CL_ISIM
-tellal CL_ISIM
+tellâl CL_ISIM
 tellaliye CL_ISIM
 tellallık IS_SD CL_ISIM
 telle F_GUD F4PW CL_FIIL

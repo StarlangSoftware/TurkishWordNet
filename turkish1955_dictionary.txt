@@ -14140,6 +14140,7 @@ mehenk CL_ISIM
 mehtap IS_SD CL_ISIM
 mehterhane CL_ISIM
 mekân CL_ISIM
+mekanik IS_SD CL_ISIM IS_ADJ
 mekanikçilik IS_SD CL_ISIM
 mekanizm CL_ISIM
 mekanizma CL_ISIM
@@ -21083,9 +21084,9 @@ teliz CL_ISIM
 telkih CL_ISIM
 telkin CL_ISIM
 tellak IS_SD CL_ISIM
-tellal CL_ISIM
-tellaliye CL_ISIM
-tellallık IS_SD CL_ISIM
+tellâl CL_ISIM
+tellâliye CL_ISIM
+tellâllık CL_ISIM
 telle F_GUD F4PW CL_FIIL
 telli IS_ADJ
 tellür CL_ISIM
@@ -21837,6 +21838,7 @@ trup CL_ISIM
 tu IS_INTERJ
 tufan CL_ISIM
 tufeyli IS_ADJ
+tugay CL_ISIM
 tuğ CL_ISIM
 tuğamiral IS_UU CL_ISIM
 tuğbay CL_ISIM
@@ -21926,6 +21928,7 @@ tutu CL_ISIM
 tutucu CL_ISIM IS_ADJ
 tutuculuk IS_SD CL_ISIM
 tutuk IS_SD IS_ADJ
+tutuklu CL_ISIM
 tutukluk IS_SD CL_ISIM
 tutul CL_FIIL
 tutulma CL_ISIM

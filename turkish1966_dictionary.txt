@@ -11097,7 +11097,7 @@ japonya CL_ISIM
 jardiniyer CL_ISIM
 jarse CL_ISIM IS_ADJ
 jartiyer CL_ISIM
-jelâtin CL_ISIM
+jelatin CL_ISIM
 jeloz CL_ISIM
 jeneratör CL_ISIM
 jeolog IS_SD CL_ISIM
@@ -21691,6 +21691,7 @@ tartakla F_GUD F4PW CL_FIIL
 tartı CL_ISIM
 tartıl IS_ADJ CL_FIIL
 tartılı IS_ADJ
+tartımlı IS_ADJ
 tartısız IS_ADVERB IS_ADJ
 tartış F5PR CL_FIIL
 tartura CL_ISIM
@@ -22115,7 +22116,7 @@ telkari IS_ADJ
 telkih CL_ISIM
 telkin CL_ISIM
 tellak IS_SD CL_ISIM
-tellal CL_ISIM
+tellâl CL_ISIM
 tellaliye CL_ISIM
 tellallık IS_SD CL_ISIM
 telle F_GUD F4PW CL_FIIL
@@ -22345,12 +22346,12 @@ terviç IS_SD
 terzi CL_ISIM
 terzil CL_ISIM
 tesadüf CL_ISIM
+tesadüfen IS_ADVERB
 tesadüm CL_ISIM
 tesahup CL_ISIM
 tesalüp CL_ISIM
 tesanüt IS_SD CL_ISIM
 tesavi CL_ISIM
-tesbit CL_ISIM
 tescil CL_ISIM
 teselli CL_ISIM
 tesellüm CL_ISIM
@@ -22380,6 +22381,7 @@ tespih CL_ISIM
 tespihağacı CL_ISIM
 tespihağacıgiller CL_ISIM
 tespihböceği CL_ISIM
+tespit CL_ISIM
 tesri CL_ISIM
 test CL_ISIM
 testere CL_ISIM
