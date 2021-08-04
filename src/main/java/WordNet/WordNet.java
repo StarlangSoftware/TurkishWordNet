@@ -479,6 +479,21 @@ public class WordNet {
     }
 
     /**
+     * Removes specified SynSet from the SynSet list.
+     *
+     * @param synSet SynSet to be removed
+     */
+    public void removeSynSetWithRelations(SynSet synSet) {
+        for (int i = 0; i < synSet.relationSize(); i++){
+            if (synSet.getRelation(i) instanceof SemanticRelation){
+                SemanticRelation relation = (SemanticRelation) synSet.getRelation(i);
+                removeReverseRelation(synSet, relation);
+            }
+        }
+        synSetList.remove(synSet.getId());
+    }
+
+    /**
      * Changes ID of a specified SynSet with the specified new ID.
      *
      * @param synSet SynSet whose ID will be updated
