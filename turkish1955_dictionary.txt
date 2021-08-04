@@ -17653,7 +17653,7 @@ purotoplâzma CL_ISIM
 purova CL_ISIM
 puruva CL_ISIM
 pus F5PR CL_ISIM CL_FIIL
-pusarık IS_SD IS_ADJ
+pusarık IS_SD CL_ISIM IS_ADJ
 pusat CL_ISIM
 pusatçı CL_ISIM
 pusatlan CL_FIIL
