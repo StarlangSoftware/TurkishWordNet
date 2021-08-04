@@ -7768,7 +7768,7 @@ ge CL_ISIM
 gebe IS_ADJ
 gebelik IS_SD CL_ISIM
 geber F4PR CL_FIIL
-geberik CL_ISIM IS_ADJ
+geberik IS_ADJ CL_ISIM
 gebert CL_FIIL
 gebeş IS_ADJ
 gebeşlik CL_ISIM
@@ -9107,7 +9107,7 @@ haydin IS_INTERJ
 haydisene IS_INTERJ
 haydut CL_ISIM
 haydutluk IS_SD CL_ISIM
-hayhay CL_ISIM IS_INTERJ
+hayhay IS_INTERJ CL_ISIM
 hayhuy CL_ISIM
 hayıflan CL_FIIL
 hayın IS_ADJ
@@ -21386,6 +21386,7 @@ taannüt IS_SD CL_ISIM
 taarruz CL_ISIM
 taassup IS_SD CL_ISIM
 taayyün CL_ISIM
+taba CL_ISIM
 tabaat CL_ISIM
 tababet CL_ISIM
 tabak IS_SD CL_ISIM
@@ -21623,6 +21624,7 @@ talk CL_ISIM
 talkım CL_ISIM
 talkın CL_ISIM
 talkşist CL_ISIM
+tallahi CL_ISIM
 taltif CL_ISIM
 talveg CL_ISIM
 talyum CL_ISIM
@@ -21660,6 +21662,7 @@ tanecil IS_ADJ
 tanele F_GUD F4PW CL_FIIL
 taneli IS_ADJ
 tanen CL_ISIM
+tangırtı CL_ISIM
 tango CL_ISIM
 tanı F4PW CL_ISIM CL_FIIL
 tanıdık IS_ADJ
@@ -21680,11 +21683,13 @@ tanıtla F_GUD F4PW CL_FIIL
 tanjant CL_ISIM
 tank CL_ISIM
 tanker CL_ISIM
+tanksavar CL_ISIM
 tanla CL_FIIL
 tannan IS_ADJ
 tanrı CL_ISIM
 tanrıbilim CL_ISIM
 tanrıcılık IS_SD CL_ISIM
+tanrıça CL_ISIM
 tanrılaştır CL_FIIL
 tanrısal IS_ADJ
 tanrısız IS_ADJ
@@ -21744,6 +21749,7 @@ tarım CL_ISIM
 tarif CL_ISIM
 tarife CL_ISIM
 tarih CL_ISIM
+tarihçe CL_ISIM
 tarihçi CL_ISIM
 tarihî IS_ADJ
 tarihsel IS_ADJ
@@ -21753,7 +21759,7 @@ tariz CL_ISIM
 tarla CL_ISIM
 tarlakoz CL_ISIM
 tarpan CL_ISIM
-tart IS_SD F5PR CL_FIIL
+tart IS_SD F5PR CL_ISIM CL_FIIL
 tartakla F_GUD F4PW CL_FIIL
 tartı CL_ISIM
 tartıl IS_ADJ CL_FIIL
@@ -21837,6 +21843,7 @@ tatlılık CL_ISIM
 tatlılıkla IS_ADVERB
 tatlımsı IS_ADJ
 tatmin CL_ISIM
+tatminkâr IS_ADJ
 tatsal IS_ADJ
 tatsız IS_ADJ
 tatsızlan CL_FIIL
@@ -21887,6 +21894,7 @@ taydaş CL_ISIM
 tayf CL_ISIM
 tayfa CL_ISIM
 tayfun CL_ISIM
+taygeldi CL_ISIM
 tayın CL_ISIM
 tayin CL_ISIM
 tayip IS_SD CL_ISIM
@@ -22088,6 +22096,7 @@ tekin IS_ADJ
 tekinsiz CL_ISIM
 tekir CL_ISIM IS_ADJ
 tekit IS_SD CL_ISIM
+tekkaynakçılık CL_ISIM
 tekke CL_ISIM
 teklif CL_ISIM
 teklifli IS_ADJ
@@ -22100,6 +22109,10 @@ tekmille F_GUD F4PW CL_FIIL
 tekne CL_ISIM
 teknik IS_SD CL_ISIM IS_ADJ
 teknikçi CL_ISIM
+tekniker CL_ISIM
+teknikokul CL_ISIM
+tekniköğretim CL_ISIM
+teknisyen CL_ISIM
 tekörnek IS_ADJ
 tekparça IS_ADJ
 tekparmaklılar CL_ISIM
@@ -22129,11 +22142,14 @@ telaşsız IS_ADJ IS_ADVERB
 telatin CL_ISIM
 telef CL_ISIM
 telefat CL_ISIM
+teleferik IS_SD CL_ISIM
 telefon CL_ISIM
 telefotografi CL_ISIM
 telek IS_SD CL_ISIM
 teleke CL_ISIM
 telekinezi CL_ISIM
+telekomünikasyon CL_ISIM
+teleks CL_ISIM
 teleme CL_ISIM
 telemetre CL_ISIM
 teleoloji CL_ISIM
@@ -22165,6 +22181,8 @@ telsiz IS_ADJ CL_ISIM
 teltik IS_SD CL_ISIM
 telve CL_ISIM
 telvis CL_ISIM
+tem CL_ISIM
+tema CL_ISIM
 temadi CL_ISIM
 temaruz CL_ISIM
 temas CL_ISIM
@@ -22260,6 +22278,7 @@ tenzil CL_ISIM
 tenzilat CL_ISIM
 teokrasi CL_ISIM
 teokratik IS_SD IS_ADJ
+teoloji CL_ISIM
 teorem CL_ISIM
 teori CL_ISIM
 tep F5PR CL_FIIL
@@ -22337,12 +22356,16 @@ terlet CL_FIIL
 terli IS_ADJ
 terlik IS_SD CL_ISIM
 terme CL_ISIM
+terminal IS_UU CL_ISIM
+terminoloji CL_ISIM
 termodinamik IS_SD CL_ISIM
 termoelektrik IS_SD CL_ISIM
 termokimya CL_ISIM
 termometre CL_ISIM
 termos CL_ISIM
+termosifon CL_ISIM
 termostat IS_SD CL_ISIM
+terör CL_ISIM
 ters CL_ISIM IS_ADJ
 tersaçı CL_ISIM
 tersane CL_ISIM
@@ -22447,6 +22470,7 @@ tetabuk CL_ISIM
 tetanos CL_ISIM
 tetebbu CL_ISIM
 tetik IS_SD IS_ADJ CL_ISIM
+tetir CL_ISIM
 tetkik CL_ISIM
 tevabi CL_ISIM
 tevafuk IS_SD CL_ISIM
@@ -22498,6 +22522,7 @@ teyelli IS_ADJ
 teyemmüm CL_ISIM
 teyemmünen IS_ADVERB
 teyit IS_SD CL_ISIM
+teyp IS_SD CL_ISIM
 teyze CL_ISIM
 teyzezade CL_ISIM
 tez IS_ADJ CL_ISIM
@@ -22618,6 +22643,7 @@ ticaret CL_ISIM
 ticaretgâh CL_ISIM
 ticarethane CL_ISIM
 ticari IS_ADJ
+tifdruk IS_SD CL_ISIM
 tifo CL_ISIM
 tiftik IS_SD CL_ISIM
 tiftiklen F5PR CL_FIIL
@@ -22645,8 +22671,11 @@ tinselcilik IS_SD CL_ISIM
 tip CL_ISIM
 tipi CL_ISIM
 tipile F_GUD F4PW CL_FIIL
+tipografya CL_ISIM
+tirad CL_ISIM
 tiraj CL_ISIM
 tiramola CL_ISIM
+tiran IS_ADJ CL_ISIM
 tirbuşon CL_ISIM
 tire CL_ISIM
 tirendaz IS_ADJ
@@ -22656,6 +22685,7 @@ tirilde F_GUD F4PW CL_FIIL
 tirit IS_SD CL_ISIM
 tiritleş CL_FIIL
 tiriz CL_ISIM
+tiroit IS_SD CL_ISIM
 tirpidin CL_ISIM
 tirşe CL_ISIM
 tiryak CL_ISIM
@@ -22712,6 +22742,7 @@ tomruklan CL_FIIL
 tomurcuk IS_SD CL_ISIM
 tomurcuklan CL_FIIL
 ton CL_ISIM
+tonik CL_ISIM
 tonilato CL_ISIM
 tonilatoluk IS_ADJ
 tonoz CL_ISIM
@@ -22843,6 +22874,7 @@ traktör CL_ISIM
 trakunya CL_ISIM
 trampa CL_ISIM
 trampete CL_ISIM
+tramplen CL_ISIM
 tramvay CL_ISIM
 trança CL_ISIM
 transatlantik IS_SD CL_ISIM
@@ -22851,10 +22883,12 @@ transformatör CL_ISIM
 transformizm CL_ISIM
 transistör CL_ISIM
 transit CL_ISIM
+transkripsiyon CL_ISIM
 trapez CL_ISIM
 travers CL_ISIM
 tremolit CL_ISIM
 tren CL_ISIM
+trençkot CL_ISIM
 tribün CL_ISIM
 trigonometri CL_ISIM
 triko CL_ISIM
@@ -22866,13 +22900,18 @@ tripoli CL_ISIM
 trişin CL_ISIM
 tritium CL_ISIM
 triton CL_ISIM
+troleybüs CL_ISIM
+trombon CL_ISIM
 trompet CL_ISIM
 tropika CL_ISIM
 tropikal IS_UU CL_ISIM
 tropizm CL_ISIM
 troplar CL_ISIM
 troposfer CL_ISIM
+trotinet CL_ISIM
+trotuvar CL_ISIM
 tröst CL_ISIM
+truakar CL_ISIM
 trup CL_ISIM
 tu IS_INTERJ
 tuba CL_ISIM
@@ -22913,6 +22952,7 @@ tumşuk IS_SD CL_ISIM
 tumturak IS_SD CL_ISIM
 tumturaklı IS_ADJ
 tunç IS_SD CL_ISIM
+tundra CL_ISIM
 tur CL_ISIM
 tura CL_ISIM
 turaç IS_SD CL_ISIM
@@ -22948,6 +22988,7 @@ tut F5PR CL_FIIL
 tutaç IS_SD CL_ISIM
 tutak IS_SD CL_ISIM
 tutam IS_ADJ
+tutamaç IS_SD CL_ISIM
 tutamak IS_SD CL_ISIM
 tutamla F_GUD F4PW CL_FIIL
 tutanak IS_SD CL_ISIM
@@ -22984,6 +23025,7 @@ tuturuk IS_SD CL_ISIM
 tutuş F5PR CL_FIIL
 tutuştur F4PR CL_FIIL
 tutya CL_ISIM
+tuval CL_ISIM
 tuvalet CL_ISIM
 tuz CL_ISIM
 tuzak IS_SD CL_ISIM
@@ -23011,6 +23053,7 @@ tüketim CL_ISIM
 tükür F4PR CL_FIIL
 tükürük IS_SD CL_ISIM
 tükürükle F_GUD F4PW CL_FIIL
+tükürükotu CL_ISIM
 tül CL_ISIM
 tülbent IS_SD CL_ISIM
 tülyum CL_ISIM
@@ -23027,6 +23070,7 @@ tümgeneral IS_UU CL_ISIM
 tümle F_GUD F4PW CL_FIIL
 tümleç IS_SD CL_ISIM
 tümler IS_ADJ
+tümör CL_ISIM
 tümsayı CL_ISIM
 tümsek IS_SD CL_ISIM
 tümsel CL_FIIL
@@ -23921,7 +23965,7 @@ vükelâ CL_ISIM
 vürut CL_ISIM
 vüsat IS_UU CL_ISIM
 y CL_ISIM
-ya IS_CONJ IS_ADVERB IS_INTERJ
+ya IS_CONJ IS_INTERJ IS_ADVERB
 yaba CL_ISIM
 yabala F_GUD F4PW CL_FIIL
 yaban CL_ISIM
