@@ -3987,7 +3987,6 @@ cüzütam CL_ISIM
 çakmaktaşı CL_ISIM
 çakşır CL_ISIM
 çakşırlı IS_ADJ
-çaktır CL_FIIL
 çal F5PL-NO-REF CL_FIIL
 çala IS_ADVERB CL_ISIM
 çalâk IS_ADJ
@@ -4008,7 +4007,6 @@ cüzütam CL_ISIM
 çalış F5PR CL_FIIL
 çalışkan IS_ADJ
 çalışkanlık IS_SD CL_ISIM
-çalışma CL_ISIM
 çalka F4PR-NO-REF CL_FIIL
 çalkağı CL_ISIM
 çalkala F_GUD F4PW CL_FIIL
@@ -5692,7 +5690,6 @@ doğalcılık IS_SD CL_ISIM
 doğan CL_ISIM
 doğancı CL_ISIM
 doğaüstü IS_ADJ
-doğdur CL_FIIL
 doğma CL_ISIM IS_ADJ
 doğmaca IS_ADJ
 doğmalık IS_ADJ
@@ -9074,7 +9071,7 @@ haşiş CL_ISIM
 haşiv IS_UD CL_ISIM
 haşiye CL_ISIM
 haşla F_GUD F4PW CL_FIIL
-haşlama CL_ISIM IS_ADJ
+haşlama IS_ADJ
 haşlamlılar CL_ISIM
 haşlan F5PR CL_FIIL
 haşmet CL_ISIM
@@ -9870,7 +9867,7 @@ hüzzam CL_ISIM
 ıslık IS_SD CL_ISIM
 ıslıkla F_GUD F4PW CL_FIIL
 ısmarla F_GUD F4PW CL_FIIL
-ısmarlama CL_ISIM IS_ADJ
+ısmarlama IS_ADJ
 ıspanak IS_SD CL_ISIM
 ıspanakgiller CL_ISIM
 ısparmaça CL_ISIM

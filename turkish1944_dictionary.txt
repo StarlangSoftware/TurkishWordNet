@@ -6,7 +6,6 @@ abadi CL_ISIM
 abajur CL_ISIM
 abalı IS_ADJ
 aban F5PR CL_FIIL
-abandır CL_FIIL
 abanla CL_FIIL
 abanoz CL_ISIM
 abanozgiller CL_ISIM
@@ -3612,7 +3611,7 @@ cüzütam CL_ISIM
 çakal CL_ISIM
 çakaloz CL_ISIM
 çakı CL_ISIM
-çakıl CL_ISIM CL_FIIL
+çakıl CL_ISIM
 çakılda F_GUD F4PW CL_FIIL
 çakıldak IS_SD CL_ISIM
 çakıllık IS_SD CL_ISIM
@@ -3635,7 +3634,6 @@ cüzütam CL_ISIM
 çakşa CL_FIIL
 çakşır CL_ISIM
 çakşırlı IS_ADJ
-çaktır CL_FIIL
 çal F5PL-NO-REF CL_ISIM CL_FIIL
 çala IS_ADVERB IS_ADJ
 çalâk IS_ADJ
@@ -5174,7 +5172,6 @@ doğak CL_ISIM
 doğal IS_ADJ
 doğalcılık IS_SD CL_ISIM
 doğaüstü IS_ADJ
-doğdur CL_FIIL
 doğma CL_ISIM IS_ADJ
 doğmaca IS_ADJ
 doğra F_GUD F4PW CL_FIIL
@@ -8334,7 +8331,7 @@ haşiş CL_ISIM
 haşiv IS_UD CL_ISIM
 haşiye CL_ISIM
 haşla F_GUD F4PW CL_FIIL
-haşlama CL_ISIM IS_ADJ
+haşlama IS_ADJ
 haşlamlılar CL_ISIM
 haşlan F5PR CL_FIIL
 haşmet CL_ISIM
@@ -19745,7 +19742,6 @@ süzüntü CL_ISIM
 şaşılık IS_SD CL_ISIM
 şaşıntı CL_ISIM
 şaşır F4PR CL_FIIL
-şaşırt CL_FIIL
 şaşkaloz IS_ADJ
 şaşkın IS_ADJ
 şaşkınlaş CL_FIIL
@@ -22121,7 +22117,6 @@ uyuşkan IS_ADJ
 uyuşmazlık IS_SD CL_ISIM
 uyuştur CL_FIIL
 uyuşuk IS_SD IS_ADJ
-uyut CL_FIIL
 uyutucu IS_ADJ
 uyuz CL_ISIM IS_ADJ
 uz IS_ADJ CL_ISIM
