@@ -41,7 +41,7 @@ acaibisebaiâlem CL_ISIM
 acar IS_ADJ
 acayip IS_SD IS_ADJ IS_INTERJ
 accelerando IS_ADVERB
-acele CL_ISIM IS_ADJ
+acele IS_ADJ CL_ISIM
 aceleci IS_ADJ
 acem CL_ISIM
 acemaşiran CL_ISIM
@@ -3851,7 +3851,7 @@ cüzütam CL_ISIM
 çapan CL_ISIM
 çapanak CL_ISIM
 çapanoğlu CL_ISIM
-çapar CL_ISIM IS_ADJ
+çapar IS_ADJ CL_ISIM
 çaparı CL_ISIM
 çaparız CL_ISIM
 çapavul CL_ISIM
@@ -11175,7 +11175,7 @@ karşısav CL_ISIM
 karşıt IS_ADJ
 karşıtduygu CL_ISIM
 karşıtlık IS_SD CL_ISIM
-kart CL_ISIM IS_ADJ
+kart IS_ADJ CL_ISIM
 kartal F4PL CL_ISIM CL_FIIL
 kartaloş IS_ADJ
 kartaloz IS_ADJ
@@ -11902,7 +11902,7 @@ kırgınlık IS_SD CL_ISIM
 kırgız CL_ISIM
 kırı CL_ISIM
 kırıcı IS_ADJ CL_ISIM
-kırık IS_SD CL_ISIM IS_ADJ
+kırık IS_SD IS_ADJ CL_ISIM
 kırıkçı CL_ISIM
 kırıklık IS_SD CL_ISIM
 kırıl CL_FIIL
@@ -14878,7 +14878,7 @@ muhnik IS_ADJ
 muhrik IS_ADJ
 muhrip IS_SD CL_ISIM
 muhtaç IS_ADJ
-muhtar IS_ADJ CL_ISIM
+muhtar CL_ISIM IS_ADJ
 muhtariyet CL_ISIM
 muhtarlık IS_SD CL_ISIM
 muhtas IS_ADJ
@@ -17671,7 +17671,7 @@ püfteri CL_ISIM
 pülüton CL_ISIM
 pülverizatör CL_ISIM
 pünez CL_ISIM
-pürçek IS_SD CL_ISIM IS_ADJ
+pürçek IS_SD IS_ADJ CL_ISIM
 pürçeklen F5PR CL_FIIL
 pürçekli IS_ADJ
 pürçük IS_SD CL_ISIM
@@ -22800,7 +22800,7 @@ yabala F_GUD F4PW CL_FIIL
 yaban CL_ISIM
 yabanarısı CL_ISIM
 yabanasması CL_ISIM
-yabancı IS_ADJ CL_ISIM
+yabancı CL_ISIM IS_ADJ
 yabancılık IS_SD CL_ISIM
 yabandefnesi CL_ISIM
 yabandomuzu CL_ISIM

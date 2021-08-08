@@ -39,7 +39,7 @@ acaba IS_ADVERB
 acar IS_ADJ
 acayip IS_SD IS_ADJ IS_INTERJ
 accelerando IS_ADVERB
-acele CL_ISIM IS_ADJ
+acele IS_ADJ CL_ISIM
 aceleci IS_ADJ
 acem CL_ISIM
 acemaşiran CL_ISIM
@@ -10905,7 +10905,7 @@ karşıt IS_ADJ
 karşıtduygu CL_ISIM
 karşıtlı IS_ADJ
 karşıtlık IS_SD CL_ISIM
-kart CL_ISIM IS_ADJ
+kart IS_ADJ CL_ISIM
 kartal F4PL CL_ISIM CL_FIIL
 kartaloş IS_ADJ
 kartaloz IS_ADJ
@@ -17444,7 +17444,7 @@ püfteri CL_ISIM
 pülüton CL_ISIM
 pülverizatör CL_ISIM
 pünez CL_ISIM
-pürçek IS_SD CL_ISIM IS_ADJ
+pürçek IS_SD IS_ADJ CL_ISIM
 pürçekli IS_ADJ
 pürçük IS_SD CL_ISIM
 püre CL_ISIM
@@ -22251,7 +22251,7 @@ uzviyet CL_ISIM
 üsteğmen CL_ISIM
 üstel IS_ADJ
 üstele F_GUD F4PW CL_FIIL
-üstelik IS_SD IS_ADVERB CL_ISIM
+üstelik IS_SD CL_ISIM IS_ADVERB
 üsten F5PR CL_FIIL
 üstenci CL_ISIM
 üstinsan CL_ISIM
