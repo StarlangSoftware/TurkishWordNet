@@ -25063,7 +25063,6 @@ zımnında IS_ADVERB
 zımni IS_ADJ
 zımpara CL_ISIM
 zıncan CL_ISIM
-zındık IS_SD IS_ADJ
 zıngadak IS_ADVERB
 zıngılda F4PW CL_FIIL
 zıngırda F_GUD F4PW CL_FIIL

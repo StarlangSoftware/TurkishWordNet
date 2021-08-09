@@ -11189,7 +11189,7 @@ kalfalık IS_SD CL_ISIM
 kalgı F4PW CL_FIIL
 kalhane CL_ISIM
 kalıç IS_SD CL_ISIM
-kalık CL_ISIM IS_ADJ
+kalık IS_ADJ
 kalım CL_ISIM
 kalımlı IS_ADJ
 kalımsız IS_ADJ
@@ -21024,10 +21024,10 @@ süzüntü CL_ISIM
 şaşırt CL_FIIL
 şaşırtma CL_ISIM
 şaşırtmaca CL_ISIM
+şaşkaloz IS_ADJ
 şaşkın IS_ADJ
 şaşkınlaş CL_FIIL
 şaşkınlık IS_SD CL_ISIM
-şaşkoloz IS_ADJ
 şatafat CL_ISIM
 şatafatlı IS_ADJ
 şathiyat CL_ISIM
