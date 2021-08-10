@@ -11039,7 +11039,7 @@ karamuk IS_SD CL_ISIM
 karamusal CL_ISIM
 karanfil CL_ISIM
 karanfilgiller CL_ISIM
-karanlık IS_SD IS_ADJ CL_ISIM
+karanlık IS_SD CL_ISIM IS_ADJ
 karantina CL_ISIM
 karar IS_ADJ CL_ISIM CL_FIIL
 karargâh CL_ISIM
