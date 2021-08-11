@@ -10850,7 +10850,6 @@ karınzarı CL_ISIM
 karış F5PR-NO-REF CL_ISIM CL_FIIL
 karışık IS_SD IS_ADJ
 karışıklık IS_SD CL_ISIM
-karışıl CL_FIIL
 karışım CL_ISIM
 karışla F_GUD F4PW CL_FIIL
 karışma CL_ISIM
