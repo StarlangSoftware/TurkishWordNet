@@ -18313,7 +18313,7 @@ pragmacılık IS_SD CL_ISIM
 pragmatizm CL_ISIM
 pranga CL_ISIM
 pratik IS_SD IS_ADJ CL_ISIM
-pratisten CL_ISIM
+pratisyen CL_ISIM
 prekambriyum CL_ISIM
 prens CL_ISIM
 prenses CL_ISIM
