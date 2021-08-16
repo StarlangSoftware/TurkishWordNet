@@ -12156,6 +12156,7 @@ komedya CL_ISIM
 komedyacı CL_ISIM
 komik IS_SD IS_ADJ
 komiklik IS_SD CL_ISIM
+komintern CL_ISIM
 komiser CL_ISIM
 komiserlik IS_SD CL_ISIM
 komisyon CL_ISIM
@@ -12165,7 +12166,6 @@ komita CL_ISIM
 komitacı IS_ADJ
 komitacılık CL_ISIM
 komite CL_ISIM
-komitern CL_ISIM
 komodin CL_ISIM
 komodor CL_ISIM
 komot CL_ISIM

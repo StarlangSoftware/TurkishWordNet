@@ -13051,7 +13051,7 @@ komedyacı CL_ISIM
 komik IS_SD IS_ADJ
 komikleş CL_FIIL
 komiklik IS_SD CL_ISIM
-kominforn CL_ISIM
+kominform CL_ISIM
 komintern CL_ISIM
 komiser CL_ISIM
 komiserlik IS_SD CL_ISIM
