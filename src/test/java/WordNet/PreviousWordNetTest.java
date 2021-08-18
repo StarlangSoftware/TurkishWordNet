@@ -37,7 +37,7 @@ public class PreviousWordNetTest {
                 String[] words = definition.split(" ");
                 String notAnalyzed = "";
                 for (String  word : words){
-                    String newWord = word.replaceAll("`", "").replaceAll("!", "").replaceAll("\\?", "").replaceAll(",", "").replaceAll("'", "").replaceAll("\\(", "").replaceAll("\\)", "").replaceAll("\"", "").replaceAll("\\.", "").replaceAll(";", "");
+                    String newWord = word.replaceAll("`", "").replaceAll("!", "").replaceAll("\\?", "").replaceAll(",", "").replaceAll("\\(", "").replaceAll("\\)", "").replaceAll("\"", "").replaceAll("\\.", "").replaceAll(";", "");
                     if (!word.startsWith("-") && newWord.length() > 0 && analyzer.morphologicalAnalysis(newWord).size() == 0){
                         notAnalyzed += newWord + " ";
                     }
@@ -59,6 +59,12 @@ public class PreviousWordNetTest {
                 "F5PR", "F5PW", "F6P1"};
         TxtDictionary turkish = new TxtDictionary();
         TxtDictionary dictionary = new TxtDictionary(new TurkishWordComparator());
+        for (int i = 0; i < turkish.size(); i++){
+            TxtWord txtWord = (TxtWord) turkish.getWord(i);
+            if (txtWord.containsFlag("IS_OA")){
+                dictionary.addProperNoun(txtWord.getName());
+            }
+        }
         for (String literal : previuosWordNet.literalList()){
             if (!literal.contains(" ")){
                 TxtWord txtWord = (TxtWord) turkish.getWord(literal);
