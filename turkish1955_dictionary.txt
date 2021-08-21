@@ -27782,7 +27782,7 @@ operet CL_ISIM
 oportünist IS_ADJ
 optik IS_SD CL_ISIM
 optimum CL_ISIM
-ora CL_FIIL
+ora CL_ISIM CL_FIIL
 oracle IS_OA
 orak IS_OA IS_SD CL_ISIM
 orakay IS_OA
