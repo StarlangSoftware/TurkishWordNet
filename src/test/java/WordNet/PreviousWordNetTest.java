@@ -134,6 +134,11 @@ public class PreviousWordNetTest {
                             break;
                     }
                 }
+            } else {
+                String[] words = literal.split(" ");
+                if (words.length == 2 && words[0].equals(words[1])){
+                    dictionary.addWithFlag(words[0], "IS_DUP");
+                }
             }
         }
         dictionary.saveAsTxt("turkish" + year + "_dictionary.txt");
