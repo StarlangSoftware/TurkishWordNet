@@ -25373,7 +25373,7 @@ mg CL_ISIM
 mgk IS_OA
 mhk IS_OA
 mhp IS_OA
-mı IS_CONJ
+mı IS_CONJ IS_INTERJ
 mıh CL_ISIM
 mıhçak IS_OA
 mıhla F_GUD F4PW CL_FIIL
@@ -25410,7 +25410,7 @@ mızmızlık IS_SD CL_ISIM
 mızrak IS_SD CL_ISIM
 mızraklı IS_ADJ
 mızrap IS_SD CL_ISIM
-mi CL_ISIM
+mi CL_ISIM IS_CONJ IS_INTERJ
 mia IS_OA
 miah IS_OA
 miami IS_OA
@@ -25841,6 +25841,7 @@ möble CL_ISIM
 mönü CL_ISIM
 mösyö CL_ISIM
 msb IS_OA
+mu IS_CONJ IS_INTERJ
 muaccel IS_ADJ
 muaddel IS_ADJ
 muadele CL_ISIM
@@ -26273,6 +26274,7 @@ muzi IS_OA
 muzip IS_SD IS_ADJ
 muzlim IS_ADJ
 muzmahil IS_ADJ
+mü IS_CONJ IS_INTERJ
 mübadele CL_ISIM
 mübadil CL_ISIM
 mübahase CL_ISIM

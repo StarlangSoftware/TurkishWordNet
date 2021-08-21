@@ -24706,7 +24706,7 @@ mızmızlık IS_SD CL_ISIM
 mızrak IS_SD CL_ISIM
 mızraklı IS_ADJ
 mızrap IS_SD CL_ISIM
-mi CL_ISIM
+mi CL_ISIM IS_CONJ
 mia IS_OA
 miad CL_ISIM
 miah IS_OA
@@ -25115,6 +25115,7 @@ mozambikli IS_OA
 mozart IS_OA
 mösyö CL_ISIM
 msb IS_OA
+mu IS_CONJ
 muaccel IS_ADJ
 muacciz IS_ADJ
 muaddel IS_ADJ
@@ -25592,6 +25593,7 @@ muzi IS_OA
 muzip IS_SD IS_ADJ
 muzlim IS_ADJ
 muzmahil IS_ADJ
+mü IS_CONJ
 mübadele CL_ISIM
 mübadil CL_ISIM
 mübahase CL_ISIM
