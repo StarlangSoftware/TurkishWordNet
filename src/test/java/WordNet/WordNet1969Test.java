@@ -100,9 +100,10 @@ public class WordNet1969Test extends PreviousWordNetTest{
     public void generate2020Data(){
         WordNet turkish = new WordNet();
         for (String literal : turkish.literalList()){
-            ArrayList<SynSet> synSets = turkish.getSynSetsWithLiteral(literal);
-            for (SynSet synSet : synSets){
-                if (previuosWordNet.getSynSetsWithLiteral(literal).size() == 0 || previuosWordNet.getSynSetWithId(synSet.getId()) == null){
+            ArrayList<SynSet> synSets1 = turkish.getSynSetsWithLiteral(literal);
+            ArrayList<SynSet> synSets2 = previuosWordNet.getSynSetsWithLiteral(literal);
+            for (SynSet synSet : synSets1){
+                if (!synSets2.contains(synSet)){
                     System.out.println(literal + "\t" + synSet.getId() + "\t" + synSet.getPos() + "\t" + synSet.getLongDefinition() + "\t" + synSet.getSynonym() + "\t" + synSet.getExample());
                 }
             }
