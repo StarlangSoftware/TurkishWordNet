@@ -110,6 +110,14 @@ public class WordNet1969Test extends PreviousWordNetTest{
         }
     }
 
+    public void testExample() {
+        super.testExample();
+    }
+
+    public void testDefinition() {
+        super.testDefinition();
+    }
+
     @Test
     public void testSize() {
         assertEquals(37429, previuosWordNet.size());

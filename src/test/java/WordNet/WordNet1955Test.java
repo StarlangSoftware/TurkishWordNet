@@ -32,6 +32,14 @@ public class WordNet1955Test extends PreviousWordNetTest{
         assertTrue(found);
     }
 
+    public void testExample() {
+        super.testExample();
+    }
+
+    public void testDefinition() {
+        super.testDefinition();
+    }
+
     @Test
     public void testSize() {
         assertEquals(34494, previuosWordNet.size());

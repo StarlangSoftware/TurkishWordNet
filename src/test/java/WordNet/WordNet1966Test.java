@@ -19,6 +19,14 @@ public class WordNet1966Test extends PreviousWordNetTest{
         previousDictionary = new TxtDictionary("turkish1966_dictionary.txt", new TurkishWordComparator());
     }
 
+    public void testExample() {
+        super.testExample();
+    }
+
+    public void testDefinition() {
+        super.testDefinition();
+    }
+
     @Test
     public void testSize() {
         assertEquals(36429, previuosWordNet.size());

@@ -76,13 +76,17 @@ public class PreviousWordNetTest {
                 "F4P1-NO-REF", "F4PR-NO-REF", "F4PL-NO-REF", "F4PW-NO-REF", "F5PL-NO-REF",
                 "F5PR-NO-REF", "F5PW-NO-REF", "F2P1", "F3P1", "F4P1",
                 "F4PR", "F4PL", "F4PW", "F5P1", "F5PL",
-                "F5PR", "F5PW", "F6P1"};
+                "F5PR", "F5PW", "F6P1", "IS_KU", "IS_BILEŞ",
+                "IS_B_SD", "IS_KI"};
         TxtDictionary turkish = new TxtDictionary();
         TxtDictionary dictionary = new TxtDictionary(new TurkishWordComparator());
         for (int i = 0; i < turkish.size(); i++){
             TxtWord txtWord = (TxtWord) turkish.getWord(i);
             if (txtWord.containsFlag("IS_OA")){
                 dictionary.addProperNoun(txtWord.getName());
+            }
+            if (txtWord.containsFlag("IS_QUES")){
+                dictionary.addWithFlag(txtWord.getName(), "IS_QUES");
             }
         }
         for (String literal : previuosWordNet.literalList()){
@@ -136,8 +140,23 @@ public class PreviousWordNetTest {
                 }
             } else {
                 String[] words = literal.split(" ");
-                if (words.length == 2 && words[0].equals(words[1])){
-                    dictionary.addWithFlag(words[0], "IS_DUP");
+                if (words.length == 2){
+                    if (words[0].equals(words[1])){
+                        dictionary.addWithFlag(words[0], "IS_DUP");
+                    } else {
+                        if (words[0].length() == words[1].length()){
+                            int count = 0;
+                            for (int j = 0; j < words[0].length(); j++){
+                                if (words[0].charAt(j) != words[1].charAt(j)){
+                                    count++;
+                                }
+                            }
+                            if (count == 1){
+                                dictionary.addWithFlag(words[0], "IS_DUP");
+                                dictionary.addWithFlag(words[1], "IS_DUP");
+                            }
+                        }
+                    }
                 }
             }
         }
