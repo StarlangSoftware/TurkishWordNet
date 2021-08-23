@@ -1403,7 +1403,7 @@ alaton IS_OA
 alattin IS_OA
 alaturka IS_ADJ
 alavere CL_ISIM
-alay IS_OA CL_ISIM IS_DUP
+alay IS_OA CL_ISIM IS_ADJ IS_DUP
 alaya IS_OA
 alayah IS_OA
 alaybey IS_OA
@@ -7669,7 +7669,7 @@ cyrus IS_OA
 çabar IS_OA
 çabucacık IS_SD IS_ADVERB
 çabucak IS_SD IS_ADVERB
-çabuk IS_SD IS_ADVERB
+çabuk IS_SD IS_ADVERB IS_ADJ
 çabuklaş CL_FIIL
 çabuklaştır CL_FIIL
 çabukluk IS_SD CL_ISIM
@@ -12546,7 +12546,7 @@ eznev IS_OA
 ezra IS_OA
 ezrail CL_ISIM
 ezrak IS_OA
-f CL_ISIM IS_INTERJ
+f CL_ISIM
 fa CL_ISIM
 faal IS_UU IS_ADJ
 faaliyet CL_ISIM
@@ -21030,7 +21030,7 @@ kesmece IS_ADVERB
 kesmelik IS_SD CL_ISIM
 kesmik IS_SD CL_ISIM
 kesret CL_ISIM
-kesretli CL_ISIM
+kesretli IS_ADJ
 kestane IS_ADJ CL_ISIM
 kestanecik IS_SD CL_ISIM
 kestanelik CL_ISIM
@@ -25564,7 +25564,7 @@ milletvekili IS_BILEŞ CL_ISIM
 millî IS_ADJ
 millie IS_OA
 milliyet CL_ISIM
-milliyetçi CL_ISIM
+milliyetçi IS_ADJ
 milliyetperver IS_ADJ
 mills IS_OA
 milne IS_OA
@@ -34475,7 +34475,7 @@ sünter IS_OA
 sünuhat CL_ISIM
 süoğlu IS_OA
 süphan IS_OA
-süphanallah IS_INTERJ
+süphanallah CL_ISIM
 süprüntü CL_ISIM
 süprüntücü CL_ISIM
 süprüntülük CL_ISIM
@@ -37112,7 +37112,7 @@ teymullah IS_OA
 teymur IS_OA
 teyze CL_ISIM
 teyzezade CL_ISIM
-tez IS_ADJ CL_ISIM
+tez IS_ADVERB IS_ADJ CL_ISIM
 tezahür CL_ISIM
 tezahürat CL_ISIM
 tezal IS_OA

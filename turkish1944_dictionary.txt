@@ -1369,7 +1369,7 @@ alaturka IS_ADJ
 alav CL_ISIM
 alavcan IS_ADJ
 alavere CL_ISIM
-alay IS_OA CL_ISIM
+alay IS_OA CL_ISIM IS_ADJ
 alaya IS_OA
 alayah IS_OA
 alaybey IS_OA
@@ -11957,7 +11957,7 @@ eznev IS_OA
 ezra IS_OA
 ezrail CL_ISIM
 ezrak IS_OA
-f CL_ISIM IS_INTERJ
+f CL_ISIM
 fa CL_ISIM
 faal IS_UU CL_ISIM IS_ADJ
 faaliyet CL_ISIM
@@ -16325,7 +16325,7 @@ hyundai IS_OA
 ığdırlı IS_OA
 ığıl IS_OA CL_ISIM IS_DUP
 ığrıp IS_SD CL_ISIM
-ıh F5PR IS_INTERJ CL_FIIL
+ıh F5PR CL_ISIM CL_FIIL
 ıhla F_GUD F4PW CL_FIIL
 ıhlamur CL_ISIM
 ıhlamurgiller CL_ISIM
@@ -33365,7 +33365,7 @@ sünter IS_OA
 sünuhat CL_ISIM
 süoğlu IS_OA
 süphan IS_OA
-süphanallah IS_INTERJ
+süphanallah CL_ISIM
 süprüntü CL_ISIM
 süprüntücü IS_ADJ
 süprüntülük CL_ISIM
@@ -37959,7 +37959,7 @@ vakit IS_UD CL_ISIM IS_DUP
 vakitli IS_ADJ
 vakitsiz IS_ADVERB
 vakkas IS_OA
-vaktaki IS_CONJ
+vaktaki IS_ADVERB
 vaktiyle IS_ADVERB
 vakum CL_ISIM
 vakur IS_OA IS_ADJ
@@ -38179,7 +38179,7 @@ velâyet CL_ISIM
 velena CL_ISIM
 velense CL_ISIM
 velet IS_OA IS_SD CL_ISIM
-velev IS_POSTP
+velev IS_CONJ
 velfecir CL_ISIM
 velhasıl IS_POSTP
 veli IS_OA CL_ISIM

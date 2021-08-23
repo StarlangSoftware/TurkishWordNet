@@ -16,33 +16,21 @@ public class WordNet1959Test extends PreviousWordNetTest{
     @Before
     public void setUp() {
         previuosWordNet = new WordNet("turkish1959_wordnet.xml", new Locale("tr"));
-        previousDictionary = new TxtDictionary("turkish1959_dictionary.txt", new TurkishWordComparator());
     }
 
     public void testExample() {
+        previousDictionary = new TxtDictionary("turkish1959_dictionary.txt", new TurkishWordComparator());
         super.testExample();
     }
 
     public void testDefinition() {
+        previousDictionary = new TxtDictionary("turkish1959_dictionary.txt", new TurkishWordComparator());
         super.testDefinition();
     }
 
     @Test
     public void testSize() {
-        assertEquals(35874, previuosWordNet.size());
-    }
-
-    @Test
-    public void testExistenceOfKeNetSynSets(){
-        WordNet turkish = new WordNet();
-        boolean found = true;
-        for (SynSet synSet : previuosWordNet.synSetList()){
-            if (synSet.getId().startsWith("TUR10") && turkish.getSynSetWithId(synSet.getId()) == null){
-                System.out.println("SynSet with id " + synSet.getId() + " does not exist");
-                found = false;
-            }
-        }
-        assertTrue(found);
+        assertEquals(35875, previuosWordNet.size());
     }
 
     @Test
@@ -56,16 +44,16 @@ public class WordNet1959Test extends PreviousWordNetTest{
         for (SynSet synSet : previuosWordNet.synSetList()){
             literalCount += synSet.getSynonym().literalSize();
         }
-        assertEquals(46543, literalCount);
+        assertEquals(46546, literalCount);
     }
 
     @Test
     public void testGetSynSetsWithPartOfSpeech() {
-        assertEquals(19078, previuosWordNet.getSynSetsWithPartOfSpeech(Pos.NOUN).size());
-        assertEquals(8158, previuosWordNet.getSynSetsWithPartOfSpeech(Pos.VERB).size());
-        assertEquals(6047, previuosWordNet.getSynSetsWithPartOfSpeech(Pos.ADJECTIVE).size());
-        assertEquals(1259, previuosWordNet.getSynSetsWithPartOfSpeech(Pos.INTERJECTION).size());
-        assertEquals(1146, previuosWordNet.getSynSetsWithPartOfSpeech(Pos.ADVERB).size());
+        assertEquals(19077, previuosWordNet.getSynSetsWithPartOfSpeech(Pos.NOUN).size());
+        assertEquals(8157, previuosWordNet.getSynSetsWithPartOfSpeech(Pos.VERB).size());
+        assertEquals(6051, previuosWordNet.getSynSetsWithPartOfSpeech(Pos.ADJECTIVE).size());
+        assertEquals(1257, previuosWordNet.getSynSetsWithPartOfSpeech(Pos.INTERJECTION).size());
+        assertEquals(1147, previuosWordNet.getSynSetsWithPartOfSpeech(Pos.ADVERB).size());
         assertEquals(71, previuosWordNet.getSynSetsWithPartOfSpeech(Pos.PREPOSITION).size());
         assertEquals(69, previuosWordNet.getSynSetsWithPartOfSpeech(Pos.CONJUNCTION).size());
         assertEquals(46, previuosWordNet.getSynSetsWithPartOfSpeech(Pos.PRONOUN).size());
@@ -104,4 +92,15 @@ public class WordNet1959Test extends PreviousWordNetTest{
         assertEquals(0, previuosWordNet.sameLiteralSameSynSetCheck().size());
     }
 
+    @Test
+    public void testExistenceOfKeNetSynSets(){
+        currentWordNet = new WordNet();
+        super.testExistenceOfKeNetSynSets();
+    }
+
+    @Test
+    public void comparePosWithPosOfCorrespondingKeNetSynSets(){
+        currentWordNet = new WordNet();
+        super.comparePosWithPosOfCorrespondingKeNetSynSets();
+    }
 }

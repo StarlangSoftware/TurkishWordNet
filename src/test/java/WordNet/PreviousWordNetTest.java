@@ -8,10 +8,13 @@ import MorphologicalAnalysis.FsmMorphologicalAnalyzer;
 import java.util.ArrayList;
 import java.util.Locale;
 
+import static org.junit.Assert.assertTrue;
+
 public class PreviousWordNetTest {
 
     WordNet previuosWordNet;
     TxtDictionary previousDictionary;
+    WordNet currentWordNet;
 
     protected double numberOfMatches(String definition1, String definition2){
         String[] items1, items2;
@@ -27,6 +30,32 @@ public class PreviousWordNetTest {
             }
         }
         return count / (items1.length + items2.length);
+    }
+
+    public void testExistenceOfKeNetSynSets(){
+        boolean found = true;
+        for (SynSet synSet : previuosWordNet.synSetList()){
+            if (synSet.getId().startsWith("TUR10") && currentWordNet.getSynSetWithId(synSet.getId()) == null){
+                System.out.println("SynSet with id " + synSet.getId() + " does not exist");
+                found = false;
+            }
+        }
+        assertTrue(found);
+    }
+
+    public void comparePosWithPosOfCorrespondingKeNetSynSets(){
+        boolean found = true;
+        for (SynSet synSet : previuosWordNet.synSetList()){
+            if (synSet.getId().startsWith("TUR10")){
+                SynSet synSet2 = currentWordNet.getSynSetWithId(synSet.getId());
+                if (!synSet.getPos().equals(synSet2.getPos())){
+                    System.out.println("SynSet " + synSet.getId() + " " + synSet.getSynonym() + " is " + synSet.getPos()
+                            + " whereas in Kenet it is " + synSet2.getPos());
+                    found = false;
+                }
+            }
+        }
+        assertTrue(found);
     }
 
     public void testDefinition() {
