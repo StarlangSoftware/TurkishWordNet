@@ -106,7 +106,7 @@ public class PreviousWordNetTest {
                 "F5PR-NO-REF", "F5PW-NO-REF", "F2P1", "F3P1", "F4P1",
                 "F4PR", "F4PL", "F4PW", "F5P1", "F5PL",
                 "F5PR", "F5PW", "F6P1", "IS_KU", "IS_BILEŞ",
-                "IS_B_SD", "IS_KI"};
+                "IS_B_SD", "IS_KI", "IS_STT"};
         TxtDictionary turkish = new TxtDictionary();
         TxtDictionary dictionary = new TxtDictionary(new TurkishWordComparator());
         for (int i = 0; i < turkish.size(); i++){

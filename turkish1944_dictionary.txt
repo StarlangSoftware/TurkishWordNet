@@ -387,7 +387,7 @@ açmalık IS_SD CL_ISIM
 açmaz CL_ISIM
 açmazlık CL_ISIM
 açtır CL_FIIL
-ad IS_OA IS_ST CL_ISIM CL_FIIL
+ad IS_OA IS_ST IS_STT CL_ISIM CL_FIIL
 ada IS_OA F_GUD F4PW-NO-REF CL_ISIM CL_FIIL
 âdabımuaşeret CL_ISIM
 adacık IS_SD CL_ISIM
@@ -5393,6 +5393,7 @@ biray IS_OA
 biraz IS_ADJ
 birben IS_OA
 birbiri IS_ZM
+birbirleri IS_ZM
 bircan IS_OA
 birce IS_OA
 bircilik IS_SD CL_ISIM
@@ -14889,7 +14890,7 @@ haktan IS_OA
 haktanır IS_OA IS_ADJ
 hakverdi IS_OA
 hakyemez IS_ADJ
-hal IS_UU IS_ST CL_ISIM
+hal IS_UU IS_ST IS_STT CL_ISIM
 hal'et CL_FIIL
 hala CL_ISIM
 hâlâ IS_ADVERB
@@ -33601,7 +33602,7 @@ szymon IS_OA
 şaika IS_OA
 şair IS_OA CL_ISIM
 şaire IS_OA
-şak IS_ST CL_ISIM
+şak IS_ST IS_STT CL_ISIM
 şaka CL_ISIM IS_DUP
 şakacı IS_ADJ
 şakacıktan IS_ADVERB
