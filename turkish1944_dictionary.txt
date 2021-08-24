@@ -15671,6 +15671,7 @@ herek IS_SD CL_ISIM
 hergele CL_ISIM
 herif CL_ISIM
 herifçioğlu IS_BILEŞ CL_ISIM
+herkes IS_ZM
 hermes IS_OA
 hersek IS_OA
 heryerdelik IS_SD CL_ISIM
