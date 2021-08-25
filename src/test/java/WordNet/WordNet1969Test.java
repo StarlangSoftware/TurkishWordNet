@@ -109,13 +109,14 @@ public class WordNet1969Test extends PreviousWordNetTest{
         }
     }
 
+    @Test
     public void testExample() {
-        previousDictionary = new TxtDictionary("turkish1966_dictionary.txt", new TurkishWordComparator());
+        previousDictionary = new TxtDictionary("turkish1969_dictionary.txt", new TurkishWordComparator());
         super.testExample();
     }
 
     public void testDefinition() {
-        previousDictionary = new TxtDictionary("turkish1966_dictionary.txt", new TurkishWordComparator());
+        previousDictionary = new TxtDictionary("turkish1969_dictionary.txt", new TurkishWordComparator());
         super.testDefinition();
     }
 
