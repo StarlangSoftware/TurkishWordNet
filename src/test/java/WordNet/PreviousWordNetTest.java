@@ -8,6 +8,7 @@ import MorphologicalAnalysis.FsmMorphologicalAnalyzer;
 import java.util.ArrayList;
 import java.util.Locale;
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
 public class PreviousWordNetTest {
@@ -79,6 +80,7 @@ public class PreviousWordNetTest {
     }
 
     public void testExample() {
+        int count = 0;
         FsmMorphologicalAnalyzer analyzer = new FsmMorphologicalAnalyzer(previousDictionary);
         for (SynSet synSet : previuosWordNet.synSetList()){
             if (synSet.getExample() != null){
@@ -92,10 +94,12 @@ public class PreviousWordNetTest {
                     }
                 }
                 if (notAnalyzed.length() > 0){
+                    count++;
                     System.out.println(synSet.getId() + "\t" + synSet.getSynonym().toString() + "\t" + synSet.getExample() + "\t" + notAnalyzed);
                 }
             }
         }
+        assertEquals(0, count);
     }
 
     public void generateDictionary(String year){
