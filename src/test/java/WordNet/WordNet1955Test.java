@@ -95,6 +95,11 @@ public class WordNet1955Test extends PreviousWordNetTest{
     }
 
     @Test
+    public void testExistenceOfPreviousSynSets(){
+        super.testExistenceOfPreviousSynSets("1944", "TUR01");
+    }
+
+    @Test
     public void comparePosWithPosOfCorrespondingKeNetSynSets(){
         currentWordNet = new WordNet();
         super.comparePosWithPosOfCorrespondingKeNetSynSets();

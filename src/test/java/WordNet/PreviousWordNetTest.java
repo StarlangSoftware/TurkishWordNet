@@ -44,6 +44,18 @@ public class PreviousWordNetTest {
         assertTrue(found);
     }
 
+    public void testExistenceOfPreviousSynSets(String year, String id){
+        WordNet compared = new WordNet("turkish" + year + "_wordnet.xml", new Locale("tr"));
+        boolean found = true;
+        for (SynSet synSet : previuosWordNet.synSetList()){
+            if (synSet.getId().startsWith(id) && compared.getSynSetWithId(synSet.getId()) == null){
+                System.out.println("SynSet with id " + synSet.getId() + " does not exist");
+                found = false;
+            }
+        }
+        assertTrue(found);
+    }
+
     public void comparePosWithPosOfCorrespondingKeNetSynSets(){
         boolean found = true;
         for (SynSet synSet : previuosWordNet.synSetList()){

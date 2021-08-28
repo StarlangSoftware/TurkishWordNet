@@ -26,7 +26,7 @@ public class WordNet1959Test extends PreviousWordNetTest{
 
     @Test
     public void testSize() {
-        assertEquals(35875, previuosWordNet.size());
+        assertEquals(35856, previuosWordNet.size());
     }
 
     @Test
@@ -40,14 +40,14 @@ public class WordNet1959Test extends PreviousWordNetTest{
         for (SynSet synSet : previuosWordNet.synSetList()){
             literalCount += synSet.getSynonym().literalSize();
         }
-        assertEquals(46548, literalCount);
+        assertEquals(46537, literalCount);
     }
 
     @Test
     public void testGetSynSetsWithPartOfSpeech() {
-        assertEquals(19077, previuosWordNet.getSynSetsWithPartOfSpeech(Pos.NOUN).size());
-        assertEquals(8157, previuosWordNet.getSynSetsWithPartOfSpeech(Pos.VERB).size());
-        assertEquals(6051, previuosWordNet.getSynSetsWithPartOfSpeech(Pos.ADJECTIVE).size());
+        assertEquals(19067, previuosWordNet.getSynSetsWithPartOfSpeech(Pos.NOUN).size());
+        assertEquals(8150, previuosWordNet.getSynSetsWithPartOfSpeech(Pos.VERB).size());
+        assertEquals(6049, previuosWordNet.getSynSetsWithPartOfSpeech(Pos.ADJECTIVE).size());
         assertEquals(1257, previuosWordNet.getSynSetsWithPartOfSpeech(Pos.INTERJECTION).size());
         assertEquals(1147, previuosWordNet.getSynSetsWithPartOfSpeech(Pos.ADVERB).size());
         assertEquals(71, previuosWordNet.getSynSetsWithPartOfSpeech(Pos.PREPOSITION).size());
@@ -92,6 +92,12 @@ public class WordNet1959Test extends PreviousWordNetTest{
     public void testExistenceOfKeNetSynSets(){
         currentWordNet = new WordNet();
         super.testExistenceOfKeNetSynSets();
+    }
+
+    @Test
+    public void testExistenceOfPreviousSynSets(){
+        super.testExistenceOfPreviousSynSets("1944", "TUR01");
+        super.testExistenceOfPreviousSynSets("1955", "TUR02");
     }
 
     @Test
