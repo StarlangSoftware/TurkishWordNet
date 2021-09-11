@@ -8531,7 +8531,7 @@ cyrus IS_OA
 çapan IS_OA
 çapaner IS_OA
 çapanoğlu IS_BILEŞ CL_ISIM
-çapar IS_OA CL_ISIM IS_ADJ
+çapar IS_OA IS_ADJ CL_ISIM
 çaparı CL_ISIM
 çaparız CL_ISIM
 çapçak IS_SD CL_ISIM
@@ -18512,7 +18512,7 @@ hyundai IS_OA
 ıslıkla F_GUD F4PW CL_FIIL
 ıslıklı IS_ADJ
 ısmarla F_GUD F4PW CL_FIIL
-ısmarlama CL_ISIM IS_ADJ
+ısmarlama IS_ADJ
 ısmık IS_OA
 ıspanak IS_SD CL_ISIM
 ıspanakgiller CL_ISIM
@@ -27875,7 +27875,7 @@ muhrip IS_SD CL_ISIM
 muhsin IS_OA
 muhsine IS_OA
 muhtaç IS_ADJ
-muhtar IS_OA IS_ADJ CL_ISIM
+muhtar IS_OA CL_ISIM IS_ADJ
 muhtariyet CL_ISIM
 muhtarlık IS_SD CL_ISIM
 muhtasar IS_ADJ
