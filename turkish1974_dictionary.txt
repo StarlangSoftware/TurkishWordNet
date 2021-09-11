@@ -4046,7 +4046,7 @@ babacan IS_OA IS_ADJ
 babacanlaş CL_FIIL
 babacanlık CL_ISIM
 babacığımcılık CL_ISIM
-babaç IS_OA IS_SD IS_ADJ CL_ISIM
+babaç IS_OA IS_SD CL_ISIM IS_ADJ
 babaçko IS_ADJ
 babadağ IS_OA
 babaeski IS_OA
@@ -20502,7 +20502,7 @@ ka CL_ISIM
 kaan IS_OA
 kaaö IS_OA
 kaat IS_OA
-kaba CL_ISIM IS_ADJ IS_DUP
+kaba IS_ADJ CL_ISIM IS_DUP
 kababurun CL_ISIM
 kabaca IS_ADJ IS_ADVERB
 kabadayı IS_OA IS_ADJ CL_ISIM
