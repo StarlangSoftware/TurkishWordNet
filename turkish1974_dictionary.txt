@@ -285,7 +285,7 @@ accelerando IS_ADVERB
 accipiter IS_OA
 accipitridae IS_OA
 ace IS_OA
-acele CL_ISIM IS_ADJ IS_DUP
+acele IS_ADJ CL_ISIM IS_DUP
 aceleci IS_ADJ
 aceleleştir CL_FIIL
 acem IS_OA CL_ISIM
@@ -680,7 +680,7 @@ ağabay IS_OA
 ağabey CL_ISIM
 ağabeylik CL_ISIM
 ağacan IS_OA
-ağaç IS_SD IS_ADJ CL_ISIM
+ağaç IS_SD CL_ISIM IS_ADJ
 ağaççık IS_SD CL_ISIM
 ağaççileği IS_BILEŞ IS_B_SD CL_ISIM
 ağaçkakan CL_ISIM
@@ -5601,7 +5601,7 @@ beşizli IS_ADJ
 beşköy IS_OA
 beşle F4PW CL_FIIL
 beşleme CL_ISIM
-beşli CL_ISIM IS_ADJ
+beşli IS_ADJ CL_ISIM
 beşlik CL_ISIM
 beşme CL_ISIM
 beşparmak IS_SD CL_ISIM
@@ -7390,7 +7390,7 @@ canlandır CL_FIIL
 canlandırıcı IS_ADJ CL_ISIM
 canlandırım CL_ISIM
 canlandırma CL_ISIM
-canlı CL_ISIM IS_ADJ IS_DUP
+canlı IS_ADJ CL_ISIM IS_DUP
 canlıcılık IS_SD CL_ISIM
 canlılık IS_SD CL_ISIM
 canlısı IS_ADVERB
@@ -11220,7 +11220,7 @@ doz CL_ISIM
 dozen IS_OA
 dozer CL_ISIM
 dök F5PR CL_FIIL
-dökme IS_ADJ CL_ISIM
+dökme CL_ISIM IS_ADJ
 dökmeci CL_ISIM
 dökmecilik IS_SD CL_ISIM
 döktür F4PR CL_FIIL
@@ -21174,7 +21174,7 @@ kanun IS_OA CL_ISIM
 kânun CL_ISIM
 kanunen IS_ADVERB
 kanuni IS_OA
-kanunî CL_ISIM IS_ADJ
+kanunî IS_ADJ CL_ISIM
 kanuniyet CL_ISIM
 kanunlaş CL_FIIL
 kanunlaştır CL_FIIL
@@ -22368,7 +22368,7 @@ kemankeş CL_ISIM
 keme CL_ISIM
 kemençe CL_ISIM
 kement IS_SD CL_ISIM
-kemer IS_OA CL_ISIM IS_ADJ
+kemer IS_OA IS_ADJ CL_ISIM
 kemeraltı IS_OA
 kemerburgaz IS_OA
 kemere CL_ISIM
@@ -23401,7 +23401,6 @@ kloroplast CL_ISIM
 kloroz CL_ISIM
 klorölçer CL_ISIM
 kloş IS_ADJ
-klüz CL_ISIM
 knox IS_OA
 ko CL_FIIL
 koalisyon CL_ISIM
@@ -28474,7 +28473,6 @@ mürşit CL_ISIM
 mürteci IS_ADJ
 mürted IS_OA
 mürtefi IS_ADJ
-mürtekip IS_ADJ
 mürtesem CL_ISIM
 mürtet IS_ADJ
 mürur CL_ISIM
@@ -30838,7 +30836,7 @@ ozon CL_ISIM
 ömer IS_OA
 ömerli IS_OA
 ömründe IS_ADVERB
-ömür IS_OA IS_UD IS_ADJ CL_ISIM
+ömür IS_OA IS_UD CL_ISIM IS_ADJ
 ömüral IS_OA
 ömürcan IS_OA
 ömürlü IS_OA IS_ADJ
@@ -38641,7 +38639,7 @@ tasrih CL_ISIM
 tastamam IS_ADJ
 tasvip IS_SD CL_ISIM
 tasvir IS_OA CL_ISIM
-taş F2P1 IS_ADJ CL_ISIM CL_FIIL
+taş F2P1 CL_ISIM IS_ADJ CL_FIIL
 taşak IS_SD CL_ISIM
 taşaklı IS_ADJ
 taşan IS_OA
@@ -43457,7 +43455,7 @@ yetiy IS_OA
 yetke CL_ISIM
 yetki CL_ISIM
 yetkile CL_FIIL
-yetkili CL_ISIM IS_ADJ
+yetkili IS_ADJ CL_ISIM
 yetkin IS_OA IS_ADJ
 yetkiner IS_OA
 yetkinleş CL_FIIL
@@ -43563,7 +43561,7 @@ yılla F_GUD F4PW CL_FIIL
 yıllan CL_FIIL
 yıllat CL_FIIL
 yıllığına IS_ADVERB
-yıllık IS_SD IS_ADJ CL_ISIM
+yıllık IS_SD CL_ISIM IS_ADJ
 yıllıkçı CL_ISIM
 yıllıklı IS_ADJ
 yılma IS_OA
