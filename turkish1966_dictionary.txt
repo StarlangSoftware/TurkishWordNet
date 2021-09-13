@@ -21261,7 +21261,7 @@ kırgızistanlı IS_OA
 kırhan IS_OA
 kırı CL_ISIM
 kırıcı IS_ADJ CL_ISIM
-kırık IS_SD IS_ADJ CL_ISIM
+kırık IS_SD CL_ISIM IS_ADJ
 kırıkçı CL_ISIM
 kırıkhan IS_OA
 kırıkkale IS_OA

@@ -3067,7 +3067,7 @@ asiye IS_OA
 ask IS_OA
 aska IS_OA
 askat CL_ISIM
-asker IS_OA IS_ADJ CL_ISIM
+asker IS_OA CL_ISIM IS_ADJ
 askeri IS_OA
 askerî IS_ADJ
 askerîleş CL_FIIL
@@ -8396,7 +8396,6 @@ cyrus IS_OA
 çakmur IS_OA
 çakşır CL_ISIM
 çakşırlı IS_ADJ
-çaktır CL_FIIL
 çal IS_OA F5PL-NO-REF CL_FIIL
 çala CL_ISIM
 çalab IS_OA
@@ -17248,7 +17247,7 @@ haşiş CL_ISIM
 haşiv IS_UD CL_ISIM
 haşiye CL_ISIM
 haşla F_GUD F4PW CL_FIIL
-haşlama CL_ISIM IS_ADJ
+haşlama IS_ADJ
 haşlamlılar CL_ISIM
 haşlan F5PR CL_FIIL
 haşmeddin IS_OA
@@ -44286,7 +44285,7 @@ zerdeva CL_ISIM
 zerdüşt IS_OA CL_ISIM IS_ADJ
 zerdüştçü IS_OA
 zerdüştçülük IS_OA
-zerdüştî IS_ADJ
+zerdüşti IS_ADJ
 zerdüştlük CL_ISIM
 zerefşan IS_OA
 zeren IS_OA

@@ -20111,7 +20111,7 @@ karşıt IS_ADJ
 karşıtduygu CL_ISIM
 karşıtlık IS_SD CL_ISIM
 karşıyaka IS_OA
-kart IS_ADJ CL_ISIM
+kart CL_ISIM IS_ADJ
 kartal IS_OA F4PL CL_ISIM CL_FIIL
 kartaloş IS_ADJ
 kartaloz IS_ADJ
@@ -21160,7 +21160,7 @@ kırgızistanlı IS_OA
 kırhan IS_OA
 kırı CL_ISIM
 kırıcı IS_ADJ CL_ISIM
-kırık IS_SD IS_ADJ CL_ISIM
+kırık IS_SD CL_ISIM IS_ADJ
 kırıkçı CL_ISIM
 kırıkhan IS_OA
 kırıkkale IS_OA

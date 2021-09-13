@@ -19328,7 +19328,7 @@ karşıtduygu CL_ISIM
 karşıtlı IS_ADJ
 karşıtlık IS_SD CL_ISIM
 karşıyaka IS_OA
-kart IS_ADJ CL_ISIM
+kart CL_ISIM IS_ADJ
 kartal IS_OA F4PL CL_ISIM CL_FIIL
 kartaloş IS_ADJ
 kartaloz IS_ADJ
