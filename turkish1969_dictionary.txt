@@ -37091,6 +37091,7 @@ tespih CL_ISIM
 tespihağacı IS_BILEŞ IS_B_SD CL_ISIM
 tespihağacıgiller CL_ISIM
 tespihböceği IS_BILEŞ IS_B_SD CL_ISIM
+tespit CL_ISIM
 tesri CL_ISIM
 tesrir IS_OA
 tesriye IS_OA

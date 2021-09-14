@@ -122,8 +122,9 @@ public class WordNet1974Test extends PreviousWordNetTest{
         }
     }
 
+    @Test
     public void testExample() {
-        previousDictionary = new TxtDictionary("turkish1969_dictionary.txt", new TurkishWordComparator());
+        previousDictionary = new TxtDictionary("turkish1974_dictionary.txt", new TurkishWordComparator());
         super.testExample();
     }
 
@@ -143,7 +144,7 @@ public class WordNet1974Test extends PreviousWordNetTest{
         for (SynSet synSet : previuosWordNet.synSetList()){
             literalCount += synSet.getSynonym().literalSize();
         }
-        assertEquals(54853, literalCount);
+        assertEquals(54857, literalCount);
     }
 
     @Test
@@ -165,7 +166,7 @@ public class WordNet1974Test extends PreviousWordNetTest{
 
     @Test
     public void testLiteralList() {
-        assertEquals(41588, previuosWordNet.literalList().size());
+        assertEquals(41591, previuosWordNet.literalList().size());
     }
 
     @Test

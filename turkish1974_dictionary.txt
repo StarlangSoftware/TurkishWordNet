@@ -2324,7 +2324,7 @@ anız CL_ISIM
 anızlık CL_ISIM
 âni IS_ADVERB IS_ADJ
 ania IS_OA
-ânide IS_ADVERB
+âniden IS_ADVERB
 anif IS_OA
 anika IS_OA
 anilin CL_ISIM
@@ -6070,6 +6070,7 @@ birazcık IS_SD IS_ADJ
 birazdan IS_ADVERB
 birben IS_OA
 birbiri IS_ZM
+birbirleri IS_ZM
 bircan IS_OA
 birce IS_OA
 birci CL_ISIM
@@ -15098,7 +15099,7 @@ gerdir CL_FIIL
 gereç IS_SD CL_ISIM
 gerede IS_OA
 gereğince IS_ADVERB
-gerek IS_SD F5PR IS_POSTP IS_ADJ CL_ISIM
+gerek IS_SD F5PR IS_POSTP IS_ADJ CL_ISIM CL_FIIL
 gerekçe CL_ISIM
 gerekçeli IS_ADJ
 gerekirci CL_ISIM
@@ -39509,6 +39510,7 @@ tespih CL_ISIM
 tespihağacı IS_BILEŞ IS_B_SD CL_ISIM
 tespihağacıgiller CL_ISIM
 tespihböceği IS_BILEŞ IS_B_SD CL_ISIM
+tespit CL_ISIM
 tesri CL_ISIM
 tesrir IS_OA
 tesriye IS_OA

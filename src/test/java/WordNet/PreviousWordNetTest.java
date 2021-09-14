@@ -91,6 +91,26 @@ public class PreviousWordNetTest {
         }
     }
 
+    public void generateExampleListForWordsHavingMultipleMeanings(){
+        for (String name : previuosWordNet.literalList()){
+            ArrayList<SynSet> synSets = previuosWordNet.getSynSetsWithLiteral(name);
+            if (synSets.size() > 1){
+                boolean example = true;
+                for (SynSet synSet : synSets){
+                    if (synSet.getExample() == null){
+                        example = false;
+                        break;
+                    }
+                }
+                if (!example){
+                    for (SynSet synSet : synSets){
+                        System.out.println(synSet.getId() + "\t" + name + "\t" + synSet.getDefinition() + "\t" + synSet.getExample());
+                    }
+                }
+            }
+        }
+    }
+
     public void testExample() {
         int count = 0;
         FsmMorphologicalAnalyzer analyzer = new FsmMorphologicalAnalyzer(previousDictionary);
