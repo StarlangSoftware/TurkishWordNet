@@ -42035,7 +42035,7 @@ veledizina CL_ISIM
 velense CL_ISIM
 velespit CL_ISIM
 velet IS_OA IS_SD CL_ISIM
-velev IS_CONJ IS_ADVERB
+velev IS_ADVERB IS_CONJ
 velfecir CL_ISIM
 velhasıl IS_CONJ
 veli IS_OA CL_ISIM
