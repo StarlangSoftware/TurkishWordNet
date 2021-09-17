@@ -4628,7 +4628,7 @@ baruthane CL_ISIM
 barutluk IS_SD CL_ISIM
 baryum CL_ISIM
 barzani IS_OA
-bas CL_ISIM IS_INTERJ CL_FIIL
+bas IS_INTERJ CL_ISIM CL_FIIL
 basa IS_OA
 basak IS_OA
 basamak IS_SD CL_ISIM
@@ -6925,7 +6925,7 @@ bulanıklık IS_SD CL_ISIM
 bulantı CL_ISIM
 bulaş F5PR CL_FIIL
 bulaşıcı IS_ADJ
-bulaşık IS_SD IS_ADJ CL_ISIM
+bulaşık IS_SD CL_ISIM IS_ADJ
 bulaşıkçı CL_ISIM
 bulaşıkçılık IS_SD CL_ISIM
 bulaşkan IS_ADJ
@@ -9507,7 +9507,7 @@ cyrus IS_OA
 çözgün CL_ISIM IS_ADJ
 çözgünlük CL_ISIM
 çözme CL_ISIM
-çözücü CL_ISIM IS_ADJ
+çözücü IS_ADJ CL_ISIM
 çözük IS_ADJ
 çözül CL_FIIL
 çözülme CL_ISIM
@@ -41083,7 +41083,7 @@ university IS_OA
 unkapanı IS_OA
 unla F_GUD F4PW CL_FIIL
 unlan CL_FIIL
-unluk IS_ADJ CL_ISIM
+unluk CL_ISIM IS_ADJ
 unocal IS_OA
 unscom IS_OA
 unsur IS_OA CL_ISIM
