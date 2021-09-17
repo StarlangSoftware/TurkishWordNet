@@ -6614,7 +6614,6 @@ bozuk IS_SD IS_ADJ CL_ISIM
 bozukdüzen IS_ADJ
 bozukluk IS_SD CL_ISIM
 bozul CL_FIIL
-bozum CL_ISIM
 bozumca CL_ISIM
 bozun IS_OA
 bozuntu CL_ISIM
@@ -17092,7 +17091,7 @@ haricî IS_ADJ
 hariciye CL_ISIM
 hariciyeci IS_ADJ
 hariciyecilik IS_SD CL_ISIM
-hariç IS_SD IS_ADVERB CL_ISIM
+hariç IS_SD CL_ISIM IS_ADVERB
 harika IS_OA IS_ADJ
 harikulâde IS_ADJ
 harim IS_OA CL_ISIM
@@ -24739,7 +24738,7 @@ kübizm CL_ISIM
 kübra IS_OA
 kücükyalı IS_OA
 küçücük IS_SD IS_ADJ
-küçük IS_SD IS_ADJ CL_ISIM
+küçük IS_SD IS_ADJ
 küçükasya IS_OA
 küçükayı IS_OA CL_ISIM
 küçükbaş CL_ISIM
@@ -30662,7 +30661,7 @@ oyunbozanlık IS_SD CL_ISIM
 oyuncak IS_SD CL_ISIM
 oyuncakçı CL_ISIM
 oyuncakçılık IS_SD CL_ISIM
-oyuncu CL_ISIM IS_ADJ
+oyuncu IS_ADJ CL_ISIM
 oyunculuk IS_SD CL_ISIM
 oyunluk CL_ISIM
 oyuntu CL_ISIM
@@ -41700,7 +41699,7 @@ uzviyet CL_ISIM
 üzere IS_POSTP
 üzeri CL_ISIM
 üzerinde IS_POSTP CL_ISIM
-üzerine IS_POSTP CL_ISIM IS_ADVERB
+üzerine IS_POSTP IS_ADVERB
 üzerlik IS_SD CL_ISIM
 üzeyir IS_OA
 üzgü CL_ISIM
