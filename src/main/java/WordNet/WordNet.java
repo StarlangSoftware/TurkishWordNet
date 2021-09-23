@@ -1612,7 +1612,8 @@ public class WordNet {
                 replaceAll("ş", "\\\\c{s}").
                 replaceAll("ı", "{\\\\i}").
                 replaceAll("\\(\\^\\)", "\\\\^").
-                replaceAll("İ",  " \\\\.{I}").replaceAll("%", "yüzde");
+                replaceAll("İ",  " \\\\.{I}").
+                replaceAll("Ş",  " \\\\c{S}").replaceAll("%", "yüzde");
     }
 
     public String preamble(String literal, SynSet synSet, ArrayList<SynSet> synSets){
