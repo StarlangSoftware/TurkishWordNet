@@ -13187,6 +13187,7 @@ eşbiçimli IS_ADJ
 eşbiçimlik IS_SD CL_ISIM
 eşca IS_OA
 eşdeğer IS_ADJ
+eşdeğerli IS_ADJ
 eşdeğerlik IS_SD CL_ISIM
 eşdeprem IS_ADJ
 eşek IS_SD CL_ISIM
