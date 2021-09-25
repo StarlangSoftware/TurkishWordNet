@@ -4277,7 +4277,7 @@ barışçıl IS_ADJ
 barışçılık CL_ISIM
 barışıklık CL_ISIM
 barışkan IS_OA
-barışlık CL_ISIM IS_ADJ
+barışlık IS_ADJ CL_ISIM
 barışsever IS_ADJ
 barıt CL_ISIM
 bari IS_CONJ
