@@ -229,7 +229,7 @@ public class PreviousWordNetTest {
     }
 
     public void generateOfflineDictionary(){
-        previuosWordNet.generateDictionary("sozluk.tex");
+        previuosWordNet.generateDictionary("sozluk.tex", new FsmMorphologicalAnalyzer(previousDictionary));
     }
 
 }

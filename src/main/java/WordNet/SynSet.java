@@ -1,6 +1,11 @@
 package WordNet;
 
+import Corpus.Sentence;
+import Corpus.SentenceSplitter;
+import Corpus.TurkishSplitter;
 import Dictionary.Pos;
+import MorphologicalAnalysis.FsmMorphologicalAnalyzer;
+import MorphologicalAnalysis.FsmParseList;
 
 import java.io.BufferedWriter;
 import java.io.IOException;
@@ -252,6 +257,36 @@ public class SynSet {
      * @return String example
      */
     public String getExample() {
+        return example;
+    }
+
+    /**
+     * Returns modified version of the original example sentence where the original
+     * literal of the synSet is replaced with newLiteral.
+     * @param newLiteral New literal.
+     * @param fsm Morphological analyzer.
+     * @return Modified version of the original sentence.
+     */
+    public String getModifiedExample(String newLiteral, FsmMorphologicalAnalyzer fsm){
+        SentenceSplitter s = new TurkishSplitter();
+        Sentence newExampleSentence = s.split(example).get(0);
+        if (getPos().equals(Pos.VERB)){
+            newLiteral = newLiteral.substring(0, newLiteral.length() - 3);
+        }
+        FsmParseList[] parseList = fsm.morphologicalAnalysis(newExampleSentence);
+        for (int k = 0; k < synonym.literalSize(); k++){
+            for (FsmParseList fsmParseList : parseList) {
+                for (int j = 0; j < fsmParseList.size(); j++) {
+                    String searchedLiteral = synonym.getLiteral(k).name;
+                    if (getPos().equals(Pos.VERB)){
+                        searchedLiteral = searchedLiteral.substring(0, searchedLiteral.length() - 3);
+                    }
+                    if (fsmParseList.getFsmParse(j).getWord().getName().equals(searchedLiteral)) {
+                        return fsm.replaceWord(newExampleSentence, searchedLiteral, newLiteral).toString();
+                    }
+                }
+            }
+        }
         return example;
     }
 

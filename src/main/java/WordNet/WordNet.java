@@ -1664,7 +1664,7 @@ public class WordNet {
         return result;
     }
 
-    public void generateDictionary(String fileName){
+    public void generateDictionary(String fileName, FsmMorphologicalAnalyzer fsm){
         try {
             PrintWriter output = new PrintWriter(fileName);
             output.println("\\documentclass[10pt,a4paper,twoside]{article}\n" +
@@ -1721,13 +1721,13 @@ public class WordNet {
                         if (synSet.getExample() == null){
                             output.print(preamble(literal, synSet, synSets) + getPos(synSet) + " " + latexTurkish(getDefinition(synSet, literal)) + " ");
                         } else {
-                            output.print(preamble(literal, synSet, synSets) + getPos(synSet) + " " + latexTurkish(getDefinition(synSet, literal) + " {\\em " + synSet.getExample() + "} "));
+                            output.print(preamble(literal, synSet, synSets) + getPos(synSet) + " " + latexTurkish(getDefinition(synSet, literal) + " {\\em " + synSet.getModifiedExample(literal, fsm) + "} "));
                         }
                     } else {
                         if (synSet.getExample() == null){
                             output.print(preamble(literal, synSet, synSets) + latexTurkish(getDefinition(synSet, literal) + " "));
                         } else {
-                            output.print(preamble(literal, synSet, synSets) + latexTurkish(getDefinition(synSet, literal) + " {\\em " + synSet.getExample() + "} "));
+                            output.print(preamble(literal, synSet, synSets) + latexTurkish(getDefinition(synSet, literal) + " {\\em " + synSet.getModifiedExample(literal, fsm) + "} "));
                         }
                     }
                 }
