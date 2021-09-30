@@ -277,11 +277,17 @@ public class SynSet {
         for (int k = 0; k < synonym.literalSize(); k++){
             for (FsmParseList fsmParseList : parseList) {
                 for (int j = 0; j < fsmParseList.size(); j++) {
-                    String searchedLiteral = synonym.getLiteral(k).name;
+                    String searchedLiteral, lastWord;
+                    searchedLiteral = synonym.getLiteral(k).name;
                     if (getPos().equals(Pos.VERB)){
                         searchedLiteral = searchedLiteral.substring(0, searchedLiteral.length() - 3);
                     }
-                    if (fsmParseList.getFsmParse(j).getWord().getName().equals(searchedLiteral)) {
+                    if (searchedLiteral.contains(" ")){
+                        lastWord = searchedLiteral.split(" ")[searchedLiteral.split(" ").length - 1];
+                    } else {
+                        lastWord = searchedLiteral;
+                    }
+                    if (fsmParseList.getFsmParse(j).getWord().getName().equals(lastWord)) {
                         return fsm.replaceWord(newExampleSentence, searchedLiteral, newLiteral).toString();
                     }
                 }
