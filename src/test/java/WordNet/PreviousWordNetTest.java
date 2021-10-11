@@ -134,6 +134,24 @@ public class PreviousWordNetTest {
         assertEquals(0, count);
     }
 
+    public void possibleConversionErrorsForLiteralReplace(){
+        FsmMorphologicalAnalyzer fsm = new FsmMorphologicalAnalyzer(previousDictionary);
+        for (SynSet synSet : previuosWordNet.synSetList()){
+            if (synSet.getExample() != null && synSet.getSynonym().literalSize() > 1){
+                int count = 0;
+                for (int i = 0; i < synSet.getSynonym().literalSize(); i++){
+                    String newExample = synSet.getModifiedExample(synSet.getSynonym().getLiteral(i).getName(), fsm);
+                    if (synSet.getExample().equals(newExample)){
+                        count++;
+                    }
+                }
+                if (count > 1){
+                    System.out.println(synSet.getId() + "\t" + synSet.getDefinition() + "\t" + synSet.getSynonym() + "\t" + synSet.getExample());
+                }
+            }
+        }
+    }
+
     public void generateDictionary(String year){
         String[] flags = {"IS_SD", "IS_KG", "IS_UD", "IS_UU", "IS_UUU",
                 "IS_SU", "IS_ST", "F_SD", "F_GUD", "F_GUDO",
