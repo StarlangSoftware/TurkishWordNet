@@ -275,19 +275,22 @@ public class SynSet {
         }
         FsmParseList[] parseList = fsm.morphologicalAnalysis(newExampleSentence);
         for (int k = 0; k < synonym.literalSize(); k++){
+            String searchedLiteral, lastWord;
+            searchedLiteral = synonym.getLiteral(k).name;
+            if (getPos().equals(Pos.VERB)){
+                searchedLiteral = searchedLiteral.substring(0, searchedLiteral.length() - 3);
+            }
+            if (searchedLiteral.contains(" ")){
+                lastWord = searchedLiteral.split(" ")[searchedLiteral.split(" ").length - 1];
+            } else {
+                lastWord = searchedLiteral;
+            }
             for (FsmParseList fsmParseList : parseList) {
+                if (fsmParseList.size() > 0 && fsmParseList.getFsmParse(0).getSurfaceForm().equalsIgnoreCase(lastWord)){
+                    return fsm.replaceWord(newExampleSentence, searchedLiteral, newLiteral).toString();
+                }
                 for (int j = 0; j < fsmParseList.size(); j++) {
-                    String searchedLiteral, lastWord;
-                    searchedLiteral = synonym.getLiteral(k).name;
-                    if (getPos().equals(Pos.VERB)){
-                        searchedLiteral = searchedLiteral.substring(0, searchedLiteral.length() - 3);
-                    }
-                    if (searchedLiteral.contains(" ")){
-                        lastWord = searchedLiteral.split(" ")[searchedLiteral.split(" ").length - 1];
-                    } else {
-                        lastWord = searchedLiteral;
-                    }
-                    if (fsmParseList.getFsmParse(j).getWord().getName().equals(lastWord)) {
+                    if (fsmParseList.getFsmParse(j).getWord().getName().equalsIgnoreCase(lastWord)) {
                         return fsm.replaceWord(newExampleSentence, searchedLiteral, newLiteral).toString();
                     }
                 }
