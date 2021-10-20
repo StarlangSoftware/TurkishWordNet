@@ -4036,7 +4036,7 @@ balhan IS_OA
 balı IS_OA
 balıbaş IS_OA
 balıbey IS_OA
-balık CL_ISIM
+balık IS_SD CL_ISIM
 balıkçı CL_ISIM
 balıkçıl CL_ISIM IS_ADJ
 balıkçılık IS_SD CL_ISIM
@@ -7642,6 +7642,7 @@ cyrus IS_OA
 çameli IS_OA
 çamer IS_OA
 çamgiller CL_ISIM
+çamlıca IS_OA
 çamlıdere IS_OA
 çamlıhemşin IS_OA
 çamlık IS_SD CL_ISIM
@@ -18177,7 +18178,7 @@ itap CL_ISIM
 itboğan CL_ISIM
 itburnu IS_BILEŞ CL_ISIM
 itdirseği IS_BILEŞ IS_B_SD CL_ISIM
-itele F4PW CL_FIIL
+itele F_GUD F4PW CL_FIIL
 iterbiyum CL_ISIM
 itfa CL_ISIM
 itfaiye CL_ISIM
@@ -26717,7 +26718,7 @@ necid IS_OA
 necih IS_OA
 necil IS_OA
 necile IS_OA
-necip IS_ADJ
+necip IS_OA IS_ADJ
 necipoğlu IS_OA
 neciy IS_OA
 neciyullah IS_OA
