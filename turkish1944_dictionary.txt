@@ -7437,7 +7437,7 @@ cyrus IS_OA
 çakış F5PR CL_FIIL
 çakıştır CL_FIIL
 çakma CL_ISIM
-çakmak IS_OA IS_SD
+çakmak IS_OA IS_SD CL_ISIM
 çakmakçı CL_ISIM
 çakmaklı CL_ISIM
 çakmaktaşı IS_BILEŞ CL_ISIM
