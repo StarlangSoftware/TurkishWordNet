@@ -29418,7 +29418,6 @@ nezleotu IS_BILEŞ CL_ISIM
 nezret F5PR CL_FIIL
 nezt CL_ISIM
 nezzam IS_OA
-nıkris CL_ISIM
 nısfınnehar CL_ISIM
 nısfiye CL_ISIM
 nısıf IS_UD IS_ADJ

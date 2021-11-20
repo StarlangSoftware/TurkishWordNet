@@ -2855,7 +2855,7 @@ asyalı IS_OA
 asye IS_OA
 asyön CL_ISIM
 aş F5PR-NO-REF CL_ISIM CL_FIIL
-aşağı IS_KI CL_ISIM IS_ADJ
+aşağı IS_KI IS_ADJ CL_ISIM
 aşağıayrancı IS_OA
 aşağıla F_GUD F4PW CL_FIIL
 aşağılat CL_FIIL
