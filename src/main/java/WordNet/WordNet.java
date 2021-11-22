@@ -419,16 +419,20 @@ public class WordNet {
                 if (mergedOne != null) {
                     for (int i = 1; i < synSetIds.length; i++) {
                         SynSet toBeMerged = getSynSetWithId(synSetIds[i]);
-                        if (toBeMerged != null && mergedOne.getPos().equals(toBeMerged.getPos())) {
-                            if (!containsSameLiteral(mergedOne, toBeMerged)){
-                                mergedOne.mergeSynSet(toBeMerged);
-                                removeSynSet(toBeMerged);
-                                updateAllRelationsAccordingToNewSynSet(toBeMerged, mergedOne);
+                        if (toBeMerged != null){
+                            if (mergedOne.getPos().equals(toBeMerged.getPos())) {
+                                if (!containsSameLiteral(mergedOne, toBeMerged)){
+                                    mergedOne.mergeSynSet(toBeMerged);
+                                    removeSynSet(toBeMerged);
+                                    updateAllRelationsAccordingToNewSynSet(toBeMerged, mergedOne);
+                                } else {
+                                    System.out.println(line + " contains the same literals");
+                                }
                             } else {
-                                System.out.println(line + " contains the same literals");
+                                System.out.println(line + " contains synsets with different pos");
                             }
                         } else {
-                            System.out.println(line + " contains synsets with different pos");
+                            System.out.println(line + " contains " + synSetIds[i] + " which does not exist");
                         }
                     }
                 } else {

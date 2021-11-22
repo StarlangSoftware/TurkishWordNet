@@ -7242,7 +7242,6 @@ cırnak IS_SD CL_ISIM
 cırnık IS_SD CL_ISIM
 cırtla F_GUD F4PW CL_FIIL
 cırtlak IS_ADJ
-cıva CL_ISIM
 cıvadra CL_ISIM
 cıvaoğlu IS_OA
 cıvata CL_ISIM
