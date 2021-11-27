@@ -12836,7 +12836,6 @@ femke IS_OA
 fen IS_ST CL_ISIM
 fena CL_ISIM IS_ADJ
 fenalaş CL_FIIL
-fenalaştır CL_FIIL
 fenalık IS_SD CL_ISIM
 fener IS_OA CL_ISIM
 fenerbahçe IS_OA
@@ -13089,6 +13088,7 @@ fışkın CL_ISIM
 fışkır F4PR CL_FIIL
 fışkırdak IS_SD CL_ISIM
 fışkırık IS_SD CL_ISIM
+fışkırma CL_ISIM
 fışkırtı CL_ISIM
 fışla F_GUD F4PW CL_FIIL
 fışna CL_FIIL
@@ -23688,7 +23688,7 @@ lokavt CL_ISIM
 loke IS_OA
 lokma CL_ISIM
 lokmacı CL_ISIM
-lokmagöz IS_ADJ
+lokmagöz CL_ISIM
 lokman IS_OA
 lokmanruhu IS_BILEŞ CL_ISIM
 lokomobil CL_ISIM

@@ -12235,7 +12235,6 @@ fen IS_ST CL_ISIM
 fena IS_ADJ
 fenâ CL_ISIM
 fenalaş CL_FIIL
-fenalaştır CL_FIIL
 fenalık IS_SD CL_ISIM
 fener IS_OA CL_ISIM
 fenerbahçe IS_OA

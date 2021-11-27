@@ -12772,7 +12772,6 @@ femke IS_OA
 fen IS_ST CL_ISIM
 fena CL_ISIM IS_ADJ
 fenalaş CL_FIIL
-fenalaştır CL_FIIL
 fenalık IS_SD CL_ISIM
 fener IS_OA CL_ISIM
 fenerbahçe IS_OA
@@ -13029,6 +13028,7 @@ fışkın CL_ISIM
 fışkır F4PR CL_FIIL
 fışkırdak IS_SD CL_ISIM
 fışkırık IS_SD CL_ISIM
+fışkırma CL_ISIM
 fışkırtı CL_ISIM
 fışla F_GUD F4PW CL_FIIL
 fışna CL_FIIL
@@ -41393,7 +41393,7 @@ zağnos IS_OA
 zahid IS_OA
 zahide IS_OA
 zahir IS_OA CL_ISIM
-zâhir CL_ISIM IS_ADVERB IS_ADJ
+zâhir IS_ADVERB CL_ISIM IS_ADJ
 zahire IS_OA CL_ISIM
 zâhiren IS_ADVERB
 zahirî IS_ADJ
@@ -41416,7 +41416,7 @@ zain IS_OA
 zainab IS_OA
 zaire IS_OA
 zaireli IS_OA
-zait IS_OA IS_SD CL_ISIM IS_ADJ
+zait IS_OA IS_SD IS_ADJ CL_ISIM
 zaki IS_OA
 zakir IS_OA
 zakire IS_OA
