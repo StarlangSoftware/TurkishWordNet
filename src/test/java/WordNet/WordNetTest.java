@@ -21,8 +21,9 @@ public class WordNetTest {
         turkish = new WordNet();
     }
 
+    @Test
     public void generateWordNet(){
-        String year = "1974";
+        String year = "1983";
         WordNet wordNet = new WordNet("a.txt", new Locale("tr"));
         try {
             Scanner input = new Scanner(new File(year + ".txt"));
