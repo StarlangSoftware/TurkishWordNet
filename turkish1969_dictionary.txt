@@ -612,6 +612,7 @@ aglütinin CL_ISIM
 agnes IS_OA
 agnieszka IS_OA
 agnosi CL_ISIM
+agnostik IS_SD CL_ISIM
 agnostisizm CL_ISIM
 agop IS_OA
 agopyan IS_OA
@@ -23767,7 +23768,7 @@ lokavt CL_ISIM
 loke IS_OA
 lokma CL_ISIM
 lokmacı CL_ISIM
-lokmagöz IS_ADJ
+lokmagöz CL_ISIM
 lokman IS_OA
 lokmanruhu IS_BILEŞ CL_ISIM
 lokomobil CL_ISIM

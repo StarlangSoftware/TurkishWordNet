@@ -21,7 +21,6 @@ public class WordNetTest {
         turkish = new WordNet();
     }
 
-    @Test
     public void generateWordNet(){
         String year = "1983";
         WordNet wordNet = new WordNet("a.txt", new Locale("tr"));
@@ -106,7 +105,7 @@ public class WordNetTest {
 
     @Test
     public void testSize() {
-        assertEquals(77099, turkish.size());
+        assertEquals(77100, turkish.size());
     }
 
     @Test
@@ -115,7 +114,7 @@ public class WordNetTest {
         for (SynSet synSet : turkish.synSetList()){
             literalCount += synSet.getSynonym().literalSize();
         }
-        assertEquals(109013, literalCount);
+        assertEquals(109007, literalCount);
     }
 
     @Test
@@ -125,7 +124,7 @@ public class WordNetTest {
 
     @Test
     public void testLiteralList() {
-        assertEquals(80944, turkish.literalList().size());
+        assertEquals(80942, turkish.literalList().size());
     }
 
     @Test
@@ -195,10 +194,10 @@ public class WordNetTest {
 
     @Test
     public void testGetSynSetsWithPartOfSpeech() {
-        assertEquals(43872, turkish.getSynSetsWithPartOfSpeech(Pos.NOUN).size());
-        assertEquals(17773, turkish.getSynSetsWithPartOfSpeech(Pos.VERB).size());
-        assertEquals(12409, turkish.getSynSetsWithPartOfSpeech(Pos.ADJECTIVE).size());
-        assertEquals(2547, turkish.getSynSetsWithPartOfSpeech(Pos.ADVERB).size());
+        assertEquals(43871, turkish.getSynSetsWithPartOfSpeech(Pos.NOUN).size());
+        assertEquals(17776, turkish.getSynSetsWithPartOfSpeech(Pos.VERB).size());
+        assertEquals(12406, turkish.getSynSetsWithPartOfSpeech(Pos.ADJECTIVE).size());
+        assertEquals(2549, turkish.getSynSetsWithPartOfSpeech(Pos.ADVERB).size());
         assertEquals(339, turkish.getSynSetsWithPartOfSpeech(Pos.INTERJECTION).size());
         assertEquals(68, turkish.getSynSetsWithPartOfSpeech(Pos.PRONOUN).size());
         assertEquals(61, turkish.getSynSetsWithPartOfSpeech(Pos.CONJUNCTION).size());
