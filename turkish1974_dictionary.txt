@@ -20577,7 +20577,7 @@ kabza CL_ISIM
 kabzımal CL_ISIM
 kacper IS_OA
 kaç F2P1-NO-REF IS_ADJ CL_FIIL
-kaçak IS_SD CL_ISIM IS_ADJ
+kaçak IS_SD IS_ADJ CL_ISIM
 kaçakçı CL_ISIM
 kaçakçılık IS_SD CL_ISIM
 kaçaklık CL_ISIM
