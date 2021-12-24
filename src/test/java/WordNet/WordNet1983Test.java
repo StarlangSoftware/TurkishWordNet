@@ -27,7 +27,7 @@ public class WordNet1983Test extends PreviousWordNetTest{
 
     @Test
     public void testSize() {
-        assertEquals(55224, previuosWordNet.size());
+        assertEquals(55183, previuosWordNet.size());
     }
 
     @Test
@@ -41,16 +41,16 @@ public class WordNet1983Test extends PreviousWordNetTest{
         for (SynSet synSet : previuosWordNet.synSetList()){
             literalCount += synSet.getSynonym().literalSize();
         }
-        assertEquals(72439, literalCount);
+        assertEquals(72435, literalCount);
     }
 
     @Test
     public void testGetSynSetsWithPartOfSpeech() {
-        assertEquals(28831, previuosWordNet.getSynSetsWithPartOfSpeech(Pos.NOUN).size());
+        assertEquals(28791, previuosWordNet.getSynSetsWithPartOfSpeech(Pos.NOUN).size());
         assertEquals(13531, previuosWordNet.getSynSetsWithPartOfSpeech(Pos.VERB).size());
-        assertEquals(9197, previuosWordNet.getSynSetsWithPartOfSpeech(Pos.ADJECTIVE).size());
-        assertEquals(1860, previuosWordNet.getSynSetsWithPartOfSpeech(Pos.ADVERB).size());
-        assertEquals(1598, previuosWordNet.getSynSetsWithPartOfSpeech(Pos.INTERJECTION).size());
+        assertEquals(9195, previuosWordNet.getSynSetsWithPartOfSpeech(Pos.ADJECTIVE).size());
+        assertEquals(1865, previuosWordNet.getSynSetsWithPartOfSpeech(Pos.ADVERB).size());
+        assertEquals(1594, previuosWordNet.getSynSetsWithPartOfSpeech(Pos.INTERJECTION).size());
         assertEquals(81, previuosWordNet.getSynSetsWithPartOfSpeech(Pos.CONJUNCTION).size());
         assertEquals(66, previuosWordNet.getSynSetsWithPartOfSpeech(Pos.PRONOUN).size());
         assertEquals(60, previuosWordNet.getSynSetsWithPartOfSpeech(Pos.PREPOSITION).size());
@@ -86,6 +86,9 @@ public class WordNet1983Test extends PreviousWordNetTest{
 
     @Test
     public void testSameLiteralSameSynSetCheck() {
+        for (SynSet synSet : previuosWordNet.sameLiteralSameSynSetCheck()){
+            System.out.println(synSet.getId());
+        }
         assertEquals(0, previuosWordNet.sameLiteralSameSynSetCheck().size());
     }
 

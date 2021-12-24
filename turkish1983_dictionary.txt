@@ -4562,7 +4562,7 @@ bakkam CL_ISIM
 bakla CL_ISIM
 baklaçiçeği IS_BILEŞ IS_B_SD IS_ADJ CL_ISIM
 baklagiller CL_ISIM
-baklakırı IS_BILEŞ IS_ADJ
+baklakırı IS_BILEŞ CL_ISIM
 baklamsı IS_ADJ
 baklan IS_OA CL_ISIM
 baklava CL_ISIM
@@ -15109,8 +15109,8 @@ fetvahane CL_ISIM
 fevç CL_ISIM IS_DUP
 feveran CL_ISIM
 fevk CL_ISIM
-fevkalade IS_ADJ IS_ADVERB
-fevkalâde IS_INTERJ
+fevkalade IS_ADJ
+fevkalâde IS_ADJ
 fevkalâdelik CL_ISIM
 fevkalbeşer IS_ADJ
 fevkanî IS_ADJ
@@ -15506,7 +15506,7 @@ flor IS_OA CL_ISIM
 flora IS_OA CL_ISIM
 floransa IS_OA
 florencia IS_OA
-floresan IS_ADJ
+floresan CL_ISIM
 floresans CL_ISIM
 flori CL_ISIM
 florian IS_OA
@@ -16984,7 +16984,7 @@ görevdaş IS_ADJ
 görevdeşlik CL_ISIM
 görevlen CL_FIIL
 görevlendir CL_FIIL
-görevli CL_ISIM IS_ADJ
+görevli IS_ADJ CL_ISIM
 görevlilik IS_SD CL_ISIM
 görevsel IS_ADJ
 görevselcilik IS_SD CL_ISIM
@@ -21255,7 +21255,7 @@ inme CL_ISIM
 inmeli IS_ADJ
 inorganik IS_SD IS_ADJ CL_ISIM
 inönü IS_OA
-insaf IS_OA CL_ISIM IS_INTERJ
+insaf IS_OA CL_ISIM
 insaflı IS_ADJ
 insaflılık CL_ISIM
 insafsız IS_ADJ
@@ -28326,7 +28326,7 @@ loke IS_OA
 lokma CL_ISIM
 lokmacı CL_ISIM
 lokmacılık CL_ISIM
-lokmagöz IS_ADJ
+lokmagöz CL_ISIM
 lokman IS_OA
 lokmanruhu IS_BILEŞ CL_ISIM
 lokomobil CL_ISIM
@@ -29716,7 +29716,7 @@ memorandum CL_ISIM
 memphis IS_OA
 memul IS_ADJ
 memun IS_OA
-memur CL_ISIM IS_ADJ
+memur IS_ADJ CL_ISIM
 memurin CL_ISIM
 menaf IS_OA
 menafi CL_ISIM
@@ -33490,7 +33490,7 @@ omuzdaşlık CL_ISIM
 omuzla F_GUD F4PW CL_FIIL
 omuzluk IS_SD CL_ISIM
 on IS_ADJ CL_ISIM CL_FIIL
-ona IS_OA F_GUD F4PW CL_ISIM CL_FIIL
+ona IS_OA F_GUD F4PW IS_ADVERB CL_FIIL
 onaltılık IS_SD CL_ISIM
 onama CL_ISIM
 onan CL_FIIL
@@ -33516,10 +33516,10 @@ onbaşılık IS_SD CL_ISIM
 onbulak IS_OA
 onca IS_ADJ IS_ADVERB
 onculayın IS_ADVERB
-onda CL_ISIM
+onda IS_ADVERB
 ondalık IS_SD CL_ISIM IS_ADJ
 ondalıkçı CL_ISIM
-ondan CL_ISIM IS_ADVERB
+ondan IS_ADVERB
 ondokuzmayıs IS_OA
 ondur F4PR CL_FIIL
 ondüle IS_ADJ
@@ -34178,7 +34178,7 @@ ozon CL_ISIM
 ölmüş CL_ISIM IS_ADJ
 ölü CL_ISIM IS_ADJ
 ölük IS_SD IS_ADJ
-ölüm CL_ISIM IS_INTERJ
+ölüm CL_ISIM
 ölümcül IS_ADJ
 ölümlü IS_ADJ CL_ISIM
 ölümlük IS_SD CL_ISIM
@@ -34567,7 +34567,7 @@ ozon CL_ISIM
 özenli IS_OA IS_ADJ
 özensiz IS_ADJ
 özenti CL_ISIM
-özentici IS_ADJ
+özentici CL_ISIM
 özentili IS_ADJ
 özentisiz IS_ADJ
 özer IS_OA
@@ -41993,10 +41993,10 @@ szymon IS_OA
 şukre IS_OA
 şule IS_OA CL_ISIM
 şumşad IS_OA
-şuna CL_ISIM
+şuna IS_ADVERB
 şunca IS_ADJ
-şunda CL_ISIM IS_DUP
-şundan CL_ISIM IS_DUP
+şunda IS_ADVERB IS_DUP
+şundan IS_ADVERB IS_DUP
 şungar IS_OA
 şunlar IS_ZM
 şunu CL_ISIM IS_DUP
