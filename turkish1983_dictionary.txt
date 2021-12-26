@@ -526,6 +526,7 @@ adenit CL_ISIM
 adese CL_ISIM
 adet IS_SD CL_ISIM
 âdet IS_SD CL_ISIM
+âdeta IS_ADVERB
 adetçe IS_ADVERB
 adetullah IS_OA
 adeviye IS_OA
@@ -5744,6 +5745,7 @@ benzetiş CL_ISIM
 benzetme CL_ISIM
 benzeyiş CL_ISIM
 benzin CL_ISIM
+benzinci IS_ADJ CL_ISIM
 benzol IS_UU CL_ISIM
 bera IS_OA
 beraat IS_UU CL_ISIM
@@ -6470,6 +6472,7 @@ birazcık IS_SD IS_ADJ
 birazdan IS_ADVERB
 birben IS_OA
 birbiri IS_ZM
+birbirleri IS_ZM
 bircan IS_OA
 birce IS_OA
 birci IS_ADJ CL_ISIM
@@ -10695,7 +10698,7 @@ değerli IS_ADJ
 değersiz IS_ADJ
 değersizlik CL_ISIM
 değgin IS_ADJ
-değil IS_ADVERB
+değil IS_ADVERB CL_ISIM
 değim CL_ISIM
 değimli IS_ADJ
 değimsiz IS_ADJ
@@ -11188,6 +11191,7 @@ deşele F_GUD F4PW CL_FIIL
 deşifre IS_ADJ
 deşik IS_DUP IS_ADJ CL_ISIM
 deşil CL_FIIL
+detay CL_ISIM
 detektif CL_ISIM
 detektör CL_ISIM
 deterjan CL_ISIM
@@ -18766,6 +18770,7 @@ hatılla F_GUD F4PW CL_FIIL
 hatır IS_OA CL_ISIM IS_DUP
 hatıra IS_OA CL_ISIM
 hatırat CL_ISIM
+hatırla F_GUD F4PW CL_FIIL
 hatırlama CL_ISIM
 hatırlanma CL_ISIM
 hatırlat CL_FIIL
@@ -18884,7 +18889,7 @@ hayat IS_OA CL_ISIM
 hayatağacı IS_BILEŞ IS_B_SD CL_ISIM
 hayatefza IS_OA
 hayatengiz IS_OA
-hayati IS_OA
+hayati IS_OA IS_ADJ
 hayatiyet CL_ISIM
 hayato IS_OA
 hayda F_GUD F4PW IS_INTERJ CL_FIIL
@@ -22612,7 +22617,7 @@ kadışehri IS_OA
 kadife IS_OA IS_ADJ CL_ISIM
 kadim IS_OA IS_ADJ
 kadime IS_OA
-kadir IS_OA IS_UD CL_ISIM IS_ADJ
+kadir IS_OA IS_UD IS_UDD CL_ISIM IS_ADJ
 kadîr IS_OA
 kadirbilir IS_ADJ
 kadirbilirlik IS_SD CL_ISIM
@@ -24053,7 +24058,7 @@ kâtibe CL_ISIM
 kâtibiadil CL_ISIM
 katie IS_OA
 katife IS_OA
-katil IS_UD CL_ISIM IS_ADJ
+katil IS_UD IS_UDD CL_ISIM IS_ADJ
 katileş CL_FIIL
 katillik IS_SD CL_ISIM
 katimerini IS_OA
@@ -28914,6 +28919,7 @@ malulen IS_ADVERB
 malullük CL_ISIM
 malum IS_OA IS_ADJ
 malûm CL_ISIM IS_ADJ
+malumat CL_ISIM
 mâlûmât CL_ISIM
 malûmatfüruş CL_ISIM
 malûmatlı IS_ADJ
@@ -30045,7 +30051,7 @@ methiye IS_OA CL_ISIM
 metil CL_ISIM
 metilen CL_ISIM
 metilik IS_ADJ
-metin IS_OA IS_UD CL_ISIM
+metin IS_OA IS_UD IS_UDD CL_ISIM
 metîn IS_OA IS_ADJ
 metine IS_OA
 metiner IS_OA
@@ -31272,7 +31278,7 @@ mübadele CL_ISIM
 mübadil IS_ADJ CL_ISIM
 mübahase CL_ISIM
 mübahat IS_OA
-mübalâğa CL_ISIM
+mübalağa CL_ISIM
 mübalağacı IS_BILEŞ IS_B_SD CL_ISIM
 mübalağalı IS_ADJ
 mübarek IS_OA IS_SD IS_ADJ
@@ -38328,6 +38334,7 @@ savniye IS_OA
 savran IS_OA
 savruk IS_ADJ
 savrukluk IS_SD CL_ISIM
+savrul F4PW CL_FIIL
 savruntu CL_ISIM
 savsa F_GUD CL_FIIL
 savsak IS_SD IS_ADJ
@@ -43872,6 +43879,7 @@ teşerru IS_OA
 teşerrüf IS_OA CL_ISIM
 teşevvüş CL_ISIM
 teşhir CL_ISIM
+teşhis CL_ISIM
 teşkil CL_ISIM
 teşkilât CL_ISIM
 teşkilâtçı CL_ISIM
@@ -44545,6 +44553,7 @@ toput CL_ISIM
 topuz IS_OA CL_ISIM
 topuzlu IS_ADJ
 topyekun IS_ADVERB
+topyekûn IS_ADVERB
 tor IS_OA CL_ISIM IS_ADJ
 torak IS_SD CL_ISIM
 toralp IS_OA

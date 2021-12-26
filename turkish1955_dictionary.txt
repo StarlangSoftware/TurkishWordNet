@@ -18745,7 +18745,7 @@ kadife IS_OA CL_ISIM
 kadim IS_OA IS_ADJ
 kadime IS_OA
 kadinne CL_ISIM
-kadir IS_OA IS_UD CL_ISIM IS_ADJ
+kadir IS_OA IS_UD IS_UDD CL_ISIM IS_ADJ
 kadîr IS_OA
 kadirbillah IS_OA
 kadire IS_OA
@@ -19786,7 +19786,7 @@ katibe IS_OA
 kâtibiadil CL_ISIM
 katie IS_OA
 katife IS_OA
-katil IS_UD IS_ADJ CL_ISIM
+katil IS_UD IS_UDD IS_ADJ CL_ISIM
 katimerini IS_OA
 katip IS_OA
 kâtip IS_SD CL_ISIM
@@ -23545,6 +23545,7 @@ maltız IS_OA CL_ISIM
 mâlûl IS_ADJ
 malum IS_OA
 malûm CL_ISIM IS_ADJ
+malûmat CL_ISIM
 mâlûmât CL_ISIM
 malûmatfüruş CL_ISIM
 malûmatlı IS_ADJ
@@ -24567,7 +24568,7 @@ methal IS_UU CL_ISIM
 methar CL_ISIM
 methet F_SD F5PR CL_FIIL
 methiye IS_OA
-metin IS_OA IS_UD CL_ISIM
+metin IS_OA IS_UD IS_UDD CL_ISIM
 metîn IS_OA IS_ADJ
 metine IS_OA
 metiner IS_OA

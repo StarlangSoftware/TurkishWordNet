@@ -40,7 +40,7 @@ public class WordNet1969Test extends PreviousWordNetTest{
         for (SynSet synSet : previuosWordNet.synSetList()){
             literalCount += synSet.getSynonym().literalSize();
         }
-        assertEquals(47437, literalCount);
+        assertEquals(47438, literalCount);
     }
 
     @Test
@@ -62,7 +62,7 @@ public class WordNet1969Test extends PreviousWordNetTest{
 
     @Test
     public void testLiteralList() {
-        assertEquals(36050, previuosWordNet.literalList().size());
+        assertEquals(36051, previuosWordNet.literalList().size());
     }
 
     @Test

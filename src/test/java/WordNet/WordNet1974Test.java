@@ -62,7 +62,7 @@ public class WordNet1974Test extends PreviousWordNetTest{
 
     @Test
     public void testLiteralList() {
-        assertEquals(41608, previuosWordNet.literalList().size());
+        assertEquals(41609, previuosWordNet.literalList().size());
     }
 
     @Test
