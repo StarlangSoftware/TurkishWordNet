@@ -1915,7 +1915,7 @@ amatem IS_OA
 amatör CL_ISIM
 amaya IS_OA
 amazon CL_ISIM
-ambalâj CL_ISIM
+ambalaj CL_ISIM
 ambar IS_OA CL_ISIM
 ambarcı CL_ISIM
 ambargo CL_ISIM

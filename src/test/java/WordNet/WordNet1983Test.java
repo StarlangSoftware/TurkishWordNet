@@ -28,7 +28,7 @@ public class WordNet1983Test extends PreviousWordNetTest{
 
     @Test
     public void testSize() throws FileNotFoundException {
-        assertEquals(55188, previuosWordNet.size());
+        assertEquals(55187, previuosWordNet.size());
     }
 
     @Test
@@ -42,14 +42,14 @@ public class WordNet1983Test extends PreviousWordNetTest{
         for (SynSet synSet : previuosWordNet.synSetList()){
             literalCount += synSet.getSynonym().literalSize();
         }
-        assertEquals(72450, literalCount);
+        assertEquals(72452, literalCount);
     }
 
     @Test
     public void testGetSynSetsWithPartOfSpeech() {
-        assertEquals(28794, previuosWordNet.getSynSetsWithPartOfSpeech(Pos.NOUN).size());
-        assertEquals(13532, previuosWordNet.getSynSetsWithPartOfSpeech(Pos.VERB).size());
-        assertEquals(9196, previuosWordNet.getSynSetsWithPartOfSpeech(Pos.ADJECTIVE).size());
+        assertEquals(28793, previuosWordNet.getSynSetsWithPartOfSpeech(Pos.NOUN).size());
+        assertEquals(13533, previuosWordNet.getSynSetsWithPartOfSpeech(Pos.VERB).size());
+        assertEquals(9195, previuosWordNet.getSynSetsWithPartOfSpeech(Pos.ADJECTIVE).size());
         assertEquals(1865, previuosWordNet.getSynSetsWithPartOfSpeech(Pos.ADVERB).size());
         assertEquals(1594, previuosWordNet.getSynSetsWithPartOfSpeech(Pos.INTERJECTION).size());
         assertEquals(81, previuosWordNet.getSynSetsWithPartOfSpeech(Pos.CONJUNCTION).size());
@@ -64,7 +64,7 @@ public class WordNet1983Test extends PreviousWordNetTest{
 
     @Test
     public void testLiteralList() {
-        assertEquals(51683, previuosWordNet.literalList().size());
+        assertEquals(51684, previuosWordNet.literalList().size());
     }
 
     @Test

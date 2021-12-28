@@ -2137,7 +2137,7 @@ amatem IS_OA
 amatör CL_ISIM
 amaya IS_OA
 amazon CL_ISIM
-ambalâj CL_ISIM
+ambalaj CL_ISIM
 ambalajcı CL_ISIM
 ambalajla F_GUD F4PW CL_FIIL
 ambar IS_OA CL_ISIM
@@ -2449,7 +2449,7 @@ anıtsal IS_ADJ
 anıttepe IS_OA
 anız CL_ISIM
 anızlık CL_ISIM
-âni IS_ADVERB IS_ADJ
+ani IS_ADVERB IS_ADJ
 ania IS_OA
 anide IS_ADVERB
 aniden IS_ADVERB
@@ -2621,8 +2621,8 @@ antropomorfizm CL_ISIM
 antroposantrizm CL_ISIM
 antrparantez IS_ADVERB
 antwerp IS_OA
-anus CL_ISIM
 anut IS_ADJ
+anüs CL_ISIM
 anya IS_OA
 anyon CL_ISIM
 anzak IS_OA
@@ -4188,7 +4188,7 @@ azam IS_OA
 azamet IS_OA CL_ISIM
 azametli IS_ADJ
 azamettin IS_OA
-âzami IS_ADJ
+azami IS_ADJ
 azap IS_SD CL_ISIM
 azar CL_ISIM IS_DUP
 azaria IS_OA
@@ -9781,7 +9781,6 @@ cyrus IS_OA
 çiftdişliler CL_ISIM
 çifte CL_ISIM IS_ADJ
 çiftehane CL_ISIM
-çifteker CL_ISIM
 çiftekercilik CL_ISIM
 çiftele F_GUD F4PW CL_FIIL
 çifteler IS_OA
@@ -9798,8 +9797,9 @@ cyrus IS_OA
 çiftlik IS_OA IS_SD CL_ISIM
 çiftlikköy IS_OA
 çiftparmaklılar CL_ISIM
+çiftteker CL_ISIM
 çifttekerci CL_ISIM
-çifyıldız CL_ISIM
+çiftyıldız CL_ISIM
 çigan IS_ADJ CL_ISIM
 çiğ IS_ADJ
 çiğbörek IS_SD CL_ISIM
@@ -10284,6 +10284,7 @@ dağıstan IS_OA
 dağıstanlı IS_OA IS_ADJ CL_ISIM
 dağıt F5PR CL_FIIL
 dağıtıcı CL_ISIM
+dağıtım CL_ISIM
 daği CL_ISIM
 dağkeçisi IS_BILEŞ CL_ISIM
 dağla F_GUD F4PW CL_FIIL
@@ -14927,7 +14928,7 @@ fellik IS_DUP
 felsefe CL_ISIM
 felsefeci CL_ISIM
 felsefesel IS_ADJ
-felsefî IS_ADJ
+felsefi IS_ADJ
 femina IS_OA
 feminist CL_ISIM
 feminizm CL_ISIM
@@ -21242,8 +21243,7 @@ inişli IS_ADJ
 inkâr CL_ISIM
 inkıbaz CL_ISIM
 inkıbazlık CL_ISIM
-inkılap IS_OA
-inkılâp IS_SD CL_ISIM
+inkılap IS_OA IS_SD CL_ISIM
 inkılâpçı CL_ISIM
 inkılapçılık CL_ISIM
 inkıraz CL_ISIM
@@ -21917,7 +21917,7 @@ itfaiye CL_ISIM
 itfaiyeci CL_ISIM
 ithaf CL_ISIM
 ithal IS_UU CL_ISIM
-ithalât CL_ISIM
+ithalat CL_ISIM
 ithalatçı CL_ISIM
 ithalatçılık CL_ISIM
 itham CL_ISIM
@@ -28621,7 +28621,7 @@ mağdurluk CL_ISIM
 mağfiret IS_OA CL_ISIM
 mağfur IS_ADJ
 mağlubiyet CL_ISIM
-mağlûp IS_ADJ
+mağlup IS_SD IS_ADJ
 mağmum IS_ADJ
 mağreb IS_OA
 mağrep IS_OA
@@ -28936,10 +28936,8 @@ mamulat CL_ISIM
 mamur IS_OA IS_ADJ
 mamure CL_ISIM
 mamut CL_ISIM
-mana IS_OA
-mâna CL_ISIM
+mana IS_OA CL_ISIM
 manalı IS_ADJ
-mânalı IS_ADJ
 manas CL_ISIM
 manasız IS_ADJ
 mânasız IS_ADJ
@@ -28979,7 +28977,7 @@ mandıra CL_ISIM
 mandolin CL_ISIM
 manej CL_ISIM
 mânen IS_ADVERB
-mânevi IS_ADJ
+manevi IS_ADJ
 mâneviyat CL_ISIM
 manevra CL_ISIM
 manga CL_ISIM
@@ -28996,7 +28994,7 @@ mani CL_ISIM
 mâni CL_ISIM
 mania CL_ISIM
 manialı IS_ADJ
-mânidar IS_ADJ
+manidar IS_ADJ
 manifatura CL_ISIM
 manifaturacı CL_ISIM
 manifesto CL_ISIM
@@ -35023,8 +35021,7 @@ paraguay IS_OA
 paraguaylı IS_OA
 paraka CL_ISIM
 parakete CL_ISIM
-paraketecı CL_ISIM
-paraketeci IS_ADJ
+paraketeci IS_ADJ CL_ISIM
 parala F_GUD F4PW CL_FIIL
 paralaks CL_ISIM
 paralan CL_FIIL
@@ -37897,8 +37894,7 @@ samih IS_OA
 samiha IS_OA
 samim IS_OA
 samime IS_OA
-samimi IS_OA
-samimî IS_ADJ IS_ADVERB
+samimi IS_OA IS_ADJ IS_ADVERB
 samimilik IS_SD CL_ISIM
 samimiyet CL_ISIM
 samimiyetle IS_ADVERB
@@ -38664,11 +38660,9 @@ selahaddin IS_OA
 selahattin IS_OA
 selâhattin IS_OA
 selahi IS_OA
-selam IS_OA
-selâm CL_ISIM
+selam IS_OA CL_ISIM
 selameddin IS_OA
-selamet IS_OA
-selâmet CL_ISIM
+selamet IS_OA CL_ISIM
 selâmetle CL_FIIL
 selamettin IS_OA
 selami IS_OA
@@ -39396,7 +39390,7 @@ sığlaş CL_FIIL
 sığlık IS_SD IS_ADJ CL_ISIM
 sıhhat IS_UU CL_ISIM
 sıhhatli IS_ADJ
-sıhhî IS_ADJ
+sıhhi IS_ADJ
 sıhhiye CL_ISIM
 sıhhiyeci CL_ISIM
 sıhriyet CL_ISIM
@@ -39936,7 +39930,7 @@ siyasa CL_ISIM
 siyasal IS_ADJ
 siyaset IS_OA CL_ISIM
 siyasetçi CL_ISIM
-siyasî IS_ADJ CL_ISIM
+siyasi IS_ADJ CL_ISIM
 siyasiyat CL_ISIM
 siyatik IS_SD CL_ISIM
 siyavuş IS_OA
@@ -40185,6 +40179,7 @@ soral IS_OA
 soren IS_OA
 sorgu CL_ISIM
 sorguç IS_OA IS_SD CL_ISIM
+sorgula F_GUD F4PW CL_FIIL
 sorgun IS_OA CL_ISIM
 sorin IS_OA
 sorit CL_ISIM
@@ -40823,9 +40818,9 @@ süergin IS_OA
 süerkan IS_OA
 süersan IS_OA
 süet CL_ISIM
-süflî IS_ADJ
-süflîleş CL_FIIL
-süflîlik CL_ISIM
+süfli IS_ADJ
+süflileş CL_FIIL
+süflilik IS_SD CL_ISIM
 süfrajet CL_ISIM
 süfyan IS_OA
 süha IS_OA
@@ -40938,8 +40933,7 @@ sünnetli IS_ADJ
 sünnetlik IS_ADJ
 sünnetsiz IS_ADJ
 sünnetullah IS_OA
-sünni IS_OA
-sünnî CL_ISIM
+sünni IS_OA CL_ISIM
 sünnîlik CL_ISIM
 sünter IS_OA
 sünuhat CL_ISIM
@@ -41083,6 +41077,7 @@ sütölçer CL_ISIM
 sütsüz IS_ADJ CL_ISIM
 sütsüzlük IS_SD CL_ISIM
 sütun CL_ISIM
+sütyen CL_ISIM
 sütyenci CL_ISIM
 sütyencilik IS_SD CL_ISIM
 süvari IS_OA CL_ISIM
@@ -41756,7 +41751,7 @@ szymon IS_OA
 şeyh CL_ISIM
 şeyhlik CL_ISIM
 şeyhmus IS_OA
-şeyhülislâm CL_ISIM
+şeyhülislam CL_ISIM
 şeyma IS_OA
 şeytan CL_ISIM IS_ADJ
 şeytanarabası IS_BILEŞ CL_ISIM
@@ -41845,7 +41840,7 @@ szymon IS_OA
 şifreli IS_ADJ
 şihab IS_OA
 şihabeddin IS_OA
-şiî CL_ISIM
+şii CL_ISIM
 şiilik CL_ISIM
 şiin IS_OA
 şiir IS_OA CL_ISIM
@@ -43881,8 +43876,8 @@ teşevvüş CL_ISIM
 teşhir CL_ISIM
 teşhis CL_ISIM
 teşkil CL_ISIM
-teşkilât CL_ISIM
-teşkilâtçı CL_ISIM
+teşkilat CL_ISIM
+teşkilatçı CL_ISIM
 teşkilatçılık IS_SD CL_ISIM
 teşkilatlandır CL_FIIL
 teşkilatlı IS_ADJ
@@ -45499,9 +45494,9 @@ uhra IS_OA
 uhrevî IS_ADJ
 uhuvvet IS_OA CL_ISIM
 ukab IS_OA
-ukalâ CL_ISIM
+ukala CL_ISIM
 ukalaca IS_ADVERB
-ukalâlık CL_ISIM
+ukalalık IS_SD CL_ISIM
 ukbe IS_OA
 ukde IS_OA CL_ISIM
 ukhuvan IS_OA
@@ -47149,17 +47144,17 @@ yabangülü IS_OA IS_BILEŞ CL_ISIM
 yabanhavucu IS_BILEŞ IS_B_SD CL_ISIM
 yabanıl IS_ADJ
 yabanıllık CL_ISIM
-yabanî IS_ADJ
+yabani IS_ADJ
 yabanice IS_ADVERB
-yabanîıspanak CL_ISIM
-yabanîkimyon CL_ISIM
-yabanîkimyongiller CL_ISIM
-yabanîlahana CL_ISIM
+yabaniıspanak IS_SD CL_ISIM
+yabanikimyon CL_ISIM
+yabanikimyongiller CL_ISIM
+yabanilahana CL_ISIM
 yabanileş CL_FIIL
-yabanîlik CL_ISIM
-yabanîmercanköşk CL_ISIM
+yabanilik IS_SD CL_ISIM
+yabanimercanköşk CL_ISIM
 yabaninciri IS_BILEŞ CL_ISIM
-yabanîyasemin CL_ISIM
+yabaniyasemin CL_ISIM
 yabankedisi IS_BILEŞ CL_ISIM
 yabanketeni IS_BILEŞ CL_ISIM
 yabanlık IS_SD IS_ADJ CL_ISIM
@@ -48277,8 +48272,7 @@ yevmiyeli IS_ADJ
 yeygi CL_ISIM
 yezdan IS_OA
 yezid IS_OA
-yezidi IS_OA
-yezidî CL_ISIM
+yezidi IS_OA CL_ISIM
 yezidilik CL_ISIM
 yezit IS_SD IS_ADJ CL_ISIM
 yezitlik IS_SD CL_ISIM
@@ -48320,7 +48314,7 @@ yılanbalığı IS_BILEŞ IS_B_SD CL_ISIM
 yılanbaşı IS_BILEŞ CL_ISIM
 yılancık IS_SD CL_ISIM
 yılancıl CL_ISIM
-yılankavî IS_ADJ
+yılankavi IS_ADJ
 yılantaşı IS_BILEŞ CL_ISIM
 yılanyastığı IS_BILEŞ IS_B_SD CL_ISIM
 yılanyastığıgiller CL_ISIM

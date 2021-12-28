@@ -2050,7 +2050,7 @@ amatem IS_OA
 amatör CL_ISIM
 amaya IS_OA
 amazon CL_ISIM
-ambalâj CL_ISIM
+ambalaj CL_ISIM
 ambalajla F_GUD F4PW CL_FIIL
 ambar IS_OA CL_ISIM
 ambarcı CL_ISIM
@@ -3968,7 +3968,7 @@ azam IS_OA
 azamet IS_OA CL_ISIM
 azametli IS_ADJ
 azamettin IS_OA
-âzami IS_ADJ
+azamî IS_ADJ
 azap IS_SD CL_ISIM
 azar CL_ISIM
 azaria IS_OA
