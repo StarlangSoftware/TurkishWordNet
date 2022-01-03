@@ -31,6 +31,15 @@ public class WordNet1959Test extends PreviousWordNetTest{
     }
 
     @Test
+    public void testSynSetIdCounts() {
+        CounterHashMap<String> counts = synSetIdCounts();
+        assertEquals(3550, (int) counts.get("TUR01"));
+        assertEquals(1917, (int) counts.get("TUR02"));
+        assertEquals(505, (int) counts.get("TUR03"));
+        assertEquals(29849, (int) counts.get("TUR10"));
+    }
+
+    @Test
     public void generateDictionary() {
         generateDictionary("1959");
     }

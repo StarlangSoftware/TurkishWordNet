@@ -33,6 +33,19 @@ public class WordNet1983Test extends PreviousWordNetTest{
     }
 
     @Test
+    public void testSynSetIdCounts() {
+        CounterHashMap<String> counts = synSetIdCounts();
+        assertEquals(1899, (int) counts.get("TUR01"));
+        assertEquals(1205, (int) counts.get("TUR02"));
+        assertEquals(266, (int) counts.get("TUR03"));
+        assertEquals(138, (int) counts.get("TUR04"));
+        assertEquals(540, (int) counts.get("TUR05"));
+        assertEquals(765, (int) counts.get("TUR06"));
+        assertEquals(1695, (int) counts.get("TUR07"));
+        assertEquals(48679, (int) counts.get("TUR10"));
+    }
+
+    @Test
     public void generateDictionary() {
         generateDictionary("1983");
     }

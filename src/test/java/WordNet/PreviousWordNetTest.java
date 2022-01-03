@@ -34,6 +34,14 @@ public class PreviousWordNetTest {
         return count / (items1.length + items2.length);
     }
 
+    protected CounterHashMap<String> synSetIdCounts() {
+        CounterHashMap<String> counts = new CounterHashMap<>();
+        for (SynSet synSet : previuosWordNet.synSetList()){
+            counts.put(synSet.getId().substring(0, 5));
+        }
+        return counts;
+    }
+
     protected CounterHashMap<Integer> literalWordCounts() {
         CounterHashMap<Integer> counts = new CounterHashMap<>();
         for (String literal : previuosWordNet.literalList()){
