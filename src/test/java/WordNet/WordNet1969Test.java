@@ -1,5 +1,6 @@
 package WordNet;
 
+import DataStructure.CounterHashMap;
 import Dictionary.Pos;
 import Dictionary.TurkishWordComparator;
 import Dictionary.TxtDictionary;
@@ -63,6 +64,22 @@ public class WordNet1969Test extends PreviousWordNetTest{
     @Test
     public void testLiteralList() {
         assertEquals(36051, previuosWordNet.literalList().size());
+    }
+
+    @Test
+    public void testLiteralWordCounts() {
+        CounterHashMap<Integer> counts = literalWordCounts();
+        assertEquals(25730, (int) counts.get(1));
+        assertEquals(7952, (int) counts.get(2));
+        assertEquals(1410, (int) counts.get(3));
+        assertEquals(599, (int) counts.get(4));
+        assertEquals(205, (int) counts.get(5));
+        assertEquals(94, (int) counts.get(6));
+        assertEquals(33, (int) counts.get(7));
+        assertEquals(15, (int) counts.get(8));
+        assertEquals(9, (int) counts.get(9));
+        assertEquals(3, (int) counts.get(10));
+        assertEquals(1, (int) counts.get(11));
     }
 
     @Test

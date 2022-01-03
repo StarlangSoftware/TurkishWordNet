@@ -1,5 +1,6 @@
 package WordNet;
 
+import DataStructure.CounterHashMap;
 import Dictionary.TurkishWordComparator;
 import Dictionary.TxtDictionary;
 import Dictionary.TxtWord;
@@ -31,6 +32,20 @@ public class PreviousWordNetTest {
             }
         }
         return count / (items1.length + items2.length);
+    }
+
+    protected CounterHashMap<Integer> literalWordCounts() {
+        CounterHashMap<Integer> counts = new CounterHashMap<>();
+        for (String literal : previuosWordNet.literalList()){
+            int count = 1;
+            for (int i = 0; i < literal.length(); i++){
+                if (literal.charAt(i) == ' '){
+                    count++;
+                }
+            }
+            counts.put(count);
+        }
+        return counts;
     }
 
     public void testExistenceOfKeNetSynSets(){

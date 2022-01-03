@@ -1,5 +1,6 @@
 package WordNet;
 
+import DataStructure.CounterHashMap;
 import Dictionary.Pos;
 import org.junit.Before;
 import org.junit.Test;
@@ -125,6 +126,29 @@ public class WordNetTest {
     @Test
     public void testLiteralList() {
         assertEquals(80942, turkish.literalList().size());
+    }
+
+    @Test
+    public void testLiteralWordCounts() {
+        CounterHashMap<Integer> counts = new CounterHashMap<>();
+        for (String literal : turkish.literalList()){
+            int count = 1;
+            for (int i = 0; i < literal.length(); i++){
+                if (literal.charAt(i) == ' '){
+                    count++;
+                }
+            }
+            counts.put(count);
+        }
+        assertEquals(48681, (int) counts.get(1));
+        assertEquals(28171, (int) counts.get(2));
+        assertEquals(3276, (int) counts.get(3));
+        assertEquals(600, (int) counts.get(4));
+        assertEquals(157, (int) counts.get(5));
+        assertEquals(37, (int) counts.get(6));
+        assertEquals(13, (int) counts.get(7));
+        assertEquals(5, (int) counts.get(8));
+        assertEquals(2, (int) counts.get(9));
     }
 
     @Test
