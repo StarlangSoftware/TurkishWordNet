@@ -209,6 +209,10 @@ public class WordNet {
                                                 } else {
                                                     if (partNode.getNodeName().equals("SNOTE") && currentSynSet != null) {
                                                         currentSynSet.setNote(partNode.getFirstChild().getNodeValue());
+                                                    } else {
+                                                        if (partNode.getNodeName().equals("WIKI") && currentSynSet != null){
+                                                            currentSynSet.setWikiPage(partNode.getFirstChild().getNodeValue());
+                                                        }
                                                     }
                                                 }
                                             }

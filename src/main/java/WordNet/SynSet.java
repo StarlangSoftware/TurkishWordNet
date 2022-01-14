@@ -21,6 +21,7 @@ public class SynSet {
     private Synonym synonym;
     private ArrayList<Relation> relations;
     private String note;
+    private String wikiPage = null;
     private int bcs;
 
     /**
@@ -353,6 +354,24 @@ public class SynSet {
      */
     public String getNote() {
         return note;
+    }
+
+    /**
+     * Accessor for the Wiki page of the synset.
+     *
+     * @return String Wiki page
+     */
+    public String getWikiPage(){
+        return wikiPage;
+    }
+
+    /**
+     * Mutator for the available notes.
+     *
+     * @param wikiPage String Wiki page to be set
+     */
+    public void setWikiPage(String wikiPage){
+        this.wikiPage = wikiPage;
     }
 
     /**
@@ -710,6 +729,9 @@ public class SynSet {
                         outfile.write("<SR>" + r.getName() + "<TYPE>" + ((SemanticRelation) r).getTypeAsString() + "</TYPE></SR>");
                     }
                 }
+            }
+            if (wikiPage != null) {
+                outfile.write("<WIKI>" + getWikiPage() + "</WIKI>");
             }
             if (definition != null) {
                 outfile.write("<DEF>" + getLongDefinition() + "</DEF>");

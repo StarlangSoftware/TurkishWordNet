@@ -287,6 +287,17 @@ public class WordNetTest {
     }
 
     @Test
+    public void testWikiPages() {
+        int count = 0;
+        for (SynSet synSet: turkish.synSetList()){
+            if (synSet.getWikiPage() != null){
+                count++;
+            }
+        }
+        assertEquals(10987, count);
+    }
+
+    @Test
     public void testNoDefinitionCheck() {
         assertEquals(0, turkish.noDefinitionCheck().size());
     }
