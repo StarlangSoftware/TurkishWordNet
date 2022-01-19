@@ -27,13 +27,13 @@ public class WordNet1955Test extends PreviousWordNetTest{
 
     @Test
     public void testSize() {
-        assertEquals(34457, previuosWordNet.size());
+        assertEquals(34459, previuosWordNet.size());
     }
 
     @Test
     public void testSynSetIdCounts() {
         CounterHashMap<String> counts = synSetIdCounts();
-        assertEquals(3658, (int) counts.get("TUR01"));
+        assertEquals(3660, (int) counts.get("TUR01"));
         assertEquals(1992, (int) counts.get("TUR02"));
         assertEquals(28805, (int) counts.get("TUR10"));
     }
@@ -49,13 +49,13 @@ public class WordNet1955Test extends PreviousWordNetTest{
         for (SynSet synSet : previuosWordNet.synSetList()){
             literalCount += synSet.getSynonym().literalSize();
         }
-        assertEquals(44815, literalCount);
+        assertEquals(44816, literalCount);
     }
 
     @Test
     public void testGetSynSetsWithPartOfSpeech() {
         assertEquals(18225, previuosWordNet.getSynSetsWithPartOfSpeech(Pos.NOUN).size());
-        assertEquals(7999, previuosWordNet.getSynSetsWithPartOfSpeech(Pos.VERB).size());
+        assertEquals(8001, previuosWordNet.getSynSetsWithPartOfSpeech(Pos.VERB).size());
         assertEquals(5800, previuosWordNet.getSynSetsWithPartOfSpeech(Pos.ADJECTIVE).size());
         assertEquals(1186, previuosWordNet.getSynSetsWithPartOfSpeech(Pos.INTERJECTION).size());
         assertEquals(1072, previuosWordNet.getSynSetsWithPartOfSpeech(Pos.ADVERB).size());
