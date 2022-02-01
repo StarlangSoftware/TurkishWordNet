@@ -24994,7 +24994,6 @@ lağap CL_ISIM
 lağar IS_ADJ
 lağım CL_ISIM
 lağımcı CL_ISIM
-lağımcılıık CL_ISIM
 lağımcılık CL_ISIM
 lağıv IS_UD CL_ISIM
 lağvet F_SD F5PR CL_FIIL

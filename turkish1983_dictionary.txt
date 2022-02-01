@@ -27720,7 +27720,6 @@ lagos CL_ISIM
 lagün CL_ISIM
 lağım CL_ISIM
 lağımcı CL_ISIM
-lağımcılıık CL_ISIM
 lağımcılık CL_ISIM
 lağıv IS_UD CL_ISIM
 lağvet F_SD F5PR CL_FIIL
@@ -36469,8 +36468,9 @@ rağmen IS_ADVERB
 rahat CL_ISIM IS_ADJ IS_ADVERB IS_DUP
 rahatça IS_ADJ IS_ADVERB
 rahatefza IS_OA
-rahatla F_GUD F4PW IS_ADVERB CL_FIIL
+rahatla F_GUD F4PW CL_FIIL
 rahatlık IS_SD CL_ISIM
+rahatlıkla IS_ADVERB
 rahatsız IS_ADJ
 rahatsızlan F5PR-NO-REF CL_FIIL
 rahatsızlık IS_SD CL_ISIM

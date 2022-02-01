@@ -27,18 +27,18 @@ public class WordNet1969Test extends PreviousWordNetTest{
 
     @Test
     public void testSize() {
-        assertEquals(37355, previuosWordNet.size());
+        assertEquals(37351, previuosWordNet.size());
     }
 
     @Test
     public void testSynSetIdCounts() {
         CounterHashMap<String> counts = synSetIdCounts();
-        assertEquals(2899, (int) counts.get("TUR01"));
-        assertEquals(1639, (int) counts.get("TUR02"));
+        assertEquals(2897, (int) counts.get("TUR01"));
+        assertEquals(1636, (int) counts.get("TUR02"));
         assertEquals(398, (int) counts.get("TUR03"));
         assertEquals(181, (int) counts.get("TUR04"));
         assertEquals(770, (int) counts.get("TUR05"));
-        assertEquals(31468, (int) counts.get("TUR10"));
+        assertEquals(31469, (int) counts.get("TUR10"));
     }
 
     @Test
@@ -58,9 +58,9 @@ public class WordNet1969Test extends PreviousWordNetTest{
     @Test
     public void testGetSynSetsWithPartOfSpeech() {
         assertEquals(20013, previuosWordNet.getSynSetsWithPartOfSpeech(Pos.NOUN).size());
-        assertEquals(8590, previuosWordNet.getSynSetsWithPartOfSpeech(Pos.VERB).size());
+        assertEquals(8587, previuosWordNet.getSynSetsWithPartOfSpeech(Pos.VERB).size());
         assertEquals(6124, previuosWordNet.getSynSetsWithPartOfSpeech(Pos.ADJECTIVE).size());
-        assertEquals(1283, previuosWordNet.getSynSetsWithPartOfSpeech(Pos.INTERJECTION).size());
+        assertEquals(1282, previuosWordNet.getSynSetsWithPartOfSpeech(Pos.INTERJECTION).size());
         assertEquals(1145, previuosWordNet.getSynSetsWithPartOfSpeech(Pos.ADVERB).size());
         assertEquals(71, previuosWordNet.getSynSetsWithPartOfSpeech(Pos.PREPOSITION).size());
         assertEquals(70, previuosWordNet.getSynSetsWithPartOfSpeech(Pos.CONJUNCTION).size());
@@ -74,13 +74,13 @@ public class WordNet1969Test extends PreviousWordNetTest{
 
     @Test
     public void testLiteralList() {
-        assertEquals(36051, previuosWordNet.literalList().size());
+        assertEquals(36050, previuosWordNet.literalList().size());
     }
 
     @Test
     public void testLiteralWordCounts() {
         CounterHashMap<Integer> counts = literalWordCounts();
-        assertEquals(25730, (int) counts.get(1));
+        assertEquals(25729, (int) counts.get(1));
         assertEquals(7952, (int) counts.get(2));
         assertEquals(1410, (int) counts.get(3));
         assertEquals(599, (int) counts.get(4));
