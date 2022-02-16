@@ -84,8 +84,8 @@ public class WordNet1983Test extends PreviousWordNetTest{
     @Test
     public void testLiteralWordCounts() {
         CounterHashMap<Integer> counts = literalWordCounts();
-        assertEquals(33661, (int) counts.get(1));
-        assertEquals(14604, (int) counts.get(2));
+        assertEquals(33662, (int) counts.get(1));
+        assertEquals(14603, (int) counts.get(2));
         assertEquals(2217, (int) counts.get(3));
         assertEquals(765, (int) counts.get(4));
         assertEquals(248, (int) counts.get(5));

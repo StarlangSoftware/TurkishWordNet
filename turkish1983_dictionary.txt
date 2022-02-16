@@ -45593,8 +45593,7 @@ ulutay IS_OA
 ulutekin IS_OA
 ulutürk IS_OA
 uluyol IS_OA
-ulvi IS_OA
-ulvî IS_ADJ
+ulvi IS_OA IS_ADJ
 ulviye IS_OA
 ulviyet CL_ISIM
 ulya IS_OA
@@ -45857,6 +45856,7 @@ uygulamalı IS_ADJ
 uygulanabilirlik IS_SD CL_ISIM
 uygulayıcı CL_ISIM
 uygulayım CL_ISIM IS_ADJ
+uygulayımbilim CL_ISIM
 uygulayımcı CL_ISIM
 uygulayımsal IS_ADJ
 uygun IS_OA IS_ADJ
