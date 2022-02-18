@@ -47547,6 +47547,7 @@ yapalak IS_OA IS_SD CL_ISIM
 yapay IS_ADJ
 yapayalnız IS_ADVERB IS_ADJ
 yapı CL_ISIM
+yapıbilim CL_ISIM
 yapıcı CL_ISIM IS_ADJ
 yapıcılık CL_ISIM
 yapık IS_SD CL_ISIM
