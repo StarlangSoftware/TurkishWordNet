@@ -47228,7 +47228,7 @@ yağla F_GUD F4PW CL_FIIL
 yağlan CL_FIIL
 yağlayıcı CL_ISIM
 yağlı IS_ADJ
-yağlıboya CL_ISIM IS_ADJ
+yağlıboya CL_ISIM IS_ADJ IS_INTERJ
 yağlıdere IS_OA
 yağlık IS_SD CL_ISIM
 yağlıkçı CL_ISIM

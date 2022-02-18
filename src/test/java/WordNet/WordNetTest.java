@@ -218,11 +218,11 @@ public class WordNetTest {
 
     @Test
     public void testGetSynSetsWithPartOfSpeech() {
-        assertEquals(43871, turkish.getSynSetsWithPartOfSpeech(Pos.NOUN).size());
+        assertEquals(43870, turkish.getSynSetsWithPartOfSpeech(Pos.NOUN).size());
         assertEquals(17776, turkish.getSynSetsWithPartOfSpeech(Pos.VERB).size());
         assertEquals(12406, turkish.getSynSetsWithPartOfSpeech(Pos.ADJECTIVE).size());
         assertEquals(2549, turkish.getSynSetsWithPartOfSpeech(Pos.ADVERB).size());
-        assertEquals(339, turkish.getSynSetsWithPartOfSpeech(Pos.INTERJECTION).size());
+        assertEquals(340, turkish.getSynSetsWithPartOfSpeech(Pos.INTERJECTION).size());
         assertEquals(68, turkish.getSynSetsWithPartOfSpeech(Pos.PRONOUN).size());
         assertEquals(61, turkish.getSynSetsWithPartOfSpeech(Pos.CONJUNCTION).size());
         assertEquals(30, turkish.getSynSetsWithPartOfSpeech(Pos.PREPOSITION).size());
