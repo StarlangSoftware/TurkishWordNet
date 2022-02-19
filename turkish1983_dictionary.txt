@@ -47733,6 +47733,7 @@ yasmin IS_OA
 yasmine IS_OA
 yassı IS_ADJ
 yassıada IS_OA
+yassıkadayıf CL_ISIM
 yassıl F4PL CL_FIIL
 yassılan F5PR CL_FIIL
 yassılaş CL_FIIL
