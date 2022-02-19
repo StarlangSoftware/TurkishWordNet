@@ -47760,6 +47760,7 @@ yaşatıcı IS_ADJ
 yaşatkan IS_ADJ
 yaşatma CL_FIIL
 yaşdaş IS_OA
+yaşdönümü IS_BILEŞ CL_ISIM
 yaşık IS_OA
 yaşıl IS_OA
 yaşın IS_OA IS_DUP
