@@ -29,7 +29,7 @@ public class WordNet1983Test extends PreviousWordNetTest{
 
     @Test
     public void testSize() throws FileNotFoundException {
-        assertEquals(55182, previuosWordNet.size());
+        assertEquals(55183, previuosWordNet.size());
     }
 
     @Test
@@ -42,7 +42,7 @@ public class WordNet1983Test extends PreviousWordNetTest{
         assertEquals(539, (int) counts.get("TUR05"));
         assertEquals(765, (int) counts.get("TUR06"));
         assertEquals(1694, (int) counts.get("TUR07"));
-        assertEquals(48680, (int) counts.get("TUR10"));
+        assertEquals(48681, (int) counts.get("TUR10"));
     }
 
     @Test
@@ -56,12 +56,12 @@ public class WordNet1983Test extends PreviousWordNetTest{
         for (SynSet synSet : previuosWordNet.synSetList()){
             literalCount += synSet.getSynonym().literalSize();
         }
-        assertEquals(72452, literalCount);
+        assertEquals(72453, literalCount);
     }
 
     @Test
     public void testGetSynSetsWithPartOfSpeech() {
-        assertEquals(28792, previuosWordNet.getSynSetsWithPartOfSpeech(Pos.NOUN).size());
+        assertEquals(28793, previuosWordNet.getSynSetsWithPartOfSpeech(Pos.NOUN).size());
         assertEquals(13530, previuosWordNet.getSynSetsWithPartOfSpeech(Pos.VERB).size());
         assertEquals(9195, previuosWordNet.getSynSetsWithPartOfSpeech(Pos.ADJECTIVE).size());
         assertEquals(1864, previuosWordNet.getSynSetsWithPartOfSpeech(Pos.ADVERB).size());
