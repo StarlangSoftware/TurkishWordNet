@@ -27123,7 +27123,7 @@ nasib IS_OA
 nasibe IS_OA
 nasih IS_OA
 nasiha IS_OA
-nasihat CL_ISIM
+nasihat IS_UU CL_ISIM
 nasip IS_OA IS_SD CL_ISIM
 nasir IS_OA
 nasiye IS_OA
@@ -35549,7 +35549,7 @@ szymon IS_OA
 şuralı IS_ADJ IS_DUP
 şurası IS_ZM
 şurayıdevlet IS_OA
-şurup CL_ISIM
+şurup IS_SD CL_ISIM
 şut CL_ISIM
 şuur CL_ISIM
 şuurlu IS_ADJ
@@ -35812,7 +35812,7 @@ takarrüp CL_ISIM
 takarrür CL_ISIM
 takas CL_ISIM
 takasbank IS_OA
-takat IS_OA CL_ISIM
+takat IS_OA IS_UU CL_ISIM
 takatsiz IS_ADJ
 takatuka CL_ISIM
 takayyüt CL_ISIM
@@ -38136,7 +38136,7 @@ tutuştur F4PR CL_FIIL
 tutya CL_ISIM
 tuur IS_OA
 tuva IS_OA
-tuval CL_ISIM
+tuval IS_UU CL_ISIM
 tuvalet CL_ISIM
 tuvalu IS_OA
 tuvalulu IS_OA

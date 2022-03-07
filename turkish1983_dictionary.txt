@@ -2181,7 +2181,7 @@ amerikan CL_ISIM IS_ADJ
 amerikatavşanı IS_BILEŞ CL_ISIM
 amerikyum CL_ISIM
 amerisyum CL_ISIM
-ametal CL_ISIM
+ametal IS_UU CL_ISIM
 ametist CL_ISIM
 amfi CL_ISIM
 amfibi CL_ISIM
@@ -32157,7 +32157,7 @@ nasib IS_OA
 nasibe IS_OA
 nasih IS_OA
 nasiha IS_OA
-nasihat CL_ISIM
+nasihat IS_UU CL_ISIM
 nasihatçi CL_ISIM
 nasip IS_OA IS_SD CL_ISIM
 nasiplen CL_FIIL
@@ -36393,7 +36393,7 @@ radde CL_ISIM
 raddelerinde IS_ADVERB
 radi IS_OA
 radife IS_OA
-radikal CL_ISIM IS_ADJ
+radikal IS_UU CL_ISIM IS_ADJ
 radikalizm CL_ISIM
 radiye IS_OA
 radon CL_ISIM
@@ -42012,7 +42012,7 @@ szymon IS_OA
 şurası IS_ZM
 şurayıdevlet IS_OA
 şûrayıdevlet CL_ISIM
-şurup CL_ISIM
+şurup IS_SD CL_ISIM
 şut CL_ISIM
 şuur CL_ISIM
 şuuraltı CL_ISIM
@@ -42304,7 +42304,7 @@ takarrüp CL_ISIM
 takarrür CL_ISIM
 takas CL_ISIM
 takasbank IS_OA
-takat IS_OA CL_ISIM
+takat IS_OA IS_UU CL_ISIM
 takatli IS_ADJ
 takatsiz IS_ADJ
 takatsizlik IS_SD CL_ISIM
@@ -45089,7 +45089,7 @@ tutuştur F4PR CL_FIIL
 tutya CL_ISIM
 tuur IS_OA
 tuva IS_OA
-tuval CL_ISIM
+tuval IS_UU CL_ISIM
 tuvalet CL_ISIM
 tuvalu IS_OA
 tuvalulu IS_OA

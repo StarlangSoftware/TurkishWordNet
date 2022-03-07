@@ -26576,7 +26576,7 @@ nasib IS_OA
 nasibe IS_OA
 nasih IS_OA
 nasiha IS_OA
-nasihat CL_ISIM
+nasihat IS_UU CL_ISIM
 nasip IS_OA IS_SD CL_ISIM
 nasir IS_OA
 nasiye IS_OA
@@ -34468,7 +34468,7 @@ szymon IS_OA
 şurası CL_ISIM
 şurayıdevlet IS_OA
 şuriş CL_ISIM
-şurup CL_ISIM
+şurup IS_SD CL_ISIM
 şuur CL_ISIM
 şuursuz IS_ADJ
 şükran IS_OA CL_ISIM
@@ -34744,7 +34744,7 @@ takarrüp CL_ISIM
 takarrür CL_ISIM
 takas CL_ISIM
 takasbank IS_OA
-takat IS_OA CL_ISIM
+takat IS_OA IS_UU CL_ISIM
 takatsiz IS_ADJ
 takatuka CL_ISIM
 takayyüh CL_ISIM
