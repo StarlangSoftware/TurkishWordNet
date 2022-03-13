@@ -6,7 +6,7 @@
 
     <groupId>io.github.starlangsoftware</groupId>
     <artifactId>WordNet</artifactId>
-    <version>1.0.50</version>
+    <version>1.0.51</version>
     <packaging>jar</packaging>
 
     <name>NlpToolkit.WordNet</name>
