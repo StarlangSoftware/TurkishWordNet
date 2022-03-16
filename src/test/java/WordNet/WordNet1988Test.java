@@ -29,20 +29,20 @@ public class WordNet1988Test extends PreviousWordNetTest{
 
     @Test
     public void testSize() throws FileNotFoundException {
-        assertEquals(58083, previuosWordNet.size());
+        assertEquals(57991, previuosWordNet.size());
     }
 
     @Test
     public void testSynSetIdCounts() {
         CounterHashMap<String> counts = synSetIdCounts();
-        assertEquals(1733, (int) counts.get("TUR01"));
-        assertEquals(1144, (int) counts.get("TUR02"));
+        assertEquals(1734, (int) counts.get("TUR01"));
+        assertEquals(1148, (int) counts.get("TUR02"));
         assertEquals(248, (int) counts.get("TUR03"));
         assertEquals(124, (int) counts.get("TUR04"));
-        assertEquals(503, (int) counts.get("TUR05"));
-        assertEquals(686, (int) counts.get("TUR06"));
-        assertEquals(1472, (int) counts.get("TUR07"));
-        assertEquals(51202, (int) counts.get("TUR10"));
+        assertEquals(504, (int) counts.get("TUR05"));
+        assertEquals(688, (int) counts.get("TUR06"));
+        assertEquals(1476, (int) counts.get("TUR07"));
+        assertEquals(51239, (int) counts.get("TUR10"));
     }
 
     @Test
@@ -56,16 +56,16 @@ public class WordNet1988Test extends PreviousWordNetTest{
         for (SynSet synSet : previuosWordNet.synSetList()){
             literalCount += synSet.getSynonym().literalSize();
         }
-        assertEquals(75827, literalCount);
+        assertEquals(75799, literalCount);
     }
 
     @Test
     public void testGetSynSetsWithPartOfSpeech() {
-        assertEquals(30162, previuosWordNet.getSynSetsWithPartOfSpeech(Pos.NOUN).size());
-        assertEquals(14245, previuosWordNet.getSynSetsWithPartOfSpeech(Pos.VERB).size());
-        assertEquals(9716, previuosWordNet.getSynSetsWithPartOfSpeech(Pos.ADJECTIVE).size());
-        assertEquals(1962, previuosWordNet.getSynSetsWithPartOfSpeech(Pos.ADVERB).size());
-        assertEquals(1793, previuosWordNet.getSynSetsWithPartOfSpeech(Pos.INTERJECTION).size());
+        assertEquals(30128, previuosWordNet.getSynSetsWithPartOfSpeech(Pos.NOUN).size());
+        assertEquals(14210, previuosWordNet.getSynSetsWithPartOfSpeech(Pos.VERB).size());
+        assertEquals(9704, previuosWordNet.getSynSetsWithPartOfSpeech(Pos.ADJECTIVE).size());
+        assertEquals(1957, previuosWordNet.getSynSetsWithPartOfSpeech(Pos.ADVERB).size());
+        assertEquals(1787, previuosWordNet.getSynSetsWithPartOfSpeech(Pos.INTERJECTION).size());
         assertEquals(79, previuosWordNet.getSynSetsWithPartOfSpeech(Pos.CONJUNCTION).size());
         assertEquals(68, previuosWordNet.getSynSetsWithPartOfSpeech(Pos.PRONOUN).size());
         assertEquals(58, previuosWordNet.getSynSetsWithPartOfSpeech(Pos.PREPOSITION).size());
@@ -78,14 +78,14 @@ public class WordNet1988Test extends PreviousWordNetTest{
 
     @Test
     public void testLiteralList() {
-        assertEquals(53950, previuosWordNet.literalList().size());
+        assertEquals(53949, previuosWordNet.literalList().size());
     }
 
     @Test
     public void testLiteralWordCounts() {
         CounterHashMap<Integer> counts = literalWordCounts();
         assertEquals(33632, (int) counts.get(1));
-        assertEquals(16458, (int) counts.get(2));
+        assertEquals(16457, (int) counts.get(2));
         assertEquals(2461, (int) counts.get(3));
         assertEquals(853, (int) counts.get(4));
         assertEquals(285, (int) counts.get(5));
@@ -150,7 +150,7 @@ public class WordNet1988Test extends PreviousWordNetTest{
     public void findMatchingLiteralsInPreviousWordNets(){
         WordNet turkish44 = new WordNet("turkish1944_wordnet.xml", new Locale("tr"));
         for (SynSet synSet1 : previuosWordNet.synSetList()){
-            if (synSet1.getId().startsWith("TUR07-")){
+            if (synSet1.getId().startsWith("TUR08-")){
                 for (SynSet synSet2: turkish44.synSetList()){
                     if (synSet2.getId().startsWith("TUR01-") && synSet1.getPos().equals(synSet2.getPos())){
                         for (int i = 0; i < synSet1.getSynonym().literalSize(); i++) {
@@ -169,7 +169,7 @@ public class WordNet1988Test extends PreviousWordNetTest{
         }
         WordNet turkish55 = new WordNet("turkish1955_wordnet.xml", new Locale("tr"));
         for (SynSet synSet1 : previuosWordNet.synSetList()){
-            if (synSet1.getId().startsWith("TUR07-")){
+            if (synSet1.getId().startsWith("TUR08-")){
                 for (SynSet synSet2: turkish55.synSetList()){
                     if (synSet2.getId().startsWith("TUR02-") && synSet1.getPos().equals(synSet2.getPos())){
                         for (int i = 0; i < synSet1.getSynonym().literalSize(); i++) {
@@ -188,7 +188,7 @@ public class WordNet1988Test extends PreviousWordNetTest{
         }
         WordNet turkish59 = new WordNet("turkish1959_wordnet.xml", new Locale("tr"));
         for (SynSet synSet1 : previuosWordNet.synSetList()){
-            if (synSet1.getId().startsWith("TUR07-")){
+            if (synSet1.getId().startsWith("TUR08-")){
                 for (SynSet synSet2: turkish59.synSetList()){
                     if (synSet2.getId().startsWith("TUR03-") && synSet1.getPos().equals(synSet2.getPos())){
                         for (int i = 0; i < synSet1.getSynonym().literalSize(); i++) {
@@ -207,7 +207,7 @@ public class WordNet1988Test extends PreviousWordNetTest{
         }
         WordNet turkish66 = new WordNet("turkish1966_wordnet.xml", new Locale("tr"));
         for (SynSet synSet1 : previuosWordNet.synSetList()){
-            if (synSet1.getId().startsWith("TUR07-")){
+            if (synSet1.getId().startsWith("TUR08-")){
                 for (SynSet synSet2: turkish66.synSetList()){
                     if (synSet2.getId().startsWith("TUR04-") && synSet1.getPos().equals(synSet2.getPos())){
                         for (int i = 0; i < synSet1.getSynonym().literalSize(); i++) {
@@ -226,7 +226,7 @@ public class WordNet1988Test extends PreviousWordNetTest{
         }
         WordNet turkish69 = new WordNet("turkish1969_wordnet.xml", new Locale("tr"));
         for (SynSet synSet1 : previuosWordNet.synSetList()){
-            if (synSet1.getId().startsWith("TUR07-")){
+            if (synSet1.getId().startsWith("TUR08-")){
                 for (SynSet synSet2: turkish69.synSetList()){
                     if (synSet2.getId().startsWith("TUR05-") && synSet1.getPos().equals(synSet2.getPos())){
                         for (int i = 0; i < synSet1.getSynonym().literalSize(); i++) {
@@ -245,7 +245,7 @@ public class WordNet1988Test extends PreviousWordNetTest{
         }
         WordNet turkish74 = new WordNet("turkish1974_wordnet.xml", new Locale("tr"));
         for (SynSet synSet1 : previuosWordNet.synSetList()){
-            if (synSet1.getId().startsWith("TUR07-")){
+            if (synSet1.getId().startsWith("TUR08-")){
                 for (SynSet synSet2: turkish74.synSetList()){
                     if (synSet2.getId().startsWith("TUR06-") && synSet1.getPos().equals(synSet2.getPos())){
                         for (int i = 0; i < synSet1.getSynonym().literalSize(); i++) {
@@ -262,9 +262,28 @@ public class WordNet1988Test extends PreviousWordNetTest{
                 }
             }
         }
+        WordNet turkish83 = new WordNet("turkish1983_wordnet.xml", new Locale("tr"));
+        for (SynSet synSet1 : previuosWordNet.synSetList()){
+            if (synSet1.getId().startsWith("TUR08-")){
+                for (SynSet synSet2: turkish74.synSetList()){
+                    if (synSet2.getId().startsWith("TUR07-") && synSet1.getPos().equals(synSet2.getPos())){
+                        for (int i = 0; i < synSet1.getSynonym().literalSize(); i++) {
+                            String literal1 = synSet1.getSynonym().getLiteral(i).getName();
+                            for (int j = 0; j < synSet2.getSynonym().literalSize(); j++) {
+                                String literal2 = synSet2.getSynonym().getLiteral(j).getName();
+                                if (literal1.equalsIgnoreCase(literal2)) {
+                                    System.out.println(literal1 + "\t" + synSet1.getId() + "\t" + synSet1.getPos() + "\t" + synSet1.getLongDefinition());
+                                    System.out.println(literal1 + "\t" + synSet2.getId() + "\t" + synSet2.getPos() + "\t" + synSet2.getLongDefinition());
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
         WordNet turkish = new WordNet();
         for (SynSet synSet1 : previuosWordNet.synSetList()){
-            if (synSet1.getId().startsWith("TUR07-")){
+            if (synSet1.getId().startsWith("TUR08-")){
                 for (SynSet synSet2: turkish.synSetList()){
                     if (synSet1.getPos().equals(synSet2.getPos())){
                         for (int i = 0; i < synSet1.getSynonym().literalSize(); i++) {
@@ -286,7 +305,7 @@ public class WordNet1988Test extends PreviousWordNetTest{
     public void findMatchingSynSetsInPreviousWordNets(){
         WordNet turkish44 = new WordNet("turkish1944_wordnet.xml", new Locale("tr"));
         for (SynSet synSet1 : previuosWordNet.synSetList()){
-            if (synSet1.getId().startsWith("TUR07-")){
+            if (synSet1.getId().startsWith("TUR08-")){
                 for (SynSet synSet2: turkish44.synSetList()){
                     if (synSet2.getId().startsWith("TUR01-") && synSet1.getPos().equals(synSet2.getPos())){
                         double matchRatio = numberOfMatches(synSet1.getLongDefinition(), synSet2.getLongDefinition());
@@ -299,7 +318,7 @@ public class WordNet1988Test extends PreviousWordNetTest{
         }
         WordNet turkish55 = new WordNet("turkish1955_wordnet.xml", new Locale("tr"));
         for (SynSet synSet1 : previuosWordNet.synSetList()){
-            if (synSet1.getId().startsWith("TUR07-")){
+            if (synSet1.getId().startsWith("TUR08-")){
                 for (SynSet synSet2: turkish55.synSetList()){
                     if (synSet2.getId().startsWith("TUR02-") && synSet1.getPos().equals(synSet2.getPos())){
                         double matchRatio = numberOfMatches(synSet1.getLongDefinition(), synSet2.getLongDefinition());
@@ -312,7 +331,7 @@ public class WordNet1988Test extends PreviousWordNetTest{
         }
         WordNet turkish59 = new WordNet("turkish1959_wordnet.xml", new Locale("tr"));
         for (SynSet synSet1 : previuosWordNet.synSetList()){
-            if (synSet1.getId().startsWith("TUR07-")){
+            if (synSet1.getId().startsWith("TUR08-")){
                 for (SynSet synSet2: turkish59.synSetList()){
                     if (synSet2.getId().startsWith("TUR03-") && synSet1.getPos().equals(synSet2.getPos())){
                         double matchRatio = numberOfMatches(synSet1.getLongDefinition(), synSet2.getLongDefinition());
@@ -325,7 +344,7 @@ public class WordNet1988Test extends PreviousWordNetTest{
         }
         WordNet turkish66 = new WordNet("turkish1966_wordnet.xml", new Locale("tr"));
         for (SynSet synSet1 : previuosWordNet.synSetList()){
-            if (synSet1.getId().startsWith("TUR07-")){
+            if (synSet1.getId().startsWith("TUR08-")){
                 for (SynSet synSet2: turkish66.synSetList()){
                     if (synSet2.getId().startsWith("TUR04-") && synSet1.getPos().equals(synSet2.getPos())){
                         double matchRatio = numberOfMatches(synSet1.getLongDefinition(), synSet2.getLongDefinition());
@@ -338,7 +357,7 @@ public class WordNet1988Test extends PreviousWordNetTest{
         }
         WordNet turkish69 = new WordNet("turkish1969_wordnet.xml", new Locale("tr"));
         for (SynSet synSet1 : previuosWordNet.synSetList()){
-            if (synSet1.getId().startsWith("TUR07-")){
+            if (synSet1.getId().startsWith("TUR08-")){
                 for (SynSet synSet2: turkish69.synSetList()){
                     if (synSet2.getId().startsWith("TUR05-") && synSet1.getPos().equals(synSet2.getPos())){
                         double matchRatio = numberOfMatches(synSet1.getLongDefinition(), synSet2.getLongDefinition());
@@ -351,7 +370,7 @@ public class WordNet1988Test extends PreviousWordNetTest{
         }
         WordNet turkish74 = new WordNet("turkish1974_wordnet.xml", new Locale("tr"));
         for (SynSet synSet1 : previuosWordNet.synSetList()){
-            if (synSet1.getId().startsWith("TUR07-")){
+            if (synSet1.getId().startsWith("TUR08-")){
                 for (SynSet synSet2: turkish74.synSetList()){
                     if (synSet2.getId().startsWith("TUR06-") && synSet1.getPos().equals(synSet2.getPos())){
                         double matchRatio = numberOfMatches(synSet1.getLongDefinition(), synSet2.getLongDefinition());
@@ -362,9 +381,22 @@ public class WordNet1988Test extends PreviousWordNetTest{
                 }
             }
         }
+        WordNet turkish83 = new WordNet("turkish1983_wordnet.xml", new Locale("tr"));
+        for (SynSet synSet1 : previuosWordNet.synSetList()){
+            if (synSet1.getId().startsWith("TUR08-")){
+                for (SynSet synSet2: turkish83.synSetList()){
+                    if (synSet2.getId().startsWith("TUR07-") && synSet1.getPos().equals(synSet2.getPos())){
+                        double matchRatio = numberOfMatches(synSet1.getLongDefinition(), synSet2.getLongDefinition());
+                        if (matchRatio >= 0.8){
+                            System.out.println(matchRatio + "\t" + synSet1.getId() + "\t" + synSet2.getId() + "\t" + synSet1.getSynonym().toString() + "\t" + synSet2.getSynonym().toString() + "\t" + synSet1.getLongDefinition() + "\t" + synSet2.getLongDefinition());
+                        }
+                    }
+                }
+            }
+        }
         WordNet turkish = new WordNet();
         for (SynSet synSet1 : previuosWordNet.synSetList()){
-            if (synSet1.getId().startsWith("TUR07-")){
+            if (synSet1.getId().startsWith("TUR08-")){
                 for (SynSet synSet2: turkish.synSetList()){
                     if (synSet1.getPos().equals(synSet2.getPos())){
                         double matchRatio = numberOfMatches(synSet1.getLongDefinition(), synSet2.getLongDefinition());

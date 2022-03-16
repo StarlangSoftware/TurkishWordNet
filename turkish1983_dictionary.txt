@@ -25997,7 +25997,6 @@ kokot CL_ISIM
 kokoz IS_ADJ
 kokozla CL_FIIL
 kokozluk CL_ISIM
-kokrak CL_ISIM
 kokteyl CL_ISIM
 koku CL_ISIM
 kokulandır CL_FIIL
@@ -26392,7 +26391,7 @@ koridor CL_ISIM
 korindon CL_ISIM
 korint IS_OA
 kork F3P1 CL_FIIL
-korkak IS_ADJ
+korkak CL_ISIM IS_ADJ
 korkakça IS_ADJ IS_ADVERB
 korkaklık IS_SD CL_ISIM
 korkan IS_OA

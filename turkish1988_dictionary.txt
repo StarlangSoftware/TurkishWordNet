@@ -22495,7 +22495,7 @@ kabarma CL_ISIM
 kabart CL_FIIL
 kabartı CL_ISIM
 kabartılı IS_ADJ
-kabartma IS_ADJ CL_ISIM
+kabartma CL_ISIM IS_ADJ
 kabataş IS_OA
 kabız CL_ISIM
 kabızlık IS_SD CL_ISIM
