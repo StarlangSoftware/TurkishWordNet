@@ -23,8 +23,8 @@ public class WordNetTest {
     }
 
     public void generateWordNet(){
-        String year = "1983";
-        WordNet wordNet = new WordNet("a.txt", new Locale("tr"));
+        String year = "1988";
+        WordNet wordNet = new WordNet("empty.xml", new Locale("tr"));
         try {
             Scanner input = new Scanner(new File(year + ".txt"));
             while (input.hasNextLine()){
