@@ -138,7 +138,6 @@ public class WordNet1988Test extends PreviousWordNetTest{
         super.testExistenceOfPreviousSynSets("1969", "TUR05");
         super.testExistenceOfPreviousSynSets("1974", "TUR06");
         super.testExistenceOfPreviousSynSets("1983", "TUR07");
-        super.testExistenceOfPreviousSynSets("1988", "TUR08");
     }
 
     @Test

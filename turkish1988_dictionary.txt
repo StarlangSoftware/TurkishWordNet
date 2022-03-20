@@ -10582,7 +10582,7 @@ dehşetli IS_ADJ IS_ADVERB
 deik IS_OA
 dejenere IS_ADJ
 dejenereleş CL_FIIL
-dek CL_ISIM IS_ADJ IS_POSTP
+dek IS_ADJ CL_ISIM IS_POSTP
 dekadan CL_ISIM
 dekadanlık CL_ISIM
 dekagram CL_ISIM
