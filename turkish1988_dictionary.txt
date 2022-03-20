@@ -5055,7 +5055,7 @@ bavlı F4PW IS_ADJ CL_ISIM CL_FIIL
 bavul CL_ISIM
 bavyera IS_OA
 bavyeralı IS_OA IS_ADJ CL_ISIM
-bay CL_ISIM IS_ADJ CL_FIIL
+bay IS_ADJ CL_ISIM CL_FIIL
 bayağı IS_ADVERB IS_ADJ
 bayağılaş CL_FIIL
 bayağılık IS_SD CL_ISIM
@@ -28629,13 +28629,13 @@ mâlûl IS_ADJ
 malulen IS_ADVERB
 maluliyet CL_ISIM
 malullük CL_ISIM
-malum IS_OA IS_ADVERB IS_ADJ
-malûm CL_ISIM IS_ADJ
-malumat CL_ISIM
+malum IS_OA
+malûm IS_ADJ IS_ADVERB CL_ISIM
+malûmat CL_ISIM
 mâlûmât CL_ISIM
 malûmatfüruş CL_ISIM
 malûmatlı IS_ADJ
-malumatsız IS_ADJ
+malûmatsız IS_ADJ
 malwina IS_OA
 malya CL_ISIM
 malzeme CL_ISIM
@@ -37808,9 +37808,10 @@ samih IS_OA
 samiha IS_OA
 samim IS_OA
 samime IS_OA
-samimi IS_OA IS_ADJ IS_ADVERB
-samimileş CL_FIIL
-samimilik IS_SD CL_ISIM
+samimi IS_OA
+samimî IS_ADJ IS_ADVERB
+samimîleş CL_FIIL
+samimîlik CL_ISIM
 samimiyet CL_ISIM
 samimiyetle IS_ADVERB
 samimiyetsiz IS_ADJ
@@ -42114,7 +42115,7 @@ taberi IS_OA
 tabet F_SD F5PR CL_FIIL
 tabgaç IS_OA
 tabı CL_ISIM
-tabi IS_ADJ
+tâbi IS_ADJ
 tabiat CL_ISIM
 tabiatıyla IS_ADVERB
 tabiatlı IS_ADJ

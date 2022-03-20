@@ -29,20 +29,20 @@ public class WordNet1988Test extends PreviousWordNetTest{
 
     @Test
     public void testSize() throws FileNotFoundException {
-        assertEquals(57991, previuosWordNet.size());
+        assertEquals(57936, previuosWordNet.size());
     }
 
     @Test
     public void testSynSetIdCounts() {
         CounterHashMap<String> counts = synSetIdCounts();
-        assertEquals(1734, (int) counts.get("TUR01"));
-        assertEquals(1148, (int) counts.get("TUR02"));
-        assertEquals(248, (int) counts.get("TUR03"));
-        assertEquals(124, (int) counts.get("TUR04"));
-        assertEquals(504, (int) counts.get("TUR05"));
-        assertEquals(688, (int) counts.get("TUR06"));
+        assertEquals(1742, (int) counts.get("TUR01"));
+        assertEquals(1154, (int) counts.get("TUR02"));
+        assertEquals(249, (int) counts.get("TUR03"));
+        assertEquals(125, (int) counts.get("TUR04"));
+        assertEquals(506, (int) counts.get("TUR05"));
+        assertEquals(690, (int) counts.get("TUR06"));
         assertEquals(1476, (int) counts.get("TUR07"));
-        assertEquals(51239, (int) counts.get("TUR10"));
+        assertEquals(51251, (int) counts.get("TUR10"));
     }
 
     @Test
@@ -56,16 +56,16 @@ public class WordNet1988Test extends PreviousWordNetTest{
         for (SynSet synSet : previuosWordNet.synSetList()){
             literalCount += synSet.getSynonym().literalSize();
         }
-        assertEquals(75799, literalCount);
+        assertEquals(75771, literalCount);
     }
 
     @Test
     public void testGetSynSetsWithPartOfSpeech() {
-        assertEquals(30128, previuosWordNet.getSynSetsWithPartOfSpeech(Pos.NOUN).size());
-        assertEquals(14210, previuosWordNet.getSynSetsWithPartOfSpeech(Pos.VERB).size());
-        assertEquals(9704, previuosWordNet.getSynSetsWithPartOfSpeech(Pos.ADJECTIVE).size());
-        assertEquals(1957, previuosWordNet.getSynSetsWithPartOfSpeech(Pos.ADVERB).size());
-        assertEquals(1787, previuosWordNet.getSynSetsWithPartOfSpeech(Pos.INTERJECTION).size());
+        assertEquals(30104, previuosWordNet.getSynSetsWithPartOfSpeech(Pos.NOUN).size());
+        assertEquals(14192, previuosWordNet.getSynSetsWithPartOfSpeech(Pos.VERB).size());
+        assertEquals(9697, previuosWordNet.getSynSetsWithPartOfSpeech(Pos.ADJECTIVE).size());
+        assertEquals(1952, previuosWordNet.getSynSetsWithPartOfSpeech(Pos.ADVERB).size());
+        assertEquals(1786, previuosWordNet.getSynSetsWithPartOfSpeech(Pos.INTERJECTION).size());
         assertEquals(79, previuosWordNet.getSynSetsWithPartOfSpeech(Pos.CONJUNCTION).size());
         assertEquals(68, previuosWordNet.getSynSetsWithPartOfSpeech(Pos.PRONOUN).size());
         assertEquals(58, previuosWordNet.getSynSetsWithPartOfSpeech(Pos.PREPOSITION).size());
@@ -78,13 +78,13 @@ public class WordNet1988Test extends PreviousWordNetTest{
 
     @Test
     public void testLiteralList() {
-        assertEquals(53949, previuosWordNet.literalList().size());
+        assertEquals(53948, previuosWordNet.literalList().size());
     }
 
     @Test
     public void testLiteralWordCounts() {
         CounterHashMap<Integer> counts = literalWordCounts();
-        assertEquals(33632, (int) counts.get(1));
+        assertEquals(33631, (int) counts.get(1));
         assertEquals(16457, (int) counts.get(2));
         assertEquals(2461, (int) counts.get(3));
         assertEquals(853, (int) counts.get(4));
@@ -147,6 +147,7 @@ public class WordNet1988Test extends PreviousWordNetTest{
         super.comparePosWithPosOfCorrespondingKeNetSynSets();
     }
 
+    @Test
     public void findMatchingLiteralsInPreviousWordNets(){
         WordNet turkish44 = new WordNet("turkish1944_wordnet.xml", new Locale("tr"));
         for (SynSet synSet1 : previuosWordNet.synSetList()){
