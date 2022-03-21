@@ -177,7 +177,7 @@ public class PreviousWordNetTest {
 
     public void generateDictionary(String year){
         String[] flags = {"IS_SD", "IS_KG", "IS_UD", "IS_UU", "IS_UUU",
-                "IS_SU", "IS_ST", "F_SD", "F_GUD", "F_GUDO",
+                "IS_SU", "IS_ST", "F_SD", "F_GUD", "F_GUDO", "IS_SDD",
                 "F1P1", "F2P1", "F2PL", "F2P1-NO-REF", "F3P1-NO-REF",
                 "F4P1-NO-REF", "F4PR-NO-REF", "F4PL-NO-REF", "F4PW-NO-REF", "F5PL-NO-REF",
                 "F5PR-NO-REF", "F5PW-NO-REF", "F2P1", "F3P1", "F4P1",

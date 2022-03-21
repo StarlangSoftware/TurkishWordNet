@@ -524,8 +524,8 @@ ademiyet CL_ISIM
 aden IS_OA
 adenit CL_ISIM
 adese CL_ISIM
-adet IS_SD CL_ISIM
-âdet IS_SD CL_ISIM
+adet IS_SD IS_SDD CL_ISIM
+âdet IS_SD IS_SDD CL_ISIM
 âdeta IS_ADVERB
 adetçe IS_ADVERB
 adetullah IS_OA
@@ -785,7 +785,7 @@ ağırşaklan F5PR CL_FIIL
 ağırtaş IS_OA
 ağıryağ CL_ISIM
 ağış IS_OA CL_ISIM
-ağıt IS_SD CL_ISIM
+ağıt IS_SD IS_SDD CL_ISIM
 ağıtçı CL_ISIM
 ağıtlama CL_ISIM
 ağıtsal IS_ADJ
@@ -2541,7 +2541,7 @@ anorganik IS_SD CL_ISIM
 anormal IS_UU IS_ADJ
 anormalleş CL_FIIL
 anormallik IS_SD CL_ISIM
-anot IS_SD CL_ISIM
+anot IS_SD IS_SDD CL_ISIM
 ansefal CL_ISIM
 anseriformes IS_OA
 ansı F4PW CL_FIIL
@@ -3415,6 +3415,7 @@ aşnılama CL_ISIM
 aşoz CL_ISIM
 aşure CL_ISIM
 aşut IS_OA
+aşüfte CL_ISIM
 âşüfte IS_ADJ
 at F5PR CL_ISIM CL_FIIL
 at&t IS_OA
@@ -3624,6 +3625,7 @@ aurelia IS_OA
 aurora IS_OA
 austin IS_OA
 australia IS_OA
+aut CL_ISIM
 automax IS_OA
 autumn IS_OA
 av CL_ISIM
@@ -8589,7 +8591,7 @@ city IS_OA
 civan IS_OA CL_ISIM
 civanbaht IS_OA
 civanım CL_ISIM
-civanmert IS_OA IS_SD IS_ADJ
+civanmert IS_OA IS_SD IS_SDD IS_ADJ
 civanmertlik CL_ISIM
 civanperçemi IS_BILEŞ CL_ISIM
 civanşir IS_OA
@@ -15030,7 +15032,7 @@ feridüddin IS_OA
 ferih IS_OA IS_ADJ
 feriha IS_OA
 ferihan IS_OA
-ferik IS_SD CL_ISIM
+ferik IS_SD IS_SDD CL_ISIM
 feriser IS_OA
 ferişte IS_OA
 ferit IS_OA
@@ -18612,7 +18614,7 @@ harmony IS_OA
 harmonyum CL_ISIM
 harnup IS_SD CL_ISIM
 harold IS_OA
-harp IS_SD IS_UU CL_ISIM
+harp IS_SD IS_UU IS_SDD CL_ISIM
 harper IS_OA
 harran IS_OA
 harrangürra IS_ADVERB
@@ -20073,7 +20075,7 @@ hyundai IS_OA
 ıpıssız IS_ADJ
 ır CL_ISIM
 ıra CL_ISIM CL_FIIL
-ırak IS_OA IS_SD CL_ISIM IS_ADJ
+ırak IS_OA IS_SD IS_SDD CL_ISIM IS_ADJ
 ırakgörür CL_ISIM
 ıraklaş CL_FIIL
 ıraklı IS_OA CL_ISIM
@@ -21727,7 +21729,7 @@ istimara CL_ISIM
 istimator CL_ISIM
 istimbot CL_ISIM
 istimdat IS_SD CL_ISIM
-istimlâk IS_SD IS_UU CL_ISIM
+istimlâk IS_SD IS_UU IS_SDD CL_ISIM
 istimna CL_ISIM
 istimrar CL_ISIM
 istimzaç CL_ISIM
@@ -22976,7 +22978,7 @@ kaloriferci CL_ISIM
 kalorifercilik IS_SD CL_ISIM
 kalorimetre CL_ISIM
 kaloş CL_ISIM
-kalp IS_SD IS_UU IS_UUU CL_ISIM IS_ADJ
+kalp IS_SD IS_UU IS_UUU IS_SDD CL_ISIM IS_ADJ
 kalpak IS_SD CL_ISIM
 kalpakçı CL_ISIM
 kalpaklı IS_ADJ
@@ -23268,7 +23270,7 @@ kaolin CL_ISIM
 kaolinit CL_ISIM
 kaolinli IS_ADJ
 kaos CL_ISIM
-kap IS_SD F5PR CL_ISIM CL_FIIL
+kap IS_SD IS_SDD F5PR CL_ISIM CL_FIIL
 kâp IS_SD CL_ISIM
 kapa F_GUD F4PW CL_FIIL
 kapacık CL_ISIM
@@ -40850,7 +40852,7 @@ süleyman IS_OA
 süleymaniye IS_OA
 süleymâniye IS_OA
 sülf CL_ISIM
-sülfamit IS_SD CL_ISIM
+sülfamit IS_SD IS_SDD CL_ISIM
 sülfat CL_ISIM
 sülfatlama CL_ISIM
 sülfatlaşma CL_ISIM
@@ -42360,7 +42362,7 @@ takla CL_ISIM
 taklaböceği IS_BILEŞ IS_B_SD CL_ISIM
 taklavat CL_ISIM
 taklip CL_ISIM
-taklit CL_ISIM
+taklit IS_SDD CL_ISIM
 taklitçi CL_ISIM
 taklitçilik IS_SD CL_ISIM
 takma IS_ADJ
@@ -42790,7 +42792,7 @@ tarman IS_OA
 taro IS_OA
 tarpan CL_ISIM
 tarsus IS_OA
-tart IS_SD F5PR CL_ISIM CL_FIIL
+tart IS_SD IS_SDD F5PR CL_ISIM CL_FIIL
 tartakla F_GUD F4PW CL_FIIL
 tartarat CL_ISIM
 tartı CL_ISIM

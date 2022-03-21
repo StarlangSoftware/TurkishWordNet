@@ -28,7 +28,7 @@ public class WordNet1983Test extends PreviousWordNetTest{
 
     @Test
     public void testSize() throws FileNotFoundException {
-        assertEquals(55183, previuosWordNet.size());
+        assertEquals(55184, previuosWordNet.size());
     }
 
     @Test
@@ -41,7 +41,7 @@ public class WordNet1983Test extends PreviousWordNetTest{
         assertEquals(539, (int) counts.get("TUR05"));
         assertEquals(765, (int) counts.get("TUR06"));
         assertEquals(1694, (int) counts.get("TUR07"));
-        assertEquals(48681, (int) counts.get("TUR10"));
+        assertEquals(48682, (int) counts.get("TUR10"));
     }
 
     @Test
@@ -55,12 +55,12 @@ public class WordNet1983Test extends PreviousWordNetTest{
         for (SynSet synSet : previuosWordNet.synSetList()){
             literalCount += synSet.getSynonym().literalSize();
         }
-        assertEquals(72453, literalCount);
+        assertEquals(72455, literalCount);
     }
 
     @Test
     public void testGetSynSetsWithPartOfSpeech() {
-        assertEquals(28793, previuosWordNet.getSynSetsWithPartOfSpeech(Pos.NOUN).size());
+        assertEquals(28794, previuosWordNet.getSynSetsWithPartOfSpeech(Pos.NOUN).size());
         assertEquals(13530, previuosWordNet.getSynSetsWithPartOfSpeech(Pos.VERB).size());
         assertEquals(9195, previuosWordNet.getSynSetsWithPartOfSpeech(Pos.ADJECTIVE).size());
         assertEquals(1864, previuosWordNet.getSynSetsWithPartOfSpeech(Pos.ADVERB).size());
@@ -77,13 +77,13 @@ public class WordNet1983Test extends PreviousWordNetTest{
 
     @Test
     public void testLiteralList() {
-        assertEquals(51681, previuosWordNet.literalList().size());
+        assertEquals(51683, previuosWordNet.literalList().size());
     }
 
     @Test
     public void testLiteralWordCounts() {
         CounterHashMap<Integer> counts = literalWordCounts();
-        assertEquals(33664, (int) counts.get(1));
+        assertEquals(33666, (int) counts.get(1));
         assertEquals(14599, (int) counts.get(2));
         assertEquals(2217, (int) counts.get(3));
         assertEquals(765, (int) counts.get(4));
