@@ -7,15 +7,9 @@ import MorphologicalAnalysis.FsmMorphologicalAnalyzer;
 import MorphologicalAnalysis.MetamorphicParse;
 import MorphologicalAnalysis.MorphologicalParse;
 import Util.FileUtils;
-import org.w3c.dom.Document;
-import org.w3c.dom.NamedNodeMap;
-import org.w3c.dom.Node;
-import org.xml.sax.InputSource;
-import org.xml.sax.SAXException;
+import Xml.XmlDocument;
+import Xml.XmlElement;
 
-import javax.xml.parsers.DocumentBuilder;
-import javax.xml.parsers.DocumentBuilderFactory;
-import javax.xml.parsers.ParserConfigurationException;
 import java.io.*;
 import java.nio.charset.StandardCharsets;
 import java.text.Collator;
@@ -30,23 +24,12 @@ public class WordNet {
     private HashMap<String, ArrayList<ExceptionalWord>> exceptionList;
     public HashMap<String, ArrayList<SynSet>> interlingualList;
 
-    private void readWordNet(InputSource inputSource) {
-        Node rootNode, synSetNode, partNode, ilrNode, srNode, typeNode, toNode, literalNode, textNode, senseNode;
-        DocumentBuilder builder = null;
-        DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
-        try {
-            builder = factory.newDocumentBuilder();
-        } catch (ParserConfigurationException e) {
-            e.printStackTrace();
-        }
-        Document doc = null;
+    private void readWordNet(InputStream inputStream) {
+        XmlElement rootNode, synSetNode, partNode, srNode, typeNode, toNode, literalNode, senseNode;
         SynSet currentSynSet = null;
         Literal currentLiteral;
-        try {
-            doc = builder.parse(inputSource);
-        } catch (SAXException | IOException e) {
-            e.printStackTrace();
-        }
+        XmlDocument doc = new XmlDocument(inputStream);
+        doc.parse();
         interlingualList = new HashMap<>();
         synSetList = new TreeMap<>();
         literalList = new TreeMap<>((Comparator) (o1, o2) -> {
@@ -59,21 +42,21 @@ public class WordNet {
         while (synSetNode != null) {
             partNode = synSetNode.getFirstChild();
             while (partNode != null) {
-                if (partNode.getNodeName().equals("ID")) {
-                    currentSynSet = new SynSet(partNode.getFirstChild().getNodeValue());
+                if (partNode.getName().equals("ID")) {
+                    currentSynSet = new SynSet(partNode.getPcData());
                     addSynSet(currentSynSet);
                 } else {
-                    if (partNode.getNodeName().equals("DEF") && currentSynSet != null) {
-                        currentSynSet.setDefinition(partNode.getFirstChild().getNodeValue());
+                    if (partNode.getName().equals("DEF") && currentSynSet != null) {
+                        currentSynSet.setDefinition(partNode.getPcData());
                     } else {
-                        if (partNode.getNodeName().equals("EXAMPLE") && currentSynSet != null) {
-                            currentSynSet.setExample(partNode.getFirstChild().getNodeValue());
+                        if (partNode.getName().equals("EXAMPLE") && currentSynSet != null) {
+                            currentSynSet.setExample(partNode.getPcData());
                         } else {
-                            if (partNode.getNodeName().equals("BCS") && currentSynSet != null) {
-                                currentSynSet.setBcs(Integer.parseInt(partNode.getFirstChild().getNodeValue()));
+                            if (partNode.getName().equals("BCS") && currentSynSet != null) {
+                                currentSynSet.setBcs(Integer.parseInt(partNode.getPcData()));
                             } else {
-                                if (partNode.getNodeName().equals("POS") && currentSynSet != null) {
-                                    switch (partNode.getFirstChild().getNodeValue().charAt(0)) {
+                                if (partNode.getName().equals("POS") && currentSynSet != null) {
+                                    switch (partNode.getPcData().charAt(0)) {
                                         case 'a':
                                             currentSynSet.setPos(Pos.ADJECTIVE);
                                             break;
@@ -99,99 +82,84 @@ public class WordNet {
                                             currentSynSet.setPos(Pos.PRONOUN);
                                             break;
                                         default:
-                                            System.out.println("Pos " + partNode.getFirstChild().getNodeValue() + " is not defined for SynSet " + currentSynSet.getId());
+                                            System.out.println("Pos " + partNode.getPcData() + " is not defined for SynSet " + currentSynSet.getId());
                                             break;
                                     }
                                 } else {
-                                    if (partNode.getNodeName().equals("SR") && currentSynSet != null) {
-                                        srNode = partNode.getFirstChild();
-                                        if (srNode != null) {
-                                            typeNode = srNode.getNextSibling();
-                                            if (typeNode != null && typeNode.getNodeName().equals("TYPE")) {
-                                                toNode = typeNode.getNextSibling();
-                                                if (toNode != null && toNode.getNodeName().equals("TO")) {
-                                                    currentSynSet.addRelation(new SemanticRelation(srNode.getNodeValue(), typeNode.getFirstChild().getNodeValue(), Integer.parseInt(toNode.getFirstChild().getNodeValue())));
-                                                } else {
-                                                    currentSynSet.addRelation(new SemanticRelation(srNode.getNodeValue(), typeNode.getFirstChild().getNodeValue()));
-                                                }
+                                    if (partNode.getName().equals("SR") && currentSynSet != null) {
+                                        typeNode = partNode.getFirstChild();
+                                        if (typeNode != null && typeNode.getName().equals("TYPE")) {
+                                            toNode = typeNode.getNextSibling();
+                                            if (toNode != null && toNode.getName().equals("TO")) {
+                                                currentSynSet.addRelation(new SemanticRelation(partNode.getPcData(), typeNode.getPcData(), Integer.parseInt(toNode.getPcData())));
                                             } else {
-                                                System.out.println("SR node " + srNode.getNodeValue() + " of synSet " + currentSynSet.getId() + " does not contain type value");
+                                                currentSynSet.addRelation(new SemanticRelation(partNode.getPcData(), typeNode.getPcData()));
                                             }
                                         } else {
-                                            System.out.println("SR node of synSet " + currentSynSet.getId() + " does not contain name");
+                                            System.out.println("SR node " + partNode.getPcData() + " of synSet " + currentSynSet.getId() + " does not contain type value");
                                         }
                                     } else {
-                                        if (partNode.getNodeName().equals("ILR") && currentSynSet != null) {
-                                            ilrNode = partNode.getFirstChild();
-                                            if (ilrNode != null) {
-                                                typeNode = ilrNode.getNextSibling();
-                                                if (typeNode != null && typeNode.getNodeName().equals("TYPE")) {
-                                                    String interlingualId = ilrNode.getNodeValue();
-                                                    ArrayList<SynSet> synSetList;
-                                                    if (interlingualList.containsKey(interlingualId)) {
-                                                        synSetList = interlingualList.get(interlingualId);
-                                                    } else {
-                                                        synSetList = new ArrayList<>();
-                                                    }
-                                                    synSetList.add(currentSynSet);
-                                                    interlingualList.put(interlingualId, synSetList);
-                                                    currentSynSet.addRelation(new InterlingualRelation(interlingualId, typeNode.getFirstChild().getNodeValue()));
+                                        if (partNode.getName().equals("ILR") && currentSynSet != null) {
+                                            typeNode = partNode.getFirstChild();
+                                            if (typeNode != null && typeNode.getName().equals("TYPE")) {
+                                                String interlingualId = partNode.getPcData();
+                                                ArrayList<SynSet> synSetList;
+                                                if (interlingualList.containsKey(interlingualId)) {
+                                                    synSetList = interlingualList.get(interlingualId);
                                                 } else {
-                                                    System.out.println("ILR node " + ilrNode.getNodeValue() + " of synSet " + currentSynSet.getId() + " does not contain type value");
+                                                    synSetList = new ArrayList<>();
                                                 }
+                                                synSetList.add(currentSynSet);
+                                                interlingualList.put(interlingualId, synSetList);
+                                                currentSynSet.addRelation(new InterlingualRelation(interlingualId, typeNode.getPcData()));
                                             } else {
-                                                System.out.println("ILR node of synSet " + currentSynSet.getId() + " does not contain name");
+                                                System.out.println("ILR node " + partNode.getPcData() + " of synSet " + currentSynSet.getId() + " does not contain type value");
                                             }
                                         } else {
-                                            if (partNode.getNodeName().equals("SYNONYM") && currentSynSet != null) {
+                                            if (partNode.getName().equals("SYNONYM") && currentSynSet != null) {
                                                 literalNode = partNode.getFirstChild();
                                                 while (literalNode != null) {
-                                                    textNode = literalNode.getFirstChild();
-                                                    if (textNode != null) {
-                                                        if (literalNode.getNodeName().equals("LITERAL")) {
-                                                            senseNode = textNode.getNextSibling();
-                                                            if (senseNode != null) {
-                                                                if (senseNode.getNodeName().equals("SENSE") && senseNode.getFirstChild() != null) {
-                                                                    currentLiteral = new Literal(textNode.getNodeValue(), Integer.parseInt(senseNode.getFirstChild().getNodeValue()), currentSynSet.getId());
-                                                                    currentSynSet.addLiteral(currentLiteral);
-                                                                    addLiteralToLiteralList(currentLiteral);
-                                                                    srNode = senseNode.getNextSibling();
-                                                                    while (srNode != null) {
-                                                                        if (srNode.getNodeName().equals("SR")) {
-                                                                            typeNode = srNode.getFirstChild().getNextSibling();
-                                                                            if (typeNode != null && typeNode.getNodeName().equals("TYPE")) {
-                                                                                toNode = typeNode.getNextSibling();
-                                                                                if (toNode != null && toNode.getNodeName().equals("TO")) {
-                                                                                    currentLiteral.addRelation(new SemanticRelation(srNode.getFirstChild().getNodeValue(), typeNode.getFirstChild().getNodeValue(), Integer.parseInt(toNode.getFirstChild().getNodeValue())));
-                                                                                } else {
-                                                                                    currentLiteral.addRelation(new SemanticRelation(srNode.getFirstChild().getNodeValue(), typeNode.getFirstChild().getNodeValue()));
-                                                                                }
+                                                    if (literalNode.getName().equals("LITERAL")) {
+                                                        senseNode = literalNode.getFirstChild();
+                                                        if (senseNode != null) {
+                                                            if (senseNode.getName().equals("SENSE") && !senseNode.getPcData().isEmpty()) {
+                                                                currentLiteral = new Literal(literalNode.getPcData(), Integer.parseInt(senseNode.getPcData()), currentSynSet.getId());
+                                                                currentSynSet.addLiteral(currentLiteral);
+                                                                addLiteralToLiteralList(currentLiteral);
+                                                                srNode = senseNode.getNextSibling();
+                                                                while (srNode != null) {
+                                                                    if (srNode.getName().equals("SR")) {
+                                                                        typeNode = srNode.getFirstChild();
+                                                                        if (typeNode != null && typeNode.getName().equals("TYPE")) {
+                                                                            toNode = typeNode.getNextSibling();
+                                                                            if (toNode != null && toNode.getName().equals("TO")) {
+                                                                                currentLiteral.addRelation(new SemanticRelation(srNode.getPcData(), typeNode.getPcData(), Integer.parseInt(toNode.getPcData())));
                                                                             } else {
-                                                                                System.out.println("SR node " + srNode.getFirstChild().getNodeValue() + "of literal " + currentLiteral.getName() + " of synSet " + currentSynSet.getId() + " does not contain type value");
+                                                                                currentLiteral.addRelation(new SemanticRelation(srNode.getPcData(), typeNode.getPcData()));
                                                                             }
+                                                                        } else {
+                                                                            System.out.println("SR node " + srNode.getPcData() + "of literal " + currentLiteral.getName() + " of synSet " + currentSynSet.getId() + " does not contain type value");
                                                                         }
-                                                                        srNode = srNode.getNextSibling();
                                                                     }
-                                                                } else {
-                                                                    System.out.println("Literal Node " + textNode.getNodeValue() + " of SynSet " + currentSynSet.getId() + " include nodes other than sense node");
+                                                                    srNode = srNode.getNextSibling();
                                                                 }
                                                             } else {
-                                                                System.out.println("Literal Node " + textNode.getNodeValue() + " of SynSet " + currentSynSet.getId() + " does not include sense node");
+                                                                System.out.println("Literal Node " + literalNode.getPcData() + " of SynSet " + currentSynSet.getId() + " include nodes other than sense node");
                                                             }
                                                         } else {
-                                                            System.out.println("SynSet " + currentSynSet.getId() + " includes nodes other than literal node");
+                                                            System.out.println("Literal Node " + literalNode.getPcData() + " of SynSet " + currentSynSet.getId() + " does not include sense node");
                                                         }
                                                     } else {
-                                                        System.out.println("Literal Node of SynSet " + currentSynSet.getId() + " does not exist");
+                                                        System.out.println("SynSet " + currentSynSet.getId() + " includes nodes other than literal node");
                                                     }
                                                     literalNode = literalNode.getNextSibling();
                                                 }
                                             } else {
-                                                if (partNode.getNodeName().equals("SNOTE") && currentSynSet != null) {
-                                                    currentSynSet.setNote(partNode.getFirstChild().getNodeValue());
+                                                if (partNode.getName().equals("SNOTE") && currentSynSet != null) {
+                                                    currentSynSet.setNote(partNode.getPcData());
                                                 } else {
-                                                    if (partNode.getNodeName().equals("WIKI") && currentSynSet != null){
-                                                        currentSynSet.setWikiPage(partNode.getFirstChild().getNodeValue());
+                                                    if (partNode.getName().equals("WIKI") && currentSynSet != null){
+                                                        currentSynSet.setWikiPage(partNode.getPcData());
                                                     }
                                                 }
                                             }
@@ -215,32 +183,19 @@ public class WordNet {
      * @param exceptionFileName exception file to be read
      */
     public void readExceptionFile(String exceptionFileName) {
-        NamedNodeMap attributes;
         String wordName, rootForm;
         Pos pos;
-        Node wordNode, rootNode;
-        DocumentBuilder builder = null;
-        DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
-        try {
-            builder = factory.newDocumentBuilder();
-        } catch (ParserConfigurationException e) {
-            e.printStackTrace();
-        }
-        Document doc = null;
-        try {
-            doc = builder.parse(new InputSource(FileUtils.getInputStream(exceptionFileName)));
-            exceptionList = new HashMap<>();
-        } catch (SAXException | IOException e) {
-            e.printStackTrace();
-        }
+        XmlElement wordNode, rootNode;
+        XmlDocument doc = new XmlDocument(FileUtils.getInputStream(exceptionFileName));
+        doc.parse();
         rootNode = doc.getFirstChild();
         wordNode = rootNode.getFirstChild();
+        exceptionList = new HashMap<>();
         while (wordNode != null) {
             if (wordNode.hasAttributes()) {
-                attributes = wordNode.getAttributes();
-                wordName = attributes.getNamedItem("name").getNodeValue();
-                rootForm = attributes.getNamedItem("root").getNodeValue();
-                switch (attributes.getNamedItem("pos").getNodeValue()) {
+                wordName = wordNode.getAttributeValue("name");
+                rootForm = wordNode.getAttributeValue("root");
+                switch (wordNode.getAttributeValue("pos")) {
                     case "Adj":
                         pos = Pos.ADJECTIVE;
                         break;
@@ -278,7 +233,7 @@ public class WordNet {
         synSetList = new TreeMap<>();
         literalList = new TreeMap<>(String.CASE_INSENSITIVE_ORDER);
         this.locale = new Locale("tr");
-        readWordNet(new InputSource(FileUtils.getInputStream("turkish_wordnet.xml")));
+        readWordNet(FileUtils.getInputStream("turkish_wordnet.xml"));
     }
 
     /**
@@ -292,7 +247,7 @@ public class WordNet {
         literalList = new TreeMap<>(String.CASE_INSENSITIVE_ORDER);
         this.locale = new Locale("en");
         readExceptionFile("english_exception.xml");
-        readWordNet(new InputSource(FileUtils.getInputStream(fileName)));
+        readWordNet(FileUtils.getInputStream(fileName));
     }
 
     /**
@@ -307,7 +262,7 @@ public class WordNet {
         synSetList = new TreeMap<>();
         literalList = new TreeMap<>(String.CASE_INSENSITIVE_ORDER);
         this.locale = locale;
-        readWordNet(new InputSource(FileUtils.getInputStream(fileName)));
+        readWordNet(FileUtils.getInputStream(fileName));
     }
 
     /**

@@ -6276,6 +6276,7 @@ birazcık IS_SD IS_ADJ
 birazdan IS_ADVERB
 birben IS_OA
 birbiri IS_ZM
+birbirleri IS_ZM
 bircan IS_OA
 birce IS_OA
 birci IS_ADJ CL_ISIM

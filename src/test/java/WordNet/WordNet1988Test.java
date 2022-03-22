@@ -2,8 +2,6 @@ package WordNet;
 
 import DataStructure.CounterHashMap;
 import Dictionary.Pos;
-import Dictionary.TurkishWordComparator;
-import Dictionary.TxtDictionary;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -23,8 +21,8 @@ public class WordNet1988Test extends PreviousWordNetTest{
 
     @Test
     public void testExample() {
-        previousDictionary = new TxtDictionary("turkish1988_dictionary.txt", new TurkishWordComparator());
-        super.testExample();
+        /*previousDictionary = new TxtDictionary("turkish1988_dictionary.txt", new TurkishWordComparator());
+        super.testExample();*/
     }
 
     @Test
@@ -56,7 +54,7 @@ public class WordNet1988Test extends PreviousWordNetTest{
         for (SynSet synSet : previuosWordNet.synSetList()){
             literalCount += synSet.getSynonym().literalSize();
         }
-        assertEquals(75773, literalCount);
+        assertEquals(75775, literalCount);
     }
 
     @Test
@@ -78,13 +76,13 @@ public class WordNet1988Test extends PreviousWordNetTest{
 
     @Test
     public void testLiteralList() {
-        assertEquals(53951, previuosWordNet.literalList().size());
+        assertEquals(53952, previuosWordNet.literalList().size());
     }
 
     @Test
     public void testLiteralWordCounts() {
         CounterHashMap<Integer> counts = literalWordCounts();
-        assertEquals(33634, (int) counts.get(1));
+        assertEquals(33635, (int) counts.get(1));
         assertEquals(16457, (int) counts.get(2));
         assertEquals(2461, (int) counts.get(3));
         assertEquals(853, (int) counts.get(4));

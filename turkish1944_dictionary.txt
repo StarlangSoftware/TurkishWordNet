@@ -468,7 +468,7 @@ adem IS_OA CL_ISIM
 âdemiyet CL_ISIM
 aden IS_OA
 adese CL_ISIM
-âdet IS_SD CL_ISIM
+âdet IS_SD IS_SDD CL_ISIM
 âdeta IS_ADVERB
 adetullah IS_OA
 adeviye IS_OA
@@ -684,7 +684,7 @@ ağırşak IS_SD CL_ISIM
 ağırşaklan F5PR CL_FIIL
 ağırtaş IS_OA
 ağış IS_OA CL_ISIM
-ağıt IS_SD CL_ISIM
+ağıt IS_SD IS_SDD CL_ISIM
 ağıtçı IS_ADJ
 ağız IS_UD CL_ISIM
 ağızdan IS_ADVERB
@@ -2189,7 +2189,7 @@ anomali CL_ISIM
 anonim IS_ADJ
 anoplura IS_OA
 anormal IS_UU IS_ADJ
-anot IS_SD CL_ISIM
+anot IS_SD IS_SDD CL_ISIM
 ansal IS_ADJ
 anseriformes IS_OA
 ansız IS_ADJ
@@ -7134,7 +7134,7 @@ cismani IS_ADJ
 city IS_OA
 civan IS_OA IS_ADJ
 civanbaht IS_OA
-civanmert IS_OA IS_SD IS_ADJ
+civanmert IS_OA IS_SD IS_SDD IS_ADJ
 civanperçemi IS_BILEŞ CL_ISIM
 civanşir IS_OA
 civar CL_ISIM
@@ -12312,7 +12312,7 @@ feridüddin IS_OA
 ferih IS_OA IS_ADJ
 feriha IS_OA
 ferihan IS_OA
-ferik IS_SD CL_ISIM
+ferik IS_SD IS_SDD CL_ISIM
 ferîk CL_ISIM
 feriser IS_OA
 ferişte IS_OA
@@ -15226,7 +15226,7 @@ harmoni CL_ISIM
 harmony IS_OA
 harmonyum CL_ISIM
 harold IS_OA
-harp IS_SD IS_UU CL_ISIM
+harp IS_SD IS_UU IS_SDD CL_ISIM
 harpa CL_ISIM
 harper IS_OA
 harran IS_OA
@@ -16402,7 +16402,7 @@ hyundai IS_OA
 ır CL_ISIM CL_FIIL
 ıra CL_ISIM
 ırabilim CL_ISIM
-ırak IS_OA IS_SD CL_ISIM IS_ADJ
+ırak IS_OA IS_SD IS_SDD CL_ISIM IS_ADJ
 ıraklı IS_OA CL_ISIM
 ıraksa F_GUD F4PW CL_FIIL
 ıraksak IS_ADJ
@@ -17776,7 +17776,7 @@ istimal IS_UU CL_ISIM
 istiman CL_ISIM
 istimbot CL_ISIM
 istimdat IS_SD CL_ISIM
-istimlâk IS_SD IS_UU CL_ISIM
+istimlâk IS_SD IS_UU IS_SDD CL_ISIM
 istimna CL_ISIM
 istimrar CL_ISIM
 istimzaç CL_ISIM
@@ -18717,7 +18717,7 @@ kalomel CL_ISIM
 kalori CL_ISIM
 kalorifer CL_ISIM
 kalorimetre CL_ISIM
-kalp IS_SD IS_UU IS_UUU IS_ADJ
+kalp IS_SD IS_UU IS_UUU IS_SDD IS_ADJ
 kalpak IS_SD CL_ISIM
 kalpakçı CL_ISIM
 kalpaklı IS_ADJ
@@ -18940,7 +18940,7 @@ kanyon CL_ISIM
 kanyonu IS_OA
 kaolin CL_ISIM
 kaos CL_ISIM
-kap IS_SD F5PR CL_ISIM CL_FIIL
+kap IS_SD IS_SDD F5PR CL_ISIM CL_FIIL
 kâp IS_SD CL_ISIM
 kapa F_GUD F4PW CL_FIIL
 kapadokya IS_OA
@@ -34563,7 +34563,7 @@ takla CL_ISIM
 taklavat CL_ISIM
 taklidet CL_FIIL
 taklip CL_ISIM
-taklit IS_ADJ CL_ISIM
+taklit IS_SDD IS_ADJ CL_ISIM
 takma IS_ADJ
 takoz CL_ISIM
 takriben IS_ADVERB
@@ -34923,7 +34923,7 @@ tarman IS_OA
 taro IS_OA
 tarpan CL_ISIM
 tarsus IS_OA
-tart IS_SD F5PR CL_FIIL
+tart IS_SD IS_SDD F5PR CL_FIIL
 tartaç CL_ISIM
 tartakla F_GUD F4PW CL_FIIL
 tartı CL_ISIM
