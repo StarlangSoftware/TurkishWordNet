@@ -10129,7 +10129,7 @@ daily IS_OA
 daim IS_OA IS_ADJ
 daima IS_ADVERB
 daime IS_OA
-daimi IS_ADJ
+daimî IS_ADJ
 dair IS_ADJ
 daire CL_ISIM
 dairesel IS_ADJ
@@ -11421,7 +11421,7 @@ dingin IS_ADJ
 dingincilik CL_ISIM
 dinginleş CL_FIIL
 dinginlik IS_SD CL_ISIM
-dini IS_ADJ
+dinî IS_ADJ
 dinis IS_OA
 dink IS_OA IS_SD CL_ISIM
 dinkins IS_OA
@@ -14176,6 +14176,7 @@ etimesgut IS_OA
 etimesğut IS_OA
 etimolog CL_ISIM
 etimoloji CL_ISIM
+etimolojik IS_ADJ
 etioloji CL_ISIM
 etiyopya IS_OA
 etiyopyalı IS_OA CL_ISIM
@@ -16287,6 +16288,7 @@ gereklilik CL_ISIM
 gerekse F_GUD F4PW CL_FIIL
 gerekseme CL_ISIM
 gereksin F5PR CL_FIIL
+gereksinim CL_ISIM
 gereksinme CL_ISIM
 gereksiz IS_ADJ
 gereksizlik CL_ISIM
@@ -17711,8 +17713,8 @@ güneştopu CL_ISIM
 güneştutulması CL_ISIM
 güney IS_OA IS_ADJ CL_ISIM
 güneybalığı CL_ISIM
-güney-batı CL_ISIM
-güney-doğu CL_ISIM
+güneybatı CL_ISIM
+güneydoğu CL_ISIM
 güneyli CL_ISIM IS_ADJ
 güneysınır IS_OA
 güneysu IS_OA
@@ -18506,7 +18508,7 @@ harıltı CL_ISIM
 harım CL_ISIM
 harın IS_ADJ
 haricen IS_ADVERB
-harici IS_ADJ
+haricî IS_ADJ
 hariciye CL_ISIM
 hariciyeci IS_ADJ
 hariciyecilik IS_SD CL_ISIM
@@ -18805,7 +18807,8 @@ hayalci CL_ISIM IS_ADJ
 hayalet CL_ISIM
 hayalhane CL_ISIM
 hayâlı IS_ADJ
-hayali IS_OA IS_ADJ CL_ISIM
+hayali IS_OA
+hayalî IS_ADJ CL_ISIM
 hayalifener CL_ISIM
 hayalperest IS_ADJ
 hayâsız IS_ADJ
@@ -18992,12 +18995,12 @@ hektolitre CL_ISIM
 hektometre CL_ISIM
 hela CL_ISIM
 helak IS_UU CL_ISIM
-helal IS_UU IS_ADJ IS_ADVERB CL_ISIM
-helalinden IS_ADVERB
-helalleş CL_FIIL
-helalli IS_ADJ
-helallik IS_SD CL_ISIM
-helalzade CL_ISIM
+helâl IS_UU IS_ADJ IS_ADVERB CL_ISIM
+helâlinden IS_ADVERB
+helâlleş CL_FIIL
+helâlli IS_ADJ
+helâllik IS_SD CL_ISIM
+helâlzade CL_ISIM
 hélder IS_OA
 hele IS_CONJ IS_ADVERB IS_DUP
 helecan CL_ISIM
@@ -19057,8 +19060,8 @@ hemofil IS_ADJ
 hemofili CL_ISIM
 hemoglobin CL_ISIM
 hempa CL_ISIM
-hemşeri CL_ISIM
-hemşerilik CL_ISIM
+hemşehri CL_ISIM
+hemşehrilik IS_SD CL_ISIM
 hemşin IS_OA
 hemşire CL_ISIM
 hemşirelik IS_SD CL_ISIM
@@ -19386,9 +19389,9 @@ hikmet IS_OA CL_ISIM
 hikmettin IS_OA
 hikmetullah IS_OA
 hila IS_OA
-hilaf CL_ISIM
-hilafet CL_ISIM
-hilafsız IS_ADVERB
+hilâf CL_ISIM
+hilâfet CL_ISIM
+hilâfsız IS_ADVERB
 hilal IS_OA IS_UU CL_ISIM
 hilali IS_OA
 hilat IS_UU CL_ISIM
@@ -19494,7 +19497,7 @@ hisseişayialı IS_ADJ
 hisseli IS_ADJ
 hisset F_SD F5PR CL_ISIM CL_FIIL
 hissettir CL_FIIL
-hissi IS_ADJ
+hissî IS_ADJ
 hissikablelvuku CL_ISIM
 hissiselim CL_ISIM
 hissiyat CL_ISIM
@@ -19752,7 +19755,7 @@ hukuklu IS_ADJ
 hukuksal IS_ADJ
 hulagu IS_OA
 hulagü IS_OA
-hulasa CL_ISIM IS_ADVERB
+hulâsa CL_ISIM IS_ADVERB
 hulaseten IS_ADVERB
 huliyyat CL_ISIM
 hulki IS_OA
@@ -20705,10 +20708,10 @@ ilaçsız IS_ADJ
 ilah CL_ISIM
 ilâh CL_ISIM
 ilâhe CL_ISIM
-ilahi CL_ISIM
-ilâhi IS_INTERJ CL_ISIM IS_ADJ
+ilâhi IS_INTERJ IS_ADJ
+ilâhî CL_ISIM
 ilâhiyat CL_ISIM
-ilahiyatçı CL_ISIM
+ilâhiyatçı CL_ISIM
 ilahlaş CL_FIIL
 ilal IS_OA
 ilalan IS_OA
@@ -21300,9 +21303,9 @@ interkinez CL_ISIM
 interkoneksiyon CL_ISIM
 intermezzo CL_ISIM
 interstar IS_OA
-intıba CL_ISIM
-intıbak CL_ISIM
+intiba CL_ISIM
 intibah CL_ISIM
+intibak CL_ISIM
 intibaksız IS_ADJ
 intibaksızlık CL_ISIM
 intifa CL_ISIM
@@ -28216,7 +28219,7 @@ maayan IS_OA
 maazallah IS_INTERJ
 mabat IS_SD CL_ISIM
 mabel IS_OA
-mâbet CL_ISIM
+mabet IS_SD CL_ISIM
 mabeyin IS_UD CL_ISIM
 mabeyinci CL_ISIM
 mabeyincilik CL_ISIM
@@ -28399,8 +28402,7 @@ mahkemeli IS_ADJ
 mahkemelik IS_ADJ
 mahkûk IS_ADJ
 mahkûkât CL_ISIM
-mahkum IS_ADJ
-mahkûm IS_ADJ
+mahkûm CL_ISIM IS_ADJ
 mahkûmiyet CL_ISIM
 mahlas CL_ISIM
 mahlep IS_SD CL_ISIM
@@ -28457,7 +28459,7 @@ mahsus IS_ADJ IS_ADVERB
 mahsûs IS_ADJ
 mahsut IS_OA
 mahşer IS_OA CL_ISIM
-mahşeri IS_ADJ
+mahşerî IS_ADJ
 mahten IS_OA
 mahter IS_OA
 mahunya CL_ISIM
@@ -28692,6 +28694,7 @@ mandel IS_OA
 mandela IS_OA
 mandepsi CL_ISIM
 mandıra CL_ISIM
+mandıracı CL_ISIM
 mandolin CL_ISIM
 manej CL_ISIM
 mânen IS_ADVERB
@@ -28939,8 +28942,8 @@ marul CL_ISIM
 marulcuk IS_SD CL_ISIM
 maruni CL_ISIM
 marut IS_OA
-mâruz IS_ADJ
-mâruzat CL_ISIM
+maruz IS_ADJ
+maruzat CL_ISIM
 marvin IS_OA
 marx IS_OA
 mary IS_OA
@@ -29630,7 +29633,7 @@ merkezci CL_ISIM
 merkezcil IS_ADJ
 merkezcilik IS_SD CL_ISIM
 merkezde IS_ADVERB
-merkezi IS_ADJ
+merkezî IS_ADJ
 merkezîleş CL_FIIL
 merkezîleşme CL_ISIM
 merkeziyet CL_ISIM
@@ -29716,6 +29719,7 @@ meskût IS_ADJ
 meslek IS_SD CL_ISIM
 mesleki IS_ADJ
 mesleksiz IS_ADJ
+meslektaş CL_ISIM
 mesmu IS_ADJ
 mesnet IS_SD CL_ISIM
 mesnetli IS_ADJ
@@ -31272,7 +31276,8 @@ mülâhham IS_ADJ
 mülakat CL_ISIM
 mülaki IS_ADJ
 mülayemet CL_ISIM
-mülayim IS_OA IS_ADJ
+mülayim IS_OA
+mülâyim IS_ADJ
 mülazım IS_OA IS_ADJ CL_ISIM
 müldür IS_OA
 mülemma IS_ADJ CL_ISIM
@@ -31383,7 +31388,7 @@ münzir IS_OA
 müphem IS_ADJ IS_ADVERB
 müphemiyet CL_ISIM
 müptedi IS_ADJ
-müptela IS_ADJ
+müptelâ IS_ADJ
 müptezel IS_ADJ
 müracaat CL_ISIM
 müracaatçı CL_ISIM
@@ -31578,7 +31583,7 @@ müteaddit IS_ADJ
 müteaffin IS_ADJ
 müteahhit IS_SD CL_ISIM
 müteakıben IS_ADVERB
-müteakıp IS_ADJ IS_ADVERB
+müteakip IS_SD IS_ADJ IS_ADVERB
 müteal IS_OA
 mütealiye CL_ISIM
 müteallik IS_ADJ
@@ -34846,6 +34851,7 @@ papelcilik IS_SD CL_ISIM
 papirüs CL_ISIM
 papirüsgiller CL_ISIM
 papua IS_OA
+papyekuşe CL_ISIM
 papyon CL_ISIM
 par IS_OA IS_DUP
 para IS_DUP CL_ISIM
@@ -34897,6 +34903,7 @@ paraşütçü CL_ISIM
 paraşütçülük IS_SD CL_ISIM
 paratoner CL_ISIM
 paravan IS_ADJ CL_ISIM
+paravana IS_ADJ CL_ISIM
 parazit IS_ADJ CL_ISIM
 parazitlik CL_ISIM
 parazitoloji CL_ISIM
@@ -37311,6 +37318,7 @@ sabuntaşı IS_BILEŞ CL_ISIM
 sabur IS_OA
 sabura CL_ISIM
 sabutay IS_OA
+sac CL_ISIM IS_ADJ
 sacayağı IS_BILEŞ IS_B_SD CL_ISIM
 sacayak IS_SD CL_ISIM
 sachiko IS_OA
@@ -37318,7 +37326,7 @@ sachs IS_OA
 sacid IS_OA
 sacide IS_OA
 sacit IS_OA
-saç F5PR CL_ISIM IS_ADJ CL_FIIL
+saç F5PR CL_ISIM CL_FIIL
 saçak IS_SD CL_ISIM IS_ADJ
 saçakbulut CL_ISIM
 saçaklan F5PR-NO-REF CL_FIIL
@@ -42457,8 +42465,7 @@ talebe CL_ISIM
 talep IS_SD CL_ISIM
 talepname CL_ISIM
 talha IS_OA
-tali IS_OA
-tâli IS_ADJ
+tali IS_OA IS_ADJ
 talia IS_OA
 talib IS_OA
 taliban IS_OA
@@ -43585,6 +43592,7 @@ temizle F_GUD F6P1 CL_FIIL
 temizlen CL_FIIL
 temizleyici CL_ISIM IS_ADJ
 temizlik IS_SD CL_ISIM
+temizlikçi CL_ISIM
 temizol IS_OA
 temizöz IS_OA
 temizsan IS_OA
@@ -47676,7 +47684,7 @@ yaptırım CL_ISIM
 yapyakın IS_ADVERB
 yapyalnız IS_ADJ
 yar IS_UU IS_UUU F5PR IS_ADJ CL_ISIM CL_FIIL
-yâr IS_UU IS_UUU IS_ADJ
+yâr IS_UU IS_UUU IS_ADJ CL_ISIM
 yara IS_OA F_GUD F4PW CL_ISIM CL_FIIL
 yaradan IS_OA CL_ISIM
 yaradancılık IS_OA CL_ISIM

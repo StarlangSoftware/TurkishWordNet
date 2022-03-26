@@ -16406,6 +16406,7 @@ gereklilik CL_ISIM
 gerekse F_GUD F4PW CL_FIIL
 gerekseme CL_ISIM
 gereksin F5PR CL_FIIL
+gereksinim CL_ISIM
 gereksinme CL_ISIM
 gereksiz IS_ADJ
 gereksizlik CL_ISIM

@@ -50,7 +50,7 @@
         <dependency>
             <groupId>io.github.starlangsoftware</groupId>
             <artifactId>MorphologicalAnalysis</artifactId>
-            <version>1.0.49</version>
+            <version>1.0.50</version>
         </dependency>
         <dependency>
             <groupId>junit</groupId>

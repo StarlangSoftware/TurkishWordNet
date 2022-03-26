@@ -55,7 +55,7 @@ public class WordNet1983Test extends PreviousWordNetTest{
         for (SynSet synSet : previuosWordNet.synSetList()){
             literalCount += synSet.getSynonym().literalSize();
         }
-        assertEquals(72455, literalCount);
+        assertEquals(72456, literalCount);
     }
 
     @Test
@@ -77,13 +77,13 @@ public class WordNet1983Test extends PreviousWordNetTest{
 
     @Test
     public void testLiteralList() {
-        assertEquals(51683, previuosWordNet.literalList().size());
+        assertEquals(51684, previuosWordNet.literalList().size());
     }
 
     @Test
     public void testLiteralWordCounts() {
         CounterHashMap<Integer> counts = literalWordCounts();
-        assertEquals(33666, (int) counts.get(1));
+        assertEquals(33667, (int) counts.get(1));
         assertEquals(14599, (int) counts.get(2));
         assertEquals(2217, (int) counts.get(3));
         assertEquals(765, (int) counts.get(4));
