@@ -7,7 +7,6 @@ import Dictionary.TxtDictionary;
 import org.junit.Before;
 import org.junit.Test;
 
-import java.io.FileNotFoundException;
 import java.util.Locale;
 
 import static org.junit.Assert.assertEquals;
@@ -27,7 +26,7 @@ public class WordNet1983Test extends PreviousWordNetTest{
     }
 
     @Test
-    public void testSize() throws FileNotFoundException {
+    public void testSize() {
         assertEquals(55184, previuosWordNet.size());
     }
 

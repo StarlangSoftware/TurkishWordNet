@@ -41,6 +41,7 @@ public class WordNet1988Test extends PreviousWordNetTest{
         assertEquals(506, (int) counts.get("TUR05"));
         assertEquals(690, (int) counts.get("TUR06"));
         assertEquals(1476, (int) counts.get("TUR07"));
+        assertEquals(744, (int) counts.get("TUR08"));
         assertEquals(51257, (int) counts.get("TUR10"));
     }
 
