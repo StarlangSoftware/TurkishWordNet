@@ -127,7 +127,7 @@ public class PreviousWordNetTest {
                 }
                 if (!example){
                     for (SynSet synSet : synSets){
-                        System.out.println(synSet.getId() + "\t" + name + "\t" + synSet.getDefinition() + "\t" + synSet.getExample());
+                        System.out.println(synSet.getId() + "\t" + name + "\t" + synSet.getPos() + "\t" + synSet.getDefinition() + "\t" + synSet.getExample());
                     }
                 }
             }
