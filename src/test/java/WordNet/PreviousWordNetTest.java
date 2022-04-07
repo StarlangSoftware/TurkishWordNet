@@ -134,6 +134,26 @@ public class PreviousWordNetTest {
         }
     }
 
+    public void testLiterals() {
+        FsmMorphologicalAnalyzer analyzer = new FsmMorphologicalAnalyzer(previousDictionary);
+        for (SynSet synSet : previuosWordNet.synSetList()){
+            for (int i = 0; i < synSet.getSynonym().literalSize(); i++){
+                String literal = synSet.getSynonym().getLiteral(i).getName();
+                String[] words = literal.split(" ");
+                String notAnalyzed = "";
+                for (String  word : words){
+                    String newWord = word.replaceAll("`", "").replaceAll("!", "").replaceAll("\\?", "").replaceAll(",", "").replaceAll("\\(", "").replaceAll("\\)", "").replaceAll("\"", "").replaceAll("\\.", "").replaceAll(";", "").replaceAll(":", "");
+                    if (newWord.length() > 0 && analyzer.morphologicalAnalysis(newWord).size() == 0){
+                        notAnalyzed += newWord + " ";
+                    }
+                }
+                if (notAnalyzed.length() > 0){
+                    System.out.println(synSet.getId() + "\t" + synSet.getSynonym().toString() + "\t" + notAnalyzed);
+                }
+            }
+        }
+    }
+
     public void testExample() {
         int count = 0;
         FsmMorphologicalAnalyzer analyzer = new FsmMorphologicalAnalyzer(previousDictionary);
