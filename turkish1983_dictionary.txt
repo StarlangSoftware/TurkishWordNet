@@ -12012,7 +12012,7 @@ domuzgiller CL_ISIM
 domuzlan CL_ISIM
 domuzlaş CL_FIIL
 domuzluk IS_SD CL_ISIM
-domuztırnağı IS_BILEŞ IS_B_SD IS_INTERJ
+domuztırnağı IS_BILEŞ IS_B_SD CL_ISIM
 domuzuna IS_ADVERB
 don F5PR CL_ISIM CL_FIIL
 dona F_GUD CL_FIIL
