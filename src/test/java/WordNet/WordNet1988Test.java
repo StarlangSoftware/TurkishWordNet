@@ -34,15 +34,15 @@ public class WordNet1988Test extends PreviousWordNetTest{
     @Test
     public void testSynSetIdCounts() {
         CounterHashMap<String> counts = synSetIdCounts();
-        assertEquals(1749, (int) counts.get("TUR01"));
-        assertEquals(1158, (int) counts.get("TUR02"));
-        assertEquals(249, (int) counts.get("TUR03"));
-        assertEquals(121, (int) counts.get("TUR04"));
-        assertEquals(496, (int) counts.get("TUR05"));
-        assertEquals(687, (int) counts.get("TUR06"));
-        assertEquals(1466, (int) counts.get("TUR07"));
-        assertEquals(717, (int) counts.get("TUR08"));
-        assertEquals(51259, (int) counts.get("TUR10"));
+        assertEquals(1549, (int) counts.get("TUR01"));
+        assertEquals(686, (int) counts.get("TUR02"));
+        assertEquals(200, (int) counts.get("TUR03"));
+        assertEquals(100, (int) counts.get("TUR04"));
+        assertEquals(479, (int) counts.get("TUR05"));
+        assertEquals(601, (int) counts.get("TUR06"));
+        assertEquals(1289, (int) counts.get("TUR07"));
+        assertEquals(567, (int) counts.get("TUR08"));
+        assertEquals(52431, (int) counts.get("TUR10"));
     }
 
     @Test

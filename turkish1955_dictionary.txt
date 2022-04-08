@@ -22467,7 +22467,7 @@ lâdik IS_OA
 lâdinağacı CL_ISIM
 ladino IS_OA
 lady IS_OA
-lâf CL_ISIM IS_INTERJ
+lâf IS_INTERJ CL_ISIM
 lafalce IS_OA
 lâfazan IS_ADJ
 lâfazanlık CL_ISIM

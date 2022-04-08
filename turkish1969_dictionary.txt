@@ -14463,7 +14463,7 @@ görev CL_ISIM
 görevdeşlik CL_ISIM
 görevlen CL_FIIL
 görevlendir CL_FIIL
-görevli CL_ISIM IS_ADJ
+görevli IS_ADJ CL_ISIM
 görevlilik IS_SD CL_ISIM
 görevsiz IS_ADJ
 görevsizlik IS_SD CL_ISIM
@@ -23220,7 +23220,7 @@ ladin CL_ISIM
 ladino IS_OA
 lady IS_OA
 lâedriye CL_ISIM
-laf CL_ISIM IS_INTERJ
+laf IS_INTERJ CL_ISIM
 lafalce IS_OA
 lafazan IS_ADJ
 lafazanlık IS_SD CL_ISIM

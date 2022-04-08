@@ -23051,7 +23051,7 @@ lâdinağacı CL_ISIM
 ladino IS_OA
 lady IS_OA
 lâedriye CL_ISIM
-lâf CL_ISIM IS_INTERJ
+lâf IS_INTERJ CL_ISIM
 lafalce IS_OA
 lâfazan IS_ADJ
 lâfazanlık CL_ISIM
@@ -23616,7 +23616,6 @@ lokavt CL_ISIM
 loke IS_OA
 lokma CL_ISIM
 lokmacı CL_ISIM
-lokmagöz CL_ISIM
 lokman IS_OA
 lokmanruhu IS_BILEŞ CL_ISIM
 lokomobil CL_ISIM

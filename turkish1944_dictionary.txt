@@ -22212,7 +22212,7 @@ lâdinağacı CL_ISIM
 lâdinî IS_ADJ
 ladino IS_OA
 lady IS_OA
-lâf CL_ISIM IS_INTERJ
+lâf IS_INTERJ CL_ISIM
 lafalce IS_OA
 lâfazan IS_ADJ
 lâfazanlık CL_ISIM
@@ -24006,7 +24006,7 @@ memorandum CL_ISIM
 memphis IS_OA
 memul IS_ADJ
 memun IS_OA
-memur CL_ISIM IS_ADJ
+memur IS_ADJ CL_ISIM
 memuriyet CL_ISIM
 menaat CL_ISIM
 menaf IS_OA
