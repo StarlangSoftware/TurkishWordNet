@@ -270,16 +270,23 @@ public class PreviousWordNetTest {
                     if (words[0].equals(words[1])){
                         dictionary.addWithFlag(words[0], "IS_DUP");
                     } else {
-                        if (words[0].length() == words[1].length()){
-                            int count = 0;
-                            for (int j = 0; j < words[0].length(); j++){
-                                if (words[0].charAt(j) != words[1].charAt(j)){
-                                    count++;
+                        if (!words[0].endsWith("mek") && !words[1].endsWith("mak") &&
+                                words[0].length() > 3 && words[1].length() > 3 &&
+                                words[0].substring(words[0].length() - 3).equals(words[1].substring(words[1].length() - 3))){
+                            dictionary.addWithFlag(words[0], "IS_DUP");
+                            dictionary.addWithFlag(words[1], "IS_DUP");
+                        } else {
+                            if (words[0].length() == words[1].length()){
+                                int count = 0;
+                                for (int j = 0; j < words[0].length(); j++){
+                                    if (words[0].charAt(j) != words[1].charAt(j)){
+                                        count++;
+                                    }
                                 }
-                            }
-                            if (count == 1){
-                                dictionary.addWithFlag(words[0], "IS_DUP");
-                                dictionary.addWithFlag(words[1], "IS_DUP");
+                                if (count == 1){
+                                    dictionary.addWithFlag(words[0], "IS_DUP");
+                                    dictionary.addWithFlag(words[1], "IS_DUP");
+                                }
                             }
                         }
                     }
