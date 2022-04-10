@@ -2,6 +2,9 @@ package WordNet;
 
 import DataStructure.CounterHashMap;
 import Dictionary.Pos;
+import Dictionary.TurkishWordComparator;
+import Dictionary.TxtDictionary;
+import Dictionary.TxtWord;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -126,6 +129,109 @@ public class WordNetTest {
     @Test
     public void testLiteralList() {
         assertEquals(82136, turkish.literalList().size());
+    }
+
+    public void generateDictionary(){
+        String[] flags = {"IS_SD", "IS_KG", "IS_UD", "IS_UU", "IS_UUU",
+                "IS_SU", "IS_ST", "F_SD", "F_GUD", "F_GUDO", "IS_SDD",
+                "F1P1", "F2P1", "F2PL", "F2P1-NO-REF", "F3P1-NO-REF",
+                "F4P1-NO-REF", "F4PR-NO-REF", "F4PL-NO-REF", "F4PW-NO-REF", "F5PL-NO-REF",
+                "F5PR-NO-REF", "F5PW-NO-REF", "F2P1", "F3P1", "F4P1",
+                "F4PR", "F4PL", "F4PW", "F5P1", "F5PL",
+                "F5PR", "F5PW", "F6P1", "IS_KU", "IS_BILEŞ",
+                "IS_B_SD", "IS_KI", "IS_STT", "IS_UDD", "IS_CA", "IS_KIS",
+                "IS_EX", "CL_NONE", "IS_B_SI", "IS_SAYI"};
+        WordNet turkishWordNet = new WordNet();
+        TxtDictionary turkish = new TxtDictionary();
+        TxtDictionary dictionary = new TxtDictionary(new TurkishWordComparator());
+        for (int i = 0; i < turkish.size(); i++){
+            TxtWord txtWord = (TxtWord) turkish.getWord(i);
+            if (txtWord.containsFlag("IS_OA")){
+                dictionary.addProperNoun(txtWord.getName());
+            }
+            if (txtWord.containsFlag("IS_QUES")){
+                dictionary.addWithFlag(txtWord.getName(), "IS_QUES");
+            }
+        }
+        for (String literal : turkishWordNet.literalList()){
+            if (!literal.contains(" ")){
+                TxtWord txtWord = (TxtWord) turkish.getWord(literal);
+                if (txtWord != null){
+                    for (String flag: flags){
+                        if (txtWord.containsFlag(flag)){
+                            dictionary.addWithFlag(literal, flag);
+                        }
+                    }
+                }
+                if (literal.endsWith("mek") || literal.endsWith("mak")){
+                    txtWord = (TxtWord) turkish.getWord(literal.substring(0, literal.length() - 3));
+                    if (txtWord != null){
+                        for (String flag: flags){
+                            if (txtWord.containsFlag(flag)){
+                                dictionary.addWithFlag(literal.substring(0, literal.length() - 3), flag);
+                            }
+                        }
+                    }
+                }
+                ArrayList<SynSet> synSets = turkishWordNet.getSynSetsWithLiteral(literal);
+                for (SynSet synSet : synSets){
+                    switch (synSet.getPos()){
+                        case NOUN:
+                            dictionary.addNoun(literal);
+                            break;
+                        case VERB:
+                            dictionary.addVerb(literal.substring(0, literal.length() - 3));
+                            break;
+                        case ADJECTIVE:
+                            dictionary.addAdjective(literal);
+                            break;
+                        case ADVERB:
+                            dictionary.addAdverb(literal);
+                            break;
+                        case PRONOUN:
+                            dictionary.addPronoun(literal);
+                            break;
+                        case CONJUNCTION:
+                            dictionary.addWithFlag(literal, "IS_CONJ");
+                            break;
+                        case INTERJECTION:
+                            dictionary.addWithFlag(literal, "IS_INTERJ");
+                            break;
+                        case PREPOSITION:
+                            dictionary.addWithFlag(literal, "IS_POSTP");
+                            break;
+                    }
+                }
+            } else {
+                String[] words = literal.split(" ");
+                if (words.length == 2){
+                    if (words[0].equals(words[1])){
+                        dictionary.addWithFlag(words[0], "IS_DUP");
+                    } else {
+                        if (!words[0].endsWith("mek") && !words[1].endsWith("mak") &&
+                                words[0].length() > 3 && words[1].length() > 3 &&
+                                words[0].substring(words[0].length() - 3).equals(words[1].substring(words[1].length() - 3))){
+                            dictionary.addWithFlag(words[0], "IS_DUP");
+                            dictionary.addWithFlag(words[1], "IS_DUP");
+                        } else {
+                            if (words[0].length() == words[1].length()){
+                                int count = 0;
+                                for (int j = 0; j < words[0].length(); j++){
+                                    if (words[0].charAt(j) != words[1].charAt(j)){
+                                        count++;
+                                    }
+                                }
+                                if (count == 1){
+                                    dictionary.addWithFlag(words[0], "IS_DUP");
+                                    dictionary.addWithFlag(words[1], "IS_DUP");
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        dictionary.saveAsTxt("turkish_dictionary_new.txt");
     }
 
     @Test
