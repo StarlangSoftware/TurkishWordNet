@@ -79,6 +79,68 @@ public class PreviousWordNetTest {
         assertTrue(found);
     }
 
+    private WordNet getWordNet(String id){
+        switch (id){
+            case "01":
+                return new WordNet("turkish1944_wordnet.xml", new Locale("tr"));
+            case "02":
+                return new WordNet("turkish1955_wordnet.xml", new Locale("tr"));
+            case "03":
+                return new WordNet("turkish1959_wordnet.xml", new Locale("tr"));
+            case "04":
+                return new WordNet("turkish1966_wordnet.xml", new Locale("tr"));
+            case "05":
+                return new WordNet("turkish1969_wordnet.xml", new Locale("tr"));
+            case "06":
+                return new WordNet("turkish1974_wordnet.xml", new Locale("tr"));
+            case "07":
+                return new WordNet("turkish1983_wordnet.xml", new Locale("tr"));
+            case "08":
+                return new WordNet("turkish1988_wordnet.xml", new Locale("tr"));
+            case "10":
+            default:
+                return new WordNet();
+        }
+    }
+
+    public void findMatchingLiteralsInPreviousWordNets(String first, String second) {
+        WordNet secondWordNet = getWordNet(second);
+        for (SynSet synSet1 : previuosWordNet.synSetList()) {
+            if (synSet1.getId().startsWith("TUR" + first + "-")) {
+                for (SynSet synSet2 : secondWordNet.synSetList()) {
+                    if (synSet2.getId().startsWith("TUR" + second + "-") && synSet1.getPos().equals(synSet2.getPos())) {
+                        for (int i = 0; i < synSet1.getSynonym().literalSize(); i++) {
+                            String literal1 = synSet1.getSynonym().getLiteral(i).getName();
+                            for (int j = 0; j < synSet2.getSynonym().literalSize(); j++) {
+                                String literal2 = synSet2.getSynonym().getLiteral(j).getName();
+                                if (literal1.equalsIgnoreCase(literal2)) {
+                                    System.out.println(literal1 + "\t" + synSet1.getId() + "\t" + synSet1.getPos() + "\t" + synSet1.getLongDefinition());
+                                    System.out.println(literal1 + "\t" + synSet2.getId() + "\t" + synSet2.getPos() + "\t" + synSet2.getLongDefinition());
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    public void findMatchingSynSetsInPreviousWordNets(String first, String second) {
+        WordNet secondWordNet = getWordNet(second);
+        for (SynSet synSet1 : previuosWordNet.synSetList()){
+            if (synSet1.getId().startsWith("TUR" + first + "-")){
+                for (SynSet synSet2: secondWordNet.synSetList()){
+                    if (synSet2.getId().startsWith("TUR" + second + "-") && synSet1.getPos().equals(synSet2.getPos())){
+                        double matchRatio = numberOfMatches(synSet1.getLongDefinition(), synSet2.getLongDefinition());
+                        if (matchRatio >= 0.8){
+                            System.out.println(matchRatio + "\t" + synSet1.getId() + "\t" + synSet2.getId() + "\t" + synSet1.getSynonym().toString() + "\t" + synSet2.getSynonym().toString() + "\t" + synSet1.getLongDefinition() + "\t" + synSet2.getLongDefinition());
+                        }
+                    }
+                }
+            }
+        }
+    }
+
     public void comparePosWithPosOfCorrespondingKeNetSynSets(){
         boolean found = true;
         for (SynSet synSet : previuosWordNet.synSetList()){
@@ -195,7 +257,7 @@ public class PreviousWordNetTest {
         }
     }
 
-    public void generateDictionary(String year){
+        public void generateDictionary(String year){
         String[] flags = {"IS_SD", "IS_KG", "IS_UD", "IS_UU", "IS_UUU",
                 "IS_SU", "IS_ST", "F_SD", "F_GUD", "F_GUDO", "IS_SDD",
                 "F1P1", "F2P1", "F2PL", "F2P1-NO-REF", "F3P1-NO-REF",
