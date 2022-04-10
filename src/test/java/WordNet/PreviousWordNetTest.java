@@ -108,7 +108,7 @@ public class PreviousWordNetTest {
         for (SynSet synSet1 : previuosWordNet.synSetList()) {
             if (synSet1.getId().startsWith("TUR" + first + "-")) {
                 for (SynSet synSet2 : secondWordNet.synSetList()) {
-                    if (synSet2.getId().startsWith("TUR" + second + "-") && synSet1.getPos().equals(synSet2.getPos())) {
+                    if (synSet2.getId().startsWith("TUR" + second + "-") && synSet1.getPos().equals(synSet2.getPos()) && previuosWordNet.getSynSetWithId(synSet2.getId()) == null) {
                         for (int i = 0; i < synSet1.getSynonym().literalSize(); i++) {
                             String literal1 = synSet1.getSynonym().getLiteral(i).getName();
                             for (int j = 0; j < synSet2.getSynonym().literalSize(); j++) {
