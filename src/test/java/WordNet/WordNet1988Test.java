@@ -7,7 +7,6 @@ import Dictionary.TxtDictionary;
 import org.junit.Before;
 import org.junit.Test;
 
-import java.util.ArrayList;
 import java.util.Locale;
 
 import static org.junit.Assert.assertEquals;
@@ -144,28 +143,6 @@ public class WordNet1988Test extends PreviousWordNetTest{
     public void comparePosWithPosOfCorrespondingKeNetSynSets(){
         currentWordNet = new WordNet();
         super.comparePosWithPosOfCorrespondingKeNetSynSets();
-    }
-
-    public void generateNextData(){
-        for (String literal : previuosWordNet.literalList()){
-            ArrayList<SynSet> synSets = previuosWordNet.getSynSetsWithLiteral(literal);
-            for (SynSet synSet : synSets){
-                System.out.println(literal + "\t" + synSet.getId() + "\t" + synSet.getPos() + "\t" + synSet.getLongDefinition() + "\t" + synSet.getSynonym() + "\t" + synSet.getExample());
-            }
-        }
-    }
-
-    public void generate2020Data(){
-        WordNet turkish = new WordNet();
-        for (String literal : turkish.literalList()){
-            ArrayList<SynSet> synSets1 = turkish.getSynSetsWithLiteral(literal);
-            ArrayList<SynSet> synSets2 = previuosWordNet.getSynSetsWithLiteral(literal);
-            for (SynSet synSet : synSets1){
-                if (!synSets2.contains(synSet)){
-                    System.out.println(literal + "\t" + synSet.getId() + "\t" + synSet.getPos() + "\t" + synSet.getLongDefinition() + "\t" + synSet.getSynonym() + "\t" + synSet.getExample());
-                }
-            }
-        }
     }
 
 }
