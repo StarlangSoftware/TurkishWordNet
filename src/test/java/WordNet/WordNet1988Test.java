@@ -77,7 +77,7 @@ public class WordNet1988Test extends PreviousWordNetTest{
 
     @Test
     public void testLiteralList() {
-        assertEquals(53958, previuosWordNet.literalList().size());
+        assertEquals(53957, previuosWordNet.literalList().size());
     }
 
     @Test
@@ -85,7 +85,7 @@ public class WordNet1988Test extends PreviousWordNetTest{
         CounterHashMap<Integer> counts = literalWordCounts();
         assertEquals(33643, (int) counts.get(1));
         assertEquals(16454, (int) counts.get(2));
-        assertEquals(2464, (int) counts.get(3));
+        assertEquals(2463, (int) counts.get(3));
         assertEquals(853, (int) counts.get(4));
         assertEquals(284, (int) counts.get(5));
         assertEquals(155, (int) counts.get(6));
