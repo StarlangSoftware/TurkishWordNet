@@ -53,7 +53,7 @@ Each entry in the dictionary is enclosed by <SYNSET> and </SYNSET> tags. Synset 
 Video Lectures
 ============
 
-[<img src=video1.jpg width="50%">](https://youtu.be/RLVTegHva_k)[<img src=video2.jpg width="50%">](https://youtu.be/DFc_XEqJshU)
+[<img src=video1.jpg width="50%">](https://youtu.be/RLVTegHva_k)[<img src=video2.jpg width="50%">](https://youtu.be/DFc_XEqJshU)[<img src=video2.jpg width="50%">](https://youtu.be/RLVTegHva_k)[<img src=video2.jpg width="50%">](https://youtu.be/KyA32rOv308)
 	
 For Developers
 ============
