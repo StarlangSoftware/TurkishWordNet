@@ -33,13 +33,13 @@ public class WordNet1974Test extends PreviousWordNetTest{
     @Test
     public void testSynSetIdCounts() {
         CounterHashMap<String> counts = synSetIdCounts();
-        assertEquals(2484, (int) counts.get("TUR01"));
+        assertEquals(2483, (int) counts.get("TUR01"));
         assertEquals(1068, (int) counts.get("TUR02"));
         assertEquals(326, (int) counts.get("TUR03"));
         assertEquals(146, (int) counts.get("TUR04"));
         assertEquals(652, (int) counts.get("TUR05"));
         assertEquals(1055, (int) counts.get("TUR06"));
-        assertEquals(37145, (int) counts.get("TUR10"));
+        assertEquals(37146, (int) counts.get("TUR10"));
     }
 
     @Test

@@ -46239,7 +46239,7 @@ uzviyet CL_ISIM
 ülmen IS_OA
 ülser CL_ISIM
 ültimatom CL_ISIM
-ültramodern IS_ADJ
+ültramodern CL_ISIM
 ültrason CL_ISIM
 ültraviyole CL_ISIM
 ülûhiyet CL_ISIM
