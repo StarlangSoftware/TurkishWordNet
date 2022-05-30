@@ -8,11 +8,7 @@ import Dictionary.TxtWord;
 import org.junit.Before;
 import org.junit.Test;
 
-import java.io.File;
-import java.io.FileNotFoundException;
 import java.util.ArrayList;
-import java.util.Locale;
-import java.util.Scanner;
 
 import static org.junit.Assert.*;
 
@@ -23,88 +19,6 @@ public class WordNetTest {
     @Before
     public void setUp() {
         turkish = new WordNet();
-    }
-
-    public void generateWordNet(){
-        String year = "1988";
-        WordNet wordNet = new WordNet("empty.xml", new Locale("tr"));
-        try {
-            Scanner input = new Scanner(new File(year + ".txt"));
-            while (input.hasNextLine()){
-                String line = input.nextLine();
-                String[] items = line.split("\\t");
-                if (items.length != 4){
-                    System.out.println(line + " -> Error in line ITEMS MISSING!!");
-                    continue;
-                }
-                String literal = items[0].trim();
-                ArrayList<Literal> literals = wordNet.getLiteralsWithName(literal);
-                int maxIndex = 0;
-                for (Literal literal2 : literals){
-                    if (literal2.getSense() > maxIndex){
-                        maxIndex = literal2.getSense();
-                    }
-                }
-                String id = items[1].trim();
-                String posText = items[2].trim();
-                Pos pos;
-                switch (posText){
-                    case "NOUN":
-                        pos = Pos.NOUN;
-                        break;
-                    case "ADJECTIVE":
-                        pos = Pos.ADJECTIVE;
-                        break;
-                    case "ADVERB":
-                        pos = Pos.ADVERB;
-                        break;
-                    case "VERB":
-                        pos = Pos.VERB;
-                        break;
-                    case "INTERJECTION":
-                        pos = Pos.INTERJECTION;
-                        break;
-                    case "PRONOUN":
-                        pos = Pos.PRONOUN;
-                        break;
-                    case "CONJUNCTION":
-                        pos = Pos.CONJUNCTION;
-                        break;
-                    case "PREPOSITION":
-                        pos = Pos.PREPOSITION;
-                        break;
-                    default:
-                        System.out.println(line + " -> Error in line POS WRONG!!");
-                        pos = Pos.NOUN;
-                        break;
-                }
-                String definition = items[3].trim();
-                if (wordNet.getSynSetWithId(id) == null){
-                    SynSet synSet = new SynSet(id);
-                    synSet.setDefinition(definition);
-                    Literal literal1 = new Literal(literal, maxIndex + 1, id);
-                    synSet.addLiteral(literal1);
-                    wordNet.addLiteralToLiteralList(literal1);
-                    synSet.setPos(pos);
-                    wordNet.addSynSet(synSet);
-                } else {
-                    SynSet synSet = wordNet.getSynSetWithId(id);
-                    if (!synSet.getPos().equals(pos)){
-                        System.out.println(line + " -> Error in line POS CONFLICT!! (Previous pos of: " + synSet.getSynonym().toString() + "=" + synSet.getPos() + ")");
-                    }
-                    Literal literal1 = new Literal(literal, maxIndex + 1, id);
-                    synSet.addLiteral(literal1);
-                    wordNet.addLiteralToLiteralList(literal1);
-                    if (!synSet.getLongDefinition().equals(definition)){
-                        System.out.println(line + " -> Error in line DEFINITION CONFLICT!! (Previous definition of: " + synSet.getSynonym().toString() + "=" + synSet.getDefinition() + ")");
-                    }
-                }
-            }
-            input.close();
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        }
-        wordNet.saveAsXml(year + ".xml");
     }
 
     @Test
@@ -118,7 +32,7 @@ public class WordNetTest {
         for (SynSet synSet : turkish.synSetList()){
             literalCount += synSet.getSynonym().literalSize();
         }
-        assertEquals(110240, literalCount);
+        assertEquals(110236, literalCount);
     }
 
     @Test
@@ -128,7 +42,7 @@ public class WordNetTest {
 
     @Test
     public void testLiteralList() {
-        assertEquals(82136, turkish.literalList().size());
+        assertEquals(82135, turkish.literalList().size());
     }
 
     public void generateDictionary(){
@@ -248,7 +162,7 @@ public class WordNetTest {
         }
         assertEquals(48704, (int) counts.get(1));
         assertEquals(28417, (int) counts.get(2));
-        assertEquals(3557, (int) counts.get(3));
+        assertEquals(3556, (int) counts.get(3));
         assertEquals(910, (int) counts.get(4));
         assertEquals(304, (int) counts.get(5));
         assertEquals(137, (int) counts.get(6));
@@ -325,8 +239,8 @@ public class WordNetTest {
     @Test
     public void testGetSynSetsWithPartOfSpeech() {
         assertEquals(43869, turkish.getSynSetsWithPartOfSpeech(Pos.NOUN).size());
-        assertEquals(17776, turkish.getSynSetsWithPartOfSpeech(Pos.VERB).size());
-        assertEquals(12406, turkish.getSynSetsWithPartOfSpeech(Pos.ADJECTIVE).size());
+        assertEquals(17772, turkish.getSynSetsWithPartOfSpeech(Pos.VERB).size());
+        assertEquals(12410, turkish.getSynSetsWithPartOfSpeech(Pos.ADJECTIVE).size());
         assertEquals(2549, turkish.getSynSetsWithPartOfSpeech(Pos.ADVERB).size());
         assertEquals(1552, turkish.getSynSetsWithPartOfSpeech(Pos.INTERJECTION).size());
         assertEquals(68, turkish.getSynSetsWithPartOfSpeech(Pos.PRONOUN).size());

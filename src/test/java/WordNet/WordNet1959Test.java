@@ -16,7 +16,7 @@ public class WordNet1959Test extends PreviousWordNetTest{
 
     @Before
     public void setUp() {
-        previuosWordNet = new WordNet("turkish1959_wordnet.xml", new Locale("tr"));
+        previousWordNet = new WordNet("turkish1959_wordnet.xml", new Locale("tr"));
     }
 
     @Test
@@ -27,7 +27,7 @@ public class WordNet1959Test extends PreviousWordNetTest{
 
     @Test
     public void testSize() {
-        assertEquals(35802, previuosWordNet.size());
+        assertEquals(35802, previousWordNet.size());
     }
 
     @Test
@@ -47,7 +47,7 @@ public class WordNet1959Test extends PreviousWordNetTest{
     @Test
     public void testSynSetList() {
         int literalCount = 0;
-        for (SynSet synSet : previuosWordNet.synSetList()){
+        for (SynSet synSet : previousWordNet.synSetList()){
             literalCount += synSet.getSynonym().literalSize();
         }
         assertEquals(46591, literalCount);
@@ -55,24 +55,24 @@ public class WordNet1959Test extends PreviousWordNetTest{
 
     @Test
     public void testGetSynSetsWithPartOfSpeech() {
-        assertEquals(19017, previuosWordNet.getSynSetsWithPartOfSpeech(Pos.NOUN).size());
-        assertEquals(8157, previuosWordNet.getSynSetsWithPartOfSpeech(Pos.VERB).size());
-        assertEquals(6051, previuosWordNet.getSynSetsWithPartOfSpeech(Pos.ADJECTIVE).size());
-        assertEquals(1244, previuosWordNet.getSynSetsWithPartOfSpeech(Pos.INTERJECTION).size());
-        assertEquals(1147, previuosWordNet.getSynSetsWithPartOfSpeech(Pos.ADVERB).size());
-        assertEquals(71, previuosWordNet.getSynSetsWithPartOfSpeech(Pos.PREPOSITION).size());
-        assertEquals(69, previuosWordNet.getSynSetsWithPartOfSpeech(Pos.CONJUNCTION).size());
-        assertEquals(46, previuosWordNet.getSynSetsWithPartOfSpeech(Pos.PRONOUN).size());
+        assertEquals(19017, previousWordNet.getSynSetsWithPartOfSpeech(Pos.NOUN).size());
+        assertEquals(8157, previousWordNet.getSynSetsWithPartOfSpeech(Pos.VERB).size());
+        assertEquals(6051, previousWordNet.getSynSetsWithPartOfSpeech(Pos.ADJECTIVE).size());
+        assertEquals(1244, previousWordNet.getSynSetsWithPartOfSpeech(Pos.INTERJECTION).size());
+        assertEquals(1147, previousWordNet.getSynSetsWithPartOfSpeech(Pos.ADVERB).size());
+        assertEquals(71, previousWordNet.getSynSetsWithPartOfSpeech(Pos.PREPOSITION).size());
+        assertEquals(69, previousWordNet.getSynSetsWithPartOfSpeech(Pos.CONJUNCTION).size());
+        assertEquals(46, previousWordNet.getSynSetsWithPartOfSpeech(Pos.PRONOUN).size());
     }
 
     @Test
     public void testLiteralSortedList() {
-        assertTrue(previuosWordNet.literalCorrectOrderCheck());
+        assertTrue(previousWordNet.literalCorrectOrderCheck());
     }
 
     @Test
     public void testLiteralList() {
-        assertEquals(35670, previuosWordNet.literalList().size());
+        assertEquals(35670, previousWordNet.literalList().size());
     }
 
     @Test
@@ -93,25 +93,25 @@ public class WordNet1959Test extends PreviousWordNetTest{
 
     @Test
     public void testSameLiteralSameSenseCheck() {
-        for (Literal literal : previuosWordNet.sameLiteralSameSenseCheck()){
+        for (Literal literal : previousWordNet.sameLiteralSameSenseCheck()){
             System.out.println(literal.getName());
         }
-        assertEquals(0, previuosWordNet.sameLiteralSameSenseCheck().size());
+        assertEquals(0, previousWordNet.sameLiteralSameSenseCheck().size());
     }
 
     @Test
     public void testNoPosCheck() {
-        assertEquals(0, previuosWordNet.noPosCheck().size());
+        assertEquals(0, previousWordNet.noPosCheck().size());
     }
 
     @Test
     public void testNoDefinitionCheck() {
-        assertEquals(0, previuosWordNet.noDefinitionCheck().size());
+        assertEquals(0, previousWordNet.noDefinitionCheck().size());
     }
 
     @Test
     public void testSameLiteralSameSynSetCheck() {
-        assertEquals(0, previuosWordNet.sameLiteralSameSynSetCheck().size());
+        assertEquals(0, previousWordNet.sameLiteralSameSynSetCheck().size());
     }
 
     @Test

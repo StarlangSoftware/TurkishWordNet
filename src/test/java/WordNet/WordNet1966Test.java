@@ -16,7 +16,7 @@ public class WordNet1966Test extends PreviousWordNetTest{
 
     @Before
     public void setUp() {
-        previuosWordNet = new WordNet("turkish1966_wordnet.xml", new Locale("tr"));
+        previousWordNet = new WordNet("turkish1966_wordnet.xml", new Locale("tr"));
     }
 
     @Test
@@ -27,7 +27,7 @@ public class WordNet1966Test extends PreviousWordNetTest{
 
     @Test
     public void testSize() {
-        assertEquals(36353, previuosWordNet.size());
+        assertEquals(36353, previousWordNet.size());
     }
 
     @Test
@@ -48,7 +48,7 @@ public class WordNet1966Test extends PreviousWordNetTest{
     @Test
     public void testSynSetList() {
         int literalCount = 0;
-        for (SynSet synSet : previuosWordNet.synSetList()){
+        for (SynSet synSet : previousWordNet.synSetList()){
             literalCount += synSet.getSynonym().literalSize();
         }
         assertEquals(47103, literalCount);
@@ -56,24 +56,24 @@ public class WordNet1966Test extends PreviousWordNetTest{
 
     @Test
     public void testGetSynSetsWithPartOfSpeech() {
-        assertEquals(19256, previuosWordNet.getSynSetsWithPartOfSpeech(Pos.NOUN).size());
-        assertEquals(8291, previuosWordNet.getSynSetsWithPartOfSpeech(Pos.VERB).size());
-        assertEquals(6163, previuosWordNet.getSynSetsWithPartOfSpeech(Pos.ADJECTIVE).size());
-        assertEquals(1287, previuosWordNet.getSynSetsWithPartOfSpeech(Pos.INTERJECTION).size());
-        assertEquals(1165, previuosWordNet.getSynSetsWithPartOfSpeech(Pos.ADVERB).size());
-        assertEquals(71, previuosWordNet.getSynSetsWithPartOfSpeech(Pos.PREPOSITION).size());
-        assertEquals(70, previuosWordNet.getSynSetsWithPartOfSpeech(Pos.CONJUNCTION).size());
-        assertEquals(50, previuosWordNet.getSynSetsWithPartOfSpeech(Pos.PRONOUN).size());
+        assertEquals(19256, previousWordNet.getSynSetsWithPartOfSpeech(Pos.NOUN).size());
+        assertEquals(8291, previousWordNet.getSynSetsWithPartOfSpeech(Pos.VERB).size());
+        assertEquals(6163, previousWordNet.getSynSetsWithPartOfSpeech(Pos.ADJECTIVE).size());
+        assertEquals(1287, previousWordNet.getSynSetsWithPartOfSpeech(Pos.INTERJECTION).size());
+        assertEquals(1165, previousWordNet.getSynSetsWithPartOfSpeech(Pos.ADVERB).size());
+        assertEquals(71, previousWordNet.getSynSetsWithPartOfSpeech(Pos.PREPOSITION).size());
+        assertEquals(70, previousWordNet.getSynSetsWithPartOfSpeech(Pos.CONJUNCTION).size());
+        assertEquals(50, previousWordNet.getSynSetsWithPartOfSpeech(Pos.PRONOUN).size());
     }
 
     @Test
     public void testLiteralSortedList() {
-        assertTrue(previuosWordNet.literalCorrectOrderCheck());
+        assertTrue(previousWordNet.literalCorrectOrderCheck());
     }
 
     @Test
     public void testLiteralList() {
-        assertEquals(36005, previuosWordNet.literalList().size());
+        assertEquals(36005, previousWordNet.literalList().size());
     }
 
     @Test
@@ -94,28 +94,28 @@ public class WordNet1966Test extends PreviousWordNetTest{
 
     @Test
     public void testSameLiteralSameSenseCheck() {
-        for (Literal literal : previuosWordNet.sameLiteralSameSenseCheck()){
+        for (Literal literal : previousWordNet.sameLiteralSameSenseCheck()){
             System.out.println(literal.getName());
         }
-        assertEquals(0, previuosWordNet.sameLiteralSameSenseCheck().size());
+        assertEquals(0, previousWordNet.sameLiteralSameSenseCheck().size());
     }
 
     @Test
     public void testNoPosCheck() {
-        assertEquals(0, previuosWordNet.noPosCheck().size());
+        assertEquals(0, previousWordNet.noPosCheck().size());
     }
 
     @Test
     public void testNoDefinitionCheck() {
-        assertEquals(0, previuosWordNet.noDefinitionCheck().size());
+        assertEquals(0, previousWordNet.noDefinitionCheck().size());
     }
 
     @Test
     public void testSameLiteralSameSynSetCheck() {
-        for (SynSet synSet : previuosWordNet.sameLiteralSameSynSetCheck()){
+        for (SynSet synSet : previousWordNet.sameLiteralSameSynSetCheck()){
             System.out.println(synSet.getId());
         }
-        assertEquals(0, previuosWordNet.sameLiteralSameSynSetCheck().size());
+        assertEquals(0, previousWordNet.sameLiteralSameSynSetCheck().size());
     }
 
     @Test

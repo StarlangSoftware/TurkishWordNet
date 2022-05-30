@@ -14,7 +14,7 @@ import static org.junit.Assert.assertTrue;
 
 public class PreviousWordNetTest {
 
-    WordNet previuosWordNet;
+    WordNet previousWordNet;
     TxtDictionary previousDictionary;
     WordNet currentWordNet;
 
@@ -36,7 +36,7 @@ public class PreviousWordNetTest {
 
     protected CounterHashMap<String> synSetIdCounts() {
         CounterHashMap<String> counts = new CounterHashMap<>();
-        for (SynSet synSet : previuosWordNet.synSetList()){
+        for (SynSet synSet : previousWordNet.synSetList()){
             counts.put(synSet.getId().substring(0, 5));
         }
         return counts;
@@ -44,7 +44,7 @@ public class PreviousWordNetTest {
 
     protected CounterHashMap<Integer> literalWordCounts() {
         CounterHashMap<Integer> counts = new CounterHashMap<>();
-        for (String literal : previuosWordNet.literalList()){
+        for (String literal : previousWordNet.literalList()){
             int count = 1;
             for (int i = 0; i < literal.length(); i++){
                 if (literal.charAt(i) == ' '){
@@ -58,7 +58,7 @@ public class PreviousWordNetTest {
 
     public void testExistenceOfKeNetSynSets(){
         boolean found = true;
-        for (SynSet synSet : previuosWordNet.synSetList()){
+        for (SynSet synSet : previousWordNet.synSetList()){
             if (synSet.getId().startsWith("TUR10") && currentWordNet.getSynSetWithId(synSet.getId()) == null){
                 System.out.println("SynSet with id " + synSet.getId() + " does not exist");
                 found = false;
@@ -70,7 +70,7 @@ public class PreviousWordNetTest {
     public void testExistenceOfPreviousSynSets(String year, String id){
         WordNet compared = new WordNet("turkish" + year + "_wordnet.xml", new Locale("tr"));
         boolean found = true;
-        for (SynSet synSet : previuosWordNet.synSetList()){
+        for (SynSet synSet : previousWordNet.synSetList()){
             if (synSet.getId().startsWith(id) && compared.getSynSetWithId(synSet.getId()) == null){
                 System.out.println("SynSet with id " + synSet.getId() + " does not exist");
                 found = false;
@@ -105,10 +105,10 @@ public class PreviousWordNetTest {
 
     public void findMatchingLiteralsInPreviousWordNets(String first, String second) {
         WordNet secondWordNet = getWordNet(second);
-        for (SynSet synSet1 : previuosWordNet.synSetList()) {
+        for (SynSet synSet1 : previousWordNet.synSetList()) {
             if (synSet1.getId().startsWith("TUR" + first + "-")) {
                 for (SynSet synSet2 : secondWordNet.synSetList()) {
-                    if (synSet2.getId().startsWith("TUR" + second + "-") && synSet1.getPos().equals(synSet2.getPos()) && previuosWordNet.getSynSetWithId(synSet2.getId()) == null) {
+                    if (synSet2.getId().startsWith("TUR" + second + "-") && synSet1.getPos().equals(synSet2.getPos()) && previousWordNet.getSynSetWithId(synSet2.getId()) == null) {
                         for (int i = 0; i < synSet1.getSynonym().literalSize(); i++) {
                             String literal1 = synSet1.getSynonym().getLiteral(i).getName();
                             for (int j = 0; j < synSet2.getSynonym().literalSize(); j++) {
@@ -127,7 +127,7 @@ public class PreviousWordNetTest {
 
     public void findMatchingSynSetsInPreviousWordNets(String first, String second) {
         WordNet secondWordNet = getWordNet(second);
-        for (SynSet synSet1 : previuosWordNet.synSetList()){
+        for (SynSet synSet1 : previousWordNet.synSetList()){
             if (synSet1.getId().startsWith("TUR" + first + "-")){
                 for (SynSet synSet2: secondWordNet.synSetList()){
                     if (synSet2.getId().startsWith("TUR" + second + "-") && synSet1.getPos().equals(synSet2.getPos())){
@@ -143,7 +143,7 @@ public class PreviousWordNetTest {
 
     public void comparePosWithPosOfCorrespondingKeNetSynSets(){
         boolean found = true;
-        for (SynSet synSet : previuosWordNet.synSetList()){
+        for (SynSet synSet : previousWordNet.synSetList()){
             if (synSet.getId().startsWith("TUR10")){
                 SynSet synSet2 = currentWordNet.getSynSetWithId(synSet.getId());
                 if (!synSet.getPos().equals(synSet2.getPos())){
@@ -158,7 +158,7 @@ public class PreviousWordNetTest {
 
     public void testDefinition() {
         FsmMorphologicalAnalyzer analyzer = new FsmMorphologicalAnalyzer(previousDictionary);
-        for (SynSet synSet : previuosWordNet.synSetList()){
+        for (SynSet synSet : previousWordNet.synSetList()){
             if (!synSet.getLongDefinition().contains("DEFINITION")){
                 String definition = synSet.getLongDefinition();
                 String[] words = definition.split(" ");
@@ -177,8 +177,8 @@ public class PreviousWordNetTest {
     }
 
     public void generateExampleListForWordsHavingMultipleMeanings(){
-        for (String name : previuosWordNet.literalList()){
-            ArrayList<SynSet> synSets = previuosWordNet.getSynSetsWithLiteral(name);
+        for (String name : previousWordNet.literalList()){
+            ArrayList<SynSet> synSets = previousWordNet.getSynSetsWithLiteral(name);
             if (synSets.size() > 1){
                 boolean example = true;
                 for (SynSet synSet : synSets){
@@ -198,7 +198,7 @@ public class PreviousWordNetTest {
 
     public void testLiterals() {
         FsmMorphologicalAnalyzer analyzer = new FsmMorphologicalAnalyzer(previousDictionary);
-        for (SynSet synSet : previuosWordNet.synSetList()){
+        for (SynSet synSet : previousWordNet.synSetList()){
             for (int i = 0; i < synSet.getSynonym().literalSize(); i++){
                 String literal = synSet.getSynonym().getLiteral(i).getName();
                 String[] words = literal.split(" ");
@@ -219,7 +219,7 @@ public class PreviousWordNetTest {
     public void testExample() {
         int count = 0;
         FsmMorphologicalAnalyzer analyzer = new FsmMorphologicalAnalyzer(previousDictionary);
-        for (SynSet synSet : previuosWordNet.synSetList()){
+        for (SynSet synSet : previousWordNet.synSetList()){
             if (synSet.getExample() != null){
                 String example = synSet.getExample();
                 String[] words = example.split(" ");
@@ -241,7 +241,7 @@ public class PreviousWordNetTest {
 
     public void possibleConversionErrorsForLiteralReplace(){
         FsmMorphologicalAnalyzer fsm = new FsmMorphologicalAnalyzer(previousDictionary);
-        for (SynSet synSet : previuosWordNet.synSetList()){
+        for (SynSet synSet : previousWordNet.synSetList()){
             if (synSet.getExample() != null && synSet.getSynonym().literalSize() > 1){
                 int count = 0;
                 for (int i = 0; i < synSet.getSynonym().literalSize(); i++){
@@ -278,7 +278,7 @@ public class PreviousWordNetTest {
                 dictionary.addWithFlag(txtWord.getName(), "IS_QUES");
             }
         }
-        for (String literal : previuosWordNet.literalList()){
+        for (String literal : previousWordNet.literalList()){
             if (!literal.contains(" ")){
                 TxtWord txtWord = (TxtWord) turkish.getWord(literal);
                 if (txtWord != null){
@@ -298,7 +298,7 @@ public class PreviousWordNetTest {
                         }
                     }
                 }
-                ArrayList<SynSet> synSets = previuosWordNet.getSynSetsWithLiteral(literal);
+                ArrayList<SynSet> synSets = previousWordNet.getSynSetsWithLiteral(literal);
                 for (SynSet synSet : synSets){
                     switch (synSet.getPos()){
                         case NOUN:
@@ -360,7 +360,7 @@ public class PreviousWordNetTest {
     }
 
     public void generateOfflineDictionary(){
-        previuosWordNet.generateDictionary("sozluk.tex", new FsmMorphologicalAnalyzer(previousDictionary));
+        previousWordNet.generateDictionary("sozluk.tex", new FsmMorphologicalAnalyzer(previousDictionary));
     }
 
 }
