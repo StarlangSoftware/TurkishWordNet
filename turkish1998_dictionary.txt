@@ -7007,8 +7007,7 @@ bisikletçilik CL_ISIM IS_SD
 bisikletli IS_ADJ
 bisikletsiz IS_ADJ
 bisküvi CL_ISIM
-bismil CL_FIIL IS_OA
-bismillah CL_NONE
+bismil IS_OA
 bismillâh CL_ISIM
 bistami IS_OA
 bistem IS_OA

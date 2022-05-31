@@ -97,6 +97,8 @@ public class PreviousWordNetTest {
                 return new WordNet("turkish1983_wordnet.xml", new Locale("tr"));
             case "08":
                 return new WordNet("turkish1988_wordnet.xml", new Locale("tr"));
+            case "09":
+                return new WordNet("turkish1998_wordnet.xml", new Locale("tr"));
             case "10":
             default:
                 return new WordNet();
