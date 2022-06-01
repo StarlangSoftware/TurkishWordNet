@@ -40,6 +40,7 @@ public class WordNet1998Test extends PreviousWordNetTest{
         assertEquals(560, (int) counts.get("TUR06"));
         assertEquals(1196, (int) counts.get("TUR07"));
         assertEquals(520, (int) counts.get("TUR08"));
+        assertEquals(1044, (int) counts.get("TUR09"));
         assertEquals(61213, (int) counts.get("TUR10"));
     }
 
