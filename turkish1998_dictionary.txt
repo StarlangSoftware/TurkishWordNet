@@ -6901,6 +6901,7 @@ birazdan IS_ADVERB
 birazı CL_ISIM
 birben IS_OA
 birbiri IS_ZM
+birbirleri IS_ZM
 bircan IS_OA
 birce IS_OA
 birci CL_ISIM IS_ADJ
@@ -11247,6 +11248,7 @@ darlaş CL_FIIL
 darlaştır CL_FIIL
 darlık CL_ISIM IS_SD
 darmadağın IS_ADJ
+darmadağınık IS_ADJ
 darmaduman IS_ADJ
 darman IS_OA
 darp CL_ISIM
@@ -11309,6 +11311,7 @@ davranışçılık CL_ISIM IS_SD
 davud IS_OA
 davudi IS_ADJ
 davul CL_ISIM
+davulcu CL_ISIM
 davultozu CL_ISIM
 davut IS_OA
 davutoğlu IS_OA
@@ -11398,6 +11401,7 @@ defans CL_ISIM
 defaten IS_ADVERB
 defet CL_FIIL F5PR F_SD
 defibratör CL_ISIM
+defile CL_ISIM
 defin CL_ISIM IS_UD
 define CL_ISIM IS_OA
 defineci CL_ISIM
@@ -13354,7 +13358,6 @@ düğümsüz IS_ADJ
 düğün CL_ISIM
 düğüncü CL_ISIM
 düğüncübaşı CL_ISIM
-düğünçiçeğigiller CL_ISIM
 düğünçorbası CL_ISIM IS_BILEŞ IS_B_SI
 düğünsüz IS_ADVERB
 düğürcük CL_ISIM IS_SD
@@ -29087,7 +29090,7 @@ kükürtatar CL_ISIM
 kükürtle CL_FIIL F4PW F_GUD
 kükürtlü IS_ADJ
 kül CL_ISIM
-külah CL_ISIM IS_ADJ
+külâh CL_ISIM IS_ADJ
 külahçı CL_ISIM IS_ADJ
 külahlı IS_ADJ
 külahsız IS_ADJ
@@ -29112,7 +29115,7 @@ külkedisi CL_ISIM IS_ADJ IS_BILEŞ IS_B_SI
 külle CL_FIIL F4PW F_GUD
 külleme CL_ISIM
 küllen CL_FIIL
-külli IS_ADJ
+küllî IS_ADJ
 külliyat CL_ISIM
 külliye CL_ISIM
 külliyen IS_ADVERB
@@ -30322,7 +30325,7 @@ maddecilik CL_ISIM IS_SD
 madden IS_OA
 maddesel IS_ADJ
 maddeten IS_ADVERB
-maddi IS_ADJ
+maddî IS_ADJ
 maddilik CL_ISIM IS_SD
 maddison IS_OA
 maddiyat CL_ISIM
@@ -30775,7 +30778,7 @@ mandıracı CL_ISIM
 mandolin CL_ISIM
 manej CL_ISIM
 mânen IS_ADVERB
-manevi IS_ADJ
+manevî IS_ADJ
 maneviyat CL_ISIM
 mâneviyat CL_ISIM
 manevra CL_ISIM
@@ -31135,6 +31138,7 @@ matah CL_ISIM
 matara CL_ISIM
 matbaa CL_ISIM
 matbaacı CL_ISIM
+matbaacılık CL_ISIM IS_SD
 matbu IS_ADJ
 matbua CL_ISIM
 matbuat CL_ISIM
@@ -31146,6 +31150,7 @@ matematikçi CL_ISIM
 matematiksel IS_ADJ
 matemli IS_ADJ
 mateo IS_OA
+materyal CL_ISIM IS_UU
 materyalist IS_ADJ
 materyalizm CL_ISIM
 mateus IS_OA
@@ -32061,7 +32066,6 @@ mevzuat CL_ISIM
 mevzubahis IS_ADJ
 mevzun CL_ISIM IS_OA
 mevzune IS_OA
-mevzuubahsetme CL_ISIM
 mey CL_ISIM
 meyal IS_DUP
 meyan CL_ISIM
@@ -38789,7 +38793,7 @@ pürneşe IS_ADJ
 pürsıhhat IS_ADJ
 pürşan IS_OA
 pürşen IS_OA
-pürtelaş IS_ADJ
+pürtelâş IS_ADJ
 pürtük CL_ISIM IS_SD
 pürtüklen CL_FIIL F5PR
 pürtüklü IS_ADJ
@@ -41365,19 +41369,21 @@ selahaddin IS_OA
 selahattin IS_OA
 selâhattin IS_OA
 selahi IS_OA
-selam CL_ISIM IS_OA
+selam IS_OA
+selâm CL_ISIM
 selameddin IS_OA
-selamet CL_ISIM IS_OA
-selametle CL_FIIL F4PW F_GUD
+selamet IS_OA
+selâmet CL_ISIM
+selâmetle CL_FIIL
 selamettin IS_OA
 selami IS_OA
-selamla CL_FIIL F4PW F_GUD
-selamlaş CL_FIIL
-selamlık CL_ISIM IS_SD
-selamsız IS_ADVERB IS_DUP
+selâmla CL_FIIL
+selâmlaş CL_FIIL
+selâmlık CL_ISIM IS_SD
+selâmsız IS_ADVERB IS_DUP
 selamullah IS_OA
-selamünaleyküm IS_INTERJ
-selamünkavlen CL_ISIM
+selâmünaleyküm IS_INTERJ
+selâmünkavlen CL_ISIM
 selanik IS_OA
 selaset CL_ISIM
 selatin CL_ISIM IS_OA
@@ -42410,22 +42416,22 @@ siklon CL_ISIM
 siktir CL_FIIL F4PR IS_INTERJ
 siktirici IS_ADJ
 sil CL_FIIL F5PL-NO-REF
-silah CL_ISIM
-silahaltı CL_ISIM
-silahçı CL_ISIM
-silahendaz CL_ISIM
-silahhane CL_ISIM
-silahla CL_FIIL F4PW F_GUD
-silahlan CL_FIIL
-silahlandır CL_FIIL
-silahlanma CL_ISIM
-silahlı IS_ADJ
-silahlık CL_ISIM IS_SD
-silahsız IS_ADJ
-silahsızlan CL_FIIL F5PR
-silahsızlanma CL_ISIM
-silahşor CL_ISIM
-silahtar CL_ISIM
+silâh CL_ISIM
+silâhaltı CL_ISIM
+silâhçı CL_ISIM
+silâhendaz CL_ISIM
+silâhhane CL_ISIM
+silâhla CL_FIIL
+silâhlan CL_FIIL
+silâhlandır CL_FIIL
+silâhlanma CL_ISIM
+silâhlı IS_ADJ
+silâhlık CL_ISIM IS_SD
+silâhsız IS_ADJ
+silâhsızlan CL_FIIL
+silâhsızlanma CL_ISIM
+silâhşor CL_ISIM
+silâhtar CL_ISIM
 silaj CL_ISIM
 silas IS_OA
 silecek CL_ISIM IS_SD
@@ -42681,7 +42687,7 @@ sitemli IS_ADJ
 sitesi IS_OA
 sitil CL_ISIM
 sitoloji CL_ISIM
-sitoplazma CL_ISIM
+sitoplâzma CL_ISIM
 sitteisevir CL_ISIM
 sitti IS_OA
 sittinsene IS_ADVERB
@@ -42734,7 +42740,7 @@ siyaset CL_ISIM IS_OA
 siyasetçi CL_ISIM
 siyaseten IS_ADVERB
 siyasetname CL_ISIM
-siyasi CL_ISIM IS_ADJ
+siyasî CL_ISIM IS_ADJ
 siyasiyat CL_ISIM
 siyatik CL_ISIM IS_SD
 siyavuş IS_OA
@@ -43188,6 +43194,7 @@ sömürgeci IS_ADJ
 sömürgecilik CL_ISIM IS_SD
 sömürgeleş CL_FIIL
 sömürgen CL_ISIM IS_ADJ
+sömürü CL_ISIM
 sömürücü CL_ISIM IS_ADJ
 sömürücülük CL_ISIM IS_SD
 sön CL_FIIL F5PR
@@ -43728,8 +43735,8 @@ süklüm IS_DUP
 sükse CL_ISIM
 sükun CL_ISIM
 sükûn IS_OA
-sükunet CL_ISIM
-sükunetli IS_ADJ
+sükûnet CL_ISIM
+sükûnetli IS_ADJ
 sükut CL_ISIM
 sükût IS_OA
 sükuti IS_ADJ
@@ -43823,8 +43830,9 @@ sünnetli IS_ADJ
 sünnetlik IS_ADJ
 sünnetsiz IS_ADJ
 sünnetullah IS_OA
-sünni CL_ISIM IS_OA
-sünnilik CL_ISIM
+sünni IS_OA
+sünnî CL_ISIM
+sünnîlik CL_ISIM
 sünter IS_OA
 süoğlu IS_OA
 süper IS_ADJ
@@ -43920,8 +43928,8 @@ sürür CL_ISIM IS_OA
 sürüştür CL_FIIL F4PR
 sürütme CL_ISIM
 sürveyan CL_ISIM
-süryani CL_ISIM
-süryanice CL_ISIM
+süryanî CL_ISIM
+süryanîce CL_ISIM
 süs CL_FIIL CL_ISIM F5PR IS_DUP
 süsen CL_ISIM IS_OA
 süsengiller CL_ISIM IS_CA
@@ -44507,7 +44515,7 @@ szymon IS_OA
 şekime IS_OA
 şekip IS_OA
 şeklen IS_ADVERB
-şekli IS_ADJ
+şeklî IS_ADJ
 şekür IS_OA
 şeküre IS_OA
 şekva CL_ISIM
@@ -44782,8 +44790,8 @@ szymon IS_OA
 şifreli IS_ADJ
 şihab IS_OA
 şihabeddin IS_OA
-şii CL_ISIM
-şiilik CL_ISIM
+şiî CL_ISIM
+şiîlik CL_ISIM
 şiin IS_OA
 şiir CL_ISIM IS_OA
 şiirce CL_ISIM
@@ -46431,6 +46439,7 @@ tekvin CL_ISIM
 tekyay IS_OA
 tekzip CL_ISIM IS_SD
 tel CL_ISIM IS_ADJ IS_DUP
+tel'in CL_ISIM
 tela CL_ISIM
 telaffuz CL_ISIM
 telâffuz CL_ISIM
@@ -46438,11 +46447,11 @@ telafi CL_ISIM
 telaki CL_ISIM
 telakki CL_ISIM
 telâkki CL_ISIM
-telaş CL_ISIM
-telaşe CL_ISIM
-telaşlan CL_FIIL
-telaşlı IS_ADJ IS_DUP
-telaşsız IS_ADJ IS_ADVERB
+telâş CL_ISIM
+telâşe CL_ISIM
+telâşlan CL_FIIL
+telâşlı IS_ADJ IS_DUP
+telâşsız IS_ADJ IS_ADVERB
 telatin CL_ISIM
 telcik CL_ISIM IS_SD
 tele IS_OA
@@ -46488,6 +46497,7 @@ televizyonculuk CL_ISIM IS_SD
 telfin CL_ISIM
 telgraf CL_ISIM
 telgrafçı CL_ISIM
+telgrafçılık CL_ISIM IS_SD
 telgrafçiçeği CL_ISIM IS_BILEŞ IS_B_SD
 telgrafhane CL_ISIM
 telhis CL_ISIM
@@ -46495,7 +46505,6 @@ telhisçi CL_ISIM
 telif CL_ISIM
 telim IS_OA
 telimer IS_OA
-telin CL_ISIM
 telis CL_ISIM
 telkari CL_ISIM IS_ADJ
 telkâri CL_ISIM
@@ -47211,6 +47220,7 @@ tıpışla CL_FIIL F4PW
 tıpkı CL_ISIM IS_ADVERB
 tıpkıbasım CL_ISIM
 tıpkıçekim CL_ISIM
+tır CL_ISIM
 tırabzan CL_ISIM
 tırak CL_ISIM IS_DUP
 tıraş CL_ISIM
@@ -47273,7 +47283,7 @@ ticanilik CL_ISIM IS_SD
 ticaret CL_ISIM
 ticaretgâh CL_ISIM
 ticarethane CL_ISIM
-ticari IS_ADJ
+ticarî IS_ADJ
 tifdruk CL_ISIM IS_SD
 tiffany IS_OA
 tiflis IS_OA
@@ -51296,9 +51306,12 @@ yediveren IS_ADJ IS_OA
 yediz IS_ADJ
 yeeun IS_OA
 yefa IS_OA
-yegah CL_ISIM IS_OA
-yegan CL_ISIM IS_DUP IS_OA
-yegane IS_ADJ IS_OA
+yegah IS_OA
+yegâh CL_ISIM
+yegan IS_OA
+yegân CL_ISIM IS_DUP
+yegane IS_OA
+yegâne IS_ADJ
 yeğ IS_ADJ
 yeğen CL_ISIM
 yeğenim IS_INTERJ
