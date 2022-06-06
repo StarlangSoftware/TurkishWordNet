@@ -43733,12 +43733,10 @@ sükar IS_OA
 sükeyne IS_OA
 süklüm IS_DUP
 sükse CL_ISIM
-sükun CL_ISIM
-sükûn IS_OA
+sükûn CL_ISIM IS_OA
 sükûnet CL_ISIM
 sükûnetli IS_ADJ
-sükut CL_ISIM
-sükût IS_OA
+sükût CL_ISIM IS_OA
 sükuti IS_ADJ
 sükûti IS_OA
 sükutilik CL_ISIM IS_SD

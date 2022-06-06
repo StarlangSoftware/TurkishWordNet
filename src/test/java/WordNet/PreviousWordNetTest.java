@@ -158,6 +158,66 @@ public class PreviousWordNetTest {
         assertTrue(found);
     }
 
+    private String candidate(String word, FsmMorphologicalAnalyzer analyzer){
+        String result = "";
+        String tmp;
+        for (int i = 0; i < word.length(); i++){
+            switch (word.charAt(i)){
+                case 'ı':
+                case 'i':
+                    tmp = result + "î";
+                    if (analyzer.morphologicalAnalysis(tmp + word.substring(i + 1)).size() > 0){
+                        return tmp + word.substring(i + 1);
+                    }
+                    break;
+                case 'î':
+                    tmp = result + "i";
+                    if (analyzer.morphologicalAnalysis(tmp + word.substring(i + 1)).size() > 0){
+                        return tmp + word.substring(i + 1);
+                    }
+                    break;
+                case 'a':
+                    tmp = result + "â";
+                    if (analyzer.morphologicalAnalysis(tmp + word.substring(i + 1)).size() > 0){
+                        return tmp + word.substring(i + 1);
+                    }
+                    break;
+                case 'A':
+                    tmp = result + "Â";
+                    if (analyzer.morphologicalAnalysis(tmp + word.substring(i + 1)).size() > 0){
+                        return tmp + word.substring(i + 1);
+                    }
+                    break;
+                case 'â':
+                    tmp = result + "a";
+                    if (analyzer.morphologicalAnalysis(tmp + word.substring(i + 1)).size() > 0){
+                        return tmp + word.substring(i + 1);
+                    }
+                    break;
+                case 'u':
+                case 'ü':
+                    tmp = result + "û";
+                    if (analyzer.morphologicalAnalysis(tmp + word.substring(i + 1)).size() > 0){
+                        return tmp + word.substring(i + 1);
+                    }
+                    break;
+                case 'û':
+                    tmp = result + "ü";
+                    if (analyzer.morphologicalAnalysis(tmp + word.substring(i + 1)).size() > 0){
+                        return tmp + word.substring(i + 1);
+                    }
+                    break;
+            }
+            result = result + word.charAt(i);
+        }
+        for (int i = 3; i < word.length() - 2; i++) {
+            if (analyzer.morphologicalAnalysis(word.substring(0, i)).size() > 0 && analyzer.morphologicalAnalysis(word.substring(i)).size() > 0){
+                return word.substring(0, i) + " " + word.substring(i);
+            }
+        }
+        return "";
+    }
+
     public void testDefinition() {
         FsmMorphologicalAnalyzer analyzer = new FsmMorphologicalAnalyzer(previousDictionary);
         for (SynSet synSet : previousWordNet.synSetList()){
@@ -165,17 +225,52 @@ public class PreviousWordNetTest {
                 String definition = synSet.getLongDefinition();
                 String[] words = definition.split(" ");
                 String notAnalyzed = "";
+                String candidates = "";
                 for (String  word : words){
                     String newWord = word.replaceAll("`", "").replaceAll("!", "").replaceAll("\\?", "").replaceAll(",", "").replaceAll("\\(", "").replaceAll("\\)", "").replaceAll("\"", "").replaceAll("\\.", "").replaceAll(";", "").replaceAll(":", "");
                     if (!word.startsWith("-") && newWord.length() > 0 && analyzer.morphologicalAnalysis(newWord).size() == 0){
                         notAnalyzed += newWord + " ";
+                        String candidate = candidate(newWord, analyzer);
+                        if (!candidate.isEmpty()){
+                            candidates +=  candidate + " ";
+                            definition = definition.replaceAll(newWord, candidate);
+                        }
                     }
                 }
                 if (notAnalyzed.length() > 0){
-                    System.out.println(synSet.getId() + "\t" + synSet.getSynonym().toString() + "\t" + synSet.getLongDefinition() + "\t" + notAnalyzed);
+                    System.out.println(synSet.getId() + "\t" + synSet.getSynonym().toString() + "\t" + definition + "\t" + notAnalyzed + "\t" + candidates);
                 }
             }
         }
+    }
+
+    public void testExample() {
+        int count = 0;
+        FsmMorphologicalAnalyzer analyzer = new FsmMorphologicalAnalyzer(previousDictionary);
+        for (SynSet synSet : previousWordNet.synSetList()){
+            if (synSet.getExample() != null){
+                String example = synSet.getExample();
+                String[] words = example.split(" ");
+                String notAnalyzed = "";
+                String candidates = "";
+                for (String  word : words){
+                    String newWord = word.replaceAll("`", "").replaceAll("!", "").replaceAll("\\?", "").replaceAll(",", "").replaceAll("\\(", "").replaceAll("\\)", "").replaceAll("\"", "").replaceAll("\\.", "").replaceAll(";", "").replaceAll(":", "");
+                    if (!word.startsWith("-") && newWord.length() > 0 && analyzer.morphologicalAnalysis(newWord).size() == 0){
+                        notAnalyzed += newWord + " ";
+                        String candidate = candidate(newWord, analyzer);
+                        if (!candidate.isEmpty()){
+                            candidates +=  candidate + " ";
+                            example = example.replaceAll(newWord, candidate);
+                        }
+                    }
+                }
+                if (notAnalyzed.length() > 0){
+                    count++;
+                    System.out.println(synSet.getId() + "\t" + synSet.getSynonym().toString() + "\t" + example + "\t" + notAnalyzed + "\t" + candidates);
+                }
+            }
+        }
+        assertEquals(0, count);
     }
 
     public void generateExampleListForWordsHavingMultipleMeanings(){
@@ -216,29 +311,6 @@ public class PreviousWordNetTest {
                 }
             }
         }
-    }
-
-    public void testExample() {
-        int count = 0;
-        FsmMorphologicalAnalyzer analyzer = new FsmMorphologicalAnalyzer(previousDictionary);
-        for (SynSet synSet : previousWordNet.synSetList()){
-            if (synSet.getExample() != null){
-                String example = synSet.getExample();
-                String[] words = example.split(" ");
-                String notAnalyzed = "";
-                for (String  word : words){
-                    String newWord = word.replaceAll("`", "").replaceAll("!", "").replaceAll("\\?", "").replaceAll(",", "").replaceAll("\\(", "").replaceAll("\\)", "").replaceAll("\"", "").replaceAll("\\.", "").replaceAll(";", "").replaceAll(":", "");
-                    if (!word.startsWith("-") && newWord.length() > 0 && analyzer.morphologicalAnalysis(newWord).size() == 0){
-                        notAnalyzed += newWord + " ";
-                    }
-                }
-                if (notAnalyzed.length() > 0){
-                    count++;
-                    System.out.println(synSet.getId() + "\t" + synSet.getSynonym().toString() + "\t" + synSet.getExample() + "\t" + notAnalyzed);
-                }
-            }
-        }
-        assertEquals(0, count);
     }
 
     public void possibleConversionErrorsForLiteralReplace(){

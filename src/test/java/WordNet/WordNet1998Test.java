@@ -3,6 +3,8 @@ package WordNet;
 
 import DataStructure.CounterHashMap;
 import Dictionary.Pos;
+import Dictionary.TurkishWordComparator;
+import Dictionary.TxtDictionary;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -20,8 +22,8 @@ public class WordNet1998Test extends PreviousWordNetTest{
 
     @Test
     public void testExample() {
-        //previousDictionary = new TxtDictionary("turkish1998_dictionary.txt", new TurkishWordComparator());
-        //super.testExample();
+        previousDictionary = new TxtDictionary("turkish1998_dictionary.txt", new TurkishWordComparator());
+        super.testExample();
     }
 
     @Test
