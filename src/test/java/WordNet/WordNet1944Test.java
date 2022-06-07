@@ -27,14 +27,14 @@ public class WordNet1944Test extends PreviousWordNetTest{
 
     @Test
     public void testSize() {
-        assertEquals(31762, previousWordNet.size());
+        assertEquals(32613, previousWordNet.size());
     }
 
     @Test
     public void testSynSetIdCounts() {
         CounterHashMap<String> counts = synSetIdCounts();
         assertEquals(4394, (int) counts.get("TUR01"));
-        assertEquals(27363, (int) counts.get("TUR10"));
+        assertEquals(28214, (int) counts.get("TUR10"));
     }
 
     @Test
@@ -48,12 +48,12 @@ public class WordNet1944Test extends PreviousWordNetTest{
         for (SynSet synSet : previousWordNet.synSetList()){
             literalCount += synSet.getSynonym().literalSize();
         }
-        assertEquals(41855, literalCount);
+        assertEquals(42742, literalCount);
     }
 
     @Test
     public void testGetSynSetsWithPartOfSpeech() {
-        assertEquals(17022, previousWordNet.getSynSetsWithPartOfSpeech(Pos.NOUN).size());
+        assertEquals(17873, previousWordNet.getSynSetsWithPartOfSpeech(Pos.NOUN).size());
         assertEquals(7359, previousWordNet.getSynSetsWithPartOfSpeech(Pos.VERB).size());
         assertEquals(5729, previousWordNet.getSynSetsWithPartOfSpeech(Pos.ADJECTIVE).size());
         assertEquals(978, previousWordNet.getSynSetsWithPartOfSpeech(Pos.ADVERB).size());
@@ -70,15 +70,15 @@ public class WordNet1944Test extends PreviousWordNetTest{
 
     @Test
     public void testLiteralList() {
-        assertEquals(31427, previousWordNet.literalList().size());
+        assertEquals(32289, previousWordNet.literalList().size());
     }
 
     @Test
     public void testLiteralWordCounts() {
         CounterHashMap<Integer> counts = literalWordCounts();
-        assertEquals(24466, (int) counts.get(1));
-        assertEquals(5831, (int) counts.get(2));
-        assertEquals(814, (int) counts.get(3));
+        assertEquals(25307, (int) counts.get(1));
+        assertEquals(5849, (int) counts.get(2));
+        assertEquals(817, (int) counts.get(3));
         assertEquals(248, (int) counts.get(4));
         assertEquals(45, (int) counts.get(5));
         assertEquals(18, (int) counts.get(6));
