@@ -2,6 +2,8 @@ package WordNet.Annotation;
 
 import Dictionary.Pos;
 import Dictionary.TxtWord;
+import MorphologicalAnalysis.FsmMorphologicalAnalyzer;
+import MorphologicalAnalysis.FsmParseList;
 import MorphologicalAnalysis.Transition;
 import Util.DrawingButton;
 import WordNet.Literal;
@@ -14,14 +16,11 @@ import javax.swing.table.TableCellRenderer;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.io.*;
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.net.URL;
-import java.nio.charset.StandardCharsets;
 import java.text.Collator;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Locale;
+import java.util.*;
 
 public class DictionaryEditorFrame extends DomainEditorFrame implements ActionListener {
     private ArrayList<String> data;
@@ -32,15 +31,14 @@ public class DictionaryEditorFrame extends DomainEditorFrame implements ActionLi
     private static final String ID_SORT = "sortnumbers";
     private static final String TEXT_SORT = "sorttext";
 
-    private String domainDataFileName;
+    private JList exampleList;
+
+    private HashMap<String, ArrayList<String>> mappedSentences;
 
     @Override
     public void actionPerformed(ActionEvent e) {
         super.actionPerformed(e);
         switch (e.getActionCommand()) {
-            case SAVE:
-                saveData();
-                break;
             case ID_SORT:
                 Transition verbTransition = new Transition("mAk");
                 data.sort((o1, o2) -> {
@@ -80,20 +78,6 @@ public class DictionaryEditorFrame extends DomainEditorFrame implements ActionLi
                 break;
         }
         dataTable.invalidate();
-    }
-
-    private void saveData(){
-        BufferedWriter outfile;
-        try {
-            OutputStreamWriter writer = new OutputStreamWriter(new FileOutputStream(domainDataFileName), StandardCharsets.UTF_8);
-            outfile = new BufferedWriter(writer);
-            for (String root : data) {
-                outfile.write(root + "\n");
-            }
-            outfile.close();
-        } catch (IOException ioException) {
-            System.out.println("Output file can not be opened");
-        }
     }
 
     public class FlagObject{
@@ -300,7 +284,7 @@ public class DictionaryEditorFrame extends DomainEditorFrame implements ActionLi
                             Pos pos;
                             if (synSetChooser.getSelectedIndex() < extraRows){
                                 finalId += 10;
-                                String newSynSetId = wordNetPrefix + "" + finalId;
+                                String newSynSetId = wordNetPrefix + "" + String.format("%07d", finalId);
                                 String selectedText = (String) synSetChooser.getSelectedItem();
                                 if (selectedText.contains("NOUN")){
                                     addedLiteral = new Literal(root, 1, newSynSetId);
@@ -523,18 +507,37 @@ public class DictionaryEditorFrame extends DomainEditorFrame implements ActionLi
         JButton textSort = new DrawingButton(DictionaryEditorFrame.class, this, "sorttext", TEXT_SORT, "Sort by Word");
         toolBar.add(textSort);
         setName("Dictionary Editor");
-        domainDataFileName = domainPrefix + "_data.txt";
         display = new HashMap<>();
         data = new ArrayList<>();
-        try {
-            BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream(domainDataFileName), StandardCharsets.UTF_8));
-            String line = br.readLine();
-            while (line != null) {
-                data.add(line);
-                line = br.readLine();
+        mappedSentences = new HashMap<>();
+        for (int i = 0; i < dictionary.size(); i++){
+            TxtWord word = (TxtWord) dictionary.getWord(i);
+            if (word.isNominal() || word.isAdjective() || word.isAdverb() || word.isVerb()){
+                data.add(word.getName());
+                mappedSentences.put(word.getName(), new ArrayList<>());
             }
-        } catch (IOException e) {
-            e.printStackTrace();
+        }
+        FsmMorphologicalAnalyzer fsm = new FsmMorphologicalAnalyzer(dictionary);
+        try {
+            Scanner input = new Scanner(new File("examples.txt"));
+            while (input.hasNextLine()){
+                String line = input.nextLine();
+                String[] words = line.split(" ");
+                for (String word : words){
+                    FsmParseList fsmParseList = fsm.morphologicalAnalysis(word);
+                    if (fsmParseList.size() > 0){
+                        String root = fsmParseList.getParseWithLongestRootWord().getWord().getName();
+                        if (mappedSentences.containsKey(root)){
+                            ArrayList<String> sentences = mappedSentences.get(root);
+                            sentences.add(line);
+                            mappedSentences.put(root, sentences);
+                        }
+                    }
+                }
+            }
+            input.close();
+        } catch (FileNotFoundException e) {
+            throw new RuntimeException(e);
         }
         String imgLocation = "/icons/addparent.png";
         URL imageURL = this.getClass().getResource(imgLocation);
@@ -559,5 +562,26 @@ public class DictionaryEditorFrame extends DomainEditorFrame implements ActionLi
         dataTable.setDefaultEditor(SynSetObject.class, synSetCell);
         JScrollPane tablePane = new JScrollPane(dataTable);
         add(tablePane, BorderLayout.CENTER);
+        dataTable.getSelectionModel().addListSelectionListener(event -> {
+            String word = data.get(dataTable.getSelectedRow());
+            DefaultListModel<String> listModel;
+            if (mappedSentences.containsKey(word)){
+                ArrayList<String> sentences = mappedSentences.get(word);
+                listModel = new DefaultListModel<>();
+                for (String sentence : sentences){
+                    listModel.addElement(sentence);
+                }
+            } else {
+                listModel = new DefaultListModel<>();
+            }
+            exampleList.setModel(listModel);
+        });
+        JPanel examplePanel = new JPanel(new BorderLayout());
+        exampleList = new JList<>();
+        JScrollPane scrollPane = new JScrollPane(exampleList);
+        examplePanel.add(scrollPane);
+        add(examplePanel, BorderLayout.SOUTH);
+        scrollPane.setPreferredSize(new Dimension(200, 100));
+        scrollPane.setVisible(true);
     }
 }
