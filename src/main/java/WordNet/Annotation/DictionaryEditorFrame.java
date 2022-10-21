@@ -1,5 +1,6 @@
 package WordNet.Annotation;
 
+import Corpus.Sentence;
 import Dictionary.Pos;
 import Dictionary.TxtWord;
 import MorphologicalAnalysis.FsmMorphologicalAnalyzer;
@@ -27,13 +28,11 @@ public class DictionaryEditorFrame extends DomainEditorFrame implements ActionLi
     private JTable dataTable;
     private ImageIcon addIcon, deleteIcon;
     private HashMap<String, PanelObject> display;
-
     private static final String ID_SORT = "sortnumbers";
     private static final String TEXT_SORT = "sorttext";
-
+    private static final String DELETE = "delete";
     private JList exampleList;
-
-    private HashMap<String, ArrayList<String>> mappedSentences;
+    private HashMap<String, ArrayList<Sentence>> mappedSentences;
 
     @Override
     public void actionPerformed(ActionEvent e) {
@@ -75,6 +74,11 @@ public class DictionaryEditorFrame extends DomainEditorFrame implements ActionLi
                 Collator collator = Collator.getInstance(locale);
                 data.sort(collator::compare);
                 JOptionPane.showMessageDialog(this, "Words Sorted!", "Sorting Complete", JOptionPane.INFORMATION_MESSAGE);
+                break;
+            case DELETE:
+                int rowNo = dataTable.getSelectedRow();
+                dictionary.removeWord(data.get(rowNo));
+                data.remove(rowNo);
                 break;
         }
         dataTable.invalidate();
@@ -502,10 +506,16 @@ public class DictionaryEditorFrame extends DomainEditorFrame implements ActionLi
     }
 
     public void loadContents(){
+        FsmMorphologicalAnalyzer fsm;
+        FsmParseList fsmParseList;
+        HashMap<String, String> rootList = new HashMap<>();
+        String root;
         JButton idSort = new DrawingButton(DictionaryEditorFrame.class, this, "sortnumbers", ID_SORT, "Sort by WordNet Id");
         toolBar.add(idSort);
         JButton textSort = new DrawingButton(DictionaryEditorFrame.class, this, "sorttext", TEXT_SORT, "Sort by Word");
         toolBar.add(textSort);
+        JButton deleteWord = new DrawingButton(DictionaryEditorFrame.class, this, "delete", DELETE, "Delete Word");
+        toolBar.add(deleteWord);
         setName("Dictionary Editor");
         display = new HashMap<>();
         data = new ArrayList<>();
@@ -514,24 +524,31 @@ public class DictionaryEditorFrame extends DomainEditorFrame implements ActionLi
             TxtWord word = (TxtWord) dictionary.getWord(i);
             if (word.isNominal() || word.isAdjective() || word.isAdverb() || word.isVerb()){
                 data.add(word.getName());
-                mappedSentences.put(word.getName(), new ArrayList<>());
+                mappedSentences.put(word.getName(), new ArrayList<Sentence>());
             }
         }
-        FsmMorphologicalAnalyzer fsm = new FsmMorphologicalAnalyzer(dictionary);
+        fsm = new FsmMorphologicalAnalyzer(dictionary);
         try {
-            Scanner input = new Scanner(new File("examples.txt"));
+            Scanner input = new Scanner(new File("examples.txt"), "utf-8");
             while (input.hasNextLine()){
                 String line = input.nextLine();
+                Sentence sentence = new Sentence(line);
                 String[] words = line.split(" ");
                 for (String word : words){
-                    FsmParseList fsmParseList = fsm.morphologicalAnalysis(word);
-                    if (fsmParseList.size() > 0){
-                        String root = fsmParseList.getParseWithLongestRootWord().getWord().getName();
-                        if (mappedSentences.containsKey(root)){
-                            ArrayList<String> sentences = mappedSentences.get(root);
-                            sentences.add(line);
-                            mappedSentences.put(root, sentences);
+                    root = null;
+                    if (rootList.containsKey(word)){
+                        root = rootList.get(word);
+                    } else {
+                        fsmParseList = fsm.morphologicalAnalysis(word);
+                        if (fsmParseList.size() > 0){
+                            root = fsmParseList.getParseWithLongestRootWord().getWord().getName();
+                            rootList.put(word, root);
                         }
+                    }
+                    if (root != null && mappedSentences.containsKey(root)){
+                        ArrayList<Sentence> sentences = mappedSentences.get(root);
+                        sentences.add(sentence);
+                        mappedSentences.put(root, sentences);
                     }
                 }
             }
@@ -564,11 +581,11 @@ public class DictionaryEditorFrame extends DomainEditorFrame implements ActionLi
         add(tablePane, BorderLayout.CENTER);
         dataTable.getSelectionModel().addListSelectionListener(event -> {
             String word = data.get(dataTable.getSelectedRow());
-            DefaultListModel<String> listModel;
+            DefaultListModel<Sentence> listModel;
             if (mappedSentences.containsKey(word)){
-                ArrayList<String> sentences = mappedSentences.get(word);
+                ArrayList<Sentence> sentences = mappedSentences.get(word);
                 listModel = new DefaultListModel<>();
-                for (String sentence : sentences){
+                for (Sentence sentence : sentences){
                     listModel.addElement(sentence);
                 }
             } else {
