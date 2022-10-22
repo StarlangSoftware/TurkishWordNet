@@ -229,11 +229,21 @@ public class DictionaryEditorFrame extends DomainEditorFrame implements ActionLi
                         c.gridx = 0;
                         newPanel.add(delete, c);
                         c.gridx = 1;
-                        if (synSet.getDefinition() != null && synSet.getDefinition().equals(" ")){
-                            newPanel.add(new JLabel("No Definition"), c);
+                        if (synSet.getDefinition() == null || synSet.getDefinition().equals(" ")){
+                            JTextField text = new JTextField("No Definition");
+                            text.setMinimumSize(new Dimension(500, 30));
+                            text.addActionListener(new ActionListener() {
+                                @Override
+                                public void actionPerformed(ActionEvent e) {
+                                    if (!text.getText().equalsIgnoreCase("No Definition")){
+                                        synSet.setDefinition(text.getText());
+                                    }
+                                }
+                            });
+                            newPanel.add(text, c);
                         } else {
-                            if (synSet.getDefinition() != null && synSet.getDefinition().length()  > 70){
-                                newPanel.add(new JLabel(synSet.getDefinition().substring(0, 69) + "..."), c);
+                            if (synSet.getDefinition() != null && synSet.getDefinition().length() > 150){
+                                newPanel.add(new JLabel(synSet.getDefinition().substring(0, 150) + "..."), c);
                             } else {
                                 newPanel.add(new JLabel(synSet.getDefinition()), c);
                             }
@@ -264,10 +274,34 @@ public class DictionaryEditorFrame extends DomainEditorFrame implements ActionLi
                     }
                 }
                 for (SynSet synSet : synSetObject.extraSynSets){
-                    if (synSet.getDefinition() != null && synSet.getDefinition().length()  > 70){
-                        synSetChooser.addItem(synSet.getDefinition().substring(0, 69) + "...");
+                    int definitionLength = 0, exampleLength = 0;
+                    if (synSet.getDefinition() != null){
+                        definitionLength = synSet.getDefinition().length();
+                    }
+                    if (synSet.getExample() != null){
+                        exampleLength = synSet.getExample().length();
+                        if (definitionLength + exampleLength < 150){
+                            synSetChooser.addItem(synSet.getDefinition() + " [" + synSet.getExample() + "]");
+                        } else {
+                            String text = "";
+                            if (definitionLength < 75){
+                                text = text + synSet.getDefinition();
+                            } else {
+                                text = text + synSet.getDefinition().substring(0, 75) + "...";
+                            }
+                            if (exampleLength < 75){
+                                text = text + " [" + synSet.getExample() + "]";
+                            } else {
+                                text = text + " [" + synSet.getExample().substring(0, 75) + "...]";
+                            }
+                            synSetChooser.addItem(text);
+                        }
                     } else {
-                        synSetChooser.addItem(synSet.getDefinition());
+                        if (definitionLength < 150){
+                            synSetChooser.addItem(synSet.getDefinition());
+                        } else {
+                            synSetChooser.addItem(synSet.getDefinition().substring(0, 150) + "...");
+                        }
                     }
                 }
                 if (synSetChooser.getItemCount() > 0){
@@ -569,6 +603,8 @@ public class DictionaryEditorFrame extends DomainEditorFrame implements ActionLi
         dataTable.getColumnModel().getColumn(1).setMaxWidth(120);
         dataTable.getColumnModel().getColumn(2).setMinWidth(90);
         dataTable.getColumnModel().getColumn(2).setMaxWidth(90);
+        dataTable.getColumnModel().getColumn(3).setMinWidth(120);
+        dataTable.getColumnModel().getColumn(3).setMaxWidth(120);
         dataTable.getColumnModel().getColumn(5).setMinWidth(200);
         dataTable.getColumnModel().getColumn(5).setMaxWidth(200);
         FlagCell flagCell = new FlagCell();
