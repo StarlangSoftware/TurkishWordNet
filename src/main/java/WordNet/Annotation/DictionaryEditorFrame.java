@@ -597,15 +597,10 @@ public class DictionaryEditorFrame extends DomainEditorFrame implements ActionLi
         imageURL = this.getClass().getResource(imgLocation);
         deleteIcon = new ImageIcon(imageURL);
         dataTable = new JTable(new TableDataModel());
-        dataTable.getColumnModel().getColumn(0).setMinWidth(60);
         dataTable.getColumnModel().getColumn(0).setMaxWidth(60);
-        dataTable.getColumnModel().getColumn(1).setMinWidth(120);
         dataTable.getColumnModel().getColumn(1).setMaxWidth(120);
-        dataTable.getColumnModel().getColumn(2).setMinWidth(90);
         dataTable.getColumnModel().getColumn(2).setMaxWidth(90);
-        dataTable.getColumnModel().getColumn(3).setMinWidth(120);
         dataTable.getColumnModel().getColumn(3).setMaxWidth(120);
-        dataTable.getColumnModel().getColumn(5).setMinWidth(200);
         dataTable.getColumnModel().getColumn(5).setMaxWidth(200);
         FlagCell flagCell = new FlagCell();
         dataTable.setDefaultRenderer(FlagObject.class, flagCell);
