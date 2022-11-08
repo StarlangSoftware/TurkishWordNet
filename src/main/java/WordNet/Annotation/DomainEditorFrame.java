@@ -1,5 +1,6 @@
 package WordNet.Annotation;
 
+import Dictionary.Pos;
 import Dictionary.TurkishWordComparator;
 import Dictionary.TxtDictionary;
 import Util.DrawingButton;
@@ -53,8 +54,10 @@ public abstract class DomainEditorFrame extends JFrame implements ActionListener
             newSynSet.setDefinition(addedSynSet.getLongDefinition());
         }
         boolean found = false;
+        String rootLower = root.toLowerCase(new Locale("tr"));
         for (int i = 0; i < addedSynSet.getSynonym().literalSize(); i++){
-            if (addedSynSet.getSynonym().getLiteral(i).getName().toLowerCase(new Locale("tr")).startsWith(root.toLowerCase(new Locale("tr")))){
+            String literalLower = addedSynSet.getSynonym().getLiteral(i).getName().toLowerCase(new Locale("tr"));
+            if (literalLower.equals(rootLower) || (addedSynSet.getPos().equals(Pos.VERB) && literalLower.startsWith(rootLower) && literalLower.length() == rootLower.length() + 3)){
                 domainWordNet.addLiteralToLiteralList(addedSynSet.getSynonym().getLiteral(i));
                 newSynSet.addLiteral(addedSynSet.getSynonym().getLiteral(i));
                 found = true;
