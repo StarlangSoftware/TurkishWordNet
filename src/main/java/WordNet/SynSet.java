@@ -4,6 +4,7 @@ import Corpus.Sentence;
 import Corpus.SentenceSplitter;
 import Corpus.TurkishSplitter;
 import Dictionary.Pos;
+import Dictionary.Word;
 import MorphologicalAnalysis.FsmMorphologicalAnalyzer;
 import MorphologicalAnalysis.FsmParseList;
 
@@ -98,7 +99,7 @@ public class SynSet {
             for (int j = 0; j < getSynonym().literalSize(); j++) {
                 Literal literal = getSynonym().getLiteral(j);
                 String word = literal.getName().toLowerCase(locale);
-                String uppercaseWord = literal.getName().substring(0, 1).toUpperCase(locale) + literal.getName().substring(1);
+                String uppercaseWord = Word.toCapital(literal.getName());
                 if (definition.contains("|" + word + "|")) {
                     definition = definition.replace("|" + word + "|", "|");
                     removed = true;
