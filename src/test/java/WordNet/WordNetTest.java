@@ -21,6 +21,10 @@ public class WordNetTest {
         turkish = new WordNet();
     }
 
+    public void convertToLmf() {
+        turkish.saveAsLmf("turkish.lmf");
+    }
+
     @Test
     public void testSize() {
         assertEquals(78311, turkish.size());

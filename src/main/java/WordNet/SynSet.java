@@ -635,7 +635,11 @@ public class SynSet {
                 if (longDefinition.contains("\"")) {
                     longDefinition = longDefinition.replaceAll("\"", "&quot;");
                 }
-                outfile.write("\t\t<Definition>" + longDefinition + "</Definition>\n");
+                if (longDefinition.isEmpty()){
+                    outfile.write("\t\t<Definition>NO DEFINITION</Definition>\n");
+                } else {
+                    outfile.write("\t\t<Definition>" + longDefinition + "</Definition>\n");
+                }
             }
             for (Relation r : relations) {
                 if (r instanceof SemanticRelation) {
