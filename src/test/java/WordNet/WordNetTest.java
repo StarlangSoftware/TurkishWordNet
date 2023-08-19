@@ -8,7 +8,6 @@ import Dictionary.TxtWord;
 import org.junit.Before;
 import org.junit.Test;
 
-import java.io.FileNotFoundException;
 import java.util.ArrayList;
 
 import static org.junit.Assert.*;
@@ -27,7 +26,7 @@ public class WordNetTest {
     }
 
     @Test
-    public void testSize() throws FileNotFoundException {
+    public void testSize() {
         assertEquals(78326, turkish.size());
     }
 
