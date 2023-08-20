@@ -130,18 +130,23 @@ public class WordNet {
                                                                 while (srNode != null) {
                                                                     if (srNode.getName().equals("ORIGIN")){
                                                                         currentLiteral.setOrigin(srNode.getPcData());
-                                                                    }
-                                                                    if (srNode.getName().equals("SR")) {
-                                                                        typeNode = srNode.getFirstChild();
-                                                                        if (typeNode != null && typeNode.getName().equals("TYPE")) {
-                                                                            toNode = typeNode.getNextSibling();
-                                                                            if (toNode != null && toNode.getName().equals("TO")) {
-                                                                                currentLiteral.addRelation(new SemanticRelation(srNode.getPcData(), typeNode.getPcData(), Integer.parseInt(toNode.getPcData())));
-                                                                            } else {
-                                                                                currentLiteral.addRelation(new SemanticRelation(srNode.getPcData(), typeNode.getPcData()));
-                                                                            }
+                                                                    } else {
+                                                                        if (srNode.getName().equals("GROUP")){
+                                                                            currentLiteral.setGroupNo(Integer.parseInt(srNode.getPcData()));
                                                                         } else {
-                                                                            System.out.println("SR node " + srNode.getPcData() + "of literal " + currentLiteral.getName() + " of synSet " + currentSynSet.getId() + " does not contain type value");
+                                                                            if (srNode.getName().equals("SR")) {
+                                                                                typeNode = srNode.getFirstChild();
+                                                                                if (typeNode != null && typeNode.getName().equals("TYPE")) {
+                                                                                    toNode = typeNode.getNextSibling();
+                                                                                    if (toNode != null && toNode.getName().equals("TO")) {
+                                                                                        currentLiteral.addRelation(new SemanticRelation(srNode.getPcData(), typeNode.getPcData(), Integer.parseInt(toNode.getPcData())));
+                                                                                    } else {
+                                                                                        currentLiteral.addRelation(new SemanticRelation(srNode.getPcData(), typeNode.getPcData()));
+                                                                                    }
+                                                                                } else {
+                                                                                    System.out.println("SR node " + srNode.getPcData() + "of literal " + currentLiteral.getName() + " of synSet " + currentSynSet.getId() + " does not contain type value");
+                                                                                }
+                                                                            }
                                                                         }
                                                                     }
                                                                     srNode = srNode.getNextSibling();

@@ -12,6 +12,8 @@ public class Literal {
     protected String origin = null;
     protected ArrayList<Relation> relations;
 
+    protected int groupNo = 0;
+
     /**
      * A constructor that initializes name, sense, SynSet ID and the relations.
      *
@@ -91,6 +93,14 @@ public class Literal {
      */
     public void setOrigin(String origin) {
         this.origin = origin;
+    }
+
+    public int getGroupNo(){
+        return groupNo;
+    }
+
+    public void setGroupNo(int groupNo){
+        this.groupNo = groupNo;
     }
 
     /**
@@ -194,6 +204,9 @@ public class Literal {
                 outfile.write("<LITERAL>&amp;<SENSE>" + sense + "</SENSE>");
             } else {
                 outfile.write("<LITERAL>" + name + "<SENSE>" + sense + "</SENSE>");
+            }
+            if (groupNo != 0){
+                outfile.write("<GROUP>" + groupNo + "</GROUP>");
             }
             if (origin != null) {
                 outfile.write("<ORIGIN>" + origin + "</ORIGIN>");
