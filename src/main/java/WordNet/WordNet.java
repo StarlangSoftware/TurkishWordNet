@@ -128,6 +128,9 @@ public class WordNet {
                                                                 addLiteralToLiteralList(currentLiteral);
                                                                 srNode = senseNode.getNextSibling();
                                                                 while (srNode != null) {
+                                                                    if (srNode.getName().equals("ORIGIN")){
+                                                                        currentLiteral.setOrigin(srNode.getPcData());
+                                                                    }
                                                                     if (srNode.getName().equals("SR")) {
                                                                         typeNode = srNode.getFirstChild();
                                                                         if (typeNode != null && typeNode.getName().equals("TYPE")) {
