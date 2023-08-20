@@ -45,6 +45,40 @@ public class WordNetTest {
     }
 
     @Test
+    public void testTotalForeignLiterals() {
+        int count = 0;
+        for (SynSet synSet : turkish.synSetList()){
+            for (int i = 0; i < synSet.getSynonym().literalSize(); i++){
+                if (synSet.getSynonym().getLiteral(i).getOrigin() != null){
+                    count++;
+                }
+            }
+        }
+        assertEquals(3981, count);
+    }
+
+    @Test
+    public void testDistinctForeignLiterals() {
+        int count = 0;
+        for (String literalName : turkish.literalList()){
+            ArrayList<Literal> literals = turkish.getLiteralsWithName(literalName);
+            int foreignCount = 0;
+            int notForeignCount = 0;
+            for (Literal literal : literals){
+                if (literal.getOrigin() != null){
+                    foreignCount++;
+                } else {
+                    notForeignCount++;
+                }
+            }
+            if (foreignCount * notForeignCount > 0){
+                count++;
+            }
+        }
+        assertEquals(count, 5);
+    }
+
+    @Test
     public void testLiteralList() {
         assertEquals(82154, turkish.literalList().size());
     }
