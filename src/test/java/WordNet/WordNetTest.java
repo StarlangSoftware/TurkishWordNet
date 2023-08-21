@@ -58,6 +58,57 @@ public class WordNetTest {
     }
 
     @Test
+    public void testTotalGroupedLiterals() {
+        int count = 0;
+        for (SynSet synSet : turkish.synSetList()){
+            for (int i = 0; i < synSet.getSynonym().literalSize(); i++){
+                if (synSet.getSynonym().getLiteral(i).getGroupNo() != 0){
+                    count++;
+                }
+            }
+        }
+        assertEquals(5973, count);
+    }
+
+    @Test
+    public void testGroupSize() {
+        CounterHashMap<Integer> groups = new CounterHashMap<>();
+        for (SynSet synSet : turkish.synSetList()){
+            ArrayList<Synonym> literalGroups = synSet.getSynonym().getUniqueLiterals();
+            for (Synonym synonym : literalGroups){
+                if (synonym.getLiteral(0).getGroupNo() != 0){
+                    groups.put(synonym.literalSize());
+                }
+            }
+        }
+        assertEquals(0, groups.count(1));
+        assertEquals(2949, groups.count(2));
+        assertEquals(21, groups.count(3));
+        assertEquals(3, groups.count(4));
+    }
+
+    @Test
+    public void testNumberOfGroupsInSynSet() {
+        CounterHashMap<Integer> groups = new CounterHashMap<>();
+        for (SynSet synSet : turkish.synSetList()){
+            ArrayList<Synonym> literalGroups = synSet.getSynonym().getUniqueLiterals();
+            int groupCount = 0;
+            for (Synonym synonym : literalGroups){
+                if (synonym.getLiteral(0).getGroupNo() != 0){
+                    groupCount++;
+                }
+            }
+            groups.put(groupCount);
+        }
+        assertEquals(2674, groups.count(1));
+        assertEquals(125, groups.count(2));
+        assertEquals(12, groups.count(3));
+        assertEquals(2, groups.count(4));
+        assertEquals(1, groups.count(5));
+        assertEquals(0, groups.count(6));
+    }
+
+    @Test
     public void testDistinctForeignLiterals() {
         int count = 0;
         for (String literalName : turkish.literalList()){

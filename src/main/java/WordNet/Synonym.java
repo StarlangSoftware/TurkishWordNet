@@ -36,6 +36,29 @@ public class Synonym {
         }
     }
 
+    public ArrayList<Synonym> getUniqueLiterals(){
+        ArrayList<Synonym> literalGroups = new ArrayList<>();
+        int groupNo = -1;
+        Synonym synonym = new Synonym();
+        for (Literal literal : literals){
+            if (literal.getGroupNo() != groupNo){
+                if (groupNo != -1){
+                    literalGroups.add(synonym);
+                }
+                groupNo = literal.getGroupNo();
+                synonym = new Synonym();
+            } else {
+                if (groupNo == 0){
+                    literalGroups.add(synonym);
+                    synonym = new Synonym();
+                }
+            }
+            synonym.addLiteral(literal);
+        }
+        literalGroups.add(synonym);
+        return literalGroups;
+    }
+
     /**
      * Returns the element at the specified position in literals list.
      *
