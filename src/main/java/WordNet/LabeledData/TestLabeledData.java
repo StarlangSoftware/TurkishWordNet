@@ -13,14 +13,14 @@ import java.util.stream.Collectors;
 public class TestLabeledData {
 
     private static void displayComponents(GraphList<SynSet> components){
-        String result = "";
+        StringBuilder result = new StringBuilder();
         for (int i = 0; i < components.size(); i++){
             Graph<SynSet> graph = components.getGraph(i);
-            String component = "";
+            StringBuilder component = new StringBuilder();
             for (Node<SynSet> node : graph.nodeList()){
-                component = component + " " + node.getLabel().getId();
+                component.append(" ").append(node.getLabel().getId());
             }
-            result = result + component + "\n";
+            result.append(component).append("\n");
         }
         System.out.println(result);
     }
@@ -33,7 +33,7 @@ public class TestLabeledData {
         labeledData.addPath("../WordNet/farkli-matches", new Locale("tr"));
         ArrayList<Double> edgeWeights = labeledData.distinctEdgeWeights(0.0001);
         HashSet<String> skipList = new HashSet<>();
-        GraphList<SynSet> previousComponents = new GraphList<SynSet>();
+        GraphList<SynSet> previousComponents = new GraphList<>();
         for (int i = edgeWeights.size() - 1; i >= 0; i--){
             double threshold = edgeWeights.get(i);
             Graph<SynSet> synSetGraph = labeledData.createGraph(threshold, 0.0001, skipList);
@@ -90,8 +90,7 @@ public class TestLabeledData {
                     }
                 }
             }
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
+        } catch (FileNotFoundException ignored) {
         }
         System.out.println(total);
     }

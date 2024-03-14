@@ -39,15 +39,7 @@ public class LiteralWithSenseComparator implements Comparator<Literal> {
     public int compare(Literal literalA, Literal literalB) {
         Collator collator = Collator.getInstance(locale);
         if (collator.compare(literalA.getName().toLowerCase(locale), literalB.getName().toLowerCase(locale)) == 0) {
-            if (literalA.getSense() < literalB.getSense()) {
-                return -1;
-            } else {
-                if (literalA.getSense() > literalB.getSense()) {
-                    return 1;
-                } else {
-                    return 0;
-                }
-            }
+            return Integer.compare(literalA.getSense(), literalB.getSense());
         } else {
             return collator.compare(literalA.getName().toLowerCase(locale), literalB.getName().toLowerCase(locale));
         }

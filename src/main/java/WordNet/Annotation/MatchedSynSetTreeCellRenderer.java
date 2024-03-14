@@ -11,17 +11,17 @@ public class MatchedSynSetTreeCellRenderer extends DefaultTreeCellRenderer {
         DefaultMutableTreeNode currentNode = (DefaultMutableTreeNode) value;
         if (currentNode.getUserObject() instanceof InterlingualMatchedSynSets){
             InterlingualMatchedSynSets matchedSynSets = (InterlingualMatchedSynSets)currentNode.getUserObject();
-            if (matchedSynSets.getSecond() != null && matchedSynSets.getSecond().size() > 0){
+            if (matchedSynSets.getSecond() != null && !matchedSynSets.getSecond().isEmpty()){
                 if (matchedSynSets.getFirst() != null){
-                    String label = matchedSynSets.getFirst().representative();
+                    StringBuilder label = new StringBuilder(matchedSynSets.getFirst().representative());
                     for (int i = 0; i < matchedSynSets.getSecond().size(); i++){
                         if (i == 0){
-                            label = label + "=" + matchedSynSets.getSecond().get(i).representative();
+                            label.append("=").append(matchedSynSets.getSecond().get(i).representative());
                         } else {
-                            label = label + "?" + matchedSynSets.getSecond().get(i).representative();
+                            label.append("?").append(matchedSynSets.getSecond().get(i).representative());
                         }
                     }
-                    ((JComponent) cell).setToolTipText(label);
+                    ((JComponent) cell).setToolTipText(label.toString());
                 } else {
                     ((JComponent) cell).setToolTipText(matchedSynSets.getSecond().get(0).representative());
                 }

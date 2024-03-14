@@ -15,8 +15,8 @@ import java.awt.event.ActionListener;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.IOException;
+import java.nio.file.Files;
 import java.util.Locale;
 import java.util.Properties;
 
@@ -94,13 +94,12 @@ public abstract class DomainEditorFrame extends JFrame implements ActionListener
     public DomainEditorFrame(){
         Properties properties = new Properties();
         try {
-            properties.load(new FileInputStream(new File("config.properties")));
+            properties.load(Files.newInputStream(new File("config.properties").toPath()));
             wordNetPrefix = properties.getProperty("wordNetPrefix");
             domainPrefix = properties.getProperty("domainPrefix");
             domainWordNetFileName = domainPrefix + "_wordnet.xml";
             domainDictionaryFileName = domainPrefix + "_dictionary.txt";
-        } catch (IOException e) {
-            e.printStackTrace();
+        } catch (IOException ignored) {
         }
         dictionary = new TxtDictionary(domainDictionaryFileName, new TurkishWordComparator());
         domainWordNet = new WordNet(domainWordNetFileName, new Locale("tr"));

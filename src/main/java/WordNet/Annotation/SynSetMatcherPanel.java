@@ -9,7 +9,7 @@ import javax.swing.tree.TreeNode;
 import javax.swing.tree.TreePath;
 import java.awt.*;
 import java.io.*;
-import java.nio.charset.Charset;
+import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.util.ArrayList;
 
@@ -17,14 +17,14 @@ public class SynSetMatcherPanel extends WordNetEditorPanel{
 
     private SynSet[][] synSets;
     private boolean[][] toBeRemoved;
-    private WordNet wordNet;
+    private final WordNet wordNet;
 
     public SynSetMatcherPanel(WordNet wordNet, String fileName){
         super(fileName);
         this.fileName = fileName;
         this.wordNet = wordNet;
         try {
-            java.util.List<String> lines = Files.readAllLines(new File(fileName).toPath(), Charset.forName("UTF-8"));
+            java.util.List<String> lines = Files.readAllLines(new File(fileName).toPath(), StandardCharsets.UTF_8);
             synSets = new SynSet[lines.size()][];
             toBeRemoved = new boolean[lines.size()][];
             int i = 0;
@@ -41,8 +41,7 @@ public class SynSetMatcherPanel extends WordNetEditorPanel{
                 i++;
             }
             displaySynSetCandidate();
-        } catch (IOException e) {
-            e.printStackTrace();
+        } catch (IOException ignored) {
         }
     }
 
@@ -53,8 +52,8 @@ public class SynSetMatcherPanel extends WordNetEditorPanel{
         root.add(child);
         ArrayList<SynSet> synSetsList = wordNet.getSynSetsWithLiteral(synSet.representative());
         if (synSetsList.size() > 1){
-            for (int i = 0; i < synSetsList.size(); i++){
-                DefaultMutableTreeNode grandChild = new DefaultMutableTreeNode(synSetsList.get(i));
+            for (SynSet set : synSetsList) {
+                DefaultMutableTreeNode grandChild = new DefaultMutableTreeNode(set);
                 child.add(grandChild);
             }
         }
@@ -115,8 +114,7 @@ public class SynSetMatcherPanel extends WordNetEditorPanel{
                 }
             }
             writer.close();
-        } catch (FileNotFoundException | UnsupportedEncodingException e) {
-            e.printStackTrace();
+        } catch (FileNotFoundException | UnsupportedEncodingException ignored) {
         }
     }
 

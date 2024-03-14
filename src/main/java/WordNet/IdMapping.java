@@ -2,7 +2,6 @@ package WordNet;
 
 import Util.FileUtils;
 
-import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
 import java.util.HashMap;
@@ -10,7 +9,7 @@ import java.util.Scanner;
 import java.util.Set;
 
 public class IdMapping {
-    private HashMap<String, String> map;
+    private final HashMap<String, String> map;
 
     /**
      * Constructor to load ID mappings from specific file "mapping.txt" to a {@link HashMap}.
@@ -105,13 +104,12 @@ public class IdMapping {
      */
     public void save(String fileName) {
         try {
-            PrintWriter writer = new PrintWriter(new File(fileName));
+            PrintWriter writer = new PrintWriter(fileName);
             for (String key : map.keySet()) {
                 writer.println(key + "->" + map.get(key));
             }
             writer.close();
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
+        } catch (FileNotFoundException ignored) {
         }
     }
 }

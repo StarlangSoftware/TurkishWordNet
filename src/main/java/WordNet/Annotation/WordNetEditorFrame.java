@@ -49,10 +49,10 @@ public class WordNetEditorFrame extends DomainEditorFrame implements ActionListe
     private static final String EXPAND_EVERYTHING = "expand everything";
     private static final String COLLAPSE_ALL = "collapse all";
 
-    public class PartOfSpeechTree{
-        private JTree tree;
-        private HashMap<SynSet, DefaultMutableTreeNode> nodeList;
-        private DefaultTreeModel treeModel;
+    public static class PartOfSpeechTree{
+        private final JTree tree;
+        private final HashMap<SynSet, DefaultMutableTreeNode> nodeList;
+        private final DefaultTreeModel treeModel;
 
         public JTree getTree() {
             return tree;
@@ -69,8 +69,8 @@ public class WordNetEditorFrame extends DomainEditorFrame implements ActionListe
         }
     }
 
-    public class SynSetObject{
-        private SynSet synSet;
+    public static class SynSetObject{
+        private final SynSet synSet;
 
         SynSetObject(SynSet synSet){
             this.synSet = synSet;
@@ -87,9 +87,9 @@ public class WordNetEditorFrame extends DomainEditorFrame implements ActionListe
             if (count > 1){
                 color = "red";
             }
-            String literal = "<html><font color=\"" + color + "\">" + synSet.getSynonym().getLiteral(0).getName();
+            StringBuilder literal = new StringBuilder("<html><font color=\"" + color + "\">" + synSet.getSynonym().getLiteral(0).getName());
             for (int i = 1; i < synSet.getSynonym().literalSize(); i++){
-                literal += "::" + synSet.getSynonym().getLiteral(i).getName();
+                literal.append("::").append(synSet.getSynonym().getLiteral(i).getName());
             }
             return literal + " (" + synSet.getDefinition() + ")" + "</font></html>";
         }
@@ -99,9 +99,9 @@ public class WordNetEditorFrame extends DomainEditorFrame implements ActionListe
         }
     }
 
-    public class LiteralObject{
-        private Literal literal;
-        private Pos pos;
+    public static class LiteralObject{
+        private final Literal literal;
+        private final Pos pos;
 
         LiteralObject(Literal literal, Pos pos){
             this.literal = literal;
@@ -122,9 +122,9 @@ public class WordNetEditorFrame extends DomainEditorFrame implements ActionListe
 
     }
 
-    public class WordObject{
-        private Word word;
-        private Pos pos;
+    public static class WordObject{
+        private final Word word;
+        private final Pos pos;
 
         WordObject(Word word, Pos pos){
             this.word = word;
@@ -182,7 +182,7 @@ public class WordNetEditorFrame extends DomainEditorFrame implements ActionListe
         Label fontSize = new Label("Font Size:");
         fontSize.setMaximumSize(new Dimension(80, 30));
         toolBar.add(fontSize);
-        fontSizeSelection = new JComboBox<String>(new String[]{"11", "12", "13", "14", "15", "16", "17", "18", "19", "20"});
+        fontSizeSelection = new JComboBox<>(new String[]{"11", "12", "13", "14", "15", "16", "17", "18", "19", "20"});
         fontSizeSelection.setMaximumSize(new Dimension(70, 30));
         fontSizeSelection.addActionListener(e -> {
             final Font currentFont = noun.getTree().getFont();
@@ -216,6 +216,7 @@ public class WordNetEditorFrame extends DomainEditorFrame implements ActionListe
     @Override
     public void actionPerformed(ActionEvent e) {
         super.actionPerformed(e);
+        SynSet newSynSet;
         String synsetId, newSynSetId;
         SynSet synSet;
         switch (e.getActionCommand()){
@@ -243,7 +244,7 @@ public class WordNetEditorFrame extends DomainEditorFrame implements ActionListe
                 if (selectedSynSet != null){
                     selectedSynSet.getSynonym().getLiteral(0).setName(literal.getText());
                     selectedSynSet.getSynonym().getLiteral(0).setSense(Integer.parseInt(sense.getText()));
-                    if (definition.getText().length() > 0){
+                    if (!definition.getText().isEmpty()){
                         selectedSynSet.setDefinition(definition.getText());
                     } else {
                         selectedSynSet.setDefinition(" ");
@@ -259,7 +260,7 @@ public class WordNetEditorFrame extends DomainEditorFrame implements ActionListe
             case REPLACE:
                 if (selectedSynSet != null){
                     finalId += 10;
-                    newSynSetId = wordNetPrefix + "" + finalId;
+                    newSynSetId = wordNetPrefix + finalId;
                     DefaultMutableTreeNode node = noun.nodeList.get(selectedSynSet);
                     noun.nodeList.remove(selectedSynSet);
                     replaceAllRelationsWithNewSynSet(selectedSynSet.getId(), newSynSetId);
@@ -275,12 +276,12 @@ public class WordNetEditorFrame extends DomainEditorFrame implements ActionListe
                 break;
             case ADD_NEW:
                 finalId += 10;
-                newSynSetId = wordNetPrefix + "" + finalId;
+                newSynSetId = wordNetPrefix + finalId;
                 id.setText(newSynSetId);
                 definition.setText(" ");
-                SynSet newSynSet = new SynSet(id.getText());
+                newSynSet = new SynSet(id.getText());
                 newSynSet.addLiteral(new Literal(literal.getText(), Integer.parseInt(sense.getText()) + 1, id.getText()));
-                if (definition.getText().length() > 0){
+                if (!definition.getText().isEmpty()){
                     newSynSet.setDefinition(definition.getText());
                 } else {
                     newSynSet.setDefinition(" ");
@@ -419,7 +420,7 @@ public class WordNetEditorFrame extends DomainEditorFrame implements ActionListe
                 if (!dictionaryList.isSelectionEmpty()){
                     WordObject selectedWord = (WordObject) dictionaryList.getSelectedValue();
                     finalId += 10;
-                    newSynSetId = wordNetPrefix + "" + finalId;
+                    newSynSetId = wordNetPrefix + finalId;
                     newSynSet = new SynSet(newSynSetId);
                     String wordForm = selectedWord.word.getName();
                     if (selectedWord.pos.equals(Pos.VERB)){
@@ -654,11 +655,7 @@ public class WordNetEditorFrame extends DomainEditorFrame implements ActionListe
                             if (selectedSynSet.getId().startsWith(wordNetPrefix) && selectedSynSet.getDefinition() == null){
                                 alternatives.setEnabled(true);
                             } else {
-                                if (alternatives.getItemCount() > 1 && !selectedSynSet.getId().startsWith(wordNetPrefix)){
-                                    alternatives.setEnabled(true);
-                                } else {
-                                    alternatives.setEnabled(false);
-                                }
+                                alternatives.setEnabled(alternatives.getItemCount() > 1 && !selectedSynSet.getId().startsWith(wordNetPrefix));
                             }
                         }
                     }
@@ -801,7 +798,7 @@ public class WordNetEditorFrame extends DomainEditorFrame implements ActionListe
         leftSearch = new JTextField();
         leftSearch.addActionListener(e -> selectTree(leftSearch.getText()));
         topPanel.add(leftSearch);
-        alternatives = new JComboBox<SynSet>();
+        alternatives = new JComboBox<>();
         topPanel.add(alternatives);
         alternatives.addActionListener (e -> {
             if (completed){
@@ -814,7 +811,7 @@ public class WordNetEditorFrame extends DomainEditorFrame implements ActionListe
         JLabel dummy2 = new JLabel("");
         topPanel.add(dummy2);
         dummy2.setVisible(false);
-        leftSearchAlternatives = new JComboBox<SynSet>();
+        leftSearchAlternatives = new JComboBox<>();
         leftSearchAlternatives.addActionListener(e -> {
             if (leftSearchAlternatives.getSelectedIndex() != -1){
                 TreePath treePath = new TreePath(noun.treeModel.getPathToRoot(noun.nodeList.get(leftSearchAlternatives.getSelectedItem())));
@@ -893,11 +890,7 @@ public class WordNetEditorFrame extends DomainEditorFrame implements ActionListe
                 leftSearchAlternatives.addItem(entry.getKey());
             }
         }
-        if (leftSearchAlternatives.getItemCount() > 1){
-            leftSearchAlternatives.setVisible(true);
-        } else {
-            leftSearchAlternatives.setVisible(false);
-        }
+        leftSearchAlternatives.setVisible(leftSearchAlternatives.getItemCount() > 1);
         for (Map.Entry<SynSet, DefaultMutableTreeNode> entry : noun.nodeList.entrySet()){
             if (entry.getKey().getSynonym().containsLiteral(searchKey)){
                 TreePath treePath = new TreePath(noun.treeModel.getPathToRoot(entry.getValue()));

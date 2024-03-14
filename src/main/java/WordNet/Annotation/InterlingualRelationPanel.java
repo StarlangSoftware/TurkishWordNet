@@ -5,14 +5,17 @@ import WordNet.WordNet;
 
 import java.awt.*;
 import java.io.*;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 
 public class InterlingualRelationPanel extends WordNetEditorPanel {
 
-    private ArrayList<Literal> literals1;
-    private ArrayList<Literal> literals2;
-    private WordNet wordNet1;
-    private WordNet wordNet2;
+    private final ArrayList<Literal> literals1;
+    private final ArrayList<Literal> literals2;
+    private final WordNet wordNet1;
+    private final WordNet wordNet2;
 
     public InterlingualRelationPanel(WordNet wordNet1, WordNet wordNet2, String fileName){
         super(fileName);
@@ -21,7 +24,7 @@ public class InterlingualRelationPanel extends WordNetEditorPanel {
         this.wordNet1 = wordNet1;
         this.wordNet2 = wordNet2;
         try {
-            BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream(fileName), "UTF8"));
+            BufferedReader br = new BufferedReader(new InputStreamReader(Files.newInputStream(Paths.get(fileName)), StandardCharsets.UTF_8));
             String line = br.readLine();
             while (line != null){
                 Literal literal1, literal2;
@@ -42,8 +45,7 @@ public class InterlingualRelationPanel extends WordNetEditorPanel {
             }
             br.close();
             displayRelationCandidate();
-        } catch (IOException e) {
-            e.printStackTrace();
+        } catch (IOException ignored) {
         }
     }
 
@@ -73,8 +75,7 @@ public class InterlingualRelationPanel extends WordNetEditorPanel {
                 writer.println();
             }
             writer.close();
-        } catch (FileNotFoundException | UnsupportedEncodingException e) {
-            e.printStackTrace();
+        } catch (FileNotFoundException | UnsupportedEncodingException ignored) {
         }
     }
 

@@ -4,6 +4,9 @@ import DataStructure.CounterHashMap;
 import WordNet.*;
 
 import java.io.*;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.HashMap;
 import java.util.Locale;
 
@@ -19,18 +22,18 @@ public class LabeledData {
         WordPair wordPair;
         String leftWord, rightWord, leftId, rightId;
         try {
-            BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream(fileName), "UTF8"));
+            BufferedReader br = new BufferedReader(new InputStreamReader(Files.newInputStream(Paths.get(fileName)), StandardCharsets.UTF_8));
             String line = br.readLine();
             while (line != null){
                 if (!line.contains("->")){
                     System.out.println("File " + fileName + " does not contain ->");
                 } else {
-                    String[] words = line.split("\\->");
+                    String[] words = line.split("->");
                     if (words.length != 2){
                         System.out.println("File " + fileName + " does not contain correct labeling");
                     } else {
                         if (words[0].contains("(") && words[0].contains(")")){
-                            String[] parts = words[0].split("\\(|\\)");
+                            String[] parts = words[0].split("[()]");
                             leftWord = parts[0].toLowerCase(locale);
                             leftId = parts[1];
                         } else {
@@ -38,7 +41,7 @@ public class LabeledData {
                             leftId = null;
                         }
                         if (words[1].contains("(") && words[1].contains(")")){
-                            String[] parts = words[1].split("\\(|\\)");
+                            String[] parts = words[1].split("[()]");
                             rightWord = parts[0].toLowerCase(locale);
                             rightId = parts[1];
                         } else {
@@ -70,8 +73,7 @@ public class LabeledData {
                 line = br.readLine();
             }
             br.close();
-        } catch (FileNotFoundException e) {
-        } catch (IOException e) {
+        } catch (IOException ignored) {
         }
     }
 
@@ -80,18 +82,18 @@ public class LabeledData {
         WordPair wordPair;
         String leftWord, rightWord, leftId, rightId;
         try {
-            BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream(fileName), "UTF8"));
+            BufferedReader br = new BufferedReader(new InputStreamReader(Files.newInputStream(Paths.get(fileName)), StandardCharsets.UTF_8));
             String line = br.readLine();
             while (line != null){
                 if (!line.contains("->")){
                     System.out.println("File " + fileName + " does not contain ->");
                 } else {
-                    String[] words = line.split("\\->");
+                    String[] words = line.split("->");
                     if (words.length != 2){
                         System.out.println("File " + fileName + " does not contain correct labeling");
                     } else {
                         if (words[0].contains("(") && words[0].contains(")")){
-                            String[] parts = words[0].split("\\(|\\)");
+                            String[] parts = words[0].split("[()]");
                             leftWord = parts[0].toLowerCase(leftLocale);
                             leftId = parts[1];
                         } else {
@@ -99,7 +101,7 @@ public class LabeledData {
                             leftId = null;
                         }
                         if (words[1].contains("(") && words[1].contains(")")){
-                            String[] parts = words[1].split("\\(|\\)");
+                            String[] parts = words[1].split("[()]");
                             rightWord = parts[0].toLowerCase(rightLocale);
                             rightId = parts[1];
                             if (rightWordNet.getSynSetWithId(rightId) == null){
@@ -126,23 +128,26 @@ public class LabeledData {
                 line = br.readLine();
             }
             br.close();
-        } catch (FileNotFoundException e) {
-        } catch (IOException e) {
+        } catch (IOException ignored) {
         }
     }
 
     public void addPath(String path, Locale locale){
         File[] listOfFiles = new File(path).listFiles();
-        for (File file : listOfFiles){
-            addFile(file.getAbsolutePath(), locale);
+        if (listOfFiles != null){
+            for (File file : listOfFiles){
+                addFile(file.getAbsolutePath(), locale);
+            }
         }
     }
 
     public void addPath(String path, Locale leftLocale, Locale rightLocale, WordNet rightWordNet){
         File[] listOfFiles = new File(path).listFiles();
         IdMapping idMapping = new IdMapping();
-        for (File file : listOfFiles){
-            addFile(file.getAbsolutePath(), leftLocale, rightLocale, rightWordNet, idMapping);
+        if (listOfFiles != null){
+            for (File file : listOfFiles){
+                addFile(file.getAbsolutePath(), leftLocale, rightLocale, rightWordNet, idMapping);
+            }
         }
     }
 }

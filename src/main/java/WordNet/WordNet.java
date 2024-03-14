@@ -12,6 +12,8 @@ import Xml.XmlElement;
 
 import java.io.*;
 import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.text.Collator;
 import java.util.AbstractMap.SimpleEntry;
 import java.util.*;
@@ -20,7 +22,7 @@ public class WordNet {
 
     private TreeMap<String, SynSet> synSetList;
     private TreeMap<String, ArrayList<Literal>> literalList;
-    private Locale locale;
+    private final Locale locale;
     private HashMap<String, ArrayList<ExceptionalWord>> exceptionList;
     public HashMap<String, ArrayList<SynSet>> interlingualList;
 
@@ -210,9 +212,6 @@ public class WordNet {
                     case "Adv":
                         pos = Pos.ADVERB;
                         break;
-                    case "Noun":
-                        pos = Pos.NOUN;
-                        break;
                     case "Verb":
                         pos = Pos.VERB;
                         break;
@@ -224,7 +223,7 @@ public class WordNet {
                 if (exceptionList.containsKey(wordName)){
                     rootList = exceptionList.get(wordName);
                 } else {
-                    rootList = new ArrayList<ExceptionalWord>();
+                    rootList = new ArrayList<>();
                 }
                 rootList.add(new ExceptionalWord(wordName, rootForm, pos));
                 exceptionList.put(wordName, rootList);
@@ -366,8 +365,7 @@ public class WordNet {
                 line = infile.readLine();
             }
             infile.close();
-        } catch (IOException e) {
-            e.printStackTrace();
+        } catch (IOException ignored) {
         }
     }
 
@@ -571,8 +569,9 @@ public class WordNet {
         if ((literal.endsWith("es") || literal.endsWith("ed") || literal.endsWith("er")) && literalList.containsKey(wordWithoutLastTwo)) {
             result.add(wordWithoutLastTwo);
         }
-        if (literal.endsWith("ed") && literalList.containsKey(wordWithoutLastTwo + literal.charAt(literal.length() - 3))) {
-            result.add(wordWithoutLastTwo + literal.charAt(literal.length() - 3));
+        String addExtra = wordWithoutLastTwo + literal.charAt(literal.length() - 3);
+        if (literal.endsWith("ed") && literalList.containsKey(addExtra)) {
+            result.add(addExtra);
         }
         if ((literal.endsWith("ed") || literal.endsWith("er")) && literalList.containsKey(wordWithoutLastTwo + "e")) {
             result.add(wordWithoutLastTwo + "e");
@@ -580,8 +579,9 @@ public class WordNet {
         if ((literal.endsWith("ing") || literal.endsWith("est")) && literalList.containsKey(wordWithoutLastThree)) {
             result.add(wordWithoutLastThree);
         }
-        if (literal.endsWith("ing") && literalList.containsKey(wordWithoutLastThree + literal.charAt(literal.length() - 4))) {
-            result.add(wordWithoutLastThree + literal.charAt(literal.length() - 4));
+        addExtra = wordWithoutLastThree + literal.charAt(literal.length() - 4);
+        if (literal.endsWith("ing") && literalList.containsKey(addExtra)) {
+            result.add(addExtra);
         }
         if ((literal.endsWith("ing") || literal.endsWith("est")) && literalList.containsKey(wordWithoutLastThree + "e")) {
             result.add(wordWithoutLastThree + "e");
@@ -728,7 +728,7 @@ public class WordNet {
                 HashSet<String> possibleWords = fsm.getPossibleWords(parse, metaParse);
                 for (String possibleWord : possibleWords) {
                     ArrayList<SynSet> synSets = getSynSetsWithLiteral(possibleWord);
-                    if (synSets.size() > 0) {
+                    if (!synSets.isEmpty()) {
                         for (SynSet synSet : synSets) {
                             if (synSet.getPos() != null && (parse.getPos().equals("NOUN") || parse.getPos().equals("ADVERB") || parse.getPos().equals("VERB") || parse.getPos().equals("ADJ") || parse.getPos().equals("CONJ"))) {
                                 if (synSet.getPos().equals(Pos.NOUN)) {
@@ -768,7 +768,7 @@ public class WordNet {
                         }
                     }
                 }
-                if (result.size() == 0) {
+                if (result.isEmpty()) {
                     for (String possibleWord : possibleWords) {
                         ArrayList<SynSet> synSets = getSynSetsWithLiteral(possibleWord);
                         result.addAll(synSets);
@@ -777,7 +777,7 @@ public class WordNet {
             } else {
                 result.addAll(getSynSetsWithLiteral(word));
             }
-            if (parse.isCardinal() && result.size() == 0) {
+            if (parse.isCardinal() && result.isEmpty()) {
                 result.add(getSynSetWithLiteral("(tam sayı)", 1));
             }
         } else {
@@ -840,7 +840,7 @@ public class WordNet {
      * @return a list of SynSets
      */
     public ArrayList<SynSet> constructIdiomSynSets(MorphologicalParse morphologicalParse1, MorphologicalParse morphologicalParse2, MorphologicalParse morphologicalParse3, MorphologicalParse morphologicalParse4, MorphologicalParse morphologicalParse5, MetamorphicParse metaParse1, MetamorphicParse metaParse2, MetamorphicParse metaParse3, MetamorphicParse metaParse4, MetamorphicParse metaParse5, FsmMorphologicalAnalyzer fsm) {
-        ArrayList<SynSet> result = new ArrayList<SynSet>();
+        ArrayList<SynSet> result = new ArrayList<>();
         HashSet<String> possibleWords1 = fsm.getPossibleWords(morphologicalParse1, metaParse1);
         HashSet<String> possibleWords2 = fsm.getPossibleWords(morphologicalParse2, metaParse2);
         HashSet<String> possibleWords3 = fsm.getPossibleWords(morphologicalParse3, metaParse3);
@@ -909,7 +909,7 @@ public class WordNet {
      * @return a list of SynSets
      */
     public ArrayList<SynSet> constructIdiomSynSets(MorphologicalParse morphologicalParse1, MorphologicalParse morphologicalParse2, MorphologicalParse morphologicalParse3, MorphologicalParse morphologicalParse4, MetamorphicParse metaParse1, MetamorphicParse metaParse2, MetamorphicParse metaParse3, MetamorphicParse metaParse4, FsmMorphologicalAnalyzer fsm) {
-        ArrayList<SynSet> result = new ArrayList<SynSet>();
+        ArrayList<SynSet> result = new ArrayList<>();
         HashSet<String> possibleWords1 = fsm.getPossibleWords(morphologicalParse1, metaParse1);
         HashSet<String> possibleWords2 = fsm.getPossibleWords(morphologicalParse2, metaParse2);
         HashSet<String> possibleWords3 = fsm.getPossibleWords(morphologicalParse3, metaParse3);
@@ -968,7 +968,7 @@ public class WordNet {
      * @return a list of SynSets
      */
     public ArrayList<SynSet> constructIdiomSynSets(MorphologicalParse morphologicalParse1, MorphologicalParse morphologicalParse2, MorphologicalParse morphologicalParse3, MetamorphicParse metaParse1, MetamorphicParse metaParse2, MetamorphicParse metaParse3, FsmMorphologicalAnalyzer fsm) {
-        ArrayList<SynSet> result = new ArrayList<SynSet>();
+        ArrayList<SynSet> result = new ArrayList<>();
         HashSet<String> possibleWords1 = fsm.getPossibleWords(morphologicalParse1, metaParse1);
         HashSet<String> possibleWords2 = fsm.getPossibleWords(morphologicalParse2, metaParse2);
         HashSet<String> possibleWords3 = fsm.getPossibleWords(morphologicalParse3, metaParse3);
@@ -995,7 +995,7 @@ public class WordNet {
      * @return a list of literals
      */
     public ArrayList<Literal> constructIdiomLiterals(MorphologicalParse morphologicalParse1, MorphologicalParse morphologicalParse2, MetamorphicParse metaParse1, MetamorphicParse metaParse2, FsmMorphologicalAnalyzer fsm) {
-        ArrayList<Literal> result = new ArrayList<Literal>();
+        ArrayList<Literal> result = new ArrayList<>();
         HashSet<String> possibleWords1 = fsm.getPossibleWords(morphologicalParse1, metaParse1);
         HashSet<String> possibleWords2 = fsm.getPossibleWords(morphologicalParse2, metaParse2);
         for (String possibleWord1 : possibleWords1) {
@@ -1274,7 +1274,7 @@ public class WordNet {
     public void saveAsXml(String fileName) {
         BufferedWriter outfile;
         try {
-            OutputStreamWriter writer = new OutputStreamWriter(new FileOutputStream(fileName), "UTF-8");
+            OutputStreamWriter writer = new OutputStreamWriter(Files.newOutputStream(Paths.get(fileName)), StandardCharsets.UTF_8);
             outfile = new BufferedWriter(writer);
             outfile.write("<SYNSETS>\n");
             for (SynSet synSet : synSetList.values()) {
@@ -1298,7 +1298,7 @@ public class WordNet {
         String senseId;
         IdMapping iliMapping = new IdMapping("ili-mapping.txt");
         try {
-            OutputStreamWriter writer = new OutputStreamWriter(new FileOutputStream(fileName), StandardCharsets.UTF_8);
+            OutputStreamWriter writer = new OutputStreamWriter(Files.newOutputStream(Paths.get(fileName)), StandardCharsets.UTF_8);
             outfile = new BufferedWriter(writer);
             outfile.write("<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n" +
                     "<!DOCTYPE LexicalResource SYSTEM \"http://globalwordnet.github.io/schemas/WN-LMF-1.0.dtd\">\n" +
@@ -1317,12 +1317,12 @@ public class WordNet {
                     }
                     synSetSet.add(getSynSetWithId(literal1.synSetId));
                 }
-                if (synSetSet.size() == 0) {
+                if (synSetSet.isEmpty()) {
                     continue;
                 }
                 ArrayList<SynSet> synSets = new ArrayList<>();
                 synSets.addAll(synSetSet);
-                Collections.sort(synSets, (o1, o2) -> o1.getPos().toString().compareTo(o2.getPos().toString()));
+                synSets.sort(Comparator.comparing((SynSet o) -> o.getPos().toString()));
                 SynSet previous = null;
                 for (SynSet current : synSets) {
                     if (previous == null || !current.getPos().equals(previous.getPos())) {
@@ -1369,7 +1369,7 @@ public class WordNet {
                     continue;
                 }
                 ArrayList<String> interlinguals = synSet.getInterlingual();
-                if (interlinguals.size() > 0 && iliMapping.map(interlinguals.get(0)) != null) {
+                if (!interlinguals.isEmpty() && iliMapping.map(interlinguals.get(0)) != null) {
                     synSet.saveAsLmf(outfile, iliMapping.map(interlinguals.get(0)));
                 } else {
                     synSet.saveAsLmf(outfile, "");
@@ -1527,10 +1527,7 @@ public class WordNet {
         if ((literal.charAt(0) >= 'a' && literal.charAt(0) <= 'z') || (literal.charAt(0) >= 'A' && literal.charAt(0) <= 'Z')){
             return true;
         }
-        if (literal.charAt(0) == 'ç' || literal.charAt(0) == 'ö' || literal.charAt(0) == 'ğ' || literal.charAt(0) == 'ü' || literal.charAt(0) == 'ş' || literal.charAt(0) == 'ı' || literal.charAt(0) == 'â' || literal.charAt(0) == 'û' || literal.charAt(0) == 'î'){
-            return true;
-        }
-        return false;
+        return literal.charAt(0) == 'ç' || literal.charAt(0) == 'ö' || literal.charAt(0) == 'ğ' || literal.charAt(0) == 'ü' || literal.charAt(0) == 'ş' || literal.charAt(0) == 'ı' || literal.charAt(0) == 'â' || literal.charAt(0) == 'û' || literal.charAt(0) == 'î';
     }
 
     public String latexTurkish(String text){
@@ -1575,22 +1572,22 @@ public class WordNet {
     }
 
     public String getDefinition(SynSet synSet, String literal){
-        String result;
+        StringBuilder result;
         if (!synSet.getDefinition().isEmpty()){
-            result = latexTurkish((synSet.getDefinition().charAt(0) + "").toUpperCase(new Locale("tr")) + synSet.getDefinition().substring(1));
+            result = new StringBuilder(latexTurkish((synSet.getDefinition().charAt(0) + "").toUpperCase(new Locale("tr")) + synSet.getDefinition().substring(1)));
         } else {
-            result = "";
+            result = new StringBuilder();
         }
         for (int i = 0; i < synSet.getSynonym().literalSize(); i++){
             if (!synSet.getSynonym().getLiteral(i).getName().equals(literal)){
                 if (getSynSetsWithLiteral(synSet.getSynonym().getLiteral(i).getName()).size() > 1){
-                    result += "; " + latexTurkish(synSet.getSynonym().getLiteral(i).getName()) + "$^{" + synSet.getSynonym().getLiteral(i).sense + "}$";
+                    result.append("; ").append(latexTurkish(synSet.getSynonym().getLiteral(i).getName())).append("$^{").append(synSet.getSynonym().getLiteral(i).sense).append("}$");
                 } else {
-                    result += "; " + latexTurkish(synSet.getSynonym().getLiteral(i).getName());
+                    result.append("; ").append(latexTurkish(synSet.getSynonym().getLiteral(i).getName()));
                 }
             }
         }
-        return result;
+        return result.toString();
     }
 
     public void generateDictionary(String fileName, FsmMorphologicalAnalyzer fsm){
@@ -1666,8 +1663,7 @@ public class WordNet {
             output.println("\\end{multicols}\n");
             output.println("\\end{document}");
             output.close();
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
+        } catch (FileNotFoundException ignored) {
         }
     }
 }

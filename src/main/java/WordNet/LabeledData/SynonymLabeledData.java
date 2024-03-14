@@ -11,7 +11,7 @@ import java.util.HashSet;
 import java.util.Map.*;
 
 public class SynonymLabeledData extends LabeledData{
-    private WordNet wordNet;
+    private final WordNet wordNet;
 
     public SynonymLabeledData(WordNet wordNet){
         this.wordNet = wordNet;
@@ -19,7 +19,7 @@ public class SynonymLabeledData extends LabeledData{
 
     public Graph<SynSet> createGraph(double minConfidence, double alpha, HashSet<String> skipList){
         Graph<SynSet> synSetGraph;
-        synSetGraph = new Graph<SynSet>(false);
+        synSetGraph = new Graph<>(false);
         for (Entry<WordPair, CounterHashMap<WordPair>> entry: data.entrySet()){
             CounterHashMap<WordPair> labeledRow = entry.getValue();
             int sum = labeledRow.sumOfCounts();
@@ -28,8 +28,8 @@ public class SynonymLabeledData extends LabeledData{
                     SynSet left = wordNet.getSynSetWithId(label.leftWord);
                     SynSet right = wordNet.getSynSetWithId(label.rightWord);
                     if (left != null && right != null && !left.equals(right) && left.getPos() == right.getPos()){
-                        Node<SynSet> fromNode = new Node<SynSet>(left);
-                        Node<SynSet> toNode = new Node<SynSet>(right);
+                        Node<SynSet> fromNode = new Node<>(left);
+                        Node<SynSet> toNode = new Node<>(right);
                         double confidence = labeledRow.count(label) / (sum + alpha);
                         if (confidence >= minConfidence) {
                             synSetGraph.addEdge(fromNode, toNode, confidence);

@@ -10,7 +10,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class InterlinguaLabeledData extends LabeledData{
-    private WordNet leftWordNet, rightWordNet;
+    private final WordNet leftWordNet;
+    private final WordNet rightWordNet;
 
     public InterlinguaLabeledData(WordNet leftWordNet, WordNet rightWordNet){
         this.leftWordNet = leftWordNet;
@@ -51,7 +52,7 @@ public class InterlinguaLabeledData extends LabeledData{
     public Graph<SynSet> createGraph(SemanticRelationType semanticRelationType){
         Graph<SynSet> synSetGraph;
         HashMap<SynSet, ArrayList<SynSet>> synSetMap = extractSynSetMap();
-        synSetGraph = new Graph<SynSet>(true);
+        synSetGraph = new Graph<>(true);
         for (SynSet synSet : synSetMap.keySet()){
             ArrayList<SynSet> fromList = synSetMap.get(synSet);
             for (int i = 0; i < synSet.relationSize(); i++){
@@ -62,10 +63,10 @@ public class InterlinguaLabeledData extends LabeledData{
                         if (to != null && synSetMap.containsKey(to)){
                             ArrayList<SynSet> toList = synSetMap.get(to);
                             for (SynSet fromSynSet : fromList){
-                                Node<SynSet> fromNode = new Node<SynSet>(fromSynSet);
+                                Node<SynSet> fromNode = new Node<>(fromSynSet);
                                 for (SynSet toSynSet : toList){
                                     if (!fromSynSet.equals(toSynSet)){
-                                        Node<SynSet> toNode = new Node<SynSet>(toSynSet);
+                                        Node<SynSet> toNode = new Node<>(toSynSet);
                                         if (!synSetGraph.containsEdge(fromNode, toNode) && !synSetGraph.containsEdge(toNode, fromNode)){
                                             switch (semanticRelationType){
                                                 case INSTANCE_HYPONYM:

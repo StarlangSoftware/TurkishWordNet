@@ -53,14 +53,14 @@ public class DictionaryEditorFrame extends DomainEditorFrame implements ActionLi
                         String verbForm2 = verbTransition.makeTransition(word2, word2.getName());
                         synSets2.addAll(domainWordNet.getSynSetsWithLiteral(verbForm2));
                     }
-                    if (synSets1.size() != 0) {
-                        if (synSets2.size() == 0) {
+                    if (!synSets1.isEmpty()) {
+                        if (synSets2.isEmpty()) {
                             return 1;
                         } else {
                             return synSets1.get(0).getId().compareTo(synSets2.get(0).getId());
                         }
                     } else {
-                        if (synSets2.size() == 0) {
+                        if (synSets2.isEmpty()) {
                             return 0;
                         } else {
                             return -1;
@@ -84,7 +84,7 @@ public class DictionaryEditorFrame extends DomainEditorFrame implements ActionLi
         dataTable.invalidate();
     }
 
-    public class FlagObject{
+    public static class FlagObject{
         String[] flags = null;
 
         private FlagObject(TxtWord word){
@@ -130,10 +130,10 @@ public class DictionaryEditorFrame extends DomainEditorFrame implements ActionLi
     }
 
     private class PanelObject{
-        private FlagObject flagObject;
-        private SynSetObject synSetObject;
-        private TxtWord word;
-        private String root;
+        private final FlagObject flagObject;
+        private final SynSetObject synSetObject;
+        private final TxtWord word;
+        private final String root;
         private JPanel flagPanel;
         private JPanel synSetIdPanel;
         private JPanel synSetPosPanel;
@@ -162,6 +162,24 @@ public class DictionaryEditorFrame extends DomainEditorFrame implements ActionLi
             } else {
                 dataTable.setRowHeight(row, 35);
             }
+            JComboBox<String> flagComboBox = getComboBox();
+            JButton add = new JButton();
+            add.setIcon(addIcon);
+            c.gridx = 0;
+            add.addActionListener(e -> {
+                if (!root.contains(" ")){
+                    dictionary.addWithFlag(root, (String) flagComboBox.getSelectedItem());
+                    modified = true;
+                    PanelObject panelObject = new PanelObject(root, row);
+                    display.put(root, panelObject);
+                }
+            });
+            flagPanel.add(add, c);
+            c.gridx = 1;
+            flagPanel.add(flagComboBox, c);
+        }
+
+        private JComboBox<String> getComboBox() {
             JComboBox<String> flagComboBox = new JComboBox<>();
             flagComboBox.addItem("CL_ISIM");
             flagComboBox.addItem("IS_OA");
@@ -186,20 +204,7 @@ public class DictionaryEditorFrame extends DomainEditorFrame implements ActionLi
             flagComboBox.addItem("IS_BILEŞ");
             flagComboBox.addItem("IS_POSTP");
             flagComboBox.addItem("IS_CA");
-            JButton add = new JButton();
-            add.setIcon(addIcon);
-            c.gridx = 0;
-            add.addActionListener(e -> {
-                if (!root.contains(" ")){
-                    dictionary.addWithFlag(root, (String) flagComboBox.getSelectedItem());
-                    modified = true;
-                    PanelObject panelObject = new PanelObject(root, row);
-                    display.put(root, panelObject);
-                }
-            });
-            flagPanel.add(add, c);
-            c.gridx = 1;
-            flagPanel.add(flagComboBox, c);
+            return flagComboBox;
         }
 
         private void createSynSetPanel(int column, int row){
@@ -232,12 +237,9 @@ public class DictionaryEditorFrame extends DomainEditorFrame implements ActionLi
                         if (synSet.getDefinition() == null || synSet.getDefinition().equals(" ")){
                             JTextField text = new JTextField("No Definition");
                             text.setMinimumSize(new Dimension(500, 30));
-                            text.addActionListener(new ActionListener() {
-                                @Override
-                                public void actionPerformed(ActionEvent e) {
-                                    if (!text.getText().equalsIgnoreCase("No Definition")){
-                                        synSet.setDefinition(text.getText());
-                                    }
+                            text.addActionListener(e -> {
+                                if (!text.getText().equalsIgnoreCase("No Definition")){
+                                    synSet.setDefinition(text.getText());
                                 }
                             });
                             newPanel.add(text, c);
@@ -254,115 +256,9 @@ public class DictionaryEditorFrame extends DomainEditorFrame implements ActionLi
             }
             if (column == 4){
                 c.gridx = 0;
-                JComboBox<String> synSetChooser = new JComboBox<>();
-                if (word != null){
-                    if (word.isNominal()){
-                        synSetChooser.addItem("New SynSet (NOUN)");
-                    }
-                    if (word.isAdjective()){
-                        synSetChooser.addItem("New SynSet (ADJECTIVE)");
-                    }
-                    if (word.isVerb()){
-                        synSetChooser.addItem("New SynSet (VERB)");
-                    }
-                    if (word.isAdverb()){
-                        synSetChooser.addItem("New SynSet (ADVERB)");
-                    }
-                } else {
-                    if (root.contains(" ")){
-                        synSetChooser.addItem("New SynSet (NOUN)");
-                    }
-                }
-                for (SynSet synSet : synSetObject.extraSynSets){
-                    int definitionLength = 0, exampleLength = 0;
-                    if (synSet.getDefinition() != null){
-                        definitionLength = synSet.getDefinition().length();
-                    }
-                    if (synSet.getExample() != null){
-                        exampleLength = synSet.getExample().length();
-                        if (definitionLength + exampleLength < 150){
-                            synSetChooser.addItem(synSet.getDefinition() + " [" + synSet.getExample() + "]");
-                        } else {
-                            String text = "";
-                            if (definitionLength < 75){
-                                text = text + synSet.getDefinition();
-                            } else {
-                                text = text + synSet.getDefinition().substring(0, 75) + "...";
-                            }
-                            if (exampleLength < 75){
-                                text = text + " [" + synSet.getExample() + "]";
-                            } else {
-                                text = text + " [" + synSet.getExample().substring(0, 75) + "...]";
-                            }
-                            synSetChooser.addItem(text);
-                        }
-                    } else {
-                        if (definitionLength < 150){
-                            synSetChooser.addItem(synSet.getDefinition());
-                        } else {
-                            synSetChooser.addItem(synSet.getDefinition().substring(0, 150) + "...");
-                        }
-                    }
-                }
+                JComboBox<String> synSetChooser = getSynSetChooser();
                 if (synSetChooser.getItemCount() > 0){
-                    JButton add = new JButton();
-                    add.setIcon(addIcon);
-                    add.addActionListener(e -> {
-                        if (synSetChooser.getSelectedIndex() != -1){
-                            int extraRows = 0;
-                            for (int i = 0; i < synSetChooser.getItemCount(); i++){
-                                if (((String) synSetChooser.getItemAt(i)).startsWith("New SynSet")){
-                                    extraRows++;
-                                } else {
-                                    break;
-                                }
-                            }
-                            SynSet addedSynSet;
-                            Literal addedLiteral;
-                            Pos pos;
-                            if (synSetChooser.getSelectedIndex() < extraRows){
-                                finalId += 10;
-                                String newSynSetId = wordNetPrefix + "" + String.format("%07d", finalId);
-                                String selectedText = (String) synSetChooser.getSelectedItem();
-                                if (selectedText.contains("NOUN")){
-                                    addedLiteral = new Literal(root, 1, newSynSetId);
-                                    pos = Pos.NOUN;
-                                } else {
-                                    if (selectedText.contains("ADJECTIVE")){
-                                        addedLiteral = new Literal(root, 1, newSynSetId);
-                                        pos = Pos.ADJECTIVE;
-                                    } else {
-                                        if (selectedText.contains("ADVERB")){
-                                            addedLiteral = new Literal(root, 1, newSynSetId);
-                                            pos = Pos.ADVERB;
-                                        } else {
-                                            Transition verbTransition = new Transition("mAk");
-                                            String verbForm = verbTransition.makeTransition(word, word.getName());
-                                            addedLiteral = new Literal(verbForm, 1, newSynSetId);
-                                            pos = Pos.VERB;
-                                        }
-                                    }
-                                }
-                                addedSynSet = new SynSet(newSynSetId);
-                                addedSynSet.addLiteral(addedLiteral);
-                                addedSynSet.setPos(pos);
-                                domainWordNet.addSynSet(addedSynSet);
-                                domainWordNet.addLiteralToLiteralList(addedLiteral);
-                            } else {
-                                addedSynSet = synSetObject.extraSynSets.get(synSetChooser.getSelectedIndex() - extraRows);
-                                if (addedSynSet.getPos().equals(Pos.VERB)){
-                                    Transition verbTransition = new Transition("mAk");
-                                    String verbForm = verbTransition.makeTransition(word, word.getName());
-                                    addSynSet(addedSynSet, verbForm);
-                                } else {
-                                    addSynSet(addedSynSet, root);
-                                }
-                            }
-                            modified = true;
-                            PanelObject panelObject = new PanelObject(root, row);
-                            display.put(root, panelObject);
-                        }
-                    });
+                    JButton add = getAddButton(row, synSetChooser);
                     newPanel.add(add, c);
                     c.gridx = 1;
                     newPanel.add(synSetChooser, c);
@@ -379,6 +275,127 @@ public class DictionaryEditorFrame extends DomainEditorFrame implements ActionLi
                     synSetEditPanel = newPanel;
                     break;
             }
+        }
+
+        private JButton getAddButton(int row, JComboBox<String> synSetChooser) {
+            JButton add = new JButton();
+            add.setIcon(addIcon);
+            add.addActionListener(e -> {
+                if (synSetChooser.getSelectedIndex() != -1){
+                    int extraRows = 0;
+                    for (int i = 0; i < synSetChooser.getItemCount(); i++){
+                        if (synSetChooser.getItemAt(i).startsWith("New SynSet")){
+                            extraRows++;
+                        } else {
+                            break;
+                        }
+                    }
+                    SynSet addedSynSet;
+                    Literal addedLiteral;
+                    Pos pos;
+                    if (synSetChooser.getSelectedIndex() < extraRows){
+                        finalId += 10;
+                        String newSynSetId = wordNetPrefix + String.format("%07d", finalId);
+                        String selectedText = (String) synSetChooser.getSelectedItem();
+                        if (selectedText.contains("NOUN")){
+                            addedLiteral = new Literal(root, 1, newSynSetId);
+                            pos = Pos.NOUN;
+                        } else {
+                            if (selectedText.contains("ADJECTIVE")){
+                                addedLiteral = new Literal(root, 1, newSynSetId);
+                                pos = Pos.ADJECTIVE;
+                            } else {
+                                if (selectedText.contains("ADVERB")){
+                                    addedLiteral = new Literal(root, 1, newSynSetId);
+                                    pos = Pos.ADVERB;
+                                } else {
+                                    Transition verbTransition = new Transition("mAk");
+                                    String verbForm = verbTransition.makeTransition(word, word.getName());
+                                    addedLiteral = new Literal(verbForm, 1, newSynSetId);
+                                    pos = Pos.VERB;
+                                }
+                            }
+                        }
+                        addedSynSet = new SynSet(newSynSetId);
+                        addedSynSet.addLiteral(addedLiteral);
+                        addedSynSet.setPos(pos);
+                        domainWordNet.addSynSet(addedSynSet);
+                        domainWordNet.addLiteralToLiteralList(addedLiteral);
+                    } else {
+                        addedSynSet = synSetObject.extraSynSets.get(synSetChooser.getSelectedIndex() - extraRows);
+                        if (addedSynSet.getPos().equals(Pos.VERB)){
+                            Transition verbTransition = new Transition("mAk");
+                            String verbForm = verbTransition.makeTransition(word, word.getName());
+                            addSynSet(addedSynSet, verbForm);
+                        } else {
+                            addSynSet(addedSynSet, root);
+                        }
+                    }
+                    modified = true;
+                    PanelObject panelObject = new PanelObject(root, row);
+                    display.put(root, panelObject);
+                }
+            });
+            return add;
+        }
+
+        private JComboBox<String> getSynSetChooser() {
+            JComboBox<String> synSetChooser = new JComboBox<>();
+            if (word != null){
+                if (word.isNominal()){
+                    synSetChooser.addItem("New SynSet (NOUN)");
+                }
+                if (word.isAdjective()){
+                    synSetChooser.addItem("New SynSet (ADJECTIVE)");
+                }
+                if (word.isVerb()){
+                    synSetChooser.addItem("New SynSet (VERB)");
+                }
+                if (word.isAdverb()){
+                    synSetChooser.addItem("New SynSet (ADVERB)");
+                }
+            } else {
+                if (root.contains(" ")){
+                    synSetChooser.addItem("New SynSet (NOUN)");
+                }
+            }
+            for (SynSet synSet : synSetObject.extraSynSets){
+                int definitionLength = 0, exampleLength;
+                if (synSet.getDefinition() != null){
+                    definitionLength = synSet.getDefinition().length();
+                }
+                if (synSet.getExample() != null){
+                    exampleLength = synSet.getExample().length();
+                    if (definitionLength + exampleLength < 150){
+                        synSetChooser.addItem(synSet.getDefinition() + " [" + synSet.getExample() + "]");
+                    } else {
+                        String text = extractTextForSynSet(synSet, definitionLength, exampleLength);
+                        synSetChooser.addItem(text);
+                    }
+                } else {
+                    if (definitionLength < 150){
+                        synSetChooser.addItem(synSet.getDefinition());
+                    } else {
+                        synSetChooser.addItem(synSet.getDefinition().substring(0, 150) + "...");
+                    }
+                }
+            }
+            return synSetChooser;
+        }
+
+        private String extractTextForSynSet(SynSet synSet, int definitionLength, int exampleLength) {
+            String text = "";
+            if (definitionLength < 75){
+                text = text + synSet.getDefinition();
+            } else {
+                text = text + synSet.getDefinition().substring(0, 75) + "...";
+            }
+            if (exampleLength < 75){
+                text = text + " [" + synSet.getExample() + "]";
+            } else {
+                text = text + " [" + synSet.getExample().substring(0, 75) + "...]";
+            }
+            return text;
         }
 
         private PanelObject(String root, int row){
@@ -558,7 +575,7 @@ public class DictionaryEditorFrame extends DomainEditorFrame implements ActionLi
             TxtWord word = (TxtWord) dictionary.getWord(i);
             if (word.isNominal() || word.isAdjective() || word.isAdverb() || word.isVerb()){
                 data.add(word.getName());
-                mappedSentences.put(word.getName(), new ArrayList<Sentence>());
+                mappedSentences.put(word.getName(), new ArrayList<>());
             }
         }
         fsm = new FsmMorphologicalAnalyzer(dictionary);

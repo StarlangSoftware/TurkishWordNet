@@ -6,7 +6,7 @@ import java.util.ArrayList;
 
 public class Synonym {
 
-    private ArrayList<Literal> literals;
+    private final ArrayList<Literal> literals;
 
     /**
      * A constructor that creates a new {@link ArrayList} literals.
@@ -140,8 +140,7 @@ public class Synonym {
                 literal.saveAsXml(outfile);
             }
             outfile.write("</SYNONYM>");
-        } catch (IOException e) {
-            e.printStackTrace();
+        } catch (IOException ignored) {
         }
     }
 
@@ -151,10 +150,10 @@ public class Synonym {
      * @return concatenated literals
      */
     public String toString() {
-        String result = "";
+        StringBuilder result = new StringBuilder();
         for (Literal literal : literals) {
-            result = result + literal.getName() + " ";
+            result.append(literal.getName()).append(" ");
         }
-        return result;
+        return result.toString();
     }
 }

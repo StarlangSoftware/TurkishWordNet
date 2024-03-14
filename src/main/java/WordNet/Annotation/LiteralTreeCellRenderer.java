@@ -10,7 +10,8 @@ import javax.swing.tree.DefaultTreeCellRenderer;
 import java.awt.*;
 
 public class LiteralTreeCellRenderer extends DefaultTreeCellRenderer {
-    private WordNet wordNet1, wordNet2;
+    private final WordNet wordNet1;
+    private final WordNet wordNet2;
 
     public LiteralTreeCellRenderer(WordNet wordNet1, WordNet wordNet2){
         this.wordNet1 = wordNet1;

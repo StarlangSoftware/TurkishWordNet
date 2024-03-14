@@ -40,7 +40,7 @@ public class InterlingualMatchedSynSets {
         if (first != null){
             return first.toString();
         } else {
-            if (second != null && second.size() > 0){
+            if (second != null && !second.isEmpty()){
                 return second.get(0).toString();
             } else {
                 return "";

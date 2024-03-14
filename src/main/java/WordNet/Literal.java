@@ -25,7 +25,7 @@ public class Literal {
         this.name = name;
         this.sense = sense;
         this.synSetId = synSetId;
-        relations = new ArrayList<Relation>();
+        relations = new ArrayList<>();
     }
 
     /**
@@ -43,11 +43,7 @@ public class Literal {
         if (!(literal instanceof Literal))
             return false;
         Literal secondLiteral = (Literal) literal;
-        if (name.equalsIgnoreCase(secondLiteral.getName()) && sense == secondLiteral.getSense()) {
-            return true;
-        } else {
-            return false;
-        }
+        return name.equalsIgnoreCase(secondLiteral.getName()) && sense == secondLiteral.getSense();
     }
 
     /**
@@ -225,7 +221,7 @@ public class Literal {
                 }
             }
             outfile.write("</LITERAL>");
-        } catch (IOException e) {
+        } catch (IOException ignored) {
         }
     }
 

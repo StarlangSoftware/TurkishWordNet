@@ -19,8 +19,8 @@ public class SynSet {
     private Pos pos;
     private String[] definition = null;
     private String example = null;
-    private Synonym synonym;
-    private ArrayList<Relation> relations;
+    private final Synonym synonym;
+    private final ArrayList<Relation> relations;
     private String note;
     private String wikiPage = null;
     private int bcs;
@@ -154,7 +154,7 @@ public class SynSet {
                 }
             }
         }
-        if (definition != null && definition.length() > 0) {
+        if (definition != null && !definition.isEmpty()) {
             setDefinition(definition);
         } else {
             setDefinition("NO DEFINITION");
@@ -190,11 +190,11 @@ public class SynSet {
      */
     public String getLongDefinition() {
         if (definition != null) {
-            String longDefinition = definition[0];
+            StringBuilder longDefinition = new StringBuilder(definition[0]);
             for (int i = 1; i < definition.length; i++) {
-                longDefinition = longDefinition + "|" + definition[i];
+                longDefinition.append("|").append(definition[i]);
             }
-            return longDefinition;
+            return longDefinition.toString();
         } else {
             return null;
         }
@@ -427,9 +427,9 @@ public class SynSet {
      */
     public ArrayList<SynSet> getInterlingual(WordNet secondLanguage) {
         ArrayList<SynSet> result = new ArrayList<>();
-        for (int i = 0; i < relations.size(); i++) {
-            if (relations.get(i) instanceof InterlingualRelation) {
-                InterlingualRelation relation = (InterlingualRelation) relations.get(i);
+        for (Relation value : relations) {
+            if (value instanceof InterlingualRelation) {
+                InterlingualRelation relation = (InterlingualRelation) value;
                 if (relation.getType().equals(InterlingualDependencyType.SYNONYM)) {
                     SynSet second = secondLanguage.getSynSetWithId(relation.getName());
                     if (second != null) {
@@ -448,9 +448,9 @@ public class SynSet {
      */
     public ArrayList<String> getInterlingual() {
         ArrayList<String> result = new ArrayList<>();
-        for (int i = 0; i < relations.size(); i++) {
-            if (relations.get(i) instanceof InterlingualRelation) {
-                InterlingualRelation relation = (InterlingualRelation) relations.get(i);
+        for (Relation value : relations) {
+            if (value instanceof InterlingualRelation) {
+                InterlingualRelation relation = (InterlingualRelation) value;
                 if (relation.getType().equals(InterlingualDependencyType.SYNONYM)) {
                     result.add(relation.getName());
                 }
@@ -683,8 +683,7 @@ public class SynSet {
                 outfile.write("\t\t<Example>" + getExample() + "</Example>\n");
             }
             outfile.write("\t</Synset>\n");
-        } catch (IOException e) {
-            e.printStackTrace();
+        } catch (IOException ignored) {
         }
     }
 
@@ -745,8 +744,7 @@ public class SynSet {
                 outfile.write("<EXAMPLE>" + example + "</EXAMPLE>");
             }
             outfile.write("</SYNSET>\n");
-        } catch (IOException e) {
-            e.printStackTrace();
+        } catch (IOException ignored) {
         }
     }
 }

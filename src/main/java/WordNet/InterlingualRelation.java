@@ -2,7 +2,7 @@ package WordNet;
 
 public class InterlingualRelation extends Relation {
 
-    private InterlingualDependencyType dependencyType;
+    private final InterlingualDependencyType dependencyType;
 
     public static final String[] ilrDependency = {"Hypernym", "Near_antonym", "Holo_member", "Holo_part", "Holo_portion",
             "Usage_domain", "Category_domain", "Be_in_state", "Subevent", "Verb_group",

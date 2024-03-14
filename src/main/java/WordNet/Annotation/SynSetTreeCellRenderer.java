@@ -7,7 +7,8 @@ import javax.swing.tree.DefaultMutableTreeNode;
 import java.awt.*;
 
 public class SynSetTreeCellRenderer extends LiteralTreeCellRenderer {
-    private WordNet currentWordNet, foreignWordNet;
+    private final WordNet currentWordNet;
+    private final WordNet foreignWordNet;
 
     public SynSetTreeCellRenderer(WordNet oldWordNet1, WordNet oldWordNet2, WordNet currentWordNet, WordNet foreignWordNet){
         super(oldWordNet1, oldWordNet2);
