@@ -8,11 +8,7 @@ import Dictionary.TxtWord;
 import org.junit.Before;
 import org.junit.Test;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.PrintWriter;
 import java.util.ArrayList;
-import java.util.Scanner;
 
 import static org.junit.Assert.*;
 
@@ -459,28 +455,5 @@ public class WordNetTest {
         assertEquals(16, turkish.findPathToRoot(turkish.getSynSetWithId("TUR10-0600460")).size());
         assertEquals(17, turkish.findPathToRoot(turkish.getSynSetWithId("TUR10-0656390")).size());
     }
-
-    public void testDistinctWordList(){
-        WordNet english = new WordNet("english_wordnet_version_31.xml");
-        try {
-            PrintWriter output1 = new PrintWriter(new File("english.txt"));
-            PrintWriter output2 = new PrintWriter(new File("not-analyzed.txt"));
-            Scanner input = new Scanner(new File("distinct.txt"));
-            while (input.hasNext()){
-                String word = input.next();
-                if (english.getSynSetsWithLiteral(word.toLowerCase()).size() > 0 || english.getSynSetsWithLiteral(word).size() > 0){
-                    output1.println(word);
-                } else {
-                    output2.println(word);
-                }
-            }
-            input.close();
-            output1.close();
-            output2.close();
-        } catch (FileNotFoundException e) {
-            throw new RuntimeException(e);
-        }
-    }
-
 
 }
