@@ -136,7 +136,7 @@ Use below line to generate jar file:
         <dependency>
             <groupId>io.github.starlangsoftware</groupId>
             <artifactId>WordNet</artifactId>
-            <version>1.0.27</version>
+            <version>1.0.56</version>
         </dependency>
 
 Detailed Description
