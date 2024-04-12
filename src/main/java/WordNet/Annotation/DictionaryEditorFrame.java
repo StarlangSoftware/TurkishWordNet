@@ -23,6 +23,18 @@ import java.net.URL;
 import java.text.Collator;
 import java.util.*;
 
+/**
+ * The Dictionary Editor is distinct from the previous components in that it is an interface designed to create
+ * domain-specific dictionaries, whereas the former components are for building and maintaining natural language
+ * dictionaries. With the Dictionary Editor, synsets inside a WordNet can be added or removed and sense inputs of
+ * synsets can be edited in order to obtain a domain-specific dictionary. Whichever sense of a synset in the WordNet
+ * is used in that domain can be selected and transferred to the new dictionary or synsets can be transferred
+ * automatically from an existing WordNet to the domain-specific dictionary. Finally, if the sought sense is lacking,
+ * it can simply be added to the dictionary with this editor.
+ * This interface also makes sure that the dictionary and the WordNet are in accord: When an entry is added to the
+ * dictionary, it will be added to the WordNet too, and vice versa. The editor can also sort synsets numerically or
+ * alphabetically.
+ */
 public class DictionaryEditorFrame extends DomainEditorFrame implements ActionListener {
     private ArrayList<String> data;
     private JTable dataTable;
@@ -34,6 +46,15 @@ public class DictionaryEditorFrame extends DomainEditorFrame implements ActionLi
     private JList exampleList;
     private HashMap<String, ArrayList<Sentence>> mappedSentences;
 
+    /**
+     * According to the button pushed, the following operations are implemented:
+     *
+     * <p>ID_SORT: The data is sorted with respect to the synset id's of the words. If one word is not
+     * assigned a synset id, then that word is larger than the other.</p>
+     * <p>TEXT_SORT: The data is sorted with respect to the words themselves.</p>
+     * <p>DELETE: Selected row will be deleted both from the dictionary and the wordnet.<p/>
+     * @param e Action event to be handled
+     */
     @Override
     public void actionPerformed(ActionEvent e) {
         super.actionPerformed(e);
@@ -84,61 +105,23 @@ public class DictionaryEditorFrame extends DomainEditorFrame implements ActionLi
         dataTable.invalidate();
     }
 
-    public static class FlagObject{
-        String[] flags = null;
-
-        private FlagObject(TxtWord word){
-            if (word != null){
-                String[] items = word.toString().split(" ");
-                flags = Arrays.copyOfRange(items, 1, items.length);
-            }
-        }
-    }
-
-    public class SynSetObject{
-        ArrayList<SynSet> synSets;
-        ArrayList<SynSet> extraSynSets = new ArrayList<>();
-
-        private SynSetObject(String root, TxtWord word){
-            Transition verbTransition = new Transition("mAk");
-            if (word != null){
-                String verbForm = verbTransition.makeTransition(word, word.getName());
-                synSets = domainWordNet.getSynSetsWithLiteral(word.getName());
-                synSets.addAll(domainWordNet.getSynSetsWithLiteral(verbForm));
-                ArrayList<SynSet> candidates = turkish.getSynSetsWithLiteral(word.getName());
-                for (SynSet synSet : candidates){
-                    if (!synSets.contains(synSet)){
-                        extraSynSets.add(synSet);
-                    }
-                }
-                candidates = turkish.getSynSetsWithLiteral(verbForm);
-                for (SynSet synSet : candidates){
-                    if (!synSets.contains(synSet)){
-                        extraSynSets.add(synSet);
-                    }
-                }
-            } else {
-                synSets = domainWordNet.getSynSetsWithLiteral(root);
-                ArrayList<SynSet> candidates = turkish.getSynSetsWithLiteral(root);
-                for (SynSet synSet : candidates){
-                    if (!synSets.contains(synSet)){
-                        extraSynSets.add(synSet);
-                    }
-                }
-            }
-        }
-    }
-
     private class PanelObject{
-        private final FlagObject flagObject;
-        private final SynSetObject synSetObject;
-        private final TxtWord word;
-        private final String root;
         private JPanel flagPanel;
         private JPanel synSetIdPanel;
+        private final TxtWord word;
+        private final FlagObject flagObject;
+        private final SynSetListObject synSetListObject;
+        private final String root;
         private JPanel synSetPosPanel;
         private JPanel synSetEditPanel;
 
+        /**
+         * Constructs a flag panel for a given word. The flag panel consists of JLabel's for each flag of the word
+         * added. There is also a delete button for every flag JLabel, so that the user can delete any flag the user
+         * wants. There is also one add button with a JCombobox consisting of all possible flags, so that the user
+         * add any flag he/she wants.
+         * @param row The index of the word in the list.
+         */
         private void createFlagPanel(int row){
             flagPanel = new JPanel(new GridBagLayout());
             GridBagConstraints c = new GridBagConstraints();
@@ -170,7 +153,7 @@ public class DictionaryEditorFrame extends DomainEditorFrame implements ActionLi
                 if (!root.contains(" ")){
                     dictionary.addWithFlag(root, (String) flagComboBox.getSelectedItem());
                     modified = true;
-                    PanelObject panelObject = new PanelObject(root, row);
+                    DictionaryEditorFrame.PanelObject panelObject = new DictionaryEditorFrame.PanelObject(root, row);
                     display.put(root, panelObject);
                 }
             });
@@ -179,6 +162,10 @@ public class DictionaryEditorFrame extends DomainEditorFrame implements ActionLi
             flagPanel.add(flagComboBox, c);
         }
 
+        /**
+         * Constructs a combobox consisting of all possible flags for a word.
+         * @return Combobox consisting of all possible flags for a word.
+         */
         private JComboBox<String> getComboBox() {
             JComboBox<String> flagComboBox = new JComboBox<>();
             flagComboBox.addItem("CL_ISIM");
@@ -207,12 +194,22 @@ public class DictionaryEditorFrame extends DomainEditorFrame implements ActionLi
             return flagComboBox;
         }
 
+        /**
+         * Creates synset panel for the given column. For column
+         * <ul>
+         *     <li>1: Synset id will be displayed in a JLabel</li>
+         *     <li>2: Synset pos tag will be displayed in a JLabel</li>
+         *     <li>4: A delete and an add button is display in a grid.</li>
+         * </ul>
+         * @param column Column of the panel
+         * @param row Row number of the panel.
+         */
         private void createSynSetPanel(int column, int row){
             JPanel newPanel = new JPanel(new GridBagLayout());
             GridBagConstraints c = new GridBagConstraints();
             c.gridy = 0;
             c.gridx = 0;
-            for (SynSet synSet : synSetObject.synSets){
+            for (SynSet synSet : synSetListObject.synSets){
                 switch (column){
                     case 1:
                         newPanel.add(new JLabel(synSet.getId()), c);
@@ -322,7 +319,7 @@ public class DictionaryEditorFrame extends DomainEditorFrame implements ActionLi
                         domainWordNet.addSynSet(addedSynSet);
                         domainWordNet.addLiteralToLiteralList(addedLiteral);
                     } else {
-                        addedSynSet = synSetObject.extraSynSets.get(synSetChooser.getSelectedIndex() - extraRows);
+                        addedSynSet = synSetListObject.extraSynSets.get(synSetChooser.getSelectedIndex() - extraRows);
                         if (addedSynSet.getPos().equals(Pos.VERB)){
                             Transition verbTransition = new Transition("mAk");
                             String verbForm = verbTransition.makeTransition(word, word.getName());
@@ -332,13 +329,19 @@ public class DictionaryEditorFrame extends DomainEditorFrame implements ActionLi
                         }
                     }
                     modified = true;
-                    PanelObject panelObject = new PanelObject(root, row);
+                    DictionaryEditorFrame.PanelObject panelObject = new DictionaryEditorFrame.PanelObject(root, row);
                     display.put(root, panelObject);
                 }
             });
             return add;
         }
 
+        /**
+         * Construct a combobox which contains either new synset items or an existing synset item. The new synset can be
+         * (i) either a new noun, adjective, verb, or adverb synset, (ii) or a synset already existing in the
+         * general Turkish wordnet.
+         * @return A combobox of options.
+         */
         private JComboBox<String> getSynSetChooser() {
             JComboBox<String> synSetChooser = new JComboBox<>();
             if (word != null){
@@ -359,7 +362,7 @@ public class DictionaryEditorFrame extends DomainEditorFrame implements ActionLi
                     synSetChooser.addItem("New SynSet (NOUN)");
                 }
             }
-            for (SynSet synSet : synSetObject.extraSynSets){
+            for (SynSet synSet : synSetListObject.extraSynSets){
                 int definitionLength = 0, exampleLength;
                 if (synSet.getDefinition() != null){
                     definitionLength = synSet.getDefinition().length();
@@ -383,6 +386,16 @@ public class DictionaryEditorFrame extends DomainEditorFrame implements ActionLi
             return synSetChooser;
         }
 
+        /**
+         * Constructs example text displayed for a given synset. Returns concatenation of the first 75 characters of the
+         * definition and the first 75 characters of the example. If the length of the definition or the example have
+         * less than 75 characters, all characters are concatenated.
+         * @param synSet SynSet whose example text will be displayed.
+         * @param definitionLength Maximum length for the definition text.
+         * @param exampleLength Maximum length for the example text.
+         * @return Concatenation of the first 75 characters of the  definition and the first 75 characters of the
+         * example.
+         */
         private String extractTextForSynSet(SynSet synSet, int definitionLength, int exampleLength) {
             String text = "";
             if (definitionLength < 75){
@@ -398,18 +411,32 @@ public class DictionaryEditorFrame extends DomainEditorFrame implements ActionLi
             return text;
         }
 
+        /**
+         * Constructor for a panel. Creates a flag object consisting of flags for the root word. Creates a synset list
+         * object. Creates synset panel for the first, second and fourth columns.
+         * @param root Root word for which panel will be constructed.
+         * @param row Row index for the word.
+         */
         private PanelObject(String root, int row){
             this.root = root;
             word = (TxtWord) dictionary.getWord(root);
             flagObject = new FlagObject(word);
-            synSetObject = new SynSetObject(root, word);
+            synSetListObject = new SynSetListObject(domainWordNet, turkish, root, word);
             createFlagPanel(row);
             createSynSetPanel(1, row);
             createSynSetPanel(2, row);
             createSynSetPanel(4, row);
         }
+
     }
 
+    /**
+     * If the root word is in the display, the panel dedicated to that word is returned. Otherwise, a new panel is
+     * constructed  for that root word and returned.
+     * @param root Root word
+     * @param row Row number for the new panel.
+     * @return Panel dedicated to the root word (either it exists or created).
+     */
     private PanelObject addIfNotExists(String root, int row){
         if (display.containsKey(root)){
             return display.get(root);
@@ -472,14 +499,27 @@ public class DictionaryEditorFrame extends DomainEditorFrame implements ActionLi
 
     public class TableDataModel extends AbstractTableModel {
 
+        /**
+         * Returns number of columns.
+         * @return Number of columns.
+         */
         public int getColumnCount() {
             return 6;
         }
 
+        /**
+         * Retuns number of rows.
+         * @return Number of rows.
+         */
         public int getRowCount() {
             return data.size();
         }
 
+        /**
+         * Sets the column name of the table
+         * @param col  the column being queried
+         * @return The column name
+         */
         public String getColumnName(int col) {
             switch (col){
                 case 0:
@@ -499,18 +539,28 @@ public class DictionaryEditorFrame extends DomainEditorFrame implements ActionLi
             }
         }
 
+        /**
+         * Returns the object at a given column.
+         * @param col  the column being queried
+         * @return The object at a given column.
+         */
         public Class getColumnClass(int col){
             switch (col){
                 case 1:
                 case 2:
                 case 4:
-                    return SynSetObject.class;
+                    return SynSetListObject.class;
                 case 5:
                     return FlagObject.class;
             }
             return Object.class;
         }
 
+        /**
+         * Returns the object at a given row and column.
+         * @param row   row of cell
+         * @param col  column of cell
+         */
         public Object getValueAt(int row, int col) {
             PanelObject panelObject;
             int currentHeight, newHeight;
@@ -522,11 +572,11 @@ public class DictionaryEditorFrame extends DomainEditorFrame implements ActionLi
                 case 4:
                     panelObject = addIfNotExists(data.get(row), row);
                     currentHeight = dataTable.getRowHeight(row);
-                    newHeight = (panelObject.synSetObject.synSets.size() + 1) * 35;
+                    newHeight = (panelObject.synSetListObject.synSets.size() + 1) * 35;
                     if (newHeight > currentHeight){
                         dataTable.setRowHeight(row, newHeight);
                     }
-                    return panelObject.synSetObject;
+                    return panelObject.synSetListObject;
                 case 3:
                     return data.get(row);
                 case 5:
@@ -544,6 +594,12 @@ public class DictionaryEditorFrame extends DomainEditorFrame implements ActionLi
             }
         }
 
+        /**
+         * Returns true if the cell is editable, false otherwise.
+         * @param row  the row being queried
+         * @param col the column being queried
+         * @return True if the cell is editable, false otherwise.
+         */
         public boolean isCellEditable(int row, int col) {
             return col >= 3;
         }
@@ -556,19 +612,17 @@ public class DictionaryEditorFrame extends DomainEditorFrame implements ActionLi
         }
     }
 
-    public void loadContents(){
+    /**
+     * Constructs the data list and example sentences hash map. Example sentences in the 'examples.txt' will be
+     * inserted to the hash map. Each sentence is morphologically analyzed and disambiguated with the longest word
+     * disambiguator to get the root words in the sentence. Then for each root word, the example sentence is inserted
+     * for that root word's array list
+     */
+    private void constructExampleSentenceList(){
         FsmMorphologicalAnalyzer fsm;
         FsmParseList fsmParseList;
         HashMap<String, String> rootList = new HashMap<>();
         String root;
-        JButton idSort = new DrawingButton(DictionaryEditorFrame.class, this, "sortnumbers", ID_SORT, "Sort by WordNet Id");
-        toolBar.add(idSort);
-        JButton textSort = new DrawingButton(DictionaryEditorFrame.class, this, "sorttext", TEXT_SORT, "Sort by Word");
-        toolBar.add(textSort);
-        JButton deleteWord = new DrawingButton(DictionaryEditorFrame.class, this, "delete", DELETE, "Delete Word");
-        toolBar.add(deleteWord);
-        setName("Dictionary Editor");
-        display = new HashMap<>();
         data = new ArrayList<>();
         mappedSentences = new HashMap<>();
         for (int i = 0; i < dictionary.size(); i++){
@@ -607,6 +661,27 @@ public class DictionaryEditorFrame extends DomainEditorFrame implements ActionLi
         } catch (FileNotFoundException e) {
             throw new RuntimeException(e);
         }
+    }
+
+    /**
+     * Constructs the user interface of the frame. The following tasks are done:
+     * <ul>
+     *     <li>Sort and delete buttons are added.</li>
+     *     <li>Example sentences and the words in the dictionary are inserted into mappedSentences and data fields
+     *     respectively</li>
+     *     <li>Data table is constructed, its column width are arranged and the renderer classes are attached</li>
+     * </ul>
+     */
+    public void loadContents(){
+        JButton idSort = new DrawingButton(DictionaryEditorFrame.class, this, "sortnumbers", ID_SORT, "Sort by WordNet Id");
+        toolBar.add(idSort);
+        JButton textSort = new DrawingButton(DictionaryEditorFrame.class, this, "sorttext", TEXT_SORT, "Sort by Word");
+        toolBar.add(textSort);
+        JButton deleteWord = new DrawingButton(DictionaryEditorFrame.class, this, "delete", DELETE, "Delete Word");
+        toolBar.add(deleteWord);
+        setName("Dictionary Editor");
+        constructExampleSentenceList();
+        display = new HashMap<>();
         String imgLocation = "/icons/addparent.png";
         URL imageURL = this.getClass().getResource(imgLocation);
         addIcon = new ImageIcon(imageURL);
@@ -623,8 +698,8 @@ public class DictionaryEditorFrame extends DomainEditorFrame implements ActionLi
         dataTable.setDefaultRenderer(FlagObject.class, flagCell);
         dataTable.setDefaultEditor(FlagObject.class, flagCell);
         SynSetCell synSetCell = new SynSetCell();
-        dataTable.setDefaultRenderer(SynSetObject.class, synSetCell);
-        dataTable.setDefaultEditor(SynSetObject.class, synSetCell);
+        dataTable.setDefaultRenderer(SynSetListObject.class, synSetCell);
+        dataTable.setDefaultEditor(SynSetListObject.class, synSetCell);
         JScrollPane tablePane = new JScrollPane(dataTable);
         add(tablePane, BorderLayout.CENTER);
         dataTable.getSelectionModel().addListSelectionListener(event -> {

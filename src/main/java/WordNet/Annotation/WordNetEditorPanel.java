@@ -15,12 +15,22 @@ public class WordNetEditorPanel extends JPanel {
     protected String fileName;
     protected Random random;
 
+    /**
+     * Constructor for main parent panel of the WordNet Editor
+     * @param fileName Name of the file (can be synset split, merge file or intralingual file)
+     */
     public WordNetEditorPanel(String fileName){
         this.fileName = fileName;
         itemIndex = 0;
         random = new Random();
     }
 
+    /**
+     * Constructs a tree node for a relation in WordNet. If the relation is a semantic relation, its name is relation
+     * name with its type, otherwise only name of the relation.
+     * @param relation Relation for which tree node will be created.
+     * @return A DefaultMutableTreeNode
+     */
     protected DefaultMutableTreeNode createRelationNode(Relation relation){
         DefaultMutableTreeNode relationNode;
         if (relation instanceof SemanticRelation){
@@ -31,6 +41,12 @@ public class WordNetEditorPanel extends JPanel {
         return relationNode;
     }
 
+    /**
+     * Constructs a subtree for a literal in WordNet. The literal name and its sense will be the node name, its
+     * children will be its relations with other synsets.
+     * @param literal Literal for which tree node will be created.
+     * @return A subtree rooted at the literal.
+     */
     protected DefaultMutableTreeNode createLiteralNode(Literal literal){
         DefaultMutableTreeNode literalNode = new DefaultMutableTreeNode(literal.getName() + "(" + literal.getSense() + ")");
         for (int i = 0; i < literal.relationSize(); i++){
@@ -40,6 +56,12 @@ public class WordNetEditorPanel extends JPanel {
         return literalNode;
     }
 
+    /**
+     * Constructs a subtree for a synset in WordNet. The synset info will be the node name, its children will be
+     * subtrees generated with createLiteralNode.
+     * @param synSet SynSet for ehich tree node will be created.
+     * @return A subtree rooted at the synset.
+     */
     protected DefaultMutableTreeNode createSynSetNode(SynSet synSet){
         DefaultMutableTreeNode synSetNode;
         synSetNode = new DefaultMutableTreeNode(synSet);
@@ -49,6 +71,14 @@ public class WordNetEditorPanel extends JPanel {
         return synSetNode;
     }
 
+    /**
+     * Creates a synset JTree for a literal in wordnet. First a root node with the name of this literal is created.
+     * Then for every synset that contains this literal, a subtree (as a child of the root node) will be created with
+     * createSynSetNode.
+     * @param literal The literal for which a synset tree will be created.
+     * @param wordNet WordNet used to create the JTree.
+     * @return JTree for a literal in wordnet.
+     */
     protected JTree createSynSetTree(final Literal literal, final WordNet wordNet){
         TreeNode[] path;
         DefaultMutableTreeNode root = new DefaultMutableTreeNode(literal.getName());

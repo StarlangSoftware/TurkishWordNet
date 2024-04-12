@@ -6,6 +6,22 @@ import javax.swing.tree.DefaultTreeCellRenderer;
 import java.awt.*;
 
 public class MatchedSynSetTreeCellRenderer extends DefaultTreeCellRenderer {
+
+    /**
+     * Sets the tooltip for a tree node that contains a interlingual matched synset object. If there is no matching
+     * interlingual synset, the color of the object will be black, otherwise green, and the tooltip will show the
+     * representative of the original synset. If there are one or more matching interlingual synsets, the tooltip will
+     * first show the representative of the original synset, then '=', then show the representatives of those synsets
+     * separated via '?'. For example, for kırmızı, it will display  'kırmızı=red'.
+     * @param tree .
+     * @param value Tree node.
+     * @param sel .
+     * @param exp .
+     * @param leaf .
+     * @param row .
+     * @param hasFocus .
+     * @return New component with tooltip text.
+     */
     public Component getTreeCellRendererComponent(JTree tree, Object value, boolean sel, boolean exp, boolean leaf, int row, boolean hasFocus) {
         Component cell = super.getTreeCellRendererComponent(tree, value, sel, exp, leaf, row, hasFocus);
         DefaultMutableTreeNode currentNode = (DefaultMutableTreeNode) value;

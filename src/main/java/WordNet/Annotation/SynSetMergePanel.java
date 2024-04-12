@@ -11,12 +11,25 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 
-public class LiteralMatcherPanel extends WordNetEditorPanel {
+public class SynSetMergePanel extends WordNetEditorPanel {
 
     private final ArrayList<SynSet> synSets;
     private final WordNet wordNet;
 
-    public LiteralMatcherPanel(WordNet wordNet, String fileName){
+    /**
+     * Reads the literal list from the literal file and displays the first literal set candidate. A literal file
+     * consists of literals separated via {@code ->} and some literals may also have their synset id's between parenthesis
+     * after them. Each line is read, and for each line a new synset is constructed. A literal matching synset consists
+     * of multiple literals, possibly all of which have the same meaning.
+     * An example file is like this:
+     * <blockquote><pre>
+     * ab{@code ->}su(TUR10-1000000){@code ->}âb
+     * kırmızı(TUR10-1100000){@code ->}al
+     * </pre></blockquote>
+     * @param wordNet Wordnet for which literal matching will be done.
+     * @param fileName Name of the file to be read.
+     */
+    public SynSetMergePanel(WordNet wordNet, String fileName){
         super(fileName);
         synSets = new ArrayList<>();
         this.wordNet = wordNet;
@@ -46,6 +59,11 @@ public class LiteralMatcherPanel extends WordNetEditorPanel {
         }
     }
 
+    /**
+     * Displays one single merge candidate. A synset merge candidate consists of multiple literals, possibly
+     * all of which have the same meaning. For every literal, a synset JTree will be constructed and added to the panel.
+     * The synset tree  displays the synset and all of its literals.
+     */
     private void displaySynSetCandidate(){
         removeAll();
         SynSet synSet = synSets.get(itemIndex);
@@ -56,6 +74,17 @@ public class LiteralMatcherPanel extends WordNetEditorPanel {
         validate();
     }
 
+    /**
+     * Saves the matched synsets info in the synsets list to the file. A literal file
+     * consists of literals separated via {@code ->} and some literals may also have their synset id's between parenthesis
+     * after them. Each line is read, and for each line a new synset is constructed. A literal matching synset consists
+     * of multiple literals, possibly all of which have the same meaning.
+     * An example file is like this:
+     * <blockquote><pre>
+     * ab{@code ->}su(TUR10-1000000){@code ->}âb
+     * kırmızı(TUR10-1100000){@code ->}al
+     * </pre></blockquote>
+     */
     public void save(){
         PrintWriter writer;
         try {
@@ -80,6 +109,10 @@ public class LiteralMatcherPanel extends WordNetEditorPanel {
         }
     }
 
+    /**
+     * Displays next synset merge candidate in the synsets list.
+     * @return A string showing the index of the candidate displayed.
+     */
     public String nextSynSetCandidate(){
         if (itemIndex < synSets.size() - 1){
             itemIndex++;
@@ -88,6 +121,10 @@ public class LiteralMatcherPanel extends WordNetEditorPanel {
         return itemIndex + 1 + "/" + synSets.size();
     }
 
+    /**
+     * Displays previous synset merge candidate in the synsets list.
+     * @return A string showing the index of the candidate displayed.
+     */
     public String previousSynSetCandidate(){
         if (itemIndex > 0){
             itemIndex--;
@@ -96,6 +133,10 @@ public class LiteralMatcherPanel extends WordNetEditorPanel {
         return itemIndex + 1 + "/" + synSets.size();
     }
 
+    /**
+     * Displays random synset merge candidate in the synsets list.
+     * @return A string showing the index of the candidate displayed.
+     */
     public String randomSynSetCandidate(){
         itemIndex = random.nextInt(synSets.size());
         displaySynSetCandidate();

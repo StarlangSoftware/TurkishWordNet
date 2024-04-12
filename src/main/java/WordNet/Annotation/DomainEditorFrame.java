@@ -35,6 +35,10 @@ public abstract class DomainEditorFrame extends JFrame implements ActionListener
     protected boolean modified = false;
     abstract void loadContents();
 
+    /**
+     * If the user clicks save button, the domain wordnet and the domain dictionary will be saved.
+     * @param e Action event to be handled
+     */
     @Override
     public void actionPerformed(ActionEvent e) {
         if (SAVE.equals(e.getActionCommand())) {
@@ -44,6 +48,14 @@ public abstract class DomainEditorFrame extends JFrame implements ActionListener
         }
     }
 
+    /**
+     * Checks if the new synset from the general wordnet exists in the domain wordnet or not. If it does not
+     * exist, the function creates a new synset with the same pos and definition and also adds root as the only
+     * existing literal. It also adds the new synset to the domain wordnet.
+     * @param addedSynSet New synset candidate from the general wordnet
+     * @param root Root of the new word
+     * @return Created synset if newly created in the function, otherwise existing synset.
+     */
     protected SynSet addSynSet(SynSet addedSynSet, String root){
         boolean newOne = false;
         SynSet newSynSet = domainWordNet.getSynSetWithId(addedSynSet.getId());
@@ -73,6 +85,11 @@ public abstract class DomainEditorFrame extends JFrame implements ActionListener
         return newSynSet;
     }
 
+    /**
+     * Finds the last existing id in the domain wordnet. In the domain wordnet, all id's start from 0000000 and
+     * increment by 10 such as 0000010, 0000020, 0000030, etc.
+     * @return The largest synset id in the domain wordnet.
+     */
     private int getFinalId(){
         int max = 0;
         for (SynSet synSet : domainWordNet.synSetList()){
@@ -86,11 +103,18 @@ public abstract class DomainEditorFrame extends JFrame implements ActionListener
         return max;
     }
 
+    /**
+     * Creates and adds save button to the toolbar.
+     */
     private void addButtons() {
         JButton save = new DrawingButton(WordNetEditorFrame.class, this, "save", SAVE, "Save");
         toolBar.add(save);
     }
 
+    /**
+     * Abstract constructor for the domain editor. It loads the prefixes of the general and domain wordnets, and also
+     * the wordnets themselves. Adds buttons to the toolbar.
+     */
     public DomainEditorFrame(){
         Properties properties = new Properties();
         try {

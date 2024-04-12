@@ -569,9 +569,8 @@ public class WordNet {
         if ((literal.endsWith("es") || literal.endsWith("ed") || literal.endsWith("er")) && literalList.containsKey(wordWithoutLastTwo)) {
             result.add(wordWithoutLastTwo);
         }
-        String addExtra = wordWithoutLastTwo + literal.charAt(literal.length() - 3);
-        if (literal.endsWith("ed") && literalList.containsKey(addExtra)) {
-            result.add(addExtra);
+        if (literal.endsWith("ed") && literalList.containsKey(wordWithoutLastTwo + literal.charAt(literal.length() - 3))) {
+            result.add(wordWithoutLastTwo + literal.charAt(literal.length() - 3));
         }
         if ((literal.endsWith("ed") || literal.endsWith("er")) && literalList.containsKey(wordWithoutLastTwo + "e")) {
             result.add(wordWithoutLastTwo + "e");
@@ -579,9 +578,8 @@ public class WordNet {
         if ((literal.endsWith("ing") || literal.endsWith("est")) && literalList.containsKey(wordWithoutLastThree)) {
             result.add(wordWithoutLastThree);
         }
-        addExtra = wordWithoutLastThree + literal.charAt(literal.length() - 4);
-        if (literal.endsWith("ing") && literalList.containsKey(addExtra)) {
-            result.add(addExtra);
+        if (literal.endsWith("ing") && literalList.containsKey(wordWithoutLastThree + literal.charAt(literal.length() - 4))) {
+            result.add(wordWithoutLastThree + literal.charAt(literal.length() - 4));
         }
         if ((literal.endsWith("ing") || literal.endsWith("est")) && literalList.containsKey(wordWithoutLastThree + "e")) {
             result.add(wordWithoutLastThree + "e");
