@@ -39,7 +39,7 @@ public class SynSetTreeCellRenderer extends LiteralTreeCellRenderer {
      * @param leaf .
      * @param row .
      * @param hasFocus .
-     * @return
+     * @return Constructed tooltip.
      */
     public Component getTreeCellRendererComponent(JTree tree, Object value, boolean sel, boolean exp, boolean leaf, int row, boolean hasFocus) {
         SynSet current;

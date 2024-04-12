@@ -52,7 +52,7 @@ public class DictionaryEditorFrame extends DomainEditorFrame implements ActionLi
      * <p>ID_SORT: The data is sorted with respect to the synset id's of the words. If one word is not
      * assigned a synset id, then that word is larger than the other.</p>
      * <p>TEXT_SORT: The data is sorted with respect to the words themselves.</p>
-     * <p>DELETE: Selected row will be deleted both from the dictionary and the wordnet.<p/>
+     * <p>DELETE: Selected row will be deleted both from the dictionary and the wordnet.</p>
      * @param e Action event to be handled
      */
     @Override

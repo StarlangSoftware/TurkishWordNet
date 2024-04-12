@@ -10,7 +10,7 @@ public class SynSetObject {
 
     /**
      * Constructor for a temporary synset object just to write another toString method.
-     * @param synSet
+     * @param synSet SynSet object
      */
     public SynSetObject(SynSet synSet){
         this.synSet = synSet;
