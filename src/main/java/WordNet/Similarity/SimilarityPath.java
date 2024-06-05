@@ -19,7 +19,7 @@ public class SimilarityPath extends Similarity{
      * Computes wordnet similarity metric based on similarity path between two synsets.
      * @param synSet1 First synset
      * @param synSet2 Second synset
-     * @return Resnik wordnet similarity metric based on similarity path between two synsets.
+     * @return Wordnet similarity metric based on similarity path between two synsets.
      */
     @Override
     public double computeSimilarity(SynSet synSet1, SynSet synSet2) {
