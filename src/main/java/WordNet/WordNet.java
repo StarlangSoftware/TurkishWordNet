@@ -26,6 +26,15 @@ public class WordNet {
     private HashMap<String, ArrayList<ExceptionalWord>> exceptionList;
     public HashMap<String, ArrayList<SynSet>> interlingualList;
 
+    /**
+     * Reads a wordnet from a Xml file. A wordnet consists of a list of synsets encapsulated inside SYNSET tag. A synset
+     * has an id (represented with ID tag), a set of literals encapsulated inside SYNONYM tag, part of speech tag
+     * (represented with POS tag), a set of semantic relations encapsulated inside SR tag, a definition (represented
+     * with DEF tag), and a possible example (represented with EXAMPLE tag). Each literal has a name, possibly a group
+     * number (represented with GROUP tag), a sense number (represented with SENSE tag) and a set of semantic relations
+     * encapsulated inside SR tag. A semantic relation has a name and a type (represented with TYPE tag).
+     * @param inputStream File stream that contains the wordnet.
+     */
     private void readWordNet(InputStream inputStream) {
         XmlElement rootNode, synSetNode, partNode, srNode, typeNode, toNode, literalNode, senseNode;
         SynSet currentSynSet = null;
@@ -311,6 +320,14 @@ public class WordNet {
         return locale;
     }
 
+    /**
+     * Updates the wordnet according to the situation that an old synset replaced with a new synset. There are three
+     * possibilities: (i) The new synset has a relation with the old synset, then the relation is removed,
+     * (ii) A synset has the same type of relation with old synset and new synset, then the relation is removed,
+     * (iii) None of the above, then the old synset id in the relation is replaced with the new synset id.
+     * @param oldSynSet Old synset to be replaced
+     * @param newSynSet New synset replacing the old synset
+     */
     private void updateAllRelationsAccordingToNewSynSet(SynSet oldSynSet, SynSet newSynSet){
         for (SynSet synSet : synSetList()){
             for (int i = 0; i < synSet.relationSize(); i++){
@@ -1443,8 +1460,6 @@ public class WordNet {
         return null;
     }
 
-    // This method returns depth and ID of the LCS.
-
     /**
      * Returns depth and ID of the LCS.
      *
@@ -1500,6 +1515,11 @@ public class WordNet {
         return null;
     }
 
+    /**
+     * Returns the part of speech tag of a synset according to the TDK rules.
+     * @param synSet Synset for which the part of speech tag will be returned.
+     * @return Part of speech symbol for the given synset.
+     */
     public String getPos(SynSet synSet){
         switch (synSet.getPos()){
             case NOUN:
@@ -1521,6 +1541,11 @@ public class WordNet {
         }
     }
 
+    /**
+     * Returns true if the literal is a single character, false otherwise.
+     * @param literal Literal name
+     * @return True if the literal is a single character, false otherwise.
+     */
     public boolean isLetter(String literal){
         if ((literal.charAt(0) >= 'a' && literal.charAt(0) <= 'z') || (literal.charAt(0) >= 'A' && literal.charAt(0) <= 'Z')){
             return true;
@@ -1528,6 +1553,11 @@ public class WordNet {
         return literal.charAt(0) == 'ç' || literal.charAt(0) == 'ö' || literal.charAt(0) == 'ğ' || literal.charAt(0) == 'ü' || literal.charAt(0) == 'ş' || literal.charAt(0) == 'ı' || literal.charAt(0) == 'â' || literal.charAt(0) == 'û' || literal.charAt(0) == 'î';
     }
 
+    /**
+     * Converts the Turkish characters 'çöğüşı' in the text to its Latex counterparts.
+     * @param text Text to be converted.
+     * @return Same text with 'çöğüşı' characters replaced with their Latex counterparts.
+     */
     public String latexTurkish(String text){
         if (text.equals("$") || text.equals("&")){
             return "";
@@ -1547,6 +1577,12 @@ public class WordNet {
         return "";
     }
 
+    /**
+     * Checks if two characters are capped versions of themselves.
+     * @param ch1 First character
+     * @param ch2 Second character
+     * @return True if the second character is a capped version of the first character, false otherwise.
+     */
     public boolean areEqual(char ch1, char ch2){
         if (ch1 == 'a' && ch2 == 'â'){
             return true;
@@ -1569,6 +1605,14 @@ public class WordNet {
         return (ch1 + "").toUpperCase(new Locale("tr")).equals((ch2 + "").toUpperCase(new Locale("tr")));
     }
 
+    /**
+     * Generates a definition for the literal in a given synset. Definition is generated as follows: The first character
+     * of the definition is capitalized, then the rest of the definition is concatenated. Other than that, all the
+     * literals except the given literal are added as synonyms separated via semicolons.
+     * @param synSet SynSet for which definition will be generated.
+     * @param literal Literal for which definition will be generated.
+     * @return A definition string for a literal.
+     */
     public String getDefinition(SynSet synSet, String literal){
         StringBuilder result;
         if (!synSet.getDefinition().isEmpty()){
@@ -1588,6 +1632,11 @@ public class WordNet {
         return result.toString();
     }
 
+    /**
+     * Generates a TDK style dictionary for this wordnet synsets.
+     * @param fileName Output file name for TDK dictionary.
+     * @param fsm Finite state morphological analyzer.
+     */
     public void generateDictionary(String fileName, FsmMorphologicalAnalyzer fsm){
         try {
             PrintWriter output = new PrintWriter(fileName);

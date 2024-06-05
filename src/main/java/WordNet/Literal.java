@@ -91,10 +91,20 @@ public class Literal {
         this.origin = origin;
     }
 
+    /**
+     * Accessor method to return the group number of the literal. If a literal has a group number larger than 0, it
+     * means the literal has at least one sibling literal in the same synset, whose transcription is very similar to this
+     * literal. For example; 'ab' and 'âb', 'sığır tenyası' and 'sığırtenyası' have the same group numbers.
+     * @return Group number of the literal
+     */
     public int getGroupNo(){
         return groupNo;
     }
 
+    /**
+     * Mutator method for the group number of the literal.
+     * @param groupNo New group number of the literal.
+     */
     public void setGroupNo(int groupNo){
         this.groupNo = groupNo;
     }

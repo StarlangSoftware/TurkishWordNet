@@ -36,6 +36,13 @@ public class Synonym {
         }
     }
 
+    /**
+     * Extracts literal groups as synonym lists and returns them as an array list. Each literal group consists of
+     * literals with the same group number except 0 which represents single literals. For example let say 'ab', 'âb',
+     * 'su' are 3 literals in the same synset, this method will return for that synset two synonyms: 'ab' and 'âb' are
+     * in one synonym and 'su' is in another synonym.
+     * @return Array list of literal groups represented as synonyms
+     */
     public ArrayList<Synonym> getUniqueLiterals(){
         ArrayList<Synonym> literalGroups = new ArrayList<>();
         int groupNo = -1;
