@@ -4755,7 +4755,7 @@ belsoğukluğu CL_ISIM IS_BILEŞ IS_B_SD
 belûm CL_ISIM
 bembeyaz IS_ADJ
 bemol CL_ISIM IS_UU
-ben CL_ISIM IS_OA
+ben CL_ISIM IS_OA IS_ZM
 benal IS_OA
 benam IS_OA
 benan IS_OA
@@ -31757,7 +31757,7 @@ semtikadem CL_ISIM
 semtürres CL_ISIM
 semuh IS_OA
 semure IS_OA
-sen CL_ISIM
+sen IS_ZM
 sena CL_ISIM IS_OA
 senabil IS_OA
 senahan IS_OA

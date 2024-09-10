@@ -32830,7 +32830,7 @@ semtikadem CL_ISIM
 semtürres CL_ISIM
 semuh IS_OA
 semure IS_OA
-sen CL_ISIM
+sen IS_ZM
 sena CL_ISIM IS_OA
 senabil IS_OA
 senahan IS_OA

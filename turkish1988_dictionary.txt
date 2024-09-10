@@ -38862,7 +38862,7 @@ semt CL_ISIM
 semtürreis CL_ISIM
 semuh IS_OA
 semure IS_OA
-sen CL_ISIM
+sen IS_ZM
 sena CL_ISIM IS_OA
 senabil IS_OA
 senahan IS_OA
@@ -42111,7 +42111,7 @@ szymon IS_OA
 şöylemesine IS_ADVERB
 şöylesine IS_ADVERB
 şti IS_OA
-şu IS_ADJ IS_DUP IS_ZM
+şu IS_ADJ IS_DUP
 şua CL_ISIM
 şuayp IS_OA
 şubat CL_ISIM IS_OA

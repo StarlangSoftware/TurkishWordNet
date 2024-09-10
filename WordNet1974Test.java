@@ -12,38 +12,39 @@ import java.util.Locale;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
-public class WordNet1969Test extends PreviousWordNetTest{
+public class WordNet1974Test extends PreviousWordNetTest{
 
     @Before
     public void setUp() {
-        previousWordNet = new WordNet("turkish1969_wordnet.xml", new Locale("tr"));
+        previousWordNet = new WordNet("turkish1974_wordnet.xml", new Locale("tr"));
     }
 
     @Test
     public void testExample() {
-        previousDictionary = new TxtDictionary("turkish1969_dictionary.txt", new TurkishWordComparator());
+        previousDictionary = new TxtDictionary("turkish1974_dictionary.txt", new TurkishWordComparator());
         super.testExample();
     }
 
     @Test
     public void testSize() {
-        assertEquals(38198, previousWordNet.size());
+        assertEquals(43747, previousWordNet.size());
     }
 
     @Test
     public void testSynSetIdCounts() {
         CounterHashMap<String> counts = synSetIdCounts();
-        assertEquals(2693, (int) counts.get("TUR01"));
-        assertEquals(1151, (int) counts.get("TUR02"));
-        assertEquals(348, (int) counts.get("TUR03"));
-        assertEquals(154, (int) counts.get("TUR04"));
-        assertEquals(742, (int) counts.get("TUR05"));
-        assertEquals(33110, (int) counts.get("TUR10"));
+        assertEquals(2480, (int) counts.get("TUR01"));
+        assertEquals(1066, (int) counts.get("TUR02"));
+        assertEquals(326, (int) counts.get("TUR03"));
+        assertEquals(146, (int) counts.get("TUR04"));
+        assertEquals(652, (int) counts.get("TUR05"));
+        assertEquals(1055, (int) counts.get("TUR06"));
+        assertEquals(38022, (int) counts.get("TUR10"));
     }
 
     @Test
     public void generateDictionary() {
-        generateDictionary("1969");
+        generateDictionary("1974");
     }
 
     @Test
@@ -52,19 +53,19 @@ public class WordNet1969Test extends PreviousWordNetTest{
         for (SynSet synSet : previousWordNet.synSetList()){
             literalCount += synSet.getSynonym().literalSize();
         }
-        assertEquals(48348, literalCount);
+        assertEquals(55707, literalCount);
     }
 
     @Test
     public void testGetSynSetsWithPartOfSpeech() {
-        assertEquals(20884, previousWordNet.getSynSetsWithPartOfSpeech(Pos.NOUN).size());
-        assertEquals(8582, previousWordNet.getSynSetsWithPartOfSpeech(Pos.VERB).size());
-        assertEquals(6124, previousWordNet.getSynSetsWithPartOfSpeech(Pos.ADJECTIVE).size());
-        assertEquals(1263, previousWordNet.getSynSetsWithPartOfSpeech(Pos.INTERJECTION).size());
-        assertEquals(1145, previousWordNet.getSynSetsWithPartOfSpeech(Pos.ADVERB).size());
-        assertEquals(71, previousWordNet.getSynSetsWithPartOfSpeech(Pos.PREPOSITION).size());
-        assertEquals(70, previousWordNet.getSynSetsWithPartOfSpeech(Pos.CONJUNCTION).size());
-        assertEquals(59, previousWordNet.getSynSetsWithPartOfSpeech(Pos.PRONOUN).size());
+        assertEquals(23570, previousWordNet.getSynSetsWithPartOfSpeech(Pos.NOUN).size());
+        assertEquals(10466, previousWordNet.getSynSetsWithPartOfSpeech(Pos.VERB).size());
+        assertEquals(6790, previousWordNet.getSynSetsWithPartOfSpeech(Pos.ADJECTIVE).size());
+        assertEquals(1390, previousWordNet.getSynSetsWithPartOfSpeech(Pos.INTERJECTION).size());
+        assertEquals(1322, previousWordNet.getSynSetsWithPartOfSpeech(Pos.ADVERB).size());
+        assertEquals(74, previousWordNet.getSynSetsWithPartOfSpeech(Pos.PREPOSITION).size());
+        assertEquals(72, previousWordNet.getSynSetsWithPartOfSpeech(Pos.CONJUNCTION).size());
+        assertEquals(63, previousWordNet.getSynSetsWithPartOfSpeech(Pos.PRONOUN).size());
     }
 
     @Test
@@ -74,22 +75,22 @@ public class WordNet1969Test extends PreviousWordNetTest{
 
     @Test
     public void testLiteralList() {
-        assertEquals(36934, previousWordNet.literalList().size());
+        assertEquals(42491, previousWordNet.literalList().size());
     }
 
     @Test
     public void testLiteralWordCounts() {
         CounterHashMap<Integer> counts = literalWordCounts();
-        assertEquals(26591, (int) counts.get(1));
-        assertEquals(7970, (int) counts.get(2));
-        assertEquals(1415, (int) counts.get(3));
-        assertEquals(598, (int) counts.get(4));
-        assertEquals(205, (int) counts.get(5));
-        assertEquals(94, (int) counts.get(6));
+        assertEquals(29417, (int) counts.get(1));
+        assertEquals(10290, (int) counts.get(2));
+        assertEquals(1739, (int) counts.get(3));
+        assertEquals(657, (int) counts.get(4));
+        assertEquals(227, (int) counts.get(5));
+        assertEquals(98, (int) counts.get(6));
         assertEquals(33, (int) counts.get(7));
-        assertEquals(15, (int) counts.get(8));
+        assertEquals(16, (int) counts.get(8));
         assertEquals(9, (int) counts.get(9));
-        assertEquals(3, (int) counts.get(10));
+        assertEquals(4, (int) counts.get(10));
         assertEquals(1, (int) counts.get(11));
     }
 
@@ -128,6 +129,7 @@ public class WordNet1969Test extends PreviousWordNetTest{
         super.testExistenceOfPreviousSynSets("1955", "TUR02");
         super.testExistenceOfPreviousSynSets("1959", "TUR03");
         super.testExistenceOfPreviousSynSets("1966", "TUR04");
+        super.testExistenceOfPreviousSynSets("1969", "TUR05");
     }
 
     @Test
@@ -135,4 +137,5 @@ public class WordNet1969Test extends PreviousWordNetTest{
         currentWordNet = new WordNet();
         super.comparePosWithPosOfCorrespondingKeNetSynSets();
     }
+
 }
