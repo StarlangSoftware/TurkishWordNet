@@ -49,6 +49,9 @@ public class WordNet {
             return collator.compare(((String) o1).toLowerCase(locale1), ((String) o2).toLowerCase(locale1));
         });
         rootNode = doc.getFirstChild();
+        if (rootNode == null){
+            return;
+        }
         synSetNode = rootNode.getFirstChild();
         while (synSetNode != null) {
             partNode = synSetNode.getFirstChild();
