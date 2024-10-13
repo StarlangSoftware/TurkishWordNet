@@ -133,8 +133,6 @@ public class PreviousWordNetTest {
     }
 
     public void testExistenceOfKeNetSynSets() {
-        previousWordNet = getWordNet("00");
-        currentWordNet = getWordNet("10");
         boolean found = true;
         for (SynSet synSet : previousWordNet.synSetList()) {
             if (synSet.getId().startsWith("TUR10") && currentWordNet.getSynSetWithId(synSet.getId()) == null) {
@@ -412,7 +410,7 @@ public class PreviousWordNetTest {
         }
     }
 
-    public void generateDictionary() {
+    public void generateDictionary(String year) {
         String[] flags = {"IS_SD", "IS_KG", "IS_UD", "IS_UU", "IS_UUU",
                 "IS_SU", "IS_ST", "F_SD", "F_GUD", "F_GUDO", "IS_SDD",
                 "F1P1", "F2P1", "F2PL", "F2P1-NO-REF", "F3P1-NO-REF",
@@ -422,7 +420,6 @@ public class PreviousWordNetTest {
                 "F5PR", "F5PW", "F6P1", "IS_KU", "IS_BILEŞ",
                 "IS_B_SD", "IS_KI", "IS_STT", "IS_UDD", "IS_CA", "IS_KIS",
                 "IS_EX", "CL_NONE", "IS_B_SI", "IS_SAYI"};
-        String year = "1901";
         previousWordNet = getWordNet("00");
         TxtDictionary turkish = new TxtDictionary();
         TxtDictionary dictionary = new TxtDictionary(new TurkishWordComparator());
