@@ -6,7 +6,6 @@ import Dictionary.TurkishWordComparator;
 import Dictionary.TxtDictionary;
 import Dictionary.TxtWord;
 import MorphologicalAnalysis.FsmMorphologicalAnalyzer;
-import org.junit.Test;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -24,7 +23,31 @@ public class PreviousWordNetTest {
     TxtDictionary previousDictionary;
     WordNet currentWordNet;
 
-    @Test
+    //@Test
+    public void remove() throws FileNotFoundException {
+        Scanner input = new Scanner(new File("tobedeleted.txt"));
+        WordNet[] w = new WordNet[10];
+        for (int i = 0; i < 10; i++) {
+            w[i] = getWordNet("0" + i);
+        }
+        while (input.hasNextLine()) {
+            String id = input.nextLine();
+            for (int i = 0; i < 10; i++) {
+                SynSet synSet = w[i].getSynSetWithId(id);
+                if (synSet != null) {
+                    if (synSet.getSynonym().literalSize() == 1){
+                        w[i].removeSynSet(synSet);
+                    } else {
+                        System.out.println(id);
+                    }
+                }
+            }
+        }
+        for (int i = 0; i < 10; i++) {
+            w[i].saveAsXml(i + ".txt");
+        }
+    }
+
     public void createNewWordNet() throws FileNotFoundException {
         WordNet turkish = new WordNet();
         WordNet newWordNet = new WordNet("", new Locale("tr"));
@@ -143,12 +166,11 @@ public class PreviousWordNetTest {
         assertTrue(found);
     }
 
-    public void testExistenceOfPreviousSynSets() {
-        previousWordNet = getWordNet("00");
-        WordNet compared = getWordNet("09");
+    public void testExistenceOfPreviousSynSets(String year, String id) {
+        WordNet compared = getWordNet(id.substring(3));
         boolean found = true;
         for (SynSet synSet : previousWordNet.synSetList()) {
-            if (synSet.getId().startsWith("TUR09") && compared.getSynSetWithId(synSet.getId()) == null) {
+            if (synSet.getId().startsWith(id) && compared.getSynSetWithId(synSet.getId()) == null) {
                 System.out.println("SynSet with id " + synSet.getId() + " does not exist");
                 found = false;
             }
@@ -420,7 +442,6 @@ public class PreviousWordNetTest {
                 "F5PR", "F5PW", "F6P1", "IS_KU", "IS_BILEŞ",
                 "IS_B_SD", "IS_KI", "IS_STT", "IS_UDD", "IS_CA", "IS_KIS",
                 "IS_EX", "CL_NONE", "IS_B_SI", "IS_SAYI"};
-        previousWordNet = getWordNet("00");
         TxtDictionary turkish = new TxtDictionary();
         TxtDictionary dictionary = new TxtDictionary(new TurkishWordComparator());
         for (int i = 0; i < turkish.size(); i++) {

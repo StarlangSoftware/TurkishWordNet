@@ -417,7 +417,6 @@ açma CL_ISIM
 açmalık CL_ISIM IS_SD
 açmaz CL_ISIM
 açmazlık CL_ISIM IS_SD
-açtır CL_FIIL
 ad CL_FIIL CL_ISIM IS_OA IS_ST IS_STT
 ada CL_FIIL CL_ISIM F4PW-NO-REF F_GUD IS_OA
 adabımuaşeret CL_ISIM
@@ -3620,7 +3619,6 @@ ayakkabıcılık CL_ISIM IS_SD
 ayakkabılık CL_ISIM IS_ADJ IS_SD
 ayakla CL_FIIL F4PW F_GUD
 ayaklan CL_FIIL F5PR
-ayaklandır CL_FIIL
 ayaklanma CL_ISIM
 ayaklı IS_ADJ
 ayaklık CL_ISIM IS_SD
@@ -4168,7 +4166,6 @@ bacak CL_ISIM IS_SD
 bacaklı CL_ISIM IS_ADJ
 bacaksız IS_ADJ
 bacanak CL_ISIM IS_SD
-bacanaklık CL_ISIM
 bach IS_OA
 bacı CL_ISIM IS_OA
 baç CL_ISIM
@@ -4280,7 +4277,6 @@ bağlantısızlık CL_ISIM IS_SD
 bağlarbaşı IS_OA
 bağlaş CL_FIIL
 bağlaşık IS_ADJ
-bağlaşıklık CL_ISIM
 bağlaşma CL_ISIM
 bağlayıcı CL_ISIM IS_ADJ
 bağlı CL_ISIM IS_ADJ
@@ -4451,7 +4447,6 @@ bala CL_ISIM IS_OA
 balâ CL_ISIM IS_OA
 balaban CL_ISIM IS_ADJ IS_OA
 balabanlaş CL_FIIL
-balabanlık CL_ISIM
 balabey IS_OA
 balahatun IS_OA
 balak CL_ISIM IS_SD
@@ -4579,7 +4574,6 @@ balyos CL_ISIM
 balyoz CL_ISIM
 balyozla CL_FIIL F4PW
 bambaşka IS_ADJ
-bambaşkalık CL_ISIM
 bambu CL_ISIM IS_ADJ
 bambul CL_ISIM
 bamya CL_ISIM
@@ -4679,7 +4673,6 @@ barışçı IS_ADJ
 barışçıl IS_ADJ
 barışçılık CL_ISIM IS_SD
 barışık IS_ADJ IS_SD
-barışıklık CL_ISIM
 barışkan IS_OA
 barışsever IS_ADJ
 barışseverlik CL_ISIM IS_SD
@@ -4871,7 +4864,6 @@ başhekimlik CL_ISIM IS_SD
 başhemşire CL_ISIM
 başhemşirelik CL_ISIM IS_SD
 başıboş IS_ADJ IS_ADVERB
-başıboşluk CL_ISIM IS_SD
 başıbozuk IS_ADJ IS_SD
 başıbozukluk CL_ISIM IS_SD
 başında CL_ISIM
@@ -5576,7 +5568,6 @@ benzen CL_ISIM
 benzer CL_ISIM IS_ADJ IS_OA
 benzerlik CL_ISIM IS_SD
 benzersiz IS_ADJ
-benzersizlik CL_ISIM
 benzeş CL_FIIL F5PR IS_ADJ
 benzeşen CL_ISIM
 benzeşim CL_ISIM
@@ -5617,9 +5608,7 @@ bere CL_ISIM
 bereket CL_ISIM IS_ADVERB IS_OA
 bereketlen CL_FIIL F5PR-NO-REF
 bereketli IS_ADJ
-bereketlilik CL_ISIM
 bereketsiz IS_ADJ
-bereketsizlik CL_ISIM
 berele CL_FIIL F4PW F_GUD
 berelen CL_FIIL
 bereli IS_ADJ
@@ -5949,7 +5938,6 @@ bıçkıcı CL_ISIM
 bıçkıhane CL_ISIM
 bıçkın CL_ISIM IS_ADJ
 bıçkınlaş CL_FIIL
-bıçkınlık CL_ISIM
 bıdık IS_ADJ
 bık CL_FIIL F5PR
 bıkkın IS_ADJ
@@ -6132,7 +6120,6 @@ bilgetürk IS_OA
 bilgi CL_ISIM IS_OA
 bilgicilik CL_ISIM IS_SD
 bilgiç CL_ISIM IS_DUP IS_OA IS_SD
-bilgiçlik CL_ISIM IS_SD
 bilgihan IS_OA
 bilgiişlem CL_ISIM
 bilgilen CL_FIIL
@@ -6412,7 +6399,6 @@ biteviye IS_ADVERB
 biteviyelik CL_ISIM IS_SD
 bitey CL_ISIM
 bitik IS_ADJ
-bitiklik CL_ISIM
 bitim CL_ISIM IS_OA
 bitimli IS_ADJ
 bitimsiz IS_ADJ
@@ -6542,7 +6528,6 @@ bodrum CL_ISIM IS_OA
 boduç CL_ISIM IS_SD
 bodur IS_ADJ
 bodurlaşmak CL_ISIM
-bodurluk CL_ISIM
 boeing IS_OA
 boez IS_OA
 bogart IS_OA
@@ -6781,7 +6766,6 @@ boyar CL_ISIM IS_OA
 boyasız IS_ADJ
 boydak IS_OA
 boydaş CL_ISIM IS_ADJ IS_OA
-boydaşlık CL_ISIM
 boyer IS_OA
 boykot CL_ISIM
 boykotçu CL_ISIM
@@ -6931,7 +6915,6 @@ bölünen CL_ISIM
 bölüngü CL_ISIM
 bölünme CL_ISIM
 bölünmez IS_ADJ
-bölünmezlik CL_ISIM
 bölüntü CL_ISIM
 bölüntüler CL_ISIM
 bölüş CL_FIIL F5PR-NO-REF
@@ -7204,7 +7187,6 @@ bulaşıkçı CL_ISIM
 bulaşıkçılık CL_ISIM IS_SD
 bulaşıkhane CL_ISIM
 bulaşkan IS_ADJ
-bulaşkanlık CL_ISIM
 buldan CL_ISIM IS_OA
 buldok CL_ISIM IS_SD
 buldozer CL_ISIM
@@ -7306,7 +7288,6 @@ burhaneddin IS_OA
 burhanettin IS_OA
 burhaniye CL_ISIM IS_OA
 burjuva CL_ISIM
-burjuvalık CL_ISIM
 burjuvazi CL_ISIM
 burk CL_FIIL F5PR
 burkan IS_OA
@@ -7397,7 +7378,6 @@ buzullaşma CL_ISIM
 buzullu IS_ADJ
 bücür IS_ADJ
 bücürleş CL_FIIL
-bücürlük CL_ISIM
 büdü CL_ISIM
 büfe CL_ISIM
 büfeci CL_ISIM
@@ -8936,7 +8916,6 @@ cyrus IS_OA
 çaprazla CL_FIIL F4PW F_GUD
 çaprazlama CL_ISIM IS_ADVERB
 çaprazlaş CL_FIIL
-çaprazlık CL_ISIM
 çaprazölçer CL_ISIM
 çaprazvari IS_ADVERB
 çapsız IS_ADJ
@@ -9042,7 +9021,6 @@ cyrus IS_OA
 çatkılı IS_ADJ
 çatkılık CL_ISIM IS_SD
 çatkın IS_ADJ
-çatkınlık CL_ISIM
 çatla CL_FIIL F4PW F_GUD
 çatlak CL_ISIM IS_ADJ IS_SD
 çatlaklık CL_ISIM IS_SD
@@ -9232,10 +9210,8 @@ cyrus IS_OA
 çelim CL_ISIM IS_OA
 çelimli IS_ADJ
 çelimsiz IS_ADJ
-çelimsizlik CL_ISIM
 çeliş CL_FIIL F5PR
 çelişik IS_ADJ IS_SD
-çelişiklik CL_ISIM
 çelişken IS_ADJ
 çelişki CL_ISIM
 çelişkili IS_ADJ
@@ -9294,7 +9270,6 @@ cyrus IS_OA
 çepel CL_ISIM IS_ADJ
 çepellen CL_FIIL
 çepelli IS_ADJ
-çepellilik CL_ISIM
 çeper CL_ISIM
 çepez CL_ISIM
 çepin CL_ISIM IS_OA
@@ -9376,7 +9351,6 @@ cyrus IS_OA
 çetrefilce IS_ADJ
 çetrefilleş CL_FIIL
 çetrefilli IS_ADJ
-çetrefillik CL_ISIM
 çevgen CL_ISIM
 çevik IS_ADJ IS_OA IS_SD
 çevikcan IS_OA
@@ -9570,7 +9544,6 @@ cyrus IS_OA
 çıtırda CL_FIIL F4PW F_GUD
 çıtırtı CL_ISIM
 çıtkırıldım IS_ADJ
-çıtkırıldımlık CL_ISIM
 çıtla CL_FIIL F4PW F_GUD
 çıtlama CL_ISIM
 çıtlat CL_FIIL
@@ -9956,10 +9929,8 @@ cyrus IS_OA
 çökert CL_FIIL
 çökertme CL_ISIM
 çökkün IS_ADJ
-çökkünlük CL_ISIM
 çökme CL_ISIM
 çökük IS_ADJ
-çöküklük CL_ISIM
 çöküm CL_ISIM
 çöküntü CL_ISIM
 çöküş CL_FIIL CL_ISIM
@@ -10622,7 +10593,6 @@ dejenere IS_ADJ
 dejenereleş CL_FIIL
 dek CL_ISIM IS_ADJ IS_POSTP
 dekadan CL_ISIM
-dekadanlık CL_ISIM
 dekagram CL_ISIM
 dekalitre CL_ISIM
 dekametre CL_ISIM
@@ -10931,7 +10901,6 @@ derialtı IS_ADJ
 derici CL_ISIM
 dericilik CL_ISIM IS_SD
 derik CL_ISIM IS_OA IS_SD
-deril CL_FIIL
 derili IS_ADJ
 derim IS_OA
 derin CL_ISIM IS_ADJ IS_DUP IS_OA
@@ -11124,7 +11093,6 @@ devret CL_FIIL F5PR F_SD
 devri IS_ADJ
 devridaim CL_ISIM
 devrik IS_ADJ IS_SD
-devriklik IS_ADJ
 devril CL_FIIL
 devrim CL_ISIM IS_OA
 devrimci CL_ISIM
@@ -11468,7 +11436,6 @@ dinlenme CL_ISIM
 dinlet CL_FIIL
 dinleti CL_ISIM
 dinleyici CL_ISIM
-dinleyicilik CL_ISIM
 dino IS_OA
 dinozor CL_ISIM
 dinozorlar CL_ISIM IS_CA
@@ -12265,7 +12232,6 @@ duruk CL_ISIM IS_ADJ IS_OA IS_SD
 durukadın IS_OA
 durukal IS_OA
 durukan IS_OA
-durukluk CL_ISIM
 duruksun IS_ADJ
 durul CL_FIIL IS_OA
 durula CL_FIIL F4PW F_GUD
@@ -12556,7 +12522,6 @@ düzmece IS_ADJ
 düzmeci IS_ADJ
 düzmecilik CL_ISIM IS_SD
 düztaban CL_ISIM
-düztabanlık CL_ISIM
 düzül CL_FIIL
 dwayne IS_OA
 dy CL_ISIM
@@ -12680,7 +12645,6 @@ edhem IS_OA
 edib IS_OA
 edibe IS_OA
 edik CL_ISIM IS_SD
-edil CL_FIIL
 edilgen IS_ADJ
 edilgi CL_ISIM
 edilgin IS_ADJ
@@ -12905,7 +12869,6 @@ ekenel IS_OA
 ekener IS_OA
 eker IS_OA
 ekici CL_ISIM IS_ADJ
-ekil CL_FIIL
 ekili IS_ADJ
 ekim CL_ISIM IS_OA
 ekin CL_ISIM IS_OA
@@ -13738,7 +13701,6 @@ eriştir CL_FIIL
 erit CL_FIIL
 eriten CL_ISIM IS_ADJ
 eritici CL_ISIM IS_ADJ
-eritil CL_FIIL
 eritme CL_ISIM
 eritre IS_OA
 eritreli IS_OA
@@ -14060,7 +14022,6 @@ esmeray IS_OA
 esmerce IS_ADJ
 esmerimsi IS_ADJ
 esmerleş CL_FIIL
-esmerlik CL_ISIM
 esna CL_ISIM IS_OA
 esnaf CL_ISIM
 esnaflık CL_ISIM IS_SD
@@ -14424,7 +14385,6 @@ ezbere IS_ADVERB
 ezberinde IS_ADJ
 ezberle CL_FIIL F4PW F_GUD
 ezcümle IS_ADVERB
-ezdir CL_FIIL
 ezekiel IS_OA
 ezel CL_ISIM IS_OA
 ezelhan IS_OA
@@ -14990,7 +14950,6 @@ fevkalâdelik CL_ISIM
 fevkalbeşer IS_ADJ
 fevkanî IS_ADJ
 fevrî IS_ADJ
-fevrîlik CL_ISIM
 fevt CL_ISIM
 fevzi IS_OA
 fevziye IS_OA
@@ -15835,7 +15794,6 @@ ganalı IS_OA
 gandi IS_OA
 gang CL_ISIM
 gangster CL_ISIM
-gangsterlik CL_ISIM
 gani IS_ADJ IS_DUP IS_OA
 ganim IS_OA
 ganime IS_OA
@@ -15960,9 +15918,7 @@ gayretkeş IS_ADJ
 gayretkeşlik CL_ISIM IS_SD
 gayretlen CL_FIIL F5PR
 gayretli IS_ADJ
-gayretlilik CL_ISIM
 gayretsiz IS_ADJ
-gayretsizlik CL_ISIM
 gayrı IS_ADVERB
 gayrımeşru IS_ADJ
 gayri CL_ISIM IS_ADJ
@@ -16102,7 +16058,6 @@ geçil CL_FIIL
 geçilme CL_FIIL
 geçim CL_ISIM
 geçimli IS_ADJ
-geçimlilik CL_ISIM
 geçimsiz IS_ADJ
 geçimsizlik CL_ISIM IS_SD
 geçin CL_FIIL F5PR
@@ -16116,7 +16071,6 @@ geçirim CL_ISIM
 geçirimli IS_ADJ
 geçirimlilik CL_ISIM IS_SD
 geçirimsiz IS_ADJ
-geçirimsizlik CL_ISIM
 geçirme CL_ISIM
 geçiş CL_FIIL CL_ISIM F5PR-NO-REF
 geçişim CL_ISIM
@@ -16312,7 +16266,6 @@ gerdaniye CL_ISIM
 gerdanlık CL_ISIM IS_SD
 gerdek CL_ISIM IS_SD
 gerdel CL_ISIM
-gerdir CL_FIIL
 gereç CL_ISIM IS_SD
 gerede CL_ISIM IS_OA
 gereğince IS_ADVERB
@@ -16366,7 +16319,6 @@ gerilimli IS_ADJ
 gerilimölçer CL_ISIM
 gerilla CL_ISIM
 gerillacı CL_ISIM
-gerillacılık CL_ISIM
 gerilme CL_ISIM
 gerin CL_FIIL F5PR
 gerine IS_DUP
@@ -16437,12 +16389,10 @@ gezenti IS_ADJ
 gezer IS_DUP IS_OA
 gezgin IS_ADJ IS_OA
 gezginci IS_ADJ
-gezgincilik CL_ISIM
 gezginer IS_OA
 gezginlik CL_ISIM IS_SD
 gezi CL_ISIM
 gezici IS_ADJ
-gezicilik CL_ISIM
 gezil CL_FIIL
 gezimcilik CL_ISIM IS_SD
 gezin CL_FIIL F5PR
@@ -16928,7 +16878,6 @@ görenek CL_ISIM IS_SD
 görenekli IS_ADJ
 göreneksel IS_ADJ
 göreneksiz IS_ADJ
-göreneksizlik CL_ISIM
 göresi CL_FIIL F4PW
 görev CL_ISIM
 görevcilik CL_ISIM IS_SD
@@ -16979,7 +16928,6 @@ görül CL_FIIL
 görülmemiş IS_ADJ
 görüm CL_ISIM
 görümce CL_ISIM
-görümcelik CL_ISIM
 görümlük CL_ISIM IS_ADJ IS_SD
 görün CL_FIIL F5PR
 görüngü CL_ISIM
@@ -17201,7 +17149,6 @@ guber IS_OA
 gucur IS_DUP
 gudde CL_ISIM
 gudubet IS_ADJ
-gudubetlik CL_ISIM
 guernsey IS_OA
 guevara IS_OA
 gufran CL_ISIM IS_OA
@@ -17418,7 +17365,6 @@ gülebetin IS_OA
 gülece IS_OA
 güleç IS_ADJ IS_OA IS_SD
 güleçer IS_OA
-güleçlik CL_ISIM
 güleda IS_OA
 gülefşan IS_OA
 güleğen IS_OA
@@ -17749,7 +17695,6 @@ güneşli IS_ADJ
 güneşlik CL_ISIM IS_ADJ IS_SD
 güneşsel IS_ADJ
 güneşsiz IS_ADJ
-güneşsizlik CL_ISIM
 güneştopu CL_ISIM
 güneştutulması CL_ISIM
 güney CL_ISIM IS_ADJ IS_OA
@@ -18172,7 +18117,6 @@ hakkıyla IS_ADVERB
 hakla CL_FIIL F4PW F_GUD
 haklaş CL_FIIL
 haklı IS_ADJ
-haklılık CL_ISIM
 hakodate IS_OA
 hakon IS_OA
 hakperest IS_ADJ
@@ -19241,7 +19185,6 @@ hık CL_ISIM
 hıltan CL_ISIM
 hıltar CL_ISIM
 hımbıl IS_ADJ
-hımbıllık CL_ISIM
 hımhım IS_ADJ IS_ADVERB
 hımhımlık IS_ADJ
 hımış CL_ISIM
@@ -19711,7 +19654,6 @@ hoşneva IS_OA
 hoşnigar IS_OA
 hoşnur IS_OA
 hoşnut IS_ADJ IS_OA IS_SD
-hoşnutluk CL_ISIM
 hoşnutsuzluk CL_ISIM IS_SD
 hoşsel IS_OA
 hoşsen IS_OA
@@ -20057,7 +19999,6 @@ hyundai IS_OA
 ılık IS_ADJ IS_DUP IS_OA IS_SD
 ılıkça IS_ADJ IS_ADVERB
 ılıklaş CL_FIIL
-ılıklık CL_ISIM
 ılım CL_ISIM
 ılıman IS_ADJ
 ılımlı IS_ADJ
@@ -20168,7 +20109,6 @@ hyundai IS_OA
 ıslahatçılık CL_ISIM IS_SD
 ıslahhane CL_ISIM
 ıslak IS_ADJ IS_SD
-ıslaklık CL_ISIM
 ıslan CL_FIIL F5PR
 ıslat CL_FIIL
 ıslatıcı CL_ISIM
@@ -20564,7 +20504,6 @@ iğren CL_FIIL F5PR
 iğrenç IS_ADJ IS_SD
 iğrençlik CL_ISIM IS_SD
 iğrengen IS_ADJ
-iğrengenlik CL_ISIM
 iğrenme CL_ISIM
 iğrenti CL_ISIM
 iğreti IS_ADJ
@@ -21143,7 +21082,6 @@ inanırlık CL_ISIM IS_SD
 inanış CL_ISIM
 inanlı IS_ADJ
 inanma CL_ISIM
-inanmazlık CL_ISIM
 inanoğlu IS_OA
 inanöz IS_OA
 inansız IS_ADJ
@@ -21208,7 +21146,6 @@ indira IS_OA
 indirge CL_FIIL F4PW-NO-REF F_GUD
 indirgen IS_ADJ
 indirgenebilir IS_ADJ
-indirgenlik CL_ISIM
 indirgeyici CL_ISIM
 indirim CL_ISIM
 indirimli IS_ADJ
@@ -21293,7 +21230,6 @@ inorganik CL_ISIM IS_ADJ IS_SD
 inönü CL_ISIM IS_OA
 insaf CL_ISIM IS_OA
 insaflı IS_ADJ
-insaflılık CL_ISIM
 insafsız IS_ADJ
 insafsızlık CL_ISIM IS_SD
 insan CL_ISIM IS_ADJ
@@ -21856,7 +21792,6 @@ işid IS_OA
 işit CL_FIIL F5PR
 işitil CL_FIIL
 işitim CL_ISIM
-işitme CL_ISIM
 işitmelik CL_ISIM
 işitmemezlik CL_ISIM IS_SD
 işitsel IS_ADJ
@@ -21898,7 +21833,6 @@ işlev CL_ISIM
 işlevcilik CL_ISIM IS_SD
 işlevsel IS_ADJ
 işlevsiz IS_ADJ
-işlevsizlik CL_ISIM
 işleyim CL_ISIM
 işleyiş CL_ISIM
 işli IS_ADJ
@@ -22073,7 +22007,6 @@ iyilik CL_ISIM IS_SD
 iyilikbilir IS_ADJ
 iyilikbilirlik CL_ISIM IS_SD
 iyilikçi IS_ADJ
-iyilikçilik CL_ISIM
 iyilikle IS_ADVERB
 iyiliksever IS_ADJ
 iyilikseverlik CL_ISIM IS_SD
@@ -22146,7 +22079,6 @@ izin CL_ISIM IS_UD
 izinli IS_ADJ
 izinname CL_ISIM
 izinsiz CL_ISIM IS_ADJ IS_ADVERB
-izinsizlik CL_ISIM
 izlanda IS_OA
 izlandalı IS_OA
 izle CL_FIIL F4PW-NO-REF F_GUD
@@ -22529,7 +22461,6 @@ kabadüz CL_ISIM IS_OA
 kabahat CL_ISIM IS_UU
 kabahatli IS_ADJ
 kabahatsiz IS_ADJ
-kabahatsizlik CL_ISIM
 kabak CL_ISIM IS_ADJ IS_SD
 kabakçı CL_ISIM
 kabakgiller CL_ISIM IS_CA
@@ -22600,7 +22531,6 @@ kaça IS_ADVERB
 kaçak CL_ISIM IS_ADJ IS_ADVERB IS_SD
 kaçakçı CL_ISIM
 kaçakçılık CL_ISIM IS_SD
-kaçaklık CL_ISIM
 kaçamak CL_ISIM IS_SD
 kaçamaklı IS_ADJ
 kaçar IS_ADJ
@@ -22666,7 +22596,6 @@ kadınhanı CL_ISIM IS_BILEŞ IS_OA
 kadınlaş CL_FIIL
 kadınlık CL_ISIM IS_SD
 kadınsı IS_ADJ
-kadınsılık CL_ISIM
 kadıntuzluğu CL_ISIM IS_BILEŞ IS_B_SD
 kadırga CL_ISIM
 kadışehri CL_ISIM IS_OA
@@ -22702,7 +22631,6 @@ kadriye IS_OA
 kadro CL_ISIM
 kadrolu IS_ADJ
 kadrosuz IS_ADJ
-kadrosuzluk CL_ISIM
 kadük IS_ADJ
 kaeden IS_OA
 kaelyn IS_OA
@@ -22910,7 +22838,6 @@ kaldırımsı IS_ADJ
 kale CL_ISIM IS_OA
 kaleb IS_OA
 kalebent CL_ISIM IS_SD
-kalebentlik CL_ISIM
 kaleci CL_ISIM
 kalecik CL_ISIM IS_OA IS_SD
 kalecikkarası IS_OA
@@ -22995,7 +22922,6 @@ kalkerleş CL_FIIL
 kalkerli IS_ADJ
 kalkersiz IS_ADJ
 kalkık IS_ADJ
-kalkıklık CL_ISIM
 kalkın CL_FIIL F5PR
 kalkınma CL_ISIM
 kalkış CL_FIIL CL_ISIM F5PR
@@ -23239,7 +23165,6 @@ kankurutan CL_ISIM
 kanla CL_FIIL F4PW F_GUD
 kanlan CL_FIIL
 kanlı IS_ADJ IS_DUP
-kanlılık CL_ISIM
 kanmazlık CL_ISIM IS_SD
 kannon IS_OA
 kano CL_ISIM
@@ -23331,7 +23256,6 @@ kapari CL_ISIM
 kaparo CL_ISIM
 kaparoz CL_ISIM
 kaparozcu CL_ISIM IS_ADJ
-kaparozculuk CL_ISIM
 kaparozla CL_FIIL F4PW
 kapasite CL_ISIM
 kapat CL_FIIL F5PR
@@ -23350,7 +23274,6 @@ kapıkule CL_ISIM IS_OA
 kapıl CL_FIIL
 kapılan CL_FIIL F5PR
 kapılgan IS_ADJ
-kapılganlık CL_ISIM
 kapılı IS_ADJ
 kapısı IS_OA
 kapısız IS_ADJ
@@ -23726,7 +23649,6 @@ karma CL_ISIM IS_ADJ
 karmaç CL_ISIM IS_SD
 karmakarış IS_ADJ
 karmakarışık IS_ADJ IS_SD
-karmalık CL_ISIM
 karman IS_DUP
 karmanyola CL_ISIM
 karmanyolacı CL_ISIM
@@ -23767,7 +23689,6 @@ karstik IS_ADJ
 karsyn IS_OA
 karşı CL_ISIM IS_ADJ IS_ADVERB IS_EX
 karşıcı CL_ISIM IS_ADJ
-karşıcılık CL_ISIM
 karşıla CL_FIIL F4PW F_GUD
 karşılama CL_ISIM
 karşılaş CL_FIIL
@@ -24001,7 +23922,6 @@ katırlık CL_ISIM IS_SD
 katırtırnağı CL_ISIM IS_BILEŞ IS_B_SD
 katış CL_FIIL F5PR
 katışık IS_ADJ
-katışıklık CL_ISIM
 katışıksız IS_ADJ
 katışmaç CL_ISIM IS_SD
 katıştır CL_FIIL
@@ -24084,7 +24004,6 @@ kavgacı CL_ISIM IS_ADJ
 kavgalaş CL_FIIL
 kavgalı IS_ADJ
 kavgasız IS_ADJ IS_ADVERB
-kavgasızlık CL_ISIM
 kavi IS_ADJ IS_OA
 kavil CL_ISIM IS_UD
 kavileş CL_FIIL
@@ -24157,7 +24076,6 @@ kayaer IS_OA
 kayagün IS_OA
 kayagündüz IS_OA
 kayağan IS_ADJ
-kayağanlık CL_ISIM
 kayahan IS_OA
 kayak CL_ISIM IS_SD
 kayakçı CL_ISIM
@@ -24187,7 +24105,6 @@ kaydiye CL_ISIM
 kaydol CL_FIIL F4PL
 kaygan IS_ADJ
 kaygana CL_ISIM
-kayganlık CL_ISIM
 kaygı CL_ISIM
 kaygılan CL_FIIL
 kaygılandır CL_FIIL
@@ -24277,7 +24194,6 @@ kayrahan IS_OA
 kayrak CL_ISIM IS_OA IS_SD
 kayran CL_ISIM IS_OA
 kayrar IS_OA
-kayrıl CL_FIIL
 kays IS_OA
 kaysen IS_OA
 kayser CL_ISIM IS_OA
@@ -24445,7 +24361,6 @@ kekik CL_ISIM IS_OA IS_SD
 kekikli IS_ADJ
 keklik CL_ISIM IS_OA IS_SD
 kekre IS_ADJ
-kekrelik CL_ISIM
 kekremsi IS_ADJ
 kekremsilik CL_ISIM IS_SD
 kekresi IS_ADJ
@@ -24787,7 +24702,6 @@ keşikleş CL_FIIL
 keşiş CL_ISIM
 keşişhane CL_ISIM
 keşişleme CL_ISIM
-keşişlik CL_ISIM
 keşke IS_ADVERB
 keşkek CL_ISIM IS_SD
 keşkekçi CL_ISIM
@@ -24868,7 +24782,6 @@ kıçın IS_DUP
 kıdem CL_ISIM
 kıdemce IS_ADVERB
 kıdemli IS_ADJ
-kıdemlilik CL_ISIM
 kıdemsiz IS_ADJ
 kıdım IS_DUP
 kığ CL_ISIM
@@ -24972,11 +24885,9 @@ kıp CL_FIIL F5PR
 kıpçak CL_ISIM IS_OA
 kıpçakça CL_ISIM IS_OA
 kıpık IS_ADJ
-kıpıklık CL_ISIM
 kıpır IS_DUP
 kıpırda CL_FIIL F4PW F_GUD
 kıpırdak IS_ADJ
-kıpırdaklık CL_ISIM
 kıpırdan CL_FIIL F5PR
 kıpırdaş CL_FIIL
 kıpırdat CL_FIIL
@@ -24989,7 +24900,6 @@ kıpkırmızı IS_ADJ
 kıpkızıl IS_ADJ
 kıpti IS_OA
 kıptî CL_ISIM IS_ADJ
-kıptîlik CL_ISIM
 kır CL_FIIL CL_ISIM F5PR IS_ADJ
 kıraat CL_ISIM IS_UU
 kıraathane CL_ISIM
@@ -25047,7 +24957,6 @@ kırıkla CL_FIIL F4PW F_GUD
 kırıklık CL_ISIM IS_SD
 kırıl CL_FIIL
 kırılgan IS_ADJ
-kırılganlık CL_ISIM
 kırılma CL_ISIM
 kırım CL_ISIM IS_DUP IS_OA
 kırımlı IS_ADJ
@@ -25064,7 +24973,6 @@ kırıt CL_FIIL F5PR
 kırıta IS_DUP
 kırıtım CL_ISIM IS_DUP
 kırıtkan IS_ADJ
-kırıtkanlık CL_ISIM
 kırk CL_FIIL CL_ISIM F5PR IS_ADJ IS_SAYI
 kırkağac IS_OA
 kırkağaç CL_ISIM IS_OA IS_SD
@@ -25123,7 +25031,6 @@ kısacası IS_ADVERB
 kısacık IS_ADJ IS_SD
 kısakürek IS_OA
 kısal CL_FIIL F4PL
-kısalık CL_ISIM
 kısalt CL_FIIL
 kısaltım CL_ISIM
 kısaltma CL_ISIM
@@ -25131,7 +25038,6 @@ kısaltmalı IS_ADJ
 kısarak IS_ADJ
 kısas CL_ISIM
 kısık CL_ISIM IS_ADJ IS_SD
-kısıklık CL_ISIM
 kısıl CL_FIIL
 kısılma CL_ISIM
 kısım CL_ISIM IS_DUP IS_UD
@@ -25560,7 +25466,6 @@ kirpikliler CL_ISIM IS_CA
 kirpiksi IS_ADJ
 kirtil CL_ISIM
 kirve CL_ISIM
-kirvelik CL_ISIM
 kiryl IS_OA
 kisbî IS_ADJ
 kispet CL_ISIM
@@ -25620,7 +25525,6 @@ klârnetçi CL_ISIM
 klâs CL_ISIM IS_ADJ
 klâsik CL_ISIM IS_ADJ
 klâsikleş CL_FIIL
-klâsiklik CL_ISIM
 klâsisizm CL_ISIM
 klâsman CL_ISIM
 klâsör CL_ISIM
@@ -25748,7 +25652,6 @@ koçyiğit IS_OA
 kod CL_ISIM
 kodack IS_OA
 kodaman CL_ISIM IS_ADJ
-kodamanlık CL_ISIM
 kodein CL_ISIM
 kodeks CL_ISIM
 kodes CL_ISIM
@@ -26050,7 +25953,6 @@ konsoloshane CL_ISIM
 konsolosluk CL_ISIM IS_SD
 konsomasyon CL_ISIM
 konsomatris CL_ISIM
-konsomatrislik CL_ISIM
 konson CL_ISIM
 konsonant CL_ISIM
 konsorsiyum CL_ISIM
@@ -26213,7 +26115,6 @@ korkulu IS_ADJ
 korkuluk CL_ISIM IS_SD
 korkunç IS_ADJ IS_SD
 korkunçlaş CL_FIIL
-korkunçluk CL_ISIM
 korkusuz IS_ADJ
 korkusuzluk CL_ISIM IS_SD
 korkut CL_FIIL CL_ISIM F5PR IS_OA
@@ -26544,7 +26445,6 @@ kösçü CL_ISIM
 köse IS_ADJ IS_OA
 köseği CL_ISIM
 kösele CL_ISIM IS_ADJ
-köselik CL_ISIM
 kösem CL_ISIM IS_OA
 kösemen CL_ISIM IS_OA
 kösemenlik CL_ISIM IS_SD
@@ -26594,7 +26494,6 @@ kötümserleş CL_FIIL
 kötümserlik CL_ISIM IS_SD
 kötürüm IS_ADJ
 kötürümleş CL_FIIL
-kötürümlük CL_ISIM
 köy CL_ISIM
 köyceğiz CL_ISIM IS_OA
 köycü CL_ISIM
@@ -26622,7 +26521,6 @@ kral CL_ISIM IS_ADJ
 kralcı CL_ISIM IS_ADJ
 kralcılık CL_ISIM IS_SD
 kraliçe CL_ISIM
-kraliçelik CL_ISIM
 kraliyet CL_ISIM
 krallık CL_ISIM IS_SD
 kramp CL_ISIM
@@ -26810,7 +26708,7 @@ kulplu IS_ADJ
 kulpsuz IS_ADJ
 kulu CL_ISIM IS_OA
 kuluçka CL_ISIM
-kuluçkalık CL_ISIM IS_ADJ
+kuluçkalık IS_ADJ
 kulun CL_ISIM
 kuluncak CL_ISIM IS_OA
 kulunç CL_ISIM IS_SD
@@ -26981,7 +26879,6 @@ kurtlan CL_FIIL F5PR
 kurtlaş CL_FIIL
 kurtlu IS_ADJ
 kurtluca CL_ISIM
-kurtluk CL_ISIM
 kurtpençesi CL_ISIM IS_BILEŞ IS_B_SI
 kurtsuz IS_ADJ
 kurttırnağı CL_ISIM IS_BILEŞ IS_B_SD
@@ -26999,7 +26896,6 @@ kurula CL_FIIL F4PW-NO-REF F_GUD
 kurulan CL_FIIL
 kurultay CL_ISIM
 kurulu IS_ADJ IS_OA
-kuruluk CL_ISIM IS_SD
 kuruluş CL_ISIM
 kurum CL_ISIM
 kurumlan CL_FIIL F5PR
@@ -27036,7 +26932,6 @@ kusur CL_ISIM
 kusurlu IS_ADJ
 kusurluluk CL_ISIM IS_SD
 kusursuz IS_ADJ
-kusursuzluk CL_ISIM
 kusva IS_OA
 kuş CL_ISIM
 kuşadası CL_ISIM IS_BILEŞ IS_B_SI IS_OA
@@ -27116,7 +27011,6 @@ kutseli IS_OA
 kutsî IS_ADJ
 kutsiyet CL_ISIM
 kutsuz IS_ADJ
-kutsuzluk CL_ISIM
 kutu CL_ISIM IS_ADJ IS_DUP
 kutucu CL_ISIM
 kutuculuk CL_ISIM IS_SD
@@ -27277,9 +27171,7 @@ kültigin IS_OA
 kültür CL_ISIM
 kültürel IS_ADJ
 kültürlü IS_ADJ IS_OA
-kültürlülük CL_ISIM
 kültürsüz IS_ADJ
-kültürsüzlük CL_ISIM
 külük IS_OA
 külünk CL_ISIM IS_KG IS_SD
 külüstür IS_ADJ
@@ -27389,7 +27281,6 @@ kütlesel IS_ADJ
 kütleş CL_FIIL
 kütlet CL_FIIL
 kütlü CL_ISIM IS_ADJ
-kütlük CL_ISIM
 küttedek IS_ADVERB
 kütük CL_ISIM IS_SD
 kütükleş CL_FIIL
@@ -27893,7 +27784,6 @@ lezzetlendir CL_FIIL
 lezzetli IS_ADJ
 lezzetlilik CL_ISIM
 lezzetsiz IS_ADJ
-lezzetsizlik CL_ISIM
 lhasa IS_OA
 lığ CL_ISIM
 lığla CL_FIIL F4PW F_GUD
@@ -27912,7 +27802,6 @@ libby IS_OA
 liberal CL_ISIM IS_ADJ
 liberalizm CL_ISIM
 liberalleş CL_FIIL
-liberallik CL_ISIM
 liberasyon CL_ISIM
 liberty IS_OA
 liberya IS_OA
@@ -30653,7 +30542,6 @@ muadil IS_ADJ
 muaf IS_ADJ
 muaffak IS_OA
 muafiyet CL_ISIM
-muaflık CL_ISIM
 muahede CL_ISIM
 muaheze CL_ISIM
 muahhar IS_ADJ
@@ -32161,7 +32049,6 @@ nazlıaka IS_OA
 nazlıcan IS_OA
 nazlıgül IS_OA
 nazlıhan IS_OA
-nazlılık CL_ISIM
 nazlım IS_OA
 nazmi IS_OA
 nazmiye IS_OA
@@ -32405,7 +32292,6 @@ neticelen CL_FIIL
 neticelendir CL_FIIL
 neticesiz IS_ADJ
 neticeten IS_ADVERB
-netlik CL_ISIM
 network IS_OA
 neuzübillah CL_ISIM
 nev IS_OA
@@ -32497,7 +32383,6 @@ nezahet CL_ISIM IS_OA
 nezaket CL_ISIM IS_OA
 nezaketen IS_ADVERB
 nezaketli IS_ADJ
-nezaketlilik CL_ISIM
 nezaketsiz IS_ADJ
 nezaketsizlik CL_ISIM IS_SD
 nezaret CL_ISIM
@@ -32796,7 +32681,6 @@ noya IS_OA
 noyan IS_OA
 nöbet CL_ISIM
 nöbetçi CL_ISIM IS_ADJ
-nöbetçilik CL_ISIM
 nöbetleş CL_FIIL
 nöbetleşe IS_ADVERB
 nöbetleşme CL_ISIM
@@ -33011,7 +32895,6 @@ obuçi IS_OA
 obur IS_ADJ
 oburca IS_ADVERB
 oburlaş CL_FIIL
-oburluk CL_ISIM IS_SD
 obuz IS_OA
 obüs CL_ISIM
 ocak CL_ISIM IS_OA IS_SD
@@ -33833,7 +33716,6 @@ oturmuşluk CL_ISIM IS_SD
 oturt CL_FIIL
 oturtma CL_ISIM
 oturtmalık CL_ISIM IS_SD
-oturtul CL_FIIL
 oturul CL_FIIL
 oturum CL_ISIM
 oturuş CL_FIIL
@@ -33903,7 +33785,6 @@ oynama IS_INTERJ
 oynan CL_FIIL
 oynaş CL_FIIL CL_ISIM F5PR
 oynat CL_FIIL
-oynatıl CL_FIIL
 oynatım CL_ISIM
 oynatımcı CL_ISIM
 oynaya IS_DUP
@@ -34102,7 +33983,6 @@ ozonla CL_FIIL F4PW F_GUD
 ölet CL_ISIM
 öleyaz CL_FIIL
 ölgün IS_ADJ
-ölgünlük CL_ISIM
 ölmez IS_ADJ IS_OA
 ölmezbey IS_OA
 ölmezleştir CL_FIIL F4PR
@@ -35207,7 +35087,6 @@ paylı IS_ADJ
 payplayn CL_ISIM
 payreks CL_ISIM
 paytak CL_ISIM IS_ADJ IS_DUP IS_SD
-paytaklık CL_ISIM
 payton CL_ISIM IS_OA
 payzen IS_OA
 paz IS_OA
@@ -36315,7 +36194,6 @@ rabıt CL_ISIM IS_OA IS_UD
 rabıta CL_ISIM IS_OA
 rabıtalı IS_ADJ
 rabıtasız IS_ADJ IS_ADVERB
-rabıtasızlık CL_ISIM
 rabi IS_OA
 rabia IS_OA
 rabih IS_OA
@@ -36348,7 +36226,6 @@ radyatör CL_ISIM
 radyatörcü CL_ISIM
 radyo CL_ISIM
 radyoaktif IS_ADJ
-radyoaktiflik CL_ISIM
 radyoaktivite CL_ISIM
 radyobiyoloji CL_ISIM
 radyocu CL_ISIM
@@ -36781,7 +36658,6 @@ renklen CL_FIIL
 renklendir CL_FIIL
 renklendirme CL_ISIM
 renkli CL_ISIM IS_ADJ
-renklilik CL_ISIM
 renkölçer CL_ISIM
 renksemez IS_ADJ
 renkser IS_ADJ
@@ -36968,7 +36844,6 @@ ring CL_ISIM
 ringa CL_ISIM
 rino IS_OA
 rint CL_ISIM IS_SD
-rintlik CL_ISIM
 rio IS_OA
 risa IS_OA
 risale CL_ISIM IS_OA
@@ -37223,7 +37098,6 @@ rumence CL_ISIM IS_OA
 rumeysa IS_OA
 rumî CL_ISIM IS_ADJ
 rumlaş CL_FIIL
-rumluk CL_ISIM
 rumuz CL_ISIM
 rumuzlu IS_ADJ
 run IS_OA
@@ -37268,7 +37142,6 @@ rükû CL_ISIM
 rükunet IS_OA
 rükün CL_ISIM IS_UD
 rüküş CL_ISIM IS_ADJ
-rüküşlük CL_ISIM
 rümeysa IS_OA
 rüstem IS_OA
 rüsti IS_OA
@@ -37278,7 +37151,6 @@ rüsum CL_ISIM
 rüsumat CL_ISIM
 rüsup CL_ISIM IS_SD
 rüsva IS_ADJ
-rüsvalık CL_ISIM
 rüşan IS_OA
 rüşdi IS_OA
 rüşeym CL_ISIM
@@ -38001,7 +37873,6 @@ sangıla CL_FIIL F4PW F_GUD
 sangılık CL_ISIM IS_SD
 sanı CL_ISIM
 sanık IS_ADJ IS_SD
-sanıklık CL_ISIM
 sanıyla IS_DUP
 sani IS_OA
 sania IS_OA
@@ -38077,7 +37948,6 @@ sapış CL_ISIM
 sapıt CL_FIIL F5PR
 sapkı CL_ISIM
 sapkın IS_ADJ
-sapkınlık CL_ISIM IS_SD
 sapla CL_FIIL F4PW F_GUD
 saplama CL_ISIM
 saplan CL_FIIL
@@ -38224,7 +38094,6 @@ sarkaç CL_ISIM IS_SD
 sarkaçla CL_FIIL F4PW F_GUD
 sarkan IS_OA
 sarkık IS_ADJ
-sarkıklık CL_ISIM
 sarkıl IS_ADJ
 sarkıntı CL_ISIM
 sarkıntılık CL_ISIM IS_SD
@@ -38251,7 +38120,6 @@ sarpkan IS_OA
 sarpkın IS_OA
 sarpkoç IS_OA
 sarplaş CL_FIIL
-sarplık CL_ISIM
 sarra IS_OA
 sarraf CL_ISIM
 sarrafiye CL_ISIM
@@ -38444,7 +38312,6 @@ sayınbey IS_OA
 sayıner IS_OA
 sayısal CL_ISIM
 sayısız IS_ADJ
-sayısızlık CL_ISIM
 sayış CL_FIIL F5PR
 sayışma CL_ISIM
 sayıştay CL_ISIM IS_OA
@@ -38893,7 +38760,6 @@ sendikalılık CL_ISIM IS_SD
 sendikalist CL_ISIM
 sendikalizm CL_ISIM
 sendikasız IS_ADJ
-sendikasızlık CL_ISIM
 sendrom CL_ISIM
 sene CL_ISIM IS_KI
 senegal CL_ISIM IS_OA
@@ -39393,7 +39259,6 @@ sıcacık IS_ADJ
 sıcak CL_ISIM IS_ADJ IS_SD
 sıcakça IS_ADJ
 sıcakkanlı IS_ADJ
-sıcakkanlılık CL_ISIM IS_SD
 sıcaklık CL_ISIM IS_SD
 sıcakölçer CL_ISIM
 sıç CL_FIIL F5PR
@@ -39406,7 +39271,6 @@ sıçankuyruğu CL_ISIM IS_BILEŞ IS_B_SD
 sıçanotu CL_ISIM IS_BILEŞ
 sıçanyolu CL_ISIM IS_BILEŞ
 sıçırgan IS_ADJ
-sıçırganlık CL_ISIM
 sıçra CL_FIIL F4PW F_GUD
 sıçrama CL_ISIM
 sıçrayıcı IS_ADJ
@@ -39568,7 +39432,6 @@ sırım CL_ISIM
 sırıt CL_FIIL
 sırıtık IS_ADJ
 sırıtkan IS_ADJ
-sırıtkanlık CL_ISIM
 sırla CL_FIIL F4PW F_GUD
 sırlı IS_ADJ
 sırma CL_ISIM IS_OA
@@ -40148,7 +40011,6 @@ soldur CL_FIIL
 solfej CL_ISIM
 solgenitsin IS_OA
 solgun IS_ADJ
-solgunluk CL_ISIM
 solhan CL_ISIM IS_OA
 soliç CL_ISIM
 solidarist CL_ISIM
@@ -40190,7 +40052,6 @@ somurdan CL_FIIL
 somurt CL_FIIL
 somurta IS_DUP
 somurtkan IS_ADJ
-somurtkanlık CL_ISIM IS_SD
 somut IS_ADJ
 somutlaş CL_FIIL
 somutlaştırmak CL_ISIM
@@ -40424,7 +40285,6 @@ sönmezalp IS_OA
 sönmezay IS_OA
 sönmezer IS_OA
 sönük IS_ADJ IS_SD
-sönüklük CL_ISIM
 sönüm CL_ISIM
 sönümle CL_FIIL F4PW F_GUD
 sönümlü IS_ADJ
@@ -40436,7 +40296,7 @@ söven CL_ISIM
 sövgü CL_ISIM
 sövgücü IS_ADJ
 sövüntü CL_ISIM
-sövüş CL_FIIL CL_ISIM F5PR
+sövüş CL_FIIL F5PR
 sövüştür CL_FIIL F4PR
 söyle CL_FIIL F4PW-NO-REF F_GUD
 söylem CL_ISIM
@@ -40714,7 +40574,6 @@ sukuti IS_OA
 suküre CL_ISIM
 sula CL_FIIL F4PW F_GUD
 sulak CL_ISIM IS_ADJ IS_SD
-sulaklık CL_ISIM
 sulakyurt CL_ISIM IS_OA IS_SD
 sulama CL_ISIM
 sulan CL_FIIL
@@ -41006,7 +40865,6 @@ sümre IS_OA
 sümsük CL_ISIM IS_ADJ IS_SD
 sümsükgiller CL_ISIM IS_CA
 sümsükleş CL_FIIL
-sümsüklük CL_ISIM
 sümter CL_ISIM
 sümük CL_ISIM IS_SD
 sümükdoku CL_ISIM
@@ -41442,7 +41300,6 @@ szymon IS_OA
 şanser IS_OA
 şansız IS_ADJ
 şanslı IS_ADJ
-şanslılık CL_ISIM
 şansölye CL_ISIM
 şanssız IS_ADJ
 şanssızlık CL_ISIM IS_SD
@@ -42052,21 +41909,17 @@ szymon IS_OA
 şişhane CL_ISIM IS_OA
 şişin CL_FIIL F5PR
 şişir CL_FIIL F4PR
-şişiril CL_FIIL
 şişirme CL_ISIM
 şişirmece CL_ISIM
-şişirt CL_FIIL
 şişkin IS_ADJ
 şişkinlik CL_ISIM IS_SD
 şişko IS_ADJ
-şişkoluk CL_ISIM
 şişle CL_FIIL F4PW F_GUD
 şişli CL_ISIM IS_OA
 şişlik IS_ADJ
 şişman IS_ADJ
 şişmanca IS_ADJ
 şişmanla CL_FIIL F4PW F_GUD
-şişmanlık CL_ISIM
 şit IS_OA
 şita CL_ISIM
 şitaiye CL_ISIM
@@ -42111,7 +41964,7 @@ szymon IS_OA
 şöylemesine IS_ADVERB
 şöylesine IS_ADVERB
 şti IS_OA
-şu IS_ADJ IS_DUP
+şu IS_ADJ IS_DUP IS_ZM
 şua CL_ISIM
 şuayp IS_OA
 şubat CL_ISIM IS_OA
@@ -44065,7 +43918,6 @@ tetanos CL_ISIM
 tetebbu CL_ISIM
 tetik CL_ISIM IS_ADJ IS_DUP IS_OA IS_SD
 tetiker IS_OA
-tetiklik CL_ISIM
 tetir CL_ISIM
 tetkik CL_ISIM
 tevafuk CL_ISIM IS_SD
@@ -44233,7 +44085,6 @@ tıkıştır CL_FIIL
 tıkız IS_ADJ
 tıklım IS_DUP
 tıknaz IS_ADJ
-tıknazlık CL_ISIM
 tıknefes IS_ADJ
 tıksır CL_FIIL F4PR
 tıksırık CL_ISIM IS_SD
@@ -45004,7 +44855,6 @@ tufan CL_ISIM IS_OA
 tufanbeyli CL_ISIM IS_OA
 tufeyl IS_OA
 tufeylî CL_ISIM IS_ADJ
-tufeylîlik CL_ISIM
 tugay CL_ISIM IS_OA
 tuğ CL_ISIM IS_OA
 tuğal IS_OA
@@ -45061,7 +44911,6 @@ tulgar IS_OA
 tulû CL_ISIM IS_OA
 tulûat CL_ISIM
 tulûatçı CL_ISIM
-tulûatçılık CL_ISIM
 tului IS_OA
 tuluk CL_ISIM IS_OA IS_SD
 tulum CL_ISIM IS_ADJ IS_OA
@@ -45312,7 +45161,6 @@ tükelay IS_OA
 tüken CL_FIIL F5PR
 tükenik IS_ADJ IS_ADVERB
 tükenmez CL_ISIM IS_ADJ IS_DUP
-tükenmezlik CL_ISIM
 tükenmişlik CL_ISIM IS_SD
 tüket CL_FIIL F5PR
 tüketici CL_ISIM
@@ -45584,7 +45432,6 @@ uçukla CL_FIIL F4PW F_GUD
 uçuklaş CL_FIIL
 uçun CL_ISIM
 uçur CL_FIIL F4PR IS_OA
-uçurt CL_FIIL
 uçurtma CL_ISIM
 uçurum CL_ISIM
 uçuş CL_FIIL CL_ISIM F5PR
@@ -45793,7 +45640,6 @@ umno IS_OA
 umran CL_ISIM IS_OA
 umre CL_ISIM
 umu CL_ISIM
-umul CL_FIIL
 umum CL_ISIM IS_ADJ
 umumhane CL_ISIM
 umumî IS_ADJ
@@ -45922,7 +45768,6 @@ uslamla CL_FIIL F4PW F_GUD
 uslan CL_FIIL
 uslu IS_ADJ IS_ADVERB IS_OA
 usluer IS_OA
-usluluk CL_ISIM
 usman IS_OA
 ussal IS_ADJ
 ussallaştırma CL_ISIM
@@ -46730,7 +46575,6 @@ vasıtalı IS_ADJ
 vasıtalık CL_ISIM IS_SD
 vasıtasıyla IS_ADVERB
 vasıtasız IS_ADJ
-vasıtasızlık CL_ISIM
 vasi CL_ISIM IS_OA
 vâsi IS_ADJ
 vasil IS_OA
@@ -46913,7 +46757,6 @@ veraset CL_ISIM
 verda IS_OA
 verdi CL_ISIM IS_OA
 verdinaz IS_OA
-verdir CL_FIIL
 vere CL_ISIM
 verecek CL_ISIM IS_SD
 verecekli IS_ADJ
@@ -47851,7 +47694,6 @@ yarıçap CL_ISIM
 yarıdil IS_OA
 yarıgölge CL_ISIM
 yarık CL_ISIM IS_ADJ IS_SD
-yarıklık CL_ISIM
 yarıküre CL_ISIM
 yarıl CL_FIIL
 yarıla CL_FIIL F4PW F_GUD
@@ -47919,7 +47761,6 @@ yassıada IS_OA
 yassıl CL_FIIL F4PL
 yassılan CL_FIIL F5PR
 yassılaş CL_FIIL
-yassılık CL_ISIM
 yassısolucanlar CL_ISIM IS_CA
 yassısolungaçlılar CL_ISIM IS_CA
 yastağaç CL_ISIM IS_SD
@@ -48076,7 +47917,6 @@ yaylım CL_ISIM
 yayma CL_ISIM
 yaymacı CL_ISIM
 yayvan IS_ADJ IS_DUP
-yayvanlık CL_ISIM
 yaz CL_FIIL CL_ISIM F5PR-NO-REF
 yazan IS_OA
 yazanak CL_ISIM IS_SD
@@ -48276,7 +48116,6 @@ yenerol IS_OA
 yenge CL_ISIM
 yengec IS_OA
 yengeç CL_ISIM IS_OA IS_SD
-yengelik CL_ISIM
 yengi CL_ISIM IS_OA
 yeni IS_ADJ IS_ADVERB IS_DUP
 yeniay CL_ISIM
@@ -49053,7 +48892,6 @@ zabıta CL_ISIM
 zabıtname CL_ISIM
 zabit CL_ISIM IS_ADJ IS_OA
 zabitan CL_ISIM
-zabitlik CL_ISIM
 zac IS_OA
 zachariah IS_OA
 zachary IS_OA
@@ -49247,7 +49085,6 @@ zehirle CL_FIIL F4PW F_GUD
 zehirlen CL_FIIL
 zehirlenme CL_ISIM
 zehirli IS_ADJ
-zehirlilik CL_ISIM
 zehirsiz IS_ADJ
 zehra IS_OA
 zehre IS_OA
