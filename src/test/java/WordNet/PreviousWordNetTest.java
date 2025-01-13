@@ -23,7 +23,6 @@ public class PreviousWordNetTest {
     TxtDictionary previousDictionary;
     WordNet currentWordNet;
 
-    //@Test
     public void remove() throws FileNotFoundException {
         Scanner input = new Scanner(new File("tobedeleted.txt"));
         WordNet[] w = new WordNet[10];
@@ -177,6 +176,8 @@ public class PreviousWordNetTest {
         }
         assertTrue(found);
     }
+
+
 
     private WordNet getWordNet(String id) {
         switch (id) {

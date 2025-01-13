@@ -1716,4 +1716,25 @@ public class WordNet {
         } catch (FileNotFoundException ignored) {
         }
     }
+
+    public String toJson() {
+        StringBuilder result = new StringBuilder();
+        result.append("[\n");
+        for (SynSet synSet : synSetList()){
+            result.append("\t{\"id\":\"").append(synSet.getId()).append("\", \"pos\":\"").append(synSet.getPos()).append("\", \"definition\":\"").append(synSet.getLongDefinition().replaceAll("\"", "")).append("\", \"words\":[");
+            for (int i = 0; i < synSet.getSynonym().literalSize(); i++){
+                Literal literal = synSet.getSynonym().getLiteral(i);
+                if (i == 0){
+                    result.append("\"").append(literal.name).append("\"");
+                } else {
+                    result.append(",\"").append(literal.name).append("\"");
+                }
+            }
+            result.append("]");
+            result.append("},\n");
+        }
+        result.append("]\n");
+        return result.toString();
+    }
+
 }

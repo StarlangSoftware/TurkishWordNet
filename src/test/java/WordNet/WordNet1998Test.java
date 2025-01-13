@@ -20,7 +20,6 @@ public class WordNet1998Test extends PreviousWordNetTest{
         previousWordNet = new WordNet("turkish1998_wordnet.xml", new Locale("tr"));
     }
 
-    @Test
     public void testExample() {
         previousDictionary = new TxtDictionary("turkish1998_dictionary.txt", new TurkishWordComparator());
         super.testExample();

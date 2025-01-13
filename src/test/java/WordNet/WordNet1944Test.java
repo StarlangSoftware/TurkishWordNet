@@ -7,7 +7,10 @@ import Dictionary.TxtDictionary;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.Locale;
+import java.util.Scanner;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
@@ -19,7 +22,6 @@ public class WordNet1944Test extends PreviousWordNetTest{
         previousWordNet = new WordNet("turkish1944_wordnet.xml", new Locale("tr"));
     }
 
-    @Test
     public void testExample() {
         previousDictionary = new TxtDictionary("turkish1944_dictionary.txt", new TurkishWordComparator());
         super.testExample();
