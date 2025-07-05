@@ -9,10 +9,8 @@ import MorphologicalAnalysis.FsmMorphologicalAnalyzer;
 
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Locale;
-import java.util.Scanner;
+import java.text.Collator;
+import java.util.*;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
@@ -22,6 +20,39 @@ public class PreviousWordNetTest {
     WordNet previousWordNet;
     TxtDictionary previousDictionary;
     WordNet currentWordNet;
+
+    public void printDictionaryToCheck(){
+        ArrayList<String> output = new ArrayList<>();
+        WordNet wordNet = new WordNet();
+        for (SynSet synSet : wordNet.synSetList()){
+            for (int i = 0; i < synSet.getSynonym().literalSize(); i++){
+                Literal literal = synSet.getSynonym().getLiteral(i);
+                output.add(literal.getName() + "\t" + synSet.getId() + "\t" + synSet.getPos() + "\t" + synSet.getLongDefinition() + "\t" + synSet.getExample());
+            }
+        }
+        for (int i = 0; i < 10; i++) {
+            WordNet old = getWordNet("0" + i);
+            for (SynSet synSet : old.synSetList()){
+                if (wordNet.getSynSetWithId(synSet.getId()) == null){
+                    for (int j = 0; j < synSet.getSynonym().literalSize(); j++){
+                        Literal literal = synSet.getSynonym().getLiteral(j);
+                        output.add(literal.getName() + "\t" + synSet.getId() + "\t" + synSet.getPos() + "\t" + synSet.getLongDefinition() + "\t" + synSet.getExample());
+                    }
+                }
+            }
+        }
+        output.sort(new Comparator<String>() {
+            @Override
+            public int compare(String o1, String o2) {
+                Locale locale = new Locale("tr");
+                Collator collator = Collator.getInstance(locale);
+                return collator.compare(o1, o2);
+            }
+        });
+        for (String s : output){
+            System.out.println(s);
+        }
+    }
 
     public void remove() throws FileNotFoundException {
         Scanner input = new Scanner(new File("tobedeleted.txt"));
