@@ -8,7 +8,11 @@ import Dictionary.TxtWord;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.io.FileNotFoundException;
+import java.io.PrintWriter;
+import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
+import java.util.HashSet;
 
 import static org.junit.Assert.*;
 
@@ -24,6 +28,73 @@ public class WordNetTest {
     @Test
     public void convertToLmf() {
         turkish.saveAsLmf("turkish.lmf");
+    }
+
+    private void printIndented(PrintWriter output, int indent, String s){
+        for (int i = 0; i < indent; i++){
+            output.print(" ");
+        }
+        output.println(s);
+    }
+
+    private void constructSynSetSubTree(WordNet wordnet, PrintWriter output, HashSet<String> doneList, String id, int indent){
+        int count = 0;
+        SynSet current = wordnet.getSynSetWithId(id);
+        doneList.add(id);
+        for (int i = 0; i < current.relationSize(); i++){
+            if (current.getRelation(i) instanceof SemanticRelation){
+                SemanticRelation relation = (SemanticRelation) current.getRelation(i);
+                if (relation.getRelationType().equals(SemanticRelationType.HYPONYM)){
+                    String connectedId = relation.getName();
+                    if (wordnet.getSynSetWithId(connectedId) != null && !doneList.contains(connectedId)){
+                        count++;
+                    }
+                }
+            }
+        }
+        if (count > 0){
+            printIndented(output, indent, "<li>");
+            printIndented(output, indent, "<details>");
+            printIndented(output, indent, "<summary>" + current.representative() + " [" + id + "] (" + current.getLongDefinition() + ")" + "</summary>");
+            printIndented(output, indent + 1, "<ul>");
+            for (int i = 0; i < current.relationSize(); i++){
+                if (current.getRelation(i) instanceof SemanticRelation){
+                    SemanticRelation relation = (SemanticRelation) current.getRelation(i);
+                    if (relation.getRelationType().equals(SemanticRelationType.HYPONYM)){
+                        String connectedId = relation.getName();
+                        if (wordnet.getSynSetWithId(connectedId) != null && !doneList.contains(connectedId)){
+                            constructSynSetSubTree(wordnet, output, doneList, connectedId, indent + 2);
+                        }
+                    }
+                }
+            }
+            printIndented(output, indent + 1, "</ul>");
+            printIndented(output, indent, "</details>");
+            printIndented(output, indent, "</li>");
+        } else {
+            printIndented(output, indent, "<li>" + current.representative() + " [" + id + "] (" + current.getLongDefinition() + ")" + "</li>");
+        }
+    }
+
+    public void constructEnglishTree() throws FileNotFoundException, UnsupportedEncodingException {
+        WordNet english = new WordNet("english_wordnet_version_31.xml");
+        PrintWriter output = new PrintWriter("deneme.html", "UTF-8");
+        HashSet<String> doneList = new HashSet<>();
+        String id = "ENG31-00001740-n";
+        output.println("<ul class=\"tree\">");
+        constructSynSetSubTree(english, output, doneList, id, 1);
+        output.println("</ul>");
+        output.close();
+    }
+
+    public void constructTurkishTree() throws FileNotFoundException, UnsupportedEncodingException {
+        PrintWriter output = new PrintWriter("deneme.html", "UTF-8");
+        HashSet<String> doneList = new HashSet<>();
+        String id = "TUR10-0814560";
+        output.println("<ul class=\"tree\">");
+        constructSynSetSubTree(turkish, output, doneList, id, 1);
+        output.println("</ul>");
+        output.close();
     }
 
     @Test

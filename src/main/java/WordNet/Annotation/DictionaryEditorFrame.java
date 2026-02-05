@@ -627,10 +627,8 @@ public class DictionaryEditorFrame extends DomainEditorFrame implements ActionLi
         mappedSentences = new HashMap<>();
         for (int i = 0; i < dictionary.size(); i++){
             TxtWord word = (TxtWord) dictionary.getWord(i);
-            if (word.isNominal() || word.isAdjective() || word.isAdverb() || word.isVerb()){
-                data.add(word.getName());
-                mappedSentences.put(word.getName(), new ArrayList<>());
-            }
+            data.add(word.getName());
+            mappedSentences.put(word.getName(), new ArrayList<>());
         }
         fsm = new FsmMorphologicalAnalyzer(dictionary);
         try {
