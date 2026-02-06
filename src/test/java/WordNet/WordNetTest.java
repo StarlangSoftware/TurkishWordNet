@@ -19,6 +19,7 @@ import static org.junit.Assert.*;
 
 public class WordNetTest {
     WordNet turkish;
+    WordNet english;
 
     @Before
     public void setUp() {
@@ -30,39 +31,50 @@ public class WordNetTest {
         turkish.saveAsLmf("turkish.lmf");
     }
 
-    private void printIndented(PrintWriter output, int indent, String s){
-        for (int i = 0; i < indent; i++){
+    private void printIndented(PrintWriter output, int indent, String s) {
+        for (int i = 0; i < indent; i++) {
             output.print(" ");
         }
         output.println(s);
     }
 
-    private void constructSynSetSubTree(WordNet wordnet, PrintWriter output, HashSet<String> doneList, String id, int indent){
+    private void constructSynSetSubTree(WordNet wordnet, PrintWriter output, HashSet<String> doneList, String id, int indent) {
         int count = 0;
         SynSet current = wordnet.getSynSetWithId(id);
         doneList.add(id);
-        for (int i = 0; i < current.relationSize(); i++){
-            if (current.getRelation(i) instanceof SemanticRelation){
+        for (int i = 0; i < current.relationSize(); i++) {
+            if (current.getRelation(i) instanceof SemanticRelation) {
                 SemanticRelation relation = (SemanticRelation) current.getRelation(i);
-                if (relation.getRelationType().equals(SemanticRelationType.HYPONYM)){
+                if (relation.getRelationType().equals(SemanticRelationType.HYPONYM)) {
                     String connectedId = relation.getName();
-                    if (wordnet.getSynSetWithId(connectedId) != null && !doneList.contains(connectedId)){
+                    if (wordnet.getSynSetWithId(connectedId) != null && !doneList.contains(connectedId)) {
                         count++;
                     }
                 }
             }
         }
-        if (count > 0){
+        if (count > 0) {
             printIndented(output, indent, "<li>");
             printIndented(output, indent, "<details>");
             printIndented(output, indent, "<summary>" + current.representative() + " [" + id + "] (" + current.getLongDefinition() + ")" + "</summary>");
+            for (int i = 0; i < current.relationSize(); i++) {
+                if (current.getRelation(i) instanceof InterlingualRelation) {
+                    InterlingualRelation relation = (InterlingualRelation) current.getRelation(i);
+                    String connectedId = relation.getName();
+                    SynSet synSet = english.getSynSetWithId(connectedId);
+                    if (synSet != null){
+                        printIndented(output, indent, "<english>" + synSet.representative() + " [" + connectedId + "] (" + synSet.getLongDefinition() + ")" + "</english>");
+                        break;
+                    }
+                }
+            }
             printIndented(output, indent + 1, "<ul>");
-            for (int i = 0; i < current.relationSize(); i++){
-                if (current.getRelation(i) instanceof SemanticRelation){
+            for (int i = 0; i < current.relationSize(); i++) {
+                if (current.getRelation(i) instanceof SemanticRelation) {
                     SemanticRelation relation = (SemanticRelation) current.getRelation(i);
-                    if (relation.getRelationType().equals(SemanticRelationType.HYPONYM)){
+                    if (relation.getRelationType().equals(SemanticRelationType.HYPONYM)) {
                         String connectedId = relation.getName();
-                        if (wordnet.getSynSetWithId(connectedId) != null && !doneList.contains(connectedId)){
+                        if (wordnet.getSynSetWithId(connectedId) != null && !doneList.contains(connectedId)) {
                             constructSynSetSubTree(wordnet, output, doneList, connectedId, indent + 2);
                         }
                     }
@@ -77,7 +89,7 @@ public class WordNetTest {
     }
 
     public void constructEnglishTree() throws FileNotFoundException, UnsupportedEncodingException {
-        WordNet english = new WordNet("english_wordnet_version_31.xml");
+        english = new WordNet("english_wordnet_version_31.xml");
         PrintWriter output = new PrintWriter("deneme.html", "UTF-8");
         HashSet<String> doneList = new HashSet<>();
         String id = "ENG31-00001740-n";
@@ -87,7 +99,9 @@ public class WordNetTest {
         output.close();
     }
 
+    @Test
     public void constructTurkishTree() throws FileNotFoundException, UnsupportedEncodingException {
+        english = new WordNet("english_wordnet_version_31.xml");
         PrintWriter output = new PrintWriter("deneme.html", "UTF-8");
         HashSet<String> doneList = new HashSet<>();
         String id = "TUR10-0814560";
@@ -105,7 +119,7 @@ public class WordNetTest {
     @Test
     public void testSynSetList() {
         int literalCount = 0;
-        for (SynSet synSet : turkish.synSetList()){
+        for (SynSet synSet : turkish.synSetList()) {
             literalCount += synSet.getSynonym().literalSize();
         }
         assertEquals(110259, literalCount);
@@ -119,9 +133,9 @@ public class WordNetTest {
     @Test
     public void testTotalForeignLiterals() {
         int count = 0;
-        for (SynSet synSet : turkish.synSetList()){
-            for (int i = 0; i < synSet.getSynonym().literalSize(); i++){
-                if (synSet.getSynonym().getLiteral(i).getOrigin() != null){
+        for (SynSet synSet : turkish.synSetList()) {
+            for (int i = 0; i < synSet.getSynonym().literalSize(); i++) {
+                if (synSet.getSynonym().getLiteral(i).getOrigin() != null) {
                     count++;
                 }
             }
@@ -132,9 +146,9 @@ public class WordNetTest {
     @Test
     public void testTotalGroupedLiterals() {
         int count = 0;
-        for (SynSet synSet : turkish.synSetList()){
-            for (int i = 0; i < synSet.getSynonym().literalSize(); i++){
-                if (synSet.getSynonym().getLiteral(i).getGroupNo() != 0){
+        for (SynSet synSet : turkish.synSetList()) {
+            for (int i = 0; i < synSet.getSynonym().literalSize(); i++) {
+                if (synSet.getSynonym().getLiteral(i).getGroupNo() != 0) {
                     count++;
                 }
             }
@@ -145,10 +159,10 @@ public class WordNetTest {
     @Test
     public void testGroupSize() {
         CounterHashMap<Integer> groups = new CounterHashMap<>();
-        for (SynSet synSet : turkish.synSetList()){
+        for (SynSet synSet : turkish.synSetList()) {
             ArrayList<Synonym> literalGroups = synSet.getSynonym().getUniqueLiterals();
-            for (Synonym synonym : literalGroups){
-                if (synonym.getLiteral(0).getGroupNo() != 0){
+            for (Synonym synonym : literalGroups) {
+                if (synonym.getLiteral(0).getGroupNo() != 0) {
                     groups.put(synonym.literalSize());
                 }
             }
@@ -162,11 +176,11 @@ public class WordNetTest {
     @Test
     public void testNumberOfGroupsInSynSet() {
         CounterHashMap<Integer> groups = new CounterHashMap<>();
-        for (SynSet synSet : turkish.synSetList()){
+        for (SynSet synSet : turkish.synSetList()) {
             ArrayList<Synonym> literalGroups = synSet.getSynonym().getUniqueLiterals();
             int groupCount = 0;
-            for (Synonym synonym : literalGroups){
-                if (synonym.getLiteral(0).getGroupNo() != 0){
+            for (Synonym synonym : literalGroups) {
+                if (synonym.getLiteral(0).getGroupNo() != 0) {
                     groupCount++;
                 }
             }
@@ -183,18 +197,18 @@ public class WordNetTest {
     @Test
     public void testDistinctForeignLiterals() {
         int count = 0;
-        for (String literalName : turkish.literalList()){
+        for (String literalName : turkish.literalList()) {
             ArrayList<Literal> literals = turkish.getLiteralsWithName(literalName);
             int foreignCount = 0;
             int notForeignCount = 0;
-            for (Literal literal : literals){
-                if (literal.getOrigin() != null){
+            for (Literal literal : literals) {
+                if (literal.getOrigin() != null) {
                     foreignCount++;
                 } else {
                     notForeignCount++;
                 }
             }
-            if (foreignCount * notForeignCount > 0){
+            if (foreignCount * notForeignCount > 0) {
                 count++;
             }
         }
@@ -206,7 +220,7 @@ public class WordNetTest {
         assertEquals(82155, turkish.literalList().size());
     }
 
-    public void generateDictionary(){
+    public void generateDictionary() {
         String[] flags = {"IS_SD", "IS_KG", "IS_UD", "IS_UU", "IS_UUU",
                 "IS_SU", "IS_ST", "F_SD", "F_GUD", "F_GUDO", "IS_SDD",
                 "F1P1", "F2P1", "F2PL", "F2P1-NO-REF", "F3P1-NO-REF",
@@ -219,38 +233,38 @@ public class WordNetTest {
         WordNet turkishWordNet = new WordNet();
         TxtDictionary turkish = new TxtDictionary();
         TxtDictionary dictionary = new TxtDictionary(new TurkishWordComparator());
-        for (int i = 0; i < turkish.size(); i++){
+        for (int i = 0; i < turkish.size(); i++) {
             TxtWord txtWord = (TxtWord) turkish.getWord(i);
-            if (txtWord.containsFlag("IS_OA")){
+            if (txtWord.containsFlag("IS_OA")) {
                 dictionary.addProperNoun(txtWord.getName());
             }
-            if (txtWord.containsFlag("IS_QUES")){
+            if (txtWord.containsFlag("IS_QUES")) {
                 dictionary.addWithFlag(txtWord.getName(), "IS_QUES");
             }
         }
-        for (String literal : turkishWordNet.literalList()){
-            if (!literal.contains(" ")){
+        for (String literal : turkishWordNet.literalList()) {
+            if (!literal.contains(" ")) {
                 TxtWord txtWord = (TxtWord) turkish.getWord(literal);
-                if (txtWord != null){
-                    for (String flag: flags){
-                        if (txtWord.containsFlag(flag)){
+                if (txtWord != null) {
+                    for (String flag : flags) {
+                        if (txtWord.containsFlag(flag)) {
                             dictionary.addWithFlag(literal, flag);
                         }
                     }
                 }
-                if (literal.endsWith("mek") || literal.endsWith("mak")){
+                if (literal.endsWith("mek") || literal.endsWith("mak")) {
                     txtWord = (TxtWord) turkish.getWord(literal.substring(0, literal.length() - 3));
-                    if (txtWord != null){
-                        for (String flag: flags){
-                            if (txtWord.containsFlag(flag)){
+                    if (txtWord != null) {
+                        for (String flag : flags) {
+                            if (txtWord.containsFlag(flag)) {
                                 dictionary.addWithFlag(literal.substring(0, literal.length() - 3), flag);
                             }
                         }
                     }
                 }
                 ArrayList<SynSet> synSets = turkishWordNet.getSynSetsWithLiteral(literal);
-                for (SynSet synSet : synSets){
-                    switch (synSet.getPos()){
+                for (SynSet synSet : synSets) {
+                    switch (synSet.getPos()) {
                         case NOUN:
                             dictionary.addNoun(literal);
                             break;
@@ -279,24 +293,24 @@ public class WordNetTest {
                 }
             } else {
                 String[] words = literal.split(" ");
-                if (words.length == 2){
-                    if (words[0].equals(words[1])){
+                if (words.length == 2) {
+                    if (words[0].equals(words[1])) {
                         dictionary.addWithFlag(words[0], "IS_DUP");
                     } else {
                         if (!words[0].endsWith("mek") && !words[1].endsWith("mak") &&
                                 words[0].length() > 3 && words[1].length() > 3 &&
-                                words[0].substring(words[0].length() - 3).equals(words[1].substring(words[1].length() - 3))){
+                                words[0].substring(words[0].length() - 3).equals(words[1].substring(words[1].length() - 3))) {
                             dictionary.addWithFlag(words[0], "IS_DUP");
                             dictionary.addWithFlag(words[1], "IS_DUP");
                         } else {
-                            if (words[0].length() == words[1].length()){
+                            if (words[0].length() == words[1].length()) {
                                 int count = 0;
-                                for (int j = 0; j < words[0].length(); j++){
-                                    if (words[0].charAt(j) != words[1].charAt(j)){
+                                for (int j = 0; j < words[0].length(); j++) {
+                                    if (words[0].charAt(j) != words[1].charAt(j)) {
                                         count++;
                                     }
                                 }
-                                if (count == 1){
+                                if (count == 1) {
                                     dictionary.addWithFlag(words[0], "IS_DUP");
                                     dictionary.addWithFlag(words[1], "IS_DUP");
                                 }
@@ -312,10 +326,10 @@ public class WordNetTest {
     @Test
     public void testLiteralWordCounts() {
         CounterHashMap<Integer> counts = new CounterHashMap<>();
-        for (String literal : turkish.literalList()){
+        for (String literal : turkish.literalList()) {
             int count = 1;
-            for (int i = 0; i < literal.length(); i++){
-                if (literal.charAt(i) == ' '){
+            for (int i = 0; i < literal.length(); i++) {
+                if (literal.charAt(i) == ' ') {
                     count++;
                 }
             }
@@ -457,7 +471,7 @@ public class WordNetTest {
 
     @Test
     public void testSameLiteralSameSynSetCheck() {
-        for (SynSet synSet : turkish.sameLiteralSameSynSetCheck()){
+        for (SynSet synSet : turkish.sameLiteralSameSynSetCheck()) {
             System.out.println(synSet.getId());
         }
         assertEquals(0, turkish.sameLiteralSameSynSetCheck().size());
@@ -471,8 +485,8 @@ public class WordNetTest {
     @Test
     public void testWikiPages() {
         int count = 0;
-        for (SynSet synSet: turkish.synSetList()){
-            if (synSet.getWikiPage() != null){
+        for (SynSet synSet : turkish.synSetList()) {
+            if (synSet.getWikiPage() != null) {
                 count++;
             }
         }
