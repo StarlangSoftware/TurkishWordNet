@@ -85,6 +85,17 @@ public class WordNetTest {
             printIndented(output, indent, "</li>");
         } else {
             printIndented(output, indent, "<li>" + current.representative() + " [" + id + "] (" + current.getLongDefinition() + ")" + "</li>");
+            for (int i = 0; i < current.relationSize(); i++) {
+                if (current.getRelation(i) instanceof InterlingualRelation) {
+                    InterlingualRelation relation = (InterlingualRelation) current.getRelation(i);
+                    String connectedId = relation.getName();
+                    SynSet synSet = english.getSynSetWithId(connectedId);
+                    if (synSet != null){
+                        printIndented(output, indent, "<english>" + synSet.representative() + " [" + connectedId + "] (" + synSet.getLongDefinition() + ")" + "</english>");
+                        break;
+                    }
+                }
+            }
         }
     }
 
@@ -99,7 +110,6 @@ public class WordNetTest {
         output.close();
     }
 
-    @Test
     public void constructTurkishTree() throws FileNotFoundException, UnsupportedEncodingException {
         english = new WordNet("english_wordnet_version_31.xml");
         PrintWriter output = new PrintWriter("deneme.html", "UTF-8");
