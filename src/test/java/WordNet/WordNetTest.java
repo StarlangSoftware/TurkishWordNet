@@ -57,16 +57,9 @@ public class WordNetTest {
             printIndented(output, indent, "<li>");
             printIndented(output, indent, "<details>");
             printIndented(output, indent, "<summary>" + current.representative() + " [" + id + "] (" + current.getLongDefinition() + ")" + "</summary>");
-            for (int i = 0; i < current.relationSize(); i++) {
-                if (current.getRelation(i) instanceof InterlingualRelation) {
-                    InterlingualRelation relation = (InterlingualRelation) current.getRelation(i);
-                    String connectedId = relation.getName();
-                    SynSet synSet = english.getSynSetWithId(connectedId);
-                    if (synSet != null){
-                        printIndented(output, indent, "<english>" + synSet.representative() + " [" + connectedId + "] (" + synSet.getLongDefinition() + ")" + "</english>");
-                        break;
-                    }
-                }
+            ArrayList<SynSet> interlinguals = current.getInterlingual(english);
+            if (!interlinguals.isEmpty()) {
+                printIndented(output, indent, "<english>" + interlinguals.get(0).representative() + " [" + interlinguals.get(0).getId() + "] (" + interlinguals.get(0).getLongDefinition() + ")" + "</english>");
             }
             printIndented(output, indent + 1, "<ul>");
             for (int i = 0; i < current.relationSize(); i++) {
@@ -85,16 +78,9 @@ public class WordNetTest {
             printIndented(output, indent, "</li>");
         } else {
             printIndented(output, indent, "<li>" + current.representative() + " [" + id + "] (" + current.getLongDefinition() + ")" + "</li>");
-            for (int i = 0; i < current.relationSize(); i++) {
-                if (current.getRelation(i) instanceof InterlingualRelation) {
-                    InterlingualRelation relation = (InterlingualRelation) current.getRelation(i);
-                    String connectedId = relation.getName();
-                    SynSet synSet = english.getSynSetWithId(connectedId);
-                    if (synSet != null){
-                        printIndented(output, indent, "<english>" + synSet.representative() + " [" + connectedId + "] (" + synSet.getLongDefinition() + ")" + "</english>");
-                        break;
-                    }
-                }
+            ArrayList<SynSet> interlinguals = current.getInterlingual(english);
+            if (!interlinguals.isEmpty()) {
+                printIndented(output, indent, "<english>" + interlinguals.get(0).representative() + " [" + interlinguals.get(0).getId() + "] (" + interlinguals.get(0).getLongDefinition() + ")" + "</english>");
             }
         }
     }
