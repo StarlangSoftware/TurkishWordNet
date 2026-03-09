@@ -13,6 +13,7 @@ import WordNet.SynSet;
 import javax.swing.*;
 import javax.swing.tree.DefaultMutableTreeNode;
 import javax.swing.tree.DefaultTreeModel;
+import javax.swing.tree.TreeNode;
 import javax.swing.tree.TreePath;
 import javax.swing.tree.TreeSelectionModel;
 import java.awt.*;
@@ -576,26 +577,28 @@ public class WordNetEditorFrame extends DomainEditorFrame implements ActionListe
      * @param node Parent node
      */
     private void expandAll(DefaultMutableTreeNode node) {
-        ArrayList<DefaultMutableTreeNode> list = Collections.list(node.children());
-        for (DefaultMutableTreeNode treeNode : list) {
-            expandAll(treeNode);
+        ArrayList<TreeNode> list = Collections.list(node.children());
+        for (TreeNode treeNode : list) {
+            expandAll((DefaultMutableTreeNode) treeNode);
         }
         TreePath path = new TreePath(node.getPath());
         noun.tree.expandPath(path);
     }
+
 
     /**
      * Collapses all child nodes of the selected parent node
      * @param node Parent node
      */
     private void collapseAll(DefaultMutableTreeNode node) {
-        ArrayList<DefaultMutableTreeNode> list = Collections.list(node.children());
-        for (DefaultMutableTreeNode treeNode : list) {
-            collapseAll(treeNode);
+        ArrayList<TreeNode> list = Collections.list(node.children());
+        for (TreeNode treeNode : list) {
+            collapseAll((DefaultMutableTreeNode) treeNode);
         }
         TreePath path = new TreePath(node.getPath());
         noun.tree.collapsePath(path);
     }
+
 
     /**
      * Adds the given synset with the given pos to the part of speech tree.
