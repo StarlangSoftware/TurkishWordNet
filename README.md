@@ -49,7 +49,17 @@ The structure of a sample synset is as follows:
 	</SYNSET>
 
 Each entry in the dictionary is enclosed by \<SYNSET> and \</SYNSET> tags. Synset members are represented as literals and their sense numbers. \<ID> shows the unique identifier given to the synset. \<POS> and \<DEF> tags denote part of speech and definition, respectively. As for the \<EXAMPLE> tag, it gives a sample sentence for the synset.
-	
+
+Simple Web Interface
+============
+[Turkish WordNet Link 1](http://104.247.163.162/nlptoolkit/turkish-wordnet.html) [Turkish WordNet Link 2](https://starlangsoftware.github.io/nlptoolkit-web-simple/turkish-wordnet.html)
+
+[Turkish WordNet Tree Link 1](http://104.247.163.162/nlptoolkit/turkish-wordnet-tree.html) [Turkish WordNet Tree Link 2](https://starlangsoftware.github.io/nlptoolkit-web-simple/turkish-wordnet-tree.html)
+
+[English WordNet Link 1](http://104.247.163.162/nlptoolkit/english-wordnet.html) [English WordNet Link 2](https://starlangsoftware.github.io/nlptoolkit-web-simple/english-wordnet.html)
+
+[Emglish WordNet Tree Link 1](http://104.247.163.162/nlptoolkit/english-wordnet-tree.html) [English WordNet Tree Link 2](https://starlangsoftware.github.io/nlptoolkit-web-simple/english-wordnet-tree.html)
+
 Video Lectures
 ============
 
