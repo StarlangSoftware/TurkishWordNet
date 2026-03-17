@@ -58,7 +58,7 @@ Simple Web Interface
 
 [English WordNet Link 1](http://104.247.163.162/nlptoolkit/english-wordnet.html) [English WordNet Link 2](https://starlangsoftware.github.io/nlptoolkit-web-simple/english-wordnet.html)
 
-[Emglish WordNet Tree Link 1](http://104.247.163.162/nlptoolkit/english-wordnet-tree.html) [English WordNet Tree Link 2](https://starlangsoftware.github.io/nlptoolkit-web-simple/english-wordnet-tree.html)
+[English WordNet Tree Link 1](http://104.247.163.162/nlptoolkit/english-wordnet-tree.html) [English WordNet Tree Link 2](https://starlangsoftware.github.io/nlptoolkit-web-simple/english-wordnet-tree.html)
 
 Video Lectures
 ============
