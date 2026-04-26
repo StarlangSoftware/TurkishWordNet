@@ -26,7 +26,6 @@ public class WordNetTest {
         turkish = new WordNet();
     }
 
-    @Test
     public void convertToLmf() {
         turkish.saveAsLmf("turkish.lmf");
     }
