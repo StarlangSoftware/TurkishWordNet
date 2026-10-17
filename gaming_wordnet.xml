@@ -1,0 +1,1099 @@
+<SYNSETS>
+<SYNSET><ID>GAM10-0000010</ID><SYNONYM><LITERAL>deneyimlemek<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS></SYNSET>
+<SYNSET><ID>GAM10-0000020</ID><SYNONYM><LITERAL>hacklemek<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS></SYNSET>
+<SYNSET><ID>GAM10-0000030</ID><SYNONYM><LITERAL>bırakma<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS></SYNSET>
+<SYNSET><ID>GAM10-0000040</ID><SYNONYM><LITERAL>dizilim<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS></SYNSET>
+<SYNSET><ID>GAM10-0000050</ID><SYNONYM><LITERAL>drift<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS></SYNSET>
+<SYNSET><ID>GAM10-0000060</ID><SYNONYM><LITERAL>elf<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS></SYNSET>
+<SYNSET><ID>GAM10-0000070</ID><SYNONYM><LITERAL>goblin<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS></SYNSET>
+<SYNSET><ID>GAM10-0000080</ID><SYNONYM><LITERAL>görsellik<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS></SYNSET>
+<SYNSET><ID>GAM10-0000090</ID><SYNONYM><LITERAL>işletim<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS></SYNSET>
+<SYNSET><ID>GAM10-0000100</ID><SYNONYM><LITERAL>item<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS></SYNSET>
+<SYNSET><ID>GAM10-0000110</ID><SYNONYM><LITERAL>kombo<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS></SYNSET>
+<SYNSET><ID>GAM10-0000120</ID><SYNONYM><LITERAL>kurulum<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS></SYNSET>
+<SYNSET><ID>GAM10-0000130</ID><SYNONYM><LITERAL>manipüle<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS></SYNSET>
+<SYNSET><ID>GAM10-0000140</ID><SYNONYM><LITERAL>modifiye<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS></SYNSET>
+<SYNSET><ID>GAM10-0000150</ID><SYNONYM><LITERAL>müdafa<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS></SYNSET>
+<SYNSET><ID>GAM10-0000160</ID><SYNONYM><LITERAL>mühümmat<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS></SYNSET>
+<SYNSET><ID>GAM10-0000170</ID><SYNONYM><LITERAL>ninja<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS></SYNSET>
+<SYNSET><ID>GAM10-0000180</ID><SYNONYM><LITERAL>optimize<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS></SYNSET>
+<SYNSET><ID>GAM10-0000190</ID><SYNONYM><LITERAL>ork<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS></SYNSET>
+<SYNSET><ID>GAM10-0000200</ID><SYNONYM><LITERAL>oynanış<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS></SYNSET>
+<SYNSET><ID>GAM10-0000210</ID><SYNONYM><LITERAL>pandemi<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS></SYNSET>
+<SYNSET><ID>GAM10-0000220</ID><SYNONYM><LITERAL>playstation<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS></SYNSET>
+<SYNSET><ID>GAM10-0000230</ID><SYNONYM><LITERAL>plazmid<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS></SYNSET>
+<SYNSET><ID>GAM10-0000240</ID><SYNONYM><LITERAL>simüle<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS></SYNSET>
+<SYNSET><ID>GAM10-0000250</ID><SYNONYM><LITERAL>şeriflik<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS></SYNSET>
+<SYNSET><ID>GAM10-0000260</ID><SYNONYM><LITERAL>verme<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS></SYNSET>
+<SYNSET><ID>GAM10-0000270</ID><SYNONYM><LITERAL>vikingler<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS></SYNSET>
+<SYNSET><ID>GAM10-0000280</ID><SYNONYM><LITERAL>xbox<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS></SYNSET>
+<SYNSET><ID>GAM10-0000290</ID><SYNONYM><LITERAL>yazılımcı<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS></SYNSET>
+<SYNSET><ID>GAM10-0000300</ID><SYNONYM><LITERAL>düşünen<SENSE>1</SENSE></LITERAL></SYNONYM><POS>a</POS></SYNSET>
+<SYNSET><ID>GAM10-0000310</ID><SYNONYM><LITERAL>görselli<SENSE>1</SENSE></LITERAL></SYNONYM><POS>a</POS></SYNSET>
+<SYNSET><ID>GAM10-0000320</ID><SYNONYM><LITERAL>hâyli<SENSE>1</SENSE></LITERAL></SYNONYM><POS>a</POS></SYNSET>
+<SYNSET><ID>GAM10-0000330</ID><SYNONYM><LITERAL>izometrik<SENSE>1</SENSE></LITERAL></SYNONYM><POS>a</POS></SYNSET>
+<SYNSET><ID>GAM10-0000340</ID><SYNONYM><LITERAL>konsolcu<SENSE>1</SENSE></LITERAL></SYNONYM><POS>a</POS></SYNSET>
+<SYNSET><ID>GAM10-0000350</ID><SYNONYM><LITERAL>mutant<SENSE>1</SENSE></LITERAL></SYNONYM><POS>a</POS></SYNSET>
+<SYNSET><ID>GAM10-0000360</ID><SYNONYM><LITERAL>oyunsever<SENSE>1</SENSE></LITERAL></SYNONYM><POS>a</POS></SYNSET>
+<SYNSET><ID>GAM10-0000370</ID><SYNONYM><LITERAL>özelleştirilmiş<SENSE>1</SENSE></LITERAL></SYNONYM><POS>a</POS></SYNSET>
+<SYNSET><ID>GAM10-0000380</ID><SYNONYM><LITERAL>saykodelik<SENSE>1</SENSE></LITERAL></SYNONYM><POS>a</POS></SYNSET>
+<SYNSET><ID>GAM10-0000390</ID><SYNONYM><LITERAL>tramvatik<SENSE>1</SENSE></LITERAL></SYNONYM><POS>a</POS></SYNSET>
+<SYNSET><ID>GAM10-0000400</ID><SYNONYM><LITERAL>tripli<SENSE>1</SENSE></LITERAL></SYNONYM><POS>a</POS></SYNSET>
+<SYNSET><ID>GAM10-0000410</ID><SYNONYM><LITERAL>viking<SENSE>1</SENSE></LITERAL></SYNONYM><POS>a</POS></SYNSET>
+<SYNSET><ID>GAM10-0000420</ID><SYNONYM><LITERAL>youtuber<SENSE>1</SENSE></LITERAL></SYNONYM><POS>a</POS></SYNSET>
+<SYNSET><ID>GAM10-0000430</ID><SYNONYM><LITERAL>ardından<SENSE>1</SENSE></LITERAL></SYNONYM><POS>b</POS></SYNSET>
+<SYNSET><ID>TUR10-0000040</ID><SYNONYM><LITERAL>kız kardeş<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Bir kimsenin (genellikle yaşça küçük) kadın kardeşi </DEF></SYNSET>
+<SYNSET><ID>TUR10-0000998</ID><SYNONYM><LITERAL>ayıptır söylemesi<SENSE>1</SENSE></LITERAL></SYNONYM><POS>i</POS><DEF>Övünmek gibi olmasın ama</DEF></SYNSET>
+<SYNSET><ID>TUR10-0001340</ID><SYNONYM><LITERAL>abluka<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Bir ülkenin veya bir yerin dış dünya ile olan her türlü bağlantısını kuvvet kullanarak kesme</DEF></SYNSET>
+<SYNSET><ID>TUR10-0001360</ID><SYNONYM><LITERAL>abone<SENSE>2</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Bir şeyi sürekli olarak kullanmak için hizmeti verenle sözleşme yapan kimse</DEF></SYNSET>
+<SYNSET><ID>TUR10-0001990</ID><SYNONYM><LITERAL>çabuk<SENSE>2</SENSE></LITERAL></SYNONYM><POS>a</POS><DEF>Alışılandan veya gösterilenden daha kısa bir zamanda</DEF></SYNSET>
+<SYNSET><ID>TUR10-0002180</ID><SYNONYM><LITERAL>acemi<SENSE>2</SENSE></LITERAL></SYNONYM><POS>a</POS><DEF>Bir işe, bir duruma henüz alışmamış olan</DEF></SYNSET>
+<SYNSET><ID>TUR10-0002550</ID><SYNONYM><LITERAL>can sıkıcı<SENSE>1</SENSE></LITERAL></SYNONYM><POS>a</POS><DEF>Üzüntü veren, acıklı</DEF></SYNSET>
+<SYNSET><ID>TUR10-0003110</ID><SYNONYM><LITERAL>acımasız<SENSE>1</SENSE></LITERAL><LITERAL>amansız<SENSE>1</SENSE></LITERAL></SYNONYM><POS>a</POS><DEF>Acıma duygusu veya vicdanı olmayan olmayan, başkalarına haksızlık eden </DEF></SYNSET>
+<SYNSET><ID>TUR10-0003910</ID><SYNONYM><LITERAL>açı<SENSE>2</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Görüş, bakım, yön, anlayış biçimi</DEF></SYNSET>
+<SYNSET><ID>TUR10-0003970</ID><SYNONYM><LITERAL>açık<SENSE>1</SENSE></LITERAL></SYNONYM><POS>a</POS><DEF>Açılmış, kapalı olmayan</DEF></SYNSET>
+<SYNSET><ID>TUR10-0003980</ID><SYNONYM><LITERAL>açık<SENSE>2</SENSE></LITERAL></SYNONYM><POS>a</POS><DEF>Engeli olmayan, serbest</DEF></SYNSET>
+<SYNSET><ID>TUR10-0004750</ID><SYNONYM><LITERAL>açıklamak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Bir konuyla ilgili gerekli bilgileri vermek, izah etmek</DEF></SYNSET>
+<SYNSET><ID>TUR10-0004940</ID><SYNONYM><LITERAL>açıklayıcı<SENSE>1</SENSE></LITERAL></SYNONYM><POS>a</POS><DEF>Bir sorunu gerekli açıklığa kavuşturan</DEF></SYNSET>
+<SYNSET><ID>TUR10-0005630</ID><SYNONYM><LITERAL>açılış<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Yeni bir yapının, yerin veya kuruluşun çalışmaya başlaması</DEF></SYNSET>
+<SYNSET><ID>TUR10-0006290</ID><SYNONYM><LITERAL>açlık<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Aç olma durumu</DEF></SYNSET>
+<SYNSET><ID>TUR10-0006310</ID><SYNONYM><LITERAL>açlık<SENSE>3</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Aşırı istek içinde bulunma</DEF></SYNSET>
+<SYNSET><ID>TUR10-0006340</ID><SYNONYM><LITERAL>açma<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Bir şeyi kapalı bir durumdan açık duruma getirme</DEF></SYNSET>
+<SYNSET><ID>TUR10-0006390</ID><SYNONYM><LITERAL>açmak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Bir şeyi kapalı durumdan açık duruma getirmek</DEF></SYNSET>
+<SYNSET><ID>TUR10-0006400</ID><SYNONYM><LITERAL>açmak<SENSE>2</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Bir şeyin kapağını veya örtüsünü kaldırmak</DEF></SYNSET>
+<SYNSET><ID>TUR10-0006510</ID><SYNONYM><LITERAL>açmak<SENSE>13</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Bir aygıtı, bir düzeni çalışır duruma getirmek</DEF></SYNSET>
+<SYNSET><ID>TUR10-0006560</ID><SYNONYM><LITERAL>beğenmek<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>İyi veya güzel bulmak</DEF></SYNSET>
+<SYNSET><ID>TUR10-0006590</ID><SYNONYM><LITERAL>açmak<SENSE>21</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Yapmak, düzenlemek</DEF></SYNSET>
+<SYNSET><ID>TUR10-0007080</ID><SYNONYM><LITERAL>adalet<SENSE>2</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Hak ve hukuka uygunluk işini uygulayan, yerine getiren devlet kuruluşları</DEF></SYNSET>
+<SYNSET><ID>TUR10-0007380</ID><SYNONYM><LITERAL>iyiden iyiye<SENSE>1</SENSE></LITERAL></SYNONYM><POS>b</POS><DEF>Gereğinden çok, iyice, oldukça, epey</DEF></SYNSET>
+<SYNSET><ID>TUR10-0007720</ID><SYNONYM><LITERAL>adaptasyon<SENSE>3</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Birbirine uydurma</DEF></SYNSET>
+<SYNSET><ID>TUR10-0008310</ID><SYNONYM><LITERAL>adet<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Sayma, ölçme, tartma vb. işlerin sonunda bulunan birimlerin kaç olduğunu bildiren söz</DEF></SYNSET>
+<SYNSET><ID>TUR10-0008470</ID><SYNONYM><LITERAL>adım<SENSE>4</SENSE></LITERAL><LITERAL>aşama<SENSE>2</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Varılması istenen bir amaca doğru geçilmesi gerekli dönemlerden her biri, evre, basamak, merhale</DEF></SYNSET>
+<SYNSET><ID>TUR10-0009150</ID><SYNONYM><LITERAL>adrenalin<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Hekimlikte damarları daraltma, bronşları açma, kanamaları kesme vb. amaçlarla kullanılan, kan şekerinin yükselmesine yol açan böbrek üstü bezlerinin salgısı</DEF></SYNSET>
+<SYNSET><ID>TUR10-0009160</ID><SYNONYM><LITERAL>adres<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Bir kimsenin arandığında bulunabileceği yer</DEF></SYNSET>
+<SYNSET><ID>TUR10-0009730</ID><SYNONYM><LITERAL>affetmek<SENSE>2</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Hoşgörü ile karşılamak, mazur görmek</DEF></SYNSET>
+<SYNSET><ID>TUR10-0010150</ID><SYNONYM><LITERAL>büyü<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Tabiat kanunlarına aykırı sonuçlar elde etmek iddiasında olanların başvurdukları gizli işlem ve davranışlara verilen genel ad</DEF></SYNSET>
+<SYNSET><ID>TUR10-0010620</ID><SYNONYM><LITERAL>agresif<SENSE>1</SENSE></LITERAL></SYNONYM><POS>a</POS><DEF>Başkasına saldıran, yapısında saldırma özelliği olan devlet, kimse, hayvan,</DEF></SYNSET>
+<SYNSET><ID>TUR10-0010720</ID><SYNONYM><LITERAL>ağ<SENSE>3</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Ülke çapında yaygınlaştırılmış ulaşım ve iletişim örgüsü</DEF></SYNSET>
+<SYNSET><ID>TUR10-0012180</ID><SYNONYM><LITERAL>ağır<SENSE>11</SENSE></LITERAL></SYNONYM><POS>a</POS><DEF>Etkisi güçlü olan, yoğun</DEF></SYNSET>
+<SYNSET><ID>TUR10-0012230</ID><SYNONYM><LITERAL>ağır<SENSE>16</SENSE></LITERAL></SYNONYM><POS>a</POS><DEF>Davranışları yavaş olan</DEF></SYNSET>
+<SYNSET><ID>TUR10-0012900</ID><SYNONYM><LITERAL>ağırlık<SENSE>12</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Dikkati ve önemi bir şey üzerinde yoğunlaştırmak</DEF></SYNSET>
+<SYNSET><ID>TUR10-0012990</ID><SYNONYM><LITERAL>ağırlıklı<SENSE>3</SENSE></LITERAL></SYNONYM><POS>a</POS><DEF>Çoğunluğu oluşturan</DEF></SYNSET>
+<SYNSET><ID>TUR10-0013300</ID><SYNONYM><LITERAL>ağız<SENSE>2</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Yüzde, avurtlarla iki çene arasında, ses çıkarmaya, soluk alıp vermeye ve besinleri içine almaya yarayan boşluğun dudakları çevrelediği bölümü</DEF></SYNSET>
+<SYNSET><ID>TUR10-0013990</ID><SYNONYM><LITERAL>ağlamak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Üzüntü, acı, sevinç, pişmanlık aldanma ve benzerinin etkisiyle gözyaşı dökmek</DEF></SYNSET>
+<SYNSET><ID>TUR10-0014520</ID><SYNONYM><LITERAL>ağustos<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Yılın otuz bir gün süren, sekizinci ayı</DEF></SYNSET>
+<SYNSET><ID>TUR10-0014960</ID><SYNONYM><LITERAL>arkadaşlık<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Duygusal bağ veya akrabalık ilişkisi, dost olma durumu</DEF></SYNSET>
+<SYNSET><ID>TUR10-0015070</ID><SYNONYM><LITERAL>ahenk<SENSE>2</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Birbirine uyma</DEF></SYNSET>
+<SYNSET><ID>TUR10-0015730</ID><SYNONYM><LITERAL>ahlaki<SENSE>1</SENSE></LITERAL></SYNONYM><POS>a</POS><DEF>Ahlaka uygun, ahlakla ilgili</DEF></SYNSET>
+<SYNSET><ID>TUR10-0016080</ID><SYNONYM><LITERAL>ahşap<SENSE>1</SENSE></LITERAL></SYNONYM><POS>a</POS><DEF>Ağaçtan, tahtadan yapılmış</DEF></SYNSET>
+<SYNSET><ID>TUR10-0016320</ID><SYNONYM><LITERAL>aile<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Evlilik ve kan bağına dayanan, eşler, çocuklar, kardeşler arasındaki ilişkilerin oluşturduğu toplum içindeki en küçük birlik</DEF></SYNSET>
+<SYNSET><ID>TUR10-0017180</ID><SYNONYM><LITERAL>başarısızlık<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Başarısız olma durumu, muvaffakiyetsizlik</DEF></SYNSET>
+<SYNSET><ID>TUR10-0018000</ID><SYNONYM><LITERAL>akıcı<SENSE>3</SENSE></LITERAL></SYNONYM><POS>a</POS><DEF>Kesintisiz</DEF></SYNSET>
+<SYNSET><ID>TUR10-0018600</ID><SYNONYM><LITERAL>akın<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Kalabalık bir şeyin arkası kesilmeyen bir geliş durumunda olması</DEF></SYNSET>
+<SYNSET><ID>TUR10-0018840</ID><SYNONYM><LITERAL>akış<SENSE>2</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Geçip gitme, sürüp gitme</DEF></SYNSET>
+<SYNSET><ID>TUR10-0019600</ID><SYNONYM><LITERAL>birinci sınıf<SENSE>1</SENSE></LITERAL></SYNONYM><POS>a</POS><DEF>Eksiksiz, kusuru olmayan, şahane</DEF></SYNSET>
+<SYNSET><ID>TUR10-0019890</ID><SYNONYM><LITERAL>akmak<SENSE>2</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Sıvı ve benzeri maddeler aşağıya, yere düşmek</DEF></SYNSET>
+<SYNSET><ID>TUR10-0019950</ID><SYNONYM><LITERAL>devam etmek<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Eskiden olduğu gibi, eskiden nasılsa gene öyle olmak, öyle devam etmek</DEF></SYNSET>
+<SYNSET><ID>TUR10-0020710</ID><SYNONYM><LITERAL>arıza<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Aksak olma durumu</DEF></SYNSET>
+<SYNSET><ID>TUR10-0020900</ID><SYNONYM><LITERAL>aksesuar<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Bir aletin, bir makinenin işlevine katılmayan, ancak kendine özgü ayrı bir yararı bulunan alet, araç veya nesne</DEF></SYNSET>
+<SYNSET><ID>TUR10-0021270</ID><SYNONYM><LITERAL>aksine<SENSE>1</SENSE></LITERAL></SYNONYM><POS>b</POS><DEF>Beklenilenin, umulanın aksine, karşıt olarak, tam tersine</DEF></SYNSET>
+<SYNSET><ID>TUR10-0021460</ID><SYNONYM><LITERAL>akşam<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Gündüzün son ve gecenin ilk saatleri</DEF></SYNSET>
+<SYNSET><ID>TUR10-0022220</ID><SYNONYM><LITERAL>aktarmak<SENSE>6</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>İletmek, bildirmek</DEF></SYNSET>
+<SYNSET><ID>TUR10-0022380</ID><SYNONYM><LITERAL>aktifleşmek<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Canlı, hareketli, etkili olmak, aktif duruma gelmek</DEF></SYNSET>
+<SYNSET><ID>TUR10-0022490</ID><SYNONYM><LITERAL>aktivite<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Etkinlik</DEF></SYNSET>
+<SYNSET><ID>TUR10-0024100</ID><SYNONYM><LITERAL>alan<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Düz, açık ve geniş yer, meydan, saha</DEF></SYNSET>
+<SYNSET><ID>TUR10-0024140</ID><SYNONYM><LITERAL>alan<SENSE>5</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Bir çalışma çevresi</DEF></SYNSET>
+<SYNSET><ID>TUR10-0024270</ID><SYNONYM><LITERAL>alarm<SENSE>2</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Bir uyarıyı, bir tehlikeyi bildirmek için işaret veren düzenek</DEF></SYNSET>
+<SYNSET><ID>TUR10-0026310</ID><SYNONYM><LITERAL>hayal gücü<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Zihnin hayal yaratma yetisi</DEF></SYNSET>
+<SYNSET><ID>TUR10-0026580</ID><SYNONYM><LITERAL>alet<SENSE>1</SENSE></LITERAL><LITERAL>cihaz<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Bir el işini veya mekanik bir işi gerçekleştirmek için özel olarak yapılmış nesne</DEF></SYNSET>
+<SYNSET><ID>TUR10-0026900</ID><SYNONYM><LITERAL>aleyh<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Bir şeyin veya bir kimsenin karşısında olma</DEF></SYNSET>
+<SYNSET><ID>TUR10-0027080</ID><SYNONYM><LITERAL>su yosunu<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Su yosunlarından, klorofilli bitki</DEF></SYNSET>
+<SYNSET><ID>TUR10-0027180</ID><SYNONYM><LITERAL>algılamak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Bir olayı veya bir nesnenin varlığını duyu organlarıyla algılamak, idrak etmek</DEF></SYNSET>
+<SYNSET><ID>TUR10-0027550</ID><SYNONYM><LITERAL>alıkoymak<SENSE>2</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Birini, yapmakta olduğu veya yapmak istediği işten geri tutmak</DEF></SYNSET>
+<SYNSET><ID>TUR10-0027580</ID><SYNONYM><LITERAL>engel olmak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Bir şeyin gerçekleşmesini veya yapılmasını önlemek</DEF></SYNSET>
+<SYNSET><ID>TUR10-0027970</ID><SYNONYM><LITERAL>alışık<SENSE>1</SENSE></LITERAL></SYNONYM><POS>a</POS><DEF>Herhangi bir duruma alışmış olan</DEF></SYNSET>
+<SYNSET><ID>TUR10-0027990</ID><SYNONYM><LITERAL>alışık olmak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Alışkanlık durumuna gelmek</DEF></SYNSET>
+<SYNSET><ID>TUR10-0028040</ID><SYNONYM><LITERAL>alışılmış<SENSE>1</SENSE></LITERAL></SYNONYM><POS>a</POS><DEF>Her zamanki gibi olan, alışılan</DEF></SYNSET>
+<SYNSET><ID>TUR10-0028060</ID><SYNONYM><LITERAL>alışkın<SENSE>1</SENSE></LITERAL></SYNONYM><POS>a</POS><DEF>Bir şeye veya bir şey yapmaya alışmış olan</DEF></SYNSET>
+<SYNSET><ID>TUR10-0028090</ID><SYNONYM><LITERAL>alışkanlık<SENSE>3</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>İç ve dış etkilerle davranışların tekrarlanması, hep aynı biçimde gerçekleşmesi sonucu beliren, şartlanmış davranış</DEF></SYNSET>
+<SYNSET><ID>TUR10-0028120</ID><SYNONYM><LITERAL>alışkanlık<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Bir şeye alışmış olma durumu, huy</DEF></SYNSET>
+<SYNSET><ID>TUR10-0028140</ID><SYNONYM><LITERAL>alışmak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Bir işi tekrarlayarak kolaylıkla yapabilmek</DEF></SYNSET>
+<SYNSET><ID>TUR10-0028760</ID><SYNONYM><LITERAL>alkol<SENSE>2</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Her türlü alkollü içki</DEF></SYNSET>
+<SYNSET><ID>TUR10-0029600</ID><SYNONYM><LITERAL>imha etmek<SENSE>1</SENSE></LITERAL><LITERAL>ortadan kaldırmak<SENSE>1</SENSE></LITERAL><LITERAL>yok etmek<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Varlığına son vermek</DEF></SYNSET>
+<SYNSET><ID>TUR10-0030110</ID><SYNONYM><LITERAL>alt<SENSE>5</SENSE></LITERAL></SYNONYM><POS>a</POS><DEF>Birkaç şeyden aşağıda olan</DEF></SYNSET>
+<SYNSET><ID>TUR10-0030550</ID><SYNONYM><LITERAL>altın<SENSE>2</SENSE></LITERAL></SYNONYM><POS>a</POS><DEF>Altından yapılmış olan</DEF></SYNSET>
+<SYNSET><ID>TUR10-0030570</ID><SYNONYM><LITERAL>bulunmaz<SENSE>1</SENSE></LITERAL></SYNONYM><POS>a</POS><DEF>Değeri olan veya değeri yüksek olan</DEF></SYNSET>
+<SYNSET><ID>TUR10-0031540</ID><SYNONYM><LITERAL>altyazı<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Gazete, dergi, televizyon programı vb. yayınlarda çıkan resim ve fotoğrafları açıklayan yazı</DEF></SYNSET>
+<SYNSET><ID>TUR10-0031790</ID><SYNONYM><LITERAL>amaç<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Ulaşmak istenilen sonuç, maksat</DEF></SYNSET>
+<SYNSET><ID>TUR10-0031840</ID><SYNONYM><LITERAL>amaçlamak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Bir hedefe, gayeye ulaşmayı istemek</DEF></SYNSET>
+<SYNSET><ID>TUR10-0031880</ID><SYNONYM><LITERAL>amaçlı<SENSE>2</SENSE></LITERAL></SYNONYM><POS>a</POS><DEF>Bir amaca yönelik</DEF></SYNSET>
+<SYNSET><ID>TUR10-0032500</ID><SYNONYM><LITERAL>ambiyans<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Durum, ortam, çevre, muhit, atmosfer</DEF></SYNSET>
+<SYNSET><ID>TUR10-0032900</ID><SYNONYM><LITERAL>Amerikan<SENSE>2</SENSE></LITERAL></SYNONYM><POS>a</POS><DEF>Amerika'ya özgü, Amerika ile ilgili olan</DEF></SYNSET>
+<SYNSET><ID>TUR10-0033320</ID><SYNONYM><LITERAL>amiral<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Rütbesi general ile aynı olan deniz subayı</DEF></SYNSET>
+<SYNSET><ID>TUR10-0034590</ID><SYNONYM><LITERAL>anahtar<SENSE>6</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Vesile, araç, vasıta</DEF></SYNSET>
+<SYNSET><ID>TUR10-0035990</ID><SYNONYM><LITERAL>ancak<SENSE>4</SENSE></LITERAL></SYNONYM><POS>b</POS><DEF>"Lakin, ama, yalnız" sözleri gibi bir düşünceye karşıt ikinci bir düşünceyi anlatan bir söz</DEF></SYNSET>
+<SYNSET><ID>TUR10-0036190</ID><SYNONYM><LITERAL>benzemek<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>İki kişi veya nesne arasında, birbirleriyle eş olacak kadar ortak nitelikler bulunmak</DEF></SYNSET>
+<SYNSET><ID>TUR10-0037260</ID><SYNONYM><LITERAL>animasyon<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Tek tek resimleri veya hareketsiz cisimleri gösterim sırasında hareket duygusu verebilecek bir biçimde düzenleme ve filme aktarma işi</DEF></SYNSET>
+<SYNSET><ID>TUR10-0037290</ID><SYNONYM><LITERAL>anime<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Japon çizgi filmi</DEF></SYNSET>
+<SYNSET><ID>TUR10-0037520</ID><SYNONYM><LITERAL>anlam<SENSE>2</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Bir önermenin, bir tasarının, bir düşüncenin veya eserin anlatmak istediği şey</DEF></SYNSET>
+<SYNSET><ID>TUR10-0037550</ID><SYNONYM><LITERAL>anlamak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Bir şeyin ne demek olduğunu, neye işaret ettiğini kavramak</DEF></SYNSET>
+<SYNSET><ID>TUR10-0037900</ID><SYNONYM><LITERAL>anlaşılan<SENSE>1</SENSE></LITERAL></SYNONYM><POS>b</POS><DEF>Görünüşe göre, muhtemelen</DEF></SYNSET>
+<SYNSET><ID>TUR10-0038000</ID><SYNONYM><LITERAL>anlaşmak<SENSE>2</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Sözleşmek, sözleşme imzalamak</DEF></SYNSET>
+<SYNSET><ID>TUR10-0038070</ID><SYNONYM><LITERAL>anlatıcı<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Hikâye, fıkra ve benzerini anlatan kimse</DEF></SYNSET>
+<SYNSET><ID>TUR10-0038110</ID><SYNONYM><LITERAL>anlatım<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Anlatma işi</DEF></SYNSET>
+<SYNSET><ID>TUR10-0038210</ID><SYNONYM><LITERAL>anlatmak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Bir konu üzerinde açıklama yapmak, açıklamada bulunmak, bilgi vermek, izah etmek</DEF></SYNSET>
+<SYNSET><ID>TUR10-0038230</ID><SYNONYM><LITERAL>anlatmak<SENSE>3</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Söylemek, nakletmek</DEF></SYNSET>
+<SYNSET><ID>TUR10-0038290</ID><SYNONYM><LITERAL>anlayış<SENSE>4</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Ayırıcı bir nitelik olmak bakımından görüş, zihniyet</DEF></SYNSET>
+<SYNSET><ID>TUR10-0038470</ID><SYNONYM><LITERAL>anmak<SENSE>4</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Adlandırmak, ad koymak</DEF></SYNSET>
+<SYNSET><ID>TUR10-0038590</ID><SYNONYM><LITERAL>anonim<SENSE>1</SENSE></LITERAL></SYNONYM><POS>a</POS><DEF>Adı sanı bilinmeyen</DEF></SYNSET>
+<SYNSET><ID>TUR10-0039300</ID><SYNONYM><LITERAL>antik<SENSE>1</SENSE></LITERAL></SYNONYM><POS>a</POS><DEF>İlk Çağdaki uygarlıklarla, özellikle eski Yunan ve Roma uygarlıkları ile ilgili olan</DEF></SYNSET>
+<SYNSET><ID>TUR10-0039450</ID><SYNONYM><LITERAL>antik çağ<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Eski Yunan ve Roma uygarlıklarının gelişip yayıldığı çağ</DEF></SYNSET>
+<SYNSET><ID>TUR10-0040320</ID><SYNONYM><LITERAL>aniden<SENSE>1</SENSE></LITERAL></SYNONYM><POS>b</POS><DEF>Hiç hatıra gelmedik bir sırada</DEF></SYNSET>
+<SYNSET><ID>TUR10-0040410</ID><SYNONYM><LITERAL>apartman<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Birkaç katlı ve her katında bir veya birkaç daire bulunan yapı</DEF></SYNSET>
+<SYNSET><ID>TUR10-0040640</ID><SYNONYM><LITERAL>bitkin<SENSE>1</SENSE></LITERAL></SYNONYM><POS>a</POS><DEF>Gücü tükenmiş olan</DEF></SYNSET>
+<SYNSET><ID>TUR10-0041290</ID><SYNONYM><LITERAL>ara<SENSE>3</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Kişilerin veya toplulukların birbirine karşı olan durumu veya ilgisi</DEF></SYNSET>
+<SYNSET><ID>TUR10-0041300</ID><SYNONYM><LITERAL>ara<SENSE>4</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Toplu bulunan nesnelerin veya kimselerin içi</DEF></SYNSET>
+<SYNSET><ID>TUR10-0041880</ID><SYNONYM><LITERAL>araç<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Bir iş yapmakta veya sonuçlandırmakta, gücünden yararlanılan nesne</DEF></SYNSET>
+<SYNSET><ID>TUR10-0042250</ID><SYNONYM><LITERAL>aralamak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>İki şey arasında açıklık oluşturmak, yarı açmak</DEF></SYNSET>
+<SYNSET><ID>TUR10-0042380</ID><SYNONYM><LITERAL>aralık<SENSE>5</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Yılın otuz bir gün süren, son ayı; ilk kânun; kânunuevvel</DEF></SYNSET>
+<SYNSET><ID>TUR10-0042530</ID><SYNONYM><LITERAL>arama<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Aramak işi, taharri</DEF></SYNSET>
+<SYNSET><ID>TUR10-0042580</ID><SYNONYM><LITERAL>aramak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Birini veya bir şeyi bulmaya çalışmak</DEF></SYNSET>
+<SYNSET><ID>TUR10-0043290</ID><SYNONYM><LITERAL>araştırma<SENSE>2</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Bilim ve sanatla ilgili olarak yapılan yöntemli çalışma</DEF></SYNSET>
+<SYNSET><ID>TUR10-0043300</ID><SYNONYM><LITERAL>araştırmacı<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Bilim ve sanat alanlarında araştırma yapan kimse, araştırman</DEF></SYNSET>
+<SYNSET><ID>TUR10-0043490</ID><SYNONYM><LITERAL>arayış<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Arama işi veya biçimi</DEF></SYNSET>
+<SYNSET><ID>TUR10-0043510</ID><SYNONYM><LITERAL>arayüz<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Bilgisayar yazılımlarının kullanıcı tarafından çalıştırılmasını sağlayan, çeşitli resimlerin, grafiklerin, yazıların yer aldığı ön sayfa</DEF></SYNSET>
+<SYNSET><ID>TUR10-0043980</ID><SYNONYM><LITERAL>arena<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Boğa güreşi, yarış, oyun vb. türlü gösteriler yapılan alan</DEF></SYNSET>
+<SYNSET><ID>TUR10-0044290</ID><SYNONYM><LITERAL>arı<SENSE>4</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Zar kanatlılardan, bal ve bal mumu yapan, iğnesiyle sokan böcek</DEF></SYNSET>
+<SYNSET><ID>TUR10-0045480</ID><SYNONYM><LITERAL>arka<SENSE>7</SENSE></LITERAL></SYNONYM><POS>a</POS><DEF>Arkada olan, arkada bulunan</DEF></SYNSET>
+<SYNSET><ID>TUR10-0045520</ID><SYNONYM><LITERAL>tekrar tekrar<SENSE>1</SENSE></LITERAL></SYNONYM><POS>b</POS><DEF>Hemen birbirinin arkasından</DEF></SYNSET>
+<SYNSET><ID>TUR10-0045570</ID><SYNONYM><LITERAL>arkadaş<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Birbirlerine karşı sevgi ve anlayış gösteren kimselerden her biri</DEF></SYNSET>
+<SYNSET><ID>TUR10-0045840</ID><SYNONYM><LITERAL>arka plan<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Gerideki görünüm</DEF></SYNSET>
+<SYNSET><ID>TUR10-0045860</ID><SYNONYM><LITERAL>arka planda<SENSE>2</SENSE></LITERAL></SYNONYM><POS>a</POS><DEF>Geride</DEF></SYNSET>
+<SYNSET><ID>TUR10-0047850</ID><SYNONYM><LITERAL>artırmak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Miktarını, sayısını, ölçüsünü artırmak</DEF></SYNSET>
+<SYNSET><ID>TUR10-0048110</ID><SYNONYM><LITERAL>arttırma<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Arttırmak işi</DEF></SYNSET>
+<SYNSET><ID>TUR10-0048420</ID><SYNONYM><LITERAL>arzulamak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Bir şeye karşı eğilim duymak</DEF></SYNSET>
+<SYNSET><ID>TUR10-0048780</ID><SYNONYM><LITERAL>asansör<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>İnsanları, yükleri bir yapının bir katından ötekine veya yüksek yerlere çıkarıp indiren, elektrikle işleyen araç</DEF></SYNSET>
+<SYNSET><ID>TUR10-0049280</ID><SYNONYM><LITERAL>asıl<SENSE>3</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Düşüncenin gerçekle uyuşması, yargı ve önermelerin gerçeğe uygun olması</DEF></SYNSET>
+<SYNSET><ID>TUR10-0050020</ID><SYNONYM><LITERAL>asker<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Erden generale kadar orduda görevli bulunan herkes</DEF></SYNSET>
+<SYNSET><ID>TUR10-0050120</ID><SYNONYM><LITERAL>askeri<SENSE>1</SENSE></LITERAL></SYNONYM><POS>a</POS><DEF>Askerlikle ilgili, askere özgü</DEF></SYNSET>
+<SYNSET><ID>TUR10-0050580</ID><SYNONYM><LITERAL>asla<SENSE>1</SENSE></LITERAL><LITERAL>hiç de<SENSE>1</SENSE></LITERAL></SYNONYM><POS>b</POS><DEF>Hiçbir zaman, hiçbir biçimde</DEF></SYNSET>
+<SYNSET><ID>TUR10-0050830</ID><SYNONYM><LITERAL>ana fikir<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Bir konuşmanın, yazının, eserin temeli olan düşünce, olay veya durum, mesele</DEF></SYNSET>
+<SYNSET><ID>TUR10-0050860</ID><SYNONYM><LITERAL>baş<SENSE>4</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Temel, esas</DEF></SYNSET>
+<SYNSET><ID>TUR10-0053300</ID><SYNONYM><LITERAL>aşırı<SENSE>1</SENSE></LITERAL></SYNONYM><POS>a</POS><DEF>Alışılan veya dayanılabilen dereceden çok daha fazla</DEF></SYNSET>
+<SYNSET><ID>TUR10-0053750</ID><SYNONYM><LITERAL>aşikar<SENSE>1</SENSE></LITERAL></SYNONYM><POS>a</POS><DEF>Açık, apaçık, belli, meydanda olan</DEF></SYNSET>
+<SYNSET><ID>TUR10-0054710</ID><SYNONYM><LITERAL>ateş<SENSE>2</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Tutuşmuş olan cisim</DEF></SYNSET>
+<SYNSET><ID>TUR10-0054730</ID><SYNONYM><LITERAL>ateş<SENSE>4</SENSE></LITERAL><LITERAL>ateş etme<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Patlayıcı silahlar ile mermi atılması</DEF></SYNSET>
+<SYNSET><ID>TUR10-0055040</ID><SYNONYM><LITERAL>coşturmak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Coşmasını sağlamak, coşmasına yol açmak</DEF></SYNSET>
+<SYNSET><ID>TUR10-0055790</ID><SYNONYM><LITERAL>atış<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Atma işi veya biçimi</DEF></SYNSET>
+<SYNSET><ID>TUR10-0056150</ID><SYNONYM><LITERAL>atlama<SENSE>2</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Belirli bir yerden gerilip hız alarak yapılan sıçrama ile vücudu yerden kesip daha uzak bir yere kondurma veya belli bir yükseklikten aşırma</DEF></SYNSET>
+<SYNSET><ID>TUR10-0056190</ID><SYNONYM><LITERAL>atlamak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Bir engeli sıçrayarak veya fırlayarak aşmak</DEF></SYNSET>
+<SYNSET><ID>TUR10-0056200</ID><SYNONYM><LITERAL>atlamak<SENSE>2</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Yüksek bir yerden alçak bir yere, ayaküstü gelecek biçimde kendini bırakmak</DEF></SYNSET>
+<SYNSET><ID>TUR10-0056210</ID><SYNONYM><LITERAL>atlamak<SENSE>3</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Binmek</DEF></SYNSET>
+<SYNSET><ID>TUR10-0056590</ID><SYNONYM><LITERAL>atletik<SENSE>1</SENSE></LITERAL></SYNONYM><POS>a</POS><DEF>Vücudu gelişmiş, biçimli, atlet gibi</DEF></SYNSET>
+<SYNSET><ID>TUR10-0056680</ID><SYNONYM><LITERAL>atma<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Atmak işi</DEF></SYNSET>
+<SYNSET><ID>TUR10-0056710</ID><SYNONYM><LITERAL>atmak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Bir cismi bir yöne doğru hızla atmak, bulunduğu yerden dışarı atmak</DEF></SYNSET>
+<SYNSET><ID>TUR10-0056790</ID><SYNONYM><LITERAL>atmak<SENSE>9</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Top, tüfek vb. silahları patlatmak</DEF></SYNSET>
+<SYNSET><ID>TUR10-0057160</ID><SYNONYM><LITERAL>atmosfer<SENSE>3</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>İçinde yaşanılan ve etkisinde kalınan ortam, hava</DEF></SYNSET>
+<SYNSET><ID>TUR10-0057450</ID><SYNONYM><LITERAL>av<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Karada, denizde, gölde veya akarsularda evcil olmayan hayvanları vurma veya yakalama işi</DEF></SYNSET>
+<SYNSET><ID>TUR10-0057660</ID><SYNONYM><LITERAL>avantaj<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Üstünlük sağlayan şey</DEF></SYNSET>
+<SYNSET><ID>TUR10-0057690</ID><SYNONYM><LITERAL>avantajlı<SENSE>1</SENSE></LITERAL></SYNONYM><POS>a</POS><DEF>Yarar sağlayan, yararlı durum veya şey</DEF></SYNSET>
+<SYNSET><ID>TUR10-0057950</ID><SYNONYM><LITERAL>avcı<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Avı kendine iş edinen kimse</DEF></SYNSET>
+<SYNSET><ID>TUR10-0058930</ID><SYNONYM><LITERAL>ay<SENSE>3</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Yılın on iki bölümünden her biri</DEF></SYNSET>
+<SYNSET><ID>TUR10-0059030</ID><SYNONYM><LITERAL>ayak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Bacakların bilekten aşağıda bulunan ve yere basan bölümü</DEF></SYNSET>
+<SYNSET><ID>TUR10-0059510</ID><SYNONYM><LITERAL>başkaldırı<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Birçok kimsenin cebir ve şiddet kullanarak devlet güçlerine karşı gelmesi</DEF></SYNSET>
+<SYNSET><ID>TUR10-0060020</ID><SYNONYM><LITERAL>ayar<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Bir aygıtın gereken işi yapabilmesi durumu</DEF></SYNSET>
+<SYNSET><ID>TUR10-0060120</ID><SYNONYM><LITERAL>ayarlamak<SENSE>2</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Bir aygıtı belli bir iş yapabilecek duruma getirmek</DEF></SYNSET>
+<SYNSET><ID>TUR10-0060920</ID><SYNONYM><LITERAL>aydınlık<SENSE>3</SENSE></LITERAL></SYNONYM><POS>a</POS><DEF>Işık alan</DEF></SYNSET>
+<SYNSET><ID>TUR10-0061480</ID><SYNONYM><LITERAL>ayıp<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Toplumun ahlak kurallarına aykırı olan, utanılacak durum veya davranış</DEF></SYNSET>
+<SYNSET><ID>TUR10-0061650</ID><SYNONYM><LITERAL>ayırmak<SENSE>2</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Bir bütünden bir parçayı herhangi bir amaçla bir tarafa koymak; saklamak</DEF></SYNSET>
+<SYNSET><ID>TUR10-0061700</ID><SYNONYM><LITERAL>ayırmak<SENSE>7</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>İki veya daha çok kimse arasındaki anlaşmayı, uzlaşmayı bozmak</DEF></SYNSET>
+<SYNSET><ID>TUR10-0062260</ID><SYNONYM><LITERAL>aylık<SENSE>2</SENSE></LITERAL></SYNONYM><POS>a</POS><DEF>Bir ay içinde olan</DEF></SYNSET>
+<SYNSET><ID>TUR10-0062710</ID><SYNONYM><LITERAL>aynı<SENSE>1</SENSE></LITERAL></SYNONYM><POS>a</POS><DEF>Başkası değil; yine o</DEF></SYNSET>
+<SYNSET><ID>TUR10-0063040</ID><SYNONYM><LITERAL>ayrı<SENSE>2</SENSE></LITERAL></SYNONYM><POS>a</POS><DEF>Başka; başka türlü</DEF></SYNSET>
+<SYNSET><ID>TUR10-0063080</ID><SYNONYM><LITERAL>ayrı ayrı<SENSE>1</SENSE></LITERAL></SYNONYM><POS>b</POS><DEF>Her biri için</DEF></SYNSET>
+<SYNSET><ID>TUR10-0063100</ID><SYNONYM><LITERAL>ayrıca<SENSE>1</SENSE></LITERAL></SYNONYM><POS>b</POS><DEF>Ayrı olarak; başkaca</DEF></SYNSET>
+<SYNSET><ID>TUR10-0063120</ID><SYNONYM><LITERAL>ayrıca<SENSE>3</SENSE></LITERAL></SYNONYM><POS>b</POS><DEF>Bundan başka</DEF></SYNSET>
+<SYNSET><ID>TUR10-0063430</ID><SYNONYM><LITERAL>ayrılanmak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Ayrı duruma gelmek</DEF></SYNSET>
+<SYNSET><ID>TUR10-0063580</ID><SYNONYM><LITERAL>ayrılmak<SENSE>2</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Bir yerden, bir kimseden, bir şeyden uzaklaşmak</DEF></SYNSET>
+<SYNSET><ID>TUR10-0064340</ID><SYNONYM><LITERAL>az<SENSE>2</SENSE></LITERAL></SYNONYM><POS>b</POS><DEF>Alışılmış olandan, umulandan veya gerekenden eksik</DEF></SYNSET>
+<SYNSET><ID>TUR10-0064410</ID><SYNONYM><LITERAL>azalma<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Eskisinden az duruma gelme</DEF></SYNSET>
+<SYNSET><ID>TUR10-0064470</ID><SYNONYM><LITERAL>azaltma<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Az denecek bir miktara indirmek</DEF></SYNSET>
+<SYNSET><ID>TUR10-0064910</ID><SYNONYM><LITERAL>ne kadar<SENSE>1</SENSE></LITERAL></SYNONYM><POS>b</POS><DEF>Yetecek kadar, az denmeyecek kadar</DEF></SYNSET>
+<SYNSET><ID>TUR10-0065490</ID><SYNONYM><LITERAL>azim<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Bir işteki engelleri yenme kararlılığı</DEF></SYNSET>
+<SYNSET><ID>TUR10-0066140</ID><SYNONYM><LITERAL>baba<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Çocuğun dünyaya gelmesinde etken olan erkek</DEF></SYNSET>
+<SYNSET><ID>TUR10-0066330</ID><SYNONYM><LITERAL>babacan<SENSE>1</SENSE></LITERAL></SYNONYM><POS>a</POS><DEF>Cana yakın, olgun, hoşgörülü, iyi kalpli, güvenilir erkek</DEF></SYNSET>
+<SYNSET><ID>TUR10-0068780</ID><SYNONYM><LITERAL>bağımlı<SENSE>1</SENSE></LITERAL></SYNONYM><POS>a</POS><DEF>Başka bir şeyin istemine, gücüne veya yardımına bağlı olan, özgürlüğü, özerkliği olmayan</DEF></SYNSET>
+<SYNSET><ID>TUR10-0068800</ID><SYNONYM><LITERAL>bağımlılık<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Bir şeye veya bir kimseye bağlı olma; bağlılık</DEF></SYNSET>
+<SYNSET><ID>TUR10-0068830</ID><SYNONYM><LITERAL>bağımsız<SENSE>2</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Herhangi bir kuruluşa, partiye bağlı olmayan kimse</DEF></SYNSET>
+<SYNSET><ID>TUR10-0069740</ID><SYNONYM><LITERAL>bağlamak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Bir şeyi bir yere veya bir şeye iliştirmek, tutturmak</DEF></SYNSET>
+<SYNSET><ID>TUR10-0069880</ID><SYNONYM><LITERAL>bağlamak<SENSE>15</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Birinde bir şeye karşı ilgi, istek uyandırarak o şeye ilgi, yakınlık duymasını sağlamak</DEF></SYNSET>
+<SYNSET><ID>TUR10-0070050</ID><SYNONYM><LITERAL>bağlantı<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>İki veya daha çok şeyin birbiriyle bağlı bulunması; ilişki</DEF></SYNSET>
+<SYNSET><ID>TUR10-0070380</ID><SYNONYM><LITERAL>bağlı<SENSE>3</SENSE></LITERAL></SYNONYM><POS>a</POS><DEF>Sınırlanmış, belirlenmiş, belirli</DEF></SYNSET>
+<SYNSET><ID>TUR10-0071220</ID><SYNONYM><LITERAL>bahis<SENSE>2</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Görüşünde veya iddiasında haklı çıkacak tarafa bir şey verilmesini kabul eden sözlü anlaşma</DEF></SYNSET>
+<SYNSET><ID>TUR10-0071270</ID><SYNONYM><LITERAL>söz konusu<SENSE>1</SENSE></LITERAL></SYNONYM><POS>a</POS><DEF>Sözü edilen, üzerinde konuşulan</DEF></SYNSET>
+<SYNSET><ID>TUR10-0071350</ID><SYNONYM><LITERAL>bahsetme<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Sözünü etme</DEF></SYNSET>
+<SYNSET><ID>TUR10-0071360</ID><SYNONYM><LITERAL>bahsetmek<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Bir konu üzerinde söz söylemek, konuşmak, sözünü etmek</DEF></SYNSET>
+<SYNSET><ID>TUR10-0071970</ID><SYNONYM><LITERAL>bakımından<SENSE>1</SENSE></LITERAL></SYNONYM><POS>b</POS><DEF>Bakış veya görüş açısı yönünden, değerlendirme açısından</DEF></SYNSET>
+<SYNSET><ID>TUR10-0072120</ID><SYNONYM><LITERAL>bakır<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Atom numarası 29, yoğunluğu 8,95 olan, 1084 °C'ye doğru eriyen, doğada serbest veya birleşik olarak bulunan, ısı ve elektriği iyi ileten, kolay dövülür ve işlenir olduğundan eski çağlardan beri türlü işlerde kullanılan, kızıl renkli element</DEF></SYNSET>
+<SYNSET><ID>TUR10-0072340</ID><SYNONYM><LITERAL>bakış<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Gözleri görmek ya da algılamak için bir şeye doğru yöneltme</DEF></SYNSET>
+<SYNSET><ID>TUR10-0072420</ID><SYNONYM><LITERAL>bakışmak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>İki veya daha çok kimse birbirine bakmak</DEF></SYNSET>
+<SYNSET><ID>TUR10-0072920</ID><SYNONYM><LITERAL>bakmak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Bakışı bir şey üzerine çevirmek</DEF></SYNSET>
+<SYNSET><ID>TUR10-0074020</ID><SYNONYM><LITERAL>balık<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Omurgalılardan, suda yaşayan, solungaçla nefes alan ve yumurtadan üreyen hayvanların genel adı</DEF></SYNSET>
+<SYNSET><ID>TUR10-0075770</ID><SYNONYM><LITERAL>bana<SENSE>1</SENSE></LITERAL></SYNONYM><POS>b</POS><DEF>Ben zamirinin yönelme durumu ekli biçimi</DEF></SYNSET>
+<SYNSET><ID>TUR10-0076150</ID><SYNONYM><LITERAL>banka<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Faizle para alıp veren, kredi, iskonto, kambiyo işlemleri yapan, kasalarında para, değerli belge, eşya saklayan ve daha başka ekonomik etkinliklerde bulunan kuruluş</DEF></SYNSET>
+<SYNSET><ID>TUR10-0076380</ID><SYNONYM><LITERAL>kesin olarak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>b</POS><DEF>Ne olursa olsun, ne yapıp yapıp, kesin bir biçimde</DEF></SYNSET>
+<SYNSET><ID>TUR10-0077080</ID><SYNONYM><LITERAL>barbar<SENSE>1</SENSE></LITERAL></SYNONYM><POS>a</POS><DEF>Uygarlaşmamış kavim, topluluk</DEF></SYNSET>
+<SYNSET><ID>TUR10-0077830</ID><SYNONYM><LITERAL>barışçıl<SENSE>1</SENSE></LITERAL></SYNONYM><POS>a</POS><DEF>Barışı seven</DEF></SYNSET>
+<SYNSET><ID>TUR10-0078050</ID><SYNONYM><LITERAL>bariz<SENSE>1</SENSE></LITERAL><LITERAL>belirgin<SENSE>1</SENSE></LITERAL></SYNONYM><POS>a</POS><DEF>Belirmiş durumda olan, göze çarpan, besbelli, açık</DEF></SYNSET>
+<SYNSET><ID>TUR10-0079300</ID><SYNONYM><LITERAL>basit<SENSE>2</SENSE></LITERAL></SYNONYM><POS>a</POS><DEF>Sıkıntı çekilmeden, güçlükle karşılaşmadan yapılan, eziyetsiz, emeksiz</DEF></SYNSET>
+<SYNSET><ID>TUR10-0079590</ID><SYNONYM><LITERAL>baskı<SENSE>5</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Hak ve özgürlükleri kısıtlayarak zor altında bulundurma durumu</DEF></SYNSET>
+<SYNSET><ID>TUR10-0080020</ID><SYNONYM><LITERAL>basmak<SENSE>3</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Bir şeyi, üzerine kuvvet vererek itmek</DEF></SYNSET>
+<SYNSET><ID>TUR10-0080490</ID><SYNONYM><LITERAL>baston<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Yürürken dayanmaya yarayan, ağaç veya metalden yapılan araç, sopa</DEF></SYNSET>
+<SYNSET><ID>TUR10-0080710</ID><SYNONYM><LITERAL>baş<SENSE>10</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Bir şeyin yakını veya çevresi</DEF></SYNSET>
+<SYNSET><ID>TUR10-0081020</ID><SYNONYM><LITERAL>başarı<SENSE>2</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Bir işte elde edilen yararlı sonuç</DEF></SYNSET>
+<SYNSET><ID>TUR10-0081030</ID><SYNONYM><LITERAL>başarılı<SENSE>1</SENSE></LITERAL></SYNONYM><POS>a</POS><DEF>Bir işte yararlı sonuç elde eden</DEF></SYNSET>
+<SYNSET><ID>TUR10-0081050</ID><SYNONYM><LITERAL>başarılı<SENSE>3</SENSE></LITERAL></SYNONYM><POS>b</POS><DEF>Başarılı bir biçimde, başarı göstererek</DEF></SYNSET>
+<SYNSET><ID>TUR10-0081080</ID><SYNONYM><LITERAL>başarım<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Elde edilen bir başarı</DEF></SYNSET>
+<SYNSET><ID>TUR10-0081100</ID><SYNONYM><LITERAL>başarısız<SENSE>1</SENSE></LITERAL></SYNONYM><POS>a</POS><DEF>Bir işte yararlı sonuç elde edemeyen</DEF></SYNSET>
+<SYNSET><ID>TUR10-0081150</ID><SYNONYM><LITERAL>başarmak<SENSE>1</SENSE></LITERAL><LITERAL>başarı kazanmak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Bir işi istenilen biçimde bitirmek</DEF></SYNSET>
+<SYNSET><ID>TUR10-0081190</ID><SYNONYM><LITERAL>tepe aşağı<SENSE>1</SENSE></LITERAL></SYNONYM><POS>b</POS><DEF>Başı aşağı gelecek biçimde</DEF></SYNSET>
+<SYNSET><ID>TUR10-0081280</ID><SYNONYM><LITERAL>baş başa<SENSE>1</SENSE></LITERAL></SYNONYM><POS>b</POS><DEF>İç içe, yan yana </DEF></SYNSET>
+<SYNSET><ID>TUR10-0081600</ID><SYNONYM><LITERAL>başyapıt<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Kendi türünde mükemmel olan, üstün ve kalıcı nitelikte eser</DEF></SYNSET>
+<SYNSET><ID>TUR10-0082070</ID><SYNONYM><LITERAL>başına buyruk<SENSE>1</SENSE></LITERAL></SYNONYM><POS>a</POS><DEF>Kimseden izin almaksızın dilediği gibi davranan kimse</DEF></SYNSET>
+<SYNSET><ID>TUR10-0082080</ID><SYNONYM><LITERAL>başında<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Bir şeyin sırada önde olanı, önde geleni</DEF></SYNSET>
+<SYNSET><ID>TUR10-0082160</ID><SYNONYM><LITERAL>başka<SENSE>1</SENSE></LITERAL></SYNONYM><POS>a</POS><DEF>Bilinenden ayrı, değişik, farklı</DEF></SYNSET>
+<SYNSET><ID>TUR10-0082360</ID><SYNONYM><LITERAL>başkan<SENSE>2</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Bazı ülkelerde devletin ve hükûmetin başı</DEF></SYNSET>
+<SYNSET><ID>TUR10-0082700</ID><SYNONYM><LITERAL>başlama<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Başlamak eylemi</DEF></SYNSET>
+<SYNSET><ID>TUR10-0082730</ID><SYNONYM><LITERAL>başlamak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Bir işe girişmek, yeltenmek; harekete geçmek</DEF></SYNSET>
+<SYNSET><ID>TUR10-0082740</ID><SYNONYM><LITERAL>başlamak<SENSE>2</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Çalışır, işler, yürür duruma girmek</DEF></SYNSET>
+<SYNSET><ID>TUR10-0082810</ID><SYNONYM><LITERAL>baş<SENSE>3</SENSE></LITERAL><LITERAL>başlangıç<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Bir iş, bir dönem, bir hayat ve benzerinin ilk bölümü</DEF></SYNSET>
+<SYNSET><ID>TUR10-0083060</ID><SYNONYM><LITERAL>başlık<SENSE>6</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Bir yazının, bir kitabın bölümlerinin başına konulan ve konuyu kısaca tanıtan ibare</DEF></SYNSET>
+<SYNSET><ID>TUR10-0083700</ID><SYNONYM><LITERAL>başrol<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Başoyuncunun rolü</DEF></SYNSET>
+<SYNSET><ID>TUR10-0083810</ID><SYNONYM><LITERAL>başta<SENSE>1</SENSE></LITERAL></SYNONYM><POS>a</POS><DEF>En önde olan</DEF></SYNSET>
+<SYNSET><ID>TUR10-0084000</ID><SYNONYM><LITERAL>her zaman<SENSE>1</SENSE></LITERAL></SYNONYM><POS>b</POS><DEF>Ara vermeden, sürekli</DEF></SYNSET>
+<SYNSET><ID>TUR10-0084220</ID><SYNONYM><LITERAL>başvurmak<SENSE>2</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Bir şeye yararlanmak amacıyla el atmak</DEF></SYNSET>
+<SYNSET><ID>TUR10-0085500</ID><SYNONYM><LITERAL>ortadan kalkmak<SENSE>1</SENSE></LITERAL><LITERAL>yok olmak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Varlığı sona ermek</DEF></SYNSET>
+<SYNSET><ID>TUR10-0086350</ID><SYNONYM><LITERAL>bayılmak<SENSE>2</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Çok hoşlanmak, çok sevmek</DEF></SYNSET>
+<SYNSET><ID>TUR10-0086550</ID><SYNONYM><LITERAL>bayır<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>İnişli yer, dağ sırtı, tepe</DEF></SYNSET>
+<SYNSET><ID>TUR10-0086660</ID><SYNONYM><LITERAL>baykuş<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Başında, kulak yerinde iki sorgucu bulunan, yırtıcı gece kuşlarının genel adı</DEF></SYNSET>
+<SYNSET><ID>TUR10-0087420</ID><SYNONYM><LITERAL>ana<SENSE>7</SENSE></LITERAL><LITERAL>baz<SENSE>1</SENSE></LITERAL></SYNONYM><POS>a</POS><DEF>Bir şeyin temelini oluşturan</DEF></SYNSET>
+<SYNSET><ID>TUR10-0087530</ID><SYNONYM><LITERAL>bazı<SENSE>1</SENSE></LITERAL></SYNONYM><POS>a</POS><DEF>Kimi</DEF></SYNSET>
+<SYNSET><ID>TUR10-0087800</ID><SYNONYM><LITERAL>bebe<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Küçük çocuk</DEF></SYNSET>
+<SYNSET><ID>TUR10-0088020</ID><SYNONYM><LITERAL>beceri<SENSE>2</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Kişinin yatkınlık ve öğrenime bağlı olarak bir işi başarma ve bir işlemi amaca uygun olarak sonuçlandırma yeteneği; maharet</DEF></SYNSET>
+<SYNSET><ID>TUR10-0088030</ID><SYNONYM><LITERAL>beceri<SENSE>3</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Vücudun, yapılması güç alıştırmalara yatkın olması durumu</DEF></SYNSET>
+<SYNSET><ID>TUR10-0088580</ID><SYNONYM><LITERAL>cisim<SENSE>2</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Vücudun, baş, kol ve bacak dışında kalan bölümü</DEF></SYNSET>
+<SYNSET><ID>TUR10-0089220</ID><SYNONYM><LITERAL>her bir<SENSE>1</SENSE></LITERAL></SYNONYM><POS>a</POS><DEF>Sayılabilen şeylerin ayrı ayrı hepsi</DEF></SYNSET>
+<SYNSET><ID>TUR10-0089600</ID><SYNONYM><LITERAL>bekleme<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Beklemek işi</DEF></SYNSET>
+<SYNSET><ID>TUR10-0089610</ID><SYNONYM><LITERAL>vakit öldürme<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Zaman harcamak, zaman geçirmek</DEF></SYNSET>
+<SYNSET><ID>TUR10-0089620</ID><SYNONYM><LITERAL>beklemek<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Bir iş oluncaya, biri gelinceye değin bir yerde kalmak, durmak</DEF></SYNSET>
+<SYNSET><ID>TUR10-0089630</ID><SYNONYM><LITERAL>beklemek<SENSE>2</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Süre tanımak, acele etmemek</DEF></SYNSET>
+<SYNSET><ID>TUR10-0089660</ID><SYNONYM><LITERAL>beklemek<SENSE>5</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Karşılaşma ihtimali bulunmak</DEF></SYNSET>
+<SYNSET><ID>TUR10-0089670</ID><SYNONYM><LITERAL>beklemek<SENSE>6</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Aramak, istemek</DEF></SYNSET>
+<SYNSET><ID>TUR10-0089850</ID><SYNONYM><LITERAL>beklenti<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Gerçekleşmesi beklenen ve istenen şey</DEF></SYNSET>
+<SYNSET><ID>TUR10-0089940</ID><SYNONYM><LITERAL>bekleyiş<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Bekleme işi veya biçimi</DEF></SYNSET>
+<SYNSET><ID>TUR10-0090150</ID><SYNONYM><LITERAL>bela<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>İçinden çıkılması güç, sakıncalı durum</DEF></SYNSET>
+<SYNSET><ID>TUR10-0091010</ID><SYNONYM><LITERAL>belgesel<SENSE>2</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Belge niteliği taşıyan film veya televizyon programı</DEF></SYNSET>
+<SYNSET><ID>TUR10-0091580</ID><SYNONYM><LITERAL>belirmek<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Önce belli veya görünür olmayan bir şey ortaya çıkmak</DEF></SYNSET>
+<SYNSET><ID>TUR10-0092080</ID><SYNONYM><LITERAL>belki<SENSE>1</SENSE></LITERAL></SYNONYM><POS>b</POS><DEF>Olabilir ki, muhtemel olarak</DEF></SYNSET>
+<SYNSET><ID>TUR10-0092150</ID><SYNONYM><LITERAL>bellek<SENSE>2</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Bir bilgisayarda, programı değişmeyen verileri, yapılacak iş için gerekli olan ara sonuçları toplayan bölüm</DEF></SYNSET>
+<SYNSET><ID>TUR10-0092180</ID><SYNONYM><LITERAL>hafıza kaybı<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Büyük sarsıntı, humma yüzünden belleğin bozulması veya kaybolması biçiminde beliren ruh hastalığı, bellek kaybı</DEF></SYNSET>
+<SYNSET><ID>TUR10-0092370</ID><SYNONYM><LITERAL>aşina<SENSE>2</SENSE></LITERAL><LITERAL>bilindik<SENSE>1</SENSE></LITERAL></SYNONYM><POS>a</POS><DEF>Bilinmedik bir yanı olmayan, bilinen</DEF></SYNSET>
+<SYNSET><ID>TUR10-0092410</ID><SYNONYM><LITERAL>büyük<SENSE>6</SENSE></LITERAL><LITERAL>ciddi<SENSE>7</SENSE></LITERAL></SYNONYM><POS>a</POS><DEF>Nitelik veya nicelik bakımından değeri olan</DEF></SYNSET>
+<SYNSET><ID>TUR10-0092580</ID><SYNONYM><LITERAL>ben<SENSE>6</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Teklik birinci kişiyi gösteren söz</DEF></SYNSET>
+<SYNSET><ID>TUR10-0093100</ID><SYNONYM><LITERAL>benimsemek<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Bir şeyi kendine mal etmek, sahip çıkmak</DEF></SYNSET>
+<SYNSET><ID>TUR10-0093450</ID><SYNONYM><LITERAL>benzemek<SENSE>2</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Sanısını uyandırmak, gibi görünmek</DEF></SYNSET>
+<SYNSET><ID>TUR10-0093460</ID><SYNONYM><LITERAL>benzerlik<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Benzer olma durumu</DEF></SYNSET>
+<SYNSET><ID>TUR10-0093540</ID><SYNONYM><LITERAL>benzeri<SENSE>1</SENSE></LITERAL></SYNONYM><POS>a</POS><DEF>Başka bir kişiyle veya nesneyle arasında birbirini andıracak kadar ortak nitelikler bulunduran</DEF></SYNSET>
+<SYNSET><ID>TUR10-0093600</ID><SYNONYM><LITERAL>benzer<SENSE>1</SENSE></LITERAL></SYNONYM><POS>a</POS><DEF>Nitelik, görünüş ve yapı bakımından bir başkasına benzeyen veya ona eş olan</DEF></SYNSET>
+<SYNSET><ID>TUR10-0093840</ID><SYNONYM><LITERAL>benzetmek<SENSE>2</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Bir şeyde başka şeye benzeyen yönler bulmak</DEF></SYNSET>
+<SYNSET><ID>TUR10-0093890</ID><SYNONYM><LITERAL>benzin<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Petrolün damıtılması ile elde edilen, özgül ağırlığı yaklaşık 0,65 olan, renksiz, uçucu, kendine özgü kokusu bulunan bir sıvı</DEF></SYNSET>
+<SYNSET><ID>TUR10-0094710</ID><SYNONYM><LITERAL>beri<SENSE>3</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>-den bu yana</DEF></SYNSET>
+<SYNSET><ID>TUR10-0095530</ID><SYNONYM><LITERAL>beslemek<SENSE>7</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Bir duyguyu gönülde yaşatmak</DEF></SYNSET>
+<SYNSET><ID>TUR10-0097430</ID><SYNONYM><LITERAL>beyaz<SENSE>2</SENSE></LITERAL></SYNONYM><POS>a</POS><DEF>Beyaz renkte olan</DEF></SYNSET>
+<SYNSET><ID>TUR10-0097740</ID><SYNONYM><LITERAL>beyaz perde<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Göstericiden çıkan görüntülerin üzerinde yansıdığı, sinema filminin oynatıldığı yüzey</DEF></SYNSET>
+<SYNSET><ID>TUR10-0098860</ID><SYNONYM><LITERAL>bezeli<SENSE>2</SENSE></LITERAL></SYNONYM><POS>a</POS><DEF>Süslü, süslenmiş</DEF></SYNSET>
+<SYNSET><ID>TUR10-0099440</ID><SYNONYM><LITERAL>bıçak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Bir sap ve çelik bölümden oluşan kesici araç</DEF></SYNSET>
+<SYNSET><ID>TUR10-0099890</ID><SYNONYM><LITERAL>bıkmak<SENSE>2</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Dayanamaz duruma gelmek</DEF></SYNSET>
+<SYNSET><ID>TUR10-0100160</ID><SYNONYM><LITERAL>bırakmak<SENSE>5</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Bulunduğu yeri veya durumu değiştirmemek</DEF></SYNSET>
+<SYNSET><ID>TUR10-0100230</ID><SYNONYM><LITERAL>bırakmak<SENSE>12</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Uğraşmaz olmak, artık uğraşmamak</DEF></SYNSET>
+<SYNSET><ID>TUR10-0100350</ID><SYNONYM><LITERAL>bırakmak<SENSE>24</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Bulunduğu veya dokunduğu yerde bir şey oluşturmak, meydana getirmek</DEF></SYNSET>
+<SYNSET><ID>TUR10-0101000</ID><SYNONYM><LITERAL>biçim<SENSE>3</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Yakışık alan şekil; uygun şekil</DEF></SYNSET>
+<SYNSET><ID>TUR10-0102200</ID><SYNONYM><LITERAL>bildirmek<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Herhangi bir şeyi haber vermek</DEF></SYNSET>
+<SYNSET><ID>TUR10-0102240</ID><SYNONYM><LITERAL>birlikte<SENSE>1</SENSE></LITERAL></SYNONYM><POS>b</POS><DEF>Hep beraber</DEF></SYNSET>
+<SYNSET><ID>TUR10-0102490</ID><SYNONYM><LITERAL>bileşen<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Bir bileşke oluşturan kuvvetlerin her biri</DEF></SYNSET>
+<SYNSET><ID>TUR10-0102600</ID><SYNONYM><LITERAL>birleşim<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>İki veya daha çok öge bir araya gelerek yeni bir öge oluşturma</DEF></SYNSET>
+<SYNSET><ID>TUR10-0102990</ID><SYNONYM><LITERAL>bilgi<SENSE>2</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Öğrenme, araştırma veya gözlem yolu ile elde edilen gerçek</DEF></SYNSET>
+<SYNSET><ID>TUR10-0103020</ID><SYNONYM><LITERAL>bilim<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Evrenin veya olayların bir bölümünü konu olarak seçen, deneye dayanan yöntemler ve gerçeklikten yararlanarak sonuç çıkarmaya çalışan düzenli bilgi</DEF></SYNSET>
+<SYNSET><ID>TUR10-0103170</ID><SYNONYM><LITERAL>bilgilendirmek<SENSE>1</SENSE></LITERAL><LITERAL>haber vermek<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Bir konuda bilgi sahibi olmasını sağlamak</DEF></SYNSET>
+<SYNSET><ID>TUR10-0103270</ID><SYNONYM><LITERAL>bilgisayar<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Çok sayıda aritmetiksel veya mantıksal işlemlerden oluşan bir işi, önceden verilmiş bir programa göre yapıp sonuçlandıran elektronik araç</DEF></SYNSET>
+<SYNSET><ID>TUR10-0103560</ID><SYNONYM><LITERAL>bilim kurgu<SENSE>1</SENSE></LITERAL></SYNONYM><POS>a</POS><DEF>Çağdaş bilim verileriyle düş gücünden oluşan film, roman vb.</DEF></SYNSET>
+<SYNSET><ID>TUR10-0103700</ID><SYNONYM><LITERAL>bilinç<SENSE>3</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Canlının duygu ve davranışlar dışındaki ruhsal süreç ve etkinliklerinin bütünü</DEF></SYNSET>
+<SYNSET><ID>TUR10-0103792</ID><SYNONYM><LITERAL>ayıptır söylemesi<SENSE>2</SENSE></LITERAL></SYNONYM><POS>i</POS><DEF>Söylenmesi ayıp sayılan bir şey söyleneceği zaman itizar makamında kullanılan bir deyim</DEF></SYNSET>
+<SYNSET><ID>TUR10-0103980</ID><SYNONYM><LITERAL>bilinen<SENSE>1</SENSE></LITERAL></SYNONYM><POS>a</POS><DEF>Değeri belli olan nicelik, bilindik, malum</DEF></SYNSET>
+<SYNSET><ID>TUR10-0104020</ID><SYNONYM><LITERAL>bilinmeyen<SENSE>1</SENSE></LITERAL></SYNONYM><POS>a</POS><DEF>Tanınmayan</DEF></SYNSET>
+<SYNSET><ID>TUR10-0104510</ID><SYNONYM><LITERAL>bilmek<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Bir şeyi anlamış veya öğrenmiş bulunmak</DEF></SYNSET>
+<SYNSET><ID>TUR10-0105370</ID><SYNONYM><LITERAL>binlerce<SENSE>1</SENSE></LITERAL><LITERAL>on binlerce<SENSE>1</SENSE></LITERAL></SYNONYM><POS>a</POS><DEF>Pek çok; çok sayıda</DEF></SYNSET>
+<SYNSET><ID>TUR10-0105420</ID><SYNONYM><LITERAL>binmek<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Yüksek bir şeyin veya bir hayvanın üstüne çıkıp ayaklarını sallandırarak oturmak</DEF></SYNSET>
+<SYNSET><ID>TUR10-0105430</ID><SYNONYM><LITERAL>binmek<SENSE>2</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Bir yere gitmek için tren, vapur, uçak, otomobil vb. bir taşıtta yer almak</DEF></SYNSET>
+<SYNSET><ID>TUR10-0105570</ID><SYNONYM><LITERAL>bir<SENSE>3</SENSE></LITERAL></SYNONYM><POS>a</POS><DEF>Bu sayı kadar olan</DEF></SYNSET>
+<SYNSET><ID>TUR10-0105580</ID><SYNONYM><LITERAL>bir<SENSE>4</SENSE></LITERAL></SYNONYM><POS>a</POS><DEF>Herhangi bir varlığı belirsiz olarak gösteren sayı</DEF></SYNSET>
+<SYNSET><ID>TUR10-0105790</ID><SYNONYM><LITERAL>pek çok<SENSE>1</SENSE></LITERAL><LITERAL>son derece<SENSE>1</SENSE></LITERAL></SYNONYM><POS>a</POS><DEF>Oldukça çok, sayısı belirsiz, bir hayli, yeterinden fazla</DEF></SYNSET>
+<SYNSET><ID>TUR10-0105940</ID><SYNONYM><LITERAL>biraz<SENSE>1</SENSE></LITERAL></SYNONYM><POS>a</POS><DEF>Bir parça, azıcık</DEF></SYNSET>
+<SYNSET><ID>TUR10-0105950</ID><SYNONYM><LITERAL>biraz<SENSE>2</SENSE></LITERAL></SYNONYM><POS>b</POS><DEF>Kısa bir süre için</DEF></SYNSET>
+<SYNSET><ID>TUR10-0105970</ID><SYNONYM><LITERAL>birazcık<SENSE>1</SENSE></LITERAL></SYNONYM><POS>a</POS><DEF>Pek az, çok az, çok az</DEF></SYNSET>
+<SYNSET><ID>TUR10-0106040</ID><SYNONYM><LITERAL>ayrı ayrı<SENSE>2</SENSE></LITERAL></SYNONYM><POS>b</POS><DEF>Her biri ayrı olarak</DEF></SYNSET>
+<SYNSET><ID>TUR10-0106250</ID><SYNONYM><LITERAL>baştan<SENSE>1</SENSE></LITERAL><LITERAL>bir daha<SENSE>1</SENSE></LITERAL></SYNONYM><POS>b</POS><DEF>Başından alarak, bir kez daha</DEF></SYNSET>
+<SYNSET><ID>TUR10-0106260</ID><SYNONYM><LITERAL>bir daha<SENSE>2</SENSE></LITERAL></SYNONYM><POS>b</POS><DEF>Hiçbir zaman</DEF></SYNSET>
+<SYNSET><ID>TUR10-0106410</ID><SYNONYM><LITERAL>bir düzine<SENSE>1</SENSE></LITERAL></SYNONYM><POS>a</POS><DEF>Çok</DEF></SYNSET>
+<SYNSET><ID>TUR10-0106460</ID><SYNONYM><LITERAL>aynısı<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Ayırt edilemeyecek kadar benzeri, özdeşi veya eşi</DEF></SYNSET>
+<SYNSET><ID>TUR10-0106520</ID><SYNONYM><LITERAL>birer<SENSE>1</SENSE></LITERAL></SYNONYM><POS>a</POS><DEF>Bir sayısının üleştirme sayı sıfatı, her birine bir</DEF></SYNSET>
+<SYNSET><ID>TUR10-0106630</ID><SYNONYM><LITERAL>birey<SENSE>5</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Toplumları oluşturan ve düşünsel, duygusal, iradeyle ilgili nitelikleri toplum içinde belirlenen insanların her biri</DEF></SYNSET>
+<SYNSET><ID>TUR10-0107260</ID><SYNONYM><LITERAL>biriktirmek<SENSE>3</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Öğrenme, yarar sağlama vb. sebeplerle bazı nesneleri bir araya getirmek; koleksiyon yapmak</DEF></SYNSET>
+<SYNSET><ID>TUR10-0107310</ID><SYNONYM><LITERAL>birim<SENSE>4</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Herhangi bir kuruluştaki alt bölümlerden her biri</DEF></SYNSET>
+<SYNSET><ID>TUR10-0107350</ID><SYNONYM><LITERAL>birinci<SENSE>1</SENSE></LITERAL></SYNONYM><POS>a</POS><DEF>Bir sayısının sıra sıfatı</DEF></SYNSET>
+<SYNSET><ID>TUR10-0107620</ID><SYNONYM><LITERAL>bir kere<SENSE>1</SENSE></LITERAL></SYNONYM><POS>b</POS><DEF>Bir kez; bir defa</DEF></SYNSET>
+<SYNSET><ID>TUR10-0107950</ID><SYNONYM><LITERAL>birleşmek<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Ayrıyken tek bir bütün durumuna gelmek</DEF></SYNSET>
+<SYNSET><ID>TUR10-0108070</ID><SYNONYM><LITERAL>birleştirme<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Birkaç şeyi bir araya getirme</DEF></SYNSET>
+<SYNSET><ID>TUR10-0108080</ID><SYNONYM><LITERAL>birleştirmek<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Bir araya getirmek</DEF></SYNSET>
+<SYNSET><ID>TUR10-0108110</ID><SYNONYM><LITERAL>birlik<SENSE>2</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Birleşmiş, bir arada olma durumu; vahdet</DEF></SYNSET>
+<SYNSET><ID>TUR10-0108150</ID><SYNONYM><LITERAL>birlik<SENSE>6</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Bölük, tabur, alay vb. bir bütün sayılan topluluk</DEF></SYNSET>
+<SYNSET><ID>TUR10-0108250</ID><SYNONYM><LITERAL>bir nebze<SENSE>1</SENSE></LITERAL></SYNONYM><POS>a</POS><DEF>Çok az; bir parça</DEF></SYNSET>
+<SYNSET><ID>TUR10-0108320</ID><SYNONYM><LITERAL>bir o kadar<SENSE>1</SENSE></LITERAL></SYNONYM><POS>b</POS><DEF>Ne kadar varsa o kadar daha; bir katı; bir misli</DEF></SYNSET>
+<SYNSET><ID>TUR10-0108540</ID><SYNONYM><LITERAL>bir türlü<SENSE>1</SENSE></LITERAL></SYNONYM><POS>b</POS><DEF>Hiçbir biçimde, hiçbir yolla</DEF></SYNSET>
+<SYNSET><ID>TUR10-0108580</ID><SYNONYM><LITERAL>bir yana<SENSE>1</SENSE></LITERAL></SYNONYM><POS>b</POS><DEF>-den başka, sayılmazsa, hariç tutulursa</DEF></SYNSET>
+<SYNSET><ID>TUR10-0108600</ID><SYNONYM><LITERAL>bir yanda<SENSE>1</SENSE></LITERAL></SYNONYM><POS>b</POS><DEF>Bir tarafta; hem ... hem</DEF></SYNSET>
+<SYNSET><ID>TUR10-0108610</ID><SYNONYM><LITERAL>bir yandan<SENSE>2</SENSE></LITERAL></SYNONYM><POS>b</POS><DEF>Bir taraftan; hem ... hem</DEF></SYNSET>
+<SYNSET><ID>TUR10-0108650</ID><SYNONYM><LITERAL>bir<SENSE>10</SENSE></LITERAL></SYNONYM><POS>b</POS><DEF>Bir kez</DEF></SYNSET>
+<SYNSET><ID>TUR10-0108660</ID><SYNONYM><LITERAL>bir zaman<SENSE>1</SENSE></LITERAL></SYNONYM><POS>b</POS><DEF>Geçmiş zamanda, eskiden</DEF></SYNSET>
+<SYNSET><ID>TUR10-0109200</ID><SYNONYM><LITERAL>bitirmek<SENSE>3</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Onulmaz duruma getirmek</DEF></SYNSET>
+<SYNSET><ID>TUR10-0109420</ID><SYNONYM><LITERAL>bitki<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Bulunduğu yere kökleriyle tutunup gelişen, döl veren ve hayatını tamamladıktan sonra kuruyarak varlığı sona eren, yosun, ot, ağaç vb. canlıların genel adı</DEF></SYNSET>
+<SYNSET><ID>TUR10-0109710</ID><SYNONYM><LITERAL>bitme<SENSE>1</SENSE></LITERAL><LITERAL>sona erme<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Bitme işi veya biçimi, bitme, sona erme</DEF></SYNSET>
+<SYNSET><ID>TUR10-0110290</ID><SYNONYM><LITERAL>biz<SENSE>1</SENSE></LITERAL></SYNONYM><POS>r</POS><DEF>Çokluk birinci kişiyi gösteren söz</DEF></SYNSET>
+<SYNSET><ID>TUR10-0110450</ID><SYNONYM><LITERAL>bize<SENSE>1</SENSE></LITERAL></SYNONYM><POS>b</POS><DEF>Biz zamirinin yönelme durumu eki almış biçimi</DEF></SYNSET>
+<SYNSET><ID>TUR10-0110550</ID><SYNONYM><LITERAL>bizzat<SENSE>1</SENSE></LITERAL></SYNONYM><POS>b</POS><DEF>Kendi (kendim, kendin, kendi...)</DEF></SYNSET>
+<SYNSET><ID>TUR10-0110570</ID><SYNONYM><LITERAL>blok<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Kocaman ve ağır kitle</DEF></SYNSET>
+<SYNSET><ID>TUR10-0112120</ID><SYNONYM><LITERAL>mücadele etmek<SENSE>1</SENSE></LITERAL><LITERAL>mücadele vermek<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Bir amaca erişmek, bir güce karşı koyabilmek için uğraşmak, çaba göstermek</DEF></SYNSET>
+<SYNSET><ID>TUR10-0112500</ID><SYNONYM><LITERAL>bol<SENSE>2</SENSE></LITERAL></SYNONYM><POS>a</POS><DEF>Nicelik bakımından olağandan veya alışılandan çok</DEF></SYNSET>
+<SYNSET><ID>TUR10-0112600</ID><SYNONYM><LITERAL>bolca<SENSE>2</SENSE></LITERAL></SYNONYM><POS>b</POS><DEF>Oldukça çok; çokça</DEF></SYNSET>
+<SYNSET><ID>TUR10-0112910</ID><SYNONYM><LITERAL>bomba<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Canlı veya cansız hedeflere atılan, içi yakıcı ve yıkıcı maddelerle doldurulmuş, türlü büyüklükte patlayıcı, ateşli silah</DEF></SYNSET>
+<SYNSET><ID>TUR10-0113870</ID><SYNONYM><LITERAL>borçlu<SENSE>3</SENSE></LITERAL></SYNONYM><POS>a</POS><DEF>Bir şeyi birinin yardımıyla elde etmiş olan</DEF></SYNSET>
+<SYNSET><ID>TUR10-0114370</ID><SYNONYM><LITERAL>boru<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Bir yerden başka bir yere sıvı, gaz vb. aktarmaya yarayan, içi boş, uçları açık, uzun ve dar silindir</DEF></SYNSET>
+<SYNSET><ID>TUR10-0114820</ID><SYNONYM><LITERAL>cahil<SENSE>2</SENSE></LITERAL></SYNONYM><POS>a</POS><DEF>Bilgi sahibi olmayan; bilisiz</DEF></SYNSET>
+<SYNSET><ID>TUR10-0115050</ID><SYNONYM><LITERAL>boşaltmak<SENSE>3</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Bir silahta ne kadar mermi varsa hepsini arka arkaya patlatmak</DEF></SYNSET>
+<SYNSET><ID>TUR10-0115830</ID><SYNONYM><LITERAL>boyacı<SENSE>3</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Boya satılan dükkân</DEF></SYNSET>
+<SYNSET><ID>TUR10-0117230</ID><SYNONYM><LITERAL>boyut<SENSE>2</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Nitelik, genişlik, kapsam</DEF></SYNSET>
+<SYNSET><ID>TUR10-0117310</ID><SYNONYM><LITERAL>boyutlu<SENSE>1</SENSE></LITERAL></SYNONYM><POS>a</POS><DEF>Doğruların, yüzeylerin veya cisimlerin ölçülmesinde ele alınan doğrultulara sahip olan</DEF></SYNSET>
+<SYNSET><ID>TUR10-0117830</ID><SYNONYM><LITERAL>bozma<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Zarar verme, feshetme, kesme, ayırma, koparma</DEF></SYNSET>
+<SYNSET><ID>TUR10-0118140</ID><SYNONYM><LITERAL>bozukluk<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Bozuk olma durumu</DEF></SYNSET>
+<SYNSET><ID>TUR10-0118240</ID><SYNONYM><LITERAL>bozulmak<SENSE>5</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Özündeki iyi nitelikleri birtakım dış etkenlerle zamanla yitirmek, özünden uzaklaşmak, dejenere olmak, tereddi etmek</DEF></SYNSET>
+<SYNSET><ID>TUR10-0119200</ID><SYNONYM><LITERAL>bölmek<SENSE>3</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Bir niceliği iki veya daha çok eşit parçaya ayırmak</DEF></SYNSET>
+<SYNSET><ID>TUR10-0119320</ID><SYNONYM><LITERAL>bölük<SENSE>4</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Takımlardan oluşan, üçü veya dördü bir tabur oluşturan ve öbür birliklerin temeli sayılan birlik</DEF></SYNSET>
+<SYNSET><ID>TUR10-0119590</ID><SYNONYM><LITERAL>bölünmek<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Belirli bölümlere, parçalara ayrılmak</DEF></SYNSET>
+<SYNSET><ID>TUR10-0119840</ID><SYNONYM><LITERAL>afallamak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Umulmayan, beklenmeyen veya olağanüstü bir olay, bir olgu karşısında ne yapmak gerektiğini bilememek, nasıl davranacağını kestirememek</DEF></SYNSET>
+<SYNSET><ID>TUR10-0120030</ID><SYNONYM><LITERAL>böyle<SENSE>1</SENSE></LITERAL></SYNONYM><POS>a</POS><DEF>Bunun gibi; buna benzer</DEF></SYNSET>
+<SYNSET><ID>TUR10-0120040</ID><SYNONYM><LITERAL>böyle<SENSE>2</SENSE></LITERAL></SYNONYM><POS>b</POS><DEF>Bu yolda, bu biçimde</DEF></SYNSET>
+<SYNSET><ID>TUR10-0120120</ID><SYNONYM><LITERAL>böylece<SENSE>2</SENSE></LITERAL><LITERAL>böylelikle<SENSE>1</SENSE></LITERAL></SYNONYM><POS>b</POS><DEF>Bu biçimde, en sonunda</DEF></SYNSET>
+<SYNSET><ID>TUR10-0120130</ID><SYNONYM><LITERAL>böylesine<SENSE>1</SENSE></LITERAL></SYNONYM><POS>b</POS><DEF>Bu tarzda; bu biçimde</DEF></SYNSET>
+<SYNSET><ID>TUR10-0120370</ID><SYNONYM><LITERAL>bilgilendirme<SENSE>2</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Bir konuda özet olarak verilen bilgi veya açıklama</DEF></SYNSET>
+<SYNSET><ID>TUR10-0120620</ID><SYNONYM><LITERAL>bronz<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Koyu kızıl renkte olan, bakır, çinko ve kalay alaşımı</DEF></SYNSET>
+<SYNSET><ID>TUR10-0120770</ID><SYNONYM><LITERAL>bu arada<SENSE>1</SENSE></LITERAL></SYNONYM><POS>b</POS><DEF>Bu süre içinde</DEF></SYNSET>
+<SYNSET><ID>TUR10-0120850</ID><SYNONYM><LITERAL>bucaksız<SENSE>1</SENSE></LITERAL></SYNONYM><POS>a</POS><DEF>Bucağı olmayan</DEF></SYNSET>
+<SYNSET><ID>TUR10-0121310</ID><SYNONYM><LITERAL>bugün<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>İçinde bulunduğumuz gün</DEF></SYNSET>
+<SYNSET><ID>TUR10-0121350</ID><SYNONYM><LITERAL>şu anki<SENSE>1</SENSE></LITERAL></SYNONYM><POS>a</POS><DEF>Bugüne özgü, bugün olan, bugün yapılan</DEF></SYNSET>
+<SYNSET><ID>TUR10-0123540</ID><SYNONYM><LITERAL>bulmaca<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Çeşitli biçimlerde düzenlenen ve düşündürerek, aratarak buldurmayı amaç edinen oyun</DEF></SYNSET>
+<SYNSET><ID>TUR10-0123550</ID><SYNONYM><LITERAL>bulmak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Arayarak veya aramadan bir şeyle, bir kimse ile karşılaşmak</DEF></SYNSET>
+<SYNSET><ID>TUR10-0123590</ID><SYNONYM><LITERAL>bulmak<SENSE>5</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>İlk kez yeni bir şey yaratmak</DEF></SYNSET>
+<SYNSET><ID>TUR10-0123800</ID><SYNONYM><LITERAL>bulunmak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Bir yerde olmak</DEF></SYNSET>
+<SYNSET><ID>TUR10-0123850</ID><SYNONYM><LITERAL>bulma<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>İlk defa yeni bir şey yaratma</DEF></SYNSET>
+<SYNSET><ID>TUR10-0124250</ID><SYNONYM><LITERAL>buna<SENSE>1</SENSE></LITERAL></SYNONYM><POS>b</POS><DEF>Bu zamirinin yönelme durum eki almış biçimi</DEF></SYNSET>
+<SYNSET><ID>TUR10-0124500</ID><SYNONYM><LITERAL>bu denli<SENSE>1</SENSE></LITERAL><LITERAL>bu kadar<SENSE>1</SENSE></LITERAL></SYNONYM><POS>b</POS><DEF>Çok fazla</DEF></SYNSET>
+<SYNSET><ID>TUR10-0124530</ID><SYNONYM><LITERAL>bundan<SENSE>1</SENSE></LITERAL></SYNONYM><POS>b</POS><DEF>Bu zamirinin çıkma durum eki almış biçimi</DEF></SYNSET>
+<SYNSET><ID>TUR10-0124720</ID><SYNONYM><LITERAL>bununla birlikte<SENSE>1</SENSE></LITERAL></SYNONYM><POS>b</POS><DEF>Bunun böyle olduğuna bakmayarak, durum böyleyken</DEF></SYNSET>
+<SYNSET><ID>TUR10-0124730</ID><SYNONYM><LITERAL>bura<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Bu yer</DEF></SYNSET>
+<SYNSET><ID>TUR10-0124750</ID><SYNONYM><LITERAL>burada<SENSE>1</SENSE></LITERAL></SYNONYM><POS>b</POS><DEF>Bu yerde</DEF></SYNSET>
+<SYNSET><ID>TUR10-0124760</ID><SYNONYM><LITERAL>buradan<SENSE>1</SENSE></LITERAL></SYNONYM><POS>b</POS><DEF>Bu yerden</DEF></SYNSET>
+<SYNSET><ID>TUR10-0126110</ID><SYNONYM><LITERAL>bu sefer<SENSE>1</SENSE></LITERAL></SYNONYM><POS>b</POS><DEF>Bu defa; bu kez</DEF></SYNSET>
+<SYNSET><ID>TUR10-0126320</ID><SYNONYM><LITERAL>boyut<SENSE>4</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Doğruların, yüzeylerin veya cisimlerin ölçülmesinde ele alınan üç doğrultudan uzunluk, genişlik ve derinlikten her biri</DEF></SYNSET>
+<SYNSET><ID>TUR10-0126620</ID><SYNONYM><LITERAL>bu yüzden<SENSE>1</SENSE></LITERAL></SYNONYM><POS>b</POS><DEF>Bundan dolayı; bunun için</DEF></SYNSET>
+<SYNSET><ID>TUR10-0127900</ID><SYNONYM><LITERAL>bünye<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Bütünün bir araya getirilişinde uyulan dizge, strüktür</DEF></SYNSET>
+<SYNSET><ID>TUR10-0128270</ID><SYNONYM><LITERAL>bürünmek<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Bir görünüşe girmek</DEF></SYNSET>
+<SYNSET><ID>TUR10-0128330</ID><SYNONYM><LITERAL>bütçe<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Devletin, bir kuruluşun, bir aile veya bir kimsenin gelecekteki belirli bir süre için tasarladığı gelir ve giderlerinin tümü</DEF></SYNSET>
+<SYNSET><ID>TUR10-0128840</ID><SYNONYM><LITERAL>büyük<SENSE>1</SENSE></LITERAL></SYNONYM><POS>a</POS><DEF>Boyutları, benzerlerinden daha fazla olan somut nesne</DEF></SYNSET>
+<SYNSET><ID>TUR10-0128860</ID><SYNONYM><LITERAL>büyük<SENSE>3</SENSE></LITERAL></SYNONYM><POS>a</POS><DEF>Niceliği çok olan</DEF></SYNSET>
+<SYNSET><ID>TUR10-0129400</ID><SYNONYM><LITERAL>büyüleyici<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Etkileyen, çekici niteliği olan kimse veya şey</DEF></SYNSET>
+<SYNSET><ID>TUR10-0129510</ID><SYNONYM><LITERAL>büyülü<SENSE>3</SENSE></LITERAL></SYNONYM><POS>a</POS><DEF>Çok etkileyici</DEF></SYNSET>
+<SYNSET><ID>TUR10-0129610</ID><SYNONYM><LITERAL>büyümek<SENSE>7</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Önem ve değer kazanmak</DEF></SYNSET>
+<SYNSET><ID>TUR10-0130530</ID><SYNONYM><LITERAL>caiz<SENSE>1</SENSE></LITERAL></SYNONYM><POS>a</POS><DEF>Din, yasa, töre vb. bakımdan işlenmesinde, yapılmasında sakınca olmayan, yapılıp işlenmesine izin verilen</DEF></SYNSET>
+<SYNSET><ID>TUR10-0131360</ID><SYNONYM><LITERAL>can<SENSE>2</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Sağ olma durumu</DEF></SYNSET>
+<SYNSET><ID>TUR10-0131390</ID><SYNONYM><LITERAL>can<SENSE>5</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>İnsanın kendi varlığı, özü</DEF></SYNSET>
+<SYNSET><ID>TUR10-0131460</ID><SYNONYM><LITERAL>can alıcı<SENSE>1</SENSE></LITERAL></SYNONYM><POS>a</POS><DEF>Dikkat çeken, çarpıcı, beklenmedik</DEF></SYNSET>
+<SYNSET><ID>TUR10-0131540</ID><SYNONYM><LITERAL>canavar<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Masallarda sözü geçen yabani, yırtıcı hayvan</DEF></SYNSET>
+<SYNSET><ID>TUR10-0132430</ID><SYNONYM><LITERAL>canlandırmak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Canlanmasını sağlamak, canlanmasına yol açmak</DEF></SYNSET>
+<SYNSET><ID>TUR10-0132470</ID><SYNONYM><LITERAL>canlandırmak<SENSE>3</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Bir karakteri oynamak, ona kişilik vermek</DEF></SYNSET>
+<SYNSET><ID>TUR10-0132510</ID><SYNONYM><LITERAL>canlanmak<SENSE>3</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Geçmişte yaşanan bir olay veya durum yeniden hatırlanmak</DEF></SYNSET>
+<SYNSET><ID>TUR10-0132550</ID><SYNONYM><LITERAL>canlı<SENSE>3</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Yaşayıp yer değiştirebilen yaratık, hayvan</DEF></SYNSET>
+<SYNSET><ID>TUR10-0132560</ID><SYNONYM><LITERAL>canlı<SENSE>4</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Daha önceden herhangi bir gereç üzerine kaydedilmemiş olay, gösteri, toplantı ve etkinlikleri gerçekleştiği anda alıcı aracılığıyla radyo ve televizyondan aktarma</DEF></SYNSET>
+<SYNSET><ID>TUR10-0132650</ID><SYNONYM><LITERAL>canlılık<SENSE>2</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Neşelilik, hareketlilik, coşku</DEF></SYNSET>
+<SYNSET><ID>TUR10-0133350</ID><SYNONYM><LITERAL>casusluk<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Casus olma durumu</DEF></SYNSET>
+<SYNSET><ID>TUR10-0135870</ID><SYNONYM><LITERAL>cenk<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Devletlerin diplomatik ilişkilerini keserek giriştikleri silahlı mücadele</DEF></SYNSET>
+<SYNSET><ID>TUR10-0136200</ID><SYNONYM><LITERAL>cep<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Genellikle bir şey koymaya yarayan, giysinin belli bir yeri açılarak içine yerleştirilen astardan yapılmış parça</DEF></SYNSET>
+<SYNSET><ID>TUR10-0136330</ID><SYNONYM><LITERAL>cephe<SENSE>2</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Belli bir düşünce, istek çevresinde sağlanan beraberlik</DEF></SYNSET>
+<SYNSET><ID>TUR10-0136350</ID><SYNONYM><LITERAL>cephe<SENSE>4</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Üzerinde savaşın sürdüğü bölge</DEF></SYNSET>
+<SYNSET><ID>TUR10-0136690</ID><SYNONYM><LITERAL>akım<SENSE>3</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Sanatta, siyasette, düşünce hayatında ortaya çıkan yeni bir görüş, yöntem, hareket, tarz</DEF></SYNSET>
+<SYNSET><ID>TUR10-0137130</ID><SYNONYM><LITERAL>ceset<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Ölen insanın vücudu</DEF></SYNSET>
+<SYNSET><ID>TUR10-0137230</ID><SYNONYM><LITERAL>ata<SENSE>2</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Atalardan, büyükbabalardan biri, önceki nesilden kimse</DEF></SYNSET>
+<SYNSET><ID>TUR10-0137700</ID><SYNONYM><LITERAL>atmosferik<SENSE>1</SENSE></LITERAL></SYNONYM><POS>a</POS><DEF>Atmosfer ile ilgili</DEF></SYNSET>
+<SYNSET><ID>TUR10-0137810</ID><SYNONYM><LITERAL>cezai<SENSE>1</SENSE></LITERAL></SYNONYM><POS>a</POS><DEF>Ceza ile ilgili, cezaya ilişkin, cezaya dayanan</DEF></SYNSET>
+<SYNSET><ID>TUR10-0138060</ID><SYNONYM><LITERAL>ada<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Deniz veya göl suları ile çevrilmiş küçük kara parçası</DEF></SYNSET>
+<SYNSET><ID>TUR10-0139070</ID><SYNONYM><LITERAL>cıvıl cıvıl<SENSE>1</SENSE></LITERAL></SYNONYM><POS>a</POS><DEF>Canlı, neşeli, çok renkli</DEF></SYNSET>
+<SYNSET><ID>TUR10-0140020</ID><SYNONYM><LITERAL>ciddi<SENSE>5</SENSE></LITERAL></SYNONYM><POS>a</POS><DEF>Eğlendirme amacı gütmeyen</DEF></SYNSET>
+<SYNSET><ID>TUR10-0142200</ID><SYNONYM><LITERAL>coğrafi<SENSE>1</SENSE></LITERAL></SYNONYM><POS>a</POS><DEF>Coğrafya ile ilgili</DEF></SYNSET>
+<SYNSET><ID>TUR10-0143360</ID><SYNONYM><LITERAL>cüce<SENSE>1</SENSE></LITERAL></SYNONYM><POS>a</POS><DEF>Boyu, normalden çok daha kısa olan kimse</DEF></SYNSET>
+<SYNSET><ID>TUR10-0144000</ID><SYNONYM><LITERAL>cüzi<SENSE>1</SENSE></LITERAL></SYNONYM><POS>a</POS><DEF>Az; azıcık; pek az</DEF></SYNSET>
+<SYNSET><ID>TUR10-0144540</ID><SYNONYM><LITERAL>çağ<SENSE>3</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Kendine özgü bir özellik taşıyan zaman parçası</DEF></SYNSET>
+<SYNSET><ID>TUR10-0144550</ID><SYNONYM><LITERAL>çağ<SENSE>4</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Tarihin ayrıldığı dört büyük bölümden her biri; kurun</DEF></SYNSET>
+<SYNSET><ID>TUR10-0144720</ID><SYNONYM><LITERAL>çağdaş<SENSE>2</SENSE></LITERAL></SYNONYM><POS>a</POS><DEF>Bulunulan çağın anlayışına, şartlarına uygun olan</DEF></SYNSET>
+<SYNSET><ID>TUR10-0145400</ID><SYNONYM><LITERAL>çağrıştırmak<SENSE>2</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Akla getirmek, hatırlatmak, andırmak</DEF></SYNSET>
+<SYNSET><ID>TUR10-0145860</ID><SYNONYM><LITERAL>alev<SENSE>3</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Yanmakta olan bir maddeden sıçrayan küçük ateş parçası</DEF></SYNSET>
+<SYNSET><ID>TUR10-0147710</ID><SYNONYM><LITERAL>aktif<SENSE>1</SENSE></LITERAL></SYNONYM><POS>a</POS><DEF>Çok çalışan, canlı, hareketli, etkin</DEF></SYNSET>
+<SYNSET><ID>TUR10-0148590</ID><SYNONYM><LITERAL>çalmak<SENSE>4</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Ses çıkarmak, herhangi bir sesi çıkarmak</DEF></SYNSET>
+<SYNSET><ID>TUR10-0161910</ID><SYNONYM><LITERAL>çevrim içi<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Bilgisayar sisteminde sunucuya bağlı ve çalışır durumda olma</DEF></SYNSET>
+<SYNSET><ID>TUR10-0170900</ID><SYNONYM><LITERAL>çizgi film<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Bir konuyla ilgili olarak karakterlerinin hareketlerini belirtecek biçimde art arda çizilmiş resimlerden oluşan sinema filmi</DEF></SYNSET>
+<SYNSET><ID>TUR10-0171060</ID><SYNONYM><LITERAL>çizgi roman<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Konuyu ve olaylar zincirini kesintisiz olarak resimleme yöntemiyle okuyucuya sunan roman</DEF></SYNSET>
+<SYNSET><ID>TUR10-0178920</ID><SYNONYM><LITERAL>bile<SENSE>2</SENSE></LITERAL></SYNONYM><POS>c</POS><DEF>Daha önce geçmiş bir cümle veya eş görevli öge ile sonraki arasında -den başka anlamıyla ilişki kuran bir söz</DEF></SYNSET>
+<SYNSET><ID>TUR10-0183300</ID><SYNONYM><LITERAL>dans etmek<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Müzik temposuna uyarak estetik değer taşıyan vücut hareketleri yapmak</DEF></SYNSET>
+<SYNSET><ID>TUR10-0185130</ID><SYNONYM><LITERAL>hareket etmek<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Bir kimseye veya bir şeye karşı belli tavır takınmak</DEF></SYNSET>
+<SYNSET><ID>TUR10-0188740</ID><SYNONYM><LITERAL>değişiklik yapmak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Başka bir biçime sokmak, değişikliğe uğratmak</DEF></SYNSET>
+<SYNSET><ID>TUR10-0190190</ID><SYNONYM><LITERAL>deli gibi<SENSE>1</SENSE></LITERAL></SYNONYM><POS>b</POS><DEF>Deliye yaraşır davranışta, aşırı bir biçimde</DEF></SYNSET>
+<SYNSET><ID>TUR10-0192100</ID><SYNONYM><LITERAL>demir yolu<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Bu yolla yapılan taşımacılık sistemi</DEF></SYNSET>
+<SYNSET><ID>TUR10-0195840</ID><SYNONYM><LITERAL>yavaş yavaş<SENSE>1</SENSE></LITERAL></SYNONYM><POS>b</POS><DEF>Zaman ilerledikçe, derece derece</DEF></SYNSET>
+<SYNSET><ID>TUR10-0195920</ID><SYNONYM><LITERAL>aşamalı<SENSE>1</SENSE></LITERAL></SYNONYM><POS>a</POS><DEF>Derecelere, evrelere ayrılmış</DEF></SYNSET>
+<SYNSET><ID>TUR10-0196730</ID><SYNONYM><LITERAL>anlama<SENSE>1</SENSE></LITERAL><LITERAL>bilme<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>(Bilgiyi) idrak etme</DEF></SYNSET>
+<SYNSET><ID>TUR10-0199820</ID><SYNONYM><LITERAL>aksiyon<SENSE>3</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Durağan bir noktaya göre devinmekte olan bir nesnenin durumu; devim; hareket</DEF></SYNSET>
+<SYNSET><ID>TUR10-0202300</ID><SYNONYM><LITERAL>dış ses<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Sinema ve televizyonda görüntüsü olmayan kişiye ait söz</DEF></SYNSET>
+<SYNSET><ID>TUR10-0204150</ID><SYNONYM><LITERAL>dikkat etmek<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Duygularla düşünceyi bir şey üzerinde toplamak, uyanık davranmak</DEF></SYNSET>
+<SYNSET><ID>TUR10-0204170</ID><SYNONYM><LITERAL>özen göstermek<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Bir şeyi özenerek elden geldiğince iyi olmasına gayret ederek yapmak</DEF></SYNSET>
+<SYNSET><ID>TUR10-0204970</ID><SYNONYM><LITERAL>ajan<SENSE>1</SENSE></LITERAL><LITERAL>casus<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Bir devlet veya kuruluşun gizli amaçları için çalışan kimse</DEF></SYNSET>
+<SYNSET><ID>TUR10-0209230</ID><SYNONYM><LITERAL>gönül rahatlığı<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Hiçbir eksiği, üzüntüsü ve acısı olmama durumu</DEF></SYNSET>
+<SYNSET><ID>TUR10-0219460</ID><SYNONYM><LITERAL>bol bol<SENSE>1</SENSE></LITERAL></SYNONYM><POS>b</POS><DEF>Fazlasıyla, bolca</DEF></SYNSET>
+<SYNSET><ID>TUR10-0227360</ID><SYNONYM><LITERAL>haberdar olmak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Kendisine bildirilmek, öğrenmek, bilgi edinmek</DEF></SYNSET>
+<SYNSET><ID>TUR10-0228820</ID><SYNONYM><LITERAL>at<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Atgillerden, binme, yük çekme, taşıma vb. hizmetlerde kullanılan, tek tırnaklı hayvan</DEF></SYNSET>
+<SYNSET><ID>TUR10-0228960</ID><SYNONYM><LITERAL>basit<SENSE>3</SENSE></LITERAL></SYNONYM><POS>a</POS><DEF>Süsü, gösterişi olmayan</DEF></SYNSET>
+<SYNSET><ID>TUR10-0234910</ID><SYNONYM><LITERAL>abi<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Büyük erkek kardeş</DEF></SYNSET>
+<SYNSET><ID>TUR10-0235090</ID><SYNONYM><LITERAL>kafa tutmak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Karşı gelmek</DEF></SYNSET>
+<SYNSET><ID>TUR10-0240010</ID><SYNONYM><LITERAL>azalmak<SENSE>2</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Eskisinden az bir duruma gelmek</DEF></SYNSET>
+<SYNSET><ID>TUR10-0240970</ID><SYNONYM><LITERAL>el altında<SENSE>1</SENSE></LITERAL></SYNONYM><POS>b</POS><DEF>Kolayca alınabilecek yerde, hazırda</DEF></SYNSET>
+<SYNSET><ID>TUR10-0241160</ID><SYNONYM><LITERAL>el bombası<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Elde taşınabilen ve pimi çekilerek ateşlenen küçük tip bomba</DEF></SYNSET>
+<SYNSET><ID>TUR10-0244600</ID><SYNONYM><LITERAL>cep telefonu<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Kişinin yanında taşıyabildiği, kablosuz telefon</DEF></SYNSET>
+<SYNSET><ID>TUR10-0252930</ID><SYNONYM><LITERAL>ilham almak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Bir şeyden ilham almak, içine doğmak</DEF></SYNSET>
+<SYNSET><ID>TUR10-0255010</ID><SYNONYM><LITERAL>arkadaş<SENSE>2</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Bir ortamda birlikte bulunanlardan her biri</DEF></SYNSET>
+<SYNSET><ID>TUR10-0255080</ID><SYNONYM><LITERAL>eş zamanlı<SENSE>1</SENSE></LITERAL></SYNONYM><POS>a</POS><DEF>Aynı zamanda oluşan</DEF></SYNSET>
+<SYNSET><ID>TUR10-0255840</ID><SYNONYM><LITERAL>başlangıç noktası<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Başlangıç yeri, başlangıç noktası, yakını</DEF></SYNSET>
+<SYNSET><ID>TUR10-0256510</ID><SYNONYM><LITERAL>eşlik etmek<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Beraberinde bulunmak</DEF></SYNSET>
+<SYNSET><ID>TUR10-0256690</ID><SYNONYM><LITERAL>benzersiz<SENSE>1</SENSE></LITERAL></SYNONYM><POS>a</POS><DEF>Eşi benzeri olmayan veya eşi benzeri görülmemiş olan</DEF></SYNSET>
+<SYNSET><ID>TUR10-0260900</ID><SYNONYM><LITERAL>bahar<SENSE>4</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Kuzey yarım küre için, 21 Martta gündüz gece eşitliğiyle başlayarak 22 Haziranda gün dönümü ile biten, mart, nisan ve mayıs aylarını içine alan kış ve yaz arasındaki mevsim</DEF></SYNSET>
+<SYNSET><ID>TUR10-0262750</ID><SYNONYM><LITERAL>afet<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Çeşitli doğa olaylarının sebep olduğu, çok üzüntü veren, acıklı yıkım</DEF></SYNSET>
+<SYNSET><ID>TUR10-0263040</ID><SYNONYM><LITERAL>bedava<SENSE>1</SENSE></LITERAL></SYNONYM><POS>a</POS><DEF>Gönüllü, karşılıksız, parasız</DEF></SYNSET>
+<SYNSET><ID>TUR10-0264830</ID><SYNONYM><LITERAL>fark etmek<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Anlamak, farkına varmak</DEF></SYNSET>
+<SYNSET><ID>TUR10-0264840</ID><SYNONYM><LITERAL>fark etmek<SENSE>2</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Değişmek, başkalaşmak</DEF></SYNSET>
+<SYNSET><ID>TUR10-0264870</ID><SYNONYM><LITERAL>daha bir<SENSE>1</SENSE></LITERAL></SYNONYM><POS>a</POS><DEF>Farkı olan, aralarında fark bulunan</DEF></SYNSET>
+<SYNSET><ID>TUR10-0265540</ID><SYNONYM><LITERAL>yer yer<SENSE>1</SENSE></LITERAL></SYNONYM><POS>b</POS><DEF>Birçok yerde</DEF></SYNSET>
+<SYNSET><ID>TUR10-0265870</ID><SYNONYM><LITERAL>anlaşılmak<SENSE>1</SENSE></LITERAL><LITERAL>belli olmak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Ortaya çıkmak, belirgin duruma gelmek, açıklanmak</DEF></SYNSET>
+<SYNSET><ID>TUR10-0266570</ID><SYNONYM><LITERAL>bolluk<SENSE>3</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Çokluk, gereğinden artık olma durumu</DEF></SYNSET>
+<SYNSET><ID>TUR10-0269740</ID><SYNONYM><LITERAL>akın akın<SENSE>1</SENSE></LITERAL></SYNONYM><POS>b</POS><DEF>Arkası kesilmeyen kalabalık öbekler durumunda</DEF></SYNSET>
+<SYNSET><ID>TUR10-0279190</ID><SYNONYM><LITERAL>fotoğraf makinesi<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Fotoğraf çekerken görüntüyü duyarlıklı yüzey üzerinde tespit etmeye yarayan cihaz</DEF></SYNSET>
+<SYNSET><ID>TUR10-0280850</ID><SYNONYM><LITERAL>büyülü<SENSE>2</SENSE></LITERAL></SYNONYM><POS>a</POS><DEF>Büyü gücü olan</DEF></SYNSET>
+<SYNSET><ID>TUR10-0281420</ID><SYNONYM><LITERAL>haksızlık etmek<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Adalete aykırı davranmak</DEF></SYNSET>
+<SYNSET><ID>TUR10-0281830</ID><SYNONYM><LITERAL>bazen<SENSE>1</SENSE></LITERAL><LITERAL>ara sıra<SENSE>1</SENSE></LITERAL><LITERAL>kimi zaman<SENSE>1</SENSE></LITERAL><LITERAL>zaman zaman<SENSE>1</SENSE></LITERAL></SYNONYM><POS>b</POS><DEF>Belli olmayan zamanlarda, az, seyrek olarak</DEF></SYNSET>
+<SYNSET><ID>TUR10-0283840</ID><SYNONYM><LITERAL>batı<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Yeryüzündeki başlıca dört yönden güneşin battığı yön</DEF></SYNSET>
+<SYNSET><ID>TUR10-0287350</ID><SYNONYM><LITERAL>terk etmek<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Bırakmak, ayrılmak</DEF></SYNSET>
+<SYNSET><ID>TUR10-0292660</ID><SYNONYM><LITERAL>asıl<SENSE>5</SENSE></LITERAL></SYNONYM><POS>a</POS><DEF>En önemli, başta gelen, temel</DEF></SYNSET>
+<SYNSET><ID>TUR10-0293670</ID><SYNONYM><LITERAL>art<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Arka, bir şeyin sonra gelen bölümü</DEF></SYNSET>
+<SYNSET><ID>TUR10-0294460</ID><SYNONYM><LITERAL>geri ödeme<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Alınan bir borcun ödenmesi</DEF></SYNSET>
+<SYNSET><ID>TUR10-0296190</ID><SYNONYM><LITERAL>kol gezmek<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Belirli bir çevre içinde gezip durmak</DEF></SYNSET>
+<SYNSET><ID>TUR10-0296730</ID><SYNONYM><LITERAL>anlamsız<SENSE>1</SENSE></LITERAL></SYNONYM><POS>a</POS><DEF>Anlamı olmayan, önemli bir şey anlatmayan</DEF></SYNSET>
+<SYNSET><ID>TUR10-0305700</ID><SYNONYM><LITERAL>ziyaret etmek<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Birini veya bir yeri görmeye gitmek</DEF></SYNSET>
+<SYNSET><ID>TUR10-0306160</ID><SYNONYM><LITERAL>boy göstermek<SENSE>1</SENSE></LITERAL><LITERAL>ortaya çıkmak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Görülür duruma gelmek, görülür olmak, gözükmek</DEF></SYNSET>
+<SYNSET><ID>TUR10-0306510</ID><SYNONYM><LITERAL>görüş açısı<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Bir şeyi görebilme alanı</DEF></SYNSET>
+<SYNSET><ID>TUR10-0308200</ID><SYNONYM><LITERAL>göz alıcı<SENSE>1</SENSE></LITERAL></SYNONYM><POS>a</POS><DEF>Güzelliği ile ilgi çeken, alımlı, göze çarpan</DEF></SYNSET>
+<SYNSET><ID>TUR10-0309170</ID><SYNONYM><LITERAL>göz göze<SENSE>1</SENSE></LITERAL></SYNONYM><POS>b</POS><DEF>Bakışları karşılaşarak</DEF></SYNSET>
+<SYNSET><ID>TUR10-0315960</ID><SYNONYM><LITERAL>güneş sistemi<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Güneşle gezegenlerin oluşturdukları dizge</DEF></SYNSET>
+<SYNSET><ID>TUR10-0318320</ID><SYNONYM><LITERAL>güzel olmak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Güzel bir durum almak</DEF></SYNSET>
+<SYNSET><ID>TUR10-0319900</ID><SYNONYM><LITERAL>aslında<SENSE>1</SENSE></LITERAL></SYNONYM><POS>b</POS><DEF>Asıl olarak; esasen</DEF></SYNSET>
+<SYNSET><ID>TUR10-0320930</ID><SYNONYM><LITERAL>hafta sonu<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Haftanın son günleri, genellikle cumartesi ve pazar</DEF></SYNSET>
+<SYNSET><ID>TUR10-0321600</ID><SYNONYM><LITERAL>hak etmek<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Bir başarı dolayısıyla ödüllendirilmek</DEF></SYNSET>
+<SYNSET><ID>TUR10-0323890</ID><SYNONYM><LITERAL>üstesinden gelmek<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Güç görünen bir iş veya durumu çözmek, başarmak</DEF></SYNSET>
+<SYNSET><ID>TUR10-0328250</ID><SYNONYM><LITERAL>hareket etmek<SENSE>2</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Vücudu oynatmak, kıpırdatmak veya kımıldamak, devinmek</DEF></SYNSET>
+<SYNSET><ID>TUR10-0331710</ID><SYNONYM><LITERAL>akıl<SENSE>2</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Yaşananları, öğrenilen konuları, bunların geçmişle ilişkisini bilinçli olarak zihinde saklama gücü</DEF></SYNSET>
+<SYNSET><ID>TUR10-0331750</ID><SYNONYM><LITERAL>anı<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Geçmişte yaşanmış çeşitli olaylardan belleğin saklandığı her türlü iz</DEF></SYNSET>
+<SYNSET><ID>TUR10-0338740</ID><SYNONYM><LITERAL>bir de<SENSE>1</SENSE></LITERAL></SYNONYM><POS>c</POS><DEF>Hem ... hem ... biçiminde tekrarlanarak görevdeş sözleri, cümleleri eşitlik, pekiştirme, birlikte olma veya karşıtlık anlamlarıyla bağlayan bir söz</DEF></SYNSET>
+<SYNSET><ID>TUR10-0338840</ID><SYNONYM><LITERAL>anında<SENSE>1</SENSE></LITERAL></SYNONYM><POS>b</POS><DEF>Hiç beklemeden, hiç zaman yitirmeden</DEF></SYNSET>
+<SYNSET><ID>TUR10-0338890</ID><SYNONYM><LITERAL>adeta<SENSE>1</SENSE></LITERAL><LITERAL>hemen hemen<SENSE>1</SENSE></LITERAL></SYNONYM><POS>b</POS><DEF>Tam değilse bile ona pek yakın, aşağı yukarı</DEF></SYNSET>
+<SYNSET><ID>TUR10-0339350</ID><SYNONYM><LITERAL>her biri<SENSE>1</SENSE></LITERAL></SYNONYM><POS>r</POS><DEF>Ayrı ayrı hepsi</DEF></SYNSET>
+<SYNSET><ID>TUR10-0339640</ID><SYNONYM><LITERAL>herhangi bir<SENSE>1</SENSE></LITERAL></SYNONYM><POS>a</POS><DEF>Belli olmayan, rastgele bir kimse veya şey</DEF></SYNSET>
+<SYNSET><ID>TUR10-0339650</ID><SYNONYM><LITERAL>herhangi biri<SENSE>1</SENSE></LITERAL></SYNONYM><POS>r</POS><DEF>Belli olmayan, rastgele biri</DEF></SYNSET>
+<SYNSET><ID>TUR10-0339670</ID><SYNONYM><LITERAL>adam<SENSE>2</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Erkek kişi</DEF></SYNSET>
+<SYNSET><ID>TUR10-0343580</ID><SYNONYM><LITERAL>hiç kimse<SENSE>1</SENSE></LITERAL></SYNONYM><POS>r</POS><DEF>Bir kişi bile</DEF></SYNSET>
+<SYNSET><ID>TUR10-0351050</ID><SYNONYM><LITERAL>kontrol etmek<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Egemenliği altında bulundurmak, egemenliği altına almak</DEF></SYNSET>
+<SYNSET><ID>TUR10-0363010</ID><SYNONYM><LITERAL>ihanet etmek<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Hainlik, kötülük etmek</DEF></SYNSET>
+<SYNSET><ID>TUR10-0364720</ID><SYNONYM><LITERAL>arzu<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Bir kimsenin dilediği veya istediği şey</DEF></SYNSET>
+<SYNSET><ID>TUR10-0366270</ID><SYNONYM><LITERAL>bitirme<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Bitirmek işi</DEF></SYNSET>
+<SYNSET><ID>TUR10-0368140</ID><SYNONYM><LITERAL>ilgi çekici<SENSE>1</SENSE></LITERAL></SYNONYM><POS>a</POS><DEF>İlgi uyandıran, ilgi ve dikkat çekici olan</DEF></SYNSET>
+<SYNSET><ID>TUR10-0368230</ID><SYNONYM><LITERAL>ait olmak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>İlişkin olmak</DEF></SYNSET>
+<SYNSET><ID>TUR10-0368460</ID><SYNONYM><LITERAL>ilham kaynağı<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Esinlenmeyi ve içe doğmayı sağlayan şey</DEF></SYNSET>
+<SYNSET><ID>TUR10-0369680</ID><SYNONYM><LITERAL>başlangıçta<SENSE>1</SENSE></LITERAL><LITERAL>ilk önce<SENSE>1</SENSE></LITERAL></SYNONYM><POS>b</POS><DEF>Başta, önce, ilk zaman</DEF></SYNSET>
+<SYNSET><ID>TUR10-0371210</ID><SYNONYM><LITERAL>artık<SENSE>3</SENSE></LITERAL></SYNONYM><POS>b</POS><DEF>Öyleyse, bu durum karşısında, sonuç olarak denilebilir ki</DEF></SYNSET>
+<SYNSET><ID>TUR10-0371920</ID><SYNONYM><LITERAL>ayrıcalık<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Başkalarına tanınmayan özel, kişisel hak veya şart veya başkalarından ayrı ve üstün tutulma durumu</DEF></SYNSET>
+<SYNSET><ID>TUR10-0375520</ID><SYNONYM><LITERAL>hayal kırıklığı<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Çok istenilen veya umulan bir şeyin gerçekleşmeyişinden duyulan üzüntü</DEF></SYNSET>
+<SYNSET><ID>TUR10-0379560</ID><SYNONYM><LITERAL>ad<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Bir kimseyi, bir şeyi anlatmaya, tanımlamaya, açıklamaya, bildirmeye yarayan söz</DEF></SYNSET>
+<SYNSET><ID>TUR10-0384130</ID><SYNONYM><LITERAL>iş adamı<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Ticaret veya sanayi alanında kazanç sağlamak amacıyla para yatıran kimse</DEF></SYNSET>
+<SYNSET><ID>TUR10-0384230</ID><SYNONYM><LITERAL>işaret etmek<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Belirtmek</DEF></SYNSET>
+<SYNSET><ID>TUR10-0385770</ID><SYNONYM><LITERAL>iş yapmak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Bir şeyi oluşturmak veya ortaya çıkarmak için emek harcamak, durağan durumdan hareketli duruma geçmek</DEF></SYNSET>
+<SYNSET><ID>TUR10-0386730</ID><SYNONYM><LITERAL>satın alma<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Bir nesneyi belirlenen fiyatını ödeyerek kendine mal etme işi</DEF></SYNSET>
+<SYNSET><ID>TUR10-0388430</ID><SYNONYM><LITERAL>oy birliği<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Bir toplantıda oylamaya katılan bütün üyelerin aynı yönde oy kullanması</DEF></SYNSET>
+<SYNSET><ID>TUR10-0388710</ID><SYNONYM><LITERAL>acil<SENSE>1</SENSE></LITERAL></SYNONYM><POS>a</POS><DEF>Hemen yapılması gereken</DEF></SYNSET>
+<SYNSET><ID>TUR10-0389810</ID><SYNONYM><LITERAL>açıklama<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Bir sorun üzerine bilgi verme</DEF></SYNSET>
+<SYNSET><ID>TUR10-0397540</ID><SYNONYM><LITERAL>baş<SENSE>15</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>İnsan ve hayvanlarda beyin, göz, kulak, burun, ağız vb. organları kapsayan, vücudun üst veya önünde bulunan bölüm</DEF></SYNSET>
+<SYNSET><ID>TUR10-0406930</ID><SYNONYM><LITERAL>Ay<SENSE>5</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Yer yuvarlağının uydusu olan gök cismi</DEF></SYNSET>
+<SYNSET><ID>TUR10-0412110</ID><SYNONYM><LITERAL>üst baş<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Bir kimsenin giyinişi, dış görünüşü</DEF></SYNSET>
+<SYNSET><ID>TUR10-0417800</ID><SYNONYM><LITERAL>tahmin etmek<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Ölçü ve tartıya dayanmaksızın, gözle oranlayarak, yaklaşık olarak hesaplamak</DEF></SYNSET>
+<SYNSET><ID>TUR10-0417860</ID><SYNONYM><LITERAL>karar vermek<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Bir sorunu karara bağlamak</DEF></SYNSET>
+<SYNSET><ID>TUR10-0441040</ID><SYNONYM><LITERAL>kendine has<SENSE>1</SENSE></LITERAL><LITERAL>kendine özgü<SENSE>1</SENSE></LITERAL></SYNONYM><POS>a</POS><DEF>Bir kimse veya şeye özgü olan</DEF></SYNSET>
+<SYNSET><ID>TUR10-0441550</ID><SYNONYM><LITERAL>şehirler arası<SENSE>1</SENSE></LITERAL></SYNONYM><POS>a</POS><DEF>İki veya daha çok şehir arasında ulaşım, iletişim sağlayan</DEF></SYNSET>
+<SYNSET><ID>TUR10-0444290</ID><SYNONYM><LITERAL>bölge<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Sınırları idari, ekonomik birliğe, toprak, iklim ve bitki özelliklerinin benzerliğine veya üzerinde yaşayan insanların aynı soydan gelmiş olmalarına göre belirlenen toprak parçası</DEF></SYNSET>
+<SYNSET><ID>TUR10-0450040</ID><SYNONYM><LITERAL>kıran kırana<SENSE>1</SENSE></LITERAL></SYNONYM><POS>b</POS><DEF>Acımaksızın, öldürürcesine</DEF></SYNSET>
+<SYNSET><ID>TUR10-0452470</ID><SYNONYM><LITERAL>azaltmak<SENSE>2</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Eskisinden az bir duruma getirmek</DEF></SYNSET>
+<SYNSET><ID>TUR10-0456770</ID><SYNONYM><LITERAL>ayrım<SENSE>5</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Bir yolun yön değiştirdiği yer</DEF></SYNSET>
+<SYNSET><ID>TUR10-0456870</ID><SYNONYM><LITERAL>cinayet<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Bir kişiyi kasten öldürmek</DEF></SYNSET>
+<SYNSET><ID>TUR10-0467170</ID><SYNONYM><LITERAL>meydan okumak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Korkmadığını, çekinmediğini açıkça bildirmek, kavga veya yarışmaya çağırmak</DEF></SYNSET>
+<SYNSET><ID>TUR10-0468150</ID><SYNONYM><LITERAL>kolay kolay<SENSE>1</SENSE></LITERAL></SYNONYM><POS>b</POS><DEF>Kolay bir yoldan; kolayca</DEF></SYNSET>
+<SYNSET><ID>TUR10-0476840</ID><SYNONYM><LITERAL>devam ettirmek<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Süregelen bir durumun değişikliğe uğramasını önlemek</DEF></SYNSET>
+<SYNSET><ID>TUR10-0481710</ID><SYNONYM><LITERAL>köpek balıkları<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Omurgalı hayvanlardan balıklar sınıfına giren bir takım</DEF></SYNSET>
+<SYNSET><ID>TUR10-0490390</ID><SYNONYM><LITERAL>kum fırtınası<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Çöllerde kumu havaya karıştıran kasırga</DEF></SYNSET>
+<SYNSET><ID>TUR10-0492760</ID><SYNONYM><LITERAL>inşa etmek<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Yapı yapmak</DEF></SYNSET>
+<SYNSET><ID>TUR10-0505330</ID><SYNONYM><LITERAL>söz etmek<SENSE>1</SENSE></LITERAL><LITERAL>yer vermek<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Birinden veya bir konudan söz etmek, onunla ilgili olarak konuşmak</DEF></SYNSET>
+<SYNSET><ID>TUR10-0505830</ID><SYNONYM><LITERAL>an<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Zamanın bölünemeyecek kadar kısa parçası</DEF></SYNSET>
+<SYNSET><ID>TUR10-0509920</ID><SYNONYM><LITERAL>boyunduruk<SENSE>4</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Zulüm ve zorbalık baskısı</DEF></SYNSET>
+<SYNSET><ID>TUR10-0520720</ID><SYNONYM><LITERAL>araba<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Tekerlekli, motorlu veya motorsuz her türlü kara taşıtı</DEF></SYNSET>
+<SYNSET><ID>TUR10-0522180</ID><SYNONYM><LITERAL>mali yıl<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Her yıl bütçenin uygulanması için, martın birinden başlayıp ertesi yıl şubat sonunda kapanan süre</DEF></SYNSET>
+<SYNSET><ID>TUR10-0522280</ID><SYNONYM><LITERAL>mal olmak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Bir değer karşılığında birinin iyeliği altına girmek</DEF></SYNSET>
+<SYNSET><ID>TUR10-0522910</ID><SYNONYM><LITERAL>anlamlı<SENSE>1</SENSE></LITERAL></SYNONYM><POS>a</POS><DEF>Gizli anlamı olan bir şey demek isteyen, düşündürücü</DEF></SYNSET>
+<SYNSET><ID>TUR10-0531560</ID><SYNONYM><LITERAL>bütün<SENSE>2</SENSE></LITERAL></SYNONYM><POS>a</POS><DEF>Bir araya getirilmiş, toplanmış çok sayıdaki varlık ve nesnelerin hepsi</DEF></SYNSET>
+<SYNSET><ID>TUR10-0531770</ID><SYNONYM><LITERAL>bilinmez<SENSE>1</SENSE></LITERAL></SYNONYM><POS>a</POS><DEF>Değeri belli olmayan, bilinmeyen nicelik</DEF></SYNSET>
+<SYNSET><ID>TUR10-0538470</ID><SYNONYM><LITERAL>mest etmek<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Kendinden geçirmek</DEF></SYNSET>
+<SYNSET><ID>TUR10-0552220</ID><SYNONYM><LITERAL>belirli<SENSE>1</SENSE></LITERAL><LITERAL>belli<SENSE>4</SENSE></LITERAL></SYNONYM><POS>a</POS><DEF>Açık ve kesin olarak sınırlanmış veya kararlaştırılmış olan</DEF></SYNSET>
+<SYNSET><ID>TUR10-0552720</ID><SYNONYM><LITERAL>anlaşılmaz<SENSE>1</SENSE></LITERAL></SYNONYM><POS>a</POS><DEF>Anlaşılması, çözülmesi veya içinden çıkılması güç</DEF></SYNSET>
+<SYNSET><ID>TUR10-0554950</ID><SYNONYM><LITERAL>anlaşma<SENSE>3</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Hukuki sonuç doğurmak amacıyla iki veya daha çok kişinin ya da kuruluşun karşılıklı ve birbirine uygun irade beyanlarıyla gerçekleşen işlem</DEF></SYNSET>
+<SYNSET><ID>TUR10-0559470</ID><SYNONYM><LITERAL>cevher<SENSE>2</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Değerli süs eşyası ya da taşı</DEF></SYNSET>
+<SYNSET><ID>TUR10-0559910</ID><SYNONYM><LITERAL>anlık<SENSE>2</SENSE></LITERAL></SYNONYM><POS>a</POS><DEF>Kısa süren, bir an içinde olan</DEF></SYNSET>
+<SYNSET><ID>TUR10-0562670</ID><SYNONYM><LITERAL>başlıbaşına<SENSE>1</SENSE></LITERAL><LITERAL>kendi başına<SENSE>1</SENSE></LITERAL></SYNONYM><POS>b</POS><DEF>Başkasının payı veya yardımı olmaksızın, bir kendisi</DEF></SYNSET>
+<SYNSET><ID>TUR10-0563000</ID><SYNONYM><LITERAL>belirsizlik<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Belirsiz olma durumu</DEF></SYNSET>
+<SYNSET><ID>TUR10-0565860</ID><SYNONYM><LITERAL>alakalı<SENSE>1</SENSE></LITERAL></SYNONYM><POS>a</POS><DEF>Bir konu üzerine olan, üzerine, konusunda, ... ile ilgili</DEF></SYNSET>
+<SYNSET><ID>TUR10-0568960</ID><SYNONYM><LITERAL>araç<SENSE>4</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Taşıma aracı</DEF></SYNSET>
+<SYNSET><ID>TUR10-0571870</ID><SYNONYM><LITERAL>bakarak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>b</POS><DEF>Bakılırsa, hesaba katılırsa, göz önünde tutulunca</DEF></SYNSET>
+<SYNSET><ID>TUR10-0573300</ID><SYNONYM><LITERAL>nefes nefese<SENSE>1</SENSE></LITERAL></SYNONYM><POS>b</POS><DEF>Koşmaktan güçlükle soluk alarak, sık sık soluyarak, yorgun, bitkin veya telaşla</DEF></SYNSET>
+<SYNSET><ID>TUR10-0574600</ID><SYNONYM><LITERAL>hemen hemen<SENSE>2</SENSE></LITERAL></SYNONYM><POS>b</POS><DEF>Nerede ise, az zaman sonra</DEF></SYNSET>
+<SYNSET><ID>TUR10-0581150</ID><SYNONYM><LITERAL>nükleer santral<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Nükleer reaktör yardımıyla elde edilen enerjiyi dağıtan merkez</DEF></SYNSET>
+<SYNSET><ID>TUR10-0583380</ID><SYNONYM><LITERAL>o kadar<SENSE>1</SENSE></LITERAL></SYNONYM><POS>b</POS><DEF>Sayı, nicelik, değer, güç, derece vb. bakımından büyük ve aşırı olan</DEF></SYNSET>
+<SYNSET><ID>TUR10-0583390</ID><SYNONYM><LITERAL>o kadar<SENSE>2</SENSE></LITERAL></SYNONYM><POS>a</POS><DEF>Gereksinimlere cevap veren, ihtiyaçları karşılayan (miktarda olan)</DEF></SYNSET>
+<SYNSET><ID>TUR10-0584360</ID><SYNONYM><LITERAL>çağırmak<SENSE>2</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Herhangi birinin bir yere gelmesini istemek</DEF></SYNSET>
+<SYNSET><ID>TUR10-0584400</ID><SYNONYM><LITERAL>okuma yazma<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Okuma ve yazma bilgisi</DEF></SYNSET>
+<SYNSET><ID>TUR10-0585370</ID><SYNONYM><LITERAL>bütün<SENSE>1</SENSE></LITERAL></SYNONYM><POS>a</POS><DEF>Eksiksiz, tüm</DEF></SYNSET>
+<SYNSET><ID>TUR10-0587380</ID><SYNONYM><LITERAL>yan yana<SENSE>1</SENSE></LITERAL></SYNONYM><POS>b</POS><DEF>Biri ötekinin sağında veya solunda olarak, birbirinin yanında</DEF></SYNSET>
+<SYNSET><ID>TUR10-0590360</ID><SYNONYM><LITERAL>organize suç<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Çeşitli kişi ve örgütlerce planlanıp işlenen suç</DEF></SYNSET>
+<SYNSET><ID>TUR10-0591580</ID><SYNONYM><LITERAL>Orta Çağ<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Batı Roma İmparatorluğunun çöküşünden 476 1453'e veya 1492'ye kadar süren çağ</DEF></SYNSET>
+<SYNSET><ID>TUR10-0598790</ID><SYNONYM><LITERAL>ödün vermek<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Uzlaşmaya varabilmek için hak, istek veya savlarının bir bölümünden, karşı taraf yararına vazgeçerek anlaşma sağlamak</DEF></SYNSET>
+<SYNSET><ID>TUR10-0601200</ID><SYNONYM><LITERAL>rekabet etmek<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Başkalarından üstün olmaya çalışmak</DEF></SYNSET>
+<SYNSET><ID>TUR10-0606460</ID><SYNONYM><LITERAL>öte yandan<SENSE>1</SENSE></LITERAL></SYNONYM><POS>b</POS><DEF>Başka bir yönden; karşılık olarak; diğer taraftan</DEF></SYNSET>
+<SYNSET><ID>TUR10-0607730</ID><SYNONYM><LITERAL>aynılık<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Aynı olma durumu</DEF></SYNSET>
+<SYNSET><ID>TUR10-0608130</ID><SYNONYM><LITERAL>bilhassa<SENSE>1</SENSE></LITERAL></SYNONYM><POS>b</POS><DEF>Özel olarak, ayrı bir önem verilerek</DEF></SYNSET>
+<SYNSET><ID>TUR10-0611580</ID><SYNONYM><LITERAL>paldır küldür<SENSE>1</SENSE></LITERAL></SYNONYM><POS>b</POS><DEF>Ansızın ve kurallara uymaksızın</DEF></SYNSET>
+<SYNSET><ID>TUR10-0613510</ID><SYNONYM><LITERAL>para birimi<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Bir devletin para için kabul ettiği değer ve eder ölçüsü</DEF></SYNSET>
+<SYNSET><ID>TUR10-0615610</ID><SYNONYM><LITERAL>park etmek<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Taşıtları trafik kuralları bakımından uygun bir yerde belli süre bırakmak</DEF></SYNSET>
+<SYNSET><ID>TUR10-0616530</ID><SYNONYM><LITERAL>bölüm<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Bir bütünü oluşturan parçaların her biri</DEF></SYNSET>
+<SYNSET><ID>TUR10-0621230</ID><SYNONYM><LITERAL>sıkı sıkıya<SENSE>1</SENSE></LITERAL></SYNONYM><POS>b</POS><DEF>İyice</DEF></SYNSET>
+<SYNSET><ID>TUR10-0621240</ID><SYNONYM><LITERAL>pek çoğu<SENSE>1</SENSE></LITERAL></SYNONYM><POS>r</POS><DEF>Yeterinden fazlası</DEF></SYNSET>
+<SYNSET><ID>TUR10-0622420</ID><SYNONYM><LITERAL>cam<SENSE>3</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Yapıları veya tren, vapur vb. ulaşım araçlarını aydınlatmak, havalandırmak amacıyla yapılan, çerçeve, cam, panjur, perde gibi eklentilerle daha kullanışlı bir duruma getirilen açıklık</DEF></SYNSET>
+<SYNSET><ID>TUR10-0625000</ID><SYNONYM><LITERAL>arka<SENSE>4</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Art, geri</DEF></SYNSET>
+<SYNSET><ID>TUR10-0625120</ID><SYNONYM><LITERAL>ön yargı<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Bir kimse veya bir şeyle ilgili olarak belirli şart, olay ve görüntülere dayanarak önceden edinilmiş olumlu veya olumsuz yargı</DEF></SYNSET>
+<SYNSET><ID>TUR10-0625740</ID><SYNONYM><LITERAL>açık<SENSE>9</SENSE></LITERAL></SYNONYM><POS>a</POS><DEF>Gizli olmayan, ortada olan, anlaşılan, bedihi, zahir, aşikâr</DEF></SYNSET>
+<SYNSET><ID>TUR10-0633150</ID><SYNONYM><LITERAL>popüler müzik<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>İngiliz ve Amerikalıların başlattıkları, hareketli, yerel motiflerden yararlanılarak yapılan, gençler arasında çok beğenilen bir müzik türü</DEF></SYNSET>
+<SYNSET><ID>TUR10-0639930</ID><SYNONYM><LITERAL>bağ<SENSE>4</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>İlgi, ilişki</DEF></SYNSET>
+<SYNSET><ID>TUR10-0640020</ID><SYNONYM><LITERAL>bağlantılı<SENSE>1</SENSE></LITERAL></SYNONYM><POS>a</POS><DEF>Aralarında bir ilgi ya da ilişki bulunan</DEF></SYNSET>
+<SYNSET><ID>TUR10-0643060</ID><SYNONYM><LITERAL>muhatap olmak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Bir kimse ile karşı karşıya gelmek</DEF></SYNSET>
+<SYNSET><ID>TUR10-0647630</ID><SYNONYM><LITERAL>geri çekilmek<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Karıştığı bir işi sürdürmekten veya sürdürenler arasında bulunmaktan vazgeçmek</DEF></SYNSET>
+<SYNSET><ID>TUR10-0648540</ID><SYNONYM><LITERAL>roman yazarı<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>İnsanın veya çevrenin karakterlerini, göreneklerini inceleyen, serüvenlerini anlatan, duygu ve tutkularını çözümleyen, kurmaca veya gerçek olaylara dayanan uzun edebî eser yazan kimse</DEF></SYNSET>
+<SYNSET><ID>TUR10-0651010</ID><SYNONYM><LITERAL>arkadaşlar<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Birbirlerine karşı sevgi ve anlayış gösteren kimseler</DEF></SYNSET>
+<SYNSET><ID>TUR10-0654440</ID><SYNONYM><LITERAL>saf dışı<SENSE>1</SENSE></LITERAL></SYNONYM><POS>a</POS><DEF>İlgisiz; bağlantısız; işlemez</DEF></SYNSET>
+<SYNSET><ID>TUR10-0656970</ID><SYNONYM><LITERAL>sahip olmak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Mülkiyetinde olmak, elinde bulundurmak</DEF></SYNSET>
+<SYNSET><ID>TUR10-0659820</ID><SYNONYM><LITERAL>hücum etmek<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Bir kimseye veya bir şeye karşı saldırı yöneltmek, zarar verici bir davranışta bulunmak</DEF></SYNSET>
+<SYNSET><ID>TUR10-0662340</ID><SYNONYM><LITERAL>sanat eseri<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Yaratıcılık ve ustalık sonucu ortaya çıkan üstün ve değerli eser</DEF></SYNSET>
+<SYNSET><ID>TUR10-0662500</ID><SYNONYM><LITERAL>sanayi bölgesi<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Sanayinin yoğun olarak yer aldığı bölge</DEF></SYNSET>
+<SYNSET><ID>TUR10-0669320</ID><SYNONYM><LITERAL>iddia etmek<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Sözünde direnmek, bir iddia ileri sürmek</DEF></SYNSET>
+<SYNSET><ID>TUR10-0672260</ID><SYNONYM><LITERAL>alternatif<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Birinin yerine seçebilecek bir başka yol, yöntem, tutum, alternatif</DEF></SYNSET>
+<SYNSET><ID>TUR10-0678300</ID><SYNONYM><LITERAL>öne sürmek<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>İleri sürmek</DEF></SYNSET>
+<SYNSET><ID>TUR10-0681140</ID><SYNONYM><LITERAL>hitap etmek<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Sözü birine veya birilerine yöneltmek, birine karşı söylemek</DEF></SYNSET>
+<SYNSET><ID>TUR10-0682630</ID><SYNONYM><LITERAL>seyahat etmek<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Uzak yerleri gezerek görmek; yolculuk etmek</DEF></SYNSET>
+<SYNSET><ID>TUR10-0683560</ID><SYNONYM><LITERAL>belli etmek<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Bir şeyi açıkça söylemeyip üstü kapalı anlatmak, hissetmesine sebep olmak</DEF></SYNSET>
+<SYNSET><ID>TUR10-0686650</ID><SYNONYM><LITERAL>yalan söylemek<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Yalan konuşmak</DEF></SYNSET>
+<SYNSET><ID>TUR10-0686680</ID><SYNONYM><LITERAL>sık sık<SENSE>1</SENSE></LITERAL></SYNONYM><POS>b</POS><DEF>Az aralıklarla</DEF></SYNSET>
+<SYNSET><ID>TUR10-0686690</ID><SYNONYM><LITERAL>sık sık<SENSE>2</SENSE></LITERAL></SYNONYM><POS>b</POS><DEF>Arası çok geçmeden; az aralıkla; sık olarak</DEF></SYNSET>
+<SYNSET><ID>TUR10-0687600</ID><SYNONYM><LITERAL>sınırlı sayı<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Sonsuz değerli olmayan sayı</DEF></SYNSET>
+<SYNSET><ID>TUR10-0688090</ID><SYNONYM><LITERAL>sıraya dizmek<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Birbiri ardı sıra veya yan yana koyarak sıra durumuna getirmek</DEF></SYNSET>
+<SYNSET><ID>TUR10-0702440</ID><SYNONYM><LITERAL>son nefes<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Hayatın sonu</DEF></SYNSET>
+<SYNSET><ID>TUR10-0703510</ID><SYNONYM><LITERAL>soru işareti<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Soru cümlelerinin sonuna konulan noktalama işaretinin adı</DEF></SYNSET>
+<SYNSET><ID>TUR10-0703790</ID><SYNONYM><LITERAL>anket<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Herhangi bir konuyla ilgili durum ve tutumu belirlemek için düzenlenmiş ayrıntılı ve kapsamlı soru dizisi</DEF></SYNSET>
+<SYNSET><ID>TUR10-0706570</ID><SYNONYM><LITERAL>anlatma<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Herhangi bir şeyi bildirme, anlatma işi</DEF></SYNSET>
+<SYNSET><ID>TUR10-0707710</ID><SYNONYM><LITERAL>söz sahibi<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Bir konuda bilgisi veya yetkisi olan kimse</DEF></SYNSET>
+<SYNSET><ID>TUR10-0710390</ID><SYNONYM><LITERAL>su borusu<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Suyu, su buharını bir yerden bir yere aktarmaya yarayan demir veya naylon boru</DEF></SYNSET>
+<SYNSET><ID>TUR10-0721130</ID><SYNONYM><LITERAL>tanık olmak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Bir olayı görmek ve duymak</DEF></SYNSET>
+<SYNSET><ID>TUR10-0724810</ID><SYNONYM><LITERAL>şart olmak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Bir şeyin yapılabilmesi veya gerçekleşmesi bazı nesne, fiil ve benzerine bağlı olmak, gerek olmak</DEF></SYNSET>
+<SYNSET><ID>TUR10-0728100</ID><SYNONYM><LITERAL>mutlu etmek<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Neşeli duruma getirmek, şenlendirmek, keyiflendirmek</DEF></SYNSET>
+<SYNSET><ID>TUR10-0736070</ID><SYNONYM><LITERAL>otomatik olarak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>b</POS><DEF>Otomatik olarak, kendisinden</DEF></SYNSET>
+<SYNSET><ID>TUR10-0740240</ID><SYNONYM><LITERAL>takip etmek<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Yetişmek, yakalamak veya bulmak amacıyla birinin arkasından gitmek</DEF></SYNSET>
+<SYNSET><ID>TUR10-0740260</ID><SYNONYM><LITERAL>takip etmek<SENSE>2</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Uymak, bir şeyi izlemek</DEF></SYNSET>
+<SYNSET><ID>TUR10-0740270</ID><SYNONYM><LITERAL>takip etmek<SENSE>3</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Dikkatle dinlemek; anlamak</DEF></SYNSET>
+<SYNSET><ID>TUR10-0740750</ID><SYNONYM><LITERAL>takma kol<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Kesilen, kopan bir kolun yerine takılan yapma kol</DEF></SYNSET>
+<SYNSET><ID>TUR10-0740940</ID><SYNONYM><LITERAL>anlatış<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Anlatma; ders verme</DEF></SYNSET>
+<SYNSET><ID>TUR10-0742490</ID><SYNONYM><LITERAL>bitirmek<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Bitmesini sağlamak, tüketmek veya sonuçlandırmak</DEF></SYNSET>
+<SYNSET><ID>TUR10-0743180</ID><SYNONYM><LITERAL>cehennem<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Dinî inanışlara göre, dünyada günah işleyenlerin öldükten sonra ceza görecekleri yer</DEF></SYNSET>
+<SYNSET><ID>TUR10-0754130</ID><SYNONYM><LITERAL>canlanmak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Gücü artmak, diri duruma gelmek ve canlılık kazanmak</DEF></SYNSET>
+<SYNSET><ID>TUR10-0754750</ID><SYNONYM><LITERAL>balta<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Ağacı kesme, yarma, yontma vb. işlerde kullanılan ağaç saplı, demir araç</DEF></SYNSET>
+<SYNSET><ID>TUR10-0756630</ID><SYNONYM><LITERAL>fark etmek<SENSE>3</SENSE></LITERAL><LITERAL>ayırt etmek<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Birkaç şeyi birbirinden ayıran niteliği anlamak</DEF></SYNSET>
+<SYNSET><ID>TUR10-0758670</ID><SYNONYM><LITERAL>tek kişilik<SENSE>1</SENSE></LITERAL></SYNONYM><POS>a</POS><DEF>Tek kişiye özgü</DEF></SYNSET>
+<SYNSET><ID>TUR10-0760640</ID><SYNONYM><LITERAL>telefon kulübesi<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Şehir veya mahallelerin belli yerlerinde telefon edilebilecek özel yer</DEF></SYNSET>
+<SYNSET><ID>TUR10-0764990</ID><SYNONYM><LITERAL>aydınlatma<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Işıklı duruma getirme</DEF></SYNSET>
+<SYNSET><ID>TUR10-0768420</ID><SYNONYM><LITERAL>geri dönmek<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Geldiği yere gitmek</DEF></SYNSET>
+<SYNSET><ID>TUR10-0769950</ID><SYNONYM><LITERAL>test etmek<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Bilgisini, yeteneğini, yeterliliğini veya niteliğini yoklamak</DEF></SYNSET>
+<SYNSET><ID>TUR10-0771940</ID><SYNONYM><LITERAL>kabul etmek<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Bir şeyin doğru olduğunu ortaya koymak, tasdik etmek</DEF></SYNSET>
+<SYNSET><ID>TUR10-0772100</ID><SYNONYM><LITERAL>artış<SENSE>1</SENSE></LITERAL><LITERAL>artma<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Sayısı artma, çok duruma gelme</DEF></SYNSET>
+<SYNSET><ID>TUR10-0782420</ID><SYNONYM><LITERAL>arazi<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Yeryüzü parçası, yer</DEF></SYNSET>
+<SYNSET><ID>TUR10-0789960</ID><SYNONYM><LITERAL>yerine getirmek<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>İstenileni, gerekeni ya da gereğini yapmak</DEF></SYNSET>
+<SYNSET><ID>TUR10-0790150</ID><SYNONYM><LITERAL>zaman almak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Devam edip zamanı geçirmek</DEF></SYNSET>
+<SYNSET><ID>TUR10-0792170</ID><SYNONYM><LITERAL>bitmek<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Sona ermek; kalmamak</DEF></SYNSET>
+<SYNSET><ID>TUR10-0792690</ID><SYNONYM><LITERAL>cümle<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Bir yargı bildirmek için tek başına çekimli bir fiil veya çekimli bir fiille kullanılan kelimeler dizisi</DEF></SYNSET>
+<SYNSET><ID>TUR10-0793950</ID><SYNONYM><LITERAL>açıkçası<SENSE>1</SENSE></LITERAL></SYNONYM><POS>b</POS><DEF>Açık söylemek gerekirse, açık olarak</DEF></SYNSET>
+<SYNSET><ID>TUR10-0795760</ID><SYNONYM><LITERAL>cennet<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Dinî inanışlara göre dünyada iyilik yapanların, günahsızların, öldükten sonra sonsuz bir mutluluğa kavuşacakları yer</DEF></SYNSET>
+<SYNSET><ID>TUR10-0795950</ID><SYNONYM><LITERAL>uçsuz bucaksız<SENSE>1</SENSE></LITERAL></SYNONYM><POS>a</POS><DEF>Sonu görülmeyecek kadar geniş olan</DEF></SYNSET>
+<SYNSET><ID>TUR10-0796600</ID><SYNONYM><LITERAL>ufak tefek<SENSE>1</SENSE></LITERAL></SYNONYM><POS>a</POS><DEF>Çok gerekli olmayan; önemsiz</DEF></SYNSET>
+<SYNSET><ID>TUR10-0804920</ID><SYNONYM><LITERAL>uzay gemisi<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Uzaya gitmek için yapılmış taşıt</DEF></SYNSET>
+<SYNSET><ID>TUR10-0804950</ID><SYNONYM><LITERAL>uzay üssü<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Uzay çalışmalarının yapıldığı merkez</DEF></SYNSET>
+<SYNSET><ID>TUR10-0807290</ID><SYNONYM><LITERAL>sohbet etmek<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Dostça, arkadaşça konuşarak hoş bir vakit geçirmek, söyleşide bulunmak, yarenlik etmek, hasbihâl etmek</DEF></SYNSET>
+<SYNSET><ID>TUR10-0810040</ID><SYNONYM><LITERAL>bile<SENSE>3</SENSE></LITERAL></SYNONYM><POS>b</POS><DEF>Bir de, bundan başka; ayrıca</DEF></SYNSET>
+<SYNSET><ID>TUR10-0812890</ID><SYNONYM><LITERAL>ciddiyet<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Davranışları ölçülü, olgun olma durumu</DEF></SYNSET>
+<SYNSET><ID>TUR10-0813510</ID><SYNONYM><LITERAL>anne<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Çocuğunu dünyaya getiren kadın</DEF></SYNSET>
+<SYNSET><ID>TUR10-0813640</ID><SYNONYM><LITERAL>anlam<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Bir kelimeden, bir sözden, bir davranış veya olgudan anlaşılan şey, bunların hatırlattığı düşünce veya nesne</DEF></SYNSET>
+<SYNSET><ID>TUR10-0818910</ID><SYNONYM><LITERAL>ya da<SENSE>1</SENSE></LITERAL></SYNONYM><POS>c</POS><DEF>Ayrı olmakla birlikte aynı değerde tutulan iki şeyi veya bir başka seçeneği anlatan sözlerden ikincisinin önüne getirilen bir söz</DEF></SYNSET>
+<SYNSET><ID>TUR10-0822270</ID><SYNONYM><LITERAL>bırakmak<SENSE>2</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Koymak</DEF></SYNSET>
+<SYNSET><ID>TUR10-0823150</ID><SYNONYM><LITERAL>vahşi hayvan<SENSE>1</SENSE></LITERAL><LITERAL>yırtıcı hayvan<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Ehlîleştirilmemiş hayvan</DEF></SYNSET>
+<SYNSET><ID>TUR10-0823620</ID><SYNONYM><LITERAL>ya da<SENSE>2</SENSE></LITERAL></SYNONYM><POS>c</POS><DEF>Seçeneği, çeşitliliği veya tercihi belirten bir söz</DEF></SYNSET>
+<SYNSET><ID>TUR10-0831630</ID><SYNONYM><LITERAL>aldanmak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Tanımayarak, niteliğini iyi anlamayarak (genellikle görünüşe bakarak) yanlış bir yargıya varmak</DEF></SYNSET>
+<SYNSET><ID>TUR10-0831790</ID><SYNONYM><LITERAL>yanı sıra<SENSE>1</SENSE></LITERAL></SYNONYM><POS>b</POS><DEF>Birlikte</DEF></SYNSET>
+<SYNSET><ID>TUR10-0831800</ID><SYNONYM><LITERAL>beraberinde<SENSE>1</SENSE></LITERAL></SYNONYM><POS>b</POS><DEF>Yanında, yanına katarak</DEF></SYNSET>
+<SYNSET><ID>TUR10-0831830</ID><SYNONYM><LITERAL>cevap<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Bir soruya, bir isteğe, bir söz veya yazıya verilen karşı davranış</DEF></SYNSET>
+<SYNSET><ID>TUR10-0832380</ID><SYNONYM><LITERAL>çabalamak<SENSE>2</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Bir iş yapmak için zahmet çekmek</DEF></SYNSET>
+<SYNSET><ID>TUR10-0832900</ID><SYNONYM><LITERAL>yan ürün<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Bir ana ürün elde edilirken ortaya çıkan başka ürün</DEF></SYNSET>
+<SYNSET><ID>TUR10-0833210</ID><SYNONYM><LITERAL>bina<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Barınmak veya başka amaçlarla kullanılmak için yapılmış her türlü mimarlık eseri</DEF></SYNSET>
+<SYNSET><ID>TUR10-0836210</ID><SYNONYM><LITERAL>asistan<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Yardım eden veya gerektiğinde yardım edecek olan kimse vb.</DEF></SYNSET>
+<SYNSET><ID>TUR10-0841960</ID><SYNONYM><LITERAL>yavaş yavaş<SENSE>2</SENSE></LITERAL></SYNONYM><POS>b</POS><DEF>Yavaş bir biçimde; ağır ağır; aheste aheste; aheste beste</DEF></SYNSET>
+<SYNSET><ID>TUR10-0841970</ID><SYNONYM><LITERAL>yavaş yavaş<SENSE>3</SENSE></LITERAL></SYNONYM><POS>b</POS><DEF>Azar azar, acele etmeden </DEF></SYNSET>
+<SYNSET><ID>TUR10-0846480</ID><SYNONYM><LITERAL>teke tek<SENSE>1</SENSE></LITERAL></SYNONYM><POS>b</POS><DEF>Bire karşı bir</DEF></SYNSET>
+<SYNSET><ID>TUR10-0849920</ID><SYNONYM><LITERAL>yer altı<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Yerin yüzeyi altındaki bölümü</DEF></SYNSET>
+<SYNSET><ID>TUR10-0850370</ID><SYNONYM><LITERAL>iz bırakmak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Bir yerde belirli bir ize neden olmak ve etkisi kalıcı duruma gelmek</DEF></SYNSET>
+<SYNSET><ID>TUR10-0858170</ID><SYNONYM><LITERAL>kontrol etmek<SENSE>2</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Kontrol amaçlı okumak, bakmak</DEF></SYNSET>
+<SYNSET><ID>TUR10-0858920</ID><SYNONYM><LITERAL>yolculuk etmek<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Bir yerden başka bir yere gitmek</DEF></SYNSET>
+<SYNSET><ID>TUR10-0858990</ID><SYNONYM><LITERAL>yoldaşlık etmek<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Bir yolcuya katılmak, birlikte gitmek</DEF></SYNSET>
+<SYNSET><ID>TUR10-0863500</ID><SYNONYM><LITERAL>yurt dışı<SENSE>1</SENSE></LITERAL></SYNONYM><POS>a</POS><DEF>Yurt sınırları dışında olan</DEF></SYNSET>
+<SYNSET><ID>TUR10-0865250</ID><SYNONYM><LITERAL>uçsuz bucaksız<SENSE>2</SENSE></LITERAL></SYNONYM><POS>a</POS><DEF>Çok fazla; pek çok</DEF></SYNSET>
+<SYNSET><ID>TUR10-0869380</ID><SYNONYM><LITERAL>artı<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Toplama işleminde + işaretinin adı</DEF></SYNSET>
+<SYNSET><ID>TUR10-0870700</ID><SYNONYM><LITERAL>fena sayılmaz<SENSE>1</SENSE></LITERAL></SYNONYM><POS>a</POS><DEF>Oldukça iyi</DEF></SYNSET>
+<SYNSET><ID>TUR10-0870920</ID><SYNONYM><LITERAL>cazip<SENSE>1</SENSE></LITERAL></SYNONYM><POS>a</POS><DEF>Düşünce, duygu veya davranış bakımından insanın sevgi ve saygısını kazanan</DEF></SYNSET>
+<SYNSET><ID>TUR10-0873230</ID><SYNONYM><LITERAL>beğeni<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Güzel veya çirkin yargısını verdiren duygu</DEF></SYNSET>
+<SYNSET><ID>TUR10-0875890</ID><SYNONYM><LITERAL>anmak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Birini veya bir şeyi akla getirerek sözünü etmek veya onu düşünmek</DEF></SYNSET>
+<SYNSET><ID>TUR10-0876580</ID><SYNONYM><LITERAL>aşağı<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Bir şeyin alt bölümü</DEF></SYNSET>
+<SYNSET><ID>TUR10-0879070</ID><SYNONYM><LITERAL>ayırt<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Fark</DEF></SYNSET>
+<SYNSET><ID>TUR10-0883240</ID><SYNONYM><LITERAL>ahlak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Bir toplum içinde kişilerin uymak zorunda oldukları davranış biçimleri ve kuralları</DEF></SYNSET>
+<SYNSET><ID>TUR10-0885630</ID><SYNONYM><LITERAL>beğenmemek<SENSE>2</SENSE></LITERAL><LITERAL>hafife almak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Bir kimseyi veya bir şeyi aşağılık ve değersiz görmek</DEF></SYNSET>
+<SYNSET><ID>TUR10-0885930</ID><SYNONYM><LITERAL>bir çatı altında<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Aynı yapı, kurum, kuruluş vb. içinde (olmak)</DEF></SYNSET>
+<SYNSET><ID>TUR10-0886370</ID><SYNONYM><LITERAL>göz önünde bulundurmak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Herhangi bir durumun nasıl bir sonuca yol açacağını düşünmek</DEF></SYNSET>
+<SYNSET><ID>TUR10-0887290</ID><SYNONYM><LITERAL>can sıkmak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Bıkkınlık vermek</DEF></SYNSET>
+<SYNSET><ID>TUR10-0889230</ID><SYNONYM><LITERAL>davet etmek<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Herhangi birinin bir yere gelmesini istemek; çağırmak</DEF></SYNSET>
+<SYNSET><ID>TUR10-0889460</ID><SYNONYM><LITERAL>doğru çıkmak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Gerçek olduğu anlaşılmak</DEF></SYNSET>
+<SYNSET><ID>TUR10-0890320</ID><SYNONYM><LITERAL>dört bir yan<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Her yan, bütün çevre</DEF></SYNSET>
+<SYNSET><ID>TUR10-0890350</ID><SYNONYM><LITERAL>dört gözle beklemek<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Çok isteyerek veya özleyerek beklemek</DEF></SYNSET>
+<SYNSET><ID>TUR10-0890730</ID><SYNONYM><LITERAL>böbürlenmek<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Başkalarına yüksekten bakar gibi bir tavır takınmak, kendini üstün görmeye çalışmak</DEF></SYNSET>
+<SYNSET><ID>TUR10-0891740</ID><SYNONYM><LITERAL>çile çekmek<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Büyük sıkıntı ve üzüntü içinde yaşamak</DEF></SYNSET>
+<SYNSET><ID>TUR10-0893550</ID><SYNONYM><LITERAL>yardım etmek<SENSE>1</SENSE></LITERAL><LITERAL>yardımda bulunmak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Kendi gücünü, imkânlarını başka birinin iyiliği için kullanmak</DEF></SYNSET>
+<SYNSET><ID>TUR10-0893620</ID><SYNONYM><LITERAL>elde etmek<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Bir şeye sahip olmak</DEF></SYNSET>
+<SYNSET><ID>TUR10-0893900</ID><SYNONYM><LITERAL>elektriği kesmek<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Elektrik enerjisinin akışına engel olmak</DEF></SYNSET>
+<SYNSET><ID>TUR10-0894290</ID><SYNONYM><LITERAL>bakılmak<SENSE>1</SENSE></LITERAL><LITERAL>büyütülmek<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Bakma işine konu olmak veya bakma işi yapılmak</DEF></SYNSET>
+<SYNSET><ID>TUR10-0895450</ID><SYNONYM><LITERAL>fena değil<SENSE>1</SENSE></LITERAL></SYNONYM><POS>a</POS><DEF>Oldukça iyi</DEF></SYNSET>
+<SYNSET><ID>TUR10-0896460</ID><SYNONYM><LITERAL>gaza getirmek<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Birini olmadık bir şey veya hayalî bilgilerle coşturmak, ileri sürmek</DEF></SYNSET>
+<SYNSET><ID>TUR10-0897570</ID><SYNONYM><LITERAL>arkada kalmak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Geriden gelmek, takip etmekte zorlanmak</DEF></SYNSET>
+<SYNSET><ID>TUR10-0897760</ID><SYNONYM><LITERAL>göğüs germek<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Güçlüğe veya sıkıntıya dayanmak</DEF></SYNSET>
+<SYNSET><ID>TUR10-0897820</ID><SYNONYM><LITERAL>göz göze gelmek<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Her iki tarafın bakışları karşılaşmak</DEF></SYNSET>
+<SYNSET><ID>TUR10-0899260</ID><SYNONYM><LITERAL>haşır neşir olmak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Kaynaşmak, bir arada bulunup uğraşmak</DEF></SYNSET>
+<SYNSET><ID>TUR10-0899290</ID><SYNONYM><LITERAL>hatırı sayılır<SENSE>2</SENSE></LITERAL><LITERAL>hatırı sayılır<SENSE>1</SENSE></LITERAL></SYNONYM><POS>a</POS><DEF>Oldukça çok</DEF></SYNSET>
+<SYNSET><ID>TUR10-0899870</ID><SYNONYM><LITERAL>hayran bırakmak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Hayranlık duygusu uyandırmak</DEF></SYNSET>
+<SYNSET><ID>TUR10-0899890</ID><SYNONYM><LITERAL>hayranlık duymak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Çok beğenmek, tutkuyla bağlanmak</DEF></SYNSET>
+<SYNSET><ID>TUR10-0901620</ID><SYNONYM><LITERAL>ibaret olmak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>-den oluşmak, meydana gelmek</DEF></SYNSET>
+<SYNSET><ID>TUR10-0901730</ID><SYNONYM><LITERAL>içinden çıkmak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Karışık bir işin güçlüklerini yenebilmek; üstesinden gelmek</DEF></SYNSET>
+<SYNSET><ID>TUR10-0903620</ID><SYNONYM><LITERAL>ipucu vermek<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Aranılan gerçeğe ulaştırabilecek şeyle ilgili, onu bulmaya yarayan bilgi vermek</DEF></SYNSET>
+<SYNSET><ID>TUR10-0903810</ID><SYNONYM><LITERAL>iş çıkarmak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Çok iş yapmak</DEF></SYNSET>
+<SYNSET><ID>TUR10-0905920</ID><SYNONYM><LITERAL>kapı aralamak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Bir konuya giriş yapmak, karşısındakini hazırlamak</DEF></SYNSET>
+<SYNSET><ID>TUR10-0906080</ID><SYNONYM><LITERAL>karar almak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Bir davayı, bir sorunu çözümlemek, sonuçlandırmak</DEF></SYNSET>
+<SYNSET><ID>TUR10-0906313</ID><SYNONYM><LITERAL>kasıp kavurmak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Çok zarar vermek</DEF></SYNSET>
+<SYNSET><ID>TUR10-0907330</ID><SYNONYM><LITERAL>hasta olmak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Sağlığı bozulmak, hastalanmak</DEF></SYNSET>
+<SYNSET><ID>TUR10-0907570</ID><SYNONYM><LITERAL>kılıç sallamak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Kılıç ile dövüşmek, düşman üzerine kılıçla saldırmak</DEF></SYNSET>
+<SYNSET><ID>TUR10-0907580</ID><SYNONYM><LITERAL>kılıçtan geçirmek<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Kılıçla çok sayıda insanı topluca öldürmek</DEF></SYNSET>
+<SYNSET><ID>TUR10-0907760</ID><SYNONYM><LITERAL>kısa kesmek<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Sözü uzatmamak</DEF></SYNSET>
+<SYNSET><ID>TUR10-0908630</ID><SYNONYM><LITERAL>köşe kapmaca oynamak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Biri başkasına gidip bulamadığı sırada, o da kendisine gelip bulamamak; birbirini arayıp durmak</DEF></SYNSET>
+<SYNSET><ID>TUR10-0911150</ID><SYNONYM><LITERAL>objektif olmak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Nesnel olmak</DEF></SYNSET>
+<SYNSET><ID>TUR10-0912670</ID><SYNONYM><LITERAL>peşinden koşmak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Bir şeyi ya da kimseyi elde etmek için uğraşmak</DEF></SYNSET>
+<SYNSET><ID>TUR10-0913000</ID><SYNONYM><LITERAL>tedirgin etmek<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Rahatını, huzurunu kaçırmak</DEF></SYNSET>
+<SYNSET><ID>TUR10-0913810</ID><SYNONYM><LITERAL>imkan vermek<SENSE>1</SENSE></LITERAL><LITERAL>olanak sağlamak<SENSE>1</SENSE></LITERAL><LITERAL>olanak tanımak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Bir işin gerçekleşmesine elverişli ortamı sağlamak</DEF></SYNSET>
+<SYNSET><ID>TUR10-0913930</ID><SYNONYM><LITERAL>şekil almak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Belli bir biçime girmek; biçimlenmek; şekillenmek</DEF></SYNSET>
+<SYNSET><ID>TUR10-0915330</ID><SYNONYM><LITERAL>zarar vermek<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Kötülük etmek</DEF></SYNSET>
+<SYNSET><ID>TUR10-0915470</ID><SYNONYM><LITERAL>zor gelmek<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Bir işin yapılması birine güç gelmek</DEF></SYNSET>
+<SYNSET><ID>TUR10-0915620</ID><SYNONYM><LITERAL>devam etmek<SENSE>2</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Sürekli, düzenli gitmek</DEF></SYNSET>
+<SYNSET><ID>TUR10-0915630</ID><SYNONYM><LITERAL>devam etmek<SENSE>3</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Sürdürmek</DEF></SYNSET>
+<SYNSET><ID>TUR10-0918630</ID><SYNONYM><LITERAL>açık konuşmak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Gerçeği çekinmeden söylemek</DEF></SYNSET>
+<SYNSET><ID>TUR10-0918640</ID><SYNONYM><LITERAL>açıklama yapmak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Herhangi bir konuyu aydınlığa kavuşturmak amacıyla konuşmak veya yazmak</DEF></SYNSET>
+<SYNSET><ID>TUR10-0919770</ID><SYNONYM><LITERAL>adalete teslim etmek<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Sanığı, adalet işleriyle uğraşan kuruluşa götürmek</DEF></SYNSET>
+<SYNSET><ID>TUR10-0920130</ID><SYNONYM><LITERAL>büyümek<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Organizmanın bütününde veya bu bütünün bir bölümünde, boyutlar artmak, irileşmek, eskisinden büyük duruma gelmek</DEF></SYNSET>
+<SYNSET><ID>TUR10-0920630</ID><SYNONYM><LITERAL>adım atmak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Yürümek için ayağını öne doğru uzatıp basmak</DEF></SYNSET>
+<SYNSET><ID>TUR10-0921670</ID><SYNONYM><LITERAL>bilgi edinmek<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Bir durumdan haber edinmek, bilgi almak</DEF></SYNSET>
+<SYNSET><ID>TUR10-0922240</ID><SYNONYM><LITERAL>ağır basmak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Taşıdığı özellikler üstün gelmek</DEF></SYNSET>
+<SYNSET><ID>TUR10-0922260</ID><SYNONYM><LITERAL>ağır çekim<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Film gösteriminde hız düşürerek yapılan iş</DEF></SYNSET>
+<SYNSET><ID>TUR10-0927380</ID><SYNONYM><LITERAL>aklı durmak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Düşünemez bir duruma gelmek; şaşırmak</DEF></SYNSET>
+<SYNSET><ID>TUR10-0927390</ID><SYNONYM><LITERAL>anlayabilmek<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Anlama imkanı bulunmak</DEF></SYNSET>
+<SYNSET><ID>TUR10-0927800</ID><SYNONYM><LITERAL>aklına gelmek<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Bilinip unutulan bir şeyi akla getirmek</DEF></SYNSET>
+<SYNSET><ID>TUR10-0928180</ID><SYNONYM><LITERAL>bilgili<SENSE>1</SENSE></LITERAL></SYNONYM><POS>a</POS><DEF>Bilgi sahibi olan</DEF></SYNSET>
+<SYNSET><ID>TUR10-0929530</ID><SYNONYM><LITERAL>ilgi duymak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Bir işe, bir olaya, bir kimseye önem vermek</DEF></SYNSET>
+<SYNSET><ID>TUR10-0931530</ID><SYNONYM><LITERAL>alınış<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Alınma işi veya durumu</DEF></SYNSET>
+<SYNSET><ID>TUR10-0931610</ID><SYNONYM><LITERAL>alıntılanmak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Alıntılama işine konu olmak</DEF></SYNSET>
+<SYNSET><ID>TUR10-0931930</ID><SYNONYM><LITERAL>alışkın olmak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>İyice alışmış olmak; yabancılık çekmemek</DEF></SYNSET>
+<SYNSET><ID>TUR10-0934270</ID><SYNONYM><LITERAL>altında kalmak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Karşılığını verememek</DEF></SYNSET>
+<SYNSET><ID>TUR10-0939030</ID><SYNONYM><LITERAL>devamlı olarak<SENSE>1</SENSE></LITERAL><LITERAL>gece gündüz<SENSE>1</SENSE></LITERAL><LITERAL>gece gündüz<SENSE>1</SENSE></LITERAL><LITERAL>sürekli olarak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>b</POS><DEF>Arkası kesilmeden, sürekli ve devamlı bir şekilde</DEF></SYNSET>
+<SYNSET><ID>TUR10-0943210</ID><SYNONYM><LITERAL>aşina olmak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Tanımak; bilmek</DEF></SYNSET>
+<SYNSET><ID>TUR10-0943910</ID><SYNONYM><LITERAL>boğucu<SENSE>3</SENSE></LITERAL></SYNONYM><POS>a</POS><DEF>Çok sıcak, sıkıntı veren</DEF></SYNSET>
+<SYNSET><ID>TUR10-0944270</ID><SYNONYM><LITERAL>ateş vermek<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Tutuşturmak</DEF></SYNSET>
+<SYNSET><ID>TUR10-0947210</ID><SYNONYM><LITERAL>karşı koymak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Herhangi bir düşüncede, bir istekte veya bir durumda boyun eğmemek</DEF></SYNSET>
+<SYNSET><ID>TUR10-0947800</ID><SYNONYM><LITERAL>ayak uydurmak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Kendi gidiş ve davranışını başkasınınkine benzetmek</DEF></SYNSET>
+<SYNSET><ID>TUR10-0949470</ID><SYNONYM><LITERAL>ayrı düşmek<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Birbirinden uzakta kalmak</DEF></SYNSET>
+<SYNSET><ID>TUR10-0952240</ID><SYNONYM><LITERAL>bağlantı kurmak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>İrtibat sağlamak</DEF></SYNSET>
+<SYNSET><ID>TUR10-0956160</ID><SYNONYM><LITERAL>fırsat bulmak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Uygun, elverişli zaman bulmak</DEF></SYNSET>
+<SYNSET><ID>TUR10-0956290</ID><SYNONYM><LITERAL>başarı<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Bir işi istenilen bir biçimde bitirme işi</DEF></SYNSET>
+<SYNSET><ID>TUR10-0956440</ID><SYNONYM><LITERAL>baş başa bırakmak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Birinin, bir şeyle veya bir kimseyle yalnız kalmasını sağlamak</DEF></SYNSET>
+<SYNSET><ID>TUR10-0956520</ID><SYNONYM><LITERAL>başı çekmek<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Herhangi bir konuda önde gitmek, diğerlerine örnek olmak</DEF></SYNSET>
+<SYNSET><ID>TUR10-0956810</ID><SYNONYM><LITERAL>başlamak<SENSE>3</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Belli bir varlık kazanmak, ortaya çıkmak</DEF></SYNSET>
+<SYNSET><ID>TUR10-0957520</ID><SYNONYM><LITERAL>başına geçmek<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Bir işi yapmaya başlamak</DEF></SYNSET>
+<SYNSET><ID>TUR10-0957670</ID><SYNONYM><LITERAL>başına oturmak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Bir işi yapmaya başlamak, işe koyulmak</DEF></SYNSET>
+<SYNSET><ID>TUR10-0960370</ID><SYNONYM><LITERAL>baz almak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Esas veya temel olarak almak</DEF></SYNSET>
+<SYNSET><ID>TUR10-0960650</ID><SYNONYM><LITERAL>vücut dili<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Organlarını değişik biçimlerde kullanarak istek ve düşüncelerini ifade etme biçimi</DEF></SYNSET>
+<SYNSET><ID>TUR10-0961310</ID><SYNONYM><LITERAL>bel bağlamak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Birisinin kendisine yardımcı olacağına inanmak, güvenmek</DEF></SYNSET>
+<SYNSET><ID>TUR10-0962440</ID><SYNONYM><LITERAL>belli etmek<SENSE>2</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Açıklamak, iyice görünür ve anlaşılır bir duruma getirmek</DEF></SYNSET>
+<SYNSET><ID>TUR10-0964280</ID><SYNONYM><LITERAL>ortaya atmak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Bir düşünceyi veya tasarıyı önermek</DEF></SYNSET>
+<SYNSET><ID>TUR10-0964380</ID><SYNONYM><LITERAL>beyaz yakalı<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Üretim sürecinde bedensel gücüyle çalışmayıp düşünsel etkinlikte bulunan, maaş veya ücret karşılığında çalışan memur</DEF></SYNSET>
+<SYNSET><ID>TUR10-0964650</ID><SYNONYM><LITERAL>ortadan kaldırmak<SENSE>2</SENSE></LITERAL><LITERAL>işini bitirmek<SENSE>1</SENSE></LITERAL><LITERAL>kurşuna dizmek<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Öldürmek, varlığını ortadan kaldırmak</DEF></SYNSET>
+<SYNSET><ID>TUR10-0968170</ID><SYNONYM><LITERAL>bir araya gelmek<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Bir yerde toplanmak</DEF></SYNSET>
+<SYNSET><ID>TUR10-0968180</ID><SYNONYM><LITERAL>bir araya getirmek<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Tek tek durumdaki şeyleri bir yerde birlik haline getirmek</DEF></SYNSET>
+<SYNSET><ID>TUR10-0968370</ID><SYNONYM><LITERAL>bir başka<SENSE>1</SENSE></LITERAL></SYNONYM><POS>a</POS><DEF>Benzersiz, eşsiz (olmak)</DEF></SYNSET>
+<SYNSET><ID>TUR10-0968480</ID><SYNONYM><LITERAL>boğuşmak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Karşılıklı birbirini dövmek, birbirine vurmak</DEF></SYNSET>
+<SYNSET><ID>TUR10-0968720</ID><SYNONYM><LITERAL>bir de<SENSE>2</SENSE></LITERAL></SYNONYM><POS>c</POS><DEF>Ve olana katarak, fazladan</DEF></SYNSET>
+<SYNSET><ID>TUR10-0968880</ID><SYNONYM><LITERAL>bir dizi<SENSE>1</SENSE></LITERAL></SYNONYM><POS>a</POS><DEF>Art arda gelen</DEF></SYNSET>
+<SYNSET><ID>TUR10-0969330</ID><SYNONYM><LITERAL>bir hâl almak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Belli bir duruma gelmek</DEF></SYNSET>
+<SYNSET><ID>TUR10-0969780</ID><SYNONYM><LITERAL>beraber<SENSE>1</SENSE></LITERAL></SYNONYM><POS>b</POS><DEF>Toptan, toplu olarak</DEF></SYNSET>
+<SYNSET><ID>TUR10-0969890</ID><SYNONYM><LITERAL>bir zamanlar<SENSE>2</SENSE></LITERAL></SYNONYM><POS>b</POS><DEF>Geçmiş zamanlarda, geçmişte, daha önce</DEF></SYNSET>
+<SYNSET><ID>TUR10-0970310</ID><SYNONYM><LITERAL>bir müddet<SENSE>1</SENSE></LITERAL></SYNONYM><POS>b</POS><DEF>Bir süre</DEF></SYNSET>
+<SYNSET><ID>TUR10-0970320</ID><SYNONYM><LITERAL>bir nevi<SENSE>1</SENSE></LITERAL></SYNONYM><POS>a</POS><DEF>Bir çeşit</DEF></SYNSET>
+<SYNSET><ID>TUR10-0970440</ID><SYNONYM><LITERAL>bir süre<SENSE>1</SENSE></LITERAL></SYNONYM><POS>b</POS><DEF>Kısa bir müddet; bir müddet</DEF></SYNSET>
+<SYNSET><ID>TUR10-0970660</ID><SYNONYM><LITERAL>bir tarafa koymak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Önemli saymamak, önem vermemek ve bu yüzden ertelemek</DEF></SYNSET>
+<SYNSET><ID>TUR10-0970750</ID><SYNONYM><LITERAL>sıra dışı<SENSE>1</SENSE></LITERAL></SYNONYM><POS>a</POS><DEF>O güne değin duyulmamış, alışılmışın dışında</DEF></SYNSET>
+<SYNSET><ID>TUR10-0971110</ID><SYNONYM><LITERAL>bitiriş<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Bitirme işi</DEF></SYNSET>
+<SYNSET><ID>TUR10-0971360</ID><SYNONYM><LITERAL>zayıf düşmek<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Gücü kalmamak, güçsüz duruma gelmek</DEF></SYNSET>
+<SYNSET><ID>TUR10-0978370</ID><SYNONYM><LITERAL>bununla birlikte<SENSE>2</SENSE></LITERAL><LITERAL>aynı zamanda<SENSE>1</SENSE></LITERAL></SYNONYM><POS>b</POS><DEF>Hem de, buna ek olarak</DEF></SYNSET>
+<SYNSET><ID>TUR10-0978960</ID><SYNONYM><LITERAL>bu yana<SENSE>1</SENSE></LITERAL></SYNONYM><POS>p</POS><DEF>-den beri</DEF></SYNSET>
+<SYNSET><ID>TUR10-0983900</ID><SYNONYM><LITERAL>cinayet işlemek<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Bir insanı öldürmek</DEF></SYNSET>
+<SYNSET><ID>TUR10-0984250</ID><SYNONYM><LITERAL>cirit atmak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Bir yerde çokça bulunmak, sık dolaşmak ve serbestçe davranmak</DEF></SYNSET>
+<SYNSET><ID>TUR10-0995340</ID><SYNONYM><LITERAL>daha da<SENSE>1</SENSE></LITERAL></SYNONYM><POS>a</POS><DEF>Karşılaştırma derecesini vurgular</DEF></SYNSET>
+<SYNSET><ID>TUR10-0998610</ID><SYNONYM><LITERAL>arka planda kalmak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Değersiz duruma gelmek, önemini yitirmek</DEF></SYNSET>
+<SYNSET><ID>TUR10-1000090</ID><SYNONYM><LITERAL>demek istemek<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Bir düşünceyi söylemek istemek</DEF></SYNSET>
+<SYNSET><ID>TUR10-1000110</ID><SYNONYM><LITERAL>anlamına gelmek<SENSE>1</SENSE></LITERAL><LITERAL>demek olmak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Bir anlam bildirmek , ... anlamını taşımak</DEF></SYNSET>
+<SYNSET><ID>TUR10-1000190</ID><SYNONYM><LITERAL>çekip gitmek<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Bırakıp gitmek, kaçmak, uzaklaşmak</DEF></SYNSET>
+<SYNSET><ID>TUR10-1001640</ID><SYNONYM><LITERAL>denize açılmak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Kıyıdan çok uzaklaşmak</DEF></SYNSET>
+<SYNSET><ID>TUR10-1003780</ID><SYNONYM><LITERAL>destan yazmak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Olağanüstü kahramanlık, yararlık veya başarı göstermek</DEF></SYNSET>
+<SYNSET><ID>TUR10-1006570</ID><SYNONYM><LITERAL>dikkat çekmek<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>İlgi toplamak</DEF></SYNSET>
+<SYNSET><ID>TUR10-1006580</ID><SYNONYM><LITERAL>dikkat çekmek<SENSE>2</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Aşırı derecede görünür olmak, fark edilmek</DEF></SYNSET>
+<SYNSET><ID>TUR10-1006690</ID><SYNONYM><LITERAL>dikkatli olmak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Dikkat etmek, dikkat göstermek</DEF></SYNSET>
+<SYNSET><ID>TUR10-1009740</ID><SYNONYM><LITERAL>hastası olmak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Bir şeye çok düşkün olmak</DEF></SYNSET>
+<SYNSET><ID>TUR10-1010590</ID><SYNONYM><LITERAL>doğal olarak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>b</POS><DEF>Beklenildiği gibi, işin gereği olarak</DEF></SYNSET>
+<SYNSET><ID>TUR10-1017270</ID><SYNONYM><LITERAL>büyücü<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Tabiat kanunlarına aykırı sonuçlar elde etmek için gizli işlem ve davranışlara başvuran kimse</DEF></SYNSET>
+<SYNSET><ID>TUR10-1019340</ID><SYNONYM><LITERAL>elinden çıkmak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Biri tarafından yapıldığı belli olmak</DEF></SYNSET>
+<SYNSET><ID>TUR10-1020490</ID><SYNONYM><LITERAL>emek vermek<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Bir şeyin meydana gelmesi için özenle ve çok çalışmak</DEF></SYNSET>
+<SYNSET><ID>TUR10-1020620</ID><SYNONYM><LITERAL>emir almak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Talimat almak</DEF></SYNSET>
+<SYNSET><ID>TUR10-1020880</ID><SYNONYM><LITERAL>örnek vermek<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Bir konuyu daha ayrıntılı bir biçimde anlatabilmek için bir söz ya da davranış öne sürmek</DEF></SYNSET>
+<SYNSET><ID>TUR10-1020910</ID><SYNONYM><LITERAL>en çok<SENSE>1</SENSE></LITERAL></SYNONYM><POS>b</POS><DEF>Zarflarıyla sıfat veya başka zarfların nitelik ve nicelik bakımından kazandıkları en üstün anlam</DEF></SYNSET>
+<SYNSET><ID>TUR10-1022920</ID><SYNONYM><LITERAL>eskisi kadar<SENSE>1</SENSE></LITERAL></SYNONYM><POS>b</POS><DEF>Eskiden olduğu gibi, eskiden olduğu biçimde</DEF></SYNSET>
+<SYNSET><ID>TUR10-1024220</ID><SYNONYM><LITERAL>etki bırakmak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Kuvvetli bir biçimde etkilemek</DEF></SYNSET>
+<SYNSET><ID>TUR10-1025390</ID><SYNONYM><LITERAL>ev sahipliği yapmak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Herhangi bir toplantının düzenlenmesi için gerekli hazırlıkları üstlenmek</DEF></SYNSET>
+<SYNSET><ID>TUR10-1027300</ID><SYNONYM><LITERAL>fırsat beklemek<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>En uygun şartı, durumu veya zamanı kollamak</DEF></SYNSET>
+<SYNSET><ID>TUR10-1031150</ID><SYNONYM><LITERAL>geri kalmamak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Birinden daha az başarılı olmamak</DEF></SYNSET>
+<SYNSET><ID>TUR10-1031230</ID><SYNONYM><LITERAL>arka planda kalmak<SENSE>2</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Önemini ve değerini yitirmek, artık aranmamak, rağbet görmemek</DEF></SYNSET>
+<SYNSET><ID>TUR10-1031900</ID><SYNONYM><LITERAL>gibi gelmek<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>... sanısı vermek, ... sanısı yaratmak</DEF></SYNSET>
+<SYNSET><ID>TUR10-1033220</ID><SYNONYM><LITERAL>gölgesinde kalmak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Adı sanı pek duyulmamak; ön plana çıkamamak; daha az ünlü olmak</DEF></SYNSET>
+<SYNSET><ID>TUR10-1033540</ID><SYNONYM><LITERAL>gönderme yapmak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Konuşurken veya yazarken başka kaynak veya olaylarla bağlantı kurmak</DEF></SYNSET>
+<SYNSET><ID>TUR10-1033790</ID><SYNONYM><LITERAL>memnun etmek<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Sevinmesine yol açmak, sevinmesini sağlamak</DEF></SYNSET>
+<SYNSET><ID>TUR10-1034570</ID><SYNONYM><LITERAL>görev almak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Bir görevde bulunmak, bir görevi üstlenmek</DEF></SYNSET>
+<SYNSET><ID>TUR10-1035250</ID><SYNONYM><LITERAL>temasa geçmek<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Arada bir bağlantı kurmak, görüşme yapmak</DEF></SYNSET>
+<SYNSET><ID>TUR10-1035600</ID><SYNONYM><LITERAL>göz ardı etmek<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Gereken önemi vermemek</DEF></SYNSET>
+<SYNSET><ID>TUR10-1035610</ID><SYNONYM><LITERAL>göz atmak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Bir şeye kısa bir süre, fazla dikkat etmeden bakıvermek, bir şeyi üstünkörü okumak</DEF></SYNSET>
+<SYNSET><ID>TUR10-1035760</ID><SYNONYM><LITERAL>gözden kaçmak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Görülmemek, farkına varılmamak</DEF></SYNSET>
+<SYNSET><ID>TUR10-1035880</ID><SYNONYM><LITERAL>göze almak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Gelebilecek her türlü zararı ve tehlikeyi önceden kabul etmek</DEF></SYNSET>
+<SYNSET><ID>TUR10-1035920</ID><SYNONYM><LITERAL>göze çarpmak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Dikkati üzerine çekmek</DEF></SYNSET>
+<SYNSET><ID>TUR10-1036140</ID><SYNONYM><LITERAL>göz kamaştırıcı<SENSE>1</SENSE></LITERAL></SYNONYM><POS>a</POS><DEF>Gözün kamaşmasına, bir süre göremez duruma gelmesine yol açan (ışık)</DEF></SYNSET>
+<SYNSET><ID>TUR10-1036150</ID><SYNONYM><LITERAL>göz kamaştırıcı<SENSE>2</SENSE></LITERAL></SYNONYM><POS>a</POS><DEF>Muhteşem; çok güzel; parlak; görkemli</DEF></SYNSET>
+<SYNSET><ID>TUR10-1036170</ID><SYNONYM><LITERAL>göz kamaştırmak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Kuvvetli ışık veya parlaklık, kısa bir zaman için görüşü bulandırmak</DEF></SYNSET>
+<SYNSET><ID>TUR10-1036180</ID><SYNONYM><LITERAL>göz kamaştırmak<SENSE>2</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Bir niteliğiyle hayran bırakmak</DEF></SYNSET>
+<SYNSET><ID>TUR10-1036230</ID><SYNONYM><LITERAL>göz kırpmak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Göz kapağını kapayıp açmak</DEF></SYNSET>
+<SYNSET><ID>TUR10-1037160</ID><SYNONYM><LITERAL>gözler önüne sermek<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Açıklamak, sergilemek, göstermek, tanıtmak</DEF></SYNSET>
+<SYNSET><ID>TUR10-1038870</ID><SYNONYM><LITERAL>görmezden gelmek<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Görmemiş gibi yapmak, farkında değilmişçesine davranmak</DEF></SYNSET>
+<SYNSET><ID>TUR10-1039060</ID><SYNONYM><LITERAL>gözüyle bakmak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Gibi görmek, saymak</DEF></SYNSET>
+<SYNSET><ID>TUR10-1043070</ID><SYNONYM><LITERAL>haiz olmak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Elinde bulundurmak, uygun olmak, taşımak</DEF></SYNSET>
+<SYNSET><ID>TUR10-1043290</ID><SYNONYM><LITERAL>haklı olmak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Davası, iddiası, davranışı, düşüncesi adalete uygun olmak</DEF></SYNSET>
+<SYNSET><ID>TUR10-1045240</ID><SYNONYM><LITERAL>has olmak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Özgü olmak</DEF></SYNSET>
+<SYNSET><ID>TUR10-1045580</ID><SYNONYM><LITERAL>haşır neşir<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Kaynaşma, bir arada olma</DEF></SYNSET>
+<SYNSET><ID>TUR10-1045640</ID><SYNONYM><LITERAL>hata yapmak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Bilmeden bir yanlışlık yapmak</DEF></SYNSET>
+<SYNSET><ID>TUR10-1047260</ID><SYNONYM><LITERAL>hayran olmak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>(bir şey ya da kimsenin) iyi, güzel ya da olağanüstü durum ve davranışları karşısında beğeni, saygı duymak</DEF></SYNSET>
+<SYNSET><ID>TUR10-1048530</ID><SYNONYM><LITERAL>her ne kadar<SENSE>1</SENSE></LITERAL></SYNONYM><POS>b</POS><DEF>Başına getirildiği şartlı cümledeki yargının doğru veya doğal görüldüğünü fakat bunun yeterli olmadığını anlatan bir söz</DEF></SYNSET>
+<SYNSET><ID>TUR10-1049860</ID><SYNONYM><LITERAL>en azından<SENSE>1</SENSE></LITERAL></SYNONYM><POS>b</POS><DEF>En azı ile</DEF></SYNSET>
+<SYNSET><ID>TUR10-1050990</ID><SYNONYM><LITERAL>dâhil olmak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Katılmak, girmek veya içinde olmak</DEF></SYNSET>
+<SYNSET><ID>TUR10-1053340</ID><SYNONYM><LITERAL>ifade etmek<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Anlatmak</DEF></SYNSET>
+<SYNSET><ID>TUR10-1054160</ID><SYNONYM><LITERAL>ihtiyaç duymak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Bir şeyi kendisi için gerekli saymak</DEF></SYNSET>
+<SYNSET><ID>TUR10-1055530</ID><SYNONYM><LITERAL>ilaç gibi gelmek<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>İyileşmeyi veya çözümü kolaylaştırmak</DEF></SYNSET>
+<SYNSET><ID>TUR10-1055540</ID><SYNONYM><LITERAL>ilaç gibi gelmek<SENSE>2</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Rahatlatmak, huzura kavuşturmak</DEF></SYNSET>
+<SYNSET><ID>TUR10-1055660</ID><SYNONYM><LITERAL>ilave etmek<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Bir şeyi ekle tamamlamak, katmak</DEF></SYNSET>
+<SYNSET><ID>TUR10-1055690</ID><SYNONYM><LITERAL>ile beraber<SENSE>1</SENSE></LITERAL></SYNONYM><POS>r</POS><DEF>-diği anda</DEF></SYNSET>
+<SYNSET><ID>TUR10-1056080</ID><SYNONYM><LITERAL>iletişim kurmak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Bilgi, haber vb. alışverişi yapmak</DEF></SYNSET>
+<SYNSET><ID>TUR10-1056240</ID><SYNONYM><LITERAL>ilgi çekmek<SENSE>1</SENSE></LITERAL><LITERAL>ilgi görmek<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Çevresinde ilgiyi, dikkati ve merakı üzerine toplamak</DEF></SYNSET>
+<SYNSET><ID>TUR10-1056270</ID><SYNONYM><LITERAL>ilham kaynağı olmak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Hayal dünyasını beslemek</DEF></SYNSET>
+<SYNSET><ID>TUR10-1059960</ID><SYNONYM><LITERAL>yer almak<SENSE>1</SENSE></LITERAL><LITERAL>yer almak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Belli bir yerde bulunmak, yer almak</DEF></SYNSET>
+<SYNSET><ID>TUR10-1061220</ID><SYNONYM><LITERAL>yer vermek<SENSE>2</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Kullanmak</DEF></SYNSET>
+<SYNSET><ID>TUR10-1061500</ID><SYNONYM><LITERAL>ayaklanmak<SENSE>4</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Toplu biçimde zor ve şiddet kullanarak devlet güçlerine karşı gelmek</DEF></SYNSET>
+<SYNSET><ID>TUR10-1064370</ID><SYNONYM><LITERAL>izin vermek<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Birine bir iş yapması için müsaade etmek</DEF></SYNSET>
+<SYNSET><ID>TUR10-1066770</ID><SYNONYM><LITERAL>kahkaha atmak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Yüksek sesle gülmek</DEF></SYNSET>
+<SYNSET><ID>TUR10-1071440</ID><SYNONYM><LITERAL>karar kılmak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Birçok şeyi deneyip birini seçmek</DEF></SYNSET>
+<SYNSET><ID>TUR10-1083850</ID><SYNONYM><LITERAL>komuta etmek<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Askerlikte yönetmek; kumanda etmek</DEF></SYNSET>
+<SYNSET><ID>TUR10-1083860</ID><SYNONYM><LITERAL>komut vermek<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Herhangi bir davranış, hareket vb. için emir vermek</DEF></SYNSET>
+<SYNSET><ID>TUR10-1084410</ID><SYNONYM><LITERAL>konuk olmak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Bir yerde kısa bir süre ağırlanmak</DEF></SYNSET>
+<SYNSET><ID>TUR10-1086070</ID><SYNONYM><LITERAL>arketip<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Bir nesnenin bilinen ilk ve en özgün biçimi</DEF></SYNSET>
+<SYNSET><ID>TUR10-1086700</ID><SYNONYM><LITERAL>kör karanlık<SENSE>1</SENSE></LITERAL></SYNONYM><POS>a</POS><DEF>Çok karanlık</DEF></SYNSET>
+<SYNSET><ID>TUR10-1093450</ID><SYNONYM><LITERAL>zevk almak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Hoşuna gitmek, hoş bulmak, beğenmek </DEF></SYNSET>
+<SYNSET><ID>TUR10-1093460</ID><SYNONYM><LITERAL>tadını çıkarmak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Bir şeyin güzelliğinden veya sağladığı imkânlardan yeterince yararlanmak</DEF></SYNSET>
+<SYNSET><ID>TUR10-1093840</ID><SYNONYM><LITERAL>albüm<SENSE>3</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Bir sanatçının eserlerinin bir bölümünün yer aldığı kaset</DEF></SYNSET>
+<SYNSET><ID>TUR10-1094030</ID><SYNONYM><LITERAL>maceraya atılmak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Tehlikeli, yorucu, sıkıcı ve ne olacağı bilinmeyen bir işe kalkışmak</DEF></SYNSET>
+<SYNSET><ID>TUR10-1094090</ID><SYNONYM><LITERAL>maç yapmak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>İki takım veya iki kişi kazanmak amacıyla aralarında karşılaşma yapmak</DEF></SYNSET>
+<SYNSET><ID>TUR10-1094490</ID><SYNONYM><LITERAL>mahsur kalmak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Bir yerden çıkamamak</DEF></SYNSET>
+<SYNSET><ID>TUR10-1095820</ID><SYNONYM><LITERAL>maruz kalmak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Bir davranış, olay veya bir durumla karşı karşıya olmak</DEF></SYNSET>
+<SYNSET><ID>TUR10-1097520</ID><SYNONYM><LITERAL>merak etmek<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Anlamak veya öğrenmek istemek</DEF></SYNSET>
+<SYNSET><ID>TUR10-1097550</ID><SYNONYM><LITERAL>ilgisini çekmek<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>İlgisini, dikkatini ve merakını üzerinde toplamak, alaka duymak</DEF></SYNSET>
+<SYNSET><ID>TUR10-1098080</ID><SYNONYM><LITERAL>mesaj bırakmak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Yazı veya sözle bilgi vermek</DEF></SYNSET>
+<SYNSET><ID>TUR10-1100820</ID><SYNONYM><LITERAL>modernize etmek<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Çağcıl duruma getirmek; yenileştirmek</DEF></SYNSET>
+<SYNSET><ID>TUR10-1102430</ID><SYNONYM><LITERAL>alt etmek<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Üstün gelmek, yenmek, zafer kazanmak, sırtını yere getirmek</DEF></SYNSET>
+<SYNSET><ID>TUR10-1102990</ID><SYNONYM><LITERAL>mümkün olmak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>İmkân bulunmak</DEF></SYNSET>
+<SYNSET><ID>TUR10-1103020</ID><SYNONYM><LITERAL>denk gelmek<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Düşünmediği, ummadığı hâlde karşılaşmak, rastlamak</DEF></SYNSET>
+<SYNSET><ID>TUR10-1105170</ID><SYNONYM><LITERAL>nefes aldırmamak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Dinlenmesine fırsat vermemek; aralık vermemek</DEF></SYNSET>
+<SYNSET><ID>TUR10-1105680</ID><SYNONYM><LITERAL>ne kadar<SENSE>2</SENSE></LITERAL></SYNONYM><POS>i</POS><DEF>Nicelik bakımından miktar, ölçü, fiyat, zaman anlamlarıyla soru bildiren bir söz</DEF></SYNSET>
+<SYNSET><ID>TUR10-1105700</ID><SYNONYM><LITERAL>ne kadar<SENSE>3</SENSE></LITERAL></SYNONYM><POS>i</POS><DEF>Ne ölçüde</DEF></SYNSET>
+<SYNSET><ID>TUR10-1105960</ID><SYNONYM><LITERAL>ne olursa olsun<SENSE>1</SENSE></LITERAL></SYNONYM><POS>b</POS><DEF>Her ne durumda olursa olsun, bir çözüm yolu bularak</DEF></SYNSET>
+<SYNSET><ID>TUR10-1106560</ID><SYNONYM><LITERAL>ne yazık ki<SENSE>1</SENSE></LITERAL></SYNONYM><POS>i</POS><DEF>Üzülerek belirtelim ki</DEF></SYNSET>
+<SYNSET><ID>TUR10-1107930</ID><SYNONYM><LITERAL>o yüzden<SENSE>1</SENSE></LITERAL></SYNONYM><POS>b</POS><DEF>Önceden bahsedilen durumun sonradan gelenin nedeni olduğunu, ona yol açtığını açıklamak için kullanılan bir söz</DEF></SYNSET>
+<SYNSET><ID>TUR10-1110570</ID><SYNONYM><LITERAL>ortaya çıkmak<SENSE>2</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Yokken var olmak; meydana çıkmak; türemek</DEF></SYNSET>
+<SYNSET><ID>TUR10-1110600</ID><SYNONYM><LITERAL>ortaya dökmek<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Açıklamak</DEF></SYNSET>
+<SYNSET><ID>TUR10-1110650</ID><SYNONYM><LITERAL>ortaya koymak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Açıklamak</DEF></SYNSET>
+<SYNSET><ID>TUR10-1111820</ID><SYNONYM><LITERAL>oyuncu kadrosu<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Televizyon ve sinema dizi ve filmlerinde oynayan oyuncuların tümü</DEF></SYNSET>
+<SYNSET><ID>TUR10-1111980</ID><SYNONYM><LITERAL>oy vermek<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Herhangi bir konuya ait tercihini belirtmek</DEF></SYNSET>
+<SYNSET><ID>TUR10-1112060</ID><SYNONYM><LITERAL>intikam almak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Yapılan bir kötülüğün acısını kötülük yaparak çıkarmak</DEF></SYNSET>
+<SYNSET><ID>TUR10-1112270</ID><SYNONYM><LITERAL>ödül almak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Herhangi bir başarı karşısında armağana layık görülmek</DEF></SYNSET>
+<SYNSET><ID>TUR10-1115110</ID><SYNONYM><LITERAL>demek oluyor ki<SENSE>1</SENSE></LITERAL></SYNONYM><POS>b</POS><DEF>Şu hâlde, öyle ise</DEF></SYNSET>
+<SYNSET><ID>TUR10-1118330</ID><SYNONYM><LITERAL>mesafe koymak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>İlişkilerde samimi olmamak</DEF></SYNSET>
+<SYNSET><ID>TUR10-1119070</ID><SYNONYM><LITERAL>göz önüne almak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Önceden düşünmek, hesaplamak, dikkate almak</DEF></SYNSET>
+<SYNSET><ID>TUR10-1119550</ID><SYNONYM><LITERAL>peşine düşmek<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Bir isteğin gerçekleşmesini sağlamaya çalışmak</DEF></SYNSET>
+<SYNSET><ID>TUR10-1120510</ID><SYNONYM><LITERAL>piyasaya çıkmak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Bir ürün satışa sunulmak</DEF></SYNSET>
+<SYNSET><ID>TUR10-1120870</ID><SYNONYM><LITERAL>popüler olmak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Ünlü olmak</DEF></SYNSET>
+<SYNSET><ID>TUR10-1121710</ID><SYNONYM><LITERAL>puan almak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Saygınlık kazanmak, takdir edilmek</DEF></SYNSET>
+<SYNSET><ID>TUR10-1121780</ID><SYNONYM><LITERAL>puan toplamak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Puan kazanmak</DEF></SYNSET>
+<SYNSET><ID>TUR10-1121820</ID><SYNONYM><LITERAL>puan vermek<SENSE>1</SENSE></LITERAL><LITERAL>takdir etmek<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Bir şeyin değeri üzerinde olumlu veya olumsuz bir kanıya varmak</DEF></SYNSET>
+<SYNSET><ID>TUR10-1122250</ID><SYNONYM><LITERAL>rafa kaldırmak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Artık üstünde durmamak, ihmal etmek</DEF></SYNSET>
+<SYNSET><ID>TUR10-1122290</ID><SYNONYM><LITERAL>rağbet görmek<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>İstekle karşılanmak; istenilmek; beğenilmek</DEF></SYNSET>
+<SYNSET><ID>TUR10-1122480</ID><SYNONYM><LITERAL>rahatsız etmek<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Rahatını bozmak, rahatını, keyfini kaçırmak</DEF></SYNSET>
+<SYNSET><ID>TUR10-1122510</ID><SYNONYM><LITERAL>rahatsız olmak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Rahatı bozulmak, keyfi kaçmak, sağlığı bozulmak</DEF></SYNSET>
+<SYNSET><ID>TUR10-1123940</ID><SYNONYM><LITERAL>rol oynamak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Birinin bir işte önemli etkisi olmak</DEF></SYNSET>
+<SYNSET><ID>TUR10-1124930</ID><SYNONYM><LITERAL>sabote etmek<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Bir işi veya durumu bilinçli ve kasıtlı olarak bozup zarara yol açan davranışta bulunmak</DEF></SYNSET>
+<SYNSET><ID>TUR10-1125490</ID><SYNONYM><LITERAL>sadık kalmak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Birine, bir şeye bağlılığını sürdürmek; bağlı kalmak</DEF></SYNSET>
+<SYNSET><ID>TUR10-1125560</ID><SYNONYM><LITERAL>saf dışı bırakmak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>İşin gereğinden alıkoymak, işlemez duruma getirmek</DEF></SYNSET>
+<SYNSET><ID>TUR10-1128310</ID><SYNONYM><LITERAL>ayrı<SENSE>3</SENSE></LITERAL><LITERAL>tek başına<SENSE>1</SENSE></LITERAL></SYNONYM><POS>b</POS><DEF>Kendi kendine, yalnız olarak</DEF></SYNSET>
+<SYNSET><ID>TUR10-1128330</ID><SYNONYM><LITERAL>başarısız olmak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Bir işi gerektiği gibi yapamamak, başarı sağlayamamak, umduğunu alamamak</DEF></SYNSET>
+<SYNSET><ID>TUR10-1129520</ID><SYNONYM><LITERAL>almak<SENSE>4</SENSE></LITERAL><LITERAL>satın almak<SENSE>2</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Bir nesneyi belirlenen fiyatını ödeyerek kendine mal etmek</DEF></SYNSET>
+<SYNSET><ID>TUR10-1129700</ID><SYNONYM><LITERAL>savaş alanı<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Savaş olan yer, meydan</DEF></SYNSET>
+<SYNSET><ID>TUR10-1129960</ID><SYNONYM><LITERAL>savunma yapmak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Oyunda rakip tarafın hücumlarına karşı koymak</DEF></SYNSET>
+<SYNSET><ID>TUR10-1130170</ID><SYNONYM><LITERAL>saygı duymak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Birine, bir şeye karşı saygı hissetmek</DEF></SYNSET>
+<SYNSET><ID>TUR10-1130320</ID><SYNONYM><LITERAL>saymakla bitmemek<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Pek çok sayıda olmak</DEF></SYNSET>
+<SYNSET><ID>TUR10-1130430</ID><SYNONYM><LITERAL>neden olmak<SENSE>1</SENSE></LITERAL><LITERAL>sebep olmak<SENSE>1</SENSE></LITERAL><LITERAL>yol açmak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Bir şeyin olmasına veya ortaya çıkmasına yol açmak, bir olayın sebebi olmak</DEF></SYNSET>
+<SYNSET><ID>TUR10-1130650</ID><SYNONYM><LITERAL>seçim yapmak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Seçmek</DEF></SYNSET>
+<SYNSET><ID>TUR10-1132740</ID><SYNONYM><LITERAL>ses getirmek<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Yaptığı işle, söylediği sözle dikkatleri çekmek ve kitleleri harekete geçirmek</DEF></SYNSET>
+<SYNSET><ID>TUR10-1132800</ID><SYNONYM><LITERAL>sesini kısmak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Sesini alçaltmak</DEF></SYNSET>
+<SYNSET><ID>TUR10-1134050</ID><SYNONYM><LITERAL>sıfırdan başlamak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>En baştan, hiçbir şeye sahip olmadan bir işe girişmek</DEF></SYNSET>
+<SYNSET><ID>TUR10-1135190</ID><SYNONYM><LITERAL>yeri gelmek<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Uygun zamanı gelmek, zamanı uygun olmak</DEF></SYNSET>
+<SYNSET><ID>TUR10-1137470</ID><SYNONYM><LITERAL>siper almak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Bir şeyi veya bir yeri siper olarak kullanıp gizlenmek</DEF></SYNSET>
+<SYNSET><ID>TUR10-1138150</ID><SYNONYM><LITERAL>soğuk ter dökmek<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Korku, heyecan anlarında birden terlemek</DEF></SYNSET>
+<SYNSET><ID>TUR10-1139080</ID><SYNONYM><LITERAL>son söz<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Bazı edebî eserlerde yer alan son söz niteliğindeki bölüm</DEF></SYNSET>
+<SYNSET><ID>TUR10-1139200</ID><SYNONYM><LITERAL>sonu gelmemek<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Bitmemek; tükenmemek</DEF></SYNSET>
+<SYNSET><ID>TUR10-1139680</ID><SYNONYM><LITERAL>soru sormak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Bir konu hakkında bilgi edinmek üzere soru yöneltmek</DEF></SYNSET>
+<SYNSET><ID>TUR10-1141130</ID><SYNONYM><LITERAL>söz sahibi olmak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Bir konuda konuşma yetkisi olmak</DEF></SYNSET>
+<SYNSET><ID>TUR10-1141330</ID><SYNONYM><LITERAL>bahsedilmek<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Bahsetme işine konu olmak</DEF></SYNSET>
+<SYNSET><ID>TUR10-1141910</ID><SYNONYM><LITERAL>stres atmak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Bir etkinlikte bulunarak gerginlikten, sıkıntıdan kurtulmak</DEF></SYNSET>
+<SYNSET><ID>TUR10-1144290</ID><SYNONYM><LITERAL>abone olmak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Bir şeyi belli bir süre için peşin para ile almayı önceden üstlenmek</DEF></SYNSET>
+<SYNSET><ID>TUR10-1144560</ID><SYNONYM><LITERAL>sürpriz yapmak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Birini, beklenmedik, şaşırtan, sevindiren veya üzen bir olayla karşılaştırmak</DEF></SYNSET>
+<SYNSET><ID>TUR10-1147380</ID><SYNONYM><LITERAL>bir anda<SENSE>1</SENSE></LITERAL></SYNONYM><POS>b</POS><DEF>Zaman geçirmeden, kısa süre içinde</DEF></SYNSET>
+<SYNSET><ID>TUR10-1148140</ID><SYNONYM><LITERAL>bu açıdan<SENSE>1</SENSE></LITERAL></SYNONYM><POS>b</POS><DEF>Bir şeyden dolayı, bir şey yüzünden anlamını vermek için kullanılan söz</DEF></SYNSET>
+<SYNSET><ID>TUR10-1148880</ID><SYNONYM><LITERAL>bağlı kalmak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Birinin kontrolü altına girmek, bir şeye veya bir kimseye bağlı olmak</DEF></SYNSET>
+<SYNSET><ID>TUR10-1149720</ID><SYNONYM><LITERAL>tahmin etmek<SENSE>2</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Kestirmek</DEF></SYNSET>
+<SYNSET><ID>TUR10-1150140</ID><SYNONYM><LITERAL>takdir etmek<SENSE>2</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Önemini, gerekliliğini, değerini anlamak</DEF></SYNSET>
+<SYNSET><ID>TUR10-1151360</ID><SYNONYM><LITERAL>boş<SENSE>1</SENSE></LITERAL></SYNONYM><POS>a</POS><DEF>İçinde, üstünde hiç kimse veya hiçbir şey bulunmayan</DEF></SYNSET>
+<SYNSET><ID>TUR10-1152100</ID><SYNONYM><LITERAL>ahenk sağlamak<SENSE>1</SENSE></LITERAL><LITERAL>düzene sokmak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Düzenlemek, dağınıklıktan kurtarmak</DEF></SYNSET>
+<SYNSET><ID>TUR10-1153640</ID><SYNONYM><LITERAL>taş çıkarmak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Biri ötekinden özellik, yetenek vb. bakımından üstün olmak</DEF></SYNSET>
+<SYNSET><ID>TUR10-1154300</ID><SYNONYM><LITERAL>tatil yapmak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Tatile çıkmak</DEF></SYNSET>
+<SYNSET><ID>TUR10-1154500</ID><SYNONYM><LITERAL>tatmin etmek<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Doyurmak</DEF></SYNSET>
+<SYNSET><ID>TUR10-1154510</ID><SYNONYM><LITERAL>tatmin olmak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>İstediği bir şeye ulaşarak hoşnut olmak, rahatlamak; doyurulmak</DEF></SYNSET>
+<SYNSET><ID>TUR10-1154710</ID><SYNONYM><LITERAL>tavan yapmak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Sinir, heyecan vb. en üst düzeye çıkmak</DEF></SYNSET>
+<SYNSET><ID>TUR10-1154960</ID><SYNONYM><LITERAL>tavsiye etmek<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Bir şeyin yapılmasını veya yapılmamasını öğütlemek; salık vermek</DEF></SYNSET>
+<SYNSET><ID>TUR10-1155150</ID><SYNONYM><LITERAL>belirlemek<SENSE>1</SENSE></LITERAL><LITERAL>tayin etmek<SENSE>1</SENSE></LITERAL><LITERAL>tespit etmek<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Belirli duruma getirmek, belirli kılmak</DEF></SYNSET>
+<SYNSET><ID>TUR10-1155160</ID><SYNONYM><LITERAL>atanmak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Bir göreve getirilmek; tayin edilmek</DEF></SYNSET>
+<SYNSET><ID>TUR10-1155540</ID><SYNONYM><LITERAL>belirtmek<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Açıklamak, anlatmak</DEF></SYNSET>
+<SYNSET><ID>TUR10-1157060</ID><SYNONYM><LITERAL>tekrar etmek<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Yeni baştan söylemek veya yapmak</DEF></SYNSET>
+<SYNSET><ID>TUR10-1158670</ID><SYNONYM><LITERAL>aydınlatmak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Karanlığı giderip görünür duruma getirmek, ışıklı duruma getirmek</DEF></SYNSET>
+<SYNSET><ID>TUR10-1159030</ID><SYNONYM><LITERAL>tepki vermek<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Herhangi bir etkiye karşı söz veya davranışla karşılık vermek</DEF></SYNSET>
+<SYNSET><ID>TUR10-1160030</ID><SYNONYM><LITERAL>büyülemek<SENSE>2</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Çekiciliği ile etkisi altına almak, birini kendine bağlamak</DEF></SYNSET>
+<SYNSET><ID>TUR10-1160060</ID><SYNONYM><LITERAL>etki etmek<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Etkiye uğratmak</DEF></SYNSET>
+<SYNSET><ID>TUR10-1160170</ID><SYNONYM><LITERAL>teslim etmek<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Bir şeyin kullanımını, korunmasını veya mülkiyetini vermek; bırakmak; devretmek; terk etmek</DEF></SYNSET>
+<SYNSET><ID>TUR10-1160680</ID><SYNONYM><LITERAL>ateş etmek<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Ateşli silahlarla mermi atmak</DEF></SYNSET>
+<SYNSET><ID>TUR10-1164110</ID><SYNONYM><LITERAL>transa girmek<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Kendinden geçmek, içinde bulunduğu ortamdan başka bir dünyaya veya havaya geçmek</DEF></SYNSET>
+<SYNSET><ID>TUR10-1168740</ID><SYNONYM><LITERAL>uygun olmak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Bağdaşmak</DEF></SYNSET>
+<SYNSET><ID>TUR10-1169440</ID><SYNONYM><LITERAL>uzaktan bakmak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Seyirci gibi davranıp karışmamak</DEF></SYNSET>
+<SYNSET><ID>TUR10-1169920</ID><SYNONYM><LITERAL>uzun lafın kısası<SENSE>1</SENSE></LITERAL></SYNONYM><POS>i</POS><DEF>Kısacası; özet olarak</DEF></SYNSET>
+<SYNSET><ID>TUR10-1170810</ID><SYNONYM><LITERAL>üzerinde durmak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Bir işe önem vermek, bir işle yakından ve sürekli ilgilenmek</DEF></SYNSET>
+<SYNSET><ID>TUR10-1172380</ID><SYNONYM><LITERAL>vakit geçirmek<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Boş boş vakit harcamak</DEF></SYNSET>
+<SYNSET><ID>TUR10-1173270</ID><SYNONYM><LITERAL>veda etmek<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Sevilen bir şeyle olan ilgisini kesmek</DEF></SYNSET>
+<SYNSET><ID>TUR10-1176960</ID><SYNONYM><LITERAL>yana olmak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Birinin tarafını tutmak</DEF></SYNSET>
+<SYNSET><ID>TUR10-1177470</ID><SYNONYM><LITERAL>cevaplamak<SENSE>1</SENSE></LITERAL><LITERAL>cevap vermek<SENSE>1</SENSE></LITERAL><LITERAL>yanıt vermek<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Bir soruya, bir isteğe, bir söz veya yazıya karşılık vermek</DEF></SYNSET>
+<SYNSET><ID>TUR10-1180280</ID><SYNONYM><LITERAL>yatırım yapmak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Gelir amacıyla bir işe para yatırmak</DEF></SYNSET>
+<SYNSET><ID>TUR10-1181550</ID><SYNONYM><LITERAL>tercih etmek<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Diğerlerinden daha üstün görüp bir şeye yönelmek</DEF></SYNSET>
+<SYNSET><ID>TUR10-1182260</ID><SYNONYM><LITERAL>yenilik yapmak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Değişiklik getirmek; değişiklik yapmak</DEF></SYNSET>
+<SYNSET><ID>TUR10-1182420</ID><SYNONYM><LITERAL>yer almak<SENSE>2</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Bir işi hazırlayanlar arasında bulunmak</DEF></SYNSET>
+<SYNSET><ID>TUR10-1182470</ID><SYNONYM><LITERAL>yer değiştirmek<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Bulunduğu yerden bir başka yere geçmek</DEF></SYNSET>
+<SYNSET><ID>TUR10-1182670</ID><SYNONYM><LITERAL>yere sermek<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Vurup öldürmek</DEF></SYNSET>
+<SYNSET><ID>TUR10-1183360</ID><SYNONYM><LITERAL>yerle bir etmek<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Temeline kadar yok etmek, tahrip etmek</DEF></SYNSET>
+<SYNSET><ID>TUR10-1183700</ID><SYNONYM><LITERAL>yer vermek<SENSE>3</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Ağırlık vermek</DEF></SYNSET>
+<SYNSET><ID>TUR10-1183710</ID><SYNONYM><LITERAL>yer vermek<SENSE>4</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Konu edinmek</DEF></SYNSET>
+<SYNSET><ID>TUR10-1183960</ID><SYNONYM><LITERAL>yeteri kadar<SENSE>1</SENSE></LITERAL></SYNONYM><POS>b</POS><DEF>Yetecek ölçüde</DEF></SYNSET>
+<SYNSET><ID>TUR10-1185820</ID><SYNONYM><LITERAL>yola çıkmak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Herhangi bir şeyi esas almak, oradan başlamak</DEF></SYNSET>
+<SYNSET><ID>TUR10-1185960</ID><SYNONYM><LITERAL>yol aramak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Çare bulmaya çalışmak</DEF></SYNSET>
+<SYNSET><ID>TUR10-1186020</ID><SYNONYM><LITERAL>yol ayrımına gelmek<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Farklı düşünce, görüş ve ülkü yüzünden birbirinden ayrılmak</DEF></SYNSET>
+<SYNSET><ID>TUR10-1187040</ID><SYNONYM><LITERAL>nefes almak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Güç kazanmak için çalışmaya ara vermek, yorgunluğunu gidermek</DEF></SYNSET>
+<SYNSET><ID>TUR10-1187560</ID><SYNONYM><LITERAL>yön vermek<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Yeni bir biçim, yeni bir düzen vermek</DEF></SYNSET>
+<SYNSET><ID>TUR10-1188340</ID><SYNONYM><LITERAL>hakkından gelmek<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Birine gereken ceza veya cevabı vermek, öç almak</DEF></SYNSET>
+<SYNSET><ID>TUR10-1188650</ID><SYNONYM><LITERAL>ileri teknoloji<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>En gelişmiş düzeyde uygulanan teknoloji</DEF></SYNSET>
+<SYNSET><ID>TUR10-1190380</ID><SYNONYM><LITERAL>yüz tutmak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Bir şey, olmak üzere bulunmak</DEF></SYNSET>
+<SYNSET><ID>TUR10-1193320</ID><SYNONYM><LITERAL>kafa yormak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Bir iş, bir konu üzerinde çokça düşünmek</DEF></SYNSET>
+<SYNSET><ID>TUR10-1194170</ID><SYNONYM><LITERAL>zorunda kalmak<SENSE>1</SENSE></LITERAL><LITERAL>zorunda olmak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Kesinlikle yapması gerekmek, yapmaya mecbur olmak</DEF></SYNSET>
+<SYNSET><ID>TUR10-1194510</ID><SYNONYM><LITERAL>tekrar etmek<SENSE>2</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Bir iş, olay vb. yeniden ortaya çıkmak; tekrarlanmak</DEF></SYNSET>
+<SYNSET><ID>TUR10-1194530</ID><SYNONYM><LITERAL>baş<SENSE>14</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>"... başına" adlardan sonra ve nicelik anlatan kelimeden önce gelerek üleştirme anlamı verir</DEF></SYNSET>
+<SYNSET><ID>TUR10-1194570</ID><SYNONYM><LITERAL>geri almak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Geriye doğru götürmek</DEF></SYNSET>
+<SYNSET><ID>TUR10-1195510</ID><SYNONYM><LITERAL>new york<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>ABD'nin en kalabalık şehri</DEF></SYNSET>
+<SYNSET><ID>TUR10-1195820</ID><SYNONYM><LITERAL>duş almak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Duş altında yıkanmak, su dökünmek</DEF></SYNSET>
+<SYNSET><ID>TUR10-1195890</ID><SYNONYM><LITERAL>hareket ettirmek<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Bir şeyin hareket etmesini sağlamak</DEF></SYNSET>
+<SYNSET><ID>TUR10-1196320</ID><SYNONYM><LITERAL>bir sonraki<SENSE>1</SENSE></LITERAL></SYNONYM><POS>a</POS><DEF>Sırası gelen kimse veya şey</DEF></SYNSET>
+<SYNSET><ID>TUR10-1196880</ID><SYNONYM><LITERAL>kötü niyetli<SENSE>1</SENSE></LITERAL></SYNONYM><POS>a</POS><DEF>Herhangi bir kimseye veya konuya ilişkin kötü düşünce besleyen</DEF></SYNSET>
+<SYNSET><ID>TUR10-1197010</ID><SYNONYM><LITERAL>haline gelmek<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>(bir durum) özelliği kazanmak, ... gibi olmak</DEF></SYNSET>
+<SYNSET><ID>TUR10-1197030</ID><SYNONYM><LITERAL>hasar vermek<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Kırılma, dökülme, yıkılma vb. biçiminde sonuçlanacak biçimde zarar vermek</DEF></SYNSET>
+<SYNSET><ID>TUR10-1197420</ID><SYNONYM><LITERAL>geride bırakmak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Geçmişte bırakmak</DEF></SYNSET>
+<SYNSET><ID>TUR10-1197860</ID><SYNONYM><LITERAL>dahil etmek<SENSE>1</SENSE></LITERAL><LITERAL>entegre etmek<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Bir şeyi başka bir şeyin kapsamı içine almak, eklemek</DEF></SYNSET>
+<SYNSET><ID>TUR10-1198740</ID><SYNONYM><LITERAL>dahil etmek<SENSE>2</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>İçine almak, katmak</DEF></SYNSET>
+<SYNSET><ID>TUR10-1198820</ID><SYNONYM><LITERAL>olarak görmek<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>... saymak, ... olduğunu düşünmek</DEF></SYNSET>
+<SYNSET><ID>TUR10-1198940</ID><SYNONYM><LITERAL>dikkatini vermek<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Bütün dikkatini bir şey üzerinde toplamak</DEF></SYNSET>
+<SYNSET><ID>TUR10-1199280</ID><SYNONYM><LITERAL>savaş sanatı<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Çeşitli kurallara bağlanarak sistemleştirilmiş fiziksel mücadele ve talim geleneği veya spor dalı</DEF></SYNSET>
+<SYNSET><ID>TUR10-1199410</ID><SYNONYM><LITERAL>bilgi vermek<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Bilgilendirmek</DEF></SYNSET>
+<SYNSET><ID>TUR10-1199580</ID><SYNONYM><LITERAL>inşa etme<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Kurmak; yapmak</DEF></SYNSET>
+<SYNSET><ID>TUR10-1200110</ID><SYNONYM><LITERAL>dünya savaşı<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Dünyanın belli başlı büyük ülkelerinin katıldığı savaş</DEF></SYNSET>
+<SYNSET><ID>TUR10-1200300</ID><SYNONYM><LITERAL>fotoğrafını çekmek<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Fotoğraf makinesiyle görüntü tespit etmek</DEF></SYNSET>
+<SYNSET><ID>TUR10-1200420</ID><SYNONYM><LITERAL>örnek göstermek<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>(Bir durumu, kişiyi, nesneyi vb.) Çeşitli nedenlerle örnek olarak sunmak</DEF></SYNSET>
+<SYNSET><ID>TUR10-1200570</ID><SYNONYM><LITERAL>yorum yapmak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Bir konuya, duruma veya nesneye ilişkin düşüncesini ifade etmek</DEF></SYNSET>
+<SYNSET><ID>TUR10-1202080</ID><SYNONYM><LITERAL>bitmek bilmeyen<SENSE>1</SENSE></LITERAL></SYNONYM><POS>a</POS><DEF>Tükenmeyen</DEF></SYNSET>
+<SYNSET><ID>TUR10-1204020</ID><SYNONYM><LITERAL>zevk vermek<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Hoşlanmasını sağlamak; haz vermek</DEF></SYNSET>
+<SYNSET><ID>TUR10-1204080</ID><SYNONYM><LITERAL>keyif almak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Hoşlanmak; eğlenmek; haz almak; zevk duymak</DEF></SYNSET>
+<SYNSET><ID>TUR10-1204860</ID><SYNONYM><LITERAL>sörf yapmak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Sörf tahtasından ve bazen de yelkenden yararlanarak dalgalar üstünde kıyıya doğru kaymak</DEF></SYNSET>
+<SYNSET><ID>TUR10-1205140</ID><SYNONYM><LITERAL>eşlik etmek<SENSE>2</SENSE></LITERAL><LITERAL>arkadaşlık etmek<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Bir süre beraber bulunmak ya da birlikte gitmek</DEF></SYNSET>
+<SYNSET><ID>TUR10-1205910</ID><SYNONYM><LITERAL>çok önemli<SENSE>1</SENSE></LITERAL></SYNONYM><POS>a</POS><DEF>Nitelik veya nicelik bakımından değeri yüksek</DEF></SYNSET>
+<SYNSET><ID>TUR10-1206920</ID><SYNONYM><LITERAL>ödeme yapmak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Bir alış veriş ilişkisinde, borçlu olunan şeyin karşılığını alacaklıya vermek</DEF></SYNSET>
+<SYNSET><ID>TUR10-1207900</ID><SYNONYM><LITERAL>göreve başlamak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Yapması gereken işe girişmek, harekete geçmek</DEF></SYNSET>
+<SYNSET><ID>TUR10-1208490</ID><SYNONYM><LITERAL>bir<SENSE>8</SENSE></LITERAL></SYNONYM><POS>a</POS><DEF>Bir araya gelmiş, birleşmiş olan</DEF></SYNSET>
+<SYNSET><ID>TUR10-1208920</ID><SYNONYM><LITERAL>başaramamak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Güç görünen bir iş veya duruma çözüm bulamamak, üstesinden gelememek</DEF></SYNSET>
+<SYNSET><ID>TUR10-1208950</ID><SYNONYM><LITERAL>hizmet vermek<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>İş görmek, çalışmak; hizmet etmek</DEF></SYNSET>
+<SYNSET><ID>TUR10-1209000</ID><SYNONYM><LITERAL>kanatları altına almak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Korumak, himayesine almak; kanadı altına almak</DEF></SYNSET>
+<SYNSET><ID>TUR10-1209130</ID><SYNONYM><LITERAL>mevcut olmak<SENSE>1</SENSE></LITERAL><LITERAL>var olmak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Sağ olmak, yaşamak, bulunmak</DEF></SYNSET>
+<SYNSET><ID>TUR10-1209240</ID><SYNONYM><LITERAL>hayatta kalmak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Zorlu durumların ardından sağ kalmak, yaşamak</DEF></SYNSET>
+<SYNSET><ID>TUR10-1209250</ID><SYNONYM><LITERAL>haline gelmek<SENSE>2</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>... halini almak; durumuna gelmek</DEF></SYNSET>
+<SYNSET><ID>TUR10-1209330</ID><SYNONYM><LITERAL>sonucu olmak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Bir olaydan doğan başka bir olay ya da durum niteliğinde olmak</DEF></SYNSET>
+<SYNSET><ID>TUR10-1209370</ID><SYNONYM><LITERAL>önemli olmak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Mühim olmak</DEF></SYNSET>
+<SYNSET><ID>TUR10-1209380</ID><SYNONYM><LITERAL>dahil olmamak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Bir şeyin kapsamında yer almamak</DEF></SYNSET>
+<SYNSET><ID>TUR10-1209400</ID><SYNONYM><LITERAL>ilgili olmak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>İki şey birbiriyle ilişkili, bağlı olmak</DEF></SYNSET>
+<SYNSET><ID>TUR10-1209530</ID><SYNONYM><LITERAL>farklı olmak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Ayırt edilebilir olmak; ayrımlı olmak</DEF></SYNSET>
+<SYNSET><ID>TUR10-1209560</ID><SYNONYM><LITERAL>görevi görmek<SENSE>1</SENSE></LITERAL><LITERAL>olarak kullanılmak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>(olarak amacıyla yerine) Kullanma işine konu olmak</DEF></SYNSET>
+<SYNSET><ID>TUR10-1209610</ID><SYNONYM><LITERAL>öne çıkmak<SENSE>1</SENSE></LITERAL><LITERAL>ön plana çıkmak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Diğerlerinden daha iyi olmasından dolayı dikkat çekmek</DEF></SYNSET>
+<SYNSET><ID>TUR10-1209660</ID><SYNONYM><LITERAL>geçerli olmak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Yürürlükte, uygulanıyor, kullanılıyor olmak</DEF></SYNSET>
+<SYNSET><ID>TUR10-1209900</ID><SYNONYM><LITERAL>zaman geçirmek<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Oyalanmak; vakit geçirmek</DEF></SYNSET>
+<SYNSET><ID>TUR10-1210040</ID><SYNONYM><LITERAL>imkan sağlamak<SENSE>1</SENSE></LITERAL><LITERAL>mümkün kılmak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Bir işin gerçekleşmesine elverişli ortamı sağlamak; uygun şart ve durum oluşturmak</DEF></SYNSET>
+<SYNSET><ID>TUR10-1210070</ID><SYNONYM><LITERAL>üzere olmak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Bir şey olmaya çok yakın olmak</DEF></SYNSET>
+<SYNSET><ID>TUR10-1210110</ID><SYNONYM><LITERAL>ağır silah<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Tank, top, obüs, havan gibi silahların oluşturduğu, boyutu büyük silah çeşidi</DEF></SYNSET>
+<SYNSET><ID>TUR10-1212110</ID><SYNONYM><LITERAL>elektronik cihaz<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>İşlevini elektrik ile gerçekleştiren cihaz</DEF></SYNSET>
+<SYNSET><ID>TUR10-1213620</ID><SYNONYM><LITERAL>demir yolu<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Lokomotif, vagon gibi demir tekerlekli taşıtların yürüdüğü paralel iki ray döşenerek yapılan bir tür yol</DEF></SYNSET>
+<SYNSET><ID>TUR10-1214800</ID><SYNONYM><LITERAL>motorlu testere<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Hızar, benzinli motor veya elektrik motoru ile çalışan ve genellikle odun kesmekte kullanılan bir tür bıçkı</DEF></SYNSET>
+<SYNSET><ID>TUR10-1218690</ID><SYNONYM><LITERAL>teknik bilgi<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Bir şeyi doğru yapabilme bilgisi ve yeteneği</DEF></SYNSET>
+<SYNSET><ID>TUR10-1218830</ID><SYNONYM><LITERAL>öz güven<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>İnsanın kendine güvenme duygusu</DEF></SYNSET>
+<SYNSET><ID>TUR10-1220000</ID><SYNONYM><LITERAL>yapay zeka<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Algoritma biçiminde tanımlanamayan, buluşsal yöntemlerle özdevimli öğrenme yöntemlerinden yararlanan ve doğal dil anlama, söz çözümleme, örüntü tanıma gibi algısal ya da bilişsel süreçlerle ilgili bilgisayarlı modeller geliştiren araştırma alanı</DEF></SYNSET>
+<SYNSET><ID>TUR10-1220940</ID><SYNONYM><LITERAL>hizmet sözleşmesi<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Kamu kesiminde yetkililerle sözleşmeli personel olarak çalışmaya hak kazanmışlar arasında imzalanan, görev yeri, görev kapsamında yapılacak işlerin tanımlarının, uyulacak mesleki ve etik kuralların, ödev, yetki ve sorumlulukların yer aldığı bir mali yıl için geçerli sözleşme</DEF></SYNSET>
+<SYNSET><ID>TUR10-1222130</ID><SYNONYM><LITERAL>bir şey<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Herhangi bir madde, eşya, söz, olay, iş, durum vb.</DEF></SYNSET>
+<SYNSET><ID>TUR10-1224880</ID><SYNONYM><LITERAL>özel güvenlik<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Güvenliği sağlamakla görevli olan, resmi kesimden ayrı ve bağımsız çalışan kimse</DEF></SYNSET>
+<SYNSET><ID>TUR10-1225120</ID><SYNONYM><LITERAL>arkadaş grubu<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Birbirlerine karşı segi ve anlayış gösteren kimselerden her biri</DEF></SYNSET>
+<SYNSET><ID>TUR10-1225730</ID><SYNONYM><LITERAL>kendi ülkesi<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Yurtiçi; bireyin yaşadığı yer</DEF></SYNSET>
+<SYNSET><ID>TUR10-1229980</ID><SYNONYM><LITERAL>Andromeda<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Samanyolu Galaksisi'ne en yakın galaksi olan Andromeda Galaksisi'ni içeren, Uluslararası Astronomi Birliği tarafından tanınan 88 takımyıldızdan biri</DEF></SYNSET>
+<SYNSET><ID>TUR10-1230070</ID><SYNONYM><LITERAL>Boğaziçi<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>İstanbul Boğazı ve iki kıyısını içine alan kent parçası</DEF></SYNSET>
+<SYNSET><ID>TUR10-1231450</ID><SYNONYM><LITERAL>CEO<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Yürütme kurulu başkanı veya genel müdür</DEF></SYNSET>
+<SYNSET><ID>TUR10-1231620</ID><SYNONYM><LITERAL>kız çocuk<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Dişi çocuk</DEF></SYNSET>
+<SYNSET><ID>TUR10-1231860</ID><SYNONYM><LITERAL>genç kız<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Yaşı ilerlememiş olan kız</DEF></SYNSET>
+<SYNSET><ID>TUR10-1233440</ID><SYNONYM><LITERAL>hava şartları<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Meteoroloji ile ilgili olayların bütünü</DEF></SYNSET>
+<SYNSET><ID>TUR10-1236850</ID><SYNONYM><LITERAL>belirli miktar<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Belirli olan miktar</DEF></SYNSET>
+<SYNSET><ID>TUR10-1237660</ID><SYNONYM><LITERAL>bin<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Dokuz yüz doksan dokuzdan sonra gelen sayının adı</DEF></SYNSET>
+<SYNSET><ID>TUR10-1237720</ID><SYNONYM><LITERAL>bir miktar<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Herhangi bir varlığı belirsiz olarak gösteren bir nicelik</DEF></SYNSET>
+<SYNSET><ID>TUR10-1239450</ID><SYNONYM><LITERAL>soğuk ter<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Bk. soğuk ter dökmek (veya basmak)</DEF></SYNSET>
+<SYNSET><ID>TUR10-1239610</ID><SYNONYM><LITERAL>arka plan<SENSE>3</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Önemsiz, değersiz bir durumda olma</DEF></SYNSET>
+<SYNSET><ID>TUR10-1241910</ID><SYNONYM><LITERAL>Sevgililer Günü<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Her yıl 14 Şubat'ta birçok ülkede aşkın kutlandığı özel bir gün</DEF></SYNSET>
+<SYNSET><ID>TUR10-1242110</ID><SYNONYM><LITERAL>yarım saat<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Otuz dakikalık zaman dilimi</DEF></SYNSET>
+<SYNSET><ID>TUR10-1242120</ID><SYNONYM><LITERAL>15 dakika<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>On beş dakikalık zaman dilimi</DEF></SYNSET>
+<SYNSET><ID>TUR10-1242350</ID><SYNONYM><LITERAL>artmak<SENSE>5</SENSE></LITERAL><LITERAL>artmakmak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Çoğalmak</DEF></SYNSET>
+<SYNSET><ID>TUR10-1242370</ID><SYNONYM><LITERAL>avlamak<SENSE>3</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Bir avı ele geçirmek</DEF></SYNSET>
+<SYNSET><ID>TUR10-1242380</ID><SYNONYM><LITERAL>aşmak<SENSE>5</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Geçmek , üstesinden gelmek</DEF></SYNSET>
+<SYNSET><ID>TUR10-1242430</ID><SYNONYM><LITERAL>bulmak<SENSE>14</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Aranılan bir şeye sahip olmak</DEF></SYNSET>
+<SYNSET><ID>TUR10-1242830</ID><SYNONYM><LITERAL>almak<SENSE>37</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Yer almak, arasında bulunmak</DEF></SYNSET>
+<SYNSET><ID>TUR10-1242870</ID><SYNONYM><LITERAL>imza atmak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Başarılı bir iş gerçekleştirmek</DEF></SYNSET>
+<SYNSET><ID>TUR10-1246060</ID><SYNONYM><LITERAL>atak<SENSE>4</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Kötülük veya yıpratma amacıyla, bir kimseye karşı doğrudan doğruya silahlı veya silahsız bir eylemde bulunma</DEF></SYNSET>
+<SYNSET><ID>TUR10-1247140</ID><SYNONYM><LITERAL>adlandırmak<SENSE>1</SENSE></LITERAL></SYNONYM><POS>v</POS><DEF>Çağırmak veya anmak için bir canlıya, bir yere, bir şeye ad vermek, ad koymak, ad takmak, ad vermek, isimlendirmek, isim koymak, isim takmak, isim vermek, tesmiye etmek</DEF></SYNSET>
+<SYNSET><ID>TUR10-1247530</ID><SYNONYM><LITERAL>az<SENSE>3</SENSE></LITERAL></SYNONYM><POS>a</POS><DEF>Nicelik, nitelik, güç, süre, sayı bakımından eksik, çok karşıtı</DEF></SYNSET>
+<SYNSET><ID>TUR10-1248840</ID><SYNONYM><LITERAL>basitlik<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Basit olma durumu</DEF></SYNSET>
+<SYNSET><ID>TUR10-1249280</ID><SYNONYM><LITERAL>bilinmezlik<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Bilinmez olma durumu</DEF></SYNSET>
+<SYNSET><ID>TUR10-1249610</ID><SYNONYM><LITERAL>birliktelik<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Birlikte olma durumu, beraberlik</DEF></SYNSET>
+<SYNSET><ID>TUR10-1255410</ID><SYNONYM><LITERAL>blog<SENSE>1</SENSE></LITERAL></SYNONYM><POS>n</POS><DEF>Teknik bilgi gerektirmeden, kendi istedikleri şeyleri, kendi istedikleri şekilde yazan insanların oluşturabildikleri, günlüğe benzeyen web siteleri</DEF></SYNSET>
+<SYNSET><ID>TUR10-1257180</ID><SYNONYM><LITERAL>çabuk<SENSE>4</SENSE></LITERAL></SYNONYM><POS>b</POS><DEF>Alışılandan veya gösterilenden daha kısa bir zamanda; tez</DEF></SYNSET>
+<SYNSET><ID>TUR10-2100396</ID><SYNONYM><LITERAL>söz yok<SENSE>1</SENSE></LITERAL></SYNONYM><POS>i</POS><DEF>Hakkında hiç bir şey söylenilmez</DEF></SYNSET>
+</SYNSETS>
