@@ -76,6 +76,15 @@ You can also see [Python](https://github.com/starlangsoftware/TurkishWordNet-Py)
 * [Maven](#maven)
 * [Git](#git)
 
+## Licensing
+
+This repository contains both software code and data assets, which are licensed separately:
+
+* **Software and Source Code:** All programmatic source code files under the `src/` directory, build configurations (`pom.xml`), and related tools are licensed under the [GNU General Public License v3.0 (GPL-3.0)](LICENSE).
+* **WordNet Data and Lexical Assets:** All XML data files (`kenet.xml`, `turkish*_wordnet.xml`) and dictionary text files (`turkish*_dictionary.txt`) are licensed under the [Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0)](https://creativecommons.org).
+
+By contributing to this repository, you agree that your code contributions will be licensed under the GPL-3.0 and your data contributions will be licensed under CC BY-SA 4.0.
+
 ### Java 
 
 To check if you have a compatible version of Java installed, use the following command:
